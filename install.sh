@@ -57,18 +57,26 @@ do
   formatted_locale=$(echo "$locale" | tr '[:upper:]' '[:lower:]')
 
   if validate_locale "$formatted_locale"; then
-    echo "Installing $formatted_locale locale.."
+    # babel supports just 2 letters
+    two_letter=$(echo "$locale" | cut -d'-' -f1 | tr '[:upper:]' '[:lower:]')
+
+    echo "Creating directory for $formatted_locale locale.."
     echo ""
-    pybabel init -i messages.pot -d $babel_translations -l "$formatted_locale"
-    wget -O $babel_translations/"$formatted_locale"/LC_MESSAGES/messages.po "https://raw.githubusercontent.com/$github_repo/$formatted_locale/messages.pot"
+    mkdir -p $babel_translations/en/LC_MESSAGES/ &>/dev/null  
+    wget -O $babel_translations/en/LC_MESSAGES/messages.pot "https://raw.githubusercontent.com/$github_repo/main/en-us/messages.pot" &>/dev/null   
+    pybabel init -i messages.pot -d $babel_translations -l "$two_letter" &>/dev/null
+    echo "Downloading $formatted_locale locale from https://raw.githubusercontent.com/$github_repo/main/$formatted_locale/messages.pot"
+    wget -O $babel_translations/"$two_letter"/LC_MESSAGES/messages.pot "https://raw.githubusercontent.com/$github_repo/main/$formatted_locale/messages.pot" &>/dev/null
+    echo ""
   else
     echo "Invalid locale format: $locale. Skipping."
   fi
 done
 
 # Do this only once
+
 echo "Compiling .mo files for all available locales in $babel_translations directory.."
-pybabel compile -f -d $babel_translations
+pybabel compile -f -d $babel_translations  &>/dev/null
 echo "Restarting OpenPanel to apply translations.."
-docker restart openpanel
-echo "DONE'
+docker restart openpanel  &>/dev/null
+echo "DONE"
