@@ -14,6 +14,9 @@
 # might change in future
 github_repo="stefanpejcic/openpanel-translations"
 
+# locales dir since OpenPanel v.0.2.1
+babel_translations="/etc/openpanel/openpanel/translations"
+
 # at least 1 locale is needed
 if [ "$#" -lt 1 ]; then
   if ! command -v jq &> /dev/null; then
@@ -54,13 +57,18 @@ do
   formatted_locale=$(echo "$locale" | tr '[:upper:]' '[:lower:]')
 
   if validate_locale "$formatted_locale"; then
-    pybabel init -i messages.pot -d /etc/openpanel/openpanel/translations -l "$formatted_locale"
-    wget -O /etc/openpanel/openpanel/translations/"$formatted_locale"/LC_MESSAGES/messages.po "https://raw.githubusercontent.com/$github_repo/$formatted_locale/messages.pot"
+    echo "Installing $formatted_locale locale.."
+    echo ""
+    pybabel init -i messages.pot -d $babel_translations -l "$formatted_locale"
+    wget -O $babel_translations/"$formatted_locale"/LC_MESSAGES/messages.po "https://raw.githubusercontent.com/$github_repo/$formatted_locale/messages.pot"
   else
     echo "Invalid locale format: $locale. Skipping."
   fi
 done
 
 # Do this only once
-pybabel compile -f -d /etc/openpanel/openpanel/translations
+echo "Compiling .mo files for all available locales in $babel_translations directory.."
+pybabel compile -f -d $babel_translations
+echo "Restarting OpenPanel to apply translations.."
 docker restart openpanel
+echo "DONE'
