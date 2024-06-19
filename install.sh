@@ -5,9 +5,9 @@
 #
 # Usage:
 #
-# Installing single locale: bash <(curl -sSL https://get.openpanel.co/) sr-sr
+# Installing single locale: bash <(curl -sSL https://raw.githubusercontent.com/stefanpejcic/openpanel-translations/main/install.sh) sr-sr
 #
-# Installing multiple locales at once: bash <(curl -sSL https://get.openpanel.co/) sr-sr tr-tr
+# Installing multiple locales at once: bash <(curl -sSL https://raw.githubusercontent.com/stefanpejcic/openpanel-translations/main/install.sh) sr-sr tr-tr
 #
 ###
 
@@ -20,11 +20,19 @@ if [ "$#" -lt 1 ]; then
     echo "jq command is required to parse JSON responses. Please install jq to use this feature."
     exit 1
   fi
-  
+
+  echo "Please provide at least one locale to the command, or a list"
+  echo ""
   # list available locales from github repo
   echo "Available locales:"
   locales=$(curl -s "https://api.github.com/repos/$github_repo/contents" | jq -r '.[] | select(.type == "dir") | .name')
   echo "$locales"
+  echo ""
+  echo "Example for a single locale (DE): bash <(curl -sSL https://raw.githubusercontent.com/$github_repo/main/install.sh) de-de"
+  echo ""
+  echo "Example for multiple locales (DE & ES): bash <(curl -sSL https://raw.githubusercontent.com/$github_repo/main/install.sh) de-de es-es"
+  echo ""
+  
   exit 0
 fi
 
