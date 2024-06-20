@@ -31,9 +31,9 @@ if [ "$#" -lt 1 ]; then
   locales=$(curl -s "https://api.github.com/repos/$github_repo/contents" | jq -r '.[] | select(.type == "dir") | .name')
   echo "$locales"
   echo ""
-  echo "Example for a single locale (DE): bash <(curl -sSL https://raw.githubusercontent.com/$github_repo/main/install.sh) de-de"
+  echo "Example for a single locale (DE): opencli locale de-de"
   echo ""
-  echo "Example for multiple locales (DE & ES): bash <(curl -sSL https://raw.githubusercontent.com/$github_repo/main/install.sh) de-de es-es"
+  echo "Example for multiple locales (DE & ES): opencli locale de-de es-es"
   echo ""
   
   exit 0
