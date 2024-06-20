@@ -64,7 +64,7 @@ do
     echo ""
     mkdir -p $babel_translations/en/LC_MESSAGES/ &>/dev/null  
     wget -O $babel_translations/en/LC_MESSAGES/messages.pot "https://raw.githubusercontent.com/$github_repo/main/en-us/messages.pot" &>/dev/null   
-    pybabel init -i messages.pot -d $babel_translations -l "$two_letter" &>/dev/null
+    pybabel init -i $babel_translations/en/LC_MESSAGES/messages.pot -d $babel_translations -l "$two_letter" &>/dev/null
     echo "Downloading $formatted_locale locale from https://raw.githubusercontent.com/$github_repo/main/$formatted_locale/messages.pot"
     wget -O $babel_translations/"$two_letter"/LC_MESSAGES/messages.pot "https://raw.githubusercontent.com/$github_repo/main/$formatted_locale/messages.pot" &>/dev/null
     echo ""
