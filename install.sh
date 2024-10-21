@@ -5,9 +5,9 @@
 #
 # Usage:
 #
-# Installing single locale: bash <(curl -sSL https://raw.githubusercontent.com/stefanpejcic/openpanel-translations/main/install.sh) sr-sr
+# Installing single locale: opencli locale sr-sr
 #
-# Installing multiple locales at once: bash <(curl -sSL https://raw.githubusercontent.com/stefanpejcic/openpanel-translations/main/install.sh) sr-sr tr-tr
+# Installing multiple locales at once: opencli locale sr-sr tr-tr
 #
 ###
 
