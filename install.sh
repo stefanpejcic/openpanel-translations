@@ -39,8 +39,6 @@ if [ "$#" -lt 1 ]; then
   exit 0
 fi
 
-cd /usr/local/panel
-
 validate_locale() {
   # validate format (LL-LL or ll-ll)
   if [[ "$1" =~ ^[a-z]{2}-[a-z]{2}$ ]] || [[ "$1" =~ ^[A-Z]{2}-[A-Z]{2}$ ]]; then
