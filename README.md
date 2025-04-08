@@ -1,11 +1,11 @@
 
 ### Available Translations
 
-- [🇪🇸](https://community.openpanel.co/d/59-hablas-espanol-spanish-translation-for-openpanel)
-- [🇫🇷](https://community.openpanel.co/d/45-parles-tu-francais-french-translation-for-openpanel)
-- [🇩🇪](https://community.openpanel.co/d/25-sprichst-du-deutsch-german-translation-for-openpanel)
-- [🇹🇷](https://community.openpanel.co/d/31-turkce-konusuyor-musun-turkish-translation-for-openpanel)
-
+- [🇪🇸](https://community.openpanel.org/d/59-hablas-espanol-spanish-translation-for-openpanel)
+- [🇫🇷](https://community.openpanel.org/d/45-parles-tu-francais-french-translation-for-openpanel)
+- [🇩🇪](https://community.openpanel.org/d/25-sprichst-du-deutsch-german-translation-for-openpanel)
+- [🇹🇷](https://community.openpanel.org/d/31-turkce-konusuyor-musun-turkish-translation-for-openpanel)
+- [🇨🇳](https://community.openpanel.org/d/151-simplified-chinese-translation-for-openpanel)
 
 -----
 
