@@ -6,7 +6,7 @@
 - [🇩🇪](https://community.openpanel.org/d/25-sprichst-du-deutsch-german-translation-for-openpanel)
 - [🇹🇷](https://community.openpanel.org/d/31-turkce-konusuyor-musun-turkish-translation-for-openpanel)
 - [🇨🇳](https://community.openpanel.org/d/151-simplified-chinese-translation-for-openpanel)
-
+- [🇵🇹](https://community.openpanel.org/d/154-fala-portugues-portuguese-translation-for-openpanel)
 -----
 
 ## OpenPanel Translations
