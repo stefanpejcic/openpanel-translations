@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel \n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2025-06-23 12:13+0200\n"
+"POT-Creation-Date: 2025-06-27 12:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -17,7 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: modules/autoinstaller.py:91 templates/manager/autoinstaller.html:9
+#: modules/autoinstaller.py:91 templates/dashboard/dashboard.html:128
+#: templates/manager/autoinstaller.html:9
 msgid "Auto Installer"
 msgstr ""
 
@@ -138,8 +139,8 @@ msgid "Error fetching country code:"
 msgstr ""
 
 #: modules/dashboard.py:171 modules/dashboard.py:190 modules/dashboard.py:484
-#: modules/docker.py:509 modules/docker.py:525 modules/ip_blocker.py:37
-#: modules/phpd/php_ini.py:18 modules/webserver_conf.py:21
+#: modules/docker.py:520 modules/docker.py:536 modules/ip_blocker.py:37
+#: modules/phpd/php_ini.py:18 modules/webserver_conf.py:52
 msgid "User not authenticated"
 msgstr ""
 
@@ -156,11 +157,11 @@ msgstr ""
 #: modules/domains.py:496 modules/domains.py:550 modules/domains.py:615
 #: modules/domains.py:637 modules/ip_blocker.py:43
 #: modules/sitemanager/temporary_links.py:45 modules/waf.py:65
-#: modules/waf.py:205 modules/websites.py:284 modules/websites.py:343
-#: modules/websites.py:413 modules/websites.py:451 modules/websites.py:495
-#: modules/websites.py:522 modules/websites.py:551 modules/websites.py:613
-#: modules/websites.py:663 modules/websites.py:696 modules/websites.py:752
-#: modules/websites.py:805 modules/websites.py:1156
+#: modules/waf.py:205 modules/websites.py:292 modules/websites.py:351
+#: modules/websites.py:421 modules/websites.py:459 modules/websites.py:503
+#: modules/websites.py:530 modules/websites.py:559 modules/websites.py:621
+#: modules/websites.py:671 modules/websites.py:704 modules/websites.py:760
+#: modules/websites.py:813 modules/websites.py:1164
 msgid "The domain does not belong to the user."
 msgstr ""
 
@@ -209,37 +210,37 @@ msgstr ""
 msgid "New content not provided."
 msgstr ""
 
-#: modules/docker.py:208 templates/dashboard/dashboard.html:155
-#: templates/dashboard/statistics.html:140 templates/docker/containers.html:8
+#: modules/docker.py:219 templates/dashboard/dashboard.html:156
+#: templates/dashboard/usage.html:138 templates/docker/containers.html:8
 #: templates/docker/volumes_TODO.html:9
 msgid "Containers"
 msgstr ""
 
-#: modules/docker.py:370 templates/dashboard/dashboard.html:158
+#: modules/docker.py:381 templates/dashboard/dashboard.html:159
 #: templates/docker/images.html:12
 msgid "Image Updates"
 msgstr ""
 
-#: modules/docker.py:414
+#: modules/docker.py:425
 msgid "Change docker image"
 msgstr ""
 
-#: modules/docker.py:438
+#: modules/docker.py:449
 msgid "Select docker image"
 msgstr ""
 
-#: modules/docker.py:500 templates/dashboard/dashboard.html:157
+#: modules/docker.py:511 templates/dashboard/dashboard.html:158
 #: templates/manager/nodejs.html:133 templates/manager/nodejs.html:163
 #: templates/manager/python.html:141 templates/manager/python.html:171
 #: templates/manager/ruby.html:138 templates/manager/ruby.html:161
 msgid "Logs"
 msgstr ""
 
-#: modules/docker.py:529
+#: modules/docker.py:540
 msgid "Invalid action"
 msgstr ""
 
-#: modules/docker.py:731
+#: modules/docker.py:742
 msgid "Select Docker service"
 msgstr ""
 
@@ -409,7 +410,7 @@ msgstr ""
 msgid "GoAccess"
 msgstr ""
 
-#: modules/info.py:24 templates/dashboard/dashboard.html:176
+#: modules/info.py:24 templates/dashboard/dashboard.html:177
 #: templates/system/server_info.html:10
 msgid "Server Information"
 msgstr ""
@@ -593,7 +594,7 @@ msgstr ""
 msgid "Set Default version"
 msgstr ""
 
-#: modules/php.py:206 templates/dashboard/dashboard.html:150
+#: modules/php.py:206 templates/dashboard/dashboard.html:151
 msgid "Limits"
 msgstr ""
 
@@ -663,7 +664,7 @@ msgstr ""
 msgid "Not a valid type, only NodeJS or Python applications can be removed."
 msgstr ""
 
-#: modules/pm2.py:697 modules/websites.py:73 modules/websites.py:1065
+#: modules/pm2.py:697 modules/websites.py:73 modules/websites.py:1073
 msgid "Error connecting to database."
 msgstr ""
 
@@ -681,17 +682,17 @@ msgstr ""
 msgid "Error checking users from the container."
 msgstr ""
 
-#: modules/process_manager.py:88 templates/dashboard/dashboard.html:170
+#: modules/process_manager.py:88 templates/dashboard/dashboard.html:171
 #: templates/system/process_manager.html:9
 msgid "Process Manager"
 msgstr ""
 
-#: modules/usage.py:69 templates/dashboard/dashboard.html:168
+#: modules/usage.py:69 templates/dashboard/dashboard.html:169
 #: templates/user/stats.html:20
 msgid "Resource Usage"
 msgstr ""
 
-#: modules/usage.py:154 templates/dashboard/dashboard.html:169
+#: modules/usage.py:154 templates/dashboard/dashboard.html:170
 msgid "Resource Usage History"
 msgstr ""
 
@@ -728,24 +729,24 @@ msgstr ""
 msgid "Domain not found or unauthorized"
 msgstr ""
 
-#: modules/waf.py:367 templates/dashboard/dashboard.html:175
+#: modules/waf.py:367 templates/dashboard/dashboard.html:176
 #: templates/system/waf_logs.html:300
 msgid "WAF Logs"
 msgstr ""
 
-#: modules/webserver_conf.py:30
+#: modules/webserver_conf.py:58
 msgid "Nginx Configuration Editor"
 msgstr ""
 
-#: modules/webserver_conf.py:32
+#: modules/webserver_conf.py:59
 msgid "Apache Configuration Editor"
 msgstr ""
 
-#: modules/webserver_conf.py:34
+#: modules/webserver_conf.py:60
 msgid "OpenResty Configuration Editor"
 msgstr ""
 
-#: modules/webserver_conf.py:36
+#: modules/webserver_conf.py:64
 msgid "Web Server Configuration Editor"
 msgstr ""
 
@@ -777,12 +778,12 @@ msgstr ""
 msgid "An error occurred during detachment."
 msgstr ""
 
-#: modules/website_builder.py:159 modules/websites.py:370
-#: modules/websites.py:1062
+#: modules/website_builder.py:159 modules/websites.py:378
+#: modules/websites.py:1070
 msgid "Unable to detect docroot for the domain."
 msgstr ""
 
-#: modules/website_builder.py:167 modules/websites.py:378
+#: modules/website_builder.py:167 modules/websites.py:386
 msgid ""
 "Error connecting to database, please try again. If the issue persists "
 "contact support."
@@ -792,32 +793,32 @@ msgstr ""
 msgid "Create Website"
 msgstr ""
 
-#: modules/websites.py:250
+#: modules/websites.py:258
 msgid "Data gathering started. Please allow a few minutes for completion."
 msgstr ""
 
-#: modules/websites.py:590
+#: modules/websites.py:598
 msgid "Debugging options updated successfully"
 msgstr ""
 
-#: modules/websites.py:641
+#: modules/websites.py:649
 msgid "General options edited successfully"
 msgstr ""
 
-#: modules/websites.py:672 templates/manager/wordpress.html:2296
+#: modules/websites.py:680 templates/manager/wordpress.html:2296
 msgid "WordPress updated successfully"
 msgstr ""
 
-#: modules/websites.py:728
+#: modules/websites.py:736
 msgid "Update preferences saved successfully"
 msgstr ""
 
-#: modules/websites.py:901 templates/dashboard/statistics.html:16
+#: modules/websites.py:909 templates/dashboard/statistics.html:16
 #: templates/dashboard/statistics.html:28
 msgid "Websites"
 msgstr ""
 
-#: modules/websites.py:939
+#: modules/websites.py:947
 msgid "Error executing the query:"
 msgstr ""
 
@@ -877,7 +878,7 @@ msgstr ""
 msgid "Invalid action. Use 'enable' or 'disable'."
 msgstr ""
 
-#: modules/account/locale.py:46 templates/dashboard/dashboard.html:181
+#: modules/account/locale.py:46 templates/dashboard/dashboard.html:182
 #: templates/user/locale.html:12 templates/user/login.html:141
 msgid "Change Language"
 msgstr ""
@@ -922,7 +923,7 @@ msgstr ""
 msgid "Invalid 2FA code. Please try again."
 msgstr ""
 
-#: modules/account/login_history.py:21 templates/dashboard/dashboard.html:187
+#: modules/account/login_history.py:21 templates/dashboard/dashboard.html:188
 #: templates/user/loginlog.html:11
 msgid "Login History"
 msgstr ""
@@ -932,7 +933,7 @@ msgid "Notification Preferences"
 msgstr ""
 
 #: modules/account/sessions.py:20 modules/account/sessions.py:35
-#: templates/dashboard/dashboard.html:184
+#: templates/dashboard/dashboard.html:185
 #: templates/user/active_sessions.html:12
 msgid "Active Sessions"
 msgstr ""
@@ -957,7 +958,7 @@ msgstr ""
 msgid "enableddisabled"
 msgstr ""
 
-#: modules/account/twofa.py:63 templates/dashboard/dashboard.html:183
+#: modules/account/twofa.py:63 templates/dashboard/dashboard.html:184
 #: templates/dashboard/twofa.html:6 templates/user/twofa_settings.html:11
 msgid "Two-Factor Authentication"
 msgstr ""
@@ -999,7 +1000,7 @@ msgid "Failed to stop the Memcached service. Try restart."
 msgstr ""
 
 #: modules/cache/memcached.py:63 templates/cache/memcached.html:13
-#: templates/dashboard/dashboard.html:134
+#: templates/dashboard/dashboard.html:135
 msgid "Memcached"
 msgstr ""
 
@@ -1020,7 +1021,7 @@ msgid "Failed to stop the OpenSearch service. Try restart."
 msgstr ""
 
 #: modules/cache/opensearch.py:58 templates/cache/opensearch.html:14
-#: templates/dashboard/dashboard.html:136
+#: templates/dashboard/dashboard.html:137
 msgid "OpenSearch"
 msgstr ""
 
@@ -1040,7 +1041,7 @@ msgstr ""
 msgid "Failed to stop the REDIS service. Try restart."
 msgstr ""
 
-#: modules/cache/redis.py:58 templates/dashboard/dashboard.html:133
+#: modules/cache/redis.py:58 templates/dashboard/dashboard.html:134
 msgid "Redis"
 msgstr ""
 
@@ -1061,7 +1062,7 @@ msgid "Failed to stop the Varnish service. Try restart."
 msgstr ""
 
 #: modules/cache/varnish.py:139 templates/cache/varnish.html:14
-#: templates/dashboard/dashboard.html:135
+#: templates/dashboard/dashboard.html:136
 msgid "Varnish"
 msgstr ""
 
@@ -1357,7 +1358,7 @@ msgstr ""
 msgid "Remote MySQL"
 msgstr ""
 
-#: modules/phpd/php_ini.py:15 templates/dashboard/dashboard.html:149
+#: modules/phpd/php_ini.py:15 templates/dashboard/dashboard.html:150
 msgid "PHP.INI Editor"
 msgstr ""
 
@@ -1530,7 +1531,7 @@ msgstr ""
 msgid "Created on"
 msgstr ""
 
-#: templates/docker/containers.html:64 templates/domains/dns.html:130
+#: templates/docker/containers.html:61 templates/domains/dns.html:130
 #: templates/domains/domains.html:59 templates/files/clamav/quarantine.html:72
 #: templates/files/disk_usage.html:68 templates/files/ftp.html:65
 #: templates/files/inodes.html:69 templates/flarum.html:341
@@ -1590,7 +1591,7 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:129 templates/flarum.html:526
+#: templates/dashboard/dashboard.html:130 templates/flarum.html:526
 #: templates/flarum.html:687
 msgid "Flarum"
 msgstr ""
@@ -1694,7 +1695,7 @@ msgstr ""
 msgid "Login as Admin"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:125 templates/wordpress.html:202
+#: templates/wordpress.html:202
 msgid "WordPress"
 msgstr ""
 
@@ -2099,108 +2100,112 @@ msgstr ""
 msgid "PostgreSQL Configuration"
 msgstr ""
 
+#: templates/dashboard/dashboard.html:125
+msgid "All Websites"
+msgstr ""
+
 #: templates/dashboard/dashboard.html:126
+msgid "WP Manager"
+msgstr ""
+
+#: templates/dashboard/dashboard.html:127
 #: templates/manager/websitebuilder_install.html:9
 msgid "Website Builder"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:127
-msgid "Applications"
-msgstr ""
-
-#: templates/dashboard/dashboard.html:128
+#: templates/dashboard/dashboard.html:129
 msgid "Mautic"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:137
+#: templates/dashboard/dashboard.html:138
 msgid "ElasticSearch"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:141
+#: templates/dashboard/dashboard.html:142
 msgid "Email Accounts"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:142
+#: templates/dashboard/dashboard.html:143
 msgid "Webmail"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:146
+#: templates/dashboard/dashboard.html:147
 msgid "Select PHP version"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:147
+#: templates/dashboard/dashboard.html:148
 msgid "Default Version"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:148
+#: templates/dashboard/dashboard.html:149
 msgid "PHP Options"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:151
+#: templates/dashboard/dashboard.html:152
 msgid "Extensions"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:156
+#: templates/dashboard/dashboard.html:157
 msgid "Terminal"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:159
+#: templates/dashboard/dashboard.html:160
 msgid "Change Image tag"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:160
+#: templates/dashboard/dashboard.html:161
 msgid "Change webserver"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:161
+#: templates/dashboard/dashboard.html:162
 msgid "Change MySQL Type"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:165 templates/system/cronjobs.html:23
+#: templates/dashboard/dashboard.html:166 templates/system/cronjobs.html:23
 msgid "Cron Jobs"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:166 templates/system/ssh.html:13
+#: templates/dashboard/dashboard.html:167 templates/system/ssh.html:13
 msgid "SSH Access"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:167
+#: templates/dashboard/dashboard.html:168
 msgid "Web Terminal"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:171
+#: templates/dashboard/dashboard.html:172
 msgid "Change TimeZone"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:172
+#: templates/dashboard/dashboard.html:173
 msgid "Webserver Configuration"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:173
+#: templates/dashboard/dashboard.html:174
 msgid "IP Blocker"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:174
+#: templates/dashboard/dashboard.html:175
 msgid "WAF Settings"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:180 templates/user/account.html:13
+#: templates/dashboard/dashboard.html:181 templates/user/account.html:13
 msgid "Email & Password"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:182 templates/user/notifications.html:11
+#: templates/dashboard/dashboard.html:183 templates/user/notifications.html:11
 msgid "Email Notifications"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:185
+#: templates/dashboard/dashboard.html:186
 msgid "Favorite Pages"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:186
+#: templates/dashboard/dashboard.html:187
 msgid "Account Activity"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:188
+#: templates/dashboard/dashboard.html:189
 msgid "Log out"
 msgstr ""
 
@@ -2208,13 +2213,13 @@ msgstr ""
 msgid "General How-to"
 msgstr ""
 
-#: templates/dashboard/information.html:5 templates/domains/ssl.html:78
+#: templates/dashboard/information.html:28 templates/domains/ssl.html:78
 #: templates/manager/nodejs.html:182 templates/manager/python.html:190
 #: templates/manager/ruby.html:180
 msgid "Information"
 msgstr ""
 
-#: templates/dashboard/information.html:12 templates/emails/new.html:40
+#: templates/dashboard/information.html:35 templates/emails/new.html:40
 #: templates/files/ftp.html:59 templates/files/ftp_new.html:31
 #: templates/mysql/mysql_user.html:27 templates/mysql/password.html:26
 #: templates/mysql/users.html:85 templates/psql/mysql_user.html:27
@@ -2223,20 +2228,20 @@ msgstr ""
 msgid "Username"
 msgstr ""
 
-#: templates/dashboard/information.html:31 templates/system/server_info.html:60
+#: templates/dashboard/information.html:54 templates/system/server_info.html:60
 #: templates/user/active_sessions.html:53 templates/user/activity.html:46
 msgid "IP Address"
 msgstr ""
 
-#: templates/dashboard/information.html:32
+#: templates/dashboard/information.html:55
 msgid "Last Login IP Address"
 msgstr ""
 
-#: templates/dashboard/information.html:74
+#: templates/dashboard/information.html:75
 msgid "/"
 msgstr ""
 
-#: templates/dashboard/information.html:86
+#: templates/dashboard/information.html:87
 #: templates/system/server_info.html:157
 msgid "Nameservers"
 msgstr ""
@@ -2251,18 +2256,6 @@ msgstr ""
 #: templates/dashboard/statistics.html:93
 #: templates/dashboard/statistics.html:118
 msgid "∞"
-msgstr ""
-
-#: templates/dashboard/statistics.html:149 templates/user/stats.html:95
-msgid "Network I/O"
-msgstr ""
-
-#: templates/dashboard/statistics.html:158
-msgid "Disk I/O"
-msgstr ""
-
-#: templates/dashboard/statistics.html:167 templates/user/stats.html:100
-msgid "PIDs"
 msgstr ""
 
 #: templates/dashboard/twofa.html:10
@@ -2281,35 +2274,49 @@ msgstr ""
 msgid "Enable 2FA"
 msgstr ""
 
-#: templates/dashboard/usage.html:5
+#: templates/dashboard/usage.html:8
 msgid "Usage"
 msgstr ""
 
-#: templates/dashboard/usage.html:11
+#: templates/dashboard/usage.html:16
 msgid "Storage"
 msgstr ""
 
-#: templates/dashboard/usage.html:18 templates/dashboard/usage.html:31
+#: templates/dashboard/usage.html:46 templates/files/inodes.html:66
+msgid "Inodes"
+msgstr ""
+
+#: templates/dashboard/usage.html:76 templates/docker/containers.html:55
+msgid "CPU Usage"
+msgstr ""
+
+#: templates/dashboard/usage.html:106 templates/docker/containers.html:58
+msgid "Memory Usage"
+msgstr ""
+
+#: templates/dashboard/usage.html:152 templates/user/history_usage.html:155
+#: templates/user/stats.html:97
+msgid "Block I/O"
+msgstr ""
+
+#: templates/dashboard/usage.html:166 templates/user/history_usage.html:154
+msgid "Net I/O"
+msgstr ""
+
+#: templates/dashboard/usage.html:179 templates/user/stats.html:100
+msgid "PIDs"
+msgstr ""
+
+#: templates/dashboard/usage.html:192
+msgid "Measured at:"
+msgstr ""
+
+#: templates/dashboard/usage.html:211 templates/dashboard/usage.html:212
+#: templates/dashboard/usage.html:213 templates/dashboard/usage.html:214
 #: templates/manager/nodejs.html:627 templates/manager/python.html:682
 #: templates/manager/ruby.html:628 templates/manager/websitebuilder.html:414
 #: templates/manager/wordpress.html:337 templates/manager/wordpress.html:380
 msgid "Calculating.."
-msgstr ""
-
-#: templates/dashboard/usage.html:24 templates/files/inodes.html:66
-msgid "Inodes"
-msgstr ""
-
-#: templates/dashboard/usage.html:37 templates/docker/containers.html:58
-msgid "CPU Usage"
-msgstr ""
-
-#: templates/dashboard/usage.html:44 templates/dashboard/usage.html:57
-msgid "Loading.."
-msgstr ""
-
-#: templates/dashboard/usage.html:50 templates/docker/containers.html:61
-msgid "Memory Usage"
 msgstr ""
 
 #: templates/docker/change_images.html:13
@@ -2412,19 +2419,15 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: templates/docker/containers.html:55 templates/system/server_info.html:70
-msgid "Ports"
-msgstr ""
-
-#: templates/docker/containers.html:233
+#: templates/docker/containers.html:226
 msgid "Checking containers runtime metrics.."
 msgstr ""
 
-#: templates/docker/containers.html:250
+#: templates/docker/containers.html:243
 msgid "No container are currently running."
 msgstr ""
 
-#: templates/docker/containers.html:352
+#: templates/docker/containers.html:345
 msgid "Error fetching docker stats for containers."
 msgstr ""
 
@@ -6420,6 +6423,10 @@ msgstr ""
 msgid "Uptime"
 msgstr ""
 
+#: templates/system/server_info.html:70
+msgid "Ports"
+msgstr ""
+
 #: templates/system/server_info.html:78
 msgid "Remote MySQL port"
 msgstr ""
@@ -6719,14 +6726,6 @@ msgstr ""
 msgid "Memory &#37;"
 msgstr ""
 
-#: templates/user/history_usage.html:154
-msgid "Net I/O"
-msgstr ""
-
-#: templates/user/history_usage.html:155 templates/user/stats.html:97
-msgid "Block I/O"
-msgstr ""
-
 #: templates/user/history_usage.html:180
 msgid "First"
 msgstr ""
@@ -6821,6 +6820,10 @@ msgstr ""
 
 #: templates/user/stats.html:72
 msgid "Current Memory usage:"
+msgstr ""
+
+#: templates/user/stats.html:95
+msgid "Network I/O"
 msgstr ""
 
 #: templates/user/stats.html:141
