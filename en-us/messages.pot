@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel \n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2025-06-27 12:32+0200\n"
+"POT-Creation-Date: 2025-06-30 12:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -139,7 +139,7 @@ msgid "Error fetching country code:"
 msgstr ""
 
 #: modules/dashboard.py:171 modules/dashboard.py:190 modules/dashboard.py:484
-#: modules/docker.py:520 modules/docker.py:536 modules/ip_blocker.py:37
+#: modules/docker.py:926 modules/docker.py:942 modules/ip_blocker.py:37
 #: modules/phpd/php_ini.py:18 modules/webserver_conf.py:52
 msgid "User not authenticated"
 msgstr ""
@@ -216,31 +216,31 @@ msgstr ""
 msgid "Containers"
 msgstr ""
 
-#: modules/docker.py:381 templates/dashboard/dashboard.html:159
+#: modules/docker.py:787 templates/dashboard/dashboard.html:159
 #: templates/docker/images.html:12
 msgid "Image Updates"
 msgstr ""
 
-#: modules/docker.py:425
+#: modules/docker.py:831
 msgid "Change docker image"
 msgstr ""
 
-#: modules/docker.py:449
+#: modules/docker.py:855
 msgid "Select docker image"
 msgstr ""
 
-#: modules/docker.py:511 templates/dashboard/dashboard.html:158
+#: modules/docker.py:917 templates/dashboard/dashboard.html:158
 #: templates/manager/nodejs.html:133 templates/manager/nodejs.html:163
 #: templates/manager/python.html:141 templates/manager/python.html:171
 #: templates/manager/ruby.html:138 templates/manager/ruby.html:161
 msgid "Logs"
 msgstr ""
 
-#: modules/docker.py:540
+#: modules/docker.py:946
 msgid "Invalid action"
 msgstr ""
 
-#: modules/docker.py:742
+#: modules/docker.py:1148
 msgid "Select Docker service"
 msgstr ""
 
@@ -635,7 +635,7 @@ msgstr ""
 msgid "No changes or invalid data provided. Try again."
 msgstr ""
 
-#: modules/phpmyadmin.py:142 templates/manager/wordpress.html:427
+#: modules/phpmyadmin.py:142 templates/manager/wordpress.html:422
 #: templates/mysql/phpmyadmin.html:14 templates/psql/pgadmin.html:14
 msgid "phpMyAdmin"
 msgstr ""
@@ -805,7 +805,7 @@ msgstr ""
 msgid "General options edited successfully"
 msgstr ""
 
-#: modules/websites.py:680 templates/manager/wordpress.html:2296
+#: modules/websites.py:680 templates/manager/wordpress.html:2291
 msgid "WordPress updated successfully"
 msgstr ""
 
@@ -1115,137 +1115,149 @@ msgstr ""
 msgid "Disk Usage"
 msgstr ""
 
-#: modules/files/filemanager.py:81
+#: modules/files/filemanager.py:118
 msgid "Failed to set ownership for the new file."
 msgstr ""
 
-#: modules/files/filemanager.py:83
+#: modules/files/filemanager.py:120
 msgid "File created successfully."
 msgstr ""
 
-#: modules/files/filemanager.py:97
+#: modules/files/filemanager.py:134
 msgid "Filename is missing"
 msgstr ""
 
-#: modules/files/filemanager.py:127
+#: modules/files/filemanager.py:164
 msgid "Failed to set ownership for the new folder."
 msgstr ""
 
-#: modules/files/filemanager.py:128
+#: modules/files/filemanager.py:165
 msgid "Folder created successfully."
 msgstr ""
 
-#: modules/files/filemanager.py:139
+#: modules/files/filemanager.py:176
 msgid "Foldername is missing"
 msgstr ""
 
-#: modules/files/filemanager.py:195
+#: modules/files/filemanager.py:242
 msgid "Files uploaded successfully."
 msgstr ""
 
-#: modules/files/filemanager.py:197
-msgid "One or more files failed to upload or set ownership."
+#: modules/files/filemanager.py:244
+msgid "Some files failed: "
 msgstr ""
 
-#: modules/files/filemanager.py:200
+#: modules/files/filemanager.py:247
 msgid "No files were uploaded"
 msgstr ""
 
-#: modules/files/filemanager.py:203
-msgid "Error uploading files: {str(e)}"
+#: modules/files/filemanager.py:250
+msgid "Error uploading files: {0}"
 msgstr ""
 
-#: modules/files/filemanager.py:241
+#: modules/files/filemanager.py:283
 msgid "Failed to set ownership."
 msgstr ""
 
-#: modules/files/filemanager.py:267
+#: modules/files/filemanager.py:316
 msgid "File extracted successfully"
 msgstr ""
 
-#: modules/files/filemanager.py:301
+#: modules/files/filemanager.py:358
 msgid "Failed to set ownership for the downloaded file."
 msgstr ""
 
-#: modules/files/filemanager.py:315
+#: modules/files/filemanager.py:372
 msgid "No URL provided"
 msgstr ""
 
-#: modules/files/filemanager.py:318
+#: modules/files/filemanager.py:375
 msgid "Failed to download the file"
 msgstr ""
 
-#: modules/files/filemanager.py:321
+#: modules/files/filemanager.py:378
 msgid "Internal server error"
 msgstr ""
 
-#: modules/files/filemanager.py:345
+#: modules/files/filemanager.py:402
 msgid "Missing required form data for compression: "
 msgstr ""
 
-#: modules/files/filemanager.py:372
+#: modules/files/filemanager.py:431
 msgid "Unsupported archive format."
 msgstr ""
 
-#: modules/files/filemanager.py:377
+#: modules/files/filemanager.py:436
 msgid "Archive creation failed: "
 msgstr ""
 
-#: modules/files/filemanager.py:381
+#: modules/files/filemanager.py:440
 msgid "Archive created successfully."
 msgstr ""
 
-#: modules/files/filemanager.py:389
+#: modules/files/filemanager.py:448
 msgid "Failed to set archive ownership"
 msgstr ""
 
-#: modules/files/filemanager.py:527
+#: modules/files/filemanager.py:586
 msgid "Permissions changed."
 msgstr ""
 
-#: modules/files/filemanager.py:628
+#: modules/files/filemanager.py:676 modules/files/filemanager.py:804
+msgid "Viewing of this file type is not allowed."
+msgstr ""
+
+#: modules/files/filemanager.py:692
 msgid "File saved successfully"
 msgstr ""
 
-#: modules/files/filemanager.py:631
+#: modules/files/filemanager.py:695
 msgid "Error saving file: "
 msgstr ""
 
-#: modules/files/filemanager.py:643
+#: modules/files/filemanager.py:706
+msgid "File is too large to open in the editor (limit is {} MB)"
+msgstr ""
+
+#: modules/files/filemanager.py:709 modules/files/filemanager.py:820
+msgid "Error accessing file size: "
+msgstr ""
+
+#: modules/files/filemanager.py:719
 msgid "Error reading file"
 msgstr ""
 
-#: modules/files/filemanager.py:691
-msgid "File size exceeds 500MB limit. Download aborted."
-msgstr ""
-
-#: modules/files/filemanager.py:699
+#: modules/files/filemanager.py:779
 msgid "Error retrieving file from container."
 msgstr ""
 
-#: modules/files/filemanager.py:701
+#: modules/files/filemanager.py:781
 msgid "Invalid file size retrieved. Possible issue with file."
 msgstr ""
 
-#: modules/files/filemanager.py:703
-msgid "An error occurred while processing the request."
+#: modules/files/filemanager.py:783
+msgid "An error occurred while processing the request: "
 msgstr ""
 
-#: modules/files/filemanager.py:773
+#: modules/files/filemanager.py:817
+msgid "File is too large to view in the browser (limit is {} MB)"
+msgstr ""
+
+#: modules/files/filemanager.py:870
 msgid "The specified directory does not exist."
 msgstr ""
 
-#: modules/files/filemanager.py:949 modules/files/filemanager.py:996
+#: modules/files/filemanager.py:1050 modules/files/filemanager.py:1117
 #: templates/dashboard/dashboard.html:77 templates/files/disk_usage.html:101
 #: templates/files/filemanager.html:27 templates/files/inodes.html:102
 msgid "File Manager"
 msgstr ""
 
-#: modules/files/filemanager.py:961
+#: modules/files/filemanager.py:1067
 msgid "Error accessing the specified directory."
 msgstr ""
 
-#: modules/files/filemanager.py:1007
+#: modules/files/filemanager.py:1128
 msgid "ENo files in the Trash.."
 msgstr ""
 
@@ -1556,7 +1568,7 @@ msgid ""
 msgstr ""
 
 #: templates/flarum.html:357 templates/flarum.html:484
-#: templates/manager/wordpress.html:1890 templates/wordpress.html:130
+#: templates/manager/wordpress.html:1885 templates/wordpress.html:130
 #: templates/wordpress.html:193
 msgid "Uninstall"
 msgstr ""
@@ -1573,7 +1585,7 @@ msgstr ""
 
 #: templates/flarum.html:363 templates/flarum.html:490
 #: templates/manager/websitebuilder.html:181
-#: templates/manager/wordpress.html:1840 templates/wordpress.html:127
+#: templates/manager/wordpress.html:1835 templates/wordpress.html:127
 #: templates/wordpress.html:190
 msgid "Detach"
 msgstr ""
@@ -1685,12 +1697,12 @@ msgid "Display websites in a grid"
 msgstr ""
 
 #: templates/manager/pm2_install.html:143 templates/manager/sites.html:96
-#: templates/manager/wordpress.html:1220 templates/system/server_info.html:134
+#: templates/manager/wordpress.html:1215 templates/system/server_info.html:134
 #: templates/wordpress.html:96
 msgid "Version"
 msgstr ""
 
-#: templates/manager/wordpress.html:40 templates/manager/wordpress.html:292
+#: templates/manager/wordpress.html:40 templates/manager/wordpress.html:289
 #: templates/wordpress.html:117 templates/wordpress.html:210
 msgid "Login as Admin"
 msgstr ""
@@ -1703,15 +1715,15 @@ msgstr ""
 msgid "An error occurred while removing WordPress."
 msgstr ""
 
-#: templates/manager/wordpress.html:1948 templates/wordpress.html:280
+#: templates/manager/wordpress.html:1943 templates/wordpress.html:280
 msgid "WordPress detach process started. Please wait."
 msgstr ""
 
-#: templates/manager/wordpress.html:1957 templates/wordpress.html:289
+#: templates/manager/wordpress.html:1952 templates/wordpress.html:289
 msgid "WordPress installation detached successfully."
 msgstr ""
 
-#: templates/manager/wordpress.html:1960 templates/wordpress.html:292
+#: templates/manager/wordpress.html:1955 templates/wordpress.html:292
 msgid "An error occurred while detaching WordPress. Please try again."
 msgstr ""
 
@@ -1797,7 +1809,7 @@ msgstr ""
 #: templates/cache/opensearch.html:76 templates/cache/redis.html:76
 #: templates/cache/varnish.html:76 templates/cache/varnish.html:145
 #: templates/domains/logs.html:180 templates/domains/logs.html:222
-#: templates/domains/ssl.html:27 templates/manager/wordpress.html:1061
+#: templates/domains/ssl.html:27 templates/manager/wordpress.html:1056
 #: templates/mysql/phpmyadmin.html:59 templates/mysql/remote_mysql.html:62
 #: templates/psql/pgadmin.html:59 templates/psql/remote_psql.html:62
 #: templates/system/ssh.html:26 templates/system/waf.html:58
@@ -2315,7 +2327,7 @@ msgstr ""
 #: templates/dashboard/usage.html:213 templates/dashboard/usage.html:214
 #: templates/manager/nodejs.html:627 templates/manager/python.html:682
 #: templates/manager/ruby.html:628 templates/manager/websitebuilder.html:414
-#: templates/manager/wordpress.html:337 templates/manager/wordpress.html:380
+#: templates/manager/wordpress.html:332 templates/manager/wordpress.html:375
 msgid "Calculating.."
 msgstr ""
 
@@ -2398,6 +2410,14 @@ msgstr ""
 
 #: templates/docker/change_webserver.html:60
 msgid "Switch"
+msgstr ""
+
+#: templates/docker/container_form.html:9
+msgid "Edit Service"
+msgstr ""
+
+#: templates/docker/container_form.html:9
+msgid "Add New Service"
 msgstr ""
 
 #: templates/docker/containers.html:9
@@ -2586,8 +2606,8 @@ msgstr ""
 #: templates/domains/domains.html:156 templates/emails/delete.html:33
 #: templates/manager/websitebuilder.html:212
 #: templates/manager/websitebuilder.html:262
-#: templates/manager/wordpress.html:755 templates/manager/wordpress.html:1871
-#: templates/manager/wordpress.html:1921
+#: templates/manager/wordpress.html:750 templates/manager/wordpress.html:1866
+#: templates/manager/wordpress.html:1916
 msgid "Cancel"
 msgstr ""
 
@@ -2986,7 +3006,7 @@ msgstr ""
 
 #: templates/domains/new.html:196 templates/manager/websitebuilder.html:140
 #: templates/manager/websitebuilder.html:225
-#: templates/manager/wordpress.html:1799 templates/manager/wordpress.html:1884
+#: templates/manager/wordpress.html:1794 templates/manager/wordpress.html:1879
 msgid "or"
 msgstr ""
 
@@ -3548,7 +3568,7 @@ msgstr ""
 msgid "New Folder"
 msgstr ""
 
-#: templates/files/filemanager.html:79 templates/files/upload_file.html:111
+#: templates/files/filemanager.html:79 templates/files/upload_file.html:114
 msgid "Upload"
 msgstr ""
 
@@ -3776,16 +3796,16 @@ msgstr ""
 msgid "Download from URL"
 msgstr ""
 
-#: templates/files/upload_file.html:107
+#: templates/files/upload_file.html:110
 msgid "Download from URL instead"
 msgstr ""
 
-#: templates/files/upload_file.html:143
+#: templates/files/upload_file.html:146
 msgid "Upload from device instead"
 msgstr ""
 
 #: templates/files/filemanager/actions_buttons.html:22
-#: templates/files/upload_file.html:147
+#: templates/files/upload_file.html:150
 msgid "Download"
 msgstr ""
 
@@ -3940,7 +3960,7 @@ msgstr ""
 msgid "Deselect"
 msgstr ""
 
-#: templates/files/filemanager/inline_js_todo.html:738
+#: templates/files/filemanager/inline_js_todo.html:748
 msgid "Change permissions for"
 msgstr ""
 
@@ -4184,7 +4204,7 @@ msgid "Stop the application and delete it from Site Manager."
 msgstr ""
 
 #: templates/manager/nodejs.html:346 templates/manager/python.html:382
-#: templates/manager/ruby.html:331 templates/manager/wordpress.html:1842
+#: templates/manager/ruby.html:331 templates/manager/wordpress.html:1837
 msgid "All website data such as files and database remains."
 msgstr ""
 
@@ -4265,13 +4285,13 @@ msgstr ""
 
 #: templates/manager/nodejs.html:612 templates/manager/python.html:669
 #: templates/manager/ruby.html:616 templates/manager/websitebuilder.html:402
-#: templates/manager/wordpress.html:325
+#: templates/manager/wordpress.html:320
 msgid "Folder:"
 msgstr ""
 
 #: templates/manager/nodejs.html:625 templates/manager/python.html:680
 #: templates/manager/ruby.html:626 templates/manager/websitebuilder.html:412
-#: templates/manager/wordpress.html:335
+#: templates/manager/wordpress.html:330
 msgid "Folder Size:"
 msgstr ""
 
@@ -4285,7 +4305,7 @@ msgid "Requirements file:"
 msgstr ""
 
 #: templates/manager/nodejs.html:648 templates/manager/python.html:703
-#: templates/manager/wordpress.html:1068
+#: templates/manager/wordpress.html:1063
 #: templates/partials/phpmyadmin_link.html:16
 msgid "Checking..."
 msgstr ""
@@ -4297,7 +4317,7 @@ msgstr ""
 
 #: templates/manager/nodejs.html:715 templates/manager/python.html:769
 #: templates/manager/ruby.html:705 templates/manager/websitebuilder.html:480
-#: templates/manager/wordpress.html:2367
+#: templates/manager/wordpress.html:2362
 msgid "An error occurred fetching folder size from the container."
 msgstr ""
 
@@ -4426,7 +4446,7 @@ msgid "Edit requirements.txt file"
 msgstr ""
 
 #: templates/manager/python.html:455 templates/manager/ruby.html:404
-#: templates/manager/wordpress.html:2011
+#: templates/manager/wordpress.html:2006
 msgid "Administration"
 msgstr ""
 
@@ -4453,8 +4473,8 @@ msgid ""
 " interface for site administration and configuration."
 msgstr ""
 
-#: templates/manager/sites.html:84 templates/manager/wordpress.html:643
-#: templates/manager/wordpress.html:649
+#: templates/manager/sites.html:84 templates/manager/wordpress.html:638
+#: templates/manager/wordpress.html:644
 msgid "Site Name"
 msgstr ""
 
@@ -4479,7 +4499,7 @@ msgid "Open Editor"
 msgstr ""
 
 #: templates/manager/websitebuilder.html:121
-#: templates/manager/wordpress.html:1775
+#: templates/manager/wordpress.html:1770
 msgid "Create a Backup"
 msgstr ""
 
@@ -4488,38 +4508,38 @@ msgid "Create a new backup of website files."
 msgstr ""
 
 #: templates/manager/websitebuilder.html:127
-#: templates/manager/wordpress.html:1786
+#: templates/manager/wordpress.html:1781
 msgid "Backup Files"
 msgstr ""
 
 #: templates/manager/websitebuilder.html:135
-#: templates/manager/wordpress.html:1794
+#: templates/manager/wordpress.html:1789
 msgid "Generate Backup"
 msgstr ""
 
 #: templates/manager/websitebuilder.html:145
-#: templates/manager/wordpress.html:1804
+#: templates/manager/wordpress.html:1799
 msgid "Restore from Backups"
 msgstr ""
 
 #: templates/manager/websitebuilder.html:146
-#: templates/manager/wordpress.html:1805
+#: templates/manager/wordpress.html:1800
 msgid "Restore website files and/or database from a previous backup."
 msgstr ""
 
 #: templates/manager/websitebuilder.html:156
-#: templates/manager/wordpress.html:1815
+#: templates/manager/wordpress.html:1810
 msgid "Display Backups"
 msgstr ""
 
 #: templates/manager/websitebuilder.html:160
-#: templates/manager/wordpress.html:1819
+#: templates/manager/wordpress.html:1814
 msgid "Select a backup date:"
 msgstr ""
 
 #: templates/manager/websitebuilder.html:172
 #: templates/manager/websitebuilder.html:573
-#: templates/manager/wordpress.html:1831 templates/manager/wordpress.html:2460
+#: templates/manager/wordpress.html:1826 templates/manager/wordpress.html:2455
 msgid "Start Restore"
 msgstr ""
 
@@ -4536,7 +4556,7 @@ msgid "Detach website"
 msgstr ""
 
 #: templates/manager/websitebuilder.html:205
-#: templates/manager/wordpress.html:1864
+#: templates/manager/wordpress.html:1859
 msgid "Confirm Detach"
 msgstr ""
 
@@ -4567,22 +4587,22 @@ msgid "An error occurred while detaching website. Please try again."
 msgstr ""
 
 #: templates/manager/websitebuilder.html:510
-#: templates/manager/wordpress.html:2501
+#: templates/manager/wordpress.html:2496
 msgid "Files Backup"
 msgstr ""
 
 #: templates/manager/websitebuilder.html:530
-#: templates/manager/wordpress.html:2417
+#: templates/manager/wordpress.html:2412
 msgid "Click again to confirm"
 msgstr ""
 
 #: templates/manager/websitebuilder.html:558
-#: templates/manager/wordpress.html:2445
+#: templates/manager/wordpress.html:2440
 msgid "Restoring backup... Please wait."
 msgstr ""
 
 #: templates/manager/websitebuilder.html:566
-#: templates/manager/wordpress.html:2453
+#: templates/manager/wordpress.html:2448
 msgid "Restore request failed."
 msgstr ""
 
@@ -4593,12 +4613,12 @@ msgid ""
 msgstr ""
 
 #: templates/manager/websitebuilder.html:624
-#: templates/manager/wordpress.html:2523
+#: templates/manager/wordpress.html:2518
 msgid "Generating website backup.. Please wait."
 msgstr ""
 
 #: templates/manager/websitebuilder.html:632
-#: templates/manager/wordpress.html:2531
+#: templates/manager/wordpress.html:2526
 msgid "Backup request failed."
 msgstr ""
 
@@ -4659,188 +4679,188 @@ msgstr ""
 msgid "Security"
 msgstr ""
 
-#: templates/manager/wordpress.html:353 templates/mysql/users.html:72
+#: templates/manager/wordpress.html:348 templates/mysql/users.html:72
 #: templates/mysql/users.html:74 templates/psql/users.html:72
 #: templates/psql/users.html:74
 msgid "Database"
 msgstr ""
 
-#: templates/manager/wordpress.html:368
+#: templates/manager/wordpress.html:363
 msgid "Manage MySQL databases"
 msgstr ""
 
-#: templates/manager/wordpress.html:378
+#: templates/manager/wordpress.html:373
 msgid "Database Size:"
 msgstr ""
 
-#: templates/manager/wordpress.html:385
+#: templates/manager/wordpress.html:380
 msgid "Database Host:"
 msgstr ""
 
-#: templates/manager/wordpress.html:387
+#: templates/manager/wordpress.html:382
 msgid "localhost"
 msgstr ""
 
-#: templates/manager/wordpress.html:389
+#: templates/manager/wordpress.html:384
 msgid ""
 "Remote MySQL host detected in wp-config.php file. Database size "
 "unavailable."
 msgstr ""
 
-#: templates/manager/wordpress.html:395
+#: templates/manager/wordpress.html:390
 msgid "Database:"
 msgstr ""
 
-#: templates/manager/wordpress.html:401
+#: templates/manager/wordpress.html:396
 msgid "Table prefix:"
 msgstr ""
 
-#: templates/manager/wordpress.html:407
+#: templates/manager/wordpress.html:402
 msgid "Database User:"
 msgstr ""
 
-#: templates/manager/wordpress.html:414
+#: templates/manager/wordpress.html:409
 #: templates/manager/wordpress_install.html:303 templates/system/ssh.html:98
 msgid "Password:"
 msgstr ""
 
-#: templates/manager/wordpress.html:442
+#: templates/manager/wordpress.html:437
 msgid "Open database in phpMyAdmin"
 msgstr ""
 
-#: templates/manager/wordpress.html:449
+#: templates/manager/wordpress.html:444
 msgid "Enable public access on"
 msgstr ""
 
-#: templates/manager/wordpress.html:457
+#: templates/manager/wordpress.html:452
 msgid "Public access:"
 msgstr ""
 
-#: templates/manager/wordpress.html:463
+#: templates/manager/wordpress.html:458
 msgid "Login link:"
 msgstr ""
 
-#: templates/manager/wordpress.html:494
+#: templates/manager/wordpress.html:489
 msgid "/phpmyadmin status is now enabled on website."
 msgstr ""
 
-#: templates/manager/wordpress.html:508
+#: templates/manager/wordpress.html:503
 msgid "/phpmyadmin status is now disabled on website."
 msgstr ""
 
-#: templates/manager/wordpress.html:519
+#: templates/manager/wordpress.html:514
 msgid "Changing /phpmyadmin public access on the website. Please wait."
 msgstr ""
 
-#: templates/manager/wordpress.html:528
+#: templates/manager/wordpress.html:523
 msgid "Error changing /phpmyadmin status for the website. Please try again."
 msgstr ""
 
-#: templates/manager/wordpress.html:551
+#: templates/manager/wordpress.html:546
 msgid ""
 "Error changing /phpmyadmin status for the website. Unexpected response "
 "format."
 msgstr ""
 
-#: templates/manager/wordpress.html:556
+#: templates/manager/wordpress.html:551
 msgid "Error toggling /phpmyadmin status for the website."
 msgstr ""
 
-#: templates/manager/wordpress.html:607
+#: templates/manager/wordpress.html:602
 msgid "URL"
 msgstr ""
 
-#: templates/manager/wordpress.html:608
+#: templates/manager/wordpress.html:603
 msgid "Site and Homepage URLs"
 msgstr ""
 
-#: templates/manager/wordpress.html:613
+#: templates/manager/wordpress.html:608
 msgid "Site URL"
 msgstr ""
 
-#: templates/manager/wordpress.html:626
+#: templates/manager/wordpress.html:621
 msgid "Homepage URL"
 msgstr ""
 
-#: templates/manager/wordpress.html:644
+#: templates/manager/wordpress.html:639
 msgid "Site Name and Description"
 msgstr ""
 
-#: templates/manager/wordpress.html:660
+#: templates/manager/wordpress.html:655
 msgid "Blog Description"
 msgstr ""
 
-#: templates/manager/wordpress.html:676
+#: templates/manager/wordpress.html:671
 msgid "Email Settings"
 msgstr ""
 
-#: templates/manager/wordpress.html:677
+#: templates/manager/wordpress.html:672
 msgid "Email address to receive admin emails"
 msgstr ""
 
-#: templates/manager/wordpress.html:682
+#: templates/manager/wordpress.html:677
 msgid "Administrator Email"
 msgstr ""
 
-#: templates/manager/wordpress.html:693
+#: templates/manager/wordpress.html:688
 msgid "You will receive confirmation email on this address, and need to confirm."
 msgstr ""
 
-#: templates/manager/wordpress.html:702
+#: templates/manager/wordpress.html:697
 msgid "New Registrations"
 msgstr ""
 
-#: templates/manager/wordpress.html:703
+#: templates/manager/wordpress.html:698
 msgid "Enable or disable registration of new users"
 msgstr ""
 
-#: templates/manager/wordpress.html:708
+#: templates/manager/wordpress.html:703
 msgid "User Registration"
 msgstr ""
 
-#: templates/manager/wordpress.html:710
+#: templates/manager/wordpress.html:705
 msgid "No, registrations are disabled (default)"
 msgstr ""
 
-#: templates/manager/wordpress.html:720
+#: templates/manager/wordpress.html:715
 msgid "SEO Visibility"
 msgstr ""
 
-#: templates/manager/wordpress.html:721
+#: templates/manager/wordpress.html:716
 msgid "Search Engine visibility"
 msgstr ""
 
-#: templates/manager/wordpress.html:726
+#: templates/manager/wordpress.html:721
 msgid "Website Visibility"
 msgstr ""
 
-#: templates/manager/wordpress.html:728
+#: templates/manager/wordpress.html:723
 msgid ""
 "I would like my blog to be visible to everyone, including search engines "
 "(default)"
 msgstr ""
 
-#: templates/manager/wordpress.html:737
+#: templates/manager/wordpress.html:732
 msgid "Pingbacks"
 msgstr ""
 
-#: templates/manager/wordpress.html:738
+#: templates/manager/wordpress.html:733
 msgid "Enable or disable pingbacks from other websites"
 msgstr ""
 
-#: templates/manager/wordpress.html:745
+#: templates/manager/wordpress.html:740
 msgid "Allow pingbacks and trackbacks from other blogs (default)"
 msgstr ""
 
-#: templates/manager/wordpress.html:756
+#: templates/manager/wordpress.html:751
 msgid "Update Settings"
 msgstr ""
 
-#: templates/manager/wordpress.html:872 templates/manager/wordpress.html:886
+#: templates/manager/wordpress.html:867 templates/manager/wordpress.html:881
 msgid "Shuffle Salts"
 msgstr ""
 
-#: templates/manager/wordpress.html:878
+#: templates/manager/wordpress.html:873
 msgid ""
 "WordPress salts are random strings stored in wp-config.php file that are "
 "used for the password hashing process. By periodically changing your keys"
@@ -4848,17 +4868,17 @@ msgid ""
 "your salts."
 msgstr ""
 
-#: templates/manager/wordpress.html:881
+#: templates/manager/wordpress.html:876
 msgid ""
 "Note: changing salts will automatically log out all logged-in users and "
 "force them to log in again."
 msgstr ""
 
-#: templates/manager/wordpress.html:938
+#: templates/manager/wordpress.html:933
 msgid "Check Integrity"
 msgstr ""
 
-#: templates/manager/wordpress.html:944
+#: templates/manager/wordpress.html:939
 msgid ""
 "If you suspect that this site is infected by malware, check the integrity"
 " of WordPress core files by verifying them against their reference "
@@ -4866,153 +4886,153 @@ msgid ""
 " reinstall WordPress core files without affecting your site content."
 msgstr ""
 
-#: templates/manager/wordpress.html:948
+#: templates/manager/wordpress.html:943
 msgid "Reinstall Core files"
 msgstr ""
 
-#: templates/manager/wordpress.html:951
+#: templates/manager/wordpress.html:946
 msgid "Verify Checksums"
 msgstr ""
 
-#: templates/manager/wordpress.html:965
+#: templates/manager/wordpress.html:960
 msgid "Downloading WP core files... Please wait."
 msgstr ""
 
-#: templates/manager/wordpress.html:996
+#: templates/manager/wordpress.html:991
 msgid "Verifying WP checksum... Please wait."
 msgstr ""
 
-#: templates/manager/wordpress.html:1062
+#: templates/manager/wordpress.html:1057
 msgid "Current Maintenance Mode status"
 msgstr ""
 
-#: templates/manager/wordpress.html:1083 templates/user/activity.html:45
+#: templates/manager/wordpress.html:1078 templates/user/activity.html:45
 #: templates/user/loginlog.html:51
 msgid "Action"
 msgstr ""
 
-#: templates/manager/wordpress.html:1084 templates/manager/wordpress.html:1090
+#: templates/manager/wordpress.html:1079 templates/manager/wordpress.html:1085
 msgid "Enable/Disable Maintenance Mode"
 msgstr ""
 
-#: templates/manager/wordpress.html:1105
+#: templates/manager/wordpress.html:1100
 msgid "Template"
 msgstr ""
 
-#: templates/manager/wordpress.html:1106
+#: templates/manager/wordpress.html:1101
 msgid "Edit maintenance mode code"
 msgstr ""
 
-#: templates/manager/wordpress.html:1112
+#: templates/manager/wordpress.html:1107
 msgid "Click to Edit"
 msgstr ""
 
-#: templates/manager/wordpress.html:1173
+#: templates/manager/wordpress.html:1168
 msgid "Enabling maintenance mode... Please wait."
 msgstr ""
 
-#: templates/manager/wordpress.html:1175
+#: templates/manager/wordpress.html:1170
 msgid "Disabling maintenance mode... Please wait."
 msgstr ""
 
-#: templates/manager/wordpress.html:1195
+#: templates/manager/wordpress.html:1190
 msgid "Failed to change maintenance mode"
 msgstr ""
 
-#: templates/manager/wordpress.html:1221
+#: templates/manager/wordpress.html:1216
 msgid "Current WP version."
 msgstr ""
 
-#: templates/manager/wordpress.html:1226
+#: templates/manager/wordpress.html:1221
 msgid "Installed WordPress version:"
 msgstr ""
 
-#: templates/manager/wordpress.html:1233
+#: templates/manager/wordpress.html:1228
 msgid "Latest WordPress version:"
 msgstr ""
 
-#: templates/manager/wordpress.html:1236
+#: templates/manager/wordpress.html:1231
 msgid "Click to update WordPress core"
 msgstr ""
 
-#: templates/manager/wordpress.html:1313
+#: templates/manager/wordpress.html:1308
 msgid "Core"
 msgstr ""
 
-#: templates/manager/wordpress.html:1314
+#: templates/manager/wordpress.html:1309
 msgid "Update preferences for WP core."
 msgstr ""
 
-#: templates/manager/wordpress.html:1320
+#: templates/manager/wordpress.html:1315
 msgid "Update WordPress automatically:"
 msgstr ""
 
-#: templates/manager/wordpress.html:1325 templates/manager/wordpress.html:1365
-#: templates/manager/wordpress.html:1393
+#: templates/manager/wordpress.html:1320 templates/manager/wordpress.html:1360
+#: templates/manager/wordpress.html:1388
 msgid "No, I will update manually when needed"
 msgstr ""
 
-#: templates/manager/wordpress.html:1328
+#: templates/manager/wordpress.html:1323
 msgid "Yes, but only minor (security) updates"
 msgstr ""
 
-#: templates/manager/wordpress.html:1328
+#: templates/manager/wordpress.html:1323
 msgid "Recommended"
 msgstr ""
 
-#: templates/manager/wordpress.html:1332
+#: templates/manager/wordpress.html:1327
 msgid "Yes, all (minor and major) updates"
 msgstr ""
 
-#: templates/manager/wordpress.html:1350
+#: templates/manager/wordpress.html:1345
 msgid "Plugins"
 msgstr ""
 
-#: templates/manager/wordpress.html:1351
+#: templates/manager/wordpress.html:1346
 msgid "Update preferences for WP plugins."
 msgstr ""
 
-#: templates/manager/wordpress.html:1357
+#: templates/manager/wordpress.html:1352
 msgid "Update plugins automatically:"
 msgstr ""
 
-#: templates/manager/wordpress.html:1362
+#: templates/manager/wordpress.html:1357
 msgid "Yes, all plugins will be automatically updated"
 msgstr ""
 
-#: templates/manager/wordpress.html:1380
+#: templates/manager/wordpress.html:1375
 msgid "Themes"
 msgstr ""
 
-#: templates/manager/wordpress.html:1381
+#: templates/manager/wordpress.html:1376
 msgid "Update preferences for WP themes."
 msgstr ""
 
-#: templates/manager/wordpress.html:1386
+#: templates/manager/wordpress.html:1381
 msgid "Update themes automatically:"
 msgstr ""
 
-#: templates/manager/wordpress.html:1389
+#: templates/manager/wordpress.html:1384
 msgid "Yes, all themes will be automatically updated"
 msgstr ""
 
-#: templates/manager/wordpress.html:1410
+#: templates/manager/wordpress.html:1405
 msgid "Save Update Preferences"
 msgstr ""
 
-#: templates/manager/wordpress.html:1427
+#: templates/manager/wordpress.html:1422
 msgid "Saving update preferences... Please wait."
 msgstr ""
 
-#: templates/manager/wordpress.html:1482
+#: templates/manager/wordpress.html:1477
 msgid "Saving general settings... Please wait."
 msgstr ""
 
-#: templates/manager/wordpress.html:1551
+#: templates/manager/wordpress.html:1546
 msgid "Error fetching debug info. Refresh the page."
 msgstr ""
 
-#: templates/manager/wordpress.html:1569
+#: templates/manager/wordpress.html:1564
 msgid ""
 "The options below allow you to manage the native WordPress debugging "
 "tools, enabling and disabling these tools in the wp-config.php file. It "
@@ -5020,186 +5040,186 @@ msgid ""
 " are meant for development and test installations. Refer to"
 msgstr ""
 
-#: templates/manager/wordpress.html:1569
+#: templates/manager/wordpress.html:1564
 msgid "Debugging in WordPress"
 msgstr ""
 
-#: templates/manager/wordpress.html:1569
+#: templates/manager/wordpress.html:1564
 msgid "article for more information on these options."
 msgstr ""
 
-#: templates/manager/wordpress.html:1586 templates/manager/wordpress.html:1593
+#: templates/manager/wordpress.html:1581 templates/manager/wordpress.html:1588
 msgid "WP_DEBUG"
 msgstr ""
 
-#: templates/manager/wordpress.html:1587
+#: templates/manager/wordpress.html:1582
 msgid "WordPress debug mode."
 msgstr ""
 
-#: templates/manager/wordpress.html:1596
+#: templates/manager/wordpress.html:1591
 msgid "Enable WP_DEBUG mode"
 msgstr ""
 
-#: templates/manager/wordpress.html:1614 templates/manager/wordpress.html:1621
+#: templates/manager/wordpress.html:1609 templates/manager/wordpress.html:1616
 msgid "WP_DEBUG_LOG"
 msgstr ""
 
-#: templates/manager/wordpress.html:1615
+#: templates/manager/wordpress.html:1610
 msgid "Save all errors to the debug.log file inside the wp-content directory."
 msgstr ""
 
-#: templates/manager/wordpress.html:1624
+#: templates/manager/wordpress.html:1619
 msgid "Enable WP_DEBUG_LOG"
 msgstr ""
 
-#: templates/manager/wordpress.html:1640 templates/manager/wordpress.html:1647
+#: templates/manager/wordpress.html:1635 templates/manager/wordpress.html:1642
 msgid "WP_DEBUG_DISPLAY"
 msgstr ""
 
-#: templates/manager/wordpress.html:1641
+#: templates/manager/wordpress.html:1636
 msgid "Show debug messages inside the HTML pages"
 msgstr ""
 
-#: templates/manager/wordpress.html:1650
+#: templates/manager/wordpress.html:1645
 msgid "Enable WP_DEBUG_DISPLAY"
 msgstr ""
 
-#: templates/manager/wordpress.html:1666 templates/manager/wordpress.html:1673
+#: templates/manager/wordpress.html:1661 templates/manager/wordpress.html:1668
 msgid "SCRIPT_DEBUG"
 msgstr ""
 
-#: templates/manager/wordpress.html:1667
+#: templates/manager/wordpress.html:1662
 msgid ""
 "Force WordPress to use the non-minified versions of core CSS and "
 "JavaScript files. This is useful when you are testing changes made to .js"
 " and .css files."
 msgstr ""
 
-#: templates/manager/wordpress.html:1676
+#: templates/manager/wordpress.html:1671
 msgid "Enable SCRIPT_DEBUG"
 msgstr ""
 
-#: templates/manager/wordpress.html:1692 templates/manager/wordpress.html:1699
+#: templates/manager/wordpress.html:1687 templates/manager/wordpress.html:1694
 msgid "SAVEQUERIES"
 msgstr ""
 
-#: templates/manager/wordpress.html:1693
+#: templates/manager/wordpress.html:1688
 msgid ""
 "Save database queries to an array that can be displayed to help analyze "
 "them."
 msgstr ""
 
-#: templates/manager/wordpress.html:1702
+#: templates/manager/wordpress.html:1697
 msgid "Enable SAVEQUERIES"
 msgstr ""
 
-#: templates/manager/wordpress.html:1715
+#: templates/manager/wordpress.html:1710
 msgid "Save Debugging"
 msgstr ""
 
-#: templates/manager/wordpress.html:1736
+#: templates/manager/wordpress.html:1731
 msgid "Saving debugging options... Please wait."
 msgstr ""
 
-#: templates/manager/wordpress.html:1776
+#: templates/manager/wordpress.html:1771
 msgid "Create a new backup of WordPress files and/or database."
 msgstr ""
 
-#: templates/manager/wordpress.html:1781
+#: templates/manager/wordpress.html:1776
 msgid "Backup Database"
 msgstr ""
 
-#: templates/manager/wordpress.html:1841
+#: templates/manager/wordpress.html:1836
 msgid "Remove the"
 msgstr ""
 
-#: templates/manager/wordpress.html:1841
+#: templates/manager/wordpress.html:1836
 msgid "website from this manager without actually deleting any files."
 msgstr ""
 
-#: templates/manager/wordpress.html:1852
+#: templates/manager/wordpress.html:1847
 msgid "Detach WordPress"
 msgstr ""
 
-#: templates/manager/wordpress.html:1891
+#: templates/manager/wordpress.html:1886
 msgid "Uninstall WordPress and delete all website files and the database."
 msgstr ""
 
-#: templates/manager/wordpress.html:1893
+#: templates/manager/wordpress.html:1888
 msgid ""
 "All WordPress data will be permanently deleted. There is no coming back "
 "after you press delete."
 msgstr ""
 
-#: templates/manager/wordpress.html:1902
+#: templates/manager/wordpress.html:1897
 msgid "Uninstall WordPress"
 msgstr ""
 
-#: templates/manager/wordpress.html:1914
+#: templates/manager/wordpress.html:1909
 msgid "Confirm Uninstall"
 msgstr ""
 
-#: templates/manager/wordpress.html:1931
+#: templates/manager/wordpress.html:1926
 msgid "WordPress uninstall process started. Please wait."
 msgstr ""
 
-#: templates/manager/wordpress.html:1938
+#: templates/manager/wordpress.html:1933
 msgid "WordPress uninstalled successfully."
 msgstr ""
 
-#: templates/manager/wordpress.html:2041
+#: templates/manager/wordpress.html:2036
 msgid "Cache"
 msgstr ""
 
-#: templates/manager/wordpress.html:2055
+#: templates/manager/wordpress.html:2050
 msgid "Click to Purge WP Cache"
 msgstr ""
 
-#: templates/manager/wordpress.html:2073
+#: templates/manager/wordpress.html:2068
 msgid "Cache Type:"
 msgstr ""
 
-#: templates/manager/wordpress.html:2125
+#: templates/manager/wordpress.html:2120
 msgid "Error flushing cache"
 msgstr ""
 
-#: templates/manager/wordpress.html:2127
+#: templates/manager/wordpress.html:2122
 msgid "Cache flushed successfully!"
 msgstr ""
 
-#: templates/manager/wordpress.html:2132
+#: templates/manager/wordpress.html:2127
 msgid "Failed to flush cache"
 msgstr ""
 
-#: templates/manager/wordpress.html:2170
+#: templates/manager/wordpress.html:2165
 msgid "An error occurred fetching DB size."
 msgstr ""
 
-#: templates/manager/wordpress.html:2290
+#: templates/manager/wordpress.html:2285
 msgid "Update in progress..."
 msgstr ""
 
-#: templates/manager/wordpress.html:2297
+#: templates/manager/wordpress.html:2292
 msgid "WordPress updated successfully."
 msgstr ""
 
-#: templates/manager/wordpress.html:2347
+#: templates/manager/wordpress.html:2342
 msgid "An error occurred fetching Cache Type from WP-CLI."
 msgstr ""
 
-#: templates/manager/wordpress.html:2497
+#: templates/manager/wordpress.html:2492
 msgid "Database and Files Backup"
 msgstr ""
 
-#: templates/manager/wordpress.html:2499
+#: templates/manager/wordpress.html:2494
 msgid "Database Backup"
 msgstr ""
 
-#: templates/manager/wordpress.html:2503
+#: templates/manager/wordpress.html:2498
 msgid "Unknown Backup Type"
 msgstr ""
 
-#: templates/manager/wordpress.html:2517
+#: templates/manager/wordpress.html:2512
 msgid ""
 "No options selected to backup. Please ensure that at least one of the "
 "Database or Files is selected."
