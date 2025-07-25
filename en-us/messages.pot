@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel \n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2025-07-25 13:49+0200\n"
+"POT-Creation-Date: 2025-07-25 20:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -290,8 +290,8 @@ msgstr ""
 msgid "Unsuspend"
 msgstr ""
 
-#: modules/emails.py:109 modules/emails.py:677 modules/emails.py:690
-#: modules/emails.py:723
+#: modules/emails.py:109 modules/emails.py:683 modules/emails.py:696
+#: modules/emails.py:729
 msgid "Error: Invalid email address."
 msgstr ""
 
@@ -339,16 +339,24 @@ msgstr ""
 msgid "Error: No import data found, please try again."
 msgstr ""
 
-#: modules/emails.py:466
-msgid "Domain not provided"
+#: modules/emails.py:467
+msgid "Error: domain not provided."
 msgstr ""
 
-#: modules/emails.py:471 templates/files/ftp_new.html:188
+#: modules/emails.py:469
+msgid "Error: username not provided."
+msgstr ""
+
+#: modules/emails.py:471
+msgid "Error: password not provided."
+msgstr ""
+
+#: modules/emails.py:477 templates/files/ftp_new.html:202
 msgid "Create Account"
 msgstr ""
 
-#: modules/emails.py:534 modules/emails.py:536 modules/emails.py:700
-#: modules/emails.py:702 modules/emails.py:712 modules/files/ftp.py:73
+#: modules/emails.py:540 modules/emails.py:542 modules/emails.py:706
+#: modules/emails.py:708 modules/emails.py:718 modules/files/ftp.py:73
 #: modules/files/ftp.py:75 templates/cache/elasticsearch.html:114
 #: templates/cache/memcached.html:113 templates/cache/opensearch.html:116
 #: templates/cache/redis.html:115 templates/cache/varnish.html:115
@@ -360,19 +368,19 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: modules/emails.py:651
+#: modules/emails.py:657
 msgid "Accounts"
 msgstr ""
 
-#: modules/emails.py:680
+#: modules/emails.py:686
 msgid "Delete address"
 msgstr ""
 
-#: modules/emails.py:714 templates/emails/info.html:9
+#: modules/emails.py:720 templates/emails/info.html:9
 msgid "Connect Devices"
 msgstr ""
 
-#: modules/emails.py:728
+#: modules/emails.py:734
 msgid "Error: Invalid configuration type."
 msgstr ""
 
@@ -497,7 +505,7 @@ msgid "This is a system username that can not be edited."
 msgstr ""
 
 #: modules/mysql.py:207 modules/postgresql.py:231 templates/files/ftp.html:110
-#: templates/mysql/password.html:170 templates/mysql/root_password.html:161
+#: templates/mysql/password.html:174 templates/mysql/root_password.html:161
 #: templates/mysql/users.html:103 templates/psql/password.html:168
 #: templates/psql/users.html:103
 msgid "Change Password"
@@ -1304,7 +1312,7 @@ msgstr ""
 
 #: modules/files/filemanager.py:1073 modules/files/filemanager.py:1140
 #: templates/dashboard/dashboard.html:92 templates/files/disk_usage.html:101
-#: templates/files/filemanager.html:27 templates/files/inodes.html:102
+#: templates/files/filemanager.html:31 templates/files/inodes.html:102
 msgid "File Manager"
 msgstr ""
 
@@ -1488,7 +1496,7 @@ msgid "Site Manager"
 msgstr ""
 
 #: templates/base.html:862 templates/dashboard/dashboard.html:77
-#: templates/domains/ssl.html:191 templates/files/filemanager.html:200
+#: templates/domains/ssl.html:191 templates/files/filemanager.html:204
 #: templates/manager/python_node_apps.html:826 templates/manager/ruby.html:589
 #: templates/manager/websitebuilder.html:358
 #: templates/manager/wordpress.html:230
@@ -2677,7 +2685,7 @@ msgid "Total Memory:"
 msgstr ""
 
 #: templates/docker/containers.html:52 templates/domains/dns.html:118
-#: templates/domains/dns.html:141 templates/files/filemanager.html:97
+#: templates/domains/dns.html:141 templates/files/filemanager.html:101
 #: templates/files/filemanager/table.html:6
 #: templates/files/filemanager/table_trash.html:6 templates/files/trash.html:55
 msgid "Name"
@@ -2715,7 +2723,7 @@ msgstr ""
 msgid "Tag"
 msgstr ""
 
-#: templates/docker/images.html:135 templates/files/ftp_password.html:75
+#: templates/docker/images.html:135 templates/files/ftp_password.html:182
 #: templates/files/ftp_path.html:67 templates/user/account.html:119
 msgid "Update"
 msgstr ""
@@ -2881,7 +2889,7 @@ msgstr ""
 msgid "TTL"
 msgstr ""
 
-#: templates/domains/dns.html:124 templates/files/filemanager.html:170
+#: templates/domains/dns.html:124 templates/files/filemanager.html:174
 #: templates/files/filemanager/table.html:28
 #: templates/files/filemanager/table_trash.html:38
 #: templates/files/trash.html:153 templates/manager/sites.html:85
@@ -3247,7 +3255,7 @@ msgid "URI"
 msgstr ""
 
 #: templates/domains/logs.html:189 templates/domains/logs.html:223
-#: templates/files/disk_usage.html:65 templates/files/filemanager.html:161
+#: templates/files/disk_usage.html:65 templates/files/filemanager.html:165
 #: templates/files/filemanager/table.html:7
 #: templates/files/filemanager/table_trash.html:7
 #: templates/files/trash.html:144 templates/mysql/databases.html:141
@@ -3587,17 +3595,16 @@ msgstr ""
 
 #: templates/emails/confirm_import.html:46 templates/emails/info.html:35
 #: templates/emails/info.html:51 templates/emails/new.html:124
-#: templates/emails/new.html:134 templates/emails/single_account.html:145
-#: templates/files/ftp_new.html:56 templates/files/ftp_new.html:66
-#: templates/files/ftp_password.html:34 templates/files/ftp_password.html:53
-#: templates/mysql/mysql_user.html:52 templates/mysql/mysql_user.html:62
-#: templates/mysql/password.html:46 templates/mysql/root_password.html:50
-#: templates/mysql/wizard.html:61 templates/mysql/wizard.html:71
-#: templates/psql/mysql_user.html:40 templates/psql/password.html:46
-#: templates/psql/password.html:56 templates/psql/psql_user.html:46
-#: templates/psql/psql_user.html:56 templates/psql/wizard.html:61
-#: templates/psql/wizard.html:71 templates/user/account.html:78
-#: templates/user/account.html:97 templates/user/login.html:89
+#: templates/emails/single_account.html:145 templates/files/ftp_new.html:56
+#: templates/files/ftp_password.html:46 templates/mysql/mysql_user.html:52
+#: templates/mysql/mysql_user.html:62 templates/mysql/password.html:46
+#: templates/mysql/root_password.html:50 templates/mysql/wizard.html:61
+#: templates/mysql/wizard.html:71 templates/psql/mysql_user.html:40
+#: templates/psql/password.html:46 templates/psql/password.html:56
+#: templates/psql/psql_user.html:46 templates/psql/psql_user.html:56
+#: templates/psql/wizard.html:61 templates/psql/wizard.html:71
+#: templates/user/account.html:78 templates/user/account.html:97
+#: templates/user/login.html:89
 msgid "Password"
 msgstr ""
 
@@ -3672,7 +3679,7 @@ msgid "Current Filters"
 msgstr ""
 
 #: templates/emails/filter.html:41 templates/emails/import.html:41
-#: templates/emails/info.html:69 templates/emails/new.html:280
+#: templates/emails/info.html:69 templates/emails/new.html:296
 #: templates/emails/single_account.html:270
 msgid "Back to Emails"
 msgstr ""
@@ -3689,7 +3696,7 @@ msgstr ""
 msgid "Upload CSV/XLS Fil"
 msgstr ""
 
-#: templates/emails/import.html:45 templates/files/filemanager.html:79
+#: templates/emails/import.html:45 templates/files/filemanager.html:83
 #: templates/files/upload_file.html:114
 msgid "Upload"
 msgstr ""
@@ -3751,7 +3758,8 @@ msgid "info"
 msgstr ""
 
 #: templates/emails/new.html:114 templates/emails/single_account.html:135
-#: templates/files/ftp_new.html:46 templates/manager/wordpress_install.html:157
+#: templates/files/ftp_new.html:46 templates/files/ftp_password.html:36
+#: templates/manager/wordpress_install.html:157
 #: templates/mysql/mysql_user.html:42 templates/mysql/password.html:36
 #: templates/mysql/root_password.html:30 templates/mysql/wizard.html:51
 #: templates/psql/password.html:36 templates/psql/psql_user.html:36
@@ -3760,7 +3768,8 @@ msgid "Weak password"
 msgstr ""
 
 #: templates/emails/new.html:115 templates/emails/single_account.html:136
-#: templates/files/ftp_new.html:47 templates/manager/wordpress_install.html:158
+#: templates/files/ftp_new.html:47 templates/files/ftp_password.html:37
+#: templates/manager/wordpress_install.html:158
 #: templates/mysql/mysql_user.html:43 templates/mysql/password.html:37
 #: templates/mysql/root_password.html:31 templates/mysql/wizard.html:52
 #: templates/psql/password.html:37 templates/psql/psql_user.html:37
@@ -3769,7 +3778,8 @@ msgid "Medium strength password"
 msgstr ""
 
 #: templates/emails/new.html:116 templates/emails/single_account.html:137
-#: templates/files/ftp_new.html:48 templates/manager/wordpress_install.html:159
+#: templates/files/ftp_new.html:48 templates/files/ftp_password.html:38
+#: templates/manager/wordpress_install.html:159
 #: templates/mysql/mysql_user.html:44 templates/mysql/password.html:38
 #: templates/mysql/root_password.html:32 templates/mysql/wizard.html:53
 #: templates/psql/password.html:38 templates/psql/psql_user.html:38
@@ -3777,7 +3787,13 @@ msgstr ""
 msgid "Strong password"
 msgstr ""
 
-#: templates/emails/new.html:284
+#: templates/emails/new.html:134 templates/emails/single_account.html:155
+#: templates/files/ftp_new.html:66 templates/mysql/password.html:56
+#: templates/mysql/root_password.html:40
+msgid "New Password"
+msgstr ""
+
+#: templates/emails/new.html:300
 msgid "Create Email"
 msgstr ""
 
@@ -3808,11 +3824,6 @@ msgstr ""
 
 #: templates/emails/single_account.html:109
 msgid "Sending Outgoing Mail"
-msgstr ""
-
-#: templates/emails/single_account.html:155 templates/mysql/password.html:56
-#: templates/mysql/root_password.html:40
-msgid "New Password"
 msgstr ""
 
 #: templates/emails/single_account.html:274
@@ -3940,51 +3951,51 @@ msgstr ""
 msgid "The specified file does not exist."
 msgstr ""
 
-#: templates/files/filemanager.html:69
+#: templates/files/filemanager.html:73
 msgid "Search Files & Folders"
 msgstr ""
 
-#: templates/files/filemanager.html:73
+#: templates/files/filemanager.html:77
 msgid "New File"
 msgstr ""
 
-#: templates/files/filemanager.html:76
+#: templates/files/filemanager.html:80
 msgid "New Folder"
 msgstr ""
 
-#: templates/files/filemanager.html:107
+#: templates/files/filemanager.html:111
 #: templates/files/filemanager/table.html:10
 #: templates/files/filemanager/table_trash.html:10
 #: templates/files/trash.html:90 templates/user/history_usage.html:149
 msgid "Date"
 msgstr ""
 
-#: templates/files/filemanager.html:116
+#: templates/files/filemanager.html:120
 #: templates/files/filemanager/table.html:13
 #: templates/files/filemanager/table_trash.html:23
 #: templates/files/trash.html:99
 msgid "Owner"
 msgstr ""
 
-#: templates/files/filemanager.html:125
+#: templates/files/filemanager.html:129
 #: templates/files/filemanager/table.html:16
 #: templates/files/filemanager/table_trash.html:26
 #: templates/files/trash.html:108
 msgid "Group"
 msgstr ""
 
-#: templates/files/filemanager.html:134
+#: templates/files/filemanager.html:138
 #: templates/files/filemanager/table.html:20
 #: templates/files/filemanager/table_trash.html:30
 #: templates/files/trash.html:117
 msgid "Links"
 msgstr ""
 
-#: templates/files/filemanager.html:143 templates/files/trash.html:126
+#: templates/files/filemanager.html:147 templates/files/trash.html:126
 msgid "Link Target"
 msgstr ""
 
-#: templates/files/filemanager.html:152
+#: templates/files/filemanager.html:156
 #: templates/files/filemanager/actions_buttons.html:38
 #: templates/files/filemanager/table.html:33
 #: templates/files/filemanager/table_trash.html:43
@@ -3992,19 +4003,19 @@ msgstr ""
 msgid "Permissions"
 msgstr ""
 
-#: templates/files/filemanager.html:191
+#: templates/files/filemanager.html:195
 msgid "in:"
 msgstr ""
 
-#: templates/files/filemanager.html:191
+#: templates/files/filemanager.html:195
 msgid "all folders"
 msgstr ""
 
-#: templates/files/filemanager.html:209
+#: templates/files/filemanager.html:213
 msgid "Folders"
 msgstr ""
 
-#: templates/files/filemanager.html:218
+#: templates/files/filemanager.html:222
 msgid "Specific extension"
 msgstr ""
 
@@ -4102,11 +4113,11 @@ msgstr ""
 msgid "Create a new FTP account."
 msgstr ""
 
-#: templates/files/ftp_new.html:165
+#: templates/files/ftp_new.html:179
 msgid "Path (folder)"
 msgstr ""
 
-#: templates/files/ftp_new.html:184
+#: templates/files/ftp_new.html:198
 msgid "Back to FTP Accounts"
 msgstr ""
 
@@ -4116,6 +4127,14 @@ msgstr ""
 
 #: templates/files/ftp_password.html:14
 msgid "Change FTP password for user"
+msgstr ""
+
+#: templates/files/ftp_password.html:56
+msgid "New password"
+msgstr ""
+
+#: templates/files/ftp_password.html:166
+msgid "Confirm Password"
 msgstr ""
 
 #: templates/files/ftp_path.html:12
@@ -5804,7 +5823,7 @@ msgstr ""
 msgid "Random Username"
 msgstr ""
 
-#: templates/mysql/mysql_user.html:169 templates/mysql/password.html:166
+#: templates/mysql/mysql_user.html:169 templates/mysql/password.html:170
 #: templates/psql/mysql_user.html:66 templates/psql/password.html:164
 #: templates/psql/psql_user.html:163
 msgid "Back to Users"
