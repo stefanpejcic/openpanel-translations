@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel \n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2025-07-30 13:13+0200\n"
+"POT-Creation-Date: 2025-07-30 15:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -357,7 +357,7 @@ msgstr ""
 msgid "Error: password not provided."
 msgstr ""
 
-#: modules/emails.py:483
+#: modules/emails.py:483 templates/files/ftp_new.html:203
 msgid "Create Account"
 msgstr ""
 
@@ -1143,7 +1143,7 @@ msgstr ""
 msgid "User root directory not found"
 msgstr ""
 
-#: modules/core/paths.py:62 modules/core/paths.py:112
+#: modules/core/paths.py:62 modules/core/paths.py:115
 msgid "Forbidden"
 msgstr ""
 
@@ -1163,15 +1163,15 @@ msgstr ""
 msgid "Symlinks are not allowed"
 msgstr ""
 
-#: modules/core/paths.py:101
+#: modules/core/paths.py:104
 msgid "Path traversal or symlink escape detected"
 msgstr ""
 
-#: modules/core/paths.py:104
+#: modules/core/paths.py:107
 msgid "File or directory not found"
 msgstr ""
 
-#: modules/core/paths.py:109
+#: modules/core/paths.py:112
 msgid "Not found"
 msgstr ""
 
@@ -1236,181 +1236,189 @@ msgstr ""
 msgid "Disk Usage"
 msgstr ""
 
-#: modules/files/filemanager.py:109
+#: modules/files/filemanager.py:112
 msgid "Failed to set ownership for the new file."
 msgstr ""
 
-#: modules/files/filemanager.py:111
+#: modules/files/filemanager.py:114
 msgid "File created successfully."
 msgstr ""
 
-#: modules/files/filemanager.py:125
+#: modules/files/filemanager.py:128
+msgid "Error creating file! Check permissions."
+msgstr ""
+
+#: modules/files/filemanager.py:131
+msgid "Unexpected error occurred while creating the file."
+msgstr ""
+
+#: modules/files/filemanager.py:135
 msgid "Filename is missing"
 msgstr ""
 
-#: modules/files/filemanager.py:155
+#: modules/files/filemanager.py:166
 msgid "Failed to set ownership for the new folder."
 msgstr ""
 
-#: modules/files/filemanager.py:156
+#: modules/files/filemanager.py:168
 msgid "Folder created successfully."
 msgstr ""
 
-#: modules/files/filemanager.py:167
+#: modules/files/filemanager.py:178
+msgid "Error creating folder! Check permissions."
+msgstr ""
+
+#: modules/files/filemanager.py:181
+msgid "Unexpected error occurred while creating the folder."
+msgstr ""
+
+#: modules/files/filemanager.py:185
 msgid "Foldername is missing"
 msgstr ""
 
-#: modules/files/filemanager.py:233
+#: modules/files/filemanager.py:251
 msgid "Files uploaded successfully."
 msgstr ""
 
-#: modules/files/filemanager.py:235
+#: modules/files/filemanager.py:253
 msgid "Some files failed: "
 msgstr ""
 
-#: modules/files/filemanager.py:238
+#: modules/files/filemanager.py:256
 msgid "No files were uploaded"
 msgstr ""
 
-#: modules/files/filemanager.py:241
+#: modules/files/filemanager.py:259
 msgid "Error uploading files: {0}"
 msgstr ""
 
-#: modules/files/filemanager.py:268
-msgid "Invalid extraction path!"
-msgstr ""
-
-#: modules/files/filemanager.py:273
-msgid "Selected archive file does not exist!"
-msgstr ""
-
-#: modules/files/filemanager.py:283
+#: modules/files/filemanager.py:307
 msgid "Failed to set ownership."
 msgstr ""
 
-#: modules/files/filemanager.py:317
+#: modules/files/filemanager.py:375
 msgid "File extracted successfully"
 msgstr ""
 
-#: modules/files/filemanager.py:360
+#: modules/files/filemanager.py:418
 msgid "Failed to set ownership for the downloaded file."
 msgstr ""
 
-#: modules/files/filemanager.py:374
+#: modules/files/filemanager.py:432
 msgid "No URL provided"
 msgstr ""
 
-#: modules/files/filemanager.py:377
+#: modules/files/filemanager.py:435
 msgid "Failed to download the file"
 msgstr ""
 
-#: modules/files/filemanager.py:380
+#: modules/files/filemanager.py:438
 msgid "Internal server error"
 msgstr ""
 
-#: modules/files/filemanager.py:408
+#: modules/files/filemanager.py:463
 msgid "Missing required form data for compression: "
 msgstr ""
 
-#: modules/files/filemanager.py:442
+#: modules/files/filemanager.py:496
 msgid "Unsupported archive format."
 msgstr ""
 
-#: modules/files/filemanager.py:451
+#: modules/files/filemanager.py:502
 msgid "Archive creation failed: "
 msgstr ""
 
-#: modules/files/filemanager.py:456
+#: modules/files/filemanager.py:507
 msgid "Archive created successfully."
 msgstr ""
 
-#: modules/files/filemanager.py:464
+#: modules/files/filemanager.py:514
 msgid "Failed to set archive ownership"
 msgstr ""
 
-#: modules/files/filemanager.py:591
+#: modules/files/filemanager.py:652
 msgid "Permissions changed."
 msgstr ""
 
-#: modules/files/filemanager.py:684 modules/files/filemanager.py:813
+#: modules/files/filemanager.py:655
+msgid "Error changing permissions!"
+msgstr ""
+
+#: modules/files/filemanager.py:754 modules/files/filemanager.py:894
 msgid "Viewing of this file type is not allowed."
 msgstr ""
 
-#: modules/files/filemanager.py:700
+#: modules/files/filemanager.py:772
 msgid "File saved successfully"
 msgstr ""
 
-#: modules/files/filemanager.py:703
+#: modules/files/filemanager.py:774
 msgid "Error saving file: "
 msgstr ""
 
-#: modules/files/filemanager.py:715
+#: modules/files/filemanager.py:786
 msgid "File is too large to open in the editor (limit is {} MB)"
 msgstr ""
 
-#: modules/files/filemanager.py:718 modules/files/filemanager.py:830
+#: modules/files/filemanager.py:789 modules/files/filemanager.py:915
 msgid "Error accessing file size: "
 msgstr ""
 
-#: modules/files/filemanager.py:728
+#: modules/files/filemanager.py:800
 msgid "Error reading file"
 msgstr ""
 
-#: modules/files/filemanager.py:788
-msgid "Error retrieving file from container."
+#: modules/files/filemanager.py:844
+msgid "Error retrieving file size."
 msgstr ""
 
-#: modules/files/filemanager.py:790
+#: modules/files/filemanager.py:847
 msgid "Invalid file size retrieved. Possible issue with file."
 msgstr ""
 
-#: modules/files/filemanager.py:792
-msgid "An error occurred while processing the request: "
-msgstr ""
-
-#: modules/files/filemanager.py:827
+#: modules/files/filemanager.py:912
 msgid "File is too large to view in the browser (limit is {} MB)"
 msgstr ""
 
-#: modules/files/filemanager.py:880
+#: modules/files/filemanager.py:966
 msgid "The specified directory does not exist."
 msgstr ""
 
-#: modules/files/filemanager.py:1065 modules/files/filemanager.py:1132
+#: modules/files/filemanager.py:1151 modules/files/filemanager.py:1218
 #: templates/dashboard/dashboard.html:92 templates/files/disk_usage.html:101
 #: templates/files/filemanager.html:31 templates/files/inodes.html:102
 msgid "File Manager"
 msgstr ""
 
-#: modules/files/filemanager.py:1082
+#: modules/files/filemanager.py:1168
 msgid "Error accessing the specified directory."
 msgstr ""
 
-#: modules/files/filemanager.py:1143
+#: modules/files/filemanager.py:1229
 msgid "No files in the Trash.."
 msgstr ""
 
-#: modules/files/filemanager.py:1303
+#: modules/files/filemanager.py:1389
 msgid "Trash emptied successfully"
 msgstr ""
 
-#: modules/files/filemanager.py:1307
+#: modules/files/filemanager.py:1393
 msgid "Unexpected error"
 msgstr ""
 
-#: modules/files/filemanager.py:1327
+#: modules/files/filemanager.py:1413
 msgid "Nothing to restore"
 msgstr ""
 
-#: modules/files/filemanager.py:1372
+#: modules/files/filemanager.py:1458
 msgid "Some items could not be restored."
 msgstr ""
 
-#: modules/files/filemanager.py:1375
+#: modules/files/filemanager.py:1461
 msgid "All items restored successfully"
 msgstr ""
 
-#: modules/files/filemanager.py:1379
+#: modules/files/filemanager.py:1465
 msgid "Unexpected error occurred"
 msgstr ""
 
@@ -2413,11 +2421,12 @@ msgstr ""
 
 #: templates/dashboard/information.html:35 templates/emails/info.html:34
 #: templates/emails/info.html:50 templates/emails/new.html:40
-#: templates/files/ftp.html:58 templates/mysql/mysql_user.html:27
-#: templates/mysql/password.html:26 templates/mysql/users.html:85
-#: templates/psql/mysql_user.html:27 templates/psql/password.html:26
-#: templates/psql/psql_user.html:21 templates/psql/users.html:85
-#: templates/user/account.html:70 templates/user/login.html:85
+#: templates/files/ftp.html:58 templates/files/ftp_new.html:31
+#: templates/mysql/mysql_user.html:27 templates/mysql/password.html:26
+#: templates/mysql/users.html:85 templates/psql/mysql_user.html:27
+#: templates/psql/password.html:26 templates/psql/psql_user.html:21
+#: templates/psql/users.html:85 templates/user/account.html:70
+#: templates/user/login.html:85
 msgid "Username"
 msgstr ""
 
@@ -3659,7 +3668,7 @@ msgstr ""
 
 #: templates/emails/confirm_import.html:45 templates/emails/info.html:35
 #: templates/emails/info.html:51 templates/emails/new.html:124
-#: templates/emails/single_account.html:145
+#: templates/emails/single_account.html:145 templates/files/ftp_new.html:56
 #: templates/files/ftp_password.html:46 templates/mysql/mysql_user.html:52
 #: templates/mysql/mysql_user.html:62 templates/mysql/password.html:46
 #: templates/mysql/root_password.html:50 templates/mysql/wizard.html:61
@@ -3826,7 +3835,7 @@ msgid "info"
 msgstr ""
 
 #: templates/emails/new.html:114 templates/emails/single_account.html:135
-#: templates/files/ftp_password.html:36
+#: templates/files/ftp_new.html:46 templates/files/ftp_password.html:36
 #: templates/manager/wordpress_install.html:157
 #: templates/mysql/mysql_user.html:42 templates/mysql/password.html:36
 #: templates/mysql/root_password.html:30 templates/mysql/wizard.html:51
@@ -3836,7 +3845,7 @@ msgid "Weak password"
 msgstr ""
 
 #: templates/emails/new.html:115 templates/emails/single_account.html:136
-#: templates/files/ftp_password.html:37
+#: templates/files/ftp_new.html:47 templates/files/ftp_password.html:37
 #: templates/manager/wordpress_install.html:158
 #: templates/mysql/mysql_user.html:43 templates/mysql/password.html:37
 #: templates/mysql/root_password.html:31 templates/mysql/wizard.html:52
@@ -3846,7 +3855,7 @@ msgid "Medium strength password"
 msgstr ""
 
 #: templates/emails/new.html:116 templates/emails/single_account.html:137
-#: templates/files/ftp_password.html:38
+#: templates/files/ftp_new.html:48 templates/files/ftp_password.html:38
 #: templates/manager/wordpress_install.html:159
 #: templates/mysql/mysql_user.html:44 templates/mysql/password.html:38
 #: templates/mysql/root_password.html:32 templates/mysql/wizard.html:53
@@ -3856,7 +3865,8 @@ msgid "Strong password"
 msgstr ""
 
 #: templates/emails/new.html:134 templates/emails/single_account.html:155
-#: templates/mysql/password.html:56 templates/mysql/root_password.html:40
+#: templates/files/ftp_new.html:67 templates/mysql/password.html:56
+#: templates/mysql/root_password.html:40
 msgid "New Password"
 msgstr ""
 
@@ -4174,6 +4184,28 @@ msgstr ""
 
 #: templates/files/ftp_connections.html:17
 msgid "Back to Accounts"
+msgstr ""
+
+#: templates/files/ftp_new.html:11
+msgid "New FTP Account"
+msgstr ""
+
+#: templates/files/ftp_new.html:12
+msgid "Create a new FTP account."
+msgstr ""
+
+#: templates/files/ftp_new.html:65
+msgid ""
+"Password must be at least 8 characters, and include a lowercase letter, "
+"an uppercase letter, a number, and a special character."
+msgstr ""
+
+#: templates/files/ftp_new.html:180
+msgid "Path (folder)"
+msgstr ""
+
+#: templates/files/ftp_new.html:199
+msgid "Back to FTP Accounts"
 msgstr ""
 
 #: templates/files/ftp_password.html:13
