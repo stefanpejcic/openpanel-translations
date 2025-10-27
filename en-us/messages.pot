@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel \n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2025-10-27 17:31+0100\n"
+"POT-Creation-Date: 2025-10-27 22:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -150,8 +150,8 @@ msgstr ""
 #: modules/website_builder.py:154 modules/website_builder.py:289
 #: modules/websites.py:202 modules/websites.py:333 modules/websites.py:416
 #: modules/websites.py:752 modules/wordpress.py:495 modules/wordpress.py:633
-#: modules/wordpress.py:1155 modules/wordpress.py:1499
-#: modules/wordpress.py:1634
+#: modules/wordpress.py:1152 modules/wordpress.py:1495
+#: modules/wordpress.py:1630
 msgid "You do not own this domain."
 msgstr ""
 
@@ -284,8 +284,8 @@ msgstr ""
 msgid "Error: Reached the maximum allowed number of domains on this hosting plan."
 msgstr ""
 
-#: modules/domains.py:389 templates/domains/new.html:129
-#: templates/domains/new.html:343
+#: modules/domains.py:389 templates/domains/new.html:130
+#: templates/domains/new.html:344
 msgid "Add Domain"
 msgstr ""
 
@@ -982,7 +982,7 @@ msgstr ""
 msgid "WordPress Manager"
 msgstr ""
 
-#: modules/wordpress.py:183 modules/wordpress.py:1526 modules/wordpress.py:1652
+#: modules/wordpress.py:183 modules/wordpress.py:1522 modules/wordpress.py:1648
 msgid "Domain not found."
 msgstr ""
 
@@ -1028,39 +1028,39 @@ msgstr ""
 msgid "Install WordPress"
 msgstr ""
 
-#: modules/wordpress.py:1669
+#: modules/wordpress.py:1665
 msgid "Verification completed successfully."
 msgstr ""
 
-#: modules/wordpress.py:1670
+#: modules/wordpress.py:1666
 msgid "Verification failed."
 msgstr ""
 
-#: modules/wordpress.py:1675
+#: modules/wordpress.py:1671
 msgid "Download completed successfully."
 msgstr ""
 
-#: modules/wordpress.py:1676
+#: modules/wordpress.py:1672
 msgid "Download failed."
 msgstr ""
 
-#: modules/wordpress.py:1680
+#: modules/wordpress.py:1676
 msgid "Salts shuffled successfully."
 msgstr ""
 
-#: modules/wordpress.py:1681
+#: modules/wordpress.py:1677
 msgid "Failed to shuffle salts."
 msgstr ""
 
-#: modules/wordpress.py:1693
+#: modules/wordpress.py:1689
 msgid "Unsupported action."
 msgstr ""
 
-#: modules/wordpress.py:1704
+#: modules/wordpress.py:1700
 msgid "Invalid action. Use 'enable' or 'disable'."
 msgstr ""
 
-#: modules/wordpress.py:1731
+#: modules/wordpress.py:1727
 msgid "Invalid type. Use 'core' or 'plugins'."
 msgstr ""
 
@@ -2952,7 +2952,7 @@ msgid "Total volumes:"
 msgstr ""
 
 #: templates/domains/capitalize.html:126 templates/domains/delete.html:85
-#: templates/domains/docroot.html:60 templates/domains/new.html:122
+#: templates/domains/docroot.html:60 templates/domains/new.html:123
 #: templates/domains/redirect.html:68 templates/domains/ssl.html:16
 #: templates/domains/suspend.html:45 templates/domains/unsuspend.html:44
 msgid "Back to Domains"
@@ -3230,7 +3230,7 @@ msgstr ""
 msgid "Saving zone file for domain"
 msgstr ""
 
-#: templates/domains/dns.html:680 templates/domains/new.html:278
+#: templates/domains/dns.html:680 templates/domains/new.html:279
 msgid "Please wait for the process to finish."
 msgstr ""
 
@@ -3482,60 +3482,66 @@ msgstr ""
 msgid "Show Details"
 msgstr ""
 
-#: templates/domains/new.html:218
+#: templates/domains/new.html:80
+msgid ""
+"docroot module or feature are not enabled. Contact Administrator to "
+"change docroot."
+msgstr ""
+
+#: templates/domains/new.html:219
 msgid "Invalid domain name. Please enter a valid domain name like"
 msgstr ""
 
-#: templates/domains/new.html:218 templates/manager/mautic.html:389
+#: templates/domains/new.html:219 templates/manager/mautic.html:389
 #: templates/manager/mautic.html:474 templates/manager/websitebuilder.html:140
 #: templates/manager/websitebuilder.html:225
 #: templates/manager/wordpress.html:1880 templates/manager/wordpress.html:1965
 msgid "or"
 msgstr ""
 
-#: templates/domains/new.html:238
+#: templates/domains/new.html:239
 msgid ""
 "Paths for both public and secret files must be set for importing .onion "
 "domain."
 msgstr ""
 
-#: templates/domains/new.html:245
+#: templates/domains/new.html:246
 msgid "Paths for both public and secret files must start with /var/www/html/."
 msgstr ""
 
-#: templates/domains/new.html:278
+#: templates/domains/new.html:279
 msgid "Adding domain"
 msgstr ""
 
-#: templates/domains/new.html:289 templates/domains/new.html:355
+#: templates/domains/new.html:290 templates/domains/new.html:356
 msgid "Error adding domain name"
 msgstr ""
 
-#: templates/domains/new.html:289 templates/emails/confirm_import.html:165
+#: templates/domains/new.html:290 templates/emails/confirm_import.html:165
 msgid "Network response from backend was not ok. Please contact support."
 msgstr ""
 
-#: templates/domains/new.html:336
+#: templates/domains/new.html:337
 msgid "Domain name"
 msgstr ""
 
-#: templates/domains/new.html:336
+#: templates/domains/new.html:337
 msgid "added successfully."
 msgstr ""
 
-#: templates/domains/new.html:355
+#: templates/domains/new.html:356
 msgid "Click on Show Details above to view the log."
 msgstr ""
 
-#: templates/domains/new.html:368
+#: templates/domains/new.html:369
 msgid "Retry"
 msgstr ""
 
-#: templates/domains/new.html:440
+#: templates/domains/new.html:441
 msgid "Converted to Punycode:"
 msgstr ""
 
-#: templates/domains/new.html:440
+#: templates/domains/new.html:441
 msgid "(for compatibility with internationalized domain names)"
 msgstr ""
 
