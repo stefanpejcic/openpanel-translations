@@ -32,7 +32,6 @@ if [ "$#" -lt 1 ]; then
   echo "$locales"
   echo ""
   echo "Example for a single locale (DE): opencli locale de-de"
-  echo ""
   echo "Example for multiple locales (DE & ES): opencli locale de-de es-es"
   echo ""
   
