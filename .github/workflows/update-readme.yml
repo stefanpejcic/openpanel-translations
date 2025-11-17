@@ -1,0 +1,72 @@
+name: Update README with Translations
+
+on:
+  workflow_dispatch:   # manual trigger
+  schedule:
+    - cron: '0 0 * * 0' # every Sunday at 00:00 UTC
+
+jobs:
+  generate-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate README
+        run: |
+          #!/usr/bin/env bash
+          set -e
+
+          README_FILE="README.md"
+
+          echo "### Available Translations" > $README_FILE
+          echo "" >> $README_FILE
+
+          # Function to convert locale to emoji
+          function flag_emoji() {
+            local code=$1
+            local flag=""
+            for (( i=0; i<${#code}; i++ )); do
+              c=${code:$i:1}
+              if [[ $c =~ [A-Z] ]]; then
+                # Convert ASCII uppercase to regional indicator
+                flag="$flag$(printf "\U$(printf '%x' $((0x1F1E6 + $(printf '%d' "'$c") - 65)))")"
+              fi
+            done
+            echo $flag
+          }
+
+          # Map folder names to language names
+          declare -A LANGS=(
+            ["de"]="German"
+            ["es"]="Spanish"
+            ["fr"]="French"
+            ["ne"]="Nepali"
+            ["pt"]="Portuguese"
+            ["ru"]="Russian"
+            ["tr"]="Turkish"
+            ["ua"]="Ukrainian"
+            ["zh"]="Simplified Chinese"
+          )
+
+          # Loop through first-level folders
+          for dir in */ ; do
+            dir=${dir%/}  # remove trailing slash
+            # split language and country
+            IFS='-' read -r lang country <<< "$dir"
+            lang=${lang,,}  # lowercase
+            country=${country^^} # uppercase
+
+            name=${LANGS[$lang]:-$lang}  # fallback to code if not found
+            emoji=$(flag_emoji $country)
+            echo "- $emoji $name ($country)" >> $README_FILE
+          done
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update README with available translations" || echo "No changes to commit"
+          git push
