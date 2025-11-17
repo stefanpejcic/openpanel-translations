@@ -63,7 +63,7 @@ do
     mkdir -p $babel_translations/"$two_letter"/LC_MESSAGES/  &>/dev/null
     echo "Downloading $formatted_locale locale from https://raw.githubusercontent.com/$github_repo/main/$formatted_locale/messages.pot"
     wget -O $babel_translations/"$two_letter"/LC_MESSAGES/messages.po "https://raw.githubusercontent.com/$github_repo/main/$formatted_locale/messages.po" &>/dev/null
-    docker exec openpanel sh -c "pybabel init -i $babel_translations/$two_letter/LC_MESSAGES/messages.po -d $babel_translations -l $two_letter &>/dev/null"
+    docker --context=default exec openpanel sh -c "pybabel init -i $babel_translations/$two_letter/LC_MESSAGES/messages.po -d $babel_translations -l $two_letter &>/dev/null"
     echo ""
   else
     echo "Invalid locale format: $locale. Skipping."
@@ -73,7 +73,7 @@ done
 # Do this only once
 
 echo "Compiling .mo files for all available locales in $babel_translations directory.."
-docker exec openpanel sh -c "pybabel compile -f -d $babel_translations  &>/dev/null"
+docker --context=default exec openpanel sh -c "pybabel compile -f -d $babel_translations  &>/dev/null"
 echo "Restarting OpenPanel to apply translations.."
-docker restart openpanel  &>/dev/null
+docker --context=default restart openpanel  &>/dev/null
 echo "DONE"
