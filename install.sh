@@ -63,7 +63,7 @@ do
     mkdir -p $babel_translations/"$two_letter"/LC_MESSAGES/  &>/dev/null
     echo "Downloading $formatted_locale locale from https://raw.githubusercontent.com/$github_repo/main/$formatted_locale/messages.pot"
     wget -O $babel_translations/"$two_letter"/LC_MESSAGES/messages.po "https://raw.githubusercontent.com/$github_repo/main/$formatted_locale/messages.po" &>/dev/null
-    docker --context=default exec openpanel sh -c "pybabel init -i $babel_translations/$two_letter/LC_MESSAGES/messages.po -d $babel_translations -l $two_letter &>/dev/null"
+    docker --context=default exec openpanel sh -c "pybabel update -i $babel_translations/$two_letter/LC_MESSAGES/messages.po -d $babel_translations -l $two_letter &>/dev/null"
     echo ""
   else
     echo "Invalid locale format: $locale. Skipping."
