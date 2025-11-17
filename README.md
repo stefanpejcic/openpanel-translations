@@ -8,7 +8,7 @@
 - [🇵🇹 Portuguese (PT)](https://community.openpanel.org/d/154-fala-portugues-portuguese-translation-for-openpanel)
 - [🇷🇺 Russian (RU)](https://community.openpanel.org/d/165-govoris-po-russki-russian-and-ukrainian-translation-for-openpanel)
 - [🇹🇷 Turkish (TR)](https://community.openpanel.org/d/31-turkce-konusuyor-musun-turkish-translation-for-openpanel)
-- [🇷🇺 Ukrainian (UA)](https://community.openpanel.org/d/165-govoris-po-russki-russian-and-ukrainian-translation-for-openpanel)
+- [🇺🇦 Ukrainian (UA)](https://community.openpanel.org/d/165-govoris-po-russki-russian-and-ukrainian-translation-for-openpanel)
 - [🇨🇳 Simplified Chinese (ZH)](https://community.openpanel.org/d/151-simplified-chinese-translation-for-openpanel)
 
 ## OpenPanel Translations
