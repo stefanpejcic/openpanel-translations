@@ -28,7 +28,7 @@ if [ "$#" -lt 1 ]; then
   echo ""
   # list available locales from github repo
   echo "Available locales:"
-  locales=$(curl -s "https://api.github.com/repos/$github_repo/contents" | jq -r '.[] | select(.type == "dir") | .name')
+  locales=$(curl -s "https://api.github.com/repos/$github_repo/contents" | jq -r '.[] | select(.type == "dir" and (.name | test("^\\.") | not)) | .name')
   echo "$locales"
   echo ""
   echo "Example for a single locale (DE): opencli locale de-de"
