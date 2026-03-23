@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 1.7.48\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-03-23 16:53+0100\n"
+"POT-Creation-Date: 2026-03-23 19:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -364,7 +364,7 @@ msgstr ""
 #: modules/files/ftp.py:87 templates/cache/service.html:81
 #: templates/domains/ssl.html:61 templates/files/ftp.html:13
 #: templates/manager/python_node_apps.html:72
-#: templates/mysql/phpmyadmin.html:85 templates/mysql/remote_mysql.html:98
+#: templates/mysql/phpmyadmin.html:79 templates/mysql/remote_mysql.html:98
 #: templates/partials/_service_js.html:40
 #: templates/partials/_service_js.html:44 templates/psql/pgadmin.html:85
 #: templates/psql/remote_psql.html:96 templates/system/services.html:89
@@ -657,7 +657,7 @@ msgid ""
 msgstr ""
 
 #: modules/php.py:337 templates/dashboard/dashboard.html:165
-#: templates/mysql/phpmyadmin.html:109
+#: templates/mysql/phpmyadmin.html:103
 msgid "Limits"
 msgstr ""
 
@@ -1555,8 +1555,8 @@ msgstr ""
 msgid "Error changing permissions!"
 msgstr ""
 
-#: modules/files/filemanager.py:959 modules/files/filemanager.py:1128
-msgid "Viewing of this file type is not allowed."
+#: modules/files/filemanager.py:959
+msgid "Editing this file type is not allowed."
 msgstr ""
 
 #: modules/files/filemanager.py:1000
@@ -1586,6 +1586,10 @@ msgstr ""
 
 #: modules/files/filemanager.py:1080
 msgid "Invalid file size retrieved. Possible issue with file."
+msgstr ""
+
+#: modules/files/filemanager.py:1128
+msgid "Viewing of this file type is not allowed."
 msgstr ""
 
 #: modules/files/filemanager.py:1148
@@ -1828,14 +1832,14 @@ msgid "Reload Data"
 msgstr ""
 
 #: templates/cache/service.html:20 templates/cache/service.html:58
-#: templates/mysql/phpmyadmin.html:62 templates/mysql/remote_mysql.html:75
+#: templates/mysql/phpmyadmin.html:56 templates/mysql/remote_mysql.html:75
 #: templates/psql/pgadmin.html:62 templates/psql/remote_psql.html:73
 #: templates/system/services.html:20 templates/system/services.html:66
 msgid "Click to Disable"
 msgstr ""
 
 #: templates/cache/service.html:27 templates/cache/service.html:73
-#: templates/dashboard/twofa.html:11 templates/mysql/phpmyadmin.html:77
+#: templates/dashboard/twofa.html:11 templates/mysql/phpmyadmin.html:71
 #: templates/mysql/remote_mysql.html:90 templates/psql/pgadmin.html:77
 #: templates/psql/remote_psql.html:88 templates/system/services.html:27
 #: templates/system/services.html:81
@@ -1846,7 +1850,7 @@ msgstr ""
 #: templates/docker/containers.html:73 templates/domains/domains.html:90
 #: templates/domains/domains.html:193 templates/domains/logs.html:176
 #: templates/domains/logs.html:218 templates/domains/ssl.html:28
-#: templates/manager/wp/single.html:1132 templates/mysql/phpmyadmin.html:46
+#: templates/manager/wp/single.html:1132 templates/mysql/phpmyadmin.html:40
 #: templates/mysql/remote_mysql.html:59 templates/psql/pgadmin.html:46
 #: templates/psql/remote_psql.html:57 templates/system/services.html:50
 #: templates/system/waf_domain.html:30 templates/user/active_sessions.html:54
@@ -1857,19 +1861,19 @@ msgstr ""
 msgid "Enable/disable the service."
 msgstr ""
 
-#: templates/cache/service.html:53 templates/mysql/phpmyadmin.html:57
+#: templates/cache/service.html:53 templates/mysql/phpmyadmin.html:51
 #: templates/mysql/remote_mysql.html:70 templates/psql/pgadmin.html:57
 #: templates/psql/remote_psql.html:68 templates/system/services.html:61
 msgid "Enabled"
 msgstr ""
 
-#: templates/cache/service.html:68 templates/mysql/phpmyadmin.html:72
+#: templates/cache/service.html:68 templates/mysql/phpmyadmin.html:66
 #: templates/mysql/remote_mysql.html:85 templates/psql/pgadmin.html:72
 #: templates/psql/remote_psql.html:83 templates/system/services.html:76
 msgid "Disabled"
 msgstr ""
 
-#: templates/cache/service.html:86 templates/mysql/phpmyadmin.html:90
+#: templates/cache/service.html:86 templates/mysql/phpmyadmin.html:84
 #: templates/mysql/remote_mysql.html:103 templates/psql/pgadmin.html:90
 #: templates/psql/remote_psql.html:101 templates/system/services.html:94
 msgid "Click to Restart"
@@ -1883,7 +1887,7 @@ msgstr ""
 msgid "IP and Port for accessing the service."
 msgstr ""
 
-#: templates/cache/service.html:108 templates/mysql/phpmyadmin.html:294
+#: templates/cache/service.html:108 templates/mysql/phpmyadmin.html:288
 #: templates/mysql/remote_mysql.html:121 templates/mysql/remote_mysql.html:144
 #: templates/psql/pgadmin.html:208 templates/psql/remote_psql.html:119
 #: templates/psql/remote_psql.html:141
@@ -1891,7 +1895,7 @@ msgid "Server:"
 msgstr ""
 
 #: templates/cache/service.html:112 templates/manager/pm2_install.html:120
-#: templates/mysql/phpmyadmin.html:331 templates/mysql/remote_mysql.html:125
+#: templates/mysql/phpmyadmin.html:325 templates/mysql/remote_mysql.html:125
 #: templates/mysql/remote_mysql.html:148 templates/psql/pgadmin.html:212
 #: templates/psql/remote_psql.html:123 templates/psql/remote_psql.html:145
 msgid "Port:"
@@ -2018,7 +2022,7 @@ msgstr ""
 msgid "Import Database"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:122
+#: templates/dashboard/dashboard.html:122 templates/mysql/phpmyadmin.html:18
 msgid "Open phpMyAdmin"
 msgstr ""
 
@@ -2468,10 +2472,10 @@ msgstr ""
 #: templates/domains/capitalize.html:114 templates/domains/dns.html:176
 #: templates/domains/dns.html:421 templates/domains/domains.html:273
 #: templates/domains/domains.html:303 templates/files/edit_file.html:104
-#: templates/files/edit_json_file.html:70 templates/mysql/phpmyadmin.html:136
-#: templates/mysql/phpmyadmin.html:164 templates/mysql/phpmyadmin.html:193
-#: templates/mysql/phpmyadmin.html:221 templates/mysql/phpmyadmin.html:276
-#: templates/mysql/phpmyadmin.html:315 templates/psql/pgadmin.html:128
+#: templates/files/edit_json_file.html:70 templates/mysql/phpmyadmin.html:130
+#: templates/mysql/phpmyadmin.html:158 templates/mysql/phpmyadmin.html:187
+#: templates/mysql/phpmyadmin.html:215 templates/mysql/phpmyadmin.html:270
+#: templates/mysql/phpmyadmin.html:309 templates/psql/pgadmin.html:128
 #: templates/psql/pgadmin.html:152 templates/psql/pgadmin.html:181
 #: templates/system/cronjobs.html:191 templates/system/waf_domain.html:16
 msgid "Save"
@@ -2575,10 +2579,10 @@ msgstr ""
 #: templates/manager/websitebuilder.html:210
 #: templates/manager/websitebuilder.html:260
 #: templates/manager/wp/single.html:628 templates/manager/wp/single.html:2070
-#: templates/manager/wp/single.html:2120 templates/mysql/phpmyadmin.html:138
-#: templates/mysql/phpmyadmin.html:166 templates/mysql/phpmyadmin.html:195
-#: templates/mysql/phpmyadmin.html:223 templates/mysql/phpmyadmin.html:278
-#: templates/mysql/phpmyadmin.html:317 templates/psql/pgadmin.html:130
+#: templates/manager/wp/single.html:2120 templates/mysql/phpmyadmin.html:132
+#: templates/mysql/phpmyadmin.html:160 templates/mysql/phpmyadmin.html:189
+#: templates/mysql/phpmyadmin.html:217 templates/mysql/phpmyadmin.html:272
+#: templates/mysql/phpmyadmin.html:311 templates/psql/pgadmin.html:130
 #: templates/psql/pgadmin.html:154 templates/psql/pgadmin.html:183
 msgid "Cancel"
 msgstr ""
@@ -2858,7 +2862,7 @@ msgstr ""
 
 #: templates/domains/dns.html:203 templates/domains/dns.html:214
 #: templates/domains/new.html:45 templates/emails/new.html:22
-#: templates/manager/wp/list.html:118 templates/mysql/phpmyadmin.html:244
+#: templates/manager/wp/list.html:118 templates/mysql/phpmyadmin.html:238
 #: templates/php/settings.html:153
 msgid "Domain"
 msgstr ""
@@ -5263,7 +5267,7 @@ msgstr ""
 #: templates/manager/python_node_apps.html:87
 #: templates/manager/python_node_apps.html:438
 #: templates/manager/python_node_apps.html:448
-#: templates/mysql/phpmyadmin.html:206 templates/psql/pgadmin.html:166
+#: templates/mysql/phpmyadmin.html:200 templates/psql/pgadmin.html:166
 msgid "Version:"
 msgstr ""
 
@@ -5330,7 +5334,7 @@ msgid "CPU limit:"
 msgstr ""
 
 #: templates/manager/python_node_apps.html:109
-#: templates/mysql/phpmyadmin.html:149
+#: templates/mysql/phpmyadmin.html:143
 msgid "Memory limit:"
 msgstr ""
 
@@ -6473,8 +6477,9 @@ msgid "Database name and user to use for the clone (optional)"
 msgstr ""
 
 #: templates/manager/wp/single.html:1871 templates/mysql/databases.html:150
-#: templates/mysql/new.html:26 templates/mysql/wizard.html:30
-#: templates/psql/databases.html:139 templates/psql/new.html:24
+#: templates/mysql/new.html:26 templates/mysql/new.html:28
+#: templates/mysql/wizard.html:30 templates/psql/databases.html:139
+#: templates/psql/new.html:24 templates/psql/new.html:26
 #: templates/psql/wizard.html:30
 msgid "Database Name"
 msgstr ""
@@ -6718,10 +6723,6 @@ msgid ""
 "information efficiently."
 msgstr ""
 
-#: templates/mysql/new.html:28 templates/psql/new.html:26
-msgid "Random Database Name"
-msgstr ""
-
 #: templates/mysql/password.html:8 templates/psql/password.html:8
 msgid "Change User Password"
 msgstr ""
@@ -6730,67 +6731,63 @@ msgstr ""
 msgid "Change password for a MySQL database user."
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:12 templates/mysql/phpmyadmin.html:47
+#: templates/mysql/phpmyadmin.html:12 templates/mysql/phpmyadmin.html:41
 msgid "Enable/disable phpMyAdmin service."
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:22
-msgid "Open phpMyAdmin Login"
-msgstr ""
-
-#: templates/mysql/phpmyadmin.html:34 templates/psql/pgadmin.html:34
+#: templates/mysql/phpmyadmin.html:28 templates/psql/pgadmin.html:34
 #: templates/system/services.html:40
 msgid "Not currently enabled by Administrator."
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:35 templates/psql/pgadmin.html:35
+#: templates/mysql/phpmyadmin.html:29 templates/psql/pgadmin.html:35
 #: templates/system/services.html:41
 msgid "Contact your hosting provider"
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:110
+#: templates/mysql/phpmyadmin.html:104
 msgid "Version and PHP limits for the phpMyAdmin service."
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:121
+#: templates/mysql/phpmyadmin.html:115
 msgid "Max execution time:"
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:162 templates/mysql/phpmyadmin.html:191
+#: templates/mysql/phpmyadmin.html:156 templates/mysql/phpmyadmin.html:185
 msgid "Please enter size in format: number followed by M (e.g., 256M)"
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:178
+#: templates/mysql/phpmyadmin.html:172
 msgid "Upload limit:"
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:226 templates/psql/pgadmin.html:186
+#: templates/mysql/phpmyadmin.html:220 templates/psql/pgadmin.html:186
 msgid "View tags on Docker Hub"
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:244 templates/psql/pgadmin.html:202
+#: templates/mysql/phpmyadmin.html:238 templates/psql/pgadmin.html:202
 msgid "Port"
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:247
+#: templates/mysql/phpmyadmin.html:241
 msgid "Custom link for accessing the phpMyAdmin service."
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:247
+#: templates/mysql/phpmyadmin.html:241
 msgid "IP and Port for accessing the phpMyAdmin service."
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:259 templates/mysql/phpmyadmin.html:295
+#: templates/mysql/phpmyadmin.html:253 templates/mysql/phpmyadmin.html:289
 msgid "Link:"
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:323
+#: templates/mysql/phpmyadmin.html:317
 msgid ""
 "Set a custom domain to use with phpMyAdmin (e.g., https://your-"
 "domain.com/ ), or leave this field empty to use the default URL:"
 msgstr ""
 
-#: templates/mysql/phpmyadmin.html:323
+#: templates/mysql/phpmyadmin.html:317
 msgid "How to Configure domain"
 msgstr ""
 
