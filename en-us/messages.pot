@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 1.7.49\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-03-27 11:50+0100\n"
+"POT-Creation-Date: 2026-03-27 12:06+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -886,7 +886,8 @@ msgstr ""
 msgid "Configuration file not found."
 msgstr ""
 
-#: modules/waf.py:248 templates/system/waf_domain.html:11
+#: modules/waf.py:248 templates/system/waf.html:9
+#: templates/system/waf_domain.html:11
 msgid "WAF"
 msgstr ""
 
@@ -1862,8 +1863,8 @@ msgstr ""
 #: templates/domains/ssl.html:28 templates/manager/wp/single.html:1113
 #: templates/mysql/phpmyadmin.html:40 templates/mysql/remote_mysql.html:59
 #: templates/psql/pgadmin.html:46 templates/psql/remote_psql.html:57
-#: templates/system/services.html:50 templates/system/waf_domain.html:30
-#: templates/user/active_sessions.html:54
+#: templates/system/services.html:50 templates/system/waf.html:51
+#: templates/system/waf_domain.html:30 templates/user/active_sessions.html:54
 msgid "Status"
 msgstr ""
 
@@ -1916,7 +1917,7 @@ msgid "Enable/disable Varnish cache per domain."
 msgstr ""
 
 #: templates/cache/service.html:133 templates/domains/domains.html:59
-#: templates/domains/domains.html:186
+#: templates/domains/domains.html:186 templates/system/waf.html:47
 msgid "Domain Name"
 msgstr ""
 
@@ -2531,9 +2532,10 @@ msgstr ""
 #: templates/php/settings.html:19 templates/psql/configuration.html:18
 #: templates/psql/databases.html:107 templates/psql/processlist.html:56
 #: templates/psql/users.html:47 templates/system/cronjobs.html:100
-#: templates/system/process_manager.html:19 templates/system/waf_logs.html:32
-#: templates/user/active_sessions.html:24 templates/user/activity.html:28
-#: templates/user/history_usage.html:22 templates/user/loginlog.html:26
+#: templates/system/process_manager.html:19 templates/system/waf.html:23
+#: templates/system/waf_logs.html:32 templates/user/active_sessions.html:24
+#: templates/user/activity.html:28 templates/user/history_usage.html:22
+#: templates/user/loginlog.html:26
 msgid "Search"
 msgstr ""
 
@@ -2564,7 +2566,8 @@ msgstr ""
 #: templates/manager/sites.html:84 templates/manager/wp/list.html:122
 #: templates/mysql/databases.html:159 templates/mysql/users.html:86
 #: templates/psql/databases.html:148 templates/psql/users.html:83
-#: templates/system/cronjobs.html:145 templates/user/active_sessions.html:57
+#: templates/system/cronjobs.html:145 templates/system/waf.html:55
+#: templates/user/active_sessions.html:57
 msgid "Actions"
 msgstr ""
 
@@ -3077,6 +3080,7 @@ msgid "New Domain"
 msgstr ""
 
 #: templates/domains/domains.html:218 templates/php/settings.html:161
+#: templates/system/waf.html:64
 msgid "No domains yet."
 msgstr ""
 
@@ -7828,7 +7832,7 @@ msgstr ""
 msgid "Optional."
 msgstr ""
 
-#: templates/system/cronjobs.html:111
+#: templates/system/cronjobs.html:111 templates/system/waf.html:99
 msgid "View Logs"
 msgstr ""
 
@@ -8139,6 +8143,16 @@ msgstr ""
 
 #: templates/system/services.html:221
 msgid "Select system service to manage."
+msgstr ""
+
+#: templates/system/waf.html:10
+msgid ""
+"Enable or disable OWASP Coraza Web Application Firewall protection for "
+"domains."
+msgstr ""
+
+#: templates/system/waf.html:98
+msgid "Manage Rules"
 msgstr ""
 
 #: templates/system/waf_domain.html:12
