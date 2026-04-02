@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 1.7.50\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-04-02 00:27+0200\n"
+"POT-Creation-Date: 2026-04-02 15:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -128,7 +128,7 @@ msgstr ""
 #: modules/domain/redirects.py:195 modules/domain/ssl.py:33
 #: modules/domains.py:451 modules/domains.py:484 modules/domains.py:509
 #: modules/domains.py:541 modules/domains.py:610 modules/emails.py:151
-#: modules/emails.py:287 modules/emails.py:579 modules/emails.py:616
+#: modules/emails.py:287 modules/emails.py:583 modules/emails.py:620
 #: modules/goaccess.py:23 modules/json/favicons.py:33
 #: modules/json/screenshots.py:74 modules/mautic.py:94 modules/mautic.py:191
 #: modules/mautic.py:432 modules/mautic.py:596 modules/mautic.py:789
@@ -339,51 +339,51 @@ msgstr ""
 msgid "Error: No import data found, please try again."
 msgstr ""
 
-#: modules/emails.py:536
+#: modules/emails.py:545
 msgid "Error: reached max number of email accounts on the hosting plan."
 msgstr ""
 
-#: modules/emails.py:583
+#: modules/emails.py:587
 msgid "Error: domain not provided."
 msgstr ""
 
-#: modules/emails.py:585
+#: modules/emails.py:589
 msgid "Error: username not provided."
 msgstr ""
 
-#: modules/emails.py:587
+#: modules/emails.py:591
 msgid "Error: password not provided."
 msgstr ""
 
-#: modules/emails.py:594 templates/files/ftp_new.html:200
+#: modules/emails.py:598 templates/files/ftp_new.html:200
 msgid "Create Account"
 msgstr ""
 
-#: modules/emails.py:667 modules/emails.py:669 modules/files/ftp.py:83
+#: modules/emails.py:671 modules/emails.py:673 modules/files/ftp.py:83
 #: modules/files/ftp.py:87 templates/cache/service.html:81
 #: templates/domains/ssl.html:61 templates/files/ftp.html:13
 #: templates/manager/python_node_apps.html:72
 #: templates/mysql/phpmyadmin.html:79 templates/mysql/remote_mysql.html:98
-#: templates/partials/_service_js.html:40
-#: templates/partials/_service_js.html:44 templates/psql/pgadmin.html:85
+#: templates/partials/_service_js.html:31
+#: templates/partials/_service_js.html:35 templates/psql/pgadmin.html:85
 #: templates/psql/remote_psql.html:96 templates/system/services.html:89
 msgid "Unknown"
 msgstr ""
 
-#: modules/emails.py:827
+#: modules/emails.py:831
 msgid "Accounts"
 msgstr ""
 
-#: modules/emails.py:856
+#: modules/emails.py:860
 msgid "Delete address"
 msgstr ""
 
-#: modules/emails.py:874 templates/emails/accounts.html:113
+#: modules/emails.py:878 templates/emails/accounts.html:113
 #: templates/emails/info.html:9
 msgid "Connect Devices"
 msgstr ""
 
-#: modules/emails.py:887
+#: modules/emails.py:891
 msgid "Error: Invalid configuration type."
 msgstr ""
 
@@ -857,7 +857,7 @@ msgid ""
 "{database_name}"
 msgstr ""
 
-#: modules/process_manager.py:87 templates/dashboard/dashboard.html:218
+#: modules/process_manager.py:96 templates/dashboard/dashboard.html:218
 #: templates/system/process_manager.html:8
 msgid "Process Manager"
 msgstr ""
@@ -866,12 +866,20 @@ msgstr ""
 msgid "Choose Service"
 msgstr ""
 
-#: modules/usage.py:24 templates/dashboard/dashboard.html:216
-#: templates/user/stats.html:21
+#: modules/usage.py:26
+msgid "No resource usage data available yet. Please try again later"
+msgstr ""
+
+#: modules/usage.py:29
+msgid "An error occurred while fetching resource usage."
+msgstr ""
+
+#: modules/usage.py:31 templates/dashboard/dashboard.html:216
+#: templates/user/stats.html:18
 msgid "Resource Usage"
 msgstr ""
 
-#: modules/usage.py:80 templates/dashboard/dashboard.html:217
+#: modules/usage.py:81 templates/dashboard/dashboard.html:217
 msgid "Resource Usage History"
 msgstr ""
 
@@ -1838,11 +1846,11 @@ msgstr ""
 msgid "Remote PostgreSQL"
 msgstr ""
 
-#: templates/base.html:108
+#: templates/base.html:133
 msgid "Dashboard"
 msgstr ""
 
-#: templates/base.html:113 templates/user/favorites.html:10
+#: templates/base.html:138 templates/user/favorites.html:10
 msgid "Favorites"
 msgstr ""
 
@@ -2240,7 +2248,7 @@ msgid "Inodes"
 msgstr ""
 
 #: templates/dashboard/usage.html:192 templates/docker/containers.html:61
-#: templates/docker/containers.html:157 templates/partials/_service_js.html:31
+#: templates/docker/containers.html:157 templates/partials/_service_js.html:22
 msgid "CPU Usage"
 msgstr ""
 
@@ -2446,7 +2454,7 @@ msgstr ""
 msgid "cores"
 msgstr ""
 
-#: templates/docker/containers.html:15 templates/user/stats.html:65
+#: templates/docker/containers.html:15 templates/user/stats.html:53
 msgid "Total Memory:"
 msgstr ""
 
@@ -2484,7 +2492,7 @@ msgid "Name"
 msgstr ""
 
 #: templates/docker/containers.html:81 templates/docker/containers.html:164
-#: templates/partials/_service_js.html:35
+#: templates/partials/_service_js.html:26
 msgid "Block I/O"
 msgstr ""
 
@@ -3078,7 +3086,7 @@ msgstr ""
 
 #: templates/domains/domains.html:236
 #: templates/manager/python_node_apps.html:68
-#: templates/partials/_service_js.html:27
+#: templates/partials/_service_js.html:18
 msgid "Active"
 msgstr ""
 
@@ -7057,16 +7065,16 @@ msgstr ""
 msgid "Checking"
 msgstr ""
 
-#: templates/partials/_service_js.html:32
+#: templates/partials/_service_js.html:23
 msgid "RAM Usage"
 msgstr ""
 
-#: templates/partials/_service_js.html:33 templates/user/history_usage.html:142
+#: templates/partials/_service_js.html:24 templates/user/history_usage.html:142
 #, python-format
 msgid "Memory %%"
 msgstr ""
 
-#: templates/partials/_service_js.html:34
+#: templates/partials/_service_js.html:25
 msgid "Network I/O"
 msgstr ""
 
@@ -7957,7 +7965,7 @@ msgstr ""
 msgid "PPID"
 msgstr ""
 
-#: templates/system/process_manager.html:82 templates/user/stats.html:44
+#: templates/system/process_manager.html:82 templates/user/stats.html:36
 msgid "CPU"
 msgstr ""
 
@@ -8366,36 +8374,40 @@ msgstr ""
 msgid "Save Preferences"
 msgstr ""
 
-#: templates/user/stats.html:23
+#: templates/user/stats.html:20
 msgid "View current resource usage for all websites and services."
 msgstr ""
 
-#: templates/user/stats.html:26
+#: templates/user/stats.html:23
 msgid "View Usage History"
 msgstr ""
 
-#: templates/user/stats.html:49
+#: templates/user/stats.html:40
 msgid "Current CPU usage:"
 msgstr ""
 
-#: templates/user/stats.html:50
+#: templates/user/stats.html:41
 msgid "Total CPU allocation:"
 msgstr ""
 
-#: templates/user/stats.html:59
+#: templates/user/stats.html:48
 msgid "RAM"
 msgstr ""
 
-#: templates/user/stats.html:64
+#: templates/user/stats.html:52
 msgid "Used Memory:"
 msgstr ""
 
-#: templates/user/stats.html:66
+#: templates/user/stats.html:54
 msgid "Available Memory:"
 msgstr ""
 
-#: templates/user/stats.html:75
+#: templates/user/stats.html:61
 msgid "Last refreshed at"
+msgstr ""
+
+#: templates/user/stats.html:86
+msgid "No resource usage data available yet."
 msgstr ""
 
 #: templates/user/twofa_settings.html:12
