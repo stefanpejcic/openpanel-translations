@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 1.7.56\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-04-27 00:27+0200\n"
+"POT-Creation-Date: 2026-04-28 00:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -260,7 +260,7 @@ msgstr ""
 msgid "Invalid action"
 msgstr ""
 
-#: modules/domains.py:236 templates/cache/service.html:171
+#: modules/domains.py:236 templates/cache/service.html:167
 #: templates/dashboard/dashboard.html:111
 #: templates/dashboard/dashboard.html:139 templates/dashboard/usage.html:39
 #: templates/domains/domains.html:12 templates/partials/_header.html:62
@@ -582,11 +582,6 @@ msgstr ""
 msgid "Invalid export path. Must be inside /var/www/html/"
 msgstr ""
 
-#: modules/mysql.py:605
-#, python-brace-format
-msgid "Export path {local_path} does not exist or is not a directory."
-msgstr ""
-
 #: modules/mysql.py:641
 msgid "Invalid export destination."
 msgstr ""
@@ -599,47 +594,47 @@ msgstr ""
 msgid "This is a system database that can not be edited."
 msgstr ""
 
-#: modules/pgadmin.py:40
+#: modules/pgadmin.py:39
 msgid ""
 "pgAdmin email is invalid. Please set a valid email address before "
 "enabling the service."
 msgstr ""
 
 #: modules/cache/varnish.py:193 modules/cache/varnish.py:223
-#: modules/pgadmin.py:48 modules/php.py:395 modules/php.py:404
-#: modules/php.py:418 modules/phpmyadmin.py:104
+#: modules/pgadmin.py:47 modules/php.py:395 modules/php.py:404
+#: modules/php.py:418 modules/phpmyadmin.py:103
 #: templates/files/backup_settings.html:31
 #: templates/files/backup_settings.html:107
 msgid "error"
 msgstr ""
 
-#: modules/pgadmin.py:52
+#: modules/pgadmin.py:51
 msgid "pgAdmin service is now enabled."
 msgstr ""
 
-#: modules/pgadmin.py:57
+#: modules/pgadmin.py:56
 msgid "pgAdmin service is now disabled."
 msgstr ""
 
-#: modules/pgadmin.py:59
+#: modules/pgadmin.py:58
 msgid "Failed to stop the pgAdmin service. Try restart."
 msgstr ""
 
-#: modules/pgadmin.py:86
+#: modules/pgadmin.py:85
 #, python-brace-format
 msgid "Limits saved ({}) - Restart pgAdmin service to apply changes!"
 msgstr ""
 
-#: modules/pgadmin.py:88 modules/phpmyadmin.py:152
+#: modules/pgadmin.py:87 modules/phpmyadmin.py:151
 msgid "No changes or invalid data provided. Try again."
 msgstr ""
 
-#: modules/pgadmin.py:123 templates/dashboard/dashboard.html:169
+#: modules/pgadmin.py:122 templates/dashboard/dashboard.html:169
 #: templates/psql/pgadmin.html:11
 msgid "pgAdmin"
 msgstr ""
 
-#: modules/pgadmin.py:157 modules/phpmyadmin.py:274
+#: modules/pgadmin.py:156 modules/phpmyadmin.py:273
 msgid "Container port not found for the user."
 msgstr ""
 
@@ -680,34 +675,34 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: modules/phpmyadmin.py:108
+#: modules/phpmyadmin.py:107
 msgid "phpMyAdmin service is now enabled."
 msgstr ""
 
-#: modules/phpmyadmin.py:114
+#: modules/phpmyadmin.py:113
 msgid "phpMyAdmin service is now disabled."
 msgstr ""
 
-#: modules/phpmyadmin.py:116
+#: modules/phpmyadmin.py:115
 msgid "Failed to stop the phpMyAdmin service. Try restart."
 msgstr ""
 
-#: modules/phpmyadmin.py:150
+#: modules/phpmyadmin.py:149
 #, python-brace-format
 msgid "Limits saved ({}) - Restart phpMyAdmin service to apply changes!"
 msgstr ""
 
-#: modules/phpmyadmin.py:164
+#: modules/phpmyadmin.py:163
 msgid "Changed autologon setting for phpMyAdmin service."
 msgstr ""
 
-#: modules/phpmyadmin.py:166
+#: modules/phpmyadmin.py:165
 msgid ""
 "Changed autologon setting for phpMyAdmin service, but failed to start it."
 " Pelase try manually."
 msgstr ""
 
-#: modules/phpmyadmin.py:209 templates/mysql/databases.html:336
+#: modules/phpmyadmin.py:208 templates/mysql/databases.html:336
 #: templates/mysql/phpmyadmin.html:11
 msgid "phpMyAdmin"
 msgstr ""
@@ -1263,7 +1258,7 @@ msgstr ""
 msgid "ElasticSearch"
 msgstr ""
 
-#: modules/cache/elasticsearch.py:18 modules/cache/memcached.py:20
+#: modules/cache/elasticsearch.py:18
 msgid ""
 "The leading distributed, RESTful, open source search and analytics engine"
 " designed for speed and reliability."
@@ -1271,6 +1266,12 @@ msgstr ""
 
 #: modules/cache/memcached.py:19 templates/dashboard/dashboard.html:185
 msgid "Memcached"
+msgstr ""
+
+#: modules/cache/memcached.py:20
+msgid ""
+"A high-performance, distributed in-memory key-value caching system "
+"designed to accelerate dynamic web applications."
 msgstr ""
 
 #: modules/cache/opensearch.py:17 templates/dashboard/dashboard.html:187
@@ -1771,11 +1772,11 @@ msgstr ""
 msgid "Invalid unit parameter. Use \"bytes\", \"kb\", \"mb\", or \"gb\"."
 msgstr ""
 
-#: modules/json/helpers.py:763
+#: modules/json/helpers.py:749
 msgid "Unable to retrieve size"
 msgstr ""
 
-#: modules/json/helpers.py:769
+#: modules/json/helpers.py:755
 msgid "Database configuration not found"
 msgstr ""
 
@@ -1944,20 +1945,20 @@ msgstr ""
 msgid "Dead"
 msgstr ""
 
-#: templates/cache/service.html:43 templates/dashboard/twofa.html:11
+#: templates/cache/service.html:39 templates/dashboard/twofa.html:11
 #: templates/mysql/phpmyadmin.html:71 templates/mysql/remote_mysql.html:68
 #: templates/psql/pgadmin.html:77 templates/psql/remote_psql.html:88
 #: templates/system/services.html:44
 msgid "Click to Enable"
 msgstr ""
 
-#: templates/cache/service.html:43 templates/mysql/phpmyadmin.html:56
+#: templates/cache/service.html:39 templates/mysql/phpmyadmin.html:56
 #: templates/mysql/remote_mysql.html:53 templates/psql/pgadmin.html:62
 #: templates/psql/remote_psql.html:73 templates/system/services.html:44
 msgid "Click to Disable"
 msgstr ""
 
-#: templates/cache/service.html:56 templates/cache/service.html:183
+#: templates/cache/service.html:52 templates/cache/service.html:179
 #: templates/docker/containers.html:111 templates/docker/containers.html:174
 #: templates/domains/domains.html:90 templates/domains/domains.html:193
 #: templates/domains/logs.html:176 templates/domains/logs.html:218
@@ -1969,60 +1970,60 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: templates/cache/service.html:57 templates/system/services.html:72
+#: templates/cache/service.html:53 templates/system/services.html:72
 msgid "Current service status."
 msgstr ""
 
-#: templates/cache/service.html:75
+#: templates/cache/service.html:71
 msgid "TCP"
 msgstr ""
 
-#: templates/cache/service.html:76
+#: templates/cache/service.html:72
 msgid "IP and Port for accessing the service."
 msgstr ""
 
-#: templates/cache/service.html:81 templates/mysql/phpmyadmin.html:263
+#: templates/cache/service.html:77 templates/mysql/phpmyadmin.html:263
 #: templates/mysql/remote_mysql.html:99 templates/mysql/remote_mysql.html:122
 #: templates/psql/pgadmin.html:208 templates/psql/remote_psql.html:119
 #: templates/psql/remote_psql.html:141
 msgid "Server:"
 msgstr ""
 
-#: templates/cache/service.html:85 templates/manager/pm2_install.html:120
+#: templates/cache/service.html:81 templates/manager/pm2_install.html:120
 #: templates/mysql/phpmyadmin.html:276 templates/mysql/remote_mysql.html:103
 #: templates/mysql/remote_mysql.html:126 templates/psql/pgadmin.html:212
 #: templates/psql/remote_psql.html:123 templates/psql/remote_psql.html:145
 msgid "Port:"
 msgstr ""
 
-#: templates/cache/service.html:97
+#: templates/cache/service.html:93
 msgid "Varnish Cache"
 msgstr ""
 
-#: templates/cache/service.html:98
+#: templates/cache/service.html:94
 msgid "Real-time cache performance and efficiency metrics."
 msgstr ""
 
-#: templates/cache/service.html:172
+#: templates/cache/service.html:168
 msgid "Enable/disable Varnish cache per domain."
 msgstr ""
 
-#: templates/cache/service.html:180 templates/domains/domains.html:59
+#: templates/cache/service.html:176 templates/domains/domains.html:59
 #: templates/domains/domains.html:186 templates/system/waf.html:47
 msgid "Domain Name"
 msgstr ""
 
-#: templates/cache/service.html:234 templates/manager/python_node_apps.html:185
+#: templates/cache/service.html:230 templates/manager/python_node_apps.html:185
 #: templates/system/cronjobs.html:70 templates/system/cronjobs.html:257
 #: templates/system/process_manager.html:54 templates/system/services.html:104
 msgid "Container"
 msgstr ""
 
-#: templates/cache/service.html:235 templates/system/services.html:105
+#: templates/cache/service.html:231 templates/system/services.html:105
 msgid "Current real-time resource usage for the service."
 msgstr ""
 
-#: templates/cache/service.html:237 templates/system/services.html:107
+#: templates/cache/service.html:233 templates/system/services.html:107
 msgid "Edit limits"
 msgstr ""
 
@@ -8228,7 +8229,7 @@ msgid "phpMyAdmin port"
 msgstr ""
 
 #: templates/system/server_info.html:84
-msgid "Remote SSH port"
+msgid "pgAdmin port"
 msgstr ""
 
 #: templates/system/server_info.html:90
