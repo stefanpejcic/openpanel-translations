@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 1.7.56\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-04-29 00:27+0200\n"
+"POT-Creation-Date: 2026-04-29 14:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -16,6 +16,20 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
+
+#: modules/api.py:26 modules/dashboard.py:88
+msgid "User ID not found."
+msgstr ""
+
+#: modules/api.py:30 modules/dashboard.py:92
+msgid "Failed to retrieve disk usage information."
+msgstr ""
+
+#: modules/api.py:67 modules/api.py:85 modules/api.py:97
+#: modules/dashboard.py:346 modules/docker.py:1039 modules/docker.py:1053
+#: modules/webserver_conf.py:48
+msgid "User not authenticated"
+msgstr ""
 
 #: modules/autoinstaller.py:72 templates/dashboard/dashboard.html:177
 #: templates/manager/autoinstaller.html:7
@@ -98,43 +112,22 @@ msgstr ""
 msgid "Error deleting cron job."
 msgstr ""
 
-#: modules/dashboard.py:64 modules/dashboard.py:124
-msgid "User ID not found."
-msgstr ""
-
-#: modules/dashboard.py:79
-msgid "Failed to retrieve system data"
-msgstr ""
-
-#: modules/dashboard.py:82
-msgid "Invalid JSON output from Docker command"
-msgstr ""
-
-#: modules/dashboard.py:128
-msgid "Failed to retrieve disk usage information."
-msgstr ""
-
-#: modules/dashboard.py:144 modules/dashboard.py:168 modules/dashboard.py:433
-#: modules/docker.py:1038 modules/docker.py:1052 modules/webserver_conf.py:48
-msgid "User not authenticated"
-msgstr ""
-
 #: modules/cache/varnish.py:233 modules/dns.py:126 modules/dns.py:202
 #: modules/dns.py:273 modules/dns.py:363 modules/dns.py:399 modules/dns.py:475
-#: modules/dns.py:531 modules/domain/capitalize_domains.py:22
+#: modules/dns.py:531 modules/domain/capitalize_domains.py:24
 #: modules/domain/docroot.py:33 modules/domain/domain_logs.py:42
 #: modules/domain/edit_vhost.py:39 modules/domain/edit_vhost.py:61
 #: modules/domain/redirects.py:58 modules/domain/redirects.py:132
 #: modules/domain/redirects.py:193 modules/domain/ssl.py:33
 #: modules/domains.py:419 modules/domains.py:453 modules/domains.py:478
-#: modules/domains.py:511 modules/domains.py:580 modules/emails.py:150
-#: modules/emails.py:286 modules/emails.py:589 modules/emails.py:652
+#: modules/domains.py:511 modules/domains.py:580 modules/emails.py:115
+#: modules/emails.py:251 modules/emails.py:554 modules/emails.py:617
 #: modules/goaccess.py:23 modules/json/favicons.py:33
 #: modules/json/screenshots.py:74 modules/mautic.py:93 modules/mautic.py:190
 #: modules/mautic.py:431 modules/mautic.py:595 modules/mautic.py:788
 #: modules/php.py:390 modules/pm2.py:572 modules/pm2.py:1268
 #: modules/sitemanager/temporary_links.py:54 modules/waf.py:116
-#: modules/waf.py:256 modules/waf.py:306 modules/waf.py:360
+#: modules/waf.py:256 modules/waf.py:310 modules/waf.py:364
 #: modules/website_builder.py:58 modules/website_builder.py:114
 #: modules/website_builder.py:157 modules/website_builder.py:298
 #: modules/websites.py:51 modules/websites.py:248 modules/websites.py:309
@@ -236,27 +229,27 @@ msgstr ""
 msgid "Delete service"
 msgstr ""
 
-#: modules/docker.py:916 templates/dashboard/dashboard.html:208
+#: modules/docker.py:917 templates/dashboard/dashboard.html:208
 #: templates/docker/images.html:10
 msgid "Image Updates"
 msgstr ""
 
-#: modules/docker.py:963
+#: modules/docker.py:964
 msgid "Change docker image"
 msgstr ""
 
-#: modules/docker.py:979
+#: modules/docker.py:980
 msgid "Select docker image"
 msgstr ""
 
-#: modules/docker.py:1029 templates/dashboard/dashboard.html:207
+#: modules/docker.py:1030 templates/dashboard/dashboard.html:207
 #: templates/manager/python_node_apps.html:130
 #: templates/manager/python_node_apps.html:160
 #: templates/partials/_service_log.html:11 templates/system/cronjobs.html:332
 msgid "Logs"
 msgstr ""
 
-#: modules/docker.py:1055 modules/websites.py:544
+#: modules/docker.py:1056 modules/websites.py:544
 msgid "Invalid action"
 msgstr ""
 
@@ -291,25 +284,25 @@ msgstr ""
 msgid "Unsuspend"
 msgstr ""
 
-#: modules/emails.py:177
+#: modules/emails.py:142
 msgid "Filter edited successfully."
 msgstr ""
 
-#: modules/emails.py:181
+#: modules/emails.py:146
 msgid "Error editing filter."
 msgstr ""
 
-#: modules/emails.py:185
+#: modules/emails.py:150
 msgid "Filters"
 msgstr ""
 
-#: modules/emails.py:265
+#: modules/emails.py:230
 msgid ""
 "Webmail service is not yet started, please contact Administrator to "
 "enable it."
 msgstr ""
 
-#: modules/emails.py:314 modules/mysqld/mysql_import.py:81
+#: modules/emails.py:279 modules/mysqld/mysql_import.py:81
 #: modules/mysqld/mysql_import.py:92 modules/mysqld/mysql_import.py:105
 #: modules/psql/postgresql_import.py:62 modules/psql/postgresql_import.py:67
 #: modules/psql/postgresql_import.py:70 modules/psql/postgresql_import.py:81
@@ -317,53 +310,53 @@ msgstr ""
 msgid "Import"
 msgstr ""
 
-#: modules/emails.py:318
+#: modules/emails.py:283
 msgid "Error: No file uploaded."
 msgstr ""
 
-#: modules/emails.py:329
+#: modules/emails.py:294
 msgid "Error: Unsupported file format, please upload a .csv or .xls file."
 msgstr ""
 
-#: modules/emails.py:336
+#: modules/emails.py:301
 msgid "Error: File must have at least 2 columns: email, password"
 msgstr ""
 
-#: modules/emails.py:345
+#: modules/emails.py:310
 msgid ""
 "Error: File is invalid - the first column must contain valid email "
 "addresses."
 msgstr ""
 
-#: modules/emails.py:371
+#: modules/emails.py:336
 msgid "Confirm Import"
 msgstr ""
 
-#: modules/emails.py:402
+#: modules/emails.py:367
 msgid "Error: No import data found, please try again."
 msgstr ""
 
-#: modules/emails.py:546
+#: modules/emails.py:511
 msgid "Error: reached max number of email accounts on the hosting plan."
 msgstr ""
 
-#: modules/emails.py:593
+#: modules/emails.py:558
 msgid "Error: domain not provided."
 msgstr ""
 
-#: modules/emails.py:595
+#: modules/emails.py:560
 msgid "Error: username not provided."
 msgstr ""
 
-#: modules/emails.py:597
+#: modules/emails.py:562
 msgid "Error: password not provided."
 msgstr ""
 
-#: modules/emails.py:604 templates/files/ftp_new.html:200
+#: modules/emails.py:569 templates/files/ftp_new.html:200
 msgid "Create Account"
 msgstr ""
 
-#: modules/emails.py:698 modules/emails.py:700 modules/files/ftp.py:83
+#: modules/emails.py:663 modules/emails.py:665 modules/files/ftp.py:83
 #: modules/files/ftp.py:87 templates/cache/service.html:26
 #: templates/domains/ssl.html:61 templates/files/ftp.html:13
 #: templates/manager/python_node_apps.html:70
@@ -373,20 +366,20 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: modules/emails.py:825
+#: modules/emails.py:789
 msgid "Accounts"
 msgstr ""
 
-#: modules/emails.py:853
+#: modules/emails.py:815
 msgid "Delete address"
 msgstr ""
 
-#: modules/emails.py:871 templates/emails/accounts.html:113
+#: modules/emails.py:833 templates/emails/accounts.html:113
 #: templates/emails/info.html:9
 msgid "Connect Devices"
 msgstr ""
 
-#: modules/emails.py:884
+#: modules/emails.py:846
 msgid "Error: Invalid configuration type."
 msgstr ""
 
@@ -491,44 +484,44 @@ msgstr ""
 msgid "Install Mautic"
 msgstr ""
 
-#: modules/mysql.py:108 modules/mysql.py:326 modules/mysql.py:545
-#: modules/mysql.py:653 modules/mysql.py:850 modules/postgresql.py:80
+#: modules/mysql.py:135 modules/mysql.py:353 modules/mysql.py:572
+#: modules/mysql.py:680 modules/mysql.py:877 modules/postgresql.py:80
 #: modules/postgresql.py:578
 msgid "Database name is required."
 msgstr ""
 
-#: modules/mysql.py:158 modules/postgresql.py:149 templates/mysql/new.html:58
+#: modules/mysql.py:185 modules/postgresql.py:149 templates/mysql/new.html:58
 #: templates/psql/new.html:56
 msgid "Create Database"
 msgstr ""
 
-#: modules/mysql.py:186 modules/mysql.py:316 modules/mysql.py:692
-#: modules/mysql.py:735 modules/mysql.py:842 modules/postgresql.py:164
+#: modules/mysql.py:213 modules/mysql.py:343 modules/mysql.py:719
+#: modules/mysql.py:762 modules/mysql.py:869 modules/postgresql.py:164
 #: modules/postgresql.py:627 modules/postgresql.py:713
 msgid "User name is required."
 msgstr ""
 
-#: modules/mysql.py:196 modules/postgresql.py:186
+#: modules/mysql.py:223 modules/postgresql.py:186
 msgid "This username is not allowed."
 msgstr ""
 
-#: modules/mysql.py:201 modules/mysql.py:346 modules/mysql.py:705
-#: modules/mysql.py:748 modules/mysql.py:867
+#: modules/mysql.py:228 modules/mysql.py:373 modules/mysql.py:732
+#: modules/mysql.py:775 modules/mysql.py:894
 msgid "Invalid host format."
 msgstr ""
 
-#: modules/mysql.py:228 modules/postgresql.py:207
+#: modules/mysql.py:255 modules/postgresql.py:207
 #: templates/mysql/mysql_user.html:163 templates/mysql/users.html:67
 #: templates/psql/psql_user.html:164 templates/psql/users.html:64
 msgid "Create User"
 msgstr ""
 
-#: modules/mysql.py:235 modules/mysql.py:743 modules/mysql.py:862
+#: modules/mysql.py:262 modules/mysql.py:770 modules/mysql.py:889
 #: modules/postgresql.py:229 modules/postgresql.py:735
 msgid "This is a system username that can not be edited."
 msgstr ""
 
-#: modules/mysql.py:238 modules/postgresql.py:232 templates/files/ftp.html:109
+#: modules/mysql.py:265 modules/postgresql.py:232 templates/files/ftp.html:109
 #: templates/mysql/password.html:168 templates/mysql/root_password.html:154
 #: templates/mysql/users.html:105 templates/psql/password.html:163
 #: templates/psql/users.html:115
@@ -536,61 +529,61 @@ msgstr ""
 msgid "Change Password"
 msgstr ""
 
-#: modules/mysql.py:252 modules/postgresql.py:246
+#: modules/mysql.py:279 modules/postgresql.py:246
 msgid "Wizard"
 msgstr ""
 
-#: modules/mysql.py:336
+#: modules/mysql.py:363
 msgid "At least one privilege must be selected."
 msgstr ""
 
-#: modules/mysql.py:341
+#: modules/mysql.py:368
 msgid "This is a system database that can not be used."
 msgstr ""
 
-#: modules/mysql.py:386 modules/postgresql.py:289 templates/psql/assign.html:8
+#: modules/mysql.py:413 modules/postgresql.py:289 templates/psql/assign.html:8
 #: templates/psql/assign.html:68
 msgid "Assign User to Database"
 msgstr ""
 
-#: modules/mysql.py:391 modules/postgresql.py:297
+#: modules/mysql.py:418 modules/postgresql.py:297
 #: templates/mysql/remove.html:62 templates/psql/remove.html:62
 msgid "Remove User from Database"
 msgstr ""
 
-#: modules/mysql.py:476 templates/dashboard/dashboard.html:152
+#: modules/mysql.py:503 templates/dashboard/dashboard.html:152
 #: templates/dashboard/dashboard.html:165 templates/dashboard/usage.html:62
 #: templates/files/backup_restore.html:36 templates/mysql/databases.html:9
 msgid "Databases"
 msgstr ""
 
-#: modules/mysql.py:529 modules/postgresql.py:505
+#: modules/mysql.py:556 modules/postgresql.py:505
 #: templates/dashboard/dashboard.html:153
 #: templates/dashboard/dashboard.html:166 templates/mysql/users.html:11
 msgid "Users"
 msgstr ""
 
-#: modules/mysql.py:557
+#: modules/mysql.py:584
 msgid "Invalid export format provided, select SQL or GZIP."
 msgstr ""
 
-#: modules/mysql.py:591
+#: modules/mysql.py:618
 msgid "Destination path is required for folder export."
 msgstr ""
 
-#: modules/mysql.py:597
+#: modules/mysql.py:624
 msgid "Invalid export path. Must be inside /var/www/html/"
 msgstr ""
 
-#: modules/mysql.py:641
+#: modules/mysql.py:668
 msgid "Invalid export destination."
 msgstr ""
 
-#: modules/mysql.py:700
+#: modules/mysql.py:727
 msgid "This is a system username that can not be deleted."
 msgstr ""
 
-#: modules/mysql.py:858
+#: modules/mysql.py:885
 msgid "This is a system database that can not be edited."
 msgstr ""
 
@@ -670,7 +663,7 @@ msgid ""
 "for all domains, use the 'Default PHP Version' page."
 msgstr ""
 
-#: modules/account/account.py:138 modules/php.py:470
+#: modules/account/account.py:142 modules/php.py:470
 #: templates/psql/pgadmin.html:105
 msgid "Settings"
 msgstr ""
@@ -913,15 +906,15 @@ msgstr ""
 msgid "WAF"
 msgstr ""
 
-#: modules/waf.py:290
+#: modules/waf.py:294
 msgid "Error changing WAF status."
 msgstr ""
 
-#: modules/waf.py:330
+#: modules/waf.py:334
 msgid "Domain not found or unauthorized"
 msgstr ""
 
-#: modules/waf.py:416 templates/dashboard/dashboard.html:224
+#: modules/waf.py:420 templates/dashboard/dashboard.html:224
 #: templates/system/waf_logs.html:260
 msgid "WAF Logs"
 msgstr ""
@@ -1091,7 +1084,7 @@ msgstr ""
 msgid "Install WordPress"
 msgstr ""
 
-#: modules/account/account.py:89
+#: modules/account/account.py:93
 #, python-format
 msgid ""
 "Email address changed for account %(username)s\n"
@@ -1099,24 +1092,24 @@ msgid ""
 "<b>%(new_email)s</b>."
 msgstr ""
 
-#: modules/account/account.py:99
+#: modules/account/account.py:103
 #, python-format
 msgid "changed email address to %(email)s"
 msgstr ""
 
-#: modules/account/account.py:115
+#: modules/account/account.py:119
 #, python-format
 msgid "Username has been changed successfully from %(old)s to %(new)s."
 msgstr ""
 
-#: modules/account/account.py:121
+#: modules/account/account.py:125
 #, python-format
 msgid ""
 "Username %(old)s changed\n"
 "OpenPanel username changed from <b>%(old)s</b> to <b>%(new)s</b>."
 msgstr ""
 
-#: modules/account/account.py:136
+#: modules/account/account.py:140
 msgid "Failed to change username."
 msgstr ""
 
@@ -1170,51 +1163,51 @@ msgstr ""
 msgid "Change Language"
 msgstr ""
 
-#: modules/account/login.py:34
+#: modules/account/login.py:26
 msgid "Login"
 msgstr ""
 
-#: modules/account/login.py:150
+#: modules/account/login.py:142
 msgid "Error reading token from user files."
 msgstr ""
 
-#: modules/account/login.py:180
+#: modules/account/login.py:172
 msgid "Autologin failed: User does not exist."
 msgstr ""
 
-#: modules/account/login.py:183
+#: modules/account/login.py:175
 msgid "Autologin failed: Error occurred fetching data from database."
 msgstr ""
 
-#: modules/account/login.py:187
+#: modules/account/login.py:179
 msgid "Autologin failed: Invalid or expired token."
 msgstr ""
 
-#: modules/account/login.py:204
+#: modules/account/login.py:196
 msgid "Username and password are required."
 msgstr ""
 
-#: modules/account/login.py:212
+#: modules/account/login.py:204
 msgid "Unable to connect to database."
 msgstr ""
 
-#: modules/account/login.py:220
+#: modules/account/login.py:212
 msgid "Your account is suspended. Please contact support."
 msgstr ""
 
-#: modules/account/login.py:221
+#: modules/account/login.py:213
 msgid "Unrecognized account. Please check username."
 msgstr ""
 
-#: modules/account/login.py:256
+#: modules/account/login.py:248
 msgid "Invalid password. Please try again."
 msgstr ""
 
-#: modules/account/login.py:276
+#: modules/account/login.py:268
 msgid "CAPTCHA validation failed. Please try again."
 msgstr ""
 
-#: modules/account/login.py:344
+#: modules/account/login.py:336
 msgid "Invalid 2FA code. Please try again."
 msgstr ""
 
@@ -1223,7 +1216,7 @@ msgstr ""
 msgid "Login History"
 msgstr ""
 
-#: modules/account/notifications.py:202
+#: modules/account/notifications.py:204
 msgid "Notification Preferences"
 msgstr ""
 
@@ -1395,11 +1388,11 @@ msgstr ""
 msgid "Error reading the file"
 msgstr ""
 
-#: modules/domain/capitalize_domains.py:82
+#: modules/domain/capitalize_domains.py:92
 msgid "Error reading file."
 msgstr ""
 
-#: modules/domain/capitalize_domains.py:85
+#: modules/domain/capitalize_domains.py:95
 msgid "No capitalized domains."
 msgstr ""
 
@@ -1768,11 +1761,11 @@ msgstr ""
 msgid "Invalid unit parameter. Use \"bytes\", \"kb\", \"mb\", or \"gb\"."
 msgstr ""
 
-#: modules/json/helpers.py:749
+#: modules/json/helpers.py:767
 msgid "Unable to retrieve size"
 msgstr ""
 
-#: modules/json/helpers.py:755
+#: modules/json/helpers.py:773
 msgid "Database configuration not found"
 msgstr ""
 
