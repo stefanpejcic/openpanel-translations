@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 1.7.58\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-05-13 18:31+0200\n"
+"POT-Creation-Date: 2026-05-16 12:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -121,8 +121,8 @@ msgstr ""
 #: modules/domain/redirects.py:193 modules/domain/ssl.py:33
 #: modules/domains.py:422 modules/domains.py:456 modules/domains.py:481
 #: modules/domains.py:514 modules/domains.py:583 modules/emails.py:247
-#: modules/emails.py:355 modules/emails.py:560 modules/emails.py:638
-#: modules/emails.py:1007 modules/emails.py:1115 modules/emails.py:1210
+#: modules/emails.py:370 modules/emails.py:575 modules/emails.py:653
+#: modules/emails.py:1022 modules/emails.py:1130 modules/emails.py:1225
 #: modules/goaccess.py:23 modules/json/favicons.py:33
 #: modules/json/screenshots.py:74 modules/mautic.py:93 modules/mautic.py:190
 #: modules/mautic.py:431 modules/mautic.py:595 modules/mautic.py:788
@@ -296,13 +296,13 @@ msgstr ""
 msgid "Filters"
 msgstr ""
 
-#: modules/emails.py:341
+#: modules/emails.py:356
 msgid ""
 "Webmail service is not yet started, please contact Administrator to "
 "enable it."
 msgstr ""
 
-#: modules/emails.py:374 modules/mysqld/mysql_import.py:81
+#: modules/emails.py:389 modules/mysqld/mysql_import.py:81
 #: modules/mysqld/mysql_import.py:92 modules/mysqld/mysql_import.py:105
 #: modules/psql/postgresql_import.py:62 modules/psql/postgresql_import.py:67
 #: modules/psql/postgresql_import.py:70 modules/psql/postgresql_import.py:81
@@ -310,79 +310,79 @@ msgstr ""
 msgid "Import"
 msgstr ""
 
-#: modules/emails.py:378
+#: modules/emails.py:393
 msgid "Error: No file uploaded."
 msgstr ""
 
-#: modules/emails.py:388
+#: modules/emails.py:403
 msgid "Error: Unsupported file format, please upload a .csv or .xls file."
 msgstr ""
 
-#: modules/emails.py:395
+#: modules/emails.py:410
 msgid "Error: File must have at least 2 columns: email, password"
 msgstr ""
 
-#: modules/emails.py:404
+#: modules/emails.py:419
 msgid ""
 "Error: File is invalid - the first column must contain valid email "
 "addresses."
 msgstr ""
 
-#: modules/emails.py:431
+#: modules/emails.py:446
 msgid "Confirm Import"
 msgstr ""
 
-#: modules/emails.py:441
+#: modules/emails.py:456
 msgid "Error: No import data found, please try again."
 msgstr ""
 
-#: modules/emails.py:569
+#: modules/emails.py:584
 msgid "Error: reached max number of email accounts on the hosting plan."
 msgstr ""
 
-#: modules/emails.py:610 templates/files/ftp_new.html:200
+#: modules/emails.py:625 templates/files/ftp_new.html:200
 msgid "Create Account"
 msgstr ""
 
-#: modules/emails.py:627
+#: modules/emails.py:642
 msgid "Accounts"
 msgstr ""
 
-#: modules/emails.py:777
+#: modules/emails.py:792
 msgid "Delete address"
 msgstr ""
 
-#: modules/emails.py:794 templates/emails/accounts.html:113
+#: modules/emails.py:809 templates/emails/accounts.html:113
 #: templates/emails/info.html:9
 msgid "Connect Devices"
 msgstr ""
 
-#: modules/emails.py:808
+#: modules/emails.py:823
 msgid "Error: Invalid configuration type."
 msgstr ""
 
-#: modules/emails.py:991 templates/dashboard/dashboard.html:193
+#: modules/emails.py:1006 templates/dashboard/dashboard.html:193
 #: templates/emails/aliases.html:9
 msgid "Aliases"
 msgstr ""
 
-#: modules/emails.py:1033
+#: modules/emails.py:1048
 msgid "Error: a valid target email address is required."
 msgstr ""
 
-#: modules/emails.py:1111
+#: modules/emails.py:1126
 msgid "Error: target must be a valid email address."
 msgstr ""
 
-#: modules/emails.py:1132 templates/emails/aliases.html:35
+#: modules/emails.py:1147 templates/emails/aliases.html:35
 msgid "New Alias"
 msgstr ""
 
-#: modules/emails.py:1154 templates/emails/alias_detail.html:108
+#: modules/emails.py:1169 templates/emails/alias_detail.html:108
 msgid "Delete Alias"
 msgstr ""
 
-#: modules/emails.py:1207 modules/emails.py:1218
+#: modules/emails.py:1222 modules/emails.py:1233
 msgid "Default Email"
 msgstr ""
 
@@ -4744,8 +4744,8 @@ msgstr ""
 #: templates/files/filemanager/actions_buttons.html:6
 #: templates/files/filemanager/inline_js_todo.html:87
 #: templates/files/filemanager/inline_js_todo.html:145
-#: templates/files/filemanager/inline_js_todo.html:233
-#: templates/files/filemanager/inline_js_todo.html:351
+#: templates/files/filemanager/inline_js_todo.html:251
+#: templates/files/filemanager/inline_js_todo.html:369
 #: templates/files/filemanager/inline_js_trash.html:250
 #: templates/files/filemanager/inline_js_trash.html:303
 #: templates/files/filemanager/inline_js_trash.html:383
@@ -4983,11 +4983,21 @@ msgstr ""
 msgid "Deselect"
 msgstr ""
 
-#: templates/files/filemanager/inline_js_todo.html:328
+#: templates/files/filemanager/inline_js_todo.html:192
+msgid "Calculating..."
+msgstr ""
+
+#: templates/files/filemanager/inline_js_todo.html:234
+#: templates/files/filemanager/table.html:97
+#: templates/files/filemanager/table_trash.html:88
+msgid "Calculate"
+msgstr ""
+
+#: templates/files/filemanager/inline_js_todo.html:346
 msgid "selected"
 msgstr ""
 
-#: templates/files/filemanager/inline_js_todo.html:786
+#: templates/files/filemanager/inline_js_todo.html:804
 msgid "Change permissions for"
 msgstr ""
 
@@ -5061,11 +5071,6 @@ msgstr ""
 #: templates/files/filemanager/table.html:24
 #: templates/files/filemanager/table_trash.html:34
 msgid "Link target"
-msgstr ""
-
-#: templates/files/filemanager/table.html:97
-#: templates/files/filemanager/table_trash.html:88
-msgid "Calculate"
 msgstr ""
 
 #: templates/files/filemanager/table_trash.html:15
