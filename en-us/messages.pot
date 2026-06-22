@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 1.7.62\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-06-22 06:45+0200\n"
+"POT-Creation-Date: 2026-06-22 07:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -171,6 +171,10 @@ msgstr ""
 
 #: modules/crons.py:464
 msgid "Error deleting cron job."
+msgstr ""
+
+#: modules/dashboard.py:261
+msgid "Dashboard"
 msgstr ""
 
 #: modules/cache/varnish.py:231 modules/dns.py:121 modules/dns.py:189
@@ -350,6 +354,11 @@ msgstr ""
 #: modules/docker.py:1060 modules/website_builder.py:228
 #: modules/websites.py:530 templates/manager/wp/single.html:1249
 msgid "Invalid action"
+msgstr ""
+
+#: modules/docker.py:1362 templates/docker/terminal.html:19
+#: templates/docker/terminal.html:223
+msgid "Docker Terminal"
 msgstr ""
 
 #: modules/domain/docroot.py:22 modules/domain/ssl.py:41
@@ -846,8 +855,8 @@ msgid ""
 "for all domains, use the 'Default PHP Version' page."
 msgstr ""
 
-#: modules/account/account.py:153 modules/php.py:494
-#: templates/psql/pgadmin.html:105
+#: modules/account/account.py:153 modules/files/backups.py:181
+#: modules/php.py:494 templates/psql/pgadmin.html:105
 msgid "Settings"
 msgstr ""
 
@@ -1965,6 +1974,17 @@ msgstr ""
 msgid "multiple backup targets configured"
 msgstr ""
 
+#: modules/files/backups.py:233 modules/files/backups.py:261
+msgid "Destination"
+msgstr ""
+
+#: modules/files/backups.py:337 templates/dashboard/dashboard.html:109
+#: templates/files/backups.html:26 templates/manager/mautic.html:131
+#: templates/manager/mautic.html:154 templates/manager/websitebuilder.html:76
+#: templates/manager/wp/single.html:171 templates/partials/_header.html:98
+msgid "Backups"
+msgstr ""
+
 #: modules/files/backups.py:498
 msgid "Reindex already in progress."
 msgstr ""
@@ -1973,19 +1993,26 @@ msgstr ""
 msgid "Reindex started."
 msgstr ""
 
-#: modules/files/backups.py:642 modules/files/backups.py:728
+#: modules/files/backups.py:523 modules/files/backups.py:530
+#: templates/files/backup_restore.html:245
+#: templates/files/filemanager/action_buttons_trash.html:10
+#: templates/files/filemanager/restore.html:25 templates/files/trash.html:32
+msgid "Restore"
+msgstr ""
+
+#: modules/files/backups.py:641 modules/files/backups.py:727
 msgid "No backup file specified."
 msgstr ""
 
-#: modules/files/backups.py:647 modules/files/backups.py:732
+#: modules/files/backups.py:646 modules/files/backups.py:731
 msgid "Invalid backup filename."
 msgstr ""
 
-#: modules/files/backups.py:677
+#: modules/files/backups.py:676
 msgid "Full restore completed."
 msgstr ""
 
-#: modules/files/backups.py:682
+#: modules/files/backups.py:681
 msgid "No database specified."
 msgstr ""
 
@@ -2284,9 +2311,19 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
+#: modules/files/ftp.py:101 templates/dashboard/dashboard.html:106
+#: templates/dashboard/usage.html:108 templates/files/ftp.html:9
+msgid "FTP Accounts"
+msgstr ""
+
 #: modules/files/ftp.py:112 modules/files/ftp.py:133 modules/files/ftp.py:220
 #: modules/files/ftp.py:291
 msgid "FTP service is not yet started, please contact Administrator to enable it."
+msgstr ""
+
+#: modules/files/ftp.py:119 templates/dashboard/dashboard.html:107
+#: templates/files/ftp_connections.html:9
+msgid "FTP Connections"
 msgstr ""
 
 #: modules/files/ftp.py:121
@@ -2307,6 +2344,10 @@ msgstr ""
 
 #: modules/files/ftp.py:165
 msgid "FTP password not provided."
+msgstr ""
+
+#: modules/files/ftp.py:206 templates/files/ftp_new.html:9
+msgid "New FTP Account"
 msgstr ""
 
 #: modules/files/ftp.py:341
@@ -2806,23 +2847,6 @@ msgstr ""
 
 #: templates/dashboard/dashboard.html:105
 msgid "Download Files"
-msgstr ""
-
-#: templates/dashboard/dashboard.html:106 templates/dashboard/usage.html:108
-#: templates/files/ftp.html:9
-msgid "FTP Accounts"
-msgstr ""
-
-#: templates/dashboard/dashboard.html:107
-#: templates/files/ftp_connections.html:9
-msgid "FTP Connections"
-msgstr ""
-
-#: templates/dashboard/dashboard.html:109 templates/files/backups.html:26
-#: templates/manager/mautic.html:131 templates/manager/mautic.html:154
-#: templates/manager/websitebuilder.html:76
-#: templates/manager/wp/single.html:171 templates/partials/_header.html:98
-msgid "Backups"
 msgstr ""
 
 #: templates/dashboard/dashboard.html:111
@@ -3622,10 +3646,6 @@ msgstr ""
 
 #: templates/docker/logs.html:60
 msgid "Error fetching log data."
-msgstr ""
-
-#: templates/docker/terminal.html:19 templates/docker/terminal.html:223
-msgid "Docker Terminal"
 msgstr ""
 
 #: templates/docker/terminal.html:33
@@ -5372,50 +5392,75 @@ msgid "Redirect to email"
 msgstr ""
 
 #: templates/emails/filter.html:174
-msgid "Discard message"
+msgid "Forward to email (keep copy)"
 msgstr ""
 
 #: templates/emails/filter.html:175
-msgid "Reject with message"
+msgid "Discard message"
 msgstr ""
 
 #: templates/emails/filter.html:176
-msgid "Mark as read"
+msgid "Reject with message"
 msgstr ""
 
 #: templates/emails/filter.html:177
-msgid "Flag / star"
+msgid "Mark as read"
 msgstr ""
 
 #: templates/emails/filter.html:178
+msgid "Flag / star"
+msgstr ""
+
+#: templates/emails/filter.html:179
+msgid "Auto-responder (vacation)"
+msgstr ""
+
+#: templates/emails/filter.html:180
 msgid "Stop processing"
 msgstr ""
 
-#: templates/emails/filter.html:186
+#: templates/emails/filter.html:189
+#, python-brace-format
+msgid "Subject, e.g. Re: ${subjectwas}"
+msgstr ""
+
+#: templates/emails/filter.html:191
+msgid "Auto-reply message…"
+msgstr ""
+
+#: templates/emails/filter.html:194
+msgid "Reply at most once every"
+msgstr ""
+
+#: templates/emails/filter.html:197
+msgid "day(s) per sender"
+msgstr ""
+
+#: templates/emails/filter.html:202
 msgid "Remove action"
 msgstr ""
 
-#: templates/emails/filter.html:190
+#: templates/emails/filter.html:206
 msgid "Add action"
 msgstr ""
 
-#: templates/emails/filter.html:207
+#: templates/emails/filter.html:223
 msgid "Save filters"
 msgstr ""
 
-#: templates/emails/filter.html:225
+#: templates/emails/filter.html:241
 msgid "Save file"
 msgstr ""
 
-#: templates/emails/filter.html:276
+#: templates/emails/filter.html:304
 msgid "Folder name, e.g. Junk"
 msgstr ""
 
-#: templates/emails/filter.html:278
+#: templates/emails/filter.html:307
 msgid "Rejection message…"
 msgstr ""
 
-#: templates/emails/filter.html:279
+#: templates/emails/filter.html:308
 msgid "Flag, e.g. \\\\Flagged"
 msgstr ""
 
@@ -5672,12 +5717,6 @@ msgstr ""
 
 #: templates/files/backup_restore.html:169
 msgid "Contents"
-msgstr ""
-
-#: templates/files/backup_restore.html:245
-#: templates/files/filemanager/action_buttons_trash.html:10
-#: templates/files/filemanager/restore.html:25 templates/files/trash.html:32
-msgid "Restore"
 msgstr ""
 
 #: templates/files/backup_restore.html:257
@@ -6174,10 +6213,6 @@ msgstr ""
 
 #: templates/files/ftp_connections.html:28
 msgid "There are no active FTP sessions at this time."
-msgstr ""
-
-#: templates/files/ftp_new.html:9
-msgid "New FTP Account"
 msgstr ""
 
 #: templates/files/ftp_new.html:10
