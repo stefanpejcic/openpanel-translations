@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openpanel\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-06-26 08:32+0200\n"
-"PO-Revision-Date: 2026-06-26 06:35\n"
+"POT-Creation-Date: 2026-06-26 09:48+0200\n"
+"PO-Revision-Date: 2026-06-26 08:15\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr "Die Informationen zur Festplattennutzung konnten nicht abgerufen werden.
 msgid "User not authenticated"
 msgstr "Benutzer nicht authentifiziert"
 
-#: modules/autoinstaller.py:53 templates/dashboard/dashboard.html:165
+#: modules/autoinstaller.py:53 templates/dashboard/dashboard.html:166
 #: templates/manager/autoinstaller.html:7
 msgid "Auto Installer"
 msgstr "Auto-Installer"
@@ -281,7 +281,7 @@ msgstr "Ungültiges Datenformat"
 msgid "docker_data does not contain 'services'."
 msgstr "docker_data enthält keine 'services'."
 
-#: modules/docker.py:237 templates/dashboard/dashboard.html:198
+#: modules/docker.py:237 templates/dashboard/dashboard.html:199
 #: templates/docker/containers.html:13 templates/docker/containers.html:565
 #: templates/docker/volumes_TODO.html:10
 msgid "Containers"
@@ -331,7 +331,7 @@ msgstr "Stoppen des aktuellen Webservers fehlgeschlagen."
 msgid "Invalid web server selected"
 msgstr "Ungültiger Webserver ausgewählt"
 
-#: modules/docker.py:929 templates/dashboard/dashboard.html:201
+#: modules/docker.py:929 templates/dashboard/dashboard.html:202
 #: templates/docker/images.html:10
 msgid "Image Updates"
 msgstr "Image-Datei Aktualisierungen"
@@ -348,7 +348,7 @@ msgstr "Docker-Image ändern"
 msgid "Select docker image"
 msgstr "Docker-Image auswählen"
 
-#: modules/docker.py:1035 templates/dashboard/dashboard.html:200
+#: modules/docker.py:1035 templates/dashboard/dashboard.html:201
 #: templates/docker/containers.html:424 templates/docker/logs.html:10
 #: templates/manager/python_node_apps.html:71
 #: templates/partials/_service_log.html:11 templates/system/cronjobs.html:354
@@ -385,9 +385,10 @@ msgid "Unsuspend"
 msgstr "Entsuspendieren"
 
 #: modules/domains.py:184 templates/cache/service.html:172
-#: templates/dashboard/dashboard.html:99 templates/dashboard/dashboard.html:127
+#: templates/dashboard/dashboard.html:99 templates/dashboard/dashboard.html:128
 #: templates/dashboard/usage.html:39 templates/domains/domains.html:16
-#: templates/emails/deliverability.html:109 templates/partials/_header.html:63
+#: templates/emails/deliverability.html:109
+#: templates/files/backup_wizard.html:64 templates/partials/_header.html:63
 msgid "Domains"
 msgstr "Domäne"
 
@@ -441,12 +442,12 @@ msgstr "Dynamic-DNS-Eintrag gelöscht."
 msgid "Failed to delete Dynamic DNS entry."
 msgstr "Löschen des Dynamic-DNS-Eintrags fehlgeschlagen."
 
-#: modules/dynamic_dns.py:168 templates/dashboard/dashboard.html:130
+#: modules/dynamic_dns.py:168 templates/dashboard/dashboard.html:131
 #: templates/domains/dynamic_dns.html:12
 msgid "Dynamic DNS"
 msgstr "Dynamic DNS"
 
-#: modules/email_aliases.py:126 templates/dashboard/dashboard.html:181
+#: modules/email_aliases.py:126 templates/dashboard/dashboard.html:182
 #: templates/emails/aliases.html:9
 msgid "Aliases"
 msgstr "Aliase"
@@ -471,14 +472,14 @@ msgstr "Alias löschen"
 msgid "Default Email"
 msgstr "Standard-E-Mail"
 
-#: modules/email_deliverability.py:114 templates/dashboard/dashboard.html:183
+#: modules/email_deliverability.py:114 templates/dashboard/dashboard.html:184
 #: templates/emails/deliverability.html:9
 #: templates/emails/deliverability_domain.html:8
 msgid "Email Deliverability"
 msgstr "E-Mail-Zustellbarkeit"
 
 #: modules/email_filters.py:46 modules/email_filters.py:86
-#: modules/email_filters.py:124 templates/dashboard/dashboard.html:182
+#: modules/email_filters.py:124 templates/dashboard/dashboard.html:183
 msgid "Filters"
 msgstr "Filter"
 
@@ -551,12 +552,12 @@ msgstr "Geräte verbinden"
 msgid "Error: Invalid configuration type."
 msgstr "Fehler: Ungültiger Konfigurationstyp."
 
-#: modules/goaccess.py:51 templates/dashboard/dashboard.html:136
+#: modules/goaccess.py:51 templates/dashboard/dashboard.html:137
 #: templates/domains/goaccess.html:9
 msgid "GoAccess"
 msgstr "GoAccess"
 
-#: modules/info.py:15 templates/dashboard/dashboard.html:218
+#: modules/info.py:15 templates/dashboard/dashboard.html:219
 #: templates/system/server_info.html:8 templates/system/server_info.html:17
 msgid "Server Information"
 msgstr "Serverinformation"
@@ -577,7 +578,7 @@ msgstr "Blockieren der IP-Adressen fehlgeschlagen - bitte versuchen Sie es erneu
 msgid "Error ocured blocking IP addresses - contact Administrator"
 msgstr "Fehler beim Blockieren von IP-Adressen - kontaktieren Sie den Administrator"
 
-#: modules/ip_blocker.py:81 templates/dashboard/dashboard.html:210
+#: modules/ip_blocker.py:81 templates/dashboard/dashboard.html:211
 #: templates/system/ip_blocker.html:15
 msgid "IP Blocker"
 msgstr "IP-Blocker"
@@ -741,15 +742,16 @@ msgstr "Benutzer einer Datenbank zuweisen"
 msgid "Remove User from Database"
 msgstr "Benutzer aus der Datenbank entfernen"
 
-#: modules/mysql.py:469 templates/dashboard/dashboard.html:141
-#: templates/dashboard/dashboard.html:153 templates/dashboard/usage.html:62
-#: templates/files/backup_restore.html:172 templates/mysql/databases.html:11
+#: modules/mysql.py:469 templates/dashboard/dashboard.html:142
+#: templates/dashboard/dashboard.html:154 templates/dashboard/usage.html:62
+#: templates/files/backup_restore.html:172
+#: templates/files/backup_wizard.html:64 templates/mysql/databases.html:11
 msgid "Databases"
 msgstr "Datenbanken"
 
 #: modules/mysql.py:515 modules/postgresql.py:377
-#: templates/dashboard/dashboard.html:142
-#: templates/dashboard/dashboard.html:154 templates/mysql/users.html:11
+#: templates/dashboard/dashboard.html:143
+#: templates/dashboard/dashboard.html:155 templates/mysql/users.html:11
 msgid "Users"
 msgstr "Benutzer"
 
@@ -810,7 +812,7 @@ msgstr "Gespeicherte Grenzwerte ({}) – Starten Sie den pgAdmin-Dienst neu, um 
 msgid "No changes or invalid data provided. Try again."
 msgstr "Keine Änderungen oder ungültige Daten angegeben. Versuchen Sie es erneut."
 
-#: modules/pgadmin.py:121 templates/dashboard/dashboard.html:157
+#: modules/pgadmin.py:121 templates/dashboard/dashboard.html:158
 #: templates/psql/pgadmin.html:11
 msgid "pgAdmin"
 msgstr "pgAdmin"
@@ -1002,8 +1004,8 @@ msgid "PostgreSQL databases"
 msgstr "PostgreSQL-Datenbanken"
 
 #: modules/mysqld/mysql_processlist.py:39 modules/postgresql.py:415
-#: templates/dashboard/dashboard.html:146
-#: templates/dashboard/dashboard.html:158
+#: templates/dashboard/dashboard.html:147
+#: templates/dashboard/dashboard.html:159
 msgid "Process List"
 msgstr "Prozessliste"
 
@@ -1045,7 +1047,7 @@ msgstr "Ungültige PID"
 msgid "Process killed successfully"
 msgstr "Prozess erfolgreich beendet"
 
-#: modules/process_manager.py:96 templates/dashboard/dashboard.html:213
+#: modules/process_manager.py:96 templates/dashboard/dashboard.html:214
 #: templates/system/process_manager.html:12
 msgid "Process Manager"
 msgstr "Prozess-Manager"
@@ -1074,12 +1076,12 @@ msgstr "Noch keine Daten zur Ressourcennutzung verfügbar. Bitte versuchen Sie e
 msgid "An error occurred while fetching resource usage."
 msgstr "Beim Abrufen der Ressourcennutzung ist ein Fehler aufgetreten."
 
-#: modules/usage.py:29 templates/dashboard/dashboard.html:211
+#: modules/usage.py:29 templates/dashboard/dashboard.html:212
 #: templates/user/stats.html:16
 msgid "Resource Usage"
 msgstr "Ressourcenverbrauch"
 
-#: modules/usage.py:82 templates/dashboard/dashboard.html:212
+#: modules/usage.py:82 templates/dashboard/dashboard.html:213
 msgid "Resource Usage History"
 msgstr "Ressourcenverbrauchsverlauf"
 
@@ -1130,7 +1132,7 @@ msgstr "WAF ist für %(domain)s deaktiviert."
 msgid "WAF is disabled for %(count)d domains."
 msgstr "WAF ist für %(count)d Domains deaktiviert."
 
-#: modules/waf.py:433 templates/dashboard/dashboard.html:217
+#: modules/waf.py:433 templates/dashboard/dashboard.html:218
 #: templates/system/waf_logs.html:285
 msgid "WAF Logs"
 msgstr "WAF-Protokolle"
@@ -1272,6 +1274,7 @@ msgstr "Einstellungen erfolgreich gespeichert"
 #: modules/websites.py:862 modules/websites.py:869
 #: templates/dashboard/dashboard.html:102 templates/dashboard/usage.html:16
 #: templates/domains/domains.html:127 templates/domains/domains.html:205
+#: templates/files/backup_wizard.html:64
 msgid "Websites"
 msgstr "Webseiten"
 
@@ -1528,7 +1531,7 @@ msgstr "Kennwort zurücksetzen"
 msgid "locale"
 msgstr "Sprache"
 
-#: modules/account/locale.py:63 templates/dashboard/dashboard.html:223
+#: modules/account/locale.py:63 templates/dashboard/dashboard.html:224
 #: templates/user/_login.html:96 templates/user/locale.html:10
 msgid "Change Language"
 msgstr "Sprache ändern"
@@ -1589,7 +1592,7 @@ msgstr "CAPTCHA-Validierung fehlgeschlagen. Bitte versuchen Sie es erneut."
 msgid "Invalid 2FA code. Please try again."
 msgstr "Ungültiger 2FA-Code. Bitte versuchen Sie es erneut."
 
-#: modules/account/login_history.py:15 templates/dashboard/dashboard.html:229
+#: modules/account/login_history.py:15 templates/dashboard/dashboard.html:230
 #: templates/user/loginlog.html:10
 msgid "Login History"
 msgstr "Login-Verlauf"
@@ -1639,7 +1642,7 @@ msgstr "Passkey nicht erkannt."
 msgid "Account no longer exists."
 msgstr "Konto existiert nicht mehr."
 
-#: modules/account/sessions.py:34 templates/dashboard/dashboard.html:226
+#: modules/account/sessions.py:34 templates/dashboard/dashboard.html:227
 #: templates/user/active_sessions.html:10
 msgid "Active Sessions"
 msgstr "Aktive Sitzungen"
@@ -1664,12 +1667,12 @@ msgstr "Einrichtung gestartet: Richten Sie die App ein oder speichern Sie den OT
 msgid "Two-Factor Authentication is now disabled."
 msgstr "Die Zwei-Faktor-Authentifizierung ist jetzt deaktiviert."
 
-#: modules/account/twofa.py:66 templates/dashboard/dashboard.html:225
+#: modules/account/twofa.py:66 templates/dashboard/dashboard.html:226
 #: templates/dashboard/twofa.html:6 templates/user/twofa_settings.html:14
 msgid "Two-Factor Authentication"
 msgstr "Zwei-Faktor-Authentifizierung"
 
-#: modules/cache/elasticsearch.py:16 templates/dashboard/dashboard.html:176
+#: modules/cache/elasticsearch.py:16 templates/dashboard/dashboard.html:177
 msgid "ElasticSearch"
 msgstr "ElasticSearch"
 
@@ -1677,7 +1680,7 @@ msgstr "ElasticSearch"
 msgid "The leading distributed, RESTful, open source search and analytics engine designed for speed and reliability."
 msgstr "Die führende verteilte, RESTful, Open-Source-Such- und Analyse-Motor, die auf Geschwindigkeit und Zuverlässigkeit ausgelegt ist."
 
-#: modules/cache/memcached.py:18 templates/dashboard/dashboard.html:173
+#: modules/cache/memcached.py:18 templates/dashboard/dashboard.html:174
 msgid "Memcached"
 msgstr "Memcached"
 
@@ -1685,7 +1688,7 @@ msgstr "Memcached"
 msgid "A high-performance, distributed in-memory key-value caching system designed to accelerate dynamic web applications."
 msgstr "Ein leistungsstarkes, verteiltes Key-Value-Caching-System im Arbeitsspeicher zur Beschleunigung dynamischer Webanwendungen."
 
-#: modules/cache/opensearch.py:16 templates/dashboard/dashboard.html:175
+#: modules/cache/opensearch.py:16 templates/dashboard/dashboard.html:176
 msgid "OpenSearch"
 msgstr "Opensearch"
 
@@ -1693,7 +1696,7 @@ msgstr "Opensearch"
 msgid "OpenSearch is an open-source, distributed search and analytics suite for large volumes of data. "
 msgstr "OpenSearch ist eine Open-Source-Suite für die verteilte Suche und Analyse großer Datenmengen. "
 
-#: modules/cache/redis.py:16 templates/dashboard/dashboard.html:171
+#: modules/cache/redis.py:16 templates/dashboard/dashboard.html:172
 msgid "Redis"
 msgstr "Redis"
 
@@ -1701,7 +1704,7 @@ msgstr "Redis"
 msgid "Redis (Remote Dictionary Server) is an in-memory, key/value store that is used primarily as an application cache or quick-response database."
 msgstr "Redis (Fernzugriffsserver für Wörterbücher) ist ein In-Speicher für Schlüssel/Werte, der in erster Linie als Anwendungscache oder Schnellantwort-Datenbank verwendet wird."
 
-#: modules/cache/valkey.py:16 templates/dashboard/dashboard.html:172
+#: modules/cache/valkey.py:16 templates/dashboard/dashboard.html:173
 msgid "Valkey"
 msgstr "Valkey"
 
@@ -1713,7 +1716,7 @@ msgstr "Valkey ist ein In-Memory-Key/Value-Speicher (ein von der Community betri
 msgid "Varnish is not running"
 msgstr "Varnish läuft nicht"
 
-#: modules/cache/varnish.py:168 templates/dashboard/dashboard.html:174
+#: modules/cache/varnish.py:168 templates/dashboard/dashboard.html:175
 msgid "Varnish"
 msgstr "Varnish"
 
@@ -1889,7 +1892,7 @@ msgstr "SSL-Zertifikat für %(domain)s erfolgreich erstellt."
 msgid "Certificate was not generated yet. It may take a moment, please try again shortly."
 msgstr "Zertifikat wurde noch nicht erstellt. Es kann einen Moment dauern, bitte versuchen Sie es in Kürze erneut."
 
-#: modules/domain/ssl.py:48 templates/dashboard/dashboard.html:131
+#: modules/domain/ssl.py:48 templates/dashboard/dashboard.html:132
 #: templates/domains/domains.html:213
 msgid "SSL"
 msgstr "SSL"
@@ -1913,6 +1916,40 @@ msgstr "Ungültige Aktion! Nur AutoSSL oder Benutzerdefiniert sind verfügbar."
 #: modules/domain/ssl.py:176
 msgid "No SSL certificate found for this domain."
 msgstr "Kein SSL-Zertifikat für diese Domain gefunden."
+
+#: modules/files/backup_wizard.py:92 templates/dashboard/dashboard.html:120
+#: templates/files/backup_wizard.html:10
+msgid "Backup Wizard"
+msgstr ""
+
+#: modules/files/backup_wizard.py:123
+msgid "A backup is already in progress. Please wait for it to finish."
+msgstr ""
+
+#: modules/files/backup_wizard.py:136
+msgid "Backup started. It will appear in the list below once complete."
+msgstr ""
+
+#: modules/files/backup_wizard.py:139
+msgid "Failed to start backup."
+msgstr ""
+
+#: modules/files/backup_wizard.py:152 modules/files/trash.py:220
+#: modules/files/trash.py:293
+msgid "Invalid filename."
+msgstr "Ungültiger Dateiname."
+
+#: modules/files/backup_wizard.py:161
+msgid "Invalid file path."
+msgstr ""
+
+#: modules/files/backup_wizard.py:165
+msgid "Backup file not found."
+msgstr ""
+
+#: modules/files/backup_wizard.py:171
+msgid "This backup is still being created. Please wait until it completes before downloading."
+msgstr ""
 
 #: modules/files/backups.py:46
 msgid "A backup is currently in progress. Please wait until it finishes before saving settings. Or if you want to interrupt the backup process: stop and start the backup service."
@@ -2258,7 +2295,7 @@ msgstr "Ungültiges fix_directory Verzeichnis"
 msgid "Success."
 msgstr "Erfolgreich."
 
-#: modules/files/fix_permissions.py:50 templates/dashboard/dashboard.html:122
+#: modules/files/fix_permissions.py:50 templates/dashboard/dashboard.html:123
 #: templates/files/fix_permissions.html:10
 #: templates/files/fix_permissions.html:46
 msgid "Fix Permissions"
@@ -2330,7 +2367,7 @@ msgstr "Der Benutzer hat keine FTP-Konten."
 msgid "FTP account not found."
 msgstr "FTP-Konto nicht gefunden."
 
-#: modules/files/inodes.py:54 templates/dashboard/dashboard.html:120
+#: modules/files/inodes.py:54 templates/dashboard/dashboard.html:121
 #: templates/files/inodes.html:13
 msgid "Inodes Explorer"
 msgstr "Inodes-Explorer"
@@ -2367,7 +2404,7 @@ msgstr "Es wurde kein Verzeichnis für den Scanvorgang angegeben."
 msgid "Invalid directory specified for scanning."
 msgstr "Ungültiges Verzeichnis für den Scan angegeben."
 
-#: modules/files/trash.py:165 templates/dashboard/dashboard.html:123
+#: modules/files/trash.py:165 templates/dashboard/dashboard.html:124
 #: templates/files/trash.html:14
 msgid "Trash"
 msgstr "Papierkorb"
@@ -2379,10 +2416,6 @@ msgstr "Ungültiges Verzeichnis."
 #: modules/files/trash.py:207
 msgid "Missing filename."
 msgstr "Dateiname fehlt."
-
-#: modules/files/trash.py:220 modules/files/trash.py:293
-msgid "Invalid filename."
-msgstr "Ungültiger Dateiname."
 
 #: modules/files/trash.py:231 modules/files/trash.py:305
 msgid "File or directory does not exist in Trash."
@@ -2572,7 +2605,7 @@ msgstr "Installation hat das Zeitlimit überschritten."
 msgid "PHP extension management is only available for PHP-FPM, not for Litespeed."
 msgstr "Die Verwaltung von PHP-Erweiterungen ist nur für PHP-FPM verfügbar, nicht für Litespeed."
 
-#: modules/phpd/php_extensions.py:339 templates/dashboard/dashboard.html:193
+#: modules/phpd/php_extensions.py:339 templates/dashboard/dashboard.html:194
 #: templates/php/extensions.html:228
 msgid "PHP Extensions"
 msgstr "PHP Erweiterungen"
@@ -2625,7 +2658,7 @@ msgstr "Keine gültigen Erweiterungen ausgewählt."
 msgid "Install queued..."
 msgstr "Installation in Warteschlange..."
 
-#: modules/phpd/php_ini.py:16 templates/dashboard/dashboard.html:194
+#: modules/phpd/php_ini.py:16 templates/dashboard/dashboard.html:195
 msgid "PHP.INI Editor"
 msgstr "PHP.INI-Editor"
 
@@ -2711,7 +2744,7 @@ msgstr "Wird geladen"
 msgid "Warning"
 msgstr "Warnung"
 
-#: templates/base.html:38 templates/base.html:696
+#: templates/base.html:38 templates/base.html:699
 #: templates/files/backup_restore.html:498
 #: templates/files/filemanager/modals/rename.html:17
 #: templates/mysql/databases.html:676
@@ -2815,15 +2848,15 @@ msgstr "vor 1 Jahr"
 msgid "%%(n)s years ago"
 msgstr "vor %%(n)s Jahren"
 
-#: templates/base.html:693
+#: templates/base.html:696
 msgid "Notification"
 msgstr "Benachrichtigung"
 
-#: templates/base.html:697
+#: templates/base.html:700
 msgid "Dismiss"
 msgstr "Verwerfen"
 
-#: templates/base.html:719
+#: templates/base.html:722
 msgid "Found a bug? Let us know"
 msgstr "Einen Fehler gefunden? Lassen Sie es uns wissen"
 
@@ -2851,9 +2884,9 @@ msgstr "Wird gestartet"
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: templates/cache/service.html:12 templates/manager/python_node_apps.html:1179
-#: templates/manager/sites.html:73 templates/manager/websitebuilder.html:398
-#: templates/system/services.html:12
+#: templates/cache/service.html:12 templates/files/backup_wizard.html:127
+#: templates/manager/python_node_apps.html:1179 templates/manager/sites.html:73
+#: templates/manager/websitebuilder.html:398 templates/system/services.html:12
 msgid "Created"
 msgstr "Erstellt"
 
@@ -3033,166 +3066,166 @@ msgstr "Datei hochladen"
 msgid "Download Files"
 msgstr "Dateien herunterladen"
 
-#: templates/dashboard/dashboard.html:121
+#: templates/dashboard/dashboard.html:122
 #: templates/files/clamav/scanner.html:14
 msgid "ClamAV Scanner"
 msgstr "ClamAV-Scanner"
 
-#: templates/dashboard/dashboard.html:128
+#: templates/dashboard/dashboard.html:129
 msgid "Redirects"
 msgstr "Weiterleitungen"
 
-#: templates/dashboard/dashboard.html:129 templates/domains/dns.html:870
+#: templates/dashboard/dashboard.html:130 templates/domains/dns.html:870
 msgid "DNS Zone Editor"
 msgstr "DNS-Zonen-Editor"
 
-#: templates/dashboard/dashboard.html:132
+#: templates/dashboard/dashboard.html:133
 msgid "Suspend Domain"
 msgstr "Domäne sperren"
 
-#: templates/dashboard/dashboard.html:133
+#: templates/dashboard/dashboard.html:134
 msgid "Unsuspend Domain"
 msgstr "Domäne entsperren"
 
-#: templates/dashboard/dashboard.html:134
+#: templates/dashboard/dashboard.html:135
 msgid "Change Docroot"
 msgstr "Ändern Sie Docroot"
 
-#: templates/dashboard/dashboard.html:135
+#: templates/dashboard/dashboard.html:136
 msgid "Edit Virtual Hosts"
 msgstr "Virtuelle Hosts bearbeiten"
 
-#: templates/dashboard/dashboard.html:137
+#: templates/dashboard/dashboard.html:138
 msgid "Raw Access Logs"
 msgstr "Rohzugriffsprotokolle"
 
-#: templates/dashboard/dashboard.html:143
-#: templates/dashboard/dashboard.html:155 templates/mysql/databases.html:195
+#: templates/dashboard/dashboard.html:144
+#: templates/dashboard/dashboard.html:156 templates/mysql/databases.html:195
 #: templates/mysql/wizard.html:8 templates/psql/databases.html:129
 #: templates/psql/wizard.html:8
 msgid "Database Wizard"
 msgstr "Datenbank-Assistent"
 
-#: templates/dashboard/dashboard.html:144
-#: templates/dashboard/dashboard.html:156
+#: templates/dashboard/dashboard.html:145
+#: templates/dashboard/dashboard.html:157
 msgid "Import Database"
 msgstr "Datenbank importieren"
 
-#: templates/dashboard/dashboard.html:145
+#: templates/dashboard/dashboard.html:146
 msgid "Open phpMyAdmin"
 msgstr "Öffnen Sie phpMyAdmin"
 
-#: templates/dashboard/dashboard.html:147
-#: templates/dashboard/dashboard.html:159 templates/mysql/remote_mysql.html:11
+#: templates/dashboard/dashboard.html:148
+#: templates/dashboard/dashboard.html:160 templates/mysql/remote_mysql.html:11
 msgid "Remote Access"
 msgstr "Fernzugriff"
 
-#: templates/dashboard/dashboard.html:148 templates/mysql/configuration.html:13
+#: templates/dashboard/dashboard.html:149 templates/mysql/configuration.html:13
 msgid "MySQL Configuration"
 msgstr "MySQL-Konfiguration"
 
-#: templates/dashboard/dashboard.html:149
+#: templates/dashboard/dashboard.html:150
 msgid "Change root password"
 msgstr "Root-Passwort ändern"
 
-#: templates/dashboard/dashboard.html:160 templates/psql/configuration.html:10
+#: templates/dashboard/dashboard.html:161 templates/psql/configuration.html:10
 msgid "PostgreSQL Configuration"
 msgstr "PostgreSQL-Konfiguration"
 
-#: templates/dashboard/dashboard.html:164 templates/manager/sites.html:8
+#: templates/dashboard/dashboard.html:165 templates/manager/sites.html:8
 msgid "Site Manager"
 msgstr "Site Manager"
 
-#: templates/dashboard/dashboard.html:166
+#: templates/dashboard/dashboard.html:167
 msgid "WP Manager"
 msgstr "WP-Manager"
 
-#: templates/dashboard/dashboard.html:167
+#: templates/dashboard/dashboard.html:168
 msgid "Flarum"
 msgstr "Flarum"
 
-#: templates/dashboard/dashboard.html:180
+#: templates/dashboard/dashboard.html:181
 msgid "Email Accounts"
 msgstr "E-Mail Konten"
 
-#: templates/dashboard/dashboard.html:184
+#: templates/dashboard/dashboard.html:185
 msgid "Default Address"
 msgstr "Standardadresse"
 
-#: templates/dashboard/dashboard.html:185
+#: templates/dashboard/dashboard.html:186
 msgid "Address Importer"
 msgstr "Adressenimport"
 
-#: templates/dashboard/dashboard.html:186
+#: templates/dashboard/dashboard.html:187
 msgid "Address Exporter"
 msgstr "Adressen-Exporteur"
 
-#: templates/dashboard/dashboard.html:190
+#: templates/dashboard/dashboard.html:191
 msgid "Select PHP version"
 msgstr "PHP-Version auswählen"
 
-#: templates/dashboard/dashboard.html:191
+#: templates/dashboard/dashboard.html:192
 msgid "Default Version"
 msgstr "Standardversion"
 
-#: templates/dashboard/dashboard.html:192
+#: templates/dashboard/dashboard.html:193
 msgid "PHP Options"
 msgstr "PHP-Optionen"
 
-#: templates/dashboard/dashboard.html:199 templates/docker/containers.html:423
+#: templates/dashboard/dashboard.html:200 templates/docker/containers.html:423
 msgid "Terminal"
 msgstr "Terminal"
 
-#: templates/dashboard/dashboard.html:202
+#: templates/dashboard/dashboard.html:203
 msgid "Change Image tag"
 msgstr "Image-Etikette ändern"
 
-#: templates/dashboard/dashboard.html:203
+#: templates/dashboard/dashboard.html:204
 msgid "Change webserver"
 msgstr "Webserver ändern"
 
-#: templates/dashboard/dashboard.html:204
+#: templates/dashboard/dashboard.html:205
 msgid "Change MySQL Type"
 msgstr "MySQL-Typ ändern"
 
-#: templates/dashboard/dashboard.html:208 templates/partials/_header.html:48
+#: templates/dashboard/dashboard.html:209 templates/partials/_header.html:48
 msgid "Services"
 msgstr "Dienstleistungen"
 
-#: templates/dashboard/dashboard.html:209
+#: templates/dashboard/dashboard.html:210
 #: templates/files/backup_settings.html:97 templates/system/cronjobs.html:25
 msgid "Cron Jobs"
 msgstr "Cronjob Aufgaben"
 
-#: templates/dashboard/dashboard.html:214
+#: templates/dashboard/dashboard.html:215
 msgid "Change TimeZone"
 msgstr "Zeitstrahl festlegen"
 
-#: templates/dashboard/dashboard.html:215
+#: templates/dashboard/dashboard.html:216
 msgid "Webserver Configuration"
 msgstr "Webserver-Konfiguration"
 
-#: templates/dashboard/dashboard.html:216
+#: templates/dashboard/dashboard.html:217
 msgid "WAF Settings"
 msgstr "WAF-Einstellungen"
 
-#: templates/dashboard/dashboard.html:222 templates/user/account.html:10
+#: templates/dashboard/dashboard.html:223 templates/user/account.html:10
 msgid "Email & Password"
 msgstr "E-Mail & Kennwort"
 
-#: templates/dashboard/dashboard.html:224 templates/user/notifications.html:10
+#: templates/dashboard/dashboard.html:225 templates/user/notifications.html:10
 msgid "Email Notifications"
 msgstr "E-Mail Benachrichtigungen"
 
-#: templates/dashboard/dashboard.html:227
+#: templates/dashboard/dashboard.html:228
 msgid "Favorite Pages"
 msgstr "Lieblingsseiten"
 
-#: templates/dashboard/dashboard.html:228
+#: templates/dashboard/dashboard.html:229
 msgid "Account Activity"
 msgstr "Kontoaktivität"
 
-#: templates/dashboard/dashboard.html:230
+#: templates/dashboard/dashboard.html:231
 msgid "Log out"
 msgstr "Abmelden"
 
@@ -3569,6 +3602,7 @@ msgstr "PIDs"
 #: templates/docker/containers.html:125 templates/docker/containers.html:182
 #: templates/domains/dns.html:110 templates/domains/domains.html:162
 #: templates/domains/domains.html:216 templates/files/backup_restore.html:175
+#: templates/files/backup_wizard.html:130
 #: templates/files/clamav/quarantine.html:72 templates/files/disk_usage.html:44
 #: templates/files/ftp.html:70 templates/files/inodes.html:43
 #: templates/manager/python_node_apps.html:172 templates/manager/sites.html:85
@@ -4529,6 +4563,7 @@ msgid "URI"
 msgstr "URI"
 
 #: templates/domains/logs.html:188 templates/domains/logs.html:222
+#: templates/files/backup_wizard.html:48 templates/files/backup_wizard.html:124
 #: templates/files/disk_usage.html:41 templates/files/filemanager.html:166
 #: templates/files/filemanager/table.html:7
 #: templates/files/filemanager/table_trash.html:7
@@ -5833,6 +5868,7 @@ msgstr "Inhalt"
 
 #: templates/files/backup_restore.html:257
 #: templates/files/backup_restore.html:514
+#: templates/files/backup_wizard.html:167
 #: templates/files/filemanager/actions_buttons.html:30
 #: templates/files/filemanager/new_actions_buttons.html:25
 #: templates/files/upload_file.html:149
@@ -5994,6 +6030,92 @@ msgstr "Vollständiger Pfad zum Ausschließen oder reguläre Ausdrücke."
 #: templates/files/backup_settings.html:122
 msgid "IThe number of days for which a backup is kept. Pass zero or a positive integer value to enable automatic rotation of old backups."
 msgstr "Die Anzahl der Tage, für die eine Sicherung aufbewahrt wird. Übergeben Sie den Wert Null oder eine positive ganze Zahl, um die automatische Rotation alter Sicherungen zu aktivieren."
+
+#: templates/files/backup_wizard.html:12
+msgid "Create and download backups of your account."
+msgstr ""
+
+#: templates/files/backup_wizard.html:41
+msgid "Backup in progress"
+msgstr ""
+
+#: templates/files/backup_wizard.html:42
+msgid "Your backup is currently being created. This page will refresh automatically when it completes."
+msgstr ""
+
+#: templates/files/backup_wizard.html:45
+msgid "Started"
+msgstr ""
+
+#: templates/files/backup_wizard.html:58
+msgid "Back Up"
+msgstr ""
+
+#: templates/files/backup_wizard.html:59
+msgid "This feature allows you to download a compressed copy of all your files."
+msgstr ""
+
+#: templates/files/backup_wizard.html:62
+msgid "The system will include the following items in the backup file:"
+msgstr ""
+
+#: templates/files/backup_wizard.html:64
+msgid "The home directory"
+msgstr ""
+
+#: templates/files/backup_wizard.html:64
+msgid "Email accounts, filters, aliases"
+msgstr ""
+
+#: templates/files/backup_wizard.html:64
+msgid "FTP accounts"
+msgstr ""
+
+#: templates/files/backup_wizard.html:64
+msgid "DNS zones"
+msgstr ""
+
+#: templates/files/backup_wizard.html:64
+msgid "SSL certificates"
+msgstr ""
+
+#: templates/files/backup_wizard.html:64
+msgid "Cronjobs"
+msgstr ""
+
+#: templates/files/backup_wizard.html:64
+msgid "Containers and images"
+msgstr ""
+
+#: templates/files/backup_wizard.html:85
+msgid "Backup in progress…"
+msgstr ""
+
+#: templates/files/backup_wizard.html:87 templates/manager/mautic.html:384
+#: templates/manager/websitebuilder.html:207
+#: templates/manager/wp/single.html:2003
+msgid "Generate Backup"
+msgstr "Sicherungskopie generieren"
+
+#: templates/files/backup_wizard.html:98
+msgid "Existing Backups"
+msgstr ""
+
+#: templates/files/backup_wizard.html:99
+msgid "Download previously generated backups."
+msgstr ""
+
+#: templates/files/backup_wizard.html:113
+msgid "No backups found. Generate your first backup above."
+msgstr ""
+
+#: templates/files/backup_wizard.html:121
+msgid "Filename"
+msgstr ""
+
+#: templates/files/backup_wizard.html:157
+msgid "In progress…"
+msgstr ""
 
 #: templates/files/backups.html:28
 msgid "Manage backups."
@@ -6974,11 +7096,6 @@ msgstr "Datenbank sichern"
 #: templates/manager/wp/single.html:2000
 msgid "Backup Files"
 msgstr "Sicherungsdateien"
-
-#: templates/manager/mautic.html:384 templates/manager/websitebuilder.html:207
-#: templates/manager/wp/single.html:2003
-msgid "Generate Backup"
-msgstr "Sicherungskopie generieren"
 
 #: templates/manager/mautic.html:394 templates/manager/websitebuilder.html:218
 #: templates/manager/wp/single.html:2017
