@@ -1,21 +1,21 @@
-# Translations template for OpenPanel.
+# Translations template for PROJECT.
 # Copyright (C) 2026 ORGANIZATION
-# This file is distributed under the same license as the OpenPanel project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# This file is distributed under the same license as the PROJECT project.
+# Stefan Pejčić <stefan@pejcic.rs>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenPanel 1.7.63\n"
+"Project-Id-Version: OpenPanel 1.7.64\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-06-24 19:07+0200\n"
+"POT-Creation-Date: 2026-06-26 08:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: English <info@openpanel.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.18.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: app.py:524
 msgid "IP address mismatch. Please login again."
@@ -2624,78 +2624,82 @@ msgstr ""
 msgid "Extension is not installed, or is already disabled."
 msgstr ""
 
-#: modules/phpd/php_extensions.py:259
+#: modules/phpd/php_extensions.py:296
 #, python-format
 msgid "Installing %(ext)s..."
 msgstr ""
 
-#: modules/phpd/php_extensions.py:268
+#: modules/phpd/php_extensions.py:305
 msgid "Extensions installed, restarting PHP-FPM to apply changes..."
 msgstr ""
 
-#: modules/phpd/php_extensions.py:270
+#: modules/phpd/php_extensions.py:308
 #, python-format
 msgid "Extensions installed: %(ext)s"
 msgstr ""
 
-#: modules/phpd/php_extensions.py:273
+#: modules/phpd/php_extensions.py:311
 msgid "Installation failed."
 msgstr ""
 
-#: modules/phpd/php_extensions.py:275
+#: modules/phpd/php_extensions.py:313
 msgid "Installation timed out."
 msgstr ""
 
-#: modules/phpd/php_extensions.py:287
+#: modules/phpd/php_extensions.py:325
 msgid "PHP extension management is only available for PHP-FPM, not for Litespeed."
 msgstr ""
 
-#: modules/phpd/php_extensions.py:301 templates/dashboard/dashboard.html:193
-#: templates/php/extensions.html:204
+#: modules/phpd/php_extensions.py:339 templates/dashboard/dashboard.html:193
+#: templates/php/extensions.html:228
 msgid "PHP Extensions"
 msgstr ""
 
-#: modules/phpd/php_extensions.py:317 modules/phpd/php_extensions.py:399
+#: modules/phpd/php_extensions.py:355 modules/phpd/php_extensions.py:463
 #, python-format
 msgid "Failed to start PHP %(version)s: %(error)s"
 msgstr ""
 
-#: modules/phpd/php_extensions.py:325
+#: modules/phpd/php_extensions.py:363
 msgid "Invalid extension name."
 msgstr ""
 
-#: modules/phpd/php_extensions.py:331 templates/user/twofa_settings.html:18
+#: modules/phpd/php_extensions.py:374 templates/user/twofa_settings.html:18
 msgid "enabled"
 msgstr ""
 
-#: modules/phpd/php_extensions.py:331 templates/user/twofa_settings.html:20
+#: modules/phpd/php_extensions.py:374 templates/user/twofa_settings.html:20
 msgid "disabled"
 msgstr ""
 
-#: modules/phpd/php_extensions.py:333
+#: modules/phpd/php_extensions.py:376
 #, python-format
 msgid "Extension %(ext)s %(action)s, PHP %(version)s restarted to apply changes."
 msgstr ""
 
-#: modules/phpd/php_extensions.py:336
+#: modules/phpd/php_extensions.py:379
 #, python-format
 msgid "Could not change extension %(ext)s: %(error)s"
 msgstr ""
 
-#: modules/phpd/php_extensions.py:357
+#: modules/phpd/php_extensions.py:404
 #, python-format
 msgid "PHP %(version)s Extensions"
 msgstr ""
 
-#: modules/phpd/php_extensions.py:367 modules/phpd/php_extensions.py:389
+#: modules/phpd/php_extensions.py:415 modules/phpd/php_extensions.py:453
 msgid "Not available for Litespeed."
 msgstr ""
 
-#: modules/phpd/php_extensions.py:394
+#: modules/phpd/php_extensions.py:439
+msgid "No valid extensions given."
+msgstr ""
+
+#: modules/phpd/php_extensions.py:458
 msgid "No valid extensions selected."
 msgstr ""
 
-#: modules/phpd/php_extensions.py:404
+#: modules/phpd/php_extensions.py:468
 msgid "Install queued..."
 msgstr ""
 
@@ -2810,7 +2814,7 @@ msgstr ""
 #: templates/manager/websitebuilder.html:305
 #: templates/manager/wp/single.html:693 templates/manager/wp/single.html:2073
 #: templates/manager/wp/single.html:2107 templates/mysql/remote_mysql.html:150
-#: templates/mysql/remote_mysql.html:201 templates/php/extensions.html:82
+#: templates/mysql/remote_mysql.html:201 templates/php/extensions.html:95
 #: templates/psql/pgadmin.html:130 templates/psql/pgadmin.html:154
 #: templates/psql/pgadmin.html:183
 msgid "Cancel"
@@ -2926,7 +2930,7 @@ msgstr ""
 
 #: templates/cache/service.html:11 templates/docker/containers.html:337
 #: templates/manager/wp/single.html:1234 templates/mysql/remote_mysql.html:63
-#: templates/php/extensions.html:48 templates/psql/pgadmin.html:72
+#: templates/php/extensions.html:61 templates/psql/pgadmin.html:72
 #: templates/psql/remote_psql.html:83 templates/system/services.html:11
 msgid "Disabled"
 msgstr ""
@@ -2976,7 +2980,7 @@ msgstr ""
 #: templates/domains/logs.html:179 templates/domains/logs.html:221
 #: templates/domains/ssl.html:29 templates/manager/wp/single.html:1147
 #: templates/mysql/databases.html:688 templates/mysql/remote_mysql.html:37
-#: templates/php/extensions.html:35 templates/psql/pgadmin.html:46
+#: templates/php/extensions.html:48 templates/psql/pgadmin.html:46
 #: templates/psql/remote_psql.html:57 templates/system/services.html:71
 #: templates/system/waf.html:54 templates/system/waf_domain.html:30
 #: templates/user/active_sessions.html:54
@@ -3718,7 +3722,7 @@ msgid "Delete"
 msgstr ""
 
 #: templates/docker/containers.html:421 templates/manager/wp/single.html:1230
-#: templates/mysql/remote_mysql.html:48 templates/php/extensions.html:46
+#: templates/mysql/remote_mysql.html:48 templates/php/extensions.html:59
 #: templates/psql/pgadmin.html:57 templates/psql/remote_psql.html:68
 msgid "Enabled"
 msgstr ""
@@ -5118,7 +5122,7 @@ msgid "Delivers to"
 msgstr ""
 
 #: templates/emails/alias_detail.html:33 templates/emails/alias_detail.html:210
-#: templates/manager/wp/single.html:1169 templates/php/extensions.html:36
+#: templates/manager/wp/single.html:1169 templates/php/extensions.html:49
 #: templates/user/activity.html:48 templates/user/loginlog.html:50
 msgid "Action"
 msgstr ""
@@ -9852,8 +9856,8 @@ msgstr ""
 msgid "Click to refresh"
 msgstr ""
 
-#: templates/partials/_service_log.html:81 templates/php/extensions.html:79
-#: templates/php/extensions.html:109 templates/system/server_info.html:25
+#: templates/partials/_service_log.html:81 templates/php/extensions.html:92
+#: templates/php/extensions.html:123 templates/system/server_info.html:25
 #: templates/system/server_info.html:34 templates/system/server_info.html:44
 #: templates/system/server_info.html:53 templates/system/server_info.html:96
 #: templates/system/server_info.html:105 templates/system/server_info.html:114
@@ -10105,14 +10109,13 @@ msgstr ""
 msgid "Change PHP Version:"
 msgstr ""
 
-#: templates/php/default.html:33 templates/php/extensions.html:217
+#: templates/php/default.html:33 templates/php/extensions.html:241
 #: templates/php/ini_editor.html:83 templates/php/options.html:180
 msgid "Select PHP Version"
 msgstr ""
 
-#: templates/php/default.html:51 templates/php/extensions.html:21
-#: templates/php/extensions.html:229 templates/php/ini_editor.html:101
-#: templates/php/options.html:195
+#: templates/php/default.html:51 templates/php/extensions.html:253
+#: templates/php/ini_editor.html:101 templates/php/options.html:195
 msgid "Back to PHP versions"
 msgstr ""
 
@@ -10122,69 +10125,77 @@ msgid ""
 "Toggling restarts the PHP-FPM service."
 msgstr ""
 
-#: templates/php/extensions.html:20
+#: templates/php/extensions.html:23
 msgid "Install extension"
 msgstr ""
 
-#: templates/php/extensions.html:34
+#: templates/php/extensions.html:32
+msgid "Recently active extensions no longer installed:"
+msgstr ""
+
+#: templates/php/extensions.html:35
+msgid "Click to install again"
+msgstr ""
+
+#: templates/php/extensions.html:47
 msgid "Extension"
 msgstr ""
 
-#: templates/php/extensions.html:57
+#: templates/php/extensions.html:70
 msgid "Disable"
 msgstr ""
 
-#: templates/php/extensions.html:57
+#: templates/php/extensions.html:70
 msgid "Enable"
 msgstr ""
 
-#: templates/php/extensions.html:64
+#: templates/php/extensions.html:77
 msgid "No extensions installed yet for this PHP version."
 msgstr ""
 
-#: templates/php/extensions.html:76
+#: templates/php/extensions.html:89
 msgid "Install PHP extensions"
 msgstr ""
 
-#: templates/php/extensions.html:77
+#: templates/php/extensions.html:90
 #, python-format
 msgid "Select extensions to install for PHP %(version)s."
 msgstr ""
 
-#: templates/php/extensions.html:83
+#: templates/php/extensions.html:96
 msgid "Install selected"
 msgstr ""
 
-#: templates/php/extensions.html:115
+#: templates/php/extensions.html:129
 msgid "All supported extensions are already installed."
 msgstr ""
 
-#: templates/php/extensions.html:127
+#: templates/php/extensions.html:142
 msgid "Failed to load available extensions."
 msgstr ""
 
-#: templates/php/extensions.html:150
+#: templates/php/extensions.html:162
 msgid "Installing extensions..."
 msgstr ""
 
-#: templates/php/extensions.html:162
+#: templates/php/extensions.html:174
 msgid "Failed to start installation."
 msgstr ""
 
-#: templates/php/extensions.html:191
+#: templates/php/extensions.html:215
 msgid "An extension install is in progress for this PHP version..."
 msgstr ""
 
-#: templates/php/extensions.html:205
+#: templates/php/extensions.html:229
 msgid "Enable, disable, or install PHP extensions per PHP version."
 msgstr ""
 
-#: templates/php/extensions.html:214 templates/php/ini_editor.html:79
+#: templates/php/extensions.html:238 templates/php/ini_editor.html:79
 #: templates/php/options.html:176
 msgid "Select PHP version:"
 msgstr ""
 
-#: templates/php/extensions.html:230
+#: templates/php/extensions.html:254
 msgid "Manage Extensions"
 msgstr ""
 
