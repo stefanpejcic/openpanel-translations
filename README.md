@@ -9,11 +9,11 @@
 - [🇷🇺 Russian (RU)](https://community.openpanel.org/d/165-govoris-po-russki-russian-and-ukrainian-translation-for-openpanel)
 - [🇹🇷 Turkish (TR)](https://community.openpanel.org/d/31-turkce-konusuyor-musun-turkish-translation-for-openpanel)
 - [🇺🇦 Ukrainian (UA)](https://community.openpanel.org/d/165-govoris-po-russki-russian-and-ukrainian-translation-for-openpanel)
-- [🇧🇬 Bulgarian (BG)](https://community.openpanel.org/d/246-govoris-li-blgarski-bulgarian-translation-for-openpanel)
-- [🇨🇳 Simplified Chinese (ZH)](https://community.openpanel.org/d/151-simplified-chinese-translation-for-openpanel)
-- [🇭🇺 Hungarian (HU)](https://community.openpanel.org/d/262-goviris-magyar-hungarian-translation-for-openpanel)
-- [🇷🇴 Romanian (RO)](https://community.openpanel.org/d/270-vorbesti-romana-romanian-translation-for-openpanel)
-- [🇷🇸 Serbian (RS)](https://community.openpanel.org/d/301-pricaj-srpski-da-te-ceo-svet-razume-serbian-translation-for-openpanel)
+- 🇧🇬 Bulgarian (BG)
+- 🇨🇳 Simplified Chinese (ZH)
+- 🇭🇺 Hungarian (HU)
+- 🇷🇴 Romanian (RO)
+- 🇷🇸 Serbian (RS)
 - 🇱🇦 Lao (LO)
 
 
