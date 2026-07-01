@@ -1,14 +1,14 @@
 
 ### Available Translations
 
-- [🇩🇪 German (DE)](https://community.openpanel.org/d/25-sprichst-du-deutsch-german-translation-for-openpanel)
-- [🇪🇸 Spanish (ES)](https://community.openpanel.org/d/59-hablas-espanol-spanish-translation-for-openpanel)
-- [🇫🇷 French (FR)](https://community.openpanel.org/d/45-parles-tu-francais-french-translation-for-openpanel)
-- [🇳🇵 Nepal (FR)](https://community.openpanel.org/d/224-ka-tapaii-napal-blnahanachha-nepal-translation-for-openpanel)
-- [🇵🇹 Portuguese (PT)](https://community.openpanel.org/d/154-fala-portugues-portuguese-translation-for-openpanel)
-- [🇷🇺 Russian (RU)](https://community.openpanel.org/d/165-govoris-po-russki-russian-and-ukrainian-translation-for-openpanel)
-- [🇹🇷 Turkish (TR)](https://community.openpanel.org/d/31-turkce-konusuyor-musun-turkish-translation-for-openpanel)
-- [🇺🇦 Ukrainian (UA)](https://community.openpanel.org/d/165-govoris-po-russki-russian-and-ukrainian-translation-for-openpanel)
+- 🇩🇪 German (DE)
+- 🇪🇸 Spanish (ES)
+- 🇫🇷 French (FR)
+- 🇳🇵 Nepal (FR)
+- 🇵🇹 Portuguese (PT)
+- 🇷🇺 Russian (RU)
+- 🇹🇷 Turkish (TR)
+- 🇺🇦 Ukrainian (UA)
 - 🇧🇬 Bulgarian (BG)
 - 🇨🇳 Simplified Chinese (ZH)
 - 🇭🇺 Hungarian (HU)
