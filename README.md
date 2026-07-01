@@ -23,6 +23,6 @@ OpenPanel needs you! If you would like to support OpenPanel, help us with the tr
 ### How can you provide a translation for OpenPanel?
 
 1. Fork [this repository](https://github.com/stefanpejcic/openpanel-translations/).
-2. Copy `en_us` to your locale e.g. `es_es`
+2. Copy `en-us` to your locale e.g. `es-es`
 3. Translate the messages.pot file
 4. Send a pull request
