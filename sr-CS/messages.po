@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openpanel\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-07-02 20:00+0200\n"
-"PO-Revision-Date: 2026-07-02 18:26\n"
+"POT-Creation-Date: 2026-07-02 22:51+0200\n"
+"PO-Revision-Date: 2026-07-02 21:02\n"
 "Last-Translator: \n"
 "Language-Team: Serbian (Latin)\n"
 "MIME-Version: 1.0\n"
@@ -18,15 +18,15 @@ msgstr ""
 "X-Crowdin-File-ID: 10\n"
 "Language: sr_CS\n"
 
-#: app.py:525
+#: app.py:535
 msgid "IP address mismatch. Please login again."
 msgstr ""
 
-#: app.py:557
+#: app.py:567
 msgid "Two-Factor Authentication is required on this panel. Please enable it to continue."
 msgstr ""
 
-#: app.py:565
+#: app.py:575
 msgid "Disabled in demo mode."
 msgstr ""
 
@@ -753,6 +753,23 @@ msgstr ""
 
 #: modules/mautic.py:1015
 msgid "Error running:  'mautic:install' command."
+msgstr ""
+
+#: modules/mcp.py:239 templates/user/mcp.html:9
+msgid "MCP"
+msgstr ""
+
+#: modules/mcp.py:254
+#, python-format
+msgid "Token \"%(name)s\" created. Copy it below - it will not be shown again."
+msgstr ""
+
+#: modules/mcp.py:266
+msgid "Token revoked."
+msgstr ""
+
+#: modules/mcp.py:268
+msgid "Token not found."
 msgstr ""
 
 #: modules/mysql.py:114 modules/mysql.py:239 modules/mysql.py:353
@@ -2810,7 +2827,7 @@ msgstr ""
 msgid "Warning"
 msgstr ""
 
-#: templates/base.html:50 templates/base.html:733 templates/base.html:767
+#: templates/base.html:50 templates/base.html:736 templates/base.html:770
 #: templates/files/backup_restore.html:498
 #: templates/files/filemanager/modals/rename.html:17
 #: templates/mysql/databases.html:676
@@ -2916,27 +2933,27 @@ msgstr ""
 msgid "%%(n)s years ago"
 msgstr ""
 
-#: templates/base.html:730
+#: templates/base.html:733
 msgid "Notification"
 msgstr ""
 
-#: templates/base.html:734
+#: templates/base.html:737
 msgid "Dismiss"
 msgstr ""
 
-#: templates/base.html:766
+#: templates/base.html:769
 msgid "Keyboard shortcuts"
 msgstr ""
 
-#: templates/base.html:779
+#: templates/base.html:782
 msgid "Toggle sidebar"
 msgstr ""
 
-#: templates/base.html:780
+#: templates/base.html:783
 msgid "Show this dialog"
 msgstr ""
 
-#: templates/base.html:843
+#: templates/base.html:846
 msgid "Found a bug? Let us know"
 msgstr ""
 
@@ -2967,6 +2984,7 @@ msgstr ""
 #: templates/cache/service.html:12 templates/files/backup_wizard.html:127
 #: templates/manager/python_node_apps.html:1179 templates/manager/sites.html:73
 #: templates/manager/websitebuilder.html:398 templates/system/services.html:12
+#: templates/user/mcp.html:34
 msgid "Created"
 msgstr ""
 
@@ -3666,7 +3684,8 @@ msgstr ""
 #: templates/files/filemanager/table.html:6
 #: templates/files/filemanager/table_trash.html:6 templates/files/trash.html:55
 #: templates/manager/pm2_install.html:102
-#: templates/manager/python_node_apps.html:409 templates/user/passkeys.html:29
+#: templates/manager/python_node_apps.html:409 templates/user/mcp.html:32
+#: templates/user/passkeys.html:29
 msgid "Name"
 msgstr ""
 
@@ -3824,7 +3843,8 @@ msgstr ""
 msgid "Last checked"
 msgstr ""
 
-#: templates/docker/images.html:15 templates/user/passkeys.html:40
+#: templates/docker/images.html:15 templates/user/mcp.html:45
+#: templates/user/passkeys.html:40
 msgid "Never"
 msgstr ""
 
@@ -4598,7 +4618,7 @@ msgid "never"
 msgstr ""
 
 #: templates/domains/dynamic_dns.html:196 templates/mysql/wizard.html:139
-#: templates/user/api_docs.html:149
+#: templates/user/api_docs.html:149 templates/user/mcp.html:103
 msgid "Copied!"
 msgstr ""
 
@@ -6788,6 +6808,8 @@ msgstr ""
 #: templates/files/filemanager/new_actions_buttons.html:13
 #: templates/mysql/wizard.html:80 templates/mysql/wizard.html:139
 #: templates/user/api_docs.html:149 templates/user/api_docs.html:151
+#: templates/user/mcp.html:23 templates/user/mcp.html:83
+#: templates/user/mcp.html:92
 msgid "Copy"
 msgstr ""
 
@@ -11528,6 +11550,70 @@ msgstr ""
 msgid "View activity log"
 msgstr ""
 
+#: templates/user/mcp.html:10
+msgid "Let AI assistants (Claude, and other MCP clients) manage this account through the panel API."
+msgstr ""
+
+#: templates/user/mcp.html:16
+msgid "Tokens"
+msgstr ""
+
+#: templates/user/mcp.html:20
+msgid "Your new token - copy it now, it will not be shown again:"
+msgstr ""
+
+#: templates/user/mcp.html:33
+msgid "Token"
+msgstr ""
+
+#: templates/user/mcp.html:35 templates/user/passkeys.html:31
+msgid "Last used"
+msgstr ""
+
+#: templates/user/mcp.html:47
+msgid "Revoke this token? Any MCP client using it will stop working immediately."
+msgstr ""
+
+#: templates/user/mcp.html:49
+msgid "Revoke"
+msgstr ""
+
+#: templates/user/mcp.html:57
+msgid "No MCP tokens yet."
+msgstr ""
+
+#: templates/user/mcp.html:62
+msgid "e.g. Laptop - Claude Desktop"
+msgstr ""
+
+#: templates/user/mcp.html:65
+msgid "Generate new token"
+msgstr ""
+
+#: templates/user/mcp.html:68
+msgid "The full token is only ever shown once, right after you generate it."
+msgstr ""
+
+#: templates/user/mcp.html:72
+msgid "Connecting an MCP client"
+msgstr ""
+
+#: templates/user/mcp.html:74
+msgid "Generate a token above, then point your MCP client at this server's"
+msgstr ""
+
+#: templates/user/mcp.html:76
+msgid "endpoint with the token as a Bearer credential."
+msgstr ""
+
+#: templates/user/mcp.html:79
+msgid "Claude Code CLI"
+msgstr ""
+
+#: templates/user/mcp.html:86
+msgid "Claude Desktop (claude_desktop_config.json)"
+msgstr ""
+
 #: templates/user/notifications.html:11
 msgid "Select events for which to receive email notifications."
 msgstr ""
@@ -11550,10 +11636,6 @@ msgstr ""
 
 #: templates/user/passkeys.html:30
 msgid "Added"
-msgstr ""
-
-#: templates/user/passkeys.html:31
-msgid "Last used"
 msgstr ""
 
 #: templates/user/passkeys.html:42
