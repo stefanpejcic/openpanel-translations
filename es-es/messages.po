@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openpanel\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-06-30 09:00+0200\n"
-"PO-Revision-Date: 2026-06-30 11:05\n"
+"POT-Creation-Date: 2026-07-02 20:00+0200\n"
+"PO-Revision-Date: 2026-07-02 18:26\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -18,31 +18,17 @@ msgstr ""
 "X-Crowdin-File-ID: 10\n"
 "Language: es_ES\n"
 
-#: app.py:524
+#: app.py:525
 msgid "IP address mismatch. Please login again."
 msgstr "La dirección IP no coincide. Por favor, inicie sesión de nuevo."
 
-#: app.py:556
+#: app.py:557
 msgid "Two-Factor Authentication is required on this panel. Please enable it to continue."
 msgstr ""
 
-#: app.py:564
+#: app.py:565
 msgid "Disabled in demo mode."
 msgstr "Deshabilitado en modo de demostración."
-
-#: modules/api.py:100 modules/dashboard.py:93
-msgid "User ID not found."
-msgstr "No se encontró el ID de usuario."
-
-#: modules/api.py:104 modules/dashboard.py:97
-msgid "Failed to retrieve disk usage information."
-msgstr "No se pudo recuperar la información de uso del disco."
-
-#: modules/api.py:202 modules/api.py:220 modules/api.py:232
-#: modules/dashboard.py:30 modules/docker.py:1044 modules/docker.py:1058
-#: modules/webserver_conf.py:46
-msgid "User not authenticated"
-msgstr "Usuario no autenticado"
 
 #: modules/autoinstaller.py:53 templates/dashboard/dashboard.html:166
 #: templates/manager/autoinstaller.html:7
@@ -167,6 +153,19 @@ msgstr "La tarea cron se eliminó correctamente."
 msgid "Error deleting cron job."
 msgstr "Error al eliminar la tarea cron."
 
+#: modules/dashboard.py:30 modules/docker.py:1044 modules/docker.py:1058
+#: modules/webserver_conf.py:46
+msgid "User not authenticated"
+msgstr "Usuario no autenticado"
+
+#: modules/dashboard.py:93
+msgid "User ID not found."
+msgstr "No se encontró el ID de usuario."
+
+#: modules/dashboard.py:97
+msgid "Failed to retrieve disk usage information."
+msgstr "No se pudo recuperar la información de uso del disco."
+
 #: modules/dashboard.py:261
 msgid "Dashboard"
 msgstr "Panel de control"
@@ -180,14 +179,15 @@ msgstr "Panel de control"
 #: modules/domain/redirects.py:160 modules/domain/ssl.py:52
 #: modules/domain_suspend.py:29 modules/domain_suspend.py:62
 #: modules/domain_suspend.py:85 modules/domain_suspend.py:118
-#: modules/domains.py:369 modules/dynamic_dns.py:121
+#: modules/domains.py:369 modules/drupal.py:240 modules/drupal.py:716
+#: modules/drupal.py:921 modules/drupal.py:981 modules/dynamic_dns.py:121
 #: modules/email_aliases.py:142 modules/email_aliases.py:249
 #: modules/email_default.py:63 modules/email_deliverability.py:123
 #: modules/email_filters.py:18 modules/emails.py:196 modules/emails.py:274
 #: modules/files/ftp.py:156 modules/goaccess.py:23 modules/json/favicons.py:32
-#: modules/json/screenshots.py:73 modules/mautic.py:71 modules/mautic.py:168
-#: modules/mautic.py:409 modules/mautic.py:573 modules/mautic.py:767
-#: modules/php.py:418 modules/pm2.py:563 modules/pm2.py:1218
+#: modules/json/screenshots.py:73 modules/mautic.py:101 modules/mautic.py:434
+#: modules/mautic.py:590 modules/mautic.py:796 modules/php.py:418
+#: modules/pm2.py:563 modules/pm2.py:1218
 #: modules/sitemanager/temporary_links.py:50 modules/waf.py:113
 #: modules/waf.py:253 modules/waf.py:307 modules/waf.py:377
 #: modules/webmail.py:143 modules/website_builder.py:44
@@ -281,7 +281,7 @@ msgstr ""
 msgid "docker_data does not contain 'services'."
 msgstr "docker_data no contiene 'services'."
 
-#: modules/docker.py:237 templates/dashboard/dashboard.html:199
+#: modules/docker.py:237 templates/dashboard/dashboard.html:200
 #: templates/docker/containers.html:13 templates/docker/containers.html:565
 #: templates/docker/volumes_TODO.html:10
 msgid "Containers"
@@ -331,7 +331,7 @@ msgstr ""
 msgid "Invalid web server selected"
 msgstr "Servidor web seleccionado no válido"
 
-#: modules/docker.py:929 templates/dashboard/dashboard.html:202
+#: modules/docker.py:929 templates/dashboard/dashboard.html:203
 #: templates/docker/images.html:10
 msgid "Image Updates"
 msgstr "Actualizaciones de imágenes"
@@ -348,7 +348,7 @@ msgstr "Cambiar imagen de Docker"
 msgid "Select docker image"
 msgstr "Seleccionar imagen de Docker"
 
-#: modules/docker.py:1035 templates/dashboard/dashboard.html:201
+#: modules/docker.py:1035 templates/dashboard/dashboard.html:202
 #: templates/docker/containers.html:424 templates/docker/logs.html:10
 #: templates/manager/python_node_apps.html:71
 #: templates/partials/_service_log.html:11 templates/system/cronjobs.html:354
@@ -396,7 +396,7 @@ msgstr "Dominios"
 msgid "Domain name is required"
 msgstr ""
 
-#: modules/domains.py:224 templates/domains/new.html:240
+#: modules/domains.py:224 templates/domains/new.html:218
 msgid "Paths for both public and secret files must be set for importing .onion domain."
 msgstr "Se deben establecer las rutas para los archivos público y secreto para importar el dominio .onion."
 
@@ -413,7 +413,7 @@ msgid "Error: Reached the maximum allowed number of domains on this hosting plan
 msgstr "Error: Se ha alcanzado el número máximo de dominios permitidos en este plan de alojamiento."
 
 #: modules/domains.py:311 templates/domains/new.html:129
-#: templates/domains/new.html:345
+#: templates/domains/new.html:323
 msgid "Add Domain"
 msgstr "Agregar Dominio"
 
@@ -421,6 +421,115 @@ msgstr "Agregar Dominio"
 #: modules/sitemanager/temporary_links.py:45
 msgid "Domain name not provided."
 msgstr "No se proporcionó el nombre de dominio."
+
+#: modules/drupal.py:255 modules/mautic.py:131 modules/website_builder.py:177
+#: modules/websites.py:488 modules/websites.py:1018
+msgid "Unable to detect docroot for the domain."
+msgstr "No se pudo detectar el directorio raíz del dominio."
+
+#: modules/drupal.py:322 templates/dashboard/dashboard.html:168
+msgid "Drupal Manager"
+msgstr ""
+
+#: modules/drupal.py:380 modules/wordpress.py:203
+msgid "Domain not found."
+msgstr "Dominio no encontrado."
+
+#: modules/drupal.py:425
+msgid " and "
+msgstr ""
+
+#: modules/drupal.py:436 modules/mautic.py:323 modules/wordpress.py:321
+msgid "Document root is not provided or invalid."
+msgstr "La raíz del documento no se proporcionó o no es válida."
+
+#: modules/drupal.py:445 modules/mautic.py:334 modules/wordpress.py:451
+msgid "No backup options selected."
+msgstr "No se han seleccionado opciones de copia de seguridad."
+
+#: modules/drupal.py:478
+msgid "Could not read database name from settings.php"
+msgstr ""
+
+#: modules/drupal.py:502 modules/mautic.py:401 modules/wordpress.py:447
+msgid "Backup completed successfully!"
+msgstr "¡Copia de seguridad completada correctamente!"
+
+#: modules/drupal.py:520
+msgid "Scan skipped. Drupal scan is currently running."
+msgstr ""
+
+#: modules/drupal.py:565 modules/wordpress.py:1308
+msgid "Scan failed due to a server error."
+msgstr "El análisis falló debido a un error del servidor."
+
+#: modules/drupal.py:572 modules/drupal.py:622 modules/wordpress.py:1156
+#: modules/wordpress.py:1324
+msgid "Scan completed. Found installations:\n\n"
+msgstr "Escaneo completado. Instalaciones encontradas:\n\n"
+
+#: modules/drupal.py:635 modules/mautic.py:629 modules/pm2.py:457
+#: modules/website_builder.py:238 modules/wordpress.py:1347
+msgid "You have reached the maximum number of sites allowed."
+msgstr ""
+
+#: modules/drupal.py:645 templates/manager/autoinstaller.html:93
+#: templates/manager/drupal/install.html:9
+msgid "Install Drupal"
+msgstr ""
+
+#: modules/drupal.py:707 modules/mautic.py:788 modules/pm2.py:552
+#: modules/website_builder.py:282 modules/wordpress.py:1530
+#: modules/wordpress.py:2016
+msgid "Domain not found"
+msgstr ""
+
+#: modules/drupal.py:710
+msgid "An error occurred fetching domain from database."
+msgstr ""
+
+#: modules/drupal.py:853
+msgid "Drush site:install timed out after 5 minutes."
+msgstr ""
+
+#: modules/drupal.py:899 modules/wordpress.py:938
+msgid "Missing site ID."
+msgstr "Falta el ID del sitio."
+
+#: modules/drupal.py:915 modules/drupal.py:963 modules/mautic.py:426
+#: modules/mautic.py:583 modules/website_builder.py:71
+#: modules/website_builder.py:116 modules/wordpress.py:830
+#: modules/wordpress.py:958
+msgid "No data found for the provided site ID"
+msgstr "No se encontraron datos para el ID de sitio proporcionado."
+
+#: modules/drupal.py:933
+msgid "Drupal installation detached from Manager."
+msgstr ""
+
+#: modules/drupal.py:937
+msgid "An error occurred during Drupal detachment. Please try again."
+msgstr ""
+
+#: modules/drupal.py:938
+msgid "An error occurred during Drupal detachment."
+msgstr ""
+
+#: modules/drupal.py:973
+msgid "Drupal installation not found in the database"
+msgstr ""
+
+#: modules/drupal.py:995
+msgid "Database name or user not found in settings.php"
+msgstr ""
+
+#: modules/drupal.py:1012 modules/drupal.py:1013
+msgid "Drupal uninstalled successfully!"
+msgstr ""
+
+#: modules/drupal.py:1016 modules/drupal.py:1017
+msgid "An error occurred during Drupal uninstall."
+msgstr ""
 
 #: modules/dynamic_dns.py:132
 msgid "Dynamic DNS entry created."
@@ -447,7 +556,7 @@ msgstr ""
 msgid "Dynamic DNS"
 msgstr "DNS Dinámico"
 
-#: modules/email_aliases.py:126 templates/dashboard/dashboard.html:182
+#: modules/email_aliases.py:126 templates/dashboard/dashboard.html:183
 #: templates/emails/aliases.html:9
 msgid "Aliases"
 msgstr ""
@@ -472,14 +581,14 @@ msgstr ""
 msgid "Default Email"
 msgstr ""
 
-#: modules/email_deliverability.py:114 templates/dashboard/dashboard.html:184
+#: modules/email_deliverability.py:114 templates/dashboard/dashboard.html:185
 #: templates/emails/deliverability.html:9
 #: templates/emails/deliverability_domain.html:8
 msgid "Email Deliverability"
 msgstr "Capacidad de Entrega de Correo Electrónico"
 
 #: modules/email_filters.py:46 modules/email_filters.py:86
-#: modules/email_filters.py:124 templates/dashboard/dashboard.html:183
+#: modules/email_filters.py:124 templates/dashboard/dashboard.html:184
 msgid "Filters"
 msgstr "Filtros"
 
@@ -557,7 +666,7 @@ msgstr "Error: Tipo de configuración no válido."
 msgid "GoAccess"
 msgstr "GoAccess"
 
-#: modules/info.py:15 templates/dashboard/dashboard.html:219
+#: modules/info.py:15 templates/dashboard/dashboard.html:220
 #: templates/system/server_info.html:8 templates/system/server_info.html:17
 msgid "Server Information"
 msgstr "Información de Servidor"
@@ -578,94 +687,71 @@ msgstr ""
 msgid "Error ocured blocking IP addresses - contact Administrator"
 msgstr "Se produjo un error al bloquear las direcciones IP - contacte al Administrador"
 
-#: modules/ip_blocker.py:81 templates/dashboard/dashboard.html:211
+#: modules/ip_blocker.py:81 templates/dashboard/dashboard.html:212
 #: templates/system/ip_blocker.html:15
 msgid "IP Blocker"
 msgstr "Bloqueador de IP"
 
-#: modules/mautic.py:101 modules/website_builder.py:177 modules/websites.py:488
-#: modules/websites.py:1018
-msgid "Unable to detect docroot for the domain."
-msgstr "No se pudo detectar el directorio raíz del dominio."
-
-#: modules/mautic.py:107 modules/website_builder.py:182 modules/websites.py:494
+#: modules/mautic.py:137 modules/website_builder.py:182 modules/websites.py:494
 #: modules/websites.py:1027
 msgid "Error connecting to database, please try again. If the issue persists contact support."
 msgstr "Error al conectar con la base de datos. Inténtelo de nuevo. Si el problema persiste, póngase en contacto con el soporte técnico."
 
-#: modules/mautic.py:197
-msgid "Mautic Manager"
-msgstr "Administrador de Mautic"
+#: modules/mautic.py:285 modules/mautic.py:365
+msgid "Unable to determine the database name from app/config/local.php"
+msgstr ""
 
-#: modules/mautic.py:315
-msgid "Backup restored successfully!"
-msgstr "¡Copia de seguridad restaurada correctamente!"
+#: modules/mautic.py:310
+msgid "No files to restore for the selected backup date."
+msgstr ""
 
-#: modules/mautic.py:373 modules/wordpress.py:447
-msgid "Backup completed successfully!"
-msgstr "¡Copia de seguridad completada correctamente!"
-
-#: modules/mautic.py:376 modules/wordpress.py:451
-msgid "No backup options selected."
-msgstr "No se han seleccionado opciones de copia de seguridad."
-
-#: modules/mautic.py:401 modules/mautic.py:567 modules/website_builder.py:71
-#: modules/website_builder.py:116 modules/wordpress.py:830
-#: modules/wordpress.py:958
-msgid "No data found for the provided site ID"
-msgstr "No se encontraron datos para el ID de sitio proporcionado."
-
-#: modules/mautic.py:413
+#: modules/mautic.py:438
 msgid "Mautic installation not found in the database"
 msgstr "No se encontró la instalación de Mautic en la base de datos."
 
-#: modules/mautic.py:452
+#: modules/mautic.py:468
 msgid "Database name or user not found in app/config/local.php"
 msgstr "No se encontró el nombre de la base de datos o el usuario en app/config/local.php"
 
-#: modules/mautic.py:526
+#: modules/mautic.py:542
 msgid "Mautic uninstalled successfully!"
 msgstr "¡Mautic se ha desinstalado correctamente!"
 
-#: modules/mautic.py:531
+#: modules/mautic.py:547
 msgid "An error occurred during Mautic uninstall."
 msgstr "Se produjo un error durante la desinstalación de Mautic."
 
-#: modules/mautic.py:589
+#: modules/mautic.py:610
 msgid "Mautic installation detached from Manager."
 msgstr "Instalación Mautic separada del Administrador de Sitio."
 
-#: modules/mautic.py:593
+#: modules/mautic.py:614
 msgid "An error occurred during Mautic detachment. Please try again."
 msgstr "Se ha producido un error durante la desconexión de Mautic. Inténtelo de nuevo."
 
-#: modules/mautic.py:596
+#: modules/mautic.py:617
 msgid "An error occurred during Mautic detachment."
 msgstr "Se produjo un error durante la desconexión de Mautic."
 
-#: modules/mautic.py:613 templates/manager/autoinstaller.html:139
-#: templates/manager/mautic_install.html:8
+#: modules/mautic.py:630 modules/mautic.py:642
+#: templates/manager/autoinstaller.html:176
+#: templates/manager/mautic_install.html:9
 msgid "Install Mautic"
 msgstr "Instalar Mautic"
 
-#: modules/mautic.py:759 modules/pm2.py:552 modules/website_builder.py:282
-#: modules/wordpress.py:1530 modules/wordpress.py:2016
-msgid "Domain not found"
-msgstr ""
-
-#: modules/mautic.py:763 modules/wordpress.py:1534
+#: modules/mautic.py:792 modules/wordpress.py:1534
 msgid "An error occurred fetching docroot for domain from database."
 msgstr ""
 
-#: modules/mautic.py:815
+#: modules/mautic.py:842
 msgid "Error: .htaccess file already exists. Mautic installation cannot proceed!"
 msgstr "Error: el archivo .htaccess ya existe. ¡La instalación de Mautic no puede continuar!"
 
-#: modules/mautic.py:957
+#: modules/mautic.py:986
 msgid "Error creating MySQL database and user."
 msgstr ""
 
-#: modules/mautic.py:983
+#: modules/mautic.py:1015
 msgid "Error running:  'mautic:install' command."
 msgstr ""
 
@@ -874,10 +960,6 @@ msgstr "Falta la ruta del archivo."
 msgid "Invalid file extension. Only .py, or .js are allowed."
 msgstr "Extensión de archivo no válida. Solo se permiten .py o .js."
 
-#: modules/pm2.py:457 modules/website_builder.py:238 modules/wordpress.py:1347
-msgid "You have reached the maximum number of sites allowed."
-msgstr ""
-
 #: modules/pm2.py:464 templates/manager/pm2_install.html:9
 msgid "Install Application"
 msgstr "Instalar aplicación"
@@ -1047,7 +1129,7 @@ msgstr ""
 msgid "Process killed successfully"
 msgstr ""
 
-#: modules/process_manager.py:96 templates/dashboard/dashboard.html:214
+#: modules/process_manager.py:96 templates/dashboard/dashboard.html:215
 #: templates/system/process_manager.html:12
 msgid "Process Manager"
 msgstr "Gestor de procesos"
@@ -1076,12 +1158,12 @@ msgstr "Aún no hay datos de uso de recursos disponibles. Por favor, inténtelo 
 msgid "An error occurred while fetching resource usage."
 msgstr ""
 
-#: modules/usage.py:29 templates/dashboard/dashboard.html:212
+#: modules/usage.py:29 templates/dashboard/dashboard.html:213
 #: templates/user/stats.html:16
 msgid "Resource Usage"
 msgstr "Uso de recursos"
 
-#: modules/usage.py:82 templates/dashboard/dashboard.html:213
+#: modules/usage.py:82 templates/dashboard/dashboard.html:214
 msgid "Resource Usage History"
 msgstr "Historial de uso de recursos"
 
@@ -1132,7 +1214,7 @@ msgstr "WAF está deshabilitado para %(domain)s."
 msgid "WAF is disabled for %(count)d domains."
 msgstr "WAF está deshabilitado para %(count)d dominios."
 
-#: modules/waf.py:433 templates/dashboard/dashboard.html:218
+#: modules/waf.py:433 templates/dashboard/dashboard.html:219
 #: templates/system/waf_logs.html:285
 msgid "WAF Logs"
 msgstr "Registros WAF"
@@ -1185,7 +1267,7 @@ msgstr ""
 msgid "An error occurred during website detachment."
 msgstr ""
 
-#: modules/website_builder.py:245 templates/manager/autoinstaller.html:98
+#: modules/website_builder.py:245 templates/manager/autoinstaller.html:135
 msgid "Create Website"
 msgstr "Crear sitio web"
 
@@ -1290,14 +1372,6 @@ msgstr "Formato de nombre de dominio no válido."
 msgid "WordPress Manager"
 msgstr "Administrador de WordPress"
 
-#: modules/wordpress.py:203
-msgid "Domain not found."
-msgstr "Dominio no encontrado."
-
-#: modules/wordpress.py:321
-msgid "Document root is not provided or invalid."
-msgstr "La raíz del documento no se proporcionó o no es válida."
-
 #: modules/wordpress.py:414
 msgid "No matching tables found"
 msgstr ""
@@ -1354,10 +1428,6 @@ msgstr "¡WordPress se ha desinstalado correctamente!"
 msgid "An error occurred during WordPress uninstall."
 msgstr "Se produjo un error durante la desinstalación de WordPress."
 
-#: modules/wordpress.py:938
-msgid "Missing site ID."
-msgstr "Falta el ID del sitio."
-
 #: modules/wordpress.py:981
 msgid "WordPress installation detached from Manager."
 msgstr "La instalación de WordPress se ha desvinculado del administrador."
@@ -1370,17 +1440,9 @@ msgstr "Se ha producido un error al desvincular WordPress. Inténtelo de nuevo."
 msgid "An error occurred during WordPress detachment."
 msgstr "Se produjo un error durante la desvinculación de WordPress."
 
-#: modules/wordpress.py:1156 modules/wordpress.py:1324
-msgid "Scan completed. Found installations:\n\n"
-msgstr "Escaneo completado. Instalaciones encontradas:\n\n"
-
 #: modules/wordpress.py:1187 templates/manager/wp/list.html:477
 msgid "Scan skipped. WordPress installation is currently running."
 msgstr "e omitió el escaneo. La instalación de WordPress está en curso."
-
-#: modules/wordpress.py:1308
-msgid "Scan failed due to a server error."
-msgstr "El análisis falló debido a un error del servidor."
 
 #: modules/wordpress.py:1359 templates/manager/autoinstaller.html:56
 #: templates/manager/wp/install.html:9
@@ -1427,7 +1489,7 @@ msgstr ""
 msgid "Invalid type"
 msgstr ""
 
-#: modules/wordpress.py:2219 templates/base.html:32
+#: modules/wordpress.py:2219 templates/base.html:44
 #: templates/manager/grapejs_editor.html:123
 msgid "Success"
 msgstr "Éxito"
@@ -1476,7 +1538,7 @@ msgstr "La lista de favoritos está llena"
 msgid "No link provided"
 msgstr ""
 
-#: modules/account/favorites.py:110 templates/base.html:197
+#: modules/account/favorites.py:110 templates/base.html:220
 #: templates/user/favorites.html:10
 msgid "Favorites"
 msgstr "Favoritos"
@@ -1531,7 +1593,7 @@ msgstr "Restablecer contraseña"
 msgid "locale"
 msgstr "locale"
 
-#: modules/account/locale.py:63 templates/dashboard/dashboard.html:224
+#: modules/account/locale.py:63 templates/dashboard/dashboard.html:225
 #: templates/user/_login.html:96 templates/user/locale.html:10
 msgid "Change Language"
 msgstr "Cambiar idioma"
@@ -1540,59 +1602,59 @@ msgstr "Cambiar idioma"
 msgid "Login"
 msgstr "Ingreso"
 
-#: modules/account/login.py:110
+#: modules/account/login.py:113
 msgid "Too many failed login attempts. Please try again later."
 msgstr "Demasiados intentos de inicio de sesión fallidos. Por favor, inténtelo de nuevo más tarde."
 
-#: modules/account/login.py:130
+#: modules/account/login.py:133
 msgid "Autologin failed: Invalid username."
 msgstr "Inicio de sesión automático fallido: Nombre de usuario no válido."
 
-#: modules/account/login.py:140
+#: modules/account/login.py:143
 msgid "Error reading token from user files."
 msgstr ""
 
-#: modules/account/login.py:150
+#: modules/account/login.py:153
 msgid "Autologin failed: Error occurred fetching data from database."
 msgstr "Inicio de sesión automático fallido: Se produjo un error al obtener datos de la base de datos."
 
-#: modules/account/login.py:176
+#: modules/account/login.py:179
 msgid "Autologin failed: User does not exist."
 msgstr ""
 
-#: modules/account/login.py:179
+#: modules/account/login.py:182
 msgid "Autologin failed: Invalid or expired token."
 msgstr "Inicio de sesión automático fallido: Token no válido o caducado."
 
-#: modules/account/login.py:196
+#: modules/account/login.py:199
 msgid "Username and password are required."
 msgstr "Se requieren nombre de usuario y contraseña."
 
-#: modules/account/login.py:208
+#: modules/account/login.py:211
 msgid "Your account is suspended. Please contact support."
 msgstr "Tu cuenta está suspendida. Ponte en contacto con el servicio de asistencia."
 
-#: modules/account/login.py:209
+#: modules/account/login.py:212
 msgid "Unrecognized account. Please check username."
 msgstr "Cuenta no reconocida. Por favor, compruebe el nombre de usuario."
 
-#: modules/account/login.py:214
+#: modules/account/login.py:217
 msgid "Unable to connect to database."
 msgstr "No se puede conectar a la base de datos."
 
-#: modules/account/login.py:248
+#: modules/account/login.py:251
 msgid "Invalid password. Please try again."
 msgstr "Contraseña incorrecta. Inténtelo de nuevo."
 
-#: modules/account/login.py:268
+#: modules/account/login.py:271
 msgid "CAPTCHA validation failed. Please try again."
 msgstr ""
 
-#: modules/account/login.py:336
+#: modules/account/login.py:339
 msgid "Invalid 2FA code. Please try again."
 msgstr "Código de autenticación de dos factores no válido. Inténtelo de nuevo."
 
-#: modules/account/login_history.py:15 templates/dashboard/dashboard.html:230
+#: modules/account/login_history.py:15 templates/dashboard/dashboard.html:231
 #: templates/user/loginlog.html:10
 msgid "Login History"
 msgstr "Historial de inicio de sesión"
@@ -1642,7 +1704,7 @@ msgstr "Clave de acceso no reconocida."
 msgid "Account no longer exists."
 msgstr "La cuenta ya no existe."
 
-#: modules/account/sessions.py:34 templates/dashboard/dashboard.html:227
+#: modules/account/sessions.py:34 templates/dashboard/dashboard.html:228
 #: templates/user/active_sessions.html:10
 msgid "Active Sessions"
 msgstr "Sesiones activas"
@@ -1667,12 +1729,12 @@ msgstr "Configuración iniciada: Configure la aplicación o guarde el código OT
 msgid "Two-Factor Authentication is now disabled."
 msgstr "La autenticación de dos factores ahora está desactivada."
 
-#: modules/account/twofa.py:66 templates/dashboard/dashboard.html:226
+#: modules/account/twofa.py:66 templates/dashboard/dashboard.html:227
 #: templates/dashboard/twofa.html:6 templates/user/twofa_settings.html:14
 msgid "Two-Factor Authentication"
 msgstr "Autenticación de dos factores"
 
-#: modules/cache/elasticsearch.py:16 templates/dashboard/dashboard.html:177
+#: modules/cache/elasticsearch.py:16 templates/dashboard/dashboard.html:178
 msgid "ElasticSearch"
 msgstr "Búsqueda elástica"
 
@@ -1680,7 +1742,7 @@ msgstr "Búsqueda elástica"
 msgid "The leading distributed, RESTful, open source search and analytics engine designed for speed and reliability."
 msgstr "El motor de búsqueda y análisis distribuido, RESTful y de código abierto líder, diseñado para ofrecer velocidad y fiabilidad."
 
-#: modules/cache/memcached.py:18 templates/dashboard/dashboard.html:174
+#: modules/cache/memcached.py:18 templates/dashboard/dashboard.html:175
 msgid "Memcached"
 msgstr "Memcached"
 
@@ -1688,7 +1750,7 @@ msgstr "Memcached"
 msgid "A high-performance, distributed in-memory key-value caching system designed to accelerate dynamic web applications."
 msgstr "Un sistema de caché de clave-valor en memoria distribuido y de alto rendimiento diseñado para acelerar aplicaciones web dinámicas."
 
-#: modules/cache/opensearch.py:16 templates/dashboard/dashboard.html:176
+#: modules/cache/opensearch.py:16 templates/dashboard/dashboard.html:177
 msgid "OpenSearch"
 msgstr "OpenSearch"
 
@@ -1696,7 +1758,7 @@ msgstr "OpenSearch"
 msgid "OpenSearch is an open-source, distributed search and analytics suite for large volumes of data. "
 msgstr "OpenSearch es un conjunto de herramientas de búsqueda y análisis de código abierto y distribuido para grandes volúmenes de datos."
 
-#: modules/cache/redis.py:16 templates/dashboard/dashboard.html:172
+#: modules/cache/redis.py:16 templates/dashboard/dashboard.html:173
 msgid "Redis"
 msgstr "Redis"
 
@@ -1704,7 +1766,7 @@ msgstr "Redis"
 msgid "Redis (Remote Dictionary Server) is an in-memory, key/value store that is used primarily as an application cache or quick-response database."
 msgstr "Redis (Remote Dictionary Server) es un almacén de clave/valor en memoria que se utiliza principalmente como caché de aplicaciones o base de datos de respuesta rápida."
 
-#: modules/cache/valkey.py:16 templates/dashboard/dashboard.html:173
+#: modules/cache/valkey.py:16 templates/dashboard/dashboard.html:174
 msgid "Valkey"
 msgstr "Valkey"
 
@@ -1716,7 +1778,7 @@ msgstr ""
 msgid "Varnish is not running"
 msgstr "Varnish no está en ejecución"
 
-#: modules/cache/varnish.py:168 templates/dashboard/dashboard.html:175
+#: modules/cache/varnish.py:168 templates/dashboard/dashboard.html:176
 msgid "Varnish"
 msgstr "Varnish"
 
@@ -1805,23 +1867,24 @@ msgstr "Archivo o directorio no encontrado"
 msgid "Not found"
 msgstr "No encontrado"
 
-#: modules/core/search.py:26
+#: modules/core/search.py:68
 msgid "Unknown search type"
 msgstr "Tipo de búsqueda desconocido"
 
-#: modules/core/search.py:33 modules/core/search.py:36
+#: modules/core/search.py:71 modules/core/search.py:78
+#: modules/core/search.py:81
 msgid "Feature not available"
 msgstr "Función no disponible"
 
-#: modules/core/search.py:54 modules/core/search.py:96
+#: modules/core/search.py:109 modules/core/search.py:151
 msgid "Invalid search query"
 msgstr "Consulta de búsqueda no válida"
 
-#: modules/core/search.py:62
+#: modules/core/search.py:117
 msgid "Invalid file path"
 msgstr "Ruta de archivo no válida"
 
-#: modules/core/search.py:104
+#: modules/core/search.py:159
 msgid "Invalid folder path"
 msgstr "Ruta de carpeta no válida"
 
@@ -1976,7 +2039,8 @@ msgid "Destination"
 msgstr "Destino"
 
 #: modules/files/backups.py:337 templates/dashboard/dashboard.html:119
-#: templates/files/backups.html:26 templates/manager/mautic.html:131
+#: templates/files/backups.html:26 templates/manager/drupal/single.html:131
+#: templates/manager/drupal/single.html:154 templates/manager/mautic.html:131
 #: templates/manager/mautic.html:154 templates/manager/websitebuilder.html:76
 #: templates/manager/wp/single.html:166 templates/partials/_header.html:98
 msgid "Backups"
@@ -2278,7 +2342,7 @@ msgid "Directory does not exist."
 msgstr ""
 
 #: modules/files/filemanager.py:1273 templates/dashboard/dashboard.html:113
-#: templates/files/disk_usage.html:77 templates/files/filemanager.html:35
+#: templates/files/disk_usage.html:77 templates/files/filemanager.html:46
 #: templates/files/inodes.html:76
 msgid "File Manager"
 msgstr "Administrador de archivos"
@@ -2609,7 +2673,7 @@ msgstr "La instalación agotó el tiempo de espera."
 msgid "PHP extension management is only available for PHP-FPM, not for Litespeed."
 msgstr "La gestión de extensiones PHP solo está disponible para PHP-FPM, no para Litespeed."
 
-#: modules/phpd/php_extensions.py:339 templates/dashboard/dashboard.html:194
+#: modules/phpd/php_extensions.py:339 templates/dashboard/dashboard.html:195
 #: templates/php/extensions.html:228
 msgid "PHP Extensions"
 msgstr "Extensiones PHP"
@@ -2662,7 +2726,7 @@ msgstr ""
 msgid "Install queued..."
 msgstr "Instalación en cola..."
 
-#: modules/phpd/php_ini.py:16 templates/dashboard/dashboard.html:195
+#: modules/phpd/php_ini.py:16 templates/dashboard/dashboard.html:196
 msgid "PHP.INI Editor"
 msgstr "Editor PHP.INI"
 
@@ -2725,43 +2789,45 @@ msgstr "PostgreSQL Remoto"
 msgid "No redirect link found"
 msgstr ""
 
-#: templates/base.html:33 templates/manager/grapejs_editor.html:127
+#: templates/base.html:45 templates/manager/grapejs_editor.html:127
 #: templates/manager/python_node_apps.html:695
 #: templates/mysql/databases.html:685
 msgid "Error"
 msgstr "Error"
 
-#: templates/base.html:34 templates/docker/images.html:134
+#: templates/base.html:46 templates/docker/images.html:134
 #: templates/mysql/processlist.html:73
 msgid "Info"
 msgstr "Información"
 
-#: templates/base.html:35
+#: templates/base.html:47
 msgid "Uploading"
 msgstr ""
 
-#: templates/base.html:36
+#: templates/base.html:48
 msgid "Loading"
 msgstr ""
 
-#: templates/base.html:37 templates/user/history_usage.html:148
+#: templates/base.html:49 templates/user/history_usage.html:148
 msgid "Warning"
 msgstr "Advertencia"
 
-#: templates/base.html:38 templates/base.html:699
+#: templates/base.html:50 templates/base.html:733 templates/base.html:767
 #: templates/files/backup_restore.html:498
 #: templates/files/filemanager/modals/rename.html:17
 #: templates/mysql/databases.html:676
 msgid "Close"
 msgstr ""
 
-#: templates/base.html:39 templates/docker/delete_confirm.html:48
+#: templates/base.html:51 templates/docker/delete_confirm.html:48
 #: templates/domains/dns.html:192 templates/domains/dns.html:555
 #: templates/domains/domains.html:279 templates/domains/domains.html:309
 #: templates/domains/dynamic_dns.html:24 templates/domains/dynamic_dns.html:65
 #: templates/domains/dynamic_dns.html:136 templates/emails/alias_delete.html:26
 #: templates/emails/delete.html:32 templates/files/backup_restore.html:402
-#: templates/manager/mautic.html:461 templates/manager/mautic.html:511
+#: templates/manager/drupal/single.html:461
+#: templates/manager/drupal/single.html:511 templates/manager/mautic.html:461
+#: templates/manager/mautic.html:511
 #: templates/manager/python_node_apps.html:1112
 #: templates/manager/websitebuilder.html:273
 #: templates/manager/websitebuilder.html:305
@@ -2773,94 +2839,106 @@ msgstr ""
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: templates/base.html:42
+#: templates/base.html:54
 msgid "today"
 msgstr "hoy"
 
-#: templates/base.html:43
+#: templates/base.html:55
 msgid "yesterday"
 msgstr "ayer"
 
-#: templates/base.html:44
+#: templates/base.html:56
 msgid "1 second ago"
 msgstr "hace 1 segundo"
 
-#: templates/base.html:45
+#: templates/base.html:57
 #, python-format
 msgid "%%(n)s seconds ago"
 msgstr "hace %%(n)s segundos"
 
-#: templates/base.html:46
+#: templates/base.html:58
 msgid "1 minute ago"
 msgstr "hace 1 minuto"
 
-#: templates/base.html:47
+#: templates/base.html:59
 #, python-format
 msgid "%%(n)s minutes ago"
 msgstr "hace %%(n)s minutos"
 
-#: templates/base.html:48
+#: templates/base.html:60
 msgid "1 hour ago"
 msgstr "hace 1 hora"
 
-#: templates/base.html:49
+#: templates/base.html:61
 #, python-format
 msgid "%%(n)s hours ago"
 msgstr "hace %%(n)s horas"
 
-#: templates/base.html:50
+#: templates/base.html:62
 msgid "1 day ago"
 msgstr "hace 1 día"
 
-#: templates/base.html:51
+#: templates/base.html:63
 #, python-format
 msgid "%%(n)s days ago"
 msgstr "hace %%(n)s días"
 
-#: templates/base.html:52
+#: templates/base.html:64
 msgid "1 week ago"
 msgstr "hace 1 semana"
 
-#: templates/base.html:53
+#: templates/base.html:65
 #, python-format
 msgid "%%(n)s weeks ago"
 msgstr "hace %%(n)s semanas"
 
-#: templates/base.html:54
+#: templates/base.html:66
 msgid "last month"
 msgstr "el mes pasado"
 
-#: templates/base.html:55
+#: templates/base.html:67
 msgid "1 month ago"
 msgstr "hace 1 mes"
 
-#: templates/base.html:56
+#: templates/base.html:68
 #, python-format
 msgid "%%(n)s months ago"
 msgstr "hace %%(n)s meses"
 
-#: templates/base.html:57
+#: templates/base.html:69
 msgid "last year"
 msgstr ""
 
-#: templates/base.html:58
+#: templates/base.html:70
 msgid "1 year ago"
 msgstr "hace 1 año"
 
-#: templates/base.html:59
+#: templates/base.html:71
 #, python-format
 msgid "%%(n)s years ago"
 msgstr "hace %%(n)s años"
 
-#: templates/base.html:696
+#: templates/base.html:730
 msgid "Notification"
 msgstr ""
 
-#: templates/base.html:700
+#: templates/base.html:734
 msgid "Dismiss"
 msgstr ""
 
-#: templates/base.html:722
+#: templates/base.html:766
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#: templates/base.html:779
+msgid "Toggle sidebar"
+msgstr ""
+
+#: templates/base.html:780
+msgid "Show this dialog"
+msgstr ""
+
+#: templates/base.html:843
 msgid "Found a bug? Let us know"
 msgstr "¿Encontró un error? Háganos saber"
 
@@ -2983,8 +3061,9 @@ msgstr "Nombre de dominio"
 
 #: templates/cache/service.html:235 templates/docker/containers.html:563
 #: templates/manager/python_node_apps.html:408
-#: templates/system/cronjobs.html:71 templates/system/cronjobs.html:279
-#: templates/system/process_manager.html:58 templates/system/services.html:109
+#: templates/partials/_search.html:64 templates/system/cronjobs.html:71
+#: templates/system/cronjobs.html:279 templates/system/process_manager.html:58
+#: templates/system/services.html:109
 msgid "Container"
 msgstr "Contenedor"
 
@@ -3032,8 +3111,8 @@ msgid "Start"
 msgstr "Inicio"
 
 #: templates/dashboard/dashboard.html:98 templates/domains/ssl.html:227
-#: templates/files/filemanager.html:205 templates/files/filemanager.html:431
-#: templates/manager/mautic.html:182
+#: templates/files/filemanager.html:216 templates/files/filemanager.html:442
+#: templates/manager/drupal/single.html:182 templates/manager/mautic.html:182
 #: templates/manager/python_node_apps.html:349
 #: templates/manager/websitebuilder.html:114
 #: templates/manager/wp/single.html:304 templates/mysql/databases.html:424
@@ -3144,92 +3223,92 @@ msgstr "Administrador del sitio"
 msgid "WP Manager"
 msgstr "Administrador WP"
 
-#: templates/dashboard/dashboard.html:168
+#: templates/dashboard/dashboard.html:169
 msgid "Flarum"
 msgstr "Flarum"
 
-#: templates/dashboard/dashboard.html:181
+#: templates/dashboard/dashboard.html:182
 msgid "Email Accounts"
 msgstr "Cuentas de correo electrónico"
 
-#: templates/dashboard/dashboard.html:185
+#: templates/dashboard/dashboard.html:186
 msgid "Default Address"
 msgstr ""
 
-#: templates/dashboard/dashboard.html:186
+#: templates/dashboard/dashboard.html:187
 msgid "Address Importer"
 msgstr "Importador de direcciones"
 
-#: templates/dashboard/dashboard.html:187
+#: templates/dashboard/dashboard.html:188
 msgid "Address Exporter"
 msgstr "Exportador de direcciones"
 
-#: templates/dashboard/dashboard.html:191
+#: templates/dashboard/dashboard.html:192
 msgid "Select PHP version"
 msgstr "Seleccionar versión PHP"
 
-#: templates/dashboard/dashboard.html:192
+#: templates/dashboard/dashboard.html:193
 msgid "Default Version"
 msgstr "Versión predeterminada"
 
-#: templates/dashboard/dashboard.html:193
+#: templates/dashboard/dashboard.html:194
 msgid "PHP Options"
 msgstr "Opciones PHP"
 
-#: templates/dashboard/dashboard.html:200 templates/docker/containers.html:423
+#: templates/dashboard/dashboard.html:201 templates/docker/containers.html:423
 msgid "Terminal"
 msgstr "Terminal"
 
-#: templates/dashboard/dashboard.html:203
+#: templates/dashboard/dashboard.html:204
 msgid "Change Image tag"
 msgstr "Cambiar etiqueta de imagen"
 
-#: templates/dashboard/dashboard.html:204
+#: templates/dashboard/dashboard.html:205
 msgid "Change webserver"
 msgstr "Cambiar servidor web"
 
-#: templates/dashboard/dashboard.html:205
+#: templates/dashboard/dashboard.html:206
 msgid "Change MySQL Type"
 msgstr "Cambiar tipo de MySQL"
 
-#: templates/dashboard/dashboard.html:209 templates/partials/_header.html:48
+#: templates/dashboard/dashboard.html:210 templates/partials/_header.html:48
 msgid "Services"
 msgstr "Servicios"
 
-#: templates/dashboard/dashboard.html:210
+#: templates/dashboard/dashboard.html:211
 #: templates/files/backup_settings.html:97 templates/system/cronjobs.html:25
 msgid "Cron Jobs"
 msgstr "Trabajos cron"
 
-#: templates/dashboard/dashboard.html:215
+#: templates/dashboard/dashboard.html:216
 msgid "Change TimeZone"
 msgstr "Cambiar zona horaria"
 
-#: templates/dashboard/dashboard.html:216
+#: templates/dashboard/dashboard.html:217
 msgid "Webserver Configuration"
 msgstr "Configuración del servidor web"
 
-#: templates/dashboard/dashboard.html:217
+#: templates/dashboard/dashboard.html:218
 msgid "WAF Settings"
 msgstr "Configuración WAF"
 
-#: templates/dashboard/dashboard.html:223 templates/user/account.html:10
+#: templates/dashboard/dashboard.html:224 templates/user/account.html:10
 msgid "Email & Password"
 msgstr "Correo electrónico y contraseña"
 
-#: templates/dashboard/dashboard.html:225 templates/user/notifications.html:10
+#: templates/dashboard/dashboard.html:226 templates/user/notifications.html:10
 msgid "Email Notifications"
 msgstr "Notificaciones por correo electrónico"
 
-#: templates/dashboard/dashboard.html:228
+#: templates/dashboard/dashboard.html:229
 msgid "Favorite Pages"
 msgstr "Páginas favoritas"
 
-#: templates/dashboard/dashboard.html:229
+#: templates/dashboard/dashboard.html:230
 msgid "Account Activity"
 msgstr "Actividad de la cuenta"
 
-#: templates/dashboard/dashboard.html:231
+#: templates/dashboard/dashboard.html:232
 msgid "Log out"
 msgstr "Cerrar sesión"
 
@@ -3243,14 +3322,15 @@ msgstr "Información"
 
 #: templates/dashboard/information.html:33 templates/emails/info.html:21
 #: templates/emails/new.html:42 templates/files/ftp.html:51
-#: templates/files/ftp_new.html:29 templates/manager/wp/install.html:111
-#: templates/mysql/mysql_user.html:24 templates/mysql/mysql_user.html:26
-#: templates/mysql/password.html:21 templates/mysql/remote_mysql.html:158
-#: templates/mysql/remote_mysql.html:180 templates/mysql/users.html:83
-#: templates/mysql/wizard.html:72 templates/psql/password.html:21
-#: templates/psql/psql_user.html:24 templates/psql/psql_user.html:26
-#: templates/psql/users.html:80 templates/user/account.html:68
-#: templates/user/login.html:18
+#: templates/files/ftp_new.html:29 templates/manager/drupal/install.html:120
+#: templates/manager/mautic_install.html:100
+#: templates/manager/wp/install.html:111 templates/mysql/mysql_user.html:24
+#: templates/mysql/mysql_user.html:26 templates/mysql/password.html:21
+#: templates/mysql/remote_mysql.html:158 templates/mysql/remote_mysql.html:180
+#: templates/mysql/users.html:83 templates/mysql/wizard.html:72
+#: templates/psql/password.html:21 templates/psql/psql_user.html:24
+#: templates/psql/psql_user.html:26 templates/psql/users.html:80
+#: templates/user/account.html:68 templates/user/login.html:18
 msgid "Username"
 msgstr "Nombre de usuario"
 
@@ -3317,7 +3397,9 @@ msgstr "Uso de memoria"
 
 #: templates/dashboard/usage.html:263 templates/dashboard/usage.html:264
 #: templates/dashboard/usage.html:265 templates/dashboard/usage.html:266
-#: templates/manager/mautic.html:214 templates/manager/mautic.html:257
+#: templates/manager/drupal/single.html:214
+#: templates/manager/drupal/single.html:257 templates/manager/mautic.html:214
+#: templates/manager/mautic.html:257
 #: templates/manager/python_node_apps.html:387
 #: templates/manager/websitebuilder.html:170
 #: templates/manager/wp/single.html:405 templates/manager/wp/single.html:447
@@ -3559,18 +3641,18 @@ msgstr "Memoria total:"
 #: templates/domains/logs.html:83 templates/emails/accounts.html:20
 #: templates/emails/aliases.html:21 templates/emails/deliverability.html:18
 #: templates/files/clamav/quarantine.html:31 templates/files/ftp.html:24
-#: templates/manager/sites.html:23 templates/manager/wp/list.html:44
-#: templates/mysql/configuration.html:21 templates/mysql/databases.html:187
-#: templates/mysql/processlist.html:22 templates/mysql/users.html:50
-#: templates/partials/_search.html:19 templates/php/extensions.html:18
-#: templates/php/options.html:18 templates/php/settings.html:20
-#: templates/psql/configuration.html:18 templates/psql/databases.html:109
-#: templates/psql/processlist.html:60 templates/psql/users.html:47
-#: templates/system/cronjobs.html:167 templates/system/process_manager.html:23
-#: templates/system/waf.html:26 templates/system/waf_logs.html:35
-#: templates/user/active_sessions.html:24 templates/user/activity.html:28
-#: templates/user/favorites.html:28 templates/user/history_usage.html:22
-#: templates/user/loginlog.html:26
+#: templates/manager/drupal/list.html:38 templates/manager/sites.html:23
+#: templates/manager/wp/list.html:44 templates/mysql/configuration.html:21
+#: templates/mysql/databases.html:187 templates/mysql/processlist.html:22
+#: templates/mysql/users.html:50 templates/partials/_search.html:19
+#: templates/php/extensions.html:18 templates/php/options.html:18
+#: templates/php/settings.html:20 templates/psql/configuration.html:18
+#: templates/psql/databases.html:109 templates/psql/processlist.html:60
+#: templates/psql/users.html:47 templates/system/cronjobs.html:167
+#: templates/system/process_manager.html:23 templates/system/waf.html:26
+#: templates/system/waf_logs.html:35 templates/user/active_sessions.html:24
+#: templates/user/activity.html:28 templates/user/favorites.html:28
+#: templates/user/history_usage.html:22 templates/user/loginlog.html:26
 msgid "Search"
 msgstr ""
 
@@ -3582,7 +3664,7 @@ msgstr "Mostrar columnas"
 
 #: templates/docker/containers.html:55 templates/docker/containers.html:157
 #: templates/domains/dns.html:106 templates/domains/dns.html:120
-#: templates/files/filemanager.html:102
+#: templates/files/filemanager.html:113
 #: templates/files/filemanager/table.html:6
 #: templates/files/filemanager/table_trash.html:6 templates/files/trash.html:55
 #: templates/manager/pm2_install.html:102
@@ -3609,6 +3691,7 @@ msgstr "PIDs"
 #: templates/files/backup_wizard.html:130
 #: templates/files/clamav/quarantine.html:72 templates/files/disk_usage.html:44
 #: templates/files/ftp.html:70 templates/files/inodes.html:43
+#: templates/manager/drupal/list.html:71
 #: templates/manager/python_node_apps.html:172 templates/manager/sites.html:85
 #: templates/manager/wp/list.html:126 templates/mysql/databases.html:207
 #: templates/mysql/users.html:86 templates/psql/databases.html:150
@@ -3776,7 +3859,7 @@ msgid "Tag"
 msgstr "Etiqueta"
 
 #: templates/docker/images.html:133 templates/files/ftp_password.html:179
-#: templates/files/ftp_path.html:69 templates/manager/sites.html:259
+#: templates/files/ftp_path.html:69 templates/manager/sites.html:269
 #: templates/user/account.html:117
 msgid "Update"
 msgstr "Actualizar"
@@ -4030,7 +4113,7 @@ msgstr "TTL"
 
 #: templates/domains/dns.html:108 templates/domains/domains.html:83
 #: templates/domains/domains.html:194 templates/domains/dynamic_dns.html:169
-#: templates/files/filemanager.html:175
+#: templates/files/filemanager.html:186
 #: templates/files/filemanager/table.html:28
 #: templates/files/filemanager/table_trash.html:38
 #: templates/files/trash.html:153 templates/manager/pm2_install.html:127
@@ -4127,10 +4210,13 @@ msgstr "Dirección"
 #: templates/domains/new.html:45 templates/emails/alias_new.html:21
 #: templates/emails/deliverability.html:35
 #: templates/emails/deliverability.html:107 templates/emails/new.html:23
-#: templates/files/ftp_new.html:34 templates/manager/pm2_install.html:305
+#: templates/files/ftp_new.html:34 templates/manager/drupal/install.html:80
+#: templates/manager/drupal/list.html:67
+#: templates/manager/mautic_install.html:60
+#: templates/manager/pm2_install.html:305
 #: templates/manager/websitebuilder_install.html:37
 #: templates/manager/wp/install.html:71 templates/manager/wp/list.html:122
-#: templates/php/settings.html:168
+#: templates/partials/_search.html:55 templates/php/settings.html:168
 msgid "Domain"
 msgstr "Dominio"
 
@@ -4158,7 +4244,9 @@ msgstr "Caddy renueva automáticamente los certificados Let's Encrypt con un nue
 msgid "Using a custom certificate. Regenerate this record whenever you replace the certificate."
 msgstr "Usando un certificado personalizado. Regenere este registro cada vez que reemplace el certificado."
 
-#: templates/domains/dns.html:356 templates/manager/wp/install.html:137
+#: templates/domains/dns.html:356 templates/manager/drupal/install.html:146
+#: templates/manager/mautic_install.html:126
+#: templates/manager/wp/install.html:137
 msgid "Regenerate"
 msgstr "Regenerar"
 
@@ -4250,7 +4338,7 @@ msgstr "Editar como tabla"
 msgid "Saving zone file for domain"
 msgstr "Guardando archivo de zona para el dominio"
 
-#: templates/domains/dns.html:830 templates/domains/new.html:280
+#: templates/domains/dns.html:830 templates/domains/new.html:258
 msgid "Please wait for the process to finish."
 msgstr "Por favor, espere a que el proceso finalice."
 
@@ -4434,6 +4522,10 @@ msgstr "Anterior"
 msgid "Next"
 msgstr "Siguiente"
 
+#: templates/domains/domains.html:667
+msgid "Add new domain"
+msgstr ""
+
 #: templates/domains/dynamic_dns.html:14
 msgid "Keep DNS records in sync with changing IP addresses via a token URL."
 msgstr "Mantenga los registros DNS sincronizados con direcciones IP cambiantes mediante una URL con token."
@@ -4508,6 +4600,7 @@ msgid "never"
 msgstr "nunca"
 
 #: templates/domains/dynamic_dns.html:196 templates/mysql/wizard.html:139
+#: templates/user/api_docs.html:149
 msgid "Copied!"
 msgstr "¡Copiado!"
 
@@ -4568,7 +4661,7 @@ msgstr "URI"
 
 #: templates/domains/logs.html:188 templates/domains/logs.html:222
 #: templates/files/backup_wizard.html:48 templates/files/backup_wizard.html:124
-#: templates/files/disk_usage.html:41 templates/files/filemanager.html:166
+#: templates/files/disk_usage.html:41 templates/files/filemanager.html:177
 #: templates/files/filemanager/table.html:7
 #: templates/files/filemanager/table_trash.html:7
 #: templates/files/trash.html:144 templates/mysql/databases.html:205
@@ -4604,54 +4697,55 @@ msgstr "Mostrar detalles"
 msgid "docroot module or feature are not enabled. Contact Administrator to change docroot."
 msgstr "El módulo o función docroot no está habilitado. Contacte al Administrador para cambiar el directorio raíz."
 
-#: templates/domains/new.html:220
+#: templates/domains/new.html:198
 msgid "Invalid domain name. Please enter a valid domain name like"
 msgstr "Nombre de dominio no válido. Por favor, ingrese un nombre de dominio válido como"
 
-#: templates/domains/new.html:220 templates/manager/mautic.html:389
+#: templates/domains/new.html:198 templates/manager/drupal/single.html:389
+#: templates/manager/drupal/single.html:474 templates/manager/mautic.html:389
 #: templates/manager/mautic.html:474 templates/manager/websitebuilder.html:214
 #: templates/manager/websitebuilder.html:283
 #: templates/manager/wp/single.html:2012 templates/manager/wp/single.html:2083
 msgid "or"
 msgstr "o"
 
-#: templates/domains/new.html:247
+#: templates/domains/new.html:225
 msgid "Paths for both public and secret files must start with /var/www/html/."
 msgstr "Las rutas tanto para archivos públicos como secretos deben comenzar con /var/www/html/."
 
-#: templates/domains/new.html:280
+#: templates/domains/new.html:258
 msgid "Adding domain"
 msgstr "Agregando dominio"
 
-#: templates/domains/new.html:291 templates/domains/new.html:357
+#: templates/domains/new.html:269 templates/domains/new.html:335
 msgid "Error adding domain name"
 msgstr "Error al agregar el nombre de dominio"
 
-#: templates/domains/new.html:291 templates/emails/confirm_import.html:166
+#: templates/domains/new.html:269 templates/emails/confirm_import.html:144
 msgid "Network response from backend was not ok. Please contact support."
 msgstr "La respuesta de red del backend no fue correcta. Por favor, contacte con soporte."
 
-#: templates/domains/new.html:338
+#: templates/domains/new.html:316
 msgid "Domain name"
 msgstr "Nombre de dominio"
 
-#: templates/domains/new.html:338
+#: templates/domains/new.html:316
 msgid "added successfully."
 msgstr "agregado exitosamente."
 
-#: templates/domains/new.html:357
+#: templates/domains/new.html:335
 msgid "Click on Show Details above to view the log."
 msgstr "Haga clic en Mostrar detalles arriba para ver el registro."
 
-#: templates/domains/new.html:370
+#: templates/domains/new.html:348
 msgid "Retry"
 msgstr "Reintentar"
 
-#: templates/domains/new.html:442
+#: templates/domains/new.html:420
 msgid "Converted to Punycode:"
 msgstr "Convertido a Punycode:"
 
-#: templates/domains/new.html:442
+#: templates/domains/new.html:420
 msgid "(for compatibility with internationalized domain names)"
 msgstr "(para compatibilidad con nombres de dominio internacionalizados)"
 
@@ -4954,7 +5048,8 @@ msgid "Webmail"
 msgstr "Webmail"
 
 #: templates/emails/accounts.html:108 templates/emails/aliases.html:82
-#: templates/manager/sites.html:9 templates/manager/sites.html:239
+#: templates/manager/drupal/list.html:90 templates/manager/drupal/list.html:154
+#: templates/manager/sites.html:9 templates/manager/sites.html:249
 #: templates/manager/wp/list.html:145 templates/partials/_service.html:54
 msgid "Manage"
 msgstr "Gestionar"
@@ -4981,6 +5076,10 @@ msgstr "Webmail para "
 #: templates/emails/accounts.html:157
 msgid " opened in new window."
 msgstr " abierto en nueva ventana."
+
+#: templates/emails/accounts.html:173
+msgid "Add new email account"
+msgstr ""
 
 #: templates/emails/alias_delete.html:10
 msgid "Permanently delete this alias and all its destinations."
@@ -5036,7 +5135,9 @@ msgstr "Acción"
 
 #: templates/emails/alias_detail.html:42 templates/emails/alias_detail.html:127
 #: templates/emails/alias_detail.html:171
-#: templates/emails/alias_detail.html:177 templates/manager/mautic.html:132
+#: templates/emails/alias_detail.html:177
+#: templates/manager/drupal/single.html:132
+#: templates/manager/drupal/single.html:161 templates/manager/mautic.html:132
 #: templates/manager/mautic.html:161 templates/manager/python_node_apps.html:81
 #: templates/manager/websitebuilder.html:86
 #: templates/manager/wp/single.html:186 templates/user/passkeys.html:44
@@ -5170,6 +5271,8 @@ msgid "The following users will be imported:"
 msgstr "Los siguientes usuarios serán importados:"
 
 #: templates/emails/confirm_import.html:45
+#: templates/manager/drupal/install.html:112
+#: templates/manager/mautic_install.html:92
 #: templates/manager/wp/install.html:103
 #: templates/user/reset_password/request_email.html:21
 msgid "Email"
@@ -5177,15 +5280,16 @@ msgstr "Correo electrónico"
 
 #: templates/emails/confirm_import.html:46 templates/emails/info.html:22
 #: templates/emails/new.html:86 templates/emails/single_account.html:211
-#: templates/files/ftp_new.html:58 templates/manager/wp/install.html:128
-#: templates/mysql/mysql_user.html:43 templates/mysql/mysql_user.html:52
-#: templates/mysql/password.html:41 templates/mysql/remote_mysql.html:166
-#: templates/mysql/remote_mysql.html:167 templates/mysql/root_password.html:43
-#: templates/mysql/wizard.html:73 templates/mysql/wizard.html:244
-#: templates/psql/password.html:41 templates/psql/password.html:51
-#: templates/psql/psql_user.html:43 templates/psql/psql_user.html:53
-#: templates/psql/wizard.html:75 templates/user/account.html:76
-#: templates/user/login.html:22
+#: templates/files/ftp_new.html:58 templates/manager/drupal/install.html:137
+#: templates/manager/mautic_install.html:117
+#: templates/manager/wp/install.html:128 templates/mysql/mysql_user.html:43
+#: templates/mysql/mysql_user.html:52 templates/mysql/password.html:41
+#: templates/mysql/remote_mysql.html:166 templates/mysql/remote_mysql.html:167
+#: templates/mysql/root_password.html:43 templates/mysql/wizard.html:73
+#: templates/mysql/wizard.html:244 templates/psql/password.html:41
+#: templates/psql/password.html:51 templates/psql/psql_user.html:43
+#: templates/psql/psql_user.html:53 templates/psql/wizard.html:75
+#: templates/user/account.html:76 templates/user/login.html:22
 msgid "Password"
 msgstr "Contraseña"
 
@@ -5202,36 +5306,36 @@ msgid "Back to Upload"
 msgstr "Volver a cargar"
 
 #: templates/emails/confirm_import.html:83
-#: templates/emails/confirm_import.html:206
+#: templates/emails/confirm_import.html:184
 msgid "Start Import"
 msgstr "Iniciar importación"
 
-#: templates/emails/confirm_import.html:143 templates/psql/import.html:52
+#: templates/emails/confirm_import.html:121 templates/psql/import.html:52
 msgid "Importing..."
 msgstr ""
 
-#: templates/emails/confirm_import.html:156
+#: templates/emails/confirm_import.html:134
 msgid "Starting import. Please wait for the process to finish."
 msgstr "Iniciando importación. Por favor, espere a que el proceso finalice."
 
-#: templates/emails/confirm_import.html:199
+#: templates/emails/confirm_import.html:177
 msgid "Import process completed."
 msgstr "Proceso de importación completado."
 
-#: templates/emails/confirm_import.html:208
+#: templates/emails/confirm_import.html:186
 msgid "Error occurred during import."
 msgstr ""
 
-#: templates/emails/confirm_import.html:208
+#: templates/emails/confirm_import.html:186
 msgid "Please check the output below."
 msgstr "Por favor, revise la salida a continuación."
 
-#: templates/emails/confirm_import.html:215
-#: templates/emails/confirm_import.html:236
+#: templates/emails/confirm_import.html:193
+#: templates/emails/confirm_import.html:214
 msgid "Retry Import"
 msgstr ""
 
-#: templates/emails/confirm_import.html:230
+#: templates/emails/confirm_import.html:208
 msgid "A network error occurred. Please try again."
 msgstr "Se produjo un error de red. Por favor, intente de nuevo."
 
@@ -5385,7 +5489,7 @@ msgstr "Seleccione una dirección de correo electrónico para gestionar sus filt
 
 #: templates/emails/filter.html:14 templates/emails/import.html:10
 #: templates/files/edit_file.html:118 templates/partials/_footer.html:46
-#: templates/php/options.html:157
+#: templates/php/options.html:157 templates/user/api_docs.html:63
 msgid "Documentation"
 msgstr ""
 
@@ -5599,7 +5703,7 @@ msgstr ""
 msgid "Save filters"
 msgstr ""
 
-#: templates/emails/filter.html:241
+#: templates/emails/filter.html:241 templates/files/edit_file.html:230
 msgid "Save file"
 msgstr "Guardar archivo"
 
@@ -5623,7 +5727,7 @@ msgstr "Subir archivo"
 msgid "CSV, XLSX or XLS files only."
 msgstr "Solo archivos CSV, XLSX o XLS."
 
-#: templates/emails/import.html:49 templates/files/filemanager.html:84
+#: templates/emails/import.html:49 templates/files/filemanager.html:95
 #: templates/files/upload_file.html:113
 msgid "Upload"
 msgstr "Subir"
@@ -5682,7 +5786,8 @@ msgstr "info"
 
 #: templates/emails/new.html:76 templates/emails/single_account.html:201
 #: templates/files/ftp_new.html:48 templates/files/ftp_password.html:33
-#: templates/manager/mautic_install.html:152
+#: templates/manager/drupal/install.html:130
+#: templates/manager/mautic_install.html:110
 #: templates/manager/wp/install.html:121 templates/mysql/mysql_user.html:33
 #: templates/mysql/password.html:31 templates/mysql/root_password.html:24
 #: templates/mysql/wizard.html:235 templates/psql/password.html:31
@@ -5692,7 +5797,8 @@ msgstr "Contraseña débil"
 
 #: templates/emails/new.html:77 templates/emails/single_account.html:202
 #: templates/files/ftp_new.html:49 templates/files/ftp_password.html:34
-#: templates/manager/mautic_install.html:153
+#: templates/manager/drupal/install.html:131
+#: templates/manager/mautic_install.html:111
 #: templates/manager/wp/install.html:122 templates/mysql/mysql_user.html:34
 #: templates/mysql/password.html:32 templates/mysql/root_password.html:25
 #: templates/mysql/wizard.html:236 templates/psql/password.html:32
@@ -5702,7 +5808,8 @@ msgstr "Contraseña de fuerza media"
 
 #: templates/emails/new.html:78 templates/emails/single_account.html:203
 #: templates/files/ftp_new.html:50 templates/files/ftp_password.html:35
-#: templates/manager/mautic_install.html:154
+#: templates/manager/drupal/install.html:132
+#: templates/manager/mautic_install.html:112
 #: templates/manager/wp/install.html:123 templates/mysql/mysql_user.html:35
 #: templates/mysql/password.html:33 templates/mysql/root_password.html:26
 #: templates/mysql/wizard.html:237 templates/psql/password.html:33
@@ -5932,8 +6039,10 @@ msgstr ""
 msgid "Restoring..."
 msgstr "Restaurando..."
 
-#: templates/files/backup_restore.html:415 templates/manager/mautic.html:421
-#: templates/manager/websitebuilder.html:237
+#: templates/files/backup_restore.html:415
+#: templates/manager/drupal/single.html:421
+#: templates/manager/drupal/single.html:737 templates/manager/mautic.html:421
+#: templates/manager/mautic.html:759 templates/manager/websitebuilder.html:237
 #: templates/manager/websitebuilder.html:520
 #: templates/manager/wp/single.html:2036 templates/manager/wp/single.html:2511
 msgid "Start Restore"
@@ -6095,7 +6204,8 @@ msgstr ""
 msgid "Backup in progress…"
 msgstr ""
 
-#: templates/files/backup_wizard.html:87 templates/manager/mautic.html:384
+#: templates/files/backup_wizard.html:87
+#: templates/manager/drupal/single.html:384 templates/manager/mautic.html:384
 #: templates/manager/websitebuilder.html:207
 #: templates/manager/wp/single.html:2003
 msgid "Generate Backup"
@@ -6241,51 +6351,63 @@ msgstr "Abrir en el Administrador de archivos"
 msgid "You have unsaved changes. Leave anyway?"
 msgstr "Tiene cambios sin guardar. ¿Salir de todos modos?"
 
-#: templates/files/filemanager.html:74
+#: templates/files/filemanager.html:35
+msgid "Select all files"
+msgstr ""
+
+#: templates/files/filemanager.html:36
+msgid "Delete selected files"
+msgstr ""
+
+#: templates/files/filemanager.html:37
+msgid "New file"
+msgstr ""
+
+#: templates/files/filemanager.html:85
 msgid "Search Files & Folders"
 msgstr "Buscar archivos y carpetas"
 
-#: templates/files/filemanager.html:78
+#: templates/files/filemanager.html:89
 msgid "New File"
 msgstr "Nuevo archivo"
 
-#: templates/files/filemanager.html:81
+#: templates/files/filemanager.html:92
 msgid "New Folder"
 msgstr "Nueva carpeta"
 
-#: templates/files/filemanager.html:112
+#: templates/files/filemanager.html:123
 #: templates/files/filemanager/table.html:10
 #: templates/files/filemanager/table_trash.html:10
 #: templates/files/trash.html:90 templates/user/history_usage.html:136
 msgid "Date"
 msgstr "Fecha"
 
-#: templates/files/filemanager.html:121
+#: templates/files/filemanager.html:132
 #: templates/files/filemanager/table.html:13
 #: templates/files/filemanager/table_trash.html:23
 #: templates/files/trash.html:99
 msgid "Owner"
 msgstr "Propietario"
 
-#: templates/files/filemanager.html:130
+#: templates/files/filemanager.html:141
 #: templates/files/filemanager/table.html:16
 #: templates/files/filemanager/table_trash.html:26
 #: templates/files/trash.html:108
 msgid "Group"
 msgstr "Grupo"
 
-#: templates/files/filemanager.html:139
+#: templates/files/filemanager.html:150
 #: templates/files/filemanager/table.html:20
 #: templates/files/filemanager/table_trash.html:30
 #: templates/files/trash.html:117
 msgid "Links"
 msgstr "Enlaces"
 
-#: templates/files/filemanager.html:148 templates/files/trash.html:126
+#: templates/files/filemanager.html:159 templates/files/trash.html:126
 msgid "Link Target"
 msgstr "Destino del enlace"
 
-#: templates/files/filemanager.html:157
+#: templates/files/filemanager.html:168
 #: templates/files/filemanager/actions_buttons.html:50
 #: templates/files/filemanager/new_actions_buttons.html:41
 #: templates/files/filemanager/table.html:33
@@ -6294,36 +6416,36 @@ msgstr "Destino del enlace"
 msgid "Permissions"
 msgstr "Permisos"
 
-#: templates/files/filemanager.html:196
+#: templates/files/filemanager.html:207
 msgid "in:"
 msgstr "en:"
 
-#: templates/files/filemanager.html:196
+#: templates/files/filemanager.html:207
 msgid "all folders"
 msgstr "todas las carpetas"
 
-#: templates/files/filemanager.html:214
+#: templates/files/filemanager.html:225
 msgid "Folders"
 msgstr "Carpetas"
 
-#: templates/files/filemanager.html:223
+#: templates/files/filemanager.html:234
 msgid "Specific extension"
 msgstr "Extensión específica"
 
 #: templates/files/clamav/quarantine.html:71
-#: templates/files/filemanager.html:429
+#: templates/files/filemanager.html:440
 msgid "File"
 msgstr "Archivo"
 
-#: templates/files/filemanager.html:429
+#: templates/files/filemanager.html:440
 msgid "has no permissions (0000) and cannot be accessed."
 msgstr "no tiene permisos (0000) y no se puede acceder."
 
-#: templates/files/filemanager.html:431
+#: templates/files/filemanager.html:442
 msgid "have no permissions (0000) and cannot be accessed."
 msgstr "no tienen permisos (0000) y no se puede acceder."
 
-#: templates/files/filemanager.html:433
+#: templates/files/filemanager.html:444
 msgid "files have no permissions (0000) and cannot be accessed."
 msgstr "los archivos no tienen permisos (0000) y no se puede acceder."
 
@@ -6408,6 +6530,10 @@ msgstr "Agregue su primera cuenta"
 #: templates/files/ftp.html:111
 msgid "Change Path"
 msgstr "Cambiar ruta"
+
+#: templates/files/ftp.html:182
+msgid "Add new FTP account"
+msgstr ""
 
 #: templates/files/ftp_connections.html:10
 msgid "Current FTP sessions of all sub-accounts."
@@ -6663,6 +6789,7 @@ msgstr ""
 #: templates/files/filemanager/copy.html:127
 #: templates/files/filemanager/new_actions_buttons.html:13
 #: templates/mysql/wizard.html:80 templates/mysql/wizard.html:139
+#: templates/user/api_docs.html:149 templates/user/api_docs.html:151
 msgid "Copy"
 msgstr "Copiar"
 
@@ -6901,68 +7028,82 @@ msgid "Install WordPress CMS in a few clicks."
 msgstr "Instale el CMS WordPress en pocos clics."
 
 #: templates/manager/autoinstaller.html:48
-#: templates/manager/autoinstaller.html:90
-#: templates/manager/autoinstaller.html:131
-#: templates/manager/autoinstaller.html:170
-#: templates/manager/autoinstaller.html:205
+#: templates/manager/autoinstaller.html:87
+#: templates/manager/autoinstaller.html:127
+#: templates/manager/autoinstaller.html:168
+#: templates/manager/autoinstaller.html:207
+#: templates/manager/autoinstaller.html:242
 msgid "No"
 msgstr "No"
 
 #: templates/manager/autoinstaller.html:48
-#: templates/manager/autoinstaller.html:90
-#: templates/manager/autoinstaller.html:131
-#: templates/manager/autoinstaller.html:170
-#: templates/manager/autoinstaller.html:205
+#: templates/manager/autoinstaller.html:87
+#: templates/manager/autoinstaller.html:127
+#: templates/manager/autoinstaller.html:168
+#: templates/manager/autoinstaller.html:207
+#: templates/manager/autoinstaller.html:242
 msgid "existing installation"
 msgstr ""
 
 #: templates/manager/autoinstaller.html:48
-#: templates/manager/autoinstaller.html:90
-#: templates/manager/autoinstaller.html:131
-#: templates/manager/autoinstaller.html:170
-#: templates/manager/autoinstaller.html:205
+#: templates/manager/autoinstaller.html:87
+#: templates/manager/autoinstaller.html:127
+#: templates/manager/autoinstaller.html:168
+#: templates/manager/autoinstaller.html:207
+#: templates/manager/autoinstaller.html:242
 msgid "s"
 msgstr "s"
 
-#: templates/manager/autoinstaller.html:79
+#: templates/manager/autoinstaller.html:76
+#: templates/manager/drupal/list.html:148
+msgid "Drupal"
+msgstr ""
+
+#: templates/manager/autoinstaller.html:80
+#: templates/manager/drupal/install.html:10
+#: templates/manager/drupal/install.html:400
+msgid "Install Drupal CMS in a few clicks."
+msgstr ""
+
+#: templates/manager/autoinstaller.html:116
 #: templates/manager/websitebuilder_install.html:9
 msgid "Website Builder"
 msgstr "Constructor de sitios web"
 
-#: templates/manager/autoinstaller.html:83
+#: templates/manager/autoinstaller.html:120
 msgid "Create HTML websites with a drag-drop editor."
 msgstr "Cree sitios web HTML con un editor de arrastrar y soltar."
 
-#: templates/manager/autoinstaller.html:120
+#: templates/manager/autoinstaller.html:157
 msgid "Mautic"
 msgstr "Mautic"
 
-#: templates/manager/autoinstaller.html:124
+#: templates/manager/autoinstaller.html:161
 msgid "Install Mautic - free and open source marketing automation software."
 msgstr "Instale Mautic, software de automatización de marketing gratuito y de código abierto."
 
-#: templates/manager/autoinstaller.html:159
+#: templates/manager/autoinstaller.html:196
 msgid "Node.js"
 msgstr "Node.js"
 
-#: templates/manager/autoinstaller.html:163
+#: templates/manager/autoinstaller.html:200
 msgid "Setup containerized Node.js application."
 msgstr "Configurar aplicación Node.js en contenedor."
 
-#: templates/manager/autoinstaller.html:177
+#: templates/manager/autoinstaller.html:214
 msgid "Setup Node.js Application"
 msgstr ""
 
-#: templates/manager/autoinstaller.html:194
+#: templates/manager/autoinstaller.html:231
 #: templates/manager/python_node_apps.html:135
 msgid "Python"
 msgstr "Python"
 
-#: templates/manager/autoinstaller.html:198
+#: templates/manager/autoinstaller.html:235
 msgid "Setup containerized Python application."
 msgstr ""
 
-#: templates/manager/autoinstaller.html:213
+#: templates/manager/autoinstaller.html:250
 msgid "Setup Python Application"
 msgstr ""
 
@@ -6982,175 +7123,198 @@ msgstr "o cierre el modal y continúe editando."
 msgid "Copy code from HTML and CSS tabs, then reload the page to try again."
 msgstr "Copie el código de las pestañas HTML y CSS, luego recargue la página para intentarlo de nuevo."
 
-#: templates/manager/mautic.html:57 templates/manager/mautic_install.html:321
+#: templates/manager/mautic.html:57
 msgid "Mautic version:"
 msgstr "Versión de Mautic:"
 
-#: templates/manager/mautic.html:69
+#: templates/manager/drupal/single.html:69 templates/manager/mautic.html:69
 msgid "PHP version:"
 msgstr "Versión de PHP:"
 
-#: templates/manager/mautic.html:88
+#: templates/manager/drupal/single.html:88 templates/manager/mautic.html:88
 msgid "MySQL version:"
 msgstr "Versión de MySQL:"
 
-#: templates/manager/mautic.html:110 templates/manager/wp/single.html:283
+#: templates/manager/drupal/single.html:110 templates/manager/mautic.html:110
+#: templates/manager/wp/single.html:283
 msgid "Created:"
 msgstr "Creado:"
 
-#: templates/manager/mautic.html:128
+#: templates/manager/drupal/single.html:128 templates/manager/mautic.html:128
 msgid "Select option"
 msgstr "Seleccionar opción"
 
-#: templates/manager/mautic.html:130 templates/manager/mautic.html:146
-#: templates/manager/python_node_apps.html:51
+#: templates/manager/drupal/single.html:130
+#: templates/manager/drupal/single.html:146 templates/manager/mautic.html:130
+#: templates/manager/mautic.html:146 templates/manager/python_node_apps.html:51
 #: templates/manager/websitebuilder.html:66
 #: templates/manager/wp/single.html:106
 msgid "Overview"
 msgstr "Resumen"
 
-#: templates/manager/mautic.html:199
+#: templates/manager/drupal/single.html:199 templates/manager/mautic.html:199
 #: templates/manager/python_node_apps.html:360
 #: templates/manager/websitebuilder.html:131
 #: templates/manager/wp/single.html:321
 msgid "Open folder in File Manager"
 msgstr "Abrir carpeta en el Administrador de archivos"
 
-#: templates/manager/mautic.html:209
+#: templates/manager/drupal/single.html:209 templates/manager/mautic.html:209
 #: templates/manager/python_node_apps.html:372
 #: templates/manager/websitebuilder.html:158
 #: templates/manager/wp/single.html:400
 msgid "Folder:"
 msgstr "Carpeta:"
 
-#: templates/manager/mautic.html:213
+#: templates/manager/drupal/single.html:213 templates/manager/mautic.html:213
 #: templates/manager/python_node_apps.html:385
 #: templates/manager/websitebuilder.html:168
 #: templates/manager/wp/single.html:404
 msgid "Folder Size:"
 msgstr "Tamaño de la carpeta:"
 
-#: templates/manager/mautic.html:229 templates/manager/wp/single.html:419
-#: templates/manager/wp/single.html:1868 templates/mysql/users.html:70
-#: templates/mysql/users.html:72 templates/mysql/wizard.html:71
-#: templates/psql/users.html:67 templates/psql/users.html:69
+#: templates/manager/drupal/single.html:229 templates/manager/mautic.html:229
+#: templates/manager/wp/single.html:419 templates/manager/wp/single.html:1868
+#: templates/mysql/users.html:70 templates/mysql/users.html:72
+#: templates/mysql/wizard.html:71 templates/psql/users.html:67
+#: templates/psql/users.html:69
 msgid "Database"
 msgstr "Base de datos"
 
-#: templates/manager/mautic.html:245 templates/manager/wp/single.html:435
+#: templates/manager/drupal/single.html:245 templates/manager/mautic.html:245
+#: templates/manager/wp/single.html:435
 msgid "Manage MySQL databases"
 msgstr "Gestionar bases de datos MySQL"
 
-#: templates/manager/mautic.html:256 templates/manager/wp/single.html:446
+#: templates/manager/drupal/single.html:256 templates/manager/mautic.html:256
+#: templates/manager/wp/single.html:446
 msgid "Database Size:"
 msgstr "Tamaño de la base de datos:"
 
-#: templates/manager/mautic.html:260 templates/manager/wp/single.html:450
+#: templates/manager/drupal/single.html:260 templates/manager/mautic.html:260
+#: templates/manager/wp/single.html:450
 msgid "Database Host:"
 msgstr "Host de la base de datos:"
 
-#: templates/manager/mautic.html:261 templates/manager/wp/single.html:451
+#: templates/manager/drupal/single.html:261 templates/manager/mautic.html:261
+#: templates/manager/wp/single.html:451
 msgid "localhost"
 msgstr "localhost"
 
-#: templates/manager/mautic.html:263
+#: templates/manager/drupal/single.html:263 templates/manager/mautic.html:263
 msgid "Remote MySQL host detected in config file. Database size unavailable."
 msgstr "Se detectó un host MySQL remoto en el archivo de configuración. El tamaño de la base de datos no está disponible."
 
-#: templates/manager/mautic.html:269 templates/manager/mautic_install.html:380
+#: templates/manager/drupal/single.html:269 templates/manager/mautic.html:269
 #: templates/manager/wp/single.html:459
 msgid "Database Name:"
 msgstr "Nombre de la base de datos:"
 
-#: templates/manager/mautic.html:281 templates/manager/wp/single.html:471
+#: templates/manager/drupal/single.html:281 templates/manager/mautic.html:281
+#: templates/manager/wp/single.html:471
 msgid "Table prefix:"
 msgstr "Prefijo de tabla:"
 
-#: templates/manager/mautic.html:285 templates/manager/wp/single.html:475
+#: templates/manager/drupal/single.html:285 templates/manager/mautic.html:285
+#: templates/manager/wp/single.html:475
 msgid "Database User:"
 msgstr "Usuario de la base de datos:"
 
-#: templates/manager/mautic.html:297 templates/manager/mautic_install.html:401
+#: templates/manager/drupal/single.html:297 templates/manager/mautic.html:297
 #: templates/manager/wp/single.html:487 templates/psql/pgadmin.html:138
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: templates/manager/mautic.html:304 templates/manager/wp/single.html:494
+#: templates/manager/drupal/single.html:304 templates/manager/mautic.html:304
+#: templates/manager/wp/single.html:494
 msgid "phpMyAdmin:"
 msgstr "phpMyAdmin:"
 
-#: templates/manager/mautic.html:319 templates/manager/wp/single.html:509
+#: templates/manager/drupal/single.html:319 templates/manager/mautic.html:319
+#: templates/manager/wp/single.html:509
 msgid "Open database in phpMyAdmin"
 msgstr "Abrir base de datos en phpMyAdmin"
 
-#: templates/manager/mautic.html:365 templates/manager/websitebuilder.html:194
+#: templates/manager/drupal/single.html:365 templates/manager/mautic.html:365
+#: templates/manager/websitebuilder.html:194
 #: templates/manager/wp/single.html:1985
 msgid "Create a Backup"
 msgstr "Crear una copia de seguridad"
 
-#: templates/manager/mautic.html:366
+#: templates/manager/drupal/single.html:366 templates/manager/mautic.html:366
 msgid "Create a new backup of website files and/or database."
 msgstr "Crear una nueva copia de seguridad de los archivos del sitio web y/o la base de datos."
 
-#: templates/manager/mautic.html:371 templates/manager/wp/single.html:1995
+#: templates/manager/drupal/single.html:371 templates/manager/mautic.html:371
+#: templates/manager/wp/single.html:1995
 msgid "Backup Database"
 msgstr "Copia de seguridad de la base de datos"
 
-#: templates/manager/mautic.html:376 templates/manager/websitebuilder.html:204
+#: templates/manager/drupal/single.html:376 templates/manager/mautic.html:376
+#: templates/manager/websitebuilder.html:204
 #: templates/manager/wp/single.html:2000
 msgid "Backup Files"
 msgstr "Archivos de copia de seguridad"
 
-#: templates/manager/mautic.html:394 templates/manager/websitebuilder.html:218
+#: templates/manager/drupal/single.html:394 templates/manager/mautic.html:394
+#: templates/manager/websitebuilder.html:218
 #: templates/manager/wp/single.html:2017
 msgid "Restore from Backups"
 msgstr "Restaurar desde copias de seguridad"
 
-#: templates/manager/mautic.html:395
+#: templates/manager/drupal/single.html:395 templates/manager/mautic.html:395
 msgid "Restore website files and/or database from a previous backup."
 msgstr "Restaurar archivos del sitio web y/o la base de datos desde una copia de seguridad anterior."
 
-#: templates/manager/mautic.html:405 templates/manager/websitebuilder.html:227
+#: templates/manager/drupal/single.html:405 templates/manager/mautic.html:405
+#: templates/manager/websitebuilder.html:227
 #: templates/manager/wp/single.html:2026
 msgid "Display Backups"
 msgstr "Mostrar copias de seguridad"
 
-#: templates/manager/mautic.html:409 templates/manager/websitebuilder.html:231
+#: templates/manager/drupal/single.html:409 templates/manager/mautic.html:409
+#: templates/manager/websitebuilder.html:231
 #: templates/manager/wp/single.html:2030
 msgid "Select a backup date:"
 msgstr "Seleccione una fecha de copia de seguridad:"
 
-#: templates/manager/mautic.html:430 templates/manager/websitebuilder.html:255
-#: templates/manager/wp/list.html:154 templates/manager/wp/list.html:217
-#: templates/manager/wp/single.html:2055
+#: templates/manager/drupal/list.html:97 templates/manager/drupal/list.html:136
+#: templates/manager/drupal/single.html:430 templates/manager/mautic.html:430
+#: templates/manager/websitebuilder.html:255 templates/manager/wp/list.html:154
+#: templates/manager/wp/list.html:217 templates/manager/wp/single.html:2055
 msgid "Detach"
 msgstr "Separar"
 
-#: templates/manager/mautic.html:431 templates/manager/wp/single.html:2056
-#: templates/manager/wp/single.html:2066
+#: templates/manager/drupal/single.html:431 templates/manager/mautic.html:431
+#: templates/manager/wp/single.html:2056 templates/manager/wp/single.html:2066
 msgid "Remove the"
 msgstr "Eliminar el"
 
-#: templates/manager/mautic.html:431 templates/manager/wp/single.html:2066
+#: templates/manager/drupal/single.html:431 templates/manager/mautic.html:431
+#: templates/manager/wp/single.html:2066
 msgid "website from this manager without actually deleting any files."
 msgstr "sitio web de este administrador sin eliminar ningún archivo."
 
-#: templates/manager/mautic.html:432
+#: templates/manager/drupal/single.html:432 templates/manager/mautic.html:432
 #: templates/manager/python_node_apps.html:1106
 msgid "All website data such as files and database remains."
 msgstr "Todos los datos del sitio web, como archivos y base de datos, permanecen."
 
 #: templates/manager/mautic.html:442
-msgid "Detach Mauitc"
-msgstr "Separar Mautic"
+msgid "Detach Mautic"
+msgstr ""
 
-#: templates/manager/mautic.html:454 templates/manager/websitebuilder.html:270
+#: templates/manager/drupal/single.html:454 templates/manager/mautic.html:454
+#: templates/manager/websitebuilder.html:270
 #: templates/manager/wp/single.html:2070
 msgid "Confirm Detach"
 msgstr "Confirmar separación"
 
-#: templates/manager/mautic.html:480 templates/manager/wp/list.html:157
-#: templates/manager/wp/list.html:220 templates/manager/wp/single.html:2089
+#: templates/manager/drupal/list.html:100
+#: templates/manager/drupal/list.html:139
+#: templates/manager/drupal/single.html:480 templates/manager/mautic.html:480
+#: templates/manager/wp/list.html:157 templates/manager/wp/list.html:220
+#: templates/manager/wp/single.html:2089
 msgid "Uninstall"
 msgstr "Desinstalar"
 
@@ -7166,7 +7330,8 @@ msgstr "Todos los datos de Mautic se eliminarán permanentemente. No hay vuelta 
 msgid "Uninstall Mautic"
 msgstr ""
 
-#: templates/manager/mautic.html:504 templates/manager/wp/single.html:2104
+#: templates/manager/drupal/single.html:504 templates/manager/mautic.html:504
+#: templates/manager/wp/single.html:2104
 msgid "Confirm Uninstall"
 msgstr "Confirmar desinstalación"
 
@@ -7194,106 +7359,359 @@ msgstr "Ocurrió un error al separar Mautic. Por favor intente de nuevo."
 msgid "Administration"
 msgstr "Administración"
 
-#: templates/manager/mautic.html:652
+#: templates/manager/drupal/single.html:630 templates/manager/mautic.html:652
 #: templates/manager/python_node_apps.html:1205
 #: templates/manager/websitebuilder.html:427
 #: templates/manager/wp/single.html:2418
 msgid "An error occurred fetching folder size from the container."
 msgstr "Ocurrió un error al obtener el tamaño de la carpeta del contenedor."
 
-#: templates/manager/mautic.html:670 templates/manager/wp/single.html:2234
+#: templates/manager/drupal/single.html:648 templates/manager/mautic.html:670
+#: templates/manager/wp/single.html:2234
 msgid "An error occurred fetching DB size."
 msgstr "Ocurrió un error al obtener el tamaño de la base de datos."
 
-#: templates/manager/mautic_install.html:9
+#: templates/manager/drupal/single.html:664 templates/manager/mautic.html:686
+#: templates/manager/wp/single.html:2548
+msgid "Database and Files Backup"
+msgstr "Copia de seguridad de base de datos y archivos"
+
+#: templates/manager/drupal/single.html:666 templates/manager/mautic.html:688
+#: templates/manager/wp/single.html:2550
+msgid "Database Backup"
+msgstr "Copia de seguridad de la base de datos"
+
+#: templates/manager/drupal/single.html:668 templates/manager/mautic.html:690
+#: templates/manager/websitebuilder.html:457
+#: templates/manager/wp/single.html:2552
+msgid "Files Backup"
+msgstr "Copia de seguridad de archivos"
+
+#: templates/manager/drupal/single.html:670 templates/manager/mautic.html:692
+#: templates/manager/wp/single.html:2554
+msgid "Unknown Backup Type"
+msgstr "Tipo de copia de seguridad desconocido"
+
+#: templates/manager/drupal/single.html:706 templates/manager/mautic.html:728
+#: templates/manager/websitebuilder.html:477
+#: templates/manager/wp/single.html:2468
+msgid "Click again to confirm"
+msgstr "Haga clic de nuevo para confirmar"
+
+#: templates/manager/drupal/single.html:722 templates/manager/mautic.html:744
+#: templates/manager/websitebuilder.html:505
+#: templates/manager/wp/single.html:2496
+msgid "Restoring backup... Please wait."
+msgstr "Restaurando copia de seguridad... Por favor, espere."
+
+#: templates/manager/drupal/single.html:730 templates/manager/mautic.html:752
+#: templates/manager/websitebuilder.html:513
+#: templates/manager/wp/single.html:2504
+msgid "Restore request failed."
+msgstr "La solicitud de restauración falló."
+
+#: templates/manager/drupal/single.html:769 templates/manager/mautic.html:791
+#: templates/manager/wp/single.html:2567
+msgid "No options selected to backup. Please ensure that at least one of the Database or Files is selected."
+msgstr "No se seleccionaron opciones para la copia de seguridad. Asegúrese de que al menos una de las opciones, Base de datos o Archivos, esté seleccionada."
+
+#: templates/manager/drupal/single.html:776 templates/manager/mautic.html:798
+#: templates/manager/wp/single.html:2575
+msgid "Generating Backup..."
+msgstr "Generando copia de seguridad..."
+
+#: templates/manager/drupal/single.html:778 templates/manager/mautic.html:800
+#: templates/manager/websitebuilder.html:571
+#: templates/manager/wp/single.html:2577
+msgid "Generating website backup.. Please wait."
+msgstr "Generando copia de seguridad del sitio web.. Por favor, espere."
+
+#: templates/manager/drupal/single.html:786 templates/manager/mautic.html:808
+#: templates/manager/websitebuilder.html:579
+#: templates/manager/wp/single.html:2585
+msgid "Backup request failed."
+msgstr "La solicitud de copia de seguridad falló."
+
+#: templates/manager/mautic_install.html:10
+#: templates/manager/mautic_install.html:321
 msgid "Install Mautic in a few clicks."
 msgstr "Instale Mautic en pocos clics."
 
-#: templates/manager/mautic_install.html:26
-msgid "Website Name"
-msgstr "Nombre del sitio web"
+#: templates/manager/drupal/install.html:36
+#: templates/manager/mautic_install.html:32
+#: templates/manager/wp/install.html:32
+msgid "Site details"
+msgstr "Detalles del sitio"
 
-#: templates/manager/mautic_install.html:28
+#: templates/manager/drupal/install.html:42
+#: templates/manager/mautic_install.html:37
+#: templates/manager/wp/install.html:38
+msgid "Website name"
+msgstr ""
+
+#: templates/manager/mautic_install.html:39
 msgid "My Site"
 msgstr "Mi sitio"
 
-#: templates/manager/mautic_install.html:35
-msgid "Domain:"
-msgstr "Dominio:"
+#: templates/manager/mautic_install.html:45
+msgid "Mautic version"
+msgstr ""
 
-#: templates/manager/mautic_install.html:40
+#: templates/manager/drupal/install.html:75
+#: templates/manager/mautic_install.html:55
+#: templates/manager/pm2_install.html:300
+#: templates/manager/websitebuilder_install.html:32
+#: templates/manager/wp/install.html:66
+msgid "Domain & location"
+msgstr "Dominio y ubicación"
+
+#: templates/manager/drupal/install.html:85
+#: templates/manager/mautic_install.html:65
 #: templates/manager/pm2_install.html:314
 #: templates/manager/websitebuilder_install.html:42
 #: templates/manager/wp/install.html:76 templates/manager/wp/single.html:1840
 msgid "Select a domain"
 msgstr "Seleccione un dominio"
 
-#: templates/manager/mautic_install.html:58
-msgid "Admin Email:"
-msgstr "Correo electrónico de administrador:"
+#: templates/manager/drupal/install.html:90
+#: templates/manager/mautic_install.html:70
+#: templates/manager/pm2_install.html:319
+#: templates/manager/websitebuilder_install.html:47
+#: templates/manager/wp/install.html:81
+msgid "subfolder"
+msgstr "subcarpeta"
 
-#: templates/manager/mautic_install.html:139
-msgid "Admin Username:"
-msgstr "Nombre de usuario de administrador:"
+#: templates/manager/drupal/install.html:93
+#: templates/manager/mautic_install.html:73
+#: templates/manager/pm2_install.html:322
+#: templates/manager/websitebuilder_install.html:50
+#: templates/manager/wp/install.html:84
+msgid "Leave subfolder blank to install at the domain root"
+msgstr "Deje la subcarpeta en blanco para instalar en la raíz del dominio"
 
-#: templates/manager/mautic_install.html:158
-msgid "Admin Password:"
-msgstr "Contraseña de administrador:"
+#: templates/manager/drupal/install.html:105
+#: templates/manager/mautic_install.html:85
+#: templates/manager/wp/install.html:96
+msgid "Admin credentials"
+msgstr "Credenciales de administrador"
 
-#: templates/manager/mautic_install.html:172
-msgid "Generate"
-msgstr "Generar"
+#: templates/manager/drupal/install.html:106
+#: templates/manager/mautic_install.html:86
+#: templates/manager/wp/install.html:97
+msgid "auto-generated"
+msgstr "generado automáticamente"
 
-#: templates/manager/mautic_install.html:331
-msgid "Website files will be stored in folder:"
-msgstr "Los archivos del sitio web se almacenarán en la carpeta:"
+#: templates/manager/drupal/install.html:182
+#: templates/manager/mautic_install.html:162
+#: templates/manager/wp/install.html:173
+msgid "Database settings"
+msgstr ""
 
-#: templates/manager/mautic_install.html:387
-msgid "Table Prefix:"
-msgstr "Prefijo de tabla:"
+#: templates/manager/drupal/install.html:184
+#: templates/manager/mautic_install.html:164
+#: templates/manager/wp/install.html:175
+msgid "auto-generated · click to review"
+msgstr "generado automáticamente · haga clic para revisar"
 
-#: templates/manager/mautic_install.html:394
-msgid "Database Username:"
-msgstr "Nombre de usuario de la base de datos:"
+#: templates/manager/drupal/install.html:191
+#: templates/manager/mautic_install.html:171
+#: templates/manager/wp/install.html:182
+msgid "Database name"
+msgstr ""
 
-#: templates/manager/mautic_install.html:448
-msgid "Back to AutoInstaller"
-msgstr "Volver al AutoInstalador"
+#: templates/manager/mautic_install.html:178
+#: templates/manager/wp/install.html:189
+msgid "Table prefix"
+msgstr "Prefijo de tabla"
 
-#: templates/manager/mautic_install.html:453
+#: templates/manager/drupal/install.html:198
+#: templates/manager/mautic_install.html:185
+#: templates/manager/wp/install.html:196
+msgid "DB username"
+msgstr "Nombre de usuario de BD"
+
+#: templates/manager/drupal/install.html:205
+#: templates/manager/mautic_install.html:192
+#: templates/manager/wp/install.html:203
+msgid "DB password"
+msgstr ""
+
+#: templates/manager/drupal/install.html:218
+#: templates/manager/mautic_install.html:205
+#: templates/manager/pm2_install.html:523
+#: templates/manager/websitebuilder_install.html:62
+#: templates/manager/wp/install.html:216
+msgid "← Back"
+msgstr "← Volver"
+
+#: templates/manager/drupal/install.html:222
+#: templates/manager/drupal/install.html:405
+#: templates/manager/mautic_install.html:209
+#: templates/manager/mautic_install.html:475
 #: templates/manager/pm2_install.html:527
 #: templates/manager/pm2_install.html:757 templates/manager/wp/install.html:220
 #: templates/manager/wp/install.html:511
 msgid "Start Installation"
 msgstr "Iniciar instalación"
 
-#: templates/manager/mautic_install.html:478
+#: templates/manager/mautic_install.html:222
+msgid "Validates provided data, checks if install already exists, fetches PHP version and folder for the domain, and starts the PHP container if needed."
+msgstr ""
+
+#: templates/manager/drupal/install.html:236
+#: templates/manager/mautic_install.html:224
+#: templates/manager/pm2_install.html:542 templates/manager/wp/install.html:235
+msgid "Running pre-flight checks"
+msgstr "Ejecutando verificaciones previas al vuelo"
+
+#: templates/manager/mautic_install.html:228
+msgid "Downloads the Mautic .zip archive from GitHub, or reuses a local copy if already present."
+msgstr ""
+
+#: templates/manager/mautic_install.html:230
+msgid "Downloading Mautic archive"
+msgstr ""
+
+#: templates/manager/mautic_install.html:234
+msgid "Extracts all Mautic core files into the domain folder."
+msgstr ""
+
+#: templates/manager/drupal/install.html:248
+#: templates/manager/mautic_install.html:236
+#: templates/manager/wp/install.html:247
+msgid "Extracting files to document root"
+msgstr "Extrayendo archivos a la raíz del documento"
+
+#: templates/manager/mautic_install.html:240
+msgid "Writes database credentials into app/config/local.php."
+msgstr ""
+
+#: templates/manager/mautic_install.html:242
+msgid "Writing database logins to local.php"
+msgstr ""
+
+#: templates/manager/mautic_install.html:246
+msgid "Sets file permissions and ownership to the correct system user so PHP can read and write them."
+msgstr ""
+
+#: templates/manager/drupal/install.html:254
+#: templates/manager/mautic_install.html:248
+#: templates/manager/wp/install.html:265
+msgid "Setting file permissions & ownership"
+msgstr "Estableciendo permisos de archivo y propiedad"
+
+#: templates/manager/mautic_install.html:252
+msgid "Confirms the PHP container is running and responsive before attempting any database operations."
+msgstr ""
+
+#: templates/manager/mautic_install.html:254
+msgid "Testing PHP container availability"
+msgstr ""
+
+#: templates/manager/mautic_install.html:258
+#: templates/manager/wp/install.html:275
+msgid "Verifies the MySQL/MariaDB container is running, then creates the database, user, and grants all privileges."
+msgstr "Verifica que el contenedor MySQL/MariaDB esté en ejecución, luego crea la base de datos, el usuario y otorga todos los privilegios."
+
+#: templates/manager/drupal/install.html:260
+#: templates/manager/mautic_install.html:260
+#: templates/manager/wp/install.html:277
+msgid "Creating database & MySQL user"
+msgstr ""
+
+#: templates/manager/mautic_install.html:264
+msgid "Runs the mautic:install console command to create all Mautic tables and the admin account."
+msgstr ""
+
+#: templates/manager/mautic_install.html:266
+#: templates/manager/wp/install.html:283
+msgid "Importing tables into database"
+msgstr ""
+
+#: templates/manager/mautic_install.html:270
+msgid "Writes the mautic:segments:update, mautic:campaigns:update and mautic:campaigns:trigger Ofelia cron jobs and restarts the cron container."
+msgstr ""
+
+#: templates/manager/mautic_install.html:272
+msgid "Creating scheduled cron jobs"
+msgstr ""
+
+#: templates/manager/mautic_install.html:276
+msgid "Records the installation in the database so the site appears in Site Manager."
+msgstr ""
+
+#: templates/manager/drupal/install.html:272
+#: templates/manager/mautic_install.html:278
+#: templates/manager/pm2_install.html:572
+#: templates/manager/websitebuilder_install.html:99
+#: templates/manager/wp/install.html:307
+msgid "Saving to Site Manager"
+msgstr ""
+
+#: templates/manager/drupal/install.html:291
+#: templates/manager/mautic_install.html:300
+#: templates/manager/wp/install.html:329
+msgid "Install in progress for"
+msgstr ""
+
+#: templates/manager/drupal/install.html:294
+#: templates/manager/mautic_install.html:305
+#: templates/manager/pm2_install.html:599 templates/manager/wp/install.html:334
+msgid "Install process hanged for"
+msgstr ""
+
+#: templates/manager/drupal/install.html:294
+#: templates/manager/drupal/install.html:304
+#: templates/manager/mautic_install.html:305
+#: templates/manager/mautic_install.html:315
+#: templates/manager/pm2_install.html:599
+#: templates/manager/pm2_install.html:609
+#: templates/manager/websitebuilder_install.html:127
+#: templates/manager/websitebuilder_install.html:137
+#: templates/manager/wp/install.html:334 templates/manager/wp/install.html:344
+#: templates/partials/_service_log.html:95
+msgid "Click to retry"
+msgstr "Haga clic para reintentar"
+
+#: templates/manager/drupal/install.html:304
+#: templates/manager/mautic_install.html:315
+#: templates/manager/pm2_install.html:609 templates/manager/wp/install.html:344
+msgid "Install process failed for"
+msgstr ""
+
+#: templates/manager/drupal/install.html:412
+#: templates/manager/mautic_install.html:482
 #: templates/manager/pm2_install.html:764
 #: templates/manager/websitebuilder_install.html:292
 #: templates/manager/wp/install.html:518
 msgid "Please select a domain name."
 msgstr "Por favor seleccione un nombre de dominio."
 
-#: templates/manager/mautic_install.html:484
+#: templates/manager/mautic_install.html:506
 msgid "Mautic install started. Please wait for the process to finish."
 msgstr "La instalación de Mautic se inició. Por favor espere a que el proceso finalice."
 
-#: templates/manager/mautic_install.html:534
-msgid "Error, please check the install log below the form."
-msgstr "Error, por favor compruebe el registro de instalación debajo del formulario."
+#: templates/manager/drupal/install.html:473
+#: templates/manager/mautic_install.html:550
+#: templates/manager/pm2_install.html:829
+#: templates/manager/websitebuilder_install.html:365
+#: templates/manager/wp/install.html:589
+msgid "Connection lost during installation."
+msgstr "Conexión perdida durante la instalación."
 
-#: templates/manager/mautic_install.html:551
+#: templates/manager/drupal/install.html:482
+#: templates/manager/mautic_install.html:560
 #: templates/manager/pm2_install.html:839
 #: templates/manager/websitebuilder_install.html:375
 #: templates/manager/wp/install.html:600
 msgid "Fetch error. Please try again."
 msgstr "Error de obtención. Por favor intente de nuevo."
 
-#: templates/manager/mautic_install.html:597
-msgid "Error fetching Mautic versions from Github. Please refresh page."
-msgstr "Error al obtener las versiones de Mautic desde Github. Por favor actualice la página."
+#: templates/manager/mautic_install.html:721
+msgid "Error fetching Mautic versions from GitHub. Please refresh page."
+msgstr ""
 
-#: templates/manager/mautic_install.html:604
+#: templates/manager/mautic_install.html:725
 #: templates/manager/wp/install.html:765
 msgid "Error fetching versions"
 msgstr "Error al obtener versiones"
@@ -7362,9 +7780,9 @@ msgstr "Crear una nueva aplicación"
 msgid "If the application is already built, you can skip this option."
 msgstr "Si la aplicación ya está compilada, puede omitir esta opción."
 
-#: templates/manager/pm2_install.html:225 templates/manager/sites.html:77
-#: templates/manager/wp/list.html:123 templates/manager/wp/single.html:1301
-#: templates/system/server_info.html:110
+#: templates/manager/drupal/list.html:68 templates/manager/pm2_install.html:225
+#: templates/manager/sites.html:77 templates/manager/wp/list.html:123
+#: templates/manager/wp/single.html:1301 templates/system/server_info.html:110
 msgid "Version"
 msgstr "Versión"
 
@@ -7372,27 +7790,9 @@ msgstr "Versión"
 msgid "Select version of Python/NodeJS to use for this application."
 msgstr "Seleccione la versión de Python/NodeJS a utilizar para esta aplicación."
 
-#: templates/manager/pm2_install.html:300
-#: templates/manager/websitebuilder_install.html:32
-#: templates/manager/wp/install.html:66
-msgid "Domain & location"
-msgstr "Dominio y ubicación"
-
 #: templates/manager/pm2_install.html:308
 msgid "Choose a domain name and optional subdirectory to create reverse-proxy."
 msgstr "Elija un nombre de dominio y un subdirectorio opcional para crear un proxy inverso."
-
-#: templates/manager/pm2_install.html:319
-#: templates/manager/websitebuilder_install.html:47
-#: templates/manager/wp/install.html:81
-msgid "subfolder"
-msgstr "subcarpeta"
-
-#: templates/manager/pm2_install.html:322
-#: templates/manager/websitebuilder_install.html:50
-#: templates/manager/wp/install.html:84
-msgid "Leave subfolder blank to install at the domain root"
-msgstr "Deje la subcarpeta en blanco para instalar en la raíz del dominio"
 
 #: templates/manager/pm2_install.html:360
 msgid "Service name in reverse-proxy:"
@@ -7459,19 +7859,9 @@ msgstr "Memoria (GB)"
 msgid "Physical Memory (in GB) that the container can use."
 msgstr "Memoria física (en GB) que el contenedor puede usar."
 
-#: templates/manager/pm2_install.html:523
-#: templates/manager/websitebuilder_install.html:62
-#: templates/manager/wp/install.html:216
-msgid "← Back"
-msgstr "← Volver"
-
 #: templates/manager/pm2_install.html:540
 msgid "Checks for already running install processes and validates the submitted form data."
 msgstr "Verifica los procesos de instalación en ejecución y valida los datos del formulario enviado."
-
-#: templates/manager/pm2_install.html:542 templates/manager/wp/install.html:235
-msgid "Running pre-flight checks"
-msgstr "Ejecutando verificaciones previas al vuelo"
 
 #: templates/manager/pm2_install.html:546
 msgid "Generates the docker-compose service entry for the application and writes its environment variables to the .env file."
@@ -7509,42 +7899,13 @@ msgstr "Reiniciando servidor web"
 msgid "Records the new application in the database so it appears in Site Manager."
 msgstr "Registra la nueva aplicación en la base de datos para que aparezca en el Administrador de sitios."
 
-#: templates/manager/pm2_install.html:572
-#: templates/manager/websitebuilder_install.html:99
-#: templates/manager/wp/install.html:307
-msgid "Saving to Site Manager"
-msgstr ""
-
 #: templates/manager/pm2_install.html:594
 msgid "Setting up application"
-msgstr ""
-
-#: templates/manager/pm2_install.html:599 templates/manager/wp/install.html:334
-msgid "Install process hanged for"
-msgstr ""
-
-#: templates/manager/pm2_install.html:599
-#: templates/manager/pm2_install.html:609
-#: templates/manager/websitebuilder_install.html:127
-#: templates/manager/websitebuilder_install.html:137
-#: templates/manager/wp/install.html:334 templates/manager/wp/install.html:344
-#: templates/partials/_service_log.html:95
-msgid "Click to retry"
-msgstr "Haga clic para reintentar"
-
-#: templates/manager/pm2_install.html:609 templates/manager/wp/install.html:344
-msgid "Install process failed for"
 msgstr ""
 
 #: templates/manager/pm2_install.html:785
 msgid "Application setup started. Please wait for the process to finish."
 msgstr "Configuración de la aplicación iniciada. Por favor, espere a que el proceso finalice."
-
-#: templates/manager/pm2_install.html:829
-#: templates/manager/websitebuilder_install.html:365
-#: templates/manager/wp/install.html:589
-msgid "Connection lost during installation."
-msgstr "Conexión perdida durante la instalación."
 
 #: templates/manager/python_node_apps.html:61
 msgid "Install Packages"
@@ -7834,7 +8195,8 @@ msgstr "Nuevo"
 msgid "Site Name"
 msgstr "Nombre del sitio"
 
-#: templates/manager/sites.html:70 templates/manager/wp/list.html:124
+#: templates/manager/drupal/list.html:69 templates/manager/sites.html:70
+#: templates/manager/wp/list.html:124
 msgid "Admin Email"
 msgstr "Correo electrónico del administrador"
 
@@ -7842,52 +8204,53 @@ msgstr "Correo electrónico del administrador"
 msgid "Speed"
 msgstr "Velocidad"
 
-#: templates/manager/sites.html:132 templates/manager/sites.html:143
-#: templates/manager/sites.html:163 templates/manager/sites.html:170
+#: templates/manager/sites.html:134 templates/manager/sites.html:145
+#: templates/manager/sites.html:153 templates/manager/sites.html:173
+#: templates/manager/sites.html:180
 msgid "Open Site Manager"
 msgstr ""
 
-#: templates/manager/sites.html:177
+#: templates/manager/sites.html:187
 #: templates/manager/websitebuilder_install.html:66
 #: templates/manager/websitebuilder_install.html:283
 msgid "Open Website Builder"
 msgstr "Abrir el constructor de sitios web"
 
-#: templates/manager/sites.html:253 templates/partials/pagespeed.html:83
+#: templates/manager/sites.html:263 templates/partials/pagespeed.html:83
 #: templates/partials/pagespeed.html:98
 msgid "Mobile"
 msgstr "Móvil"
 
-#: templates/manager/sites.html:254 templates/partials/pagespeed.html:54
+#: templates/manager/sites.html:264 templates/partials/pagespeed.html:54
 #: templates/partials/pagespeed.html:97
 msgid "Desktop"
 msgstr "Escritorio"
 
-#: templates/manager/sites.html:255 templates/partials/pagespeed.html:103
+#: templates/manager/sites.html:265 templates/partials/pagespeed.html:103
 msgid "First Contentful Paint:"
 msgstr "Primera pintura con contenido:"
 
-#: templates/manager/sites.html:256 templates/partials/pagespeed.html:108
+#: templates/manager/sites.html:266 templates/partials/pagespeed.html:108
 msgid "Speed Index:"
 msgstr "Índice de velocidad:"
 
-#: templates/manager/sites.html:257 templates/partials/pagespeed.html:113
+#: templates/manager/sites.html:267 templates/partials/pagespeed.html:113
 msgid "Time to Interactive:"
 msgstr "Tiempo hasta la interactividad:"
 
-#: templates/manager/sites.html:258 templates/partials/pagespeed.html:118
+#: templates/manager/sites.html:268 templates/partials/pagespeed.html:118
 msgid "Measured at"
 msgstr "Medido en"
 
-#: templates/manager/sites.html:360
+#: templates/manager/sites.html:370
 msgid "No websites yet"
 msgstr "Aún no hay sitios web"
 
-#: templates/manager/sites.html:361
+#: templates/manager/sites.html:371
 msgid "Create your first website to get started"
 msgstr "Cree su primer sitio web para comenzar"
 
-#: templates/manager/sites.html:365
+#: templates/manager/sites.html:375
 msgid "New website"
 msgstr "Nuevo sitio web"
 
@@ -7947,39 +8310,9 @@ msgstr "Proceso de desconexión iniciado. Por favor, espere."
 msgid "An error occurred while detaching website. Please try again."
 msgstr "Se produjo un error al desconectar el sitio web. Por favor, inténtelo de nuevo."
 
-#: templates/manager/websitebuilder.html:457
-#: templates/manager/wp/single.html:2552
-msgid "Files Backup"
-msgstr "Copia de seguridad de archivos"
-
-#: templates/manager/websitebuilder.html:477
-#: templates/manager/wp/single.html:2468
-msgid "Click again to confirm"
-msgstr "Haga clic de nuevo para confirmar"
-
-#: templates/manager/websitebuilder.html:505
-#: templates/manager/wp/single.html:2496
-msgid "Restoring backup... Please wait."
-msgstr "Restaurando copia de seguridad... Por favor, espere."
-
-#: templates/manager/websitebuilder.html:513
-#: templates/manager/wp/single.html:2504
-msgid "Restore request failed."
-msgstr "La solicitud de restauración falló."
-
 #: templates/manager/websitebuilder.html:565
 msgid "No options selected to backup. Please ensure that at least Files is selected."
 msgstr "No se seleccionaron opciones para la copia de seguridad. Asegúrese de que al menos se seleccione Archivos."
-
-#: templates/manager/websitebuilder.html:571
-#: templates/manager/wp/single.html:2577
-msgid "Generating website backup.. Please wait."
-msgstr "Generando copia de seguridad del sitio web.. Por favor, espere."
-
-#: templates/manager/websitebuilder.html:579
-#: templates/manager/wp/single.html:2585
-msgid "Backup request failed."
-msgstr "La solicitud de copia de seguridad falló."
 
 #: templates/manager/websitebuilder_install.html:10
 #: templates/manager/websitebuilder_install.html:143
@@ -8029,6 +8362,157 @@ msgstr "El proceso de construcción falló para"
 #: templates/manager/websitebuilder_install.html:321
 msgid "Creating website. Please wait for the process to finish."
 msgstr "Creando sitio web. Por favor, espere a que el proceso finalice."
+
+#: templates/manager/drupal/install.html:44
+msgid "My Drupal Site"
+msgstr ""
+
+#: templates/manager/drupal/install.html:50
+msgid "Installation profile"
+msgstr ""
+
+#: templates/manager/drupal/install.html:54
+msgid "Standard"
+msgstr ""
+
+#: templates/manager/drupal/install.html:55
+msgid "Minimal"
+msgstr ""
+
+#: templates/manager/drupal/install.html:56
+msgid "Demo: Umami Food Magazine"
+msgstr ""
+
+#: templates/manager/drupal/install.html:63
+msgid "Drupal version"
+msgstr ""
+
+#: templates/manager/drupal/install.html:67
+msgid "Latest stable"
+msgstr ""
+
+#: templates/manager/drupal/install.html:242
+msgid "Downloading Drupal archive"
+msgstr ""
+
+#: templates/manager/drupal/install.html:266
+msgid "Running Drush site:install"
+msgstr ""
+
+#: templates/manager/drupal/install.html:432
+msgid "Drupal install started. Please wait for the process to finish."
+msgstr ""
+
+#: templates/manager/drupal/list.html:13
+msgid "Manage Drupal websites"
+msgstr ""
+
+#: templates/manager/drupal/list.html:14 templates/manager/wp/list.html:16
+msgid "Total installations:"
+msgstr "Total de instalaciones:"
+
+#: templates/manager/drupal/list.html:21 templates/manager/wp/list.html:23
+msgid "New Installation"
+msgstr "Nueva instalación"
+
+#: templates/manager/drupal/list.html:24 templates/manager/drupal/list.html:273
+#: templates/manager/wp/list.html:26
+msgid "Scan for Existing Installations"
+msgstr "Buscar instalaciones existentes"
+
+#: templates/manager/drupal/list.html:50 templates/manager/wp/list.html:81
+msgid "Refresh Data"
+msgstr "Actualizar datos"
+
+#: templates/manager/drupal/list.html:53 templates/manager/wp/list.html:84
+msgid "Switch to Table view"
+msgstr "Cambiar a vista de tabla"
+
+#: templates/manager/drupal/list.html:55 templates/manager/wp/list.html:90
+msgid "Switch to Cards view"
+msgstr "Cambiar a vista de tarjetas"
+
+#: templates/manager/drupal/list.html:70 templates/manager/wp/list.html:125
+msgid "Created on"
+msgstr "Creado el"
+
+#: templates/manager/drupal/list.html:187
+msgid "An error occurred while removing Drupal. Please try again."
+msgstr ""
+
+#: templates/manager/drupal/list.html:195
+#: templates/manager/drupal/single.html:536
+msgid "Drupal detach process started. Please wait."
+msgstr ""
+
+#: templates/manager/drupal/list.html:205
+#: templates/manager/drupal/single.html:547
+msgid "An error occurred while detaching Drupal. Please try again."
+msgstr ""
+
+#: templates/manager/drupal/list.html:221
+#: templates/manager/drupal/list.html:284 templates/manager/wp/list.html:452
+msgid "Scanning started..."
+msgstr "Escaneo iniciado..."
+
+#: templates/manager/drupal/list.html:226
+#: templates/manager/drupal/list.html:292 templates/manager/wp/list.html:469
+msgid "No installations found."
+msgstr "No se encontraron instalaciones."
+
+#: templates/manager/drupal/list.html:233
+#: templates/manager/drupal/list.html:295 templates/manager/wp/list.html:485
+msgid "Error occurred during scan. Try again."
+msgstr "Se produjo un error durante el escaneo. Inténtelo de nuevo."
+
+#: templates/manager/drupal/list.html:241 templates/manager/wp/list.html:495
+msgid "Data refresh in progress... Please wait."
+msgstr "Actualización de datos en curso... Por favor, espere."
+
+#: templates/manager/drupal/list.html:244 templates/manager/wp/list.html:504
+msgid "Refresh completed."
+msgstr "Actualización completada."
+
+#: templates/manager/drupal/list.html:246 templates/manager/wp/list.html:509
+msgid "Error occurred during refresh."
+msgstr "Se produjo un error durante la actualización."
+
+#: templates/manager/drupal/list.html:260
+msgid "No Drupal Installations"
+msgstr ""
+
+#: templates/manager/drupal/list.html:262
+msgid "No Drupal sites managed via OpenPanel. Install a new Drupal site or scan to find existing installations."
+msgstr ""
+
+#: templates/manager/drupal/list.html:264 templates/manager/wp/list.html:423
+#: templates/system/cronjobs.html:375 templates/user/favorites.html:109
+msgid "View Documentation"
+msgstr "Ver documentación"
+
+#: templates/manager/drupal/single.html:57
+msgid "Drupal version:"
+msgstr ""
+
+#: templates/manager/drupal/single.html:442
+msgid "Detach Drupal"
+msgstr ""
+
+#: templates/manager/drupal/single.html:481
+msgid "Uninstall Drupal and delete all website files and the database."
+msgstr ""
+
+#: templates/manager/drupal/single.html:483
+msgid "All Drupal data will be permanently deleted. There is no coming back after you press delete."
+msgstr ""
+
+#: templates/manager/drupal/single.html:492
+msgid "Uninstall Drupal"
+msgstr ""
+
+#: templates/manager/drupal/single.html:521
+msgid "Drupal uninstall process started. Please wait."
+msgstr ""
 
 #: templates/manager/wp/_secure.html:4
 msgid "Security Measures"
@@ -8098,14 +8582,6 @@ msgstr "¡Caché vaciada correctamente!"
 msgid "Failed to flush cache"
 msgstr "No se pudo vaciar la caché"
 
-#: templates/manager/wp/install.html:32
-msgid "Site details"
-msgstr "Detalles del sitio"
-
-#: templates/manager/wp/install.html:38
-msgid "Website name"
-msgstr ""
-
 #: templates/manager/wp/install.html:40
 msgid "My Blog"
 msgstr "Mi Blog"
@@ -8127,38 +8603,6 @@ msgstr "Solo otro sitio de WordPress"
 msgid "WordPress version"
 msgstr ""
 
-#: templates/manager/wp/install.html:96
-msgid "Admin credentials"
-msgstr "Credenciales de administrador"
-
-#: templates/manager/wp/install.html:97
-msgid "auto-generated"
-msgstr "generado automáticamente"
-
-#: templates/manager/wp/install.html:173
-msgid "Database settings"
-msgstr ""
-
-#: templates/manager/wp/install.html:175
-msgid "auto-generated · click to review"
-msgstr "generado automáticamente · haga clic para revisar"
-
-#: templates/manager/wp/install.html:182
-msgid "Database name"
-msgstr ""
-
-#: templates/manager/wp/install.html:189
-msgid "Table prefix"
-msgstr "Prefijo de tabla"
-
-#: templates/manager/wp/install.html:196
-msgid "DB username"
-msgstr "Nombre de usuario de BD"
-
-#: templates/manager/wp/install.html:203
-msgid "DB password"
-msgstr ""
-
 #: templates/manager/wp/install.html:233
 msgid "Validates provided data, checks if install already exists, fetches PHP version and folder for the domain. Checks the assigned PHP version and webservers, confirms the containers are available, and starts them if needed."
 msgstr "Valida los datos proporcionados, verifica si la instalación ya existe, obtiene la versión de PHP y la carpeta para el dominio. Verifica la versión de PHP asignada y los servidores web, confirma que los contenedores están disponibles y los inicia si es necesario."
@@ -8174,10 +8618,6 @@ msgstr "Descargando archivo de WordPress"
 #: templates/manager/wp/install.html:245
 msgid "Extracts all WordPress core files into the domain folder."
 msgstr "Extrae todos los archivos principales de WordPress en la carpeta del dominio."
-
-#: templates/manager/wp/install.html:247
-msgid "Extracting files to document root"
-msgstr "Extrayendo archivos a la raíz del documento"
 
 #: templates/manager/wp/install.html:251
 msgid "Creates the .htaccess file with rewrite rules, adds database credentials to wp-config.php, and adds the mu-plugin for HTTPS behind Varnish."
@@ -8199,10 +8639,6 @@ msgstr "Generando claves de seguridad y sales"
 msgid "Sets ownership of all files to the correct system user so the web server and PHP can read and write them."
 msgstr "Establece la propiedad de todos los archivos al usuario del sistema correcto para que el servidor web y PHP puedan leerlos y escribirlos."
 
-#: templates/manager/wp/install.html:265
-msgid "Setting file permissions & ownership"
-msgstr "Estableciendo permisos de archivo y propiedad"
-
 #: templates/manager/wp/install.html:269
 msgid "Runs wp --info inside the PHP container to confirm WP-CLI is functional before attempting any database operations."
 msgstr "Ejecuta wp --info dentro del contenedor PHP para confirmar que WP-CLI es funcional antes de intentar cualquier operación de base de datos."
@@ -8211,21 +8647,9 @@ msgstr "Ejecuta wp --info dentro del contenedor PHP para confirmar que WP-CLI es
 msgid "Testing WP-CLI commands"
 msgstr "Probando comandos WP-CLI"
 
-#: templates/manager/wp/install.html:275
-msgid "Verifies the MySQL/MariaDB container is running, then creates the database, user, and grants all privileges."
-msgstr "Verifica que el contenedor MySQL/MariaDB esté en ejecución, luego crea la base de datos, el usuario y otorga todos los privilegios."
-
-#: templates/manager/wp/install.html:277
-msgid "Creating database & MySQL user"
-msgstr ""
-
 #: templates/manager/wp/install.html:281
 msgid "Runs wp core install via WP-CLI to create all WordPress tables, set the site URL, title, and admin account."
 msgstr "Ejecuta wp core install a través de WP-CLI para crear todas las tablas de WordPress, establecer la URL del sitio, el título y la cuenta de administrador."
-
-#: templates/manager/wp/install.html:283
-msgid "Importing tables into database"
-msgstr ""
 
 #: templates/manager/wp/install.html:287
 msgid "Sets pretty permalink structure and the site tagline."
@@ -8255,10 +8679,6 @@ msgstr "Verificando e instalando conjuntos de plugins y temas"
 msgid "Records the installation in the database so the site appears in WP Manager."
 msgstr "Registra la instalación en la base de datos para que el sitio aparezca en WP Manager."
 
-#: templates/manager/wp/install.html:329
-msgid "Install in progress for"
-msgstr ""
-
 #: templates/manager/wp/install.html:542
 msgid "WordPress install started. Please wait for the process to finish."
 msgstr "Instalación de WordPress iniciada. Por favor, espere a que el proceso finalice."
@@ -8270,18 +8690,6 @@ msgstr "Error al obtener versiones de WordPress desde la API de WP.ORG. Por favo
 #: templates/manager/wp/list.html:14
 msgid "Manage WordPress websites"
 msgstr "Administrar sitios web de WordPress"
-
-#: templates/manager/wp/list.html:16
-msgid "Total installations:"
-msgstr "Total de instalaciones:"
-
-#: templates/manager/wp/list.html:23
-msgid "New Installation"
-msgstr "Nueva instalación"
-
-#: templates/manager/wp/list.html:26
-msgid "Scan for Existing Installations"
-msgstr "Buscar instalaciones existentes"
 
 #: templates/manager/wp/list.html:59
 msgid "Sets:"
@@ -8303,29 +8711,13 @@ msgstr "Cree un conjunto de temas para que los temas se instalen automáticament
 msgid "Create a Plugins Set to have plugins auto-installed on new WordPress websites."
 msgstr "Cree un conjunto de plugins para que los plugins se instalen automáticamente en los nuevos sitios web de WordPress."
 
-#: templates/manager/wp/list.html:81
-msgid "Refresh Data"
-msgstr "Actualizar datos"
-
-#: templates/manager/wp/list.html:84
-msgid "Switch to Table view"
-msgstr "Cambiar a vista de tabla"
-
 #: templates/manager/wp/list.html:86
 msgid "Display websites in a table"
 msgstr "Mostrar sitios web en una tabla"
 
-#: templates/manager/wp/list.html:90
-msgid "Switch to Cards view"
-msgstr "Cambiar a vista de tarjetas"
-
 #: templates/manager/wp/list.html:92
 msgid "Display websites in a grid"
 msgstr "Mostrar sitios web en una cuadrícula"
-
-#: templates/manager/wp/list.html:125
-msgid "Created on"
-msgstr "Creado el"
 
 #: templates/manager/wp/list.html:144 templates/manager/wp/list.html:237
 #: templates/manager/wp/single.html:51 templates/manager/wp/single.html:358
@@ -8355,35 +8747,6 @@ msgstr "No hay instalaciones de WordPress"
 #: templates/manager/wp/list.html:421
 msgid "No WordPress sites managed via OpenPanel. Install a new WordPress site or scan to find existing installations."
 msgstr "No hay sitios de WordPress administrados a través de OpenPanel. Instale un nuevo sitio de WordPress o escanee para encontrar instalaciones existentes."
-
-#: templates/manager/wp/list.html:423 templates/system/cronjobs.html:375
-#: templates/user/favorites.html:109
-msgid "View Documentation"
-msgstr "Ver documentación"
-
-#: templates/manager/wp/list.html:452
-msgid "Scanning started..."
-msgstr "Escaneo iniciado..."
-
-#: templates/manager/wp/list.html:469
-msgid "No installations found."
-msgstr "No se encontraron instalaciones."
-
-#: templates/manager/wp/list.html:485
-msgid "Error occurred during scan. Try again."
-msgstr "Se produjo un error durante el escaneo. Inténtelo de nuevo."
-
-#: templates/manager/wp/list.html:495
-msgid "Data refresh in progress... Please wait."
-msgstr "Actualización de datos en curso... Por favor, espere."
-
-#: templates/manager/wp/list.html:504
-msgid "Refresh completed."
-msgstr "Actualización completada."
-
-#: templates/manager/wp/list.html:509
-msgid "Error occurred during refresh."
-msgstr "Se produjo un error durante la actualización."
 
 #: templates/manager/wp/single.html:40
 msgid "Failed to load users"
@@ -8964,26 +9327,6 @@ msgstr "WordPress actualizado correctamente."
 msgid "Update failed."
 msgstr ""
 
-#: templates/manager/wp/single.html:2548
-msgid "Database and Files Backup"
-msgstr "Copia de seguridad de base de datos y archivos"
-
-#: templates/manager/wp/single.html:2550
-msgid "Database Backup"
-msgstr "Copia de seguridad de la base de datos"
-
-#: templates/manager/wp/single.html:2554
-msgid "Unknown Backup Type"
-msgstr "Tipo de copia de seguridad desconocido"
-
-#: templates/manager/wp/single.html:2567
-msgid "No options selected to backup. Please ensure that at least one of the Database or Files is selected."
-msgstr "No se seleccionaron opciones para la copia de seguridad. Asegúrese de que al menos una de las opciones, Base de datos o Archivos, esté seleccionada."
-
-#: templates/manager/wp/single.html:2575
-msgid "Generating Backup..."
-msgstr "Generando copia de seguridad..."
-
 #: templates/mysql/_error.html:4
 msgid "Is database service running?"
 msgstr "¿El servicio de base de datos está en ejecución?"
@@ -9238,6 +9581,10 @@ msgstr ""
 #: templates/mysql/databases.html:687
 msgid "Table"
 msgstr "Tabla"
+
+#: templates/mysql/databases.html:774
+msgid "Add new database"
+msgstr ""
 
 #: templates/mysql/import.html:8 templates/psql/import.html:8
 msgid "Import into Database"
@@ -9552,35 +9899,35 @@ msgstr "PHP"
 msgid "Sites"
 msgstr "Sitios"
 
-#: templates/partials/_header.html:143 templates/partials/_header.html:203
+#: templates/partials/_header.html:144 templates/partials/_header.html:204
 msgid "Left-click to add to Favorites"
 msgstr "Haga clic izquierdo para agregar a Favoritos"
 
-#: templates/partials/_header.html:170 templates/partials/_header.html:247
+#: templates/partials/_header.html:171 templates/partials/_header.html:248
 msgid "Right-click to remove from Favorites"
 msgstr "Haga clic derecho para eliminar de Favoritos"
 
-#: templates/partials/_header.html:179
+#: templates/partials/_header.html:180
 msgid "This page is not in your favorites! Left-click to add it."
 msgstr "¡Esta página no está en sus favoritos! Haga clic izquierdo para agregarla."
 
-#: templates/partials/_header.html:195
+#: templates/partials/_header.html:196
 msgid "Successfully removed from favorites!"
 msgstr "¡Eliminado de favoritos exitosamente!"
 
-#: templates/partials/_header.html:208
+#: templates/partials/_header.html:209
 msgid "Failed to remove favorite."
 msgstr "No se pudo eliminar de favoritos."
 
-#: templates/partials/_header.html:215
+#: templates/partials/_header.html:216
 msgid "This page is already in your favorites! Right-click to remove it."
 msgstr "¡Esta página ya está en sus favoritos! Haga clic derecho para eliminarla."
 
-#: templates/partials/_header.html:239
+#: templates/partials/_header.html:240
 msgid "Successfully added to favorites!"
 msgstr "¡Agregado a favoritos exitosamente!"
 
-#: templates/partials/_header.html:253
+#: templates/partials/_header.html:254
 msgid "Failed to add favorite."
 msgstr "No se pudo agregar a favoritos."
 
@@ -9595,6 +9942,39 @@ msgstr "Volver a"
 #: templates/partials/_impersonate.html:4
 msgid "OpenAdmin"
 msgstr "OpenAdmin"
+
+#: templates/partials/_search.html:47
+msgid "MySQL Database"
+msgstr ""
+
+#: templates/partials/_search.html:48
+msgid "MySQL User"
+msgstr ""
+
+#: templates/partials/_search.html:51
+msgid "PostgreSQL Database"
+msgstr ""
+
+#: templates/partials/_search.html:52
+msgid "PostgreSQL User"
+msgstr ""
+
+#: templates/partials/_search.html:58
+msgid "Email Account"
+msgstr ""
+
+#: templates/partials/_search.html:61
+msgid "FTP Account"
+msgstr ""
+
+#: templates/partials/_search.html:67 templates/partials/_service_log.html:62
+#: templates/system/services.html:94
+msgid "Service"
+msgstr "Servicio"
+
+#: templates/partials/_search.html:70
+msgid "Cron Job"
+msgstr ""
 
 #: templates/partials/_service.html:24
 msgid "Loading service data..."
@@ -9628,10 +10008,6 @@ msgstr ""
 #: templates/partials/_service_log.html:42
 msgid "View container log"
 msgstr "Ver registro del contenedor"
-
-#: templates/partials/_service_log.html:62 templates/system/services.html:94
-msgid "Service"
-msgstr "Servicio"
 
 #: templates/partials/_service_log.html:62
 msgid "log contains"
@@ -10525,6 +10901,10 @@ msgstr "No hay cronjobs aún. Para crear un cron, haga clic en el botón de arri
 msgid "view mode is unknown, only code and table are allowed"
 msgstr "El modo de vista es desconocido, solo se permiten código y tabla"
 
+#: templates/system/cronjobs.html:424
+msgid "Add new cron job"
+msgstr ""
+
 #: templates/system/cronjobs_new.html:11
 msgid "Create Cron Job"
 msgstr "Crear Cron Job"
@@ -10957,6 +11337,50 @@ msgstr "(100+ acciones en un minuto)."
 #: templates/user/activity.html:174
 msgid "IPs show bot-like activity (100+ actions in one minute)."
 msgstr "Las IPs muestran actividad similar a bots (100+ acciones en un minuto)."
+
+#: templates/user/api_docs.html:55
+msgid "API Reference"
+msgstr ""
+
+#: templates/user/api_docs.html:58
+msgid "Programmatic access to all panel features. Authenticate with a Bearer token via"
+msgstr ""
+
+#: templates/user/api_docs.html:70
+msgid "Authentication"
+msgstr ""
+
+#: templates/user/api_docs.html:72
+msgid "Get a token:"
+msgstr ""
+
+#: templates/user/api_docs.html:72
+msgid "with"
+msgstr ""
+
+#: templates/user/api_docs.html:73
+msgid "Use it on every request:"
+msgstr ""
+
+#: templates/user/api_docs.html:74
+msgid "Tokens expire in 24 hours. The API must be enabled in your plan and individual features must be permitted."
+msgstr ""
+
+#: templates/user/api_docs.html:84
+msgid "Search endpoints…"
+msgstr ""
+
+#: templates/user/api_docs.html:93
+msgid "Filter by path, method, or description"
+msgstr ""
+
+#: templates/user/api_docs.html:138
+msgid "Example body"
+msgstr ""
+
+#: templates/user/api_docs.html:144
+msgid "cURL example"
+msgstr ""
 
 #: templates/user/email_template.html:50
 msgid "Click the button below to reset your password:"
