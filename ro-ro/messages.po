@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openpanel\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-06-30 09:00+0200\n"
-"PO-Revision-Date: 2026-06-30 11:05\n"
+"POT-Creation-Date: 2026-07-02 20:00+0200\n"
+"PO-Revision-Date: 2026-07-02 18:26\n"
 "Last-Translator: \n"
 "Language-Team: Romanian\n"
 "MIME-Version: 1.0\n"
@@ -18,31 +18,17 @@ msgstr ""
 "X-Crowdin-File-ID: 10\n"
 "Language: ro_RO\n"
 
-#: app.py:524
+#: app.py:525
 msgid "IP address mismatch. Please login again."
 msgstr "Adresa IP nu corespunde. Te rog autentifică-te din nou."
 
-#: app.py:556
+#: app.py:557
 msgid "Two-Factor Authentication is required on this panel. Please enable it to continue."
 msgstr "Autentificarea în doi pași este obligatorie pe acest panou. Te rog activează-o pentru a continua."
 
-#: app.py:564
+#: app.py:565
 msgid "Disabled in demo mode."
 msgstr "Dezactivat în modul demo."
-
-#: modules/api.py:100 modules/dashboard.py:93
-msgid "User ID not found."
-msgstr "ID-ul utilizatorului nu a fost găsit."
-
-#: modules/api.py:104 modules/dashboard.py:97
-msgid "Failed to retrieve disk usage information."
-msgstr "Nu s-au putut prelua informațiile despre utilizarea discului."
-
-#: modules/api.py:202 modules/api.py:220 modules/api.py:232
-#: modules/dashboard.py:30 modules/docker.py:1044 modules/docker.py:1058
-#: modules/webserver_conf.py:46
-msgid "User not authenticated"
-msgstr "Utilizatorul nu este autentificat"
 
 #: modules/autoinstaller.py:53 templates/dashboard/dashboard.html:166
 #: templates/manager/autoinstaller.html:7
@@ -167,6 +153,19 @@ msgstr "Cron job-ul a fost șters cu succes."
 msgid "Error deleting cron job."
 msgstr "Eroare în ștergerea cron job-ului."
 
+#: modules/dashboard.py:30 modules/docker.py:1044 modules/docker.py:1058
+#: modules/webserver_conf.py:46
+msgid "User not authenticated"
+msgstr "Utilizatorul nu este autentificat"
+
+#: modules/dashboard.py:93
+msgid "User ID not found."
+msgstr "ID-ul utilizatorului nu a fost găsit."
+
+#: modules/dashboard.py:97
+msgid "Failed to retrieve disk usage information."
+msgstr "Nu s-au putut prelua informațiile despre utilizarea discului."
+
 #: modules/dashboard.py:261
 msgid "Dashboard"
 msgstr "Panou de control"
@@ -180,14 +179,15 @@ msgstr "Panou de control"
 #: modules/domain/redirects.py:160 modules/domain/ssl.py:52
 #: modules/domain_suspend.py:29 modules/domain_suspend.py:62
 #: modules/domain_suspend.py:85 modules/domain_suspend.py:118
-#: modules/domains.py:369 modules/dynamic_dns.py:121
+#: modules/domains.py:369 modules/drupal.py:240 modules/drupal.py:716
+#: modules/drupal.py:921 modules/drupal.py:981 modules/dynamic_dns.py:121
 #: modules/email_aliases.py:142 modules/email_aliases.py:249
 #: modules/email_default.py:63 modules/email_deliverability.py:123
 #: modules/email_filters.py:18 modules/emails.py:196 modules/emails.py:274
 #: modules/files/ftp.py:156 modules/goaccess.py:23 modules/json/favicons.py:32
-#: modules/json/screenshots.py:73 modules/mautic.py:71 modules/mautic.py:168
-#: modules/mautic.py:409 modules/mautic.py:573 modules/mautic.py:767
-#: modules/php.py:418 modules/pm2.py:563 modules/pm2.py:1218
+#: modules/json/screenshots.py:73 modules/mautic.py:101 modules/mautic.py:434
+#: modules/mautic.py:590 modules/mautic.py:796 modules/php.py:418
+#: modules/pm2.py:563 modules/pm2.py:1218
 #: modules/sitemanager/temporary_links.py:50 modules/waf.py:113
 #: modules/waf.py:253 modules/waf.py:307 modules/waf.py:377
 #: modules/webmail.py:143 modules/website_builder.py:44
@@ -281,7 +281,7 @@ msgstr "Format de date invalid"
 msgid "docker_data does not contain 'services'."
 msgstr "docker_data nu conține 'services'."
 
-#: modules/docker.py:237 templates/dashboard/dashboard.html:199
+#: modules/docker.py:237 templates/dashboard/dashboard.html:200
 #: templates/docker/containers.html:13 templates/docker/containers.html:565
 #: templates/docker/volumes_TODO.html:10
 msgid "Containers"
@@ -331,7 +331,7 @@ msgstr "Nu s-a putut opri serverul web curent."
 msgid "Invalid web server selected"
 msgstr "Server web invalid selectat"
 
-#: modules/docker.py:929 templates/dashboard/dashboard.html:202
+#: modules/docker.py:929 templates/dashboard/dashboard.html:203
 #: templates/docker/images.html:10
 msgid "Image Updates"
 msgstr "Actualizări de Imagine"
@@ -348,7 +348,7 @@ msgstr "Schimbă imaginea docker"
 msgid "Select docker image"
 msgstr "Selectează imaginea docker"
 
-#: modules/docker.py:1035 templates/dashboard/dashboard.html:201
+#: modules/docker.py:1035 templates/dashboard/dashboard.html:202
 #: templates/docker/containers.html:424 templates/docker/logs.html:10
 #: templates/manager/python_node_apps.html:71
 #: templates/partials/_service_log.html:11 templates/system/cronjobs.html:354
@@ -396,7 +396,7 @@ msgstr "Domenii"
 msgid "Domain name is required"
 msgstr "Numele domeniului este obligatoriu"
 
-#: modules/domains.py:224 templates/domains/new.html:240
+#: modules/domains.py:224 templates/domains/new.html:218
 msgid "Paths for both public and secret files must be set for importing .onion domain."
 msgstr "Căile pentru fișierele publice și secrete trebuie setate pentru a importa un domeniu .onion."
 
@@ -413,7 +413,7 @@ msgid "Error: Reached the maximum allowed number of domains on this hosting plan
 msgstr "Eroare: Ați atins numărul maxim permis de domenii din acest plan de hosting."
 
 #: modules/domains.py:311 templates/domains/new.html:129
-#: templates/domains/new.html:345
+#: templates/domains/new.html:323
 msgid "Add Domain"
 msgstr "Adaugă Domeniul"
 
@@ -421,6 +421,115 @@ msgstr "Adaugă Domeniul"
 #: modules/sitemanager/temporary_links.py:45
 msgid "Domain name not provided."
 msgstr "Numele domeniului nu a fost furnizat."
+
+#: modules/drupal.py:255 modules/mautic.py:131 modules/website_builder.py:177
+#: modules/websites.py:488 modules/websites.py:1018
+msgid "Unable to detect docroot for the domain."
+msgstr "Imposibil de detectat docroot pentru domeniu."
+
+#: modules/drupal.py:322 templates/dashboard/dashboard.html:168
+msgid "Drupal Manager"
+msgstr ""
+
+#: modules/drupal.py:380 modules/wordpress.py:203
+msgid "Domain not found."
+msgstr "Domeniul nu a fost găsit."
+
+#: modules/drupal.py:425
+msgid " and "
+msgstr ""
+
+#: modules/drupal.py:436 modules/mautic.py:323 modules/wordpress.py:321
+msgid "Document root is not provided or invalid."
+msgstr "Directorul rădăcină nu a fost furnizat sau este invalid."
+
+#: modules/drupal.py:445 modules/mautic.py:334 modules/wordpress.py:451
+msgid "No backup options selected."
+msgstr "Nu sunt selectate opțiuni de rezervă."
+
+#: modules/drupal.py:478
+msgid "Could not read database name from settings.php"
+msgstr ""
+
+#: modules/drupal.py:502 modules/mautic.py:401 modules/wordpress.py:447
+msgid "Backup completed successfully!"
+msgstr "Backup terminat cu succes!"
+
+#: modules/drupal.py:520
+msgid "Scan skipped. Drupal scan is currently running."
+msgstr ""
+
+#: modules/drupal.py:565 modules/wordpress.py:1308
+msgid "Scan failed due to a server error."
+msgstr "Scanarea a eșuat din cauza unei erori de server."
+
+#: modules/drupal.py:572 modules/drupal.py:622 modules/wordpress.py:1156
+#: modules/wordpress.py:1324
+msgid "Scan completed. Found installations:\n\n"
+msgstr "Scanarea s-a încheiat. Instalări găsite:\n\n"
+
+#: modules/drupal.py:635 modules/mautic.py:629 modules/pm2.py:457
+#: modules/website_builder.py:238 modules/wordpress.py:1347
+msgid "You have reached the maximum number of sites allowed."
+msgstr "Ai atins numărul maxim de site-uri permise."
+
+#: modules/drupal.py:645 templates/manager/autoinstaller.html:93
+#: templates/manager/drupal/install.html:9
+msgid "Install Drupal"
+msgstr ""
+
+#: modules/drupal.py:707 modules/mautic.py:788 modules/pm2.py:552
+#: modules/website_builder.py:282 modules/wordpress.py:1530
+#: modules/wordpress.py:2016
+msgid "Domain not found"
+msgstr "Domeniul nu a fost găsit"
+
+#: modules/drupal.py:710
+msgid "An error occurred fetching domain from database."
+msgstr ""
+
+#: modules/drupal.py:853
+msgid "Drush site:install timed out after 5 minutes."
+msgstr ""
+
+#: modules/drupal.py:899 modules/wordpress.py:938
+msgid "Missing site ID."
+msgstr "Lipsește ID-ul site-ului."
+
+#: modules/drupal.py:915 modules/drupal.py:963 modules/mautic.py:426
+#: modules/mautic.py:583 modules/website_builder.py:71
+#: modules/website_builder.py:116 modules/wordpress.py:830
+#: modules/wordpress.py:958
+msgid "No data found for the provided site ID"
+msgstr "Nu s-au găsit date pentru ID-ul locului furnizat"
+
+#: modules/drupal.py:933
+msgid "Drupal installation detached from Manager."
+msgstr ""
+
+#: modules/drupal.py:937
+msgid "An error occurred during Drupal detachment. Please try again."
+msgstr ""
+
+#: modules/drupal.py:938
+msgid "An error occurred during Drupal detachment."
+msgstr ""
+
+#: modules/drupal.py:973
+msgid "Drupal installation not found in the database"
+msgstr ""
+
+#: modules/drupal.py:995
+msgid "Database name or user not found in settings.php"
+msgstr ""
+
+#: modules/drupal.py:1012 modules/drupal.py:1013
+msgid "Drupal uninstalled successfully!"
+msgstr ""
+
+#: modules/drupal.py:1016 modules/drupal.py:1017
+msgid "An error occurred during Drupal uninstall."
+msgstr ""
 
 #: modules/dynamic_dns.py:132
 msgid "Dynamic DNS entry created."
@@ -447,7 +556,7 @@ msgstr "Nu s-a putut șterge intrarea Dynamic DNS."
 msgid "Dynamic DNS"
 msgstr "DNS Dinamic"
 
-#: modules/email_aliases.py:126 templates/dashboard/dashboard.html:182
+#: modules/email_aliases.py:126 templates/dashboard/dashboard.html:183
 #: templates/emails/aliases.html:9
 msgid "Aliases"
 msgstr "Alias-uri"
@@ -472,14 +581,14 @@ msgstr "Șterge Alias"
 msgid "Default Email"
 msgstr "Email Implicit"
 
-#: modules/email_deliverability.py:114 templates/dashboard/dashboard.html:184
+#: modules/email_deliverability.py:114 templates/dashboard/dashboard.html:185
 #: templates/emails/deliverability.html:9
 #: templates/emails/deliverability_domain.html:8
 msgid "Email Deliverability"
 msgstr "Livrabilitate Email"
 
 #: modules/email_filters.py:46 modules/email_filters.py:86
-#: modules/email_filters.py:124 templates/dashboard/dashboard.html:183
+#: modules/email_filters.py:124 templates/dashboard/dashboard.html:184
 msgid "Filters"
 msgstr "Filtre"
 
@@ -557,7 +666,7 @@ msgstr "Eroare: Tip de configurare invalid."
 msgid "GoAccess"
 msgstr "GoAccess"
 
-#: modules/info.py:15 templates/dashboard/dashboard.html:219
+#: modules/info.py:15 templates/dashboard/dashboard.html:220
 #: templates/system/server_info.html:8 templates/system/server_info.html:17
 msgid "Server Information"
 msgstr "Informații server"
@@ -578,94 +687,71 @@ msgstr "Nu s-au putut bloca adresele IP – te rog încearcă din nou"
 msgid "Error ocured blocking IP addresses - contact Administrator"
 msgstr "A apărut o eroare la blocarea adreselor IP – contactează Administratorul"
 
-#: modules/ip_blocker.py:81 templates/dashboard/dashboard.html:211
+#: modules/ip_blocker.py:81 templates/dashboard/dashboard.html:212
 #: templates/system/ip_blocker.html:15
 msgid "IP Blocker"
 msgstr "Blocator IP"
 
-#: modules/mautic.py:101 modules/website_builder.py:177 modules/websites.py:488
-#: modules/websites.py:1018
-msgid "Unable to detect docroot for the domain."
-msgstr "Imposibil de detectat docroot pentru domeniu."
-
-#: modules/mautic.py:107 modules/website_builder.py:182 modules/websites.py:494
+#: modules/mautic.py:137 modules/website_builder.py:182 modules/websites.py:494
 #: modules/websites.py:1027
 msgid "Error connecting to database, please try again. If the issue persists contact support."
 msgstr "Eroare la conectarea la baza de date, vă rugăm să încercați din nou. Dacă problema persistă suportul de contact."
 
-#: modules/mautic.py:197
-msgid "Mautic Manager"
-msgstr "Manager Mautic"
+#: modules/mautic.py:285 modules/mautic.py:365
+msgid "Unable to determine the database name from app/config/local.php"
+msgstr ""
 
-#: modules/mautic.py:315
-msgid "Backup restored successfully!"
-msgstr "Backup restaurat cu succes!"
+#: modules/mautic.py:310
+msgid "No files to restore for the selected backup date."
+msgstr ""
 
-#: modules/mautic.py:373 modules/wordpress.py:447
-msgid "Backup completed successfully!"
-msgstr "Backup terminat cu succes!"
-
-#: modules/mautic.py:376 modules/wordpress.py:451
-msgid "No backup options selected."
-msgstr "Nu sunt selectate opțiuni de rezervă."
-
-#: modules/mautic.py:401 modules/mautic.py:567 modules/website_builder.py:71
-#: modules/website_builder.py:116 modules/wordpress.py:830
-#: modules/wordpress.py:958
-msgid "No data found for the provided site ID"
-msgstr "Nu s-au găsit date pentru ID-ul locului furnizat"
-
-#: modules/mautic.py:413
+#: modules/mautic.py:438
 msgid "Mautic installation not found in the database"
 msgstr "Instalația Mautic nu a fost găsită în baza de date"
 
-#: modules/mautic.py:452
+#: modules/mautic.py:468
 msgid "Database name or user not found in app/config/local.php"
 msgstr "Numele bazei de date sau utilizatorul nu este găsit în app/config/local.php"
 
-#: modules/mautic.py:526
+#: modules/mautic.py:542
 msgid "Mautic uninstalled successfully!"
 msgstr "Mautic dezinstalat cu succes!"
 
-#: modules/mautic.py:531
+#: modules/mautic.py:547
 msgid "An error occurred during Mautic uninstall."
 msgstr "O eroare a apărut în timpul dezinstalării lui Mautic."
 
-#: modules/mautic.py:589
+#: modules/mautic.py:610
 msgid "Mautic installation detached from Manager."
 msgstr "Instalație Mautic detașată de Manager."
 
-#: modules/mautic.py:593
+#: modules/mautic.py:614
 msgid "An error occurred during Mautic detachment. Please try again."
 msgstr "O eroare a avut loc în timpul detașării lui Mautic. Vă rugăm să încercați din nou."
 
-#: modules/mautic.py:596
+#: modules/mautic.py:617
 msgid "An error occurred during Mautic detachment."
 msgstr "O eroare a avut loc în timpul detașării lui Mautic."
 
-#: modules/mautic.py:613 templates/manager/autoinstaller.html:139
-#: templates/manager/mautic_install.html:8
+#: modules/mautic.py:630 modules/mautic.py:642
+#: templates/manager/autoinstaller.html:176
+#: templates/manager/mautic_install.html:9
 msgid "Install Mautic"
 msgstr "Instalează Mautic"
 
-#: modules/mautic.py:759 modules/pm2.py:552 modules/website_builder.py:282
-#: modules/wordpress.py:1530 modules/wordpress.py:2016
-msgid "Domain not found"
-msgstr "Domeniul nu a fost găsit"
-
-#: modules/mautic.py:763 modules/wordpress.py:1534
+#: modules/mautic.py:792 modules/wordpress.py:1534
 msgid "An error occurred fetching docroot for domain from database."
 msgstr "A apărut o eroare la preluarea directorului rădăcină al domeniului din baza de date."
 
-#: modules/mautic.py:815
+#: modules/mautic.py:842
 msgid "Error: .htaccess file already exists. Mautic installation cannot proceed!"
 msgstr "Eroare: fișierul .htaccess există deja. Instalarea Mautic nu poate continua!"
 
-#: modules/mautic.py:957
+#: modules/mautic.py:986
 msgid "Error creating MySQL database and user."
 msgstr "Eroare la crearea bazei de date MySQL și a utilizatorului."
 
-#: modules/mautic.py:983
+#: modules/mautic.py:1015
 msgid "Error running:  'mautic:install' command."
 msgstr "Eroare la rularea comenzii 'mautic:install'."
 
@@ -874,10 +960,6 @@ msgstr "Lipsește calea fișierului"
 msgid "Invalid file extension. Only .py, or .js are allowed."
 msgstr "Extensie de fișier nevalidă. Doar .py sau .js sunt permise."
 
-#: modules/pm2.py:457 modules/website_builder.py:238 modules/wordpress.py:1347
-msgid "You have reached the maximum number of sites allowed."
-msgstr "Ai atins numărul maxim de site-uri permise."
-
 #: modules/pm2.py:464 templates/manager/pm2_install.html:9
 msgid "Install Application"
 msgstr "Instalează aplicație"
@@ -1047,7 +1129,7 @@ msgstr "PID invalid"
 msgid "Process killed successfully"
 msgstr "Procesul a fost terminat cu succes"
 
-#: modules/process_manager.py:96 templates/dashboard/dashboard.html:214
+#: modules/process_manager.py:96 templates/dashboard/dashboard.html:215
 #: templates/system/process_manager.html:12
 msgid "Process Manager"
 msgstr "Manager de procese"
@@ -1076,12 +1158,12 @@ msgstr "Nu există încă date despre utilizarea resurselor. Te rog încearcă d
 msgid "An error occurred while fetching resource usage."
 msgstr "A apărut o eroare la preluarea utilizării resurselor."
 
-#: modules/usage.py:29 templates/dashboard/dashboard.html:212
+#: modules/usage.py:29 templates/dashboard/dashboard.html:213
 #: templates/user/stats.html:16
 msgid "Resource Usage"
 msgstr "Utilizare resurse"
 
-#: modules/usage.py:82 templates/dashboard/dashboard.html:213
+#: modules/usage.py:82 templates/dashboard/dashboard.html:214
 msgid "Resource Usage History"
 msgstr "Istoric utilizare resurse"
 
@@ -1132,7 +1214,7 @@ msgstr "WAF este dezactivat pentru %(domain)s."
 msgid "WAF is disabled for %(count)d domains."
 msgstr "WAF este dezactivat pentru %(count)d domenii."
 
-#: modules/waf.py:433 templates/dashboard/dashboard.html:218
+#: modules/waf.py:433 templates/dashboard/dashboard.html:219
 #: templates/system/waf_logs.html:285
 msgid "WAF Logs"
 msgstr "Jurnale WAF"
@@ -1185,7 +1267,7 @@ msgstr "Site-ul a fost detașat cu succes!"
 msgid "An error occurred during website detachment."
 msgstr "A apărut o eroare în timpul detașării site-ului."
 
-#: modules/website_builder.py:245 templates/manager/autoinstaller.html:98
+#: modules/website_builder.py:245 templates/manager/autoinstaller.html:135
 msgid "Create Website"
 msgstr "Creează website"
 
@@ -1290,14 +1372,6 @@ msgstr "Format invalid pentru numele domeniului."
 msgid "WordPress Manager"
 msgstr "Manager WordPress"
 
-#: modules/wordpress.py:203
-msgid "Domain not found."
-msgstr "Domeniul nu a fost găsit."
-
-#: modules/wordpress.py:321
-msgid "Document root is not provided or invalid."
-msgstr "Directorul rădăcină nu a fost furnizat sau este invalid."
-
 #: modules/wordpress.py:414
 msgid "No matching tables found"
 msgstr "Nu au fost găsite tabele corespunzătoare"
@@ -1354,10 +1428,6 @@ msgstr "WordPress a fost dezinstalat cu succes!"
 msgid "An error occurred during WordPress uninstall."
 msgstr "A apărut o eroare în timpul dezinstalării WordPress."
 
-#: modules/wordpress.py:938
-msgid "Missing site ID."
-msgstr "Lipsește ID-ul site-ului."
-
 #: modules/wordpress.py:981
 msgid "WordPress installation detached from Manager."
 msgstr "Instalarea WordPress a fost detașată din Manager."
@@ -1370,17 +1440,9 @@ msgstr "A apărut o eroare la detașarea WordPress. Te rog încearcă din nou."
 msgid "An error occurred during WordPress detachment."
 msgstr "A apărut o eroare la detașarea WordPress."
 
-#: modules/wordpress.py:1156 modules/wordpress.py:1324
-msgid "Scan completed. Found installations:\n\n"
-msgstr "Scanarea s-a încheiat. Instalări găsite:\n\n"
-
 #: modules/wordpress.py:1187 templates/manager/wp/list.html:477
 msgid "Scan skipped. WordPress installation is currently running."
 msgstr "Scanarea a fost omisă. Instalarea WordPress rulează în prezent."
-
-#: modules/wordpress.py:1308
-msgid "Scan failed due to a server error."
-msgstr "Scanarea a eșuat din cauza unei erori de server."
 
 #: modules/wordpress.py:1359 templates/manager/autoinstaller.html:56
 #: templates/manager/wp/install.html:9
@@ -1427,7 +1489,7 @@ msgstr "Cache-ul a fost golit cu succes."
 msgid "Invalid type"
 msgstr "Tip invalid"
 
-#: modules/wordpress.py:2219 templates/base.html:32
+#: modules/wordpress.py:2219 templates/base.html:44
 #: templates/manager/grapejs_editor.html:123
 msgid "Success"
 msgstr "Succes"
@@ -1476,7 +1538,7 @@ msgstr "Lista de favorite este plină"
 msgid "No link provided"
 msgstr "Nu a fost furnizat niciun link"
 
-#: modules/account/favorites.py:110 templates/base.html:197
+#: modules/account/favorites.py:110 templates/base.html:220
 #: templates/user/favorites.html:10
 msgid "Favorites"
 msgstr "Favorite"
@@ -1531,7 +1593,7 @@ msgstr "Resetează parola"
 msgid "locale"
 msgstr "ro_RO"
 
-#: modules/account/locale.py:63 templates/dashboard/dashboard.html:224
+#: modules/account/locale.py:63 templates/dashboard/dashboard.html:225
 #: templates/user/_login.html:96 templates/user/locale.html:10
 msgid "Change Language"
 msgstr "Schimbă limba"
@@ -1540,59 +1602,59 @@ msgstr "Schimbă limba"
 msgid "Login"
 msgstr "Autentificare"
 
-#: modules/account/login.py:110
+#: modules/account/login.py:113
 msgid "Too many failed login attempts. Please try again later."
 msgstr "Prea multe încercări de autentificare eșuate. Te rog încearcă din nou mai târziu."
 
-#: modules/account/login.py:130
+#: modules/account/login.py:133
 msgid "Autologin failed: Invalid username."
 msgstr "Autentificarea automată a eșuat: Nume de utilizator invalid."
 
-#: modules/account/login.py:140
+#: modules/account/login.py:143
 msgid "Error reading token from user files."
 msgstr "Eroare la citirea token-ului din fișierele utilizatorului."
 
-#: modules/account/login.py:150
+#: modules/account/login.py:153
 msgid "Autologin failed: Error occurred fetching data from database."
 msgstr "Autentificarea automată a eșuat: a apărut o eroare la preluarea datelor din baza de date."
 
-#: modules/account/login.py:176
+#: modules/account/login.py:179
 msgid "Autologin failed: User does not exist."
 msgstr "Autentificarea automată a eșuat: utilizatorul nu există."
 
-#: modules/account/login.py:179
+#: modules/account/login.py:182
 msgid "Autologin failed: Invalid or expired token."
 msgstr "Autentificarea automată a eșuat: token invalid sau expirat."
 
-#: modules/account/login.py:196
+#: modules/account/login.py:199
 msgid "Username and password are required."
 msgstr "Numele de utilizator și parola sunt obligatorii."
 
-#: modules/account/login.py:208
+#: modules/account/login.py:211
 msgid "Your account is suspended. Please contact support."
 msgstr "Contul tău este suspendat. Te rog contactează suportul."
 
-#: modules/account/login.py:209
+#: modules/account/login.py:212
 msgid "Unrecognized account. Please check username."
 msgstr "Cont necunoscut. Te rog verifică numele de utilizator."
 
-#: modules/account/login.py:214
+#: modules/account/login.py:217
 msgid "Unable to connect to database."
 msgstr "Nu se poate conecta la baza de date."
 
-#: modules/account/login.py:248
+#: modules/account/login.py:251
 msgid "Invalid password. Please try again."
 msgstr "Parolă invalidă. Te rog încearcă din nou."
 
-#: modules/account/login.py:268
+#: modules/account/login.py:271
 msgid "CAPTCHA validation failed. Please try again."
 msgstr "Validarea CAPTCHA a eșuat. Te rog încearcă din nou."
 
-#: modules/account/login.py:336
+#: modules/account/login.py:339
 msgid "Invalid 2FA code. Please try again."
 msgstr "Cod 2FA invalid. Te rog încearcă din nou."
 
-#: modules/account/login_history.py:15 templates/dashboard/dashboard.html:230
+#: modules/account/login_history.py:15 templates/dashboard/dashboard.html:231
 #: templates/user/loginlog.html:10
 msgid "Login History"
 msgstr "Istoric autentificări"
@@ -1642,7 +1704,7 @@ msgstr "Cheia de acces nu a fost recunoscută."
 msgid "Account no longer exists."
 msgstr "Contul nu mai există."
 
-#: modules/account/sessions.py:34 templates/dashboard/dashboard.html:227
+#: modules/account/sessions.py:34 templates/dashboard/dashboard.html:228
 #: templates/user/active_sessions.html:10
 msgid "Active Sessions"
 msgstr "Sesiuni active"
@@ -1667,12 +1729,12 @@ msgstr "Configurarea a început: configurează aplicația sau salvează codul OT
 msgid "Two-Factor Authentication is now disabled."
 msgstr "Autentificarea cu doi factori este acum dezactivată."
 
-#: modules/account/twofa.py:66 templates/dashboard/dashboard.html:226
+#: modules/account/twofa.py:66 templates/dashboard/dashboard.html:227
 #: templates/dashboard/twofa.html:6 templates/user/twofa_settings.html:14
 msgid "Two-Factor Authentication"
 msgstr "Autentificare cu doi factori"
 
-#: modules/cache/elasticsearch.py:16 templates/dashboard/dashboard.html:177
+#: modules/cache/elasticsearch.py:16 templates/dashboard/dashboard.html:178
 msgid "ElasticSearch"
 msgstr "ElasticSearch"
 
@@ -1680,7 +1742,7 @@ msgstr "ElasticSearch"
 msgid "The leading distributed, RESTful, open source search and analytics engine designed for speed and reliability."
 msgstr "Cel mai popular motor de căutare și analiză distribuit, RESTful, open-source, proiectat pentru viteză și fiabilitate."
 
-#: modules/cache/memcached.py:18 templates/dashboard/dashboard.html:174
+#: modules/cache/memcached.py:18 templates/dashboard/dashboard.html:175
 msgid "Memcached"
 msgstr "Memcached"
 
@@ -1688,7 +1750,7 @@ msgstr "Memcached"
 msgid "A high-performance, distributed in-memory key-value caching system designed to accelerate dynamic web applications."
 msgstr "Un sistem de caching distribuit, de înaltă performanță, în memorie, tip cheie-valoare, conceput pentru a accelera aplicațiile web dinamice."
 
-#: modules/cache/opensearch.py:16 templates/dashboard/dashboard.html:176
+#: modules/cache/opensearch.py:16 templates/dashboard/dashboard.html:177
 msgid "OpenSearch"
 msgstr "OpenSearch"
 
@@ -1696,7 +1758,7 @@ msgstr "OpenSearch"
 msgid "OpenSearch is an open-source, distributed search and analytics suite for large volumes of data. "
 msgstr "OpenSearch este o suită open-source, distribuită, de căutare și analiză pentru volume mari de date."
 
-#: modules/cache/redis.py:16 templates/dashboard/dashboard.html:172
+#: modules/cache/redis.py:16 templates/dashboard/dashboard.html:173
 msgid "Redis"
 msgstr "Redis"
 
@@ -1704,7 +1766,7 @@ msgstr "Redis"
 msgid "Redis (Remote Dictionary Server) is an in-memory, key/value store that is used primarily as an application cache or quick-response database."
 msgstr "Redis (Remote Dictionary Server) este un magazin in-memory de tip cheie/valoare, folosit în principal ca cache de aplicație sau bază de date cu răspuns rapid."
 
-#: modules/cache/valkey.py:16 templates/dashboard/dashboard.html:173
+#: modules/cache/valkey.py:16 templates/dashboard/dashboard.html:174
 msgid "Valkey"
 msgstr "Valkey"
 
@@ -1716,7 +1778,7 @@ msgstr "Valkey este un magazin de tip cheie/valoare în memorie (un fork al Redi
 msgid "Varnish is not running"
 msgstr "Varnish nu rulează"
 
-#: modules/cache/varnish.py:168 templates/dashboard/dashboard.html:175
+#: modules/cache/varnish.py:168 templates/dashboard/dashboard.html:176
 msgid "Varnish"
 msgstr "Varnish"
 
@@ -1805,23 +1867,24 @@ msgstr "Fișierul sau directorul nu a fost găsit"
 msgid "Not found"
 msgstr "Negăsit"
 
-#: modules/core/search.py:26
+#: modules/core/search.py:68
 msgid "Unknown search type"
 msgstr "Tip de căutare necunoscut"
 
-#: modules/core/search.py:33 modules/core/search.py:36
+#: modules/core/search.py:71 modules/core/search.py:78
+#: modules/core/search.py:81
 msgid "Feature not available"
 msgstr "Funcție indisponibilă"
 
-#: modules/core/search.py:54 modules/core/search.py:96
+#: modules/core/search.py:109 modules/core/search.py:151
 msgid "Invalid search query"
 msgstr "Interogare de căutare invalidă"
 
-#: modules/core/search.py:62
+#: modules/core/search.py:117
 msgid "Invalid file path"
 msgstr "Cale de fișier invalidă"
 
-#: modules/core/search.py:104
+#: modules/core/search.py:159
 msgid "Invalid folder path"
 msgstr "Cale de folder invalidă"
 
@@ -1976,7 +2039,8 @@ msgid "Destination"
 msgstr "Destinație"
 
 #: modules/files/backups.py:337 templates/dashboard/dashboard.html:119
-#: templates/files/backups.html:26 templates/manager/mautic.html:131
+#: templates/files/backups.html:26 templates/manager/drupal/single.html:131
+#: templates/manager/drupal/single.html:154 templates/manager/mautic.html:131
 #: templates/manager/mautic.html:154 templates/manager/websitebuilder.html:76
 #: templates/manager/wp/single.html:166 templates/partials/_header.html:98
 msgid "Backups"
@@ -2278,7 +2342,7 @@ msgid "Directory does not exist."
 msgstr "Directorul nu există."
 
 #: modules/files/filemanager.py:1273 templates/dashboard/dashboard.html:113
-#: templates/files/disk_usage.html:77 templates/files/filemanager.html:35
+#: templates/files/disk_usage.html:77 templates/files/filemanager.html:46
 #: templates/files/inodes.html:76
 msgid "File Manager"
 msgstr "Manager de fișiere"
@@ -2609,7 +2673,7 @@ msgstr "Instalarea a expirat."
 msgid "PHP extension management is only available for PHP-FPM, not for Litespeed."
 msgstr "Gestionarea extensiilor PHP este disponibilă doar pentru PHP-FPM, nu pentru Litespeed."
 
-#: modules/phpd/php_extensions.py:339 templates/dashboard/dashboard.html:194
+#: modules/phpd/php_extensions.py:339 templates/dashboard/dashboard.html:195
 #: templates/php/extensions.html:228
 msgid "PHP Extensions"
 msgstr "Extensii PHP"
@@ -2662,7 +2726,7 @@ msgstr "Nu au fost selectate extensii valide."
 msgid "Install queued..."
 msgstr "Instalarea a fost pusă în coadă..."
 
-#: modules/phpd/php_ini.py:16 templates/dashboard/dashboard.html:195
+#: modules/phpd/php_ini.py:16 templates/dashboard/dashboard.html:196
 msgid "PHP.INI Editor"
 msgstr "PHP.INI Editor"
 
@@ -2725,43 +2789,45 @@ msgstr "PostgreSQL la distanță"
 msgid "No redirect link found"
 msgstr "Nu a fost găsit niciun link de redirecționare"
 
-#: templates/base.html:33 templates/manager/grapejs_editor.html:127
+#: templates/base.html:45 templates/manager/grapejs_editor.html:127
 #: templates/manager/python_node_apps.html:695
 #: templates/mysql/databases.html:685
 msgid "Error"
 msgstr "Eroare"
 
-#: templates/base.html:34 templates/docker/images.html:134
+#: templates/base.html:46 templates/docker/images.html:134
 #: templates/mysql/processlist.html:73
 msgid "Info"
 msgstr "Info"
 
-#: templates/base.html:35
+#: templates/base.html:47
 msgid "Uploading"
 msgstr "Se încarcă"
 
-#: templates/base.html:36
+#: templates/base.html:48
 msgid "Loading"
 msgstr "Se încarcă"
 
-#: templates/base.html:37 templates/user/history_usage.html:148
+#: templates/base.html:49 templates/user/history_usage.html:148
 msgid "Warning"
 msgstr "Avertisment"
 
-#: templates/base.html:38 templates/base.html:699
+#: templates/base.html:50 templates/base.html:733 templates/base.html:767
 #: templates/files/backup_restore.html:498
 #: templates/files/filemanager/modals/rename.html:17
 #: templates/mysql/databases.html:676
 msgid "Close"
 msgstr "Închide"
 
-#: templates/base.html:39 templates/docker/delete_confirm.html:48
+#: templates/base.html:51 templates/docker/delete_confirm.html:48
 #: templates/domains/dns.html:192 templates/domains/dns.html:555
 #: templates/domains/domains.html:279 templates/domains/domains.html:309
 #: templates/domains/dynamic_dns.html:24 templates/domains/dynamic_dns.html:65
 #: templates/domains/dynamic_dns.html:136 templates/emails/alias_delete.html:26
 #: templates/emails/delete.html:32 templates/files/backup_restore.html:402
-#: templates/manager/mautic.html:461 templates/manager/mautic.html:511
+#: templates/manager/drupal/single.html:461
+#: templates/manager/drupal/single.html:511 templates/manager/mautic.html:461
+#: templates/manager/mautic.html:511
 #: templates/manager/python_node_apps.html:1112
 #: templates/manager/websitebuilder.html:273
 #: templates/manager/websitebuilder.html:305
@@ -2773,94 +2839,106 @@ msgstr "Închide"
 msgid "Cancel"
 msgstr "Anulează"
 
-#: templates/base.html:42
+#: templates/base.html:54
 msgid "today"
 msgstr "astăzi"
 
-#: templates/base.html:43
+#: templates/base.html:55
 msgid "yesterday"
 msgstr "ieri"
 
-#: templates/base.html:44
+#: templates/base.html:56
 msgid "1 second ago"
 msgstr "acum 1 secundă"
 
-#: templates/base.html:45
+#: templates/base.html:57
 #, python-format
 msgid "%%(n)s seconds ago"
 msgstr "acum %%(n)s secunde"
 
-#: templates/base.html:46
+#: templates/base.html:58
 msgid "1 minute ago"
 msgstr "acum 1 minut"
 
-#: templates/base.html:47
+#: templates/base.html:59
 #, python-format
 msgid "%%(n)s minutes ago"
 msgstr "acum %%(n)s minute"
 
-#: templates/base.html:48
+#: templates/base.html:60
 msgid "1 hour ago"
 msgstr "acum 1 oră"
 
-#: templates/base.html:49
+#: templates/base.html:61
 #, python-format
 msgid "%%(n)s hours ago"
 msgstr "acum %%(n)s ore"
 
-#: templates/base.html:50
+#: templates/base.html:62
 msgid "1 day ago"
 msgstr "acum 1 zi"
 
-#: templates/base.html:51
+#: templates/base.html:63
 #, python-format
 msgid "%%(n)s days ago"
 msgstr "acum %%(n)s zile"
 
-#: templates/base.html:52
+#: templates/base.html:64
 msgid "1 week ago"
 msgstr "acum 1 săptămână"
 
-#: templates/base.html:53
+#: templates/base.html:65
 #, python-format
 msgid "%%(n)s weeks ago"
 msgstr "acum %%(n)s săptămâni"
 
-#: templates/base.html:54
+#: templates/base.html:66
 msgid "last month"
 msgstr "luna trecută"
 
-#: templates/base.html:55
+#: templates/base.html:67
 msgid "1 month ago"
 msgstr "acum 1 lună"
 
-#: templates/base.html:56
+#: templates/base.html:68
 #, python-format
 msgid "%%(n)s months ago"
 msgstr "acum %%(n)s luni"
 
-#: templates/base.html:57
+#: templates/base.html:69
 msgid "last year"
 msgstr "anul trecut"
 
-#: templates/base.html:58
+#: templates/base.html:70
 msgid "1 year ago"
 msgstr "acum 1 an"
 
-#: templates/base.html:59
+#: templates/base.html:71
 #, python-format
 msgid "%%(n)s years ago"
 msgstr "acum %%(n)s ani"
 
-#: templates/base.html:696
+#: templates/base.html:730
 msgid "Notification"
 msgstr "Notificare"
 
-#: templates/base.html:700
+#: templates/base.html:734
 msgid "Dismiss"
 msgstr "Respinge"
 
-#: templates/base.html:722
+#: templates/base.html:766
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#: templates/base.html:779
+msgid "Toggle sidebar"
+msgstr ""
+
+#: templates/base.html:780
+msgid "Show this dialog"
+msgstr ""
+
+#: templates/base.html:843
 msgid "Found a bug? Let us know"
 msgstr "Ai găsit un bug? Spune-ne"
 
@@ -2983,8 +3061,9 @@ msgstr "Nume domeniu"
 
 #: templates/cache/service.html:235 templates/docker/containers.html:563
 #: templates/manager/python_node_apps.html:408
-#: templates/system/cronjobs.html:71 templates/system/cronjobs.html:279
-#: templates/system/process_manager.html:58 templates/system/services.html:109
+#: templates/partials/_search.html:64 templates/system/cronjobs.html:71
+#: templates/system/cronjobs.html:279 templates/system/process_manager.html:58
+#: templates/system/services.html:109
 msgid "Container"
 msgstr "Container"
 
@@ -3032,8 +3111,8 @@ msgid "Start"
 msgstr "Pornește"
 
 #: templates/dashboard/dashboard.html:98 templates/domains/ssl.html:227
-#: templates/files/filemanager.html:205 templates/files/filemanager.html:431
-#: templates/manager/mautic.html:182
+#: templates/files/filemanager.html:216 templates/files/filemanager.html:442
+#: templates/manager/drupal/single.html:182 templates/manager/mautic.html:182
 #: templates/manager/python_node_apps.html:349
 #: templates/manager/websitebuilder.html:114
 #: templates/manager/wp/single.html:304 templates/mysql/databases.html:424
@@ -3144,92 +3223,92 @@ msgstr "Manager site-uri"
 msgid "WP Manager"
 msgstr "WP Manager"
 
-#: templates/dashboard/dashboard.html:168
+#: templates/dashboard/dashboard.html:169
 msgid "Flarum"
 msgstr "Flarum"
 
-#: templates/dashboard/dashboard.html:181
+#: templates/dashboard/dashboard.html:182
 msgid "Email Accounts"
 msgstr "Conturi email"
 
-#: templates/dashboard/dashboard.html:185
+#: templates/dashboard/dashboard.html:186
 msgid "Default Address"
 msgstr "Adresă Implicită"
 
-#: templates/dashboard/dashboard.html:186
+#: templates/dashboard/dashboard.html:187
 msgid "Address Importer"
 msgstr "Importator adrese"
 
-#: templates/dashboard/dashboard.html:187
+#: templates/dashboard/dashboard.html:188
 msgid "Address Exporter"
 msgstr "Exportator de Adrese"
 
-#: templates/dashboard/dashboard.html:191
+#: templates/dashboard/dashboard.html:192
 msgid "Select PHP version"
 msgstr "Selectează versiunea PHP"
 
-#: templates/dashboard/dashboard.html:192
+#: templates/dashboard/dashboard.html:193
 msgid "Default Version"
 msgstr "Versiune implicită"
 
-#: templates/dashboard/dashboard.html:193
+#: templates/dashboard/dashboard.html:194
 msgid "PHP Options"
 msgstr "Opțiuni PHP"
 
-#: templates/dashboard/dashboard.html:200 templates/docker/containers.html:423
+#: templates/dashboard/dashboard.html:201 templates/docker/containers.html:423
 msgid "Terminal"
 msgstr "Terminal"
 
-#: templates/dashboard/dashboard.html:203
+#: templates/dashboard/dashboard.html:204
 msgid "Change Image tag"
 msgstr "Schimbă tag-ul imaginii"
 
-#: templates/dashboard/dashboard.html:204
+#: templates/dashboard/dashboard.html:205
 msgid "Change webserver"
 msgstr "Schimbă webserver-ul"
 
-#: templates/dashboard/dashboard.html:205
+#: templates/dashboard/dashboard.html:206
 msgid "Change MySQL Type"
 msgstr "Schimbă tipul MySQL"
 
-#: templates/dashboard/dashboard.html:209 templates/partials/_header.html:48
+#: templates/dashboard/dashboard.html:210 templates/partials/_header.html:48
 msgid "Services"
 msgstr "Servicii"
 
-#: templates/dashboard/dashboard.html:210
+#: templates/dashboard/dashboard.html:211
 #: templates/files/backup_settings.html:97 templates/system/cronjobs.html:25
 msgid "Cron Jobs"
 msgstr "Cron Jobs"
 
-#: templates/dashboard/dashboard.html:215
+#: templates/dashboard/dashboard.html:216
 msgid "Change TimeZone"
 msgstr "Schimbă fusul orar"
 
-#: templates/dashboard/dashboard.html:216
+#: templates/dashboard/dashboard.html:217
 msgid "Webserver Configuration"
 msgstr "Configurație webserver"
 
-#: templates/dashboard/dashboard.html:217
+#: templates/dashboard/dashboard.html:218
 msgid "WAF Settings"
 msgstr "Setări WAF"
 
-#: templates/dashboard/dashboard.html:223 templates/user/account.html:10
+#: templates/dashboard/dashboard.html:224 templates/user/account.html:10
 msgid "Email & Password"
 msgstr "Email și parolă"
 
-#: templates/dashboard/dashboard.html:225 templates/user/notifications.html:10
+#: templates/dashboard/dashboard.html:226 templates/user/notifications.html:10
 msgid "Email Notifications"
 msgstr "Notificări email"
 
-#: templates/dashboard/dashboard.html:228
+#: templates/dashboard/dashboard.html:229
 msgid "Favorite Pages"
 msgstr "Pagini favorite"
 
-#: templates/dashboard/dashboard.html:229
+#: templates/dashboard/dashboard.html:230
 msgid "Account Activity"
 msgstr "Activitate cont"
 
-#: templates/dashboard/dashboard.html:231
+#: templates/dashboard/dashboard.html:232
 msgid "Log out"
 msgstr "Deconectare"
 
@@ -3243,14 +3322,15 @@ msgstr "Informații"
 
 #: templates/dashboard/information.html:33 templates/emails/info.html:21
 #: templates/emails/new.html:42 templates/files/ftp.html:51
-#: templates/files/ftp_new.html:29 templates/manager/wp/install.html:111
-#: templates/mysql/mysql_user.html:24 templates/mysql/mysql_user.html:26
-#: templates/mysql/password.html:21 templates/mysql/remote_mysql.html:158
-#: templates/mysql/remote_mysql.html:180 templates/mysql/users.html:83
-#: templates/mysql/wizard.html:72 templates/psql/password.html:21
-#: templates/psql/psql_user.html:24 templates/psql/psql_user.html:26
-#: templates/psql/users.html:80 templates/user/account.html:68
-#: templates/user/login.html:18
+#: templates/files/ftp_new.html:29 templates/manager/drupal/install.html:120
+#: templates/manager/mautic_install.html:100
+#: templates/manager/wp/install.html:111 templates/mysql/mysql_user.html:24
+#: templates/mysql/mysql_user.html:26 templates/mysql/password.html:21
+#: templates/mysql/remote_mysql.html:158 templates/mysql/remote_mysql.html:180
+#: templates/mysql/users.html:83 templates/mysql/wizard.html:72
+#: templates/psql/password.html:21 templates/psql/psql_user.html:24
+#: templates/psql/psql_user.html:26 templates/psql/users.html:80
+#: templates/user/account.html:68 templates/user/login.html:18
 msgid "Username"
 msgstr "Nume utilizator"
 
@@ -3317,7 +3397,9 @@ msgstr "Utilizare memorie"
 
 #: templates/dashboard/usage.html:263 templates/dashboard/usage.html:264
 #: templates/dashboard/usage.html:265 templates/dashboard/usage.html:266
-#: templates/manager/mautic.html:214 templates/manager/mautic.html:257
+#: templates/manager/drupal/single.html:214
+#: templates/manager/drupal/single.html:257 templates/manager/mautic.html:214
+#: templates/manager/mautic.html:257
 #: templates/manager/python_node_apps.html:387
 #: templates/manager/websitebuilder.html:170
 #: templates/manager/wp/single.html:405 templates/manager/wp/single.html:447
@@ -3559,18 +3641,18 @@ msgstr "Total memorie:"
 #: templates/domains/logs.html:83 templates/emails/accounts.html:20
 #: templates/emails/aliases.html:21 templates/emails/deliverability.html:18
 #: templates/files/clamav/quarantine.html:31 templates/files/ftp.html:24
-#: templates/manager/sites.html:23 templates/manager/wp/list.html:44
-#: templates/mysql/configuration.html:21 templates/mysql/databases.html:187
-#: templates/mysql/processlist.html:22 templates/mysql/users.html:50
-#: templates/partials/_search.html:19 templates/php/extensions.html:18
-#: templates/php/options.html:18 templates/php/settings.html:20
-#: templates/psql/configuration.html:18 templates/psql/databases.html:109
-#: templates/psql/processlist.html:60 templates/psql/users.html:47
-#: templates/system/cronjobs.html:167 templates/system/process_manager.html:23
-#: templates/system/waf.html:26 templates/system/waf_logs.html:35
-#: templates/user/active_sessions.html:24 templates/user/activity.html:28
-#: templates/user/favorites.html:28 templates/user/history_usage.html:22
-#: templates/user/loginlog.html:26
+#: templates/manager/drupal/list.html:38 templates/manager/sites.html:23
+#: templates/manager/wp/list.html:44 templates/mysql/configuration.html:21
+#: templates/mysql/databases.html:187 templates/mysql/processlist.html:22
+#: templates/mysql/users.html:50 templates/partials/_search.html:19
+#: templates/php/extensions.html:18 templates/php/options.html:18
+#: templates/php/settings.html:20 templates/psql/configuration.html:18
+#: templates/psql/databases.html:109 templates/psql/processlist.html:60
+#: templates/psql/users.html:47 templates/system/cronjobs.html:167
+#: templates/system/process_manager.html:23 templates/system/waf.html:26
+#: templates/system/waf_logs.html:35 templates/user/active_sessions.html:24
+#: templates/user/activity.html:28 templates/user/favorites.html:28
+#: templates/user/history_usage.html:22 templates/user/loginlog.html:26
 msgid "Search"
 msgstr "Caută"
 
@@ -3582,7 +3664,7 @@ msgstr "Afișează coloanele"
 
 #: templates/docker/containers.html:55 templates/docker/containers.html:157
 #: templates/domains/dns.html:106 templates/domains/dns.html:120
-#: templates/files/filemanager.html:102
+#: templates/files/filemanager.html:113
 #: templates/files/filemanager/table.html:6
 #: templates/files/filemanager/table_trash.html:6 templates/files/trash.html:55
 #: templates/manager/pm2_install.html:102
@@ -3609,6 +3691,7 @@ msgstr "PID-uri"
 #: templates/files/backup_wizard.html:130
 #: templates/files/clamav/quarantine.html:72 templates/files/disk_usage.html:44
 #: templates/files/ftp.html:70 templates/files/inodes.html:43
+#: templates/manager/drupal/list.html:71
 #: templates/manager/python_node_apps.html:172 templates/manager/sites.html:85
 #: templates/manager/wp/list.html:126 templates/mysql/databases.html:207
 #: templates/mysql/users.html:86 templates/psql/databases.html:150
@@ -3776,7 +3859,7 @@ msgid "Tag"
 msgstr "Tag"
 
 #: templates/docker/images.html:133 templates/files/ftp_password.html:179
-#: templates/files/ftp_path.html:69 templates/manager/sites.html:259
+#: templates/files/ftp_path.html:69 templates/manager/sites.html:269
 #: templates/user/account.html:117
 msgid "Update"
 msgstr "Actualizează"
@@ -4030,7 +4113,7 @@ msgstr "TTL"
 
 #: templates/domains/dns.html:108 templates/domains/domains.html:83
 #: templates/domains/domains.html:194 templates/domains/dynamic_dns.html:169
-#: templates/files/filemanager.html:175
+#: templates/files/filemanager.html:186
 #: templates/files/filemanager/table.html:28
 #: templates/files/filemanager/table_trash.html:38
 #: templates/files/trash.html:153 templates/manager/pm2_install.html:127
@@ -4127,10 +4210,13 @@ msgstr "Adresă"
 #: templates/domains/new.html:45 templates/emails/alias_new.html:21
 #: templates/emails/deliverability.html:35
 #: templates/emails/deliverability.html:107 templates/emails/new.html:23
-#: templates/files/ftp_new.html:34 templates/manager/pm2_install.html:305
+#: templates/files/ftp_new.html:34 templates/manager/drupal/install.html:80
+#: templates/manager/drupal/list.html:67
+#: templates/manager/mautic_install.html:60
+#: templates/manager/pm2_install.html:305
 #: templates/manager/websitebuilder_install.html:37
 #: templates/manager/wp/install.html:71 templates/manager/wp/list.html:122
-#: templates/php/settings.html:168
+#: templates/partials/_search.html:55 templates/php/settings.html:168
 msgid "Domain"
 msgstr "Domeniu"
 
@@ -4158,7 +4244,9 @@ msgstr "Caddy reînnoiește automat certificatele Let's Encrypt cu o nouă perec
 msgid "Using a custom certificate. Regenerate this record whenever you replace the certificate."
 msgstr "Se folosește un certificat personalizat. Regenerează această înregistrare ori de câte ori înlocuiești certificatul."
 
-#: templates/domains/dns.html:356 templates/manager/wp/install.html:137
+#: templates/domains/dns.html:356 templates/manager/drupal/install.html:146
+#: templates/manager/mautic_install.html:126
+#: templates/manager/wp/install.html:137
 msgid "Regenerate"
 msgstr "Regenerează"
 
@@ -4250,7 +4338,7 @@ msgstr "Editează ca tabel"
 msgid "Saving zone file for domain"
 msgstr "Se salvează fișierul zonei pentru domeniul"
 
-#: templates/domains/dns.html:830 templates/domains/new.html:280
+#: templates/domains/dns.html:830 templates/domains/new.html:258
 msgid "Please wait for the process to finish."
 msgstr "Te rog așteaptă finalizarea procesului."
 
@@ -4434,6 +4522,10 @@ msgstr "Anterior"
 msgid "Next"
 msgstr "Următor"
 
+#: templates/domains/domains.html:667
+msgid "Add new domain"
+msgstr ""
+
 #: templates/domains/dynamic_dns.html:14
 msgid "Keep DNS records in sync with changing IP addresses via a token URL."
 msgstr "Păstrează înregistrările DNS sincronizate cu adresele IP în schimbare printr-un URL cu token."
@@ -4508,6 +4600,7 @@ msgid "never"
 msgstr "niciodată"
 
 #: templates/domains/dynamic_dns.html:196 templates/mysql/wizard.html:139
+#: templates/user/api_docs.html:149
 msgid "Copied!"
 msgstr "Copiat!"
 
@@ -4568,7 +4661,7 @@ msgstr "URI"
 
 #: templates/domains/logs.html:188 templates/domains/logs.html:222
 #: templates/files/backup_wizard.html:48 templates/files/backup_wizard.html:124
-#: templates/files/disk_usage.html:41 templates/files/filemanager.html:166
+#: templates/files/disk_usage.html:41 templates/files/filemanager.html:177
 #: templates/files/filemanager/table.html:7
 #: templates/files/filemanager/table_trash.html:7
 #: templates/files/trash.html:144 templates/mysql/databases.html:205
@@ -4604,54 +4697,55 @@ msgstr "Arată detaliile"
 msgid "docroot module or feature are not enabled. Contact Administrator to change docroot."
 msgstr "Modulul sau funcționalitatea docroot nu sunt activate. Contactează Administratorul pentru a schimba docroot."
 
-#: templates/domains/new.html:220
+#: templates/domains/new.html:198
 msgid "Invalid domain name. Please enter a valid domain name like"
 msgstr "Nume de domeniu invalid. Te rog introdu un nume de domeniu valid, de exemplu"
 
-#: templates/domains/new.html:220 templates/manager/mautic.html:389
+#: templates/domains/new.html:198 templates/manager/drupal/single.html:389
+#: templates/manager/drupal/single.html:474 templates/manager/mautic.html:389
 #: templates/manager/mautic.html:474 templates/manager/websitebuilder.html:214
 #: templates/manager/websitebuilder.html:283
 #: templates/manager/wp/single.html:2012 templates/manager/wp/single.html:2083
 msgid "or"
 msgstr "sau"
 
-#: templates/domains/new.html:247
+#: templates/domains/new.html:225
 msgid "Paths for both public and secret files must start with /var/www/html/."
 msgstr "Căile pentru fișierele publice și secrete trebuie să înceapă cu /var/www/html/."
 
-#: templates/domains/new.html:280
+#: templates/domains/new.html:258
 msgid "Adding domain"
 msgstr "Se adaugă domeniul"
 
-#: templates/domains/new.html:291 templates/domains/new.html:357
+#: templates/domains/new.html:269 templates/domains/new.html:335
 msgid "Error adding domain name"
 msgstr "Eroare la adăugarea numelui de domeniu"
 
-#: templates/domains/new.html:291 templates/emails/confirm_import.html:166
+#: templates/domains/new.html:269 templates/emails/confirm_import.html:144
 msgid "Network response from backend was not ok. Please contact support."
 msgstr "Răspunsul de rețea de la backend nu a fost ok. Te rog contactează suportul."
 
-#: templates/domains/new.html:338
+#: templates/domains/new.html:316
 msgid "Domain name"
 msgstr "Numele de domeniu"
 
-#: templates/domains/new.html:338
+#: templates/domains/new.html:316
 msgid "added successfully."
 msgstr "a fost adăugat cu succes."
 
-#: templates/domains/new.html:357
+#: templates/domains/new.html:335
 msgid "Click on Show Details above to view the log."
 msgstr "Apasă pe Arată detaliile de mai sus pentru a vedea logul."
 
-#: templates/domains/new.html:370
+#: templates/domains/new.html:348
 msgid "Retry"
 msgstr "Reîncearcă"
 
-#: templates/domains/new.html:442
+#: templates/domains/new.html:420
 msgid "Converted to Punycode:"
 msgstr "Convertit în Punycode:"
 
-#: templates/domains/new.html:442
+#: templates/domains/new.html:420
 msgid "(for compatibility with internationalized domain names)"
 msgstr "(pentru compatibilitate cu numele de domeniu internaționalizate)"
 
@@ -4954,7 +5048,8 @@ msgid "Webmail"
 msgstr "Webmail"
 
 #: templates/emails/accounts.html:108 templates/emails/aliases.html:82
-#: templates/manager/sites.html:9 templates/manager/sites.html:239
+#: templates/manager/drupal/list.html:90 templates/manager/drupal/list.html:154
+#: templates/manager/sites.html:9 templates/manager/sites.html:249
 #: templates/manager/wp/list.html:145 templates/partials/_service.html:54
 msgid "Manage"
 msgstr "Gestionează"
@@ -4981,6 +5076,10 @@ msgstr "Webmail pentru "
 #: templates/emails/accounts.html:157
 msgid " opened in new window."
 msgstr " a fost deschis într-o fereastră nouă."
+
+#: templates/emails/accounts.html:173
+msgid "Add new email account"
+msgstr ""
 
 #: templates/emails/alias_delete.html:10
 msgid "Permanently delete this alias and all its destinations."
@@ -5036,7 +5135,9 @@ msgstr "Acțiune"
 
 #: templates/emails/alias_detail.html:42 templates/emails/alias_detail.html:127
 #: templates/emails/alias_detail.html:171
-#: templates/emails/alias_detail.html:177 templates/manager/mautic.html:132
+#: templates/emails/alias_detail.html:177
+#: templates/manager/drupal/single.html:132
+#: templates/manager/drupal/single.html:161 templates/manager/mautic.html:132
 #: templates/manager/mautic.html:161 templates/manager/python_node_apps.html:81
 #: templates/manager/websitebuilder.html:86
 #: templates/manager/wp/single.html:186 templates/user/passkeys.html:44
@@ -5170,6 +5271,8 @@ msgid "The following users will be imported:"
 msgstr "Următorii utilizatori vor fi importați:"
 
 #: templates/emails/confirm_import.html:45
+#: templates/manager/drupal/install.html:112
+#: templates/manager/mautic_install.html:92
 #: templates/manager/wp/install.html:103
 #: templates/user/reset_password/request_email.html:21
 msgid "Email"
@@ -5177,15 +5280,16 @@ msgstr "Email"
 
 #: templates/emails/confirm_import.html:46 templates/emails/info.html:22
 #: templates/emails/new.html:86 templates/emails/single_account.html:211
-#: templates/files/ftp_new.html:58 templates/manager/wp/install.html:128
-#: templates/mysql/mysql_user.html:43 templates/mysql/mysql_user.html:52
-#: templates/mysql/password.html:41 templates/mysql/remote_mysql.html:166
-#: templates/mysql/remote_mysql.html:167 templates/mysql/root_password.html:43
-#: templates/mysql/wizard.html:73 templates/mysql/wizard.html:244
-#: templates/psql/password.html:41 templates/psql/password.html:51
-#: templates/psql/psql_user.html:43 templates/psql/psql_user.html:53
-#: templates/psql/wizard.html:75 templates/user/account.html:76
-#: templates/user/login.html:22
+#: templates/files/ftp_new.html:58 templates/manager/drupal/install.html:137
+#: templates/manager/mautic_install.html:117
+#: templates/manager/wp/install.html:128 templates/mysql/mysql_user.html:43
+#: templates/mysql/mysql_user.html:52 templates/mysql/password.html:41
+#: templates/mysql/remote_mysql.html:166 templates/mysql/remote_mysql.html:167
+#: templates/mysql/root_password.html:43 templates/mysql/wizard.html:73
+#: templates/mysql/wizard.html:244 templates/psql/password.html:41
+#: templates/psql/password.html:51 templates/psql/psql_user.html:43
+#: templates/psql/psql_user.html:53 templates/psql/wizard.html:75
+#: templates/user/account.html:76 templates/user/login.html:22
 msgid "Password"
 msgstr "Parolă"
 
@@ -5202,36 +5306,36 @@ msgid "Back to Upload"
 msgstr "Înapoi la încărcare"
 
 #: templates/emails/confirm_import.html:83
-#: templates/emails/confirm_import.html:206
+#: templates/emails/confirm_import.html:184
 msgid "Start Import"
 msgstr "Pornește importul"
 
-#: templates/emails/confirm_import.html:143 templates/psql/import.html:52
+#: templates/emails/confirm_import.html:121 templates/psql/import.html:52
 msgid "Importing..."
 msgstr "Se importă..."
 
-#: templates/emails/confirm_import.html:156
+#: templates/emails/confirm_import.html:134
 msgid "Starting import. Please wait for the process to finish."
 msgstr "Se pornește importul. Te rog așteaptă finalizarea procesului."
 
-#: templates/emails/confirm_import.html:199
+#: templates/emails/confirm_import.html:177
 msgid "Import process completed."
 msgstr "Procesul de import a fost finalizat."
 
-#: templates/emails/confirm_import.html:208
+#: templates/emails/confirm_import.html:186
 msgid "Error occurred during import."
 msgstr "A apărut o eroare în timpul importului."
 
-#: templates/emails/confirm_import.html:208
+#: templates/emails/confirm_import.html:186
 msgid "Please check the output below."
 msgstr "Te rog verifică ieșirea de mai jos."
 
-#: templates/emails/confirm_import.html:215
-#: templates/emails/confirm_import.html:236
+#: templates/emails/confirm_import.html:193
+#: templates/emails/confirm_import.html:214
 msgid "Retry Import"
 msgstr "Reîncearcă Importul"
 
-#: templates/emails/confirm_import.html:230
+#: templates/emails/confirm_import.html:208
 msgid "A network error occurred. Please try again."
 msgstr "A apărut o eroare de rețea. Te rog încearcă din nou."
 
@@ -5385,7 +5489,7 @@ msgstr "Selectează o adresă de email pentru a gestiona filtrele Sieve."
 
 #: templates/emails/filter.html:14 templates/emails/import.html:10
 #: templates/files/edit_file.html:118 templates/partials/_footer.html:46
-#: templates/php/options.html:157
+#: templates/php/options.html:157 templates/user/api_docs.html:63
 msgid "Documentation"
 msgstr "Documentație"
 
@@ -5599,7 +5703,7 @@ msgstr "Adaugă acțiune"
 msgid "Save filters"
 msgstr "Salvează filtrele"
 
-#: templates/emails/filter.html:241
+#: templates/emails/filter.html:241 templates/files/edit_file.html:230
 msgid "Save file"
 msgstr "Salvează fișierul"
 
@@ -5623,7 +5727,7 @@ msgstr "Încarcă fișier"
 msgid "CSV, XLSX or XLS files only."
 msgstr "Doar fișiere CSV, XLSX sau XLS."
 
-#: templates/emails/import.html:49 templates/files/filemanager.html:84
+#: templates/emails/import.html:49 templates/files/filemanager.html:95
 #: templates/files/upload_file.html:113
 msgid "Upload"
 msgstr "Încarcă"
@@ -5682,7 +5786,8 @@ msgstr "info"
 
 #: templates/emails/new.html:76 templates/emails/single_account.html:201
 #: templates/files/ftp_new.html:48 templates/files/ftp_password.html:33
-#: templates/manager/mautic_install.html:152
+#: templates/manager/drupal/install.html:130
+#: templates/manager/mautic_install.html:110
 #: templates/manager/wp/install.html:121 templates/mysql/mysql_user.html:33
 #: templates/mysql/password.html:31 templates/mysql/root_password.html:24
 #: templates/mysql/wizard.html:235 templates/psql/password.html:31
@@ -5692,7 +5797,8 @@ msgstr "Parolă slabă"
 
 #: templates/emails/new.html:77 templates/emails/single_account.html:202
 #: templates/files/ftp_new.html:49 templates/files/ftp_password.html:34
-#: templates/manager/mautic_install.html:153
+#: templates/manager/drupal/install.html:131
+#: templates/manager/mautic_install.html:111
 #: templates/manager/wp/install.html:122 templates/mysql/mysql_user.html:34
 #: templates/mysql/password.html:32 templates/mysql/root_password.html:25
 #: templates/mysql/wizard.html:236 templates/psql/password.html:32
@@ -5702,7 +5808,8 @@ msgstr "Parolă medie"
 
 #: templates/emails/new.html:78 templates/emails/single_account.html:203
 #: templates/files/ftp_new.html:50 templates/files/ftp_password.html:35
-#: templates/manager/mautic_install.html:154
+#: templates/manager/drupal/install.html:132
+#: templates/manager/mautic_install.html:112
 #: templates/manager/wp/install.html:123 templates/mysql/mysql_user.html:35
 #: templates/mysql/password.html:33 templates/mysql/root_password.html:26
 #: templates/mysql/wizard.html:237 templates/psql/password.html:33
@@ -5932,8 +6039,10 @@ msgstr "Restaurarea a eșuat."
 msgid "Restoring..."
 msgstr "Se restaurează..."
 
-#: templates/files/backup_restore.html:415 templates/manager/mautic.html:421
-#: templates/manager/websitebuilder.html:237
+#: templates/files/backup_restore.html:415
+#: templates/manager/drupal/single.html:421
+#: templates/manager/drupal/single.html:737 templates/manager/mautic.html:421
+#: templates/manager/mautic.html:759 templates/manager/websitebuilder.html:237
 #: templates/manager/websitebuilder.html:520
 #: templates/manager/wp/single.html:2036 templates/manager/wp/single.html:2511
 msgid "Start Restore"
@@ -6095,7 +6204,8 @@ msgstr ""
 msgid "Backup in progress…"
 msgstr ""
 
-#: templates/files/backup_wizard.html:87 templates/manager/mautic.html:384
+#: templates/files/backup_wizard.html:87
+#: templates/manager/drupal/single.html:384 templates/manager/mautic.html:384
 #: templates/manager/websitebuilder.html:207
 #: templates/manager/wp/single.html:2003
 msgid "Generate Backup"
@@ -6241,51 +6351,63 @@ msgstr "Deschide în Managerul de Fișiere"
 msgid "You have unsaved changes. Leave anyway?"
 msgstr "Ai modificări nesalvate. Pleci totuși?"
 
-#: templates/files/filemanager.html:74
+#: templates/files/filemanager.html:35
+msgid "Select all files"
+msgstr ""
+
+#: templates/files/filemanager.html:36
+msgid "Delete selected files"
+msgstr ""
+
+#: templates/files/filemanager.html:37
+msgid "New file"
+msgstr ""
+
+#: templates/files/filemanager.html:85
 msgid "Search Files & Folders"
 msgstr "Caută fișiere și foldere"
 
-#: templates/files/filemanager.html:78
+#: templates/files/filemanager.html:89
 msgid "New File"
 msgstr "Fișier nou"
 
-#: templates/files/filemanager.html:81
+#: templates/files/filemanager.html:92
 msgid "New Folder"
 msgstr "Folder nou"
 
-#: templates/files/filemanager.html:112
+#: templates/files/filemanager.html:123
 #: templates/files/filemanager/table.html:10
 #: templates/files/filemanager/table_trash.html:10
 #: templates/files/trash.html:90 templates/user/history_usage.html:136
 msgid "Date"
 msgstr "Dată"
 
-#: templates/files/filemanager.html:121
+#: templates/files/filemanager.html:132
 #: templates/files/filemanager/table.html:13
 #: templates/files/filemanager/table_trash.html:23
 #: templates/files/trash.html:99
 msgid "Owner"
 msgstr "Proprietar"
 
-#: templates/files/filemanager.html:130
+#: templates/files/filemanager.html:141
 #: templates/files/filemanager/table.html:16
 #: templates/files/filemanager/table_trash.html:26
 #: templates/files/trash.html:108
 msgid "Group"
 msgstr "Grup"
 
-#: templates/files/filemanager.html:139
+#: templates/files/filemanager.html:150
 #: templates/files/filemanager/table.html:20
 #: templates/files/filemanager/table_trash.html:30
 #: templates/files/trash.html:117
 msgid "Links"
 msgstr "Linkuri"
 
-#: templates/files/filemanager.html:148 templates/files/trash.html:126
+#: templates/files/filemanager.html:159 templates/files/trash.html:126
 msgid "Link Target"
 msgstr "Țintă link"
 
-#: templates/files/filemanager.html:157
+#: templates/files/filemanager.html:168
 #: templates/files/filemanager/actions_buttons.html:50
 #: templates/files/filemanager/new_actions_buttons.html:41
 #: templates/files/filemanager/table.html:33
@@ -6294,36 +6416,36 @@ msgstr "Țintă link"
 msgid "Permissions"
 msgstr "Permisiuni"
 
-#: templates/files/filemanager.html:196
+#: templates/files/filemanager.html:207
 msgid "in:"
 msgstr "în:"
 
-#: templates/files/filemanager.html:196
+#: templates/files/filemanager.html:207
 msgid "all folders"
 msgstr "toate folderele"
 
-#: templates/files/filemanager.html:214
+#: templates/files/filemanager.html:225
 msgid "Folders"
 msgstr "Foldere"
 
-#: templates/files/filemanager.html:223
+#: templates/files/filemanager.html:234
 msgid "Specific extension"
 msgstr "Extensie specifică"
 
 #: templates/files/clamav/quarantine.html:71
-#: templates/files/filemanager.html:429
+#: templates/files/filemanager.html:440
 msgid "File"
 msgstr "Fișier"
 
-#: templates/files/filemanager.html:429
+#: templates/files/filemanager.html:440
 msgid "has no permissions (0000) and cannot be accessed."
 msgstr "nu are permisiuni (0000) și nu poate fi accesat."
 
-#: templates/files/filemanager.html:431
+#: templates/files/filemanager.html:442
 msgid "have no permissions (0000) and cannot be accessed."
 msgstr "nu au permisiuni (0000) și nu pot fi accesate."
 
-#: templates/files/filemanager.html:433
+#: templates/files/filemanager.html:444
 msgid "files have no permissions (0000) and cannot be accessed."
 msgstr "fișiere nu au permisiuni (0000) și nu pot fi accesate."
 
@@ -6408,6 +6530,10 @@ msgstr "Adaugă primul tău cont"
 #: templates/files/ftp.html:111
 msgid "Change Path"
 msgstr "Schimbă calea"
+
+#: templates/files/ftp.html:182
+msgid "Add new FTP account"
+msgstr ""
 
 #: templates/files/ftp_connections.html:10
 msgid "Current FTP sessions of all sub-accounts."
@@ -6663,6 +6789,7 @@ msgstr "Scanarea a eșuat: "
 #: templates/files/filemanager/copy.html:127
 #: templates/files/filemanager/new_actions_buttons.html:13
 #: templates/mysql/wizard.html:80 templates/mysql/wizard.html:139
+#: templates/user/api_docs.html:149 templates/user/api_docs.html:151
 msgid "Copy"
 msgstr "Copiază"
 
@@ -6901,68 +7028,82 @@ msgid "Install WordPress CMS in a few clicks."
 msgstr "Instalează WordPress CMS în câteva clickuri."
 
 #: templates/manager/autoinstaller.html:48
-#: templates/manager/autoinstaller.html:90
-#: templates/manager/autoinstaller.html:131
-#: templates/manager/autoinstaller.html:170
-#: templates/manager/autoinstaller.html:205
+#: templates/manager/autoinstaller.html:87
+#: templates/manager/autoinstaller.html:127
+#: templates/manager/autoinstaller.html:168
+#: templates/manager/autoinstaller.html:207
+#: templates/manager/autoinstaller.html:242
 msgid "No"
 msgstr "Nu"
 
 #: templates/manager/autoinstaller.html:48
-#: templates/manager/autoinstaller.html:90
-#: templates/manager/autoinstaller.html:131
-#: templates/manager/autoinstaller.html:170
-#: templates/manager/autoinstaller.html:205
+#: templates/manager/autoinstaller.html:87
+#: templates/manager/autoinstaller.html:127
+#: templates/manager/autoinstaller.html:168
+#: templates/manager/autoinstaller.html:207
+#: templates/manager/autoinstaller.html:242
 msgid "existing installation"
 msgstr "instalare existentă"
 
 #: templates/manager/autoinstaller.html:48
-#: templates/manager/autoinstaller.html:90
-#: templates/manager/autoinstaller.html:131
-#: templates/manager/autoinstaller.html:170
-#: templates/manager/autoinstaller.html:205
+#: templates/manager/autoinstaller.html:87
+#: templates/manager/autoinstaller.html:127
+#: templates/manager/autoinstaller.html:168
+#: templates/manager/autoinstaller.html:207
+#: templates/manager/autoinstaller.html:242
 msgid "s"
 msgstr "s"
 
-#: templates/manager/autoinstaller.html:79
+#: templates/manager/autoinstaller.html:76
+#: templates/manager/drupal/list.html:148
+msgid "Drupal"
+msgstr ""
+
+#: templates/manager/autoinstaller.html:80
+#: templates/manager/drupal/install.html:10
+#: templates/manager/drupal/install.html:400
+msgid "Install Drupal CMS in a few clicks."
+msgstr ""
+
+#: templates/manager/autoinstaller.html:116
 #: templates/manager/websitebuilder_install.html:9
 msgid "Website Builder"
 msgstr "Website Builder"
 
-#: templates/manager/autoinstaller.html:83
+#: templates/manager/autoinstaller.html:120
 msgid "Create HTML websites with a drag-drop editor."
 msgstr "Creează site-uri HTML cu un editor drag-and-drop."
 
-#: templates/manager/autoinstaller.html:120
+#: templates/manager/autoinstaller.html:157
 msgid "Mautic"
 msgstr "Mautic"
 
-#: templates/manager/autoinstaller.html:124
+#: templates/manager/autoinstaller.html:161
 msgid "Install Mautic - free and open source marketing automation software."
 msgstr "Instalează Mautic - software gratuit și open source pentru automatizarea marketingului."
 
-#: templates/manager/autoinstaller.html:159
+#: templates/manager/autoinstaller.html:196
 msgid "Node.js"
 msgstr "Node.js"
 
-#: templates/manager/autoinstaller.html:163
+#: templates/manager/autoinstaller.html:200
 msgid "Setup containerized Node.js application."
 msgstr "Configurează o aplicație Node.js containerizată."
 
-#: templates/manager/autoinstaller.html:177
+#: templates/manager/autoinstaller.html:214
 msgid "Setup Node.js Application"
 msgstr "Configurează aplicația Node.js"
 
-#: templates/manager/autoinstaller.html:194
+#: templates/manager/autoinstaller.html:231
 #: templates/manager/python_node_apps.html:135
 msgid "Python"
 msgstr "Python"
 
-#: templates/manager/autoinstaller.html:198
+#: templates/manager/autoinstaller.html:235
 msgid "Setup containerized Python application."
 msgstr "Configurează o aplicație Python containerizată."
 
-#: templates/manager/autoinstaller.html:213
+#: templates/manager/autoinstaller.html:250
 msgid "Setup Python Application"
 msgstr "Configurează aplicația Python"
 
@@ -6982,175 +7123,198 @@ msgstr "sau închide fereastra și continuă editarea."
 msgid "Copy code from HTML and CSS tabs, then reload the page to try again."
 msgstr "Copiază codul din tab-urile HTML și CSS, apoi reîncarcă pagina pentru a încerca din nou."
 
-#: templates/manager/mautic.html:57 templates/manager/mautic_install.html:321
+#: templates/manager/mautic.html:57
 msgid "Mautic version:"
 msgstr "Versiune Mautic:"
 
-#: templates/manager/mautic.html:69
+#: templates/manager/drupal/single.html:69 templates/manager/mautic.html:69
 msgid "PHP version:"
 msgstr "Versiune PHP:"
 
-#: templates/manager/mautic.html:88
+#: templates/manager/drupal/single.html:88 templates/manager/mautic.html:88
 msgid "MySQL version:"
 msgstr "Versiune MySQL:"
 
-#: templates/manager/mautic.html:110 templates/manager/wp/single.html:283
+#: templates/manager/drupal/single.html:110 templates/manager/mautic.html:110
+#: templates/manager/wp/single.html:283
 msgid "Created:"
 msgstr "Creat:"
 
-#: templates/manager/mautic.html:128
+#: templates/manager/drupal/single.html:128 templates/manager/mautic.html:128
 msgid "Select option"
 msgstr "Selectează opțiunea"
 
-#: templates/manager/mautic.html:130 templates/manager/mautic.html:146
-#: templates/manager/python_node_apps.html:51
+#: templates/manager/drupal/single.html:130
+#: templates/manager/drupal/single.html:146 templates/manager/mautic.html:130
+#: templates/manager/mautic.html:146 templates/manager/python_node_apps.html:51
 #: templates/manager/websitebuilder.html:66
 #: templates/manager/wp/single.html:106
 msgid "Overview"
 msgstr "Prezentare generală"
 
-#: templates/manager/mautic.html:199
+#: templates/manager/drupal/single.html:199 templates/manager/mautic.html:199
 #: templates/manager/python_node_apps.html:360
 #: templates/manager/websitebuilder.html:131
 #: templates/manager/wp/single.html:321
 msgid "Open folder in File Manager"
 msgstr "Deschide folderul în File Manager"
 
-#: templates/manager/mautic.html:209
+#: templates/manager/drupal/single.html:209 templates/manager/mautic.html:209
 #: templates/manager/python_node_apps.html:372
 #: templates/manager/websitebuilder.html:158
 #: templates/manager/wp/single.html:400
 msgid "Folder:"
 msgstr "Folder:"
 
-#: templates/manager/mautic.html:213
+#: templates/manager/drupal/single.html:213 templates/manager/mautic.html:213
 #: templates/manager/python_node_apps.html:385
 #: templates/manager/websitebuilder.html:168
 #: templates/manager/wp/single.html:404
 msgid "Folder Size:"
 msgstr "Dimensiune folder:"
 
-#: templates/manager/mautic.html:229 templates/manager/wp/single.html:419
-#: templates/manager/wp/single.html:1868 templates/mysql/users.html:70
-#: templates/mysql/users.html:72 templates/mysql/wizard.html:71
-#: templates/psql/users.html:67 templates/psql/users.html:69
+#: templates/manager/drupal/single.html:229 templates/manager/mautic.html:229
+#: templates/manager/wp/single.html:419 templates/manager/wp/single.html:1868
+#: templates/mysql/users.html:70 templates/mysql/users.html:72
+#: templates/mysql/wizard.html:71 templates/psql/users.html:67
+#: templates/psql/users.html:69
 msgid "Database"
 msgstr "Bază de date"
 
-#: templates/manager/mautic.html:245 templates/manager/wp/single.html:435
+#: templates/manager/drupal/single.html:245 templates/manager/mautic.html:245
+#: templates/manager/wp/single.html:435
 msgid "Manage MySQL databases"
 msgstr "Gestionează bazele de date MySQL"
 
-#: templates/manager/mautic.html:256 templates/manager/wp/single.html:446
+#: templates/manager/drupal/single.html:256 templates/manager/mautic.html:256
+#: templates/manager/wp/single.html:446
 msgid "Database Size:"
 msgstr "Dimensiune bază de date:"
 
-#: templates/manager/mautic.html:260 templates/manager/wp/single.html:450
+#: templates/manager/drupal/single.html:260 templates/manager/mautic.html:260
+#: templates/manager/wp/single.html:450
 msgid "Database Host:"
 msgstr "Gazdă bază de date:"
 
-#: templates/manager/mautic.html:261 templates/manager/wp/single.html:451
+#: templates/manager/drupal/single.html:261 templates/manager/mautic.html:261
+#: templates/manager/wp/single.html:451
 msgid "localhost"
 msgstr "localhost"
 
-#: templates/manager/mautic.html:263
+#: templates/manager/drupal/single.html:263 templates/manager/mautic.html:263
 msgid "Remote MySQL host detected in config file. Database size unavailable."
 msgstr "A fost detectată o gazdă MySQL la distanță în fișierul de configurare. Dimensiunea bazei de date nu este disponibilă."
 
-#: templates/manager/mautic.html:269 templates/manager/mautic_install.html:380
+#: templates/manager/drupal/single.html:269 templates/manager/mautic.html:269
 #: templates/manager/wp/single.html:459
 msgid "Database Name:"
 msgstr "Nume bază de date:"
 
-#: templates/manager/mautic.html:281 templates/manager/wp/single.html:471
+#: templates/manager/drupal/single.html:281 templates/manager/mautic.html:281
+#: templates/manager/wp/single.html:471
 msgid "Table prefix:"
 msgstr "Prefix tabel:"
 
-#: templates/manager/mautic.html:285 templates/manager/wp/single.html:475
+#: templates/manager/drupal/single.html:285 templates/manager/mautic.html:285
+#: templates/manager/wp/single.html:475
 msgid "Database User:"
 msgstr "Utilizator bază de date:"
 
-#: templates/manager/mautic.html:297 templates/manager/mautic_install.html:401
+#: templates/manager/drupal/single.html:297 templates/manager/mautic.html:297
 #: templates/manager/wp/single.html:487 templates/psql/pgadmin.html:138
 msgid "Password:"
 msgstr "Parolă:"
 
-#: templates/manager/mautic.html:304 templates/manager/wp/single.html:494
+#: templates/manager/drupal/single.html:304 templates/manager/mautic.html:304
+#: templates/manager/wp/single.html:494
 msgid "phpMyAdmin:"
 msgstr "phpMyAdmin:"
 
-#: templates/manager/mautic.html:319 templates/manager/wp/single.html:509
+#: templates/manager/drupal/single.html:319 templates/manager/mautic.html:319
+#: templates/manager/wp/single.html:509
 msgid "Open database in phpMyAdmin"
 msgstr "Deschide baza de date în phpMyAdmin"
 
-#: templates/manager/mautic.html:365 templates/manager/websitebuilder.html:194
+#: templates/manager/drupal/single.html:365 templates/manager/mautic.html:365
+#: templates/manager/websitebuilder.html:194
 #: templates/manager/wp/single.html:1985
 msgid "Create a Backup"
 msgstr "Creează un backup"
 
-#: templates/manager/mautic.html:366
+#: templates/manager/drupal/single.html:366 templates/manager/mautic.html:366
 msgid "Create a new backup of website files and/or database."
 msgstr "Creează un backup nou al fișierelor site-ului și/sau al bazei de date."
 
-#: templates/manager/mautic.html:371 templates/manager/wp/single.html:1995
+#: templates/manager/drupal/single.html:371 templates/manager/mautic.html:371
+#: templates/manager/wp/single.html:1995
 msgid "Backup Database"
 msgstr "Backup bază de date"
 
-#: templates/manager/mautic.html:376 templates/manager/websitebuilder.html:204
+#: templates/manager/drupal/single.html:376 templates/manager/mautic.html:376
+#: templates/manager/websitebuilder.html:204
 #: templates/manager/wp/single.html:2000
 msgid "Backup Files"
 msgstr "Backup fișiere"
 
-#: templates/manager/mautic.html:394 templates/manager/websitebuilder.html:218
+#: templates/manager/drupal/single.html:394 templates/manager/mautic.html:394
+#: templates/manager/websitebuilder.html:218
 #: templates/manager/wp/single.html:2017
 msgid "Restore from Backups"
 msgstr "Restaurează din backup-uri"
 
-#: templates/manager/mautic.html:395
+#: templates/manager/drupal/single.html:395 templates/manager/mautic.html:395
 msgid "Restore website files and/or database from a previous backup."
 msgstr "Restaurează fișierele site-ului și/sau baza de date dintr-un backup anterior."
 
-#: templates/manager/mautic.html:405 templates/manager/websitebuilder.html:227
+#: templates/manager/drupal/single.html:405 templates/manager/mautic.html:405
+#: templates/manager/websitebuilder.html:227
 #: templates/manager/wp/single.html:2026
 msgid "Display Backups"
 msgstr "Afișează backup-urile"
 
-#: templates/manager/mautic.html:409 templates/manager/websitebuilder.html:231
+#: templates/manager/drupal/single.html:409 templates/manager/mautic.html:409
+#: templates/manager/websitebuilder.html:231
 #: templates/manager/wp/single.html:2030
 msgid "Select a backup date:"
 msgstr "Selectează data unui backup:"
 
-#: templates/manager/mautic.html:430 templates/manager/websitebuilder.html:255
-#: templates/manager/wp/list.html:154 templates/manager/wp/list.html:217
-#: templates/manager/wp/single.html:2055
+#: templates/manager/drupal/list.html:97 templates/manager/drupal/list.html:136
+#: templates/manager/drupal/single.html:430 templates/manager/mautic.html:430
+#: templates/manager/websitebuilder.html:255 templates/manager/wp/list.html:154
+#: templates/manager/wp/list.html:217 templates/manager/wp/single.html:2055
 msgid "Detach"
 msgstr "Detașează"
 
-#: templates/manager/mautic.html:431 templates/manager/wp/single.html:2056
-#: templates/manager/wp/single.html:2066
+#: templates/manager/drupal/single.html:431 templates/manager/mautic.html:431
+#: templates/manager/wp/single.html:2056 templates/manager/wp/single.html:2066
 msgid "Remove the"
 msgstr "Elimină"
 
-#: templates/manager/mautic.html:431 templates/manager/wp/single.html:2066
+#: templates/manager/drupal/single.html:431 templates/manager/mautic.html:431
+#: templates/manager/wp/single.html:2066
 msgid "website from this manager without actually deleting any files."
 msgstr "site-ul din acest manager fără a șterge efectiv niciun fișier."
 
-#: templates/manager/mautic.html:432
+#: templates/manager/drupal/single.html:432 templates/manager/mautic.html:432
 #: templates/manager/python_node_apps.html:1106
 msgid "All website data such as files and database remains."
 msgstr "Toate datele site-ului, precum fișierele și baza de date, rămân."
 
 #: templates/manager/mautic.html:442
-msgid "Detach Mauitc"
-msgstr "Detașează Mautic"
+msgid "Detach Mautic"
+msgstr ""
 
-#: templates/manager/mautic.html:454 templates/manager/websitebuilder.html:270
+#: templates/manager/drupal/single.html:454 templates/manager/mautic.html:454
+#: templates/manager/websitebuilder.html:270
 #: templates/manager/wp/single.html:2070
 msgid "Confirm Detach"
 msgstr "Confirmă detașarea"
 
-#: templates/manager/mautic.html:480 templates/manager/wp/list.html:157
-#: templates/manager/wp/list.html:220 templates/manager/wp/single.html:2089
+#: templates/manager/drupal/list.html:100
+#: templates/manager/drupal/list.html:139
+#: templates/manager/drupal/single.html:480 templates/manager/mautic.html:480
+#: templates/manager/wp/list.html:157 templates/manager/wp/list.html:220
+#: templates/manager/wp/single.html:2089
 msgid "Uninstall"
 msgstr "Dezinstalează"
 
@@ -7166,7 +7330,8 @@ msgstr "Toate datele Mautic vor fi șterse permanent. Nu mai există cale de în
 msgid "Uninstall Mautic"
 msgstr "Dezinstalează Mautic"
 
-#: templates/manager/mautic.html:504 templates/manager/wp/single.html:2104
+#: templates/manager/drupal/single.html:504 templates/manager/mautic.html:504
+#: templates/manager/wp/single.html:2104
 msgid "Confirm Uninstall"
 msgstr "Confirmă dezinstalarea"
 
@@ -7194,106 +7359,359 @@ msgstr "A apărut o eroare la detașarea Mautic. Te rog încearcă din nou."
 msgid "Administration"
 msgstr "Administrare"
 
-#: templates/manager/mautic.html:652
+#: templates/manager/drupal/single.html:630 templates/manager/mautic.html:652
 #: templates/manager/python_node_apps.html:1205
 #: templates/manager/websitebuilder.html:427
 #: templates/manager/wp/single.html:2418
 msgid "An error occurred fetching folder size from the container."
 msgstr "A apărut o eroare la preluarea dimensiunii folderului din container."
 
-#: templates/manager/mautic.html:670 templates/manager/wp/single.html:2234
+#: templates/manager/drupal/single.html:648 templates/manager/mautic.html:670
+#: templates/manager/wp/single.html:2234
 msgid "An error occurred fetching DB size."
 msgstr "A apărut o eroare la preluarea dimensiunii bazei de date."
 
-#: templates/manager/mautic_install.html:9
+#: templates/manager/drupal/single.html:664 templates/manager/mautic.html:686
+#: templates/manager/wp/single.html:2548
+msgid "Database and Files Backup"
+msgstr "Backup bază de date și fișiere"
+
+#: templates/manager/drupal/single.html:666 templates/manager/mautic.html:688
+#: templates/manager/wp/single.html:2550
+msgid "Database Backup"
+msgstr "Backup bază de date"
+
+#: templates/manager/drupal/single.html:668 templates/manager/mautic.html:690
+#: templates/manager/websitebuilder.html:457
+#: templates/manager/wp/single.html:2552
+msgid "Files Backup"
+msgstr "Backup fișiere"
+
+#: templates/manager/drupal/single.html:670 templates/manager/mautic.html:692
+#: templates/manager/wp/single.html:2554
+msgid "Unknown Backup Type"
+msgstr "Tip backup necunoscut"
+
+#: templates/manager/drupal/single.html:706 templates/manager/mautic.html:728
+#: templates/manager/websitebuilder.html:477
+#: templates/manager/wp/single.html:2468
+msgid "Click again to confirm"
+msgstr "Click din nou pentru a confirma"
+
+#: templates/manager/drupal/single.html:722 templates/manager/mautic.html:744
+#: templates/manager/websitebuilder.html:505
+#: templates/manager/wp/single.html:2496
+msgid "Restoring backup... Please wait."
+msgstr "Se restaurează backup-ul... Te rog așteaptă."
+
+#: templates/manager/drupal/single.html:730 templates/manager/mautic.html:752
+#: templates/manager/websitebuilder.html:513
+#: templates/manager/wp/single.html:2504
+msgid "Restore request failed."
+msgstr "Cererea de restaurare a eșuat."
+
+#: templates/manager/drupal/single.html:769 templates/manager/mautic.html:791
+#: templates/manager/wp/single.html:2567
+msgid "No options selected to backup. Please ensure that at least one of the Database or Files is selected."
+msgstr "Nu a fost selectată nicio opțiune pentru backup. Te rog asigură-te că este selectat cel puțin unul dintre Database sau Files."
+
+#: templates/manager/drupal/single.html:776 templates/manager/mautic.html:798
+#: templates/manager/wp/single.html:2575
+msgid "Generating Backup..."
+msgstr "Se generează backup-ul..."
+
+#: templates/manager/drupal/single.html:778 templates/manager/mautic.html:800
+#: templates/manager/websitebuilder.html:571
+#: templates/manager/wp/single.html:2577
+msgid "Generating website backup.. Please wait."
+msgstr "Se generează backup-ul site-ului.. Te rog așteaptă."
+
+#: templates/manager/drupal/single.html:786 templates/manager/mautic.html:808
+#: templates/manager/websitebuilder.html:579
+#: templates/manager/wp/single.html:2585
+msgid "Backup request failed."
+msgstr "Cererea de backup a eșuat."
+
+#: templates/manager/mautic_install.html:10
+#: templates/manager/mautic_install.html:321
 msgid "Install Mautic in a few clicks."
 msgstr "Instalează Mautic în câteva clickuri."
 
-#: templates/manager/mautic_install.html:26
-msgid "Website Name"
-msgstr "Nume site"
+#: templates/manager/drupal/install.html:36
+#: templates/manager/mautic_install.html:32
+#: templates/manager/wp/install.html:32
+msgid "Site details"
+msgstr "Detalii site"
 
-#: templates/manager/mautic_install.html:28
+#: templates/manager/drupal/install.html:42
+#: templates/manager/mautic_install.html:37
+#: templates/manager/wp/install.html:38
+msgid "Website name"
+msgstr "Numele site-ului"
+
+#: templates/manager/mautic_install.html:39
 msgid "My Site"
 msgstr "Site-ul meu"
 
-#: templates/manager/mautic_install.html:35
-msgid "Domain:"
-msgstr "Domeniu:"
+#: templates/manager/mautic_install.html:45
+msgid "Mautic version"
+msgstr ""
 
-#: templates/manager/mautic_install.html:40
+#: templates/manager/drupal/install.html:75
+#: templates/manager/mautic_install.html:55
+#: templates/manager/pm2_install.html:300
+#: templates/manager/websitebuilder_install.html:32
+#: templates/manager/wp/install.html:66
+msgid "Domain & location"
+msgstr "Domeniu și locație"
+
+#: templates/manager/drupal/install.html:85
+#: templates/manager/mautic_install.html:65
 #: templates/manager/pm2_install.html:314
 #: templates/manager/websitebuilder_install.html:42
 #: templates/manager/wp/install.html:76 templates/manager/wp/single.html:1840
 msgid "Select a domain"
 msgstr "Selectează un domeniu"
 
-#: templates/manager/mautic_install.html:58
-msgid "Admin Email:"
-msgstr "Email administrator:"
+#: templates/manager/drupal/install.html:90
+#: templates/manager/mautic_install.html:70
+#: templates/manager/pm2_install.html:319
+#: templates/manager/websitebuilder_install.html:47
+#: templates/manager/wp/install.html:81
+msgid "subfolder"
+msgstr "subdosar"
 
-#: templates/manager/mautic_install.html:139
-msgid "Admin Username:"
-msgstr "Nume utilizator administrator:"
+#: templates/manager/drupal/install.html:93
+#: templates/manager/mautic_install.html:73
+#: templates/manager/pm2_install.html:322
+#: templates/manager/websitebuilder_install.html:50
+#: templates/manager/wp/install.html:84
+msgid "Leave subfolder blank to install at the domain root"
+msgstr "Lasă subdosarul gol pentru instalare la rădăcina domeniului"
 
-#: templates/manager/mautic_install.html:158
-msgid "Admin Password:"
-msgstr "Parolă administrator:"
+#: templates/manager/drupal/install.html:105
+#: templates/manager/mautic_install.html:85
+#: templates/manager/wp/install.html:96
+msgid "Admin credentials"
+msgstr "Credențiale admin"
 
-#: templates/manager/mautic_install.html:172
-msgid "Generate"
-msgstr "Generează"
+#: templates/manager/drupal/install.html:106
+#: templates/manager/mautic_install.html:86
+#: templates/manager/wp/install.html:97
+msgid "auto-generated"
+msgstr "generat automat"
 
-#: templates/manager/mautic_install.html:331
-msgid "Website files will be stored in folder:"
-msgstr "Fișierele site-ului vor fi stocate în folderul:"
+#: templates/manager/drupal/install.html:182
+#: templates/manager/mautic_install.html:162
+#: templates/manager/wp/install.html:173
+msgid "Database settings"
+msgstr "Setări bază de date"
 
-#: templates/manager/mautic_install.html:387
-msgid "Table Prefix:"
-msgstr "Prefix tabele:"
+#: templates/manager/drupal/install.html:184
+#: templates/manager/mautic_install.html:164
+#: templates/manager/wp/install.html:175
+msgid "auto-generated · click to review"
+msgstr "generat automat · apasă pentru a revizui"
 
-#: templates/manager/mautic_install.html:394
-msgid "Database Username:"
-msgstr "Nume utilizator bază de date:"
+#: templates/manager/drupal/install.html:191
+#: templates/manager/mautic_install.html:171
+#: templates/manager/wp/install.html:182
+msgid "Database name"
+msgstr "Numele bazei de date"
 
-#: templates/manager/mautic_install.html:448
-msgid "Back to AutoInstaller"
-msgstr "Înapoi la AutoInstaller"
+#: templates/manager/mautic_install.html:178
+#: templates/manager/wp/install.html:189
+msgid "Table prefix"
+msgstr "Prefix tabel"
 
-#: templates/manager/mautic_install.html:453
+#: templates/manager/drupal/install.html:198
+#: templates/manager/mautic_install.html:185
+#: templates/manager/wp/install.html:196
+msgid "DB username"
+msgstr "Utilizator BD"
+
+#: templates/manager/drupal/install.html:205
+#: templates/manager/mautic_install.html:192
+#: templates/manager/wp/install.html:203
+msgid "DB password"
+msgstr "Parolă BD"
+
+#: templates/manager/drupal/install.html:218
+#: templates/manager/mautic_install.html:205
+#: templates/manager/pm2_install.html:523
+#: templates/manager/websitebuilder_install.html:62
+#: templates/manager/wp/install.html:216
+msgid "← Back"
+msgstr "← Înapoi"
+
+#: templates/manager/drupal/install.html:222
+#: templates/manager/drupal/install.html:405
+#: templates/manager/mautic_install.html:209
+#: templates/manager/mautic_install.html:475
 #: templates/manager/pm2_install.html:527
 #: templates/manager/pm2_install.html:757 templates/manager/wp/install.html:220
 #: templates/manager/wp/install.html:511
 msgid "Start Installation"
 msgstr "Pornește instalarea"
 
-#: templates/manager/mautic_install.html:478
+#: templates/manager/mautic_install.html:222
+msgid "Validates provided data, checks if install already exists, fetches PHP version and folder for the domain, and starts the PHP container if needed."
+msgstr ""
+
+#: templates/manager/drupal/install.html:236
+#: templates/manager/mautic_install.html:224
+#: templates/manager/pm2_install.html:542 templates/manager/wp/install.html:235
+msgid "Running pre-flight checks"
+msgstr "Se efectuează verificările preliminare"
+
+#: templates/manager/mautic_install.html:228
+msgid "Downloads the Mautic .zip archive from GitHub, or reuses a local copy if already present."
+msgstr ""
+
+#: templates/manager/mautic_install.html:230
+msgid "Downloading Mautic archive"
+msgstr ""
+
+#: templates/manager/mautic_install.html:234
+msgid "Extracts all Mautic core files into the domain folder."
+msgstr ""
+
+#: templates/manager/drupal/install.html:248
+#: templates/manager/mautic_install.html:236
+#: templates/manager/wp/install.html:247
+msgid "Extracting files to document root"
+msgstr "Se extrag fișierele în directorul rădăcină"
+
+#: templates/manager/mautic_install.html:240
+msgid "Writes database credentials into app/config/local.php."
+msgstr ""
+
+#: templates/manager/mautic_install.html:242
+msgid "Writing database logins to local.php"
+msgstr ""
+
+#: templates/manager/mautic_install.html:246
+msgid "Sets file permissions and ownership to the correct system user so PHP can read and write them."
+msgstr ""
+
+#: templates/manager/drupal/install.html:254
+#: templates/manager/mautic_install.html:248
+#: templates/manager/wp/install.html:265
+msgid "Setting file permissions & ownership"
+msgstr "Se setează permisiunile și proprietarul fișierelor"
+
+#: templates/manager/mautic_install.html:252
+msgid "Confirms the PHP container is running and responsive before attempting any database operations."
+msgstr ""
+
+#: templates/manager/mautic_install.html:254
+msgid "Testing PHP container availability"
+msgstr ""
+
+#: templates/manager/mautic_install.html:258
+#: templates/manager/wp/install.html:275
+msgid "Verifies the MySQL/MariaDB container is running, then creates the database, user, and grants all privileges."
+msgstr "Verifică că containerul MySQL/MariaDB rulează, apoi creează baza de date, utilizatorul și acordă toate privilegiile."
+
+#: templates/manager/drupal/install.html:260
+#: templates/manager/mautic_install.html:260
+#: templates/manager/wp/install.html:277
+msgid "Creating database & MySQL user"
+msgstr "Se creează baza de date și utilizatorul MySQL"
+
+#: templates/manager/mautic_install.html:264
+msgid "Runs the mautic:install console command to create all Mautic tables and the admin account."
+msgstr ""
+
+#: templates/manager/mautic_install.html:266
+#: templates/manager/wp/install.html:283
+msgid "Importing tables into database"
+msgstr "Se importă tabelele în baza de date"
+
+#: templates/manager/mautic_install.html:270
+msgid "Writes the mautic:segments:update, mautic:campaigns:update and mautic:campaigns:trigger Ofelia cron jobs and restarts the cron container."
+msgstr ""
+
+#: templates/manager/mautic_install.html:272
+msgid "Creating scheduled cron jobs"
+msgstr ""
+
+#: templates/manager/mautic_install.html:276
+msgid "Records the installation in the database so the site appears in Site Manager."
+msgstr ""
+
+#: templates/manager/drupal/install.html:272
+#: templates/manager/mautic_install.html:278
+#: templates/manager/pm2_install.html:572
+#: templates/manager/websitebuilder_install.html:99
+#: templates/manager/wp/install.html:307
+msgid "Saving to Site Manager"
+msgstr "Se salvează în Site Manager"
+
+#: templates/manager/drupal/install.html:291
+#: templates/manager/mautic_install.html:300
+#: templates/manager/wp/install.html:329
+msgid "Install in progress for"
+msgstr "Instalare în curs pentru"
+
+#: templates/manager/drupal/install.html:294
+#: templates/manager/mautic_install.html:305
+#: templates/manager/pm2_install.html:599 templates/manager/wp/install.html:334
+msgid "Install process hanged for"
+msgstr "Procesul de instalare s-a blocat pentru"
+
+#: templates/manager/drupal/install.html:294
+#: templates/manager/drupal/install.html:304
+#: templates/manager/mautic_install.html:305
+#: templates/manager/mautic_install.html:315
+#: templates/manager/pm2_install.html:599
+#: templates/manager/pm2_install.html:609
+#: templates/manager/websitebuilder_install.html:127
+#: templates/manager/websitebuilder_install.html:137
+#: templates/manager/wp/install.html:334 templates/manager/wp/install.html:344
+#: templates/partials/_service_log.html:95
+msgid "Click to retry"
+msgstr "Click pentru a reîncerca"
+
+#: templates/manager/drupal/install.html:304
+#: templates/manager/mautic_install.html:315
+#: templates/manager/pm2_install.html:609 templates/manager/wp/install.html:344
+msgid "Install process failed for"
+msgstr "Procesul de instalare a eșuat pentru"
+
+#: templates/manager/drupal/install.html:412
+#: templates/manager/mautic_install.html:482
 #: templates/manager/pm2_install.html:764
 #: templates/manager/websitebuilder_install.html:292
 #: templates/manager/wp/install.html:518
 msgid "Please select a domain name."
 msgstr "Te rog selectează un nume de domeniu."
 
-#: templates/manager/mautic_install.html:484
+#: templates/manager/mautic_install.html:506
 msgid "Mautic install started. Please wait for the process to finish."
 msgstr "Instalarea Mautic a început. Te rog așteaptă finalizarea procesului."
 
-#: templates/manager/mautic_install.html:534
-msgid "Error, please check the install log below the form."
-msgstr "Eroare, te rog verifică log-ul de instalare de sub formular."
+#: templates/manager/drupal/install.html:473
+#: templates/manager/mautic_install.html:550
+#: templates/manager/pm2_install.html:829
+#: templates/manager/websitebuilder_install.html:365
+#: templates/manager/wp/install.html:589
+msgid "Connection lost during installation."
+msgstr "Conexiunea a fost pierdută în timpul instalării."
 
-#: templates/manager/mautic_install.html:551
+#: templates/manager/drupal/install.html:482
+#: templates/manager/mautic_install.html:560
 #: templates/manager/pm2_install.html:839
 #: templates/manager/websitebuilder_install.html:375
 #: templates/manager/wp/install.html:600
 msgid "Fetch error. Please try again."
 msgstr "Eroare la preluare. Te rog încearcă din nou."
 
-#: templates/manager/mautic_install.html:597
-msgid "Error fetching Mautic versions from Github. Please refresh page."
-msgstr "Eroare la preluarea versiunilor Mautic de pe GitHub. Te rog reîncarcă pagina."
+#: templates/manager/mautic_install.html:721
+msgid "Error fetching Mautic versions from GitHub. Please refresh page."
+msgstr ""
 
-#: templates/manager/mautic_install.html:604
+#: templates/manager/mautic_install.html:725
 #: templates/manager/wp/install.html:765
 msgid "Error fetching versions"
 msgstr "Eroare la preluarea versiunilor"
@@ -7362,9 +7780,9 @@ msgstr "Creează o aplicație nouă"
 msgid "If the application is already built, you can skip this option."
 msgstr "Dacă aplicația este deja construită, poți sări peste această opțiune."
 
-#: templates/manager/pm2_install.html:225 templates/manager/sites.html:77
-#: templates/manager/wp/list.html:123 templates/manager/wp/single.html:1301
-#: templates/system/server_info.html:110
+#: templates/manager/drupal/list.html:68 templates/manager/pm2_install.html:225
+#: templates/manager/sites.html:77 templates/manager/wp/list.html:123
+#: templates/manager/wp/single.html:1301 templates/system/server_info.html:110
 msgid "Version"
 msgstr "Versiune"
 
@@ -7372,27 +7790,9 @@ msgstr "Versiune"
 msgid "Select version of Python/NodeJS to use for this application."
 msgstr "Selectează versiunea de Python/NodeJS de folosit pentru această aplicație."
 
-#: templates/manager/pm2_install.html:300
-#: templates/manager/websitebuilder_install.html:32
-#: templates/manager/wp/install.html:66
-msgid "Domain & location"
-msgstr "Domeniu și locație"
-
 #: templates/manager/pm2_install.html:308
 msgid "Choose a domain name and optional subdirectory to create reverse-proxy."
 msgstr "Alege un nume de domeniu și un subdirector opțional pentru a crea reverse-proxy."
-
-#: templates/manager/pm2_install.html:319
-#: templates/manager/websitebuilder_install.html:47
-#: templates/manager/wp/install.html:81
-msgid "subfolder"
-msgstr "subdosar"
-
-#: templates/manager/pm2_install.html:322
-#: templates/manager/websitebuilder_install.html:50
-#: templates/manager/wp/install.html:84
-msgid "Leave subfolder blank to install at the domain root"
-msgstr "Lasă subdosarul gol pentru instalare la rădăcina domeniului"
 
 #: templates/manager/pm2_install.html:360
 msgid "Service name in reverse-proxy:"
@@ -7459,19 +7859,9 @@ msgstr "Memorie (GB)"
 msgid "Physical Memory (in GB) that the container can use."
 msgstr "Memorie fizică (în GB) pe care containerul o poate folosi."
 
-#: templates/manager/pm2_install.html:523
-#: templates/manager/websitebuilder_install.html:62
-#: templates/manager/wp/install.html:216
-msgid "← Back"
-msgstr "← Înapoi"
-
 #: templates/manager/pm2_install.html:540
 msgid "Checks for already running install processes and validates the submitted form data."
 msgstr "Verifică procesele de instalare deja în curs și validează datele din formular trimise."
-
-#: templates/manager/pm2_install.html:542 templates/manager/wp/install.html:235
-msgid "Running pre-flight checks"
-msgstr "Se efectuează verificările preliminare"
 
 #: templates/manager/pm2_install.html:546
 msgid "Generates the docker-compose service entry for the application and writes its environment variables to the .env file."
@@ -7509,42 +7899,13 @@ msgstr "Se repornește serverul web"
 msgid "Records the new application in the database so it appears in Site Manager."
 msgstr "Înregistrează noua aplicație în baza de date pentru a apărea în Site Manager."
 
-#: templates/manager/pm2_install.html:572
-#: templates/manager/websitebuilder_install.html:99
-#: templates/manager/wp/install.html:307
-msgid "Saving to Site Manager"
-msgstr "Se salvează în Site Manager"
-
 #: templates/manager/pm2_install.html:594
 msgid "Setting up application"
 msgstr "Se configurează aplicația"
 
-#: templates/manager/pm2_install.html:599 templates/manager/wp/install.html:334
-msgid "Install process hanged for"
-msgstr "Procesul de instalare s-a blocat pentru"
-
-#: templates/manager/pm2_install.html:599
-#: templates/manager/pm2_install.html:609
-#: templates/manager/websitebuilder_install.html:127
-#: templates/manager/websitebuilder_install.html:137
-#: templates/manager/wp/install.html:334 templates/manager/wp/install.html:344
-#: templates/partials/_service_log.html:95
-msgid "Click to retry"
-msgstr "Click pentru a reîncerca"
-
-#: templates/manager/pm2_install.html:609 templates/manager/wp/install.html:344
-msgid "Install process failed for"
-msgstr "Procesul de instalare a eșuat pentru"
-
 #: templates/manager/pm2_install.html:785
 msgid "Application setup started. Please wait for the process to finish."
 msgstr "Configurarea aplicației a început. Te rog așteaptă finalizarea procesului."
-
-#: templates/manager/pm2_install.html:829
-#: templates/manager/websitebuilder_install.html:365
-#: templates/manager/wp/install.html:589
-msgid "Connection lost during installation."
-msgstr "Conexiunea a fost pierdută în timpul instalării."
 
 #: templates/manager/python_node_apps.html:61
 msgid "Install Packages"
@@ -7834,7 +8195,8 @@ msgstr "Nou"
 msgid "Site Name"
 msgstr "Nume site"
 
-#: templates/manager/sites.html:70 templates/manager/wp/list.html:124
+#: templates/manager/drupal/list.html:69 templates/manager/sites.html:70
+#: templates/manager/wp/list.html:124
 msgid "Admin Email"
 msgstr "Email administrator"
 
@@ -7842,52 +8204,53 @@ msgstr "Email administrator"
 msgid "Speed"
 msgstr "Viteză"
 
-#: templates/manager/sites.html:132 templates/manager/sites.html:143
-#: templates/manager/sites.html:163 templates/manager/sites.html:170
+#: templates/manager/sites.html:134 templates/manager/sites.html:145
+#: templates/manager/sites.html:153 templates/manager/sites.html:173
+#: templates/manager/sites.html:180
 msgid "Open Site Manager"
 msgstr "Deschide Site Manager"
 
-#: templates/manager/sites.html:177
+#: templates/manager/sites.html:187
 #: templates/manager/websitebuilder_install.html:66
 #: templates/manager/websitebuilder_install.html:283
 msgid "Open Website Builder"
 msgstr "Deschide Website Builder"
 
-#: templates/manager/sites.html:253 templates/partials/pagespeed.html:83
+#: templates/manager/sites.html:263 templates/partials/pagespeed.html:83
 #: templates/partials/pagespeed.html:98
 msgid "Mobile"
 msgstr "Mobil"
 
-#: templates/manager/sites.html:254 templates/partials/pagespeed.html:54
+#: templates/manager/sites.html:264 templates/partials/pagespeed.html:54
 #: templates/partials/pagespeed.html:97
 msgid "Desktop"
 msgstr "Desktop"
 
-#: templates/manager/sites.html:255 templates/partials/pagespeed.html:103
+#: templates/manager/sites.html:265 templates/partials/pagespeed.html:103
 msgid "First Contentful Paint:"
 msgstr "Primul conținut afișat:"
 
-#: templates/manager/sites.html:256 templates/partials/pagespeed.html:108
+#: templates/manager/sites.html:266 templates/partials/pagespeed.html:108
 msgid "Speed Index:"
 msgstr "Indice de viteză:"
 
-#: templates/manager/sites.html:257 templates/partials/pagespeed.html:113
+#: templates/manager/sites.html:267 templates/partials/pagespeed.html:113
 msgid "Time to Interactive:"
 msgstr "Timp până la interactivitate:"
 
-#: templates/manager/sites.html:258 templates/partials/pagespeed.html:118
+#: templates/manager/sites.html:268 templates/partials/pagespeed.html:118
 msgid "Measured at"
 msgstr "Măsurat la"
 
-#: templates/manager/sites.html:360
+#: templates/manager/sites.html:370
 msgid "No websites yet"
 msgstr "Încă nu există site-uri"
 
-#: templates/manager/sites.html:361
+#: templates/manager/sites.html:371
 msgid "Create your first website to get started"
 msgstr "Creează primul tău site pentru a începe"
 
-#: templates/manager/sites.html:365
+#: templates/manager/sites.html:375
 msgid "New website"
 msgstr "Site nou"
 
@@ -7947,39 +8310,9 @@ msgstr "Procesul de detașare a început. Te rog așteaptă."
 msgid "An error occurred while detaching website. Please try again."
 msgstr "A apărut o eroare la detașarea site-ului. Te rog încearcă din nou."
 
-#: templates/manager/websitebuilder.html:457
-#: templates/manager/wp/single.html:2552
-msgid "Files Backup"
-msgstr "Backup fișiere"
-
-#: templates/manager/websitebuilder.html:477
-#: templates/manager/wp/single.html:2468
-msgid "Click again to confirm"
-msgstr "Click din nou pentru a confirma"
-
-#: templates/manager/websitebuilder.html:505
-#: templates/manager/wp/single.html:2496
-msgid "Restoring backup... Please wait."
-msgstr "Se restaurează backup-ul... Te rog așteaptă."
-
-#: templates/manager/websitebuilder.html:513
-#: templates/manager/wp/single.html:2504
-msgid "Restore request failed."
-msgstr "Cererea de restaurare a eșuat."
-
 #: templates/manager/websitebuilder.html:565
 msgid "No options selected to backup. Please ensure that at least Files is selected."
 msgstr "Nu a fost selectată nicio opțiune pentru backup. Te rog asigură-te că este selectat cel puțin Files."
-
-#: templates/manager/websitebuilder.html:571
-#: templates/manager/wp/single.html:2577
-msgid "Generating website backup.. Please wait."
-msgstr "Se generează backup-ul site-ului.. Te rog așteaptă."
-
-#: templates/manager/websitebuilder.html:579
-#: templates/manager/wp/single.html:2585
-msgid "Backup request failed."
-msgstr "Cererea de backup a eșuat."
 
 #: templates/manager/websitebuilder_install.html:10
 #: templates/manager/websitebuilder_install.html:143
@@ -8029,6 +8362,157 @@ msgstr "Procesul de construire a eșuat pentru"
 #: templates/manager/websitebuilder_install.html:321
 msgid "Creating website. Please wait for the process to finish."
 msgstr "Se creează site-ul. Te rog așteaptă finalizarea procesului."
+
+#: templates/manager/drupal/install.html:44
+msgid "My Drupal Site"
+msgstr ""
+
+#: templates/manager/drupal/install.html:50
+msgid "Installation profile"
+msgstr ""
+
+#: templates/manager/drupal/install.html:54
+msgid "Standard"
+msgstr ""
+
+#: templates/manager/drupal/install.html:55
+msgid "Minimal"
+msgstr ""
+
+#: templates/manager/drupal/install.html:56
+msgid "Demo: Umami Food Magazine"
+msgstr ""
+
+#: templates/manager/drupal/install.html:63
+msgid "Drupal version"
+msgstr ""
+
+#: templates/manager/drupal/install.html:67
+msgid "Latest stable"
+msgstr ""
+
+#: templates/manager/drupal/install.html:242
+msgid "Downloading Drupal archive"
+msgstr ""
+
+#: templates/manager/drupal/install.html:266
+msgid "Running Drush site:install"
+msgstr ""
+
+#: templates/manager/drupal/install.html:432
+msgid "Drupal install started. Please wait for the process to finish."
+msgstr ""
+
+#: templates/manager/drupal/list.html:13
+msgid "Manage Drupal websites"
+msgstr ""
+
+#: templates/manager/drupal/list.html:14 templates/manager/wp/list.html:16
+msgid "Total installations:"
+msgstr "Total instalări:"
+
+#: templates/manager/drupal/list.html:21 templates/manager/wp/list.html:23
+msgid "New Installation"
+msgstr "Instalare nouă"
+
+#: templates/manager/drupal/list.html:24 templates/manager/drupal/list.html:273
+#: templates/manager/wp/list.html:26
+msgid "Scan for Existing Installations"
+msgstr "Scanează pentru instalări existente"
+
+#: templates/manager/drupal/list.html:50 templates/manager/wp/list.html:81
+msgid "Refresh Data"
+msgstr "Reîmprospătează datele"
+
+#: templates/manager/drupal/list.html:53 templates/manager/wp/list.html:84
+msgid "Switch to Table view"
+msgstr "Comută la vizualizarea tabel"
+
+#: templates/manager/drupal/list.html:55 templates/manager/wp/list.html:90
+msgid "Switch to Cards view"
+msgstr "Comută la vizualizarea carduri"
+
+#: templates/manager/drupal/list.html:70 templates/manager/wp/list.html:125
+msgid "Created on"
+msgstr "Creat la"
+
+#: templates/manager/drupal/list.html:187
+msgid "An error occurred while removing Drupal. Please try again."
+msgstr ""
+
+#: templates/manager/drupal/list.html:195
+#: templates/manager/drupal/single.html:536
+msgid "Drupal detach process started. Please wait."
+msgstr ""
+
+#: templates/manager/drupal/list.html:205
+#: templates/manager/drupal/single.html:547
+msgid "An error occurred while detaching Drupal. Please try again."
+msgstr ""
+
+#: templates/manager/drupal/list.html:221
+#: templates/manager/drupal/list.html:284 templates/manager/wp/list.html:452
+msgid "Scanning started..."
+msgstr "Scanarea a început..."
+
+#: templates/manager/drupal/list.html:226
+#: templates/manager/drupal/list.html:292 templates/manager/wp/list.html:469
+msgid "No installations found."
+msgstr "Nu s-au găsit instalări."
+
+#: templates/manager/drupal/list.html:233
+#: templates/manager/drupal/list.html:295 templates/manager/wp/list.html:485
+msgid "Error occurred during scan. Try again."
+msgstr "A apărut o eroare în timpul scanării. Încearcă din nou."
+
+#: templates/manager/drupal/list.html:241 templates/manager/wp/list.html:495
+msgid "Data refresh in progress... Please wait."
+msgstr "Reîmprospătarea datelor este în desfășurare... Te rog așteaptă."
+
+#: templates/manager/drupal/list.html:244 templates/manager/wp/list.html:504
+msgid "Refresh completed."
+msgstr "Reîmprospătarea s-a finalizat."
+
+#: templates/manager/drupal/list.html:246 templates/manager/wp/list.html:509
+msgid "Error occurred during refresh."
+msgstr "A apărut o eroare în timpul reîmprospătării."
+
+#: templates/manager/drupal/list.html:260
+msgid "No Drupal Installations"
+msgstr ""
+
+#: templates/manager/drupal/list.html:262
+msgid "No Drupal sites managed via OpenPanel. Install a new Drupal site or scan to find existing installations."
+msgstr ""
+
+#: templates/manager/drupal/list.html:264 templates/manager/wp/list.html:423
+#: templates/system/cronjobs.html:375 templates/user/favorites.html:109
+msgid "View Documentation"
+msgstr "Vezi documentația"
+
+#: templates/manager/drupal/single.html:57
+msgid "Drupal version:"
+msgstr ""
+
+#: templates/manager/drupal/single.html:442
+msgid "Detach Drupal"
+msgstr ""
+
+#: templates/manager/drupal/single.html:481
+msgid "Uninstall Drupal and delete all website files and the database."
+msgstr ""
+
+#: templates/manager/drupal/single.html:483
+msgid "All Drupal data will be permanently deleted. There is no coming back after you press delete."
+msgstr ""
+
+#: templates/manager/drupal/single.html:492
+msgid "Uninstall Drupal"
+msgstr ""
+
+#: templates/manager/drupal/single.html:521
+msgid "Drupal uninstall process started. Please wait."
+msgstr ""
 
 #: templates/manager/wp/_secure.html:4
 msgid "Security Measures"
@@ -8098,14 +8582,6 @@ msgstr "Cache-ul a fost golit cu succes!"
 msgid "Failed to flush cache"
 msgstr "Nu s-a putut goli cache-ul"
 
-#: templates/manager/wp/install.html:32
-msgid "Site details"
-msgstr "Detalii site"
-
-#: templates/manager/wp/install.html:38
-msgid "Website name"
-msgstr "Numele site-ului"
-
 #: templates/manager/wp/install.html:40
 msgid "My Blog"
 msgstr "Blogul meu"
@@ -8127,38 +8603,6 @@ msgstr "Încă un site WordPress"
 msgid "WordPress version"
 msgstr "Versiune WordPress"
 
-#: templates/manager/wp/install.html:96
-msgid "Admin credentials"
-msgstr "Credențiale admin"
-
-#: templates/manager/wp/install.html:97
-msgid "auto-generated"
-msgstr "generat automat"
-
-#: templates/manager/wp/install.html:173
-msgid "Database settings"
-msgstr "Setări bază de date"
-
-#: templates/manager/wp/install.html:175
-msgid "auto-generated · click to review"
-msgstr "generat automat · apasă pentru a revizui"
-
-#: templates/manager/wp/install.html:182
-msgid "Database name"
-msgstr "Numele bazei de date"
-
-#: templates/manager/wp/install.html:189
-msgid "Table prefix"
-msgstr "Prefix tabel"
-
-#: templates/manager/wp/install.html:196
-msgid "DB username"
-msgstr "Utilizator BD"
-
-#: templates/manager/wp/install.html:203
-msgid "DB password"
-msgstr "Parolă BD"
-
 #: templates/manager/wp/install.html:233
 msgid "Validates provided data, checks if install already exists, fetches PHP version and folder for the domain. Checks the assigned PHP version and webservers, confirms the containers are available, and starts them if needed."
 msgstr "Validează datele furnizate, verifică dacă instalarea există deja, preia versiunea PHP și dosarul pentru domeniu. Verifică versiunea PHP atribuită și serverele web, confirmă că containerele sunt disponibile și le pornește dacă este necesar."
@@ -8174,10 +8618,6 @@ msgstr "Se descarcă arhiva WordPress"
 #: templates/manager/wp/install.html:245
 msgid "Extracts all WordPress core files into the domain folder."
 msgstr "Extrage toate fișierele de bază WordPress în dosarul domeniului."
-
-#: templates/manager/wp/install.html:247
-msgid "Extracting files to document root"
-msgstr "Se extrag fișierele în directorul rădăcină"
 
 #: templates/manager/wp/install.html:251
 msgid "Creates the .htaccess file with rewrite rules, adds database credentials to wp-config.php, and adds the mu-plugin for HTTPS behind Varnish."
@@ -8199,10 +8639,6 @@ msgstr "Se generează cheile de securitate și salturile"
 msgid "Sets ownership of all files to the correct system user so the web server and PHP can read and write them."
 msgstr "Setează proprietarul tuturor fișierelor la utilizatorul de sistem corect astfel încât serverul web și PHP să le poată citi și scrie."
 
-#: templates/manager/wp/install.html:265
-msgid "Setting file permissions & ownership"
-msgstr "Se setează permisiunile și proprietarul fișierelor"
-
 #: templates/manager/wp/install.html:269
 msgid "Runs wp --info inside the PHP container to confirm WP-CLI is functional before attempting any database operations."
 msgstr "Rulează wp --info în interiorul containerului PHP pentru a confirma că WP-CLI funcționează înainte de a încerca orice operații cu baza de date."
@@ -8211,21 +8647,9 @@ msgstr "Rulează wp --info în interiorul containerului PHP pentru a confirma c�
 msgid "Testing WP-CLI commands"
 msgstr "Se testează comenzile WP-CLI"
 
-#: templates/manager/wp/install.html:275
-msgid "Verifies the MySQL/MariaDB container is running, then creates the database, user, and grants all privileges."
-msgstr "Verifică că containerul MySQL/MariaDB rulează, apoi creează baza de date, utilizatorul și acordă toate privilegiile."
-
-#: templates/manager/wp/install.html:277
-msgid "Creating database & MySQL user"
-msgstr "Se creează baza de date și utilizatorul MySQL"
-
 #: templates/manager/wp/install.html:281
 msgid "Runs wp core install via WP-CLI to create all WordPress tables, set the site URL, title, and admin account."
 msgstr "Rulează wp core install prin WP-CLI pentru a crea toate tabelele WordPress, a seta URL-ul site-ului, titlul și contul admin."
-
-#: templates/manager/wp/install.html:283
-msgid "Importing tables into database"
-msgstr "Se importă tabelele în baza de date"
 
 #: templates/manager/wp/install.html:287
 msgid "Sets pretty permalink structure and the site tagline."
@@ -8255,10 +8679,6 @@ msgstr "Se verifică și instalează seturile de plugin-uri și teme"
 msgid "Records the installation in the database so the site appears in WP Manager."
 msgstr "Înregistrează instalarea în baza de date pentru ca site-ul să apară în WP Manager."
 
-#: templates/manager/wp/install.html:329
-msgid "Install in progress for"
-msgstr "Instalare în curs pentru"
-
 #: templates/manager/wp/install.html:542
 msgid "WordPress install started. Please wait for the process to finish."
 msgstr "Instalarea WordPress a început. Te rog așteaptă finalizarea procesului."
@@ -8270,18 +8690,6 @@ msgstr "Eroare la preluarea versiunilor WordPress din WP.ORG API. Te rog reînca
 #: templates/manager/wp/list.html:14
 msgid "Manage WordPress websites"
 msgstr "Gestionează site-urile WordPress"
-
-#: templates/manager/wp/list.html:16
-msgid "Total installations:"
-msgstr "Total instalări:"
-
-#: templates/manager/wp/list.html:23
-msgid "New Installation"
-msgstr "Instalare nouă"
-
-#: templates/manager/wp/list.html:26
-msgid "Scan for Existing Installations"
-msgstr "Scanează pentru instalări existente"
 
 #: templates/manager/wp/list.html:59
 msgid "Sets:"
@@ -8303,29 +8711,13 @@ msgstr "Creează un set de teme pentru ca temele să fie instalate automat pe no
 msgid "Create a Plugins Set to have plugins auto-installed on new WordPress websites."
 msgstr "Creează un set de pluginuri pentru ca pluginurile să fie instalate automat pe noile site-uri WordPress."
 
-#: templates/manager/wp/list.html:81
-msgid "Refresh Data"
-msgstr "Reîmprospătează datele"
-
-#: templates/manager/wp/list.html:84
-msgid "Switch to Table view"
-msgstr "Comută la vizualizarea tabel"
-
 #: templates/manager/wp/list.html:86
 msgid "Display websites in a table"
 msgstr "Afișează site-urile într-un tabel"
 
-#: templates/manager/wp/list.html:90
-msgid "Switch to Cards view"
-msgstr "Comută la vizualizarea carduri"
-
 #: templates/manager/wp/list.html:92
 msgid "Display websites in a grid"
 msgstr "Afișează site-urile într-o grilă"
-
-#: templates/manager/wp/list.html:125
-msgid "Created on"
-msgstr "Creat la"
 
 #: templates/manager/wp/list.html:144 templates/manager/wp/list.html:237
 #: templates/manager/wp/single.html:51 templates/manager/wp/single.html:358
@@ -8355,35 +8747,6 @@ msgstr "Nu există instalări WordPress"
 #: templates/manager/wp/list.html:421
 msgid "No WordPress sites managed via OpenPanel. Install a new WordPress site or scan to find existing installations."
 msgstr "Nu există site-uri WordPress gestionate prin OpenPanel. Instalează un site WordPress nou sau scanează pentru a găsi instalări existente."
-
-#: templates/manager/wp/list.html:423 templates/system/cronjobs.html:375
-#: templates/user/favorites.html:109
-msgid "View Documentation"
-msgstr "Vezi documentația"
-
-#: templates/manager/wp/list.html:452
-msgid "Scanning started..."
-msgstr "Scanarea a început..."
-
-#: templates/manager/wp/list.html:469
-msgid "No installations found."
-msgstr "Nu s-au găsit instalări."
-
-#: templates/manager/wp/list.html:485
-msgid "Error occurred during scan. Try again."
-msgstr "A apărut o eroare în timpul scanării. Încearcă din nou."
-
-#: templates/manager/wp/list.html:495
-msgid "Data refresh in progress... Please wait."
-msgstr "Reîmprospătarea datelor este în desfășurare... Te rog așteaptă."
-
-#: templates/manager/wp/list.html:504
-msgid "Refresh completed."
-msgstr "Reîmprospătarea s-a finalizat."
-
-#: templates/manager/wp/list.html:509
-msgid "Error occurred during refresh."
-msgstr "A apărut o eroare în timpul reîmprospătării."
 
 #: templates/manager/wp/single.html:40
 msgid "Failed to load users"
@@ -8964,26 +9327,6 @@ msgstr "WordPress a fost actualizat cu succes."
 msgid "Update failed."
 msgstr "Actualizarea a eșuat."
 
-#: templates/manager/wp/single.html:2548
-msgid "Database and Files Backup"
-msgstr "Backup bază de date și fișiere"
-
-#: templates/manager/wp/single.html:2550
-msgid "Database Backup"
-msgstr "Backup bază de date"
-
-#: templates/manager/wp/single.html:2554
-msgid "Unknown Backup Type"
-msgstr "Tip backup necunoscut"
-
-#: templates/manager/wp/single.html:2567
-msgid "No options selected to backup. Please ensure that at least one of the Database or Files is selected."
-msgstr "Nu a fost selectată nicio opțiune pentru backup. Te rog asigură-te că este selectat cel puțin unul dintre Database sau Files."
-
-#: templates/manager/wp/single.html:2575
-msgid "Generating Backup..."
-msgstr "Se generează backup-ul..."
-
 #: templates/mysql/_error.html:4
 msgid "Is database service running?"
 msgstr "Serviciul de baze de date rulează?"
@@ -9238,6 +9581,10 @@ msgstr "bază de date"
 #: templates/mysql/databases.html:687
 msgid "Table"
 msgstr "Tabel"
+
+#: templates/mysql/databases.html:774
+msgid "Add new database"
+msgstr ""
 
 #: templates/mysql/import.html:8 templates/psql/import.html:8
 msgid "Import into Database"
@@ -9552,35 +9899,35 @@ msgstr "PHP"
 msgid "Sites"
 msgstr "Site-uri"
 
-#: templates/partials/_header.html:143 templates/partials/_header.html:203
+#: templates/partials/_header.html:144 templates/partials/_header.html:204
 msgid "Left-click to add to Favorites"
 msgstr "Click stânga pentru a adăuga la Favorite"
 
-#: templates/partials/_header.html:170 templates/partials/_header.html:247
+#: templates/partials/_header.html:171 templates/partials/_header.html:248
 msgid "Right-click to remove from Favorites"
 msgstr "Clic dreapta pentru a elimina din Favorite"
 
-#: templates/partials/_header.html:179
+#: templates/partials/_header.html:180
 msgid "This page is not in your favorites! Left-click to add it."
 msgstr "Această pagină nu este în favoritele tale! Click stânga pentru a o adăuga."
 
-#: templates/partials/_header.html:195
+#: templates/partials/_header.html:196
 msgid "Successfully removed from favorites!"
 msgstr "Eliminat din favorite cu succes!"
 
-#: templates/partials/_header.html:208
+#: templates/partials/_header.html:209
 msgid "Failed to remove favorite."
 msgstr "Nu s-a putut elimina din favorite."
 
-#: templates/partials/_header.html:215
+#: templates/partials/_header.html:216
 msgid "This page is already in your favorites! Right-click to remove it."
 msgstr "Această pagină este deja în favoritele tale! Click dreapta pentru a o elimina."
 
-#: templates/partials/_header.html:239
+#: templates/partials/_header.html:240
 msgid "Successfully added to favorites!"
 msgstr "Adăugat la favorite cu succes!"
 
-#: templates/partials/_header.html:253
+#: templates/partials/_header.html:254
 msgid "Failed to add favorite."
 msgstr "Nu s-a putut adăuga la favorite."
 
@@ -9595,6 +9942,39 @@ msgstr "Înapoi la"
 #: templates/partials/_impersonate.html:4
 msgid "OpenAdmin"
 msgstr "OpenAdmin"
+
+#: templates/partials/_search.html:47
+msgid "MySQL Database"
+msgstr ""
+
+#: templates/partials/_search.html:48
+msgid "MySQL User"
+msgstr ""
+
+#: templates/partials/_search.html:51
+msgid "PostgreSQL Database"
+msgstr ""
+
+#: templates/partials/_search.html:52
+msgid "PostgreSQL User"
+msgstr ""
+
+#: templates/partials/_search.html:58
+msgid "Email Account"
+msgstr ""
+
+#: templates/partials/_search.html:61
+msgid "FTP Account"
+msgstr ""
+
+#: templates/partials/_search.html:67 templates/partials/_service_log.html:62
+#: templates/system/services.html:94
+msgid "Service"
+msgstr "Serviciu"
+
+#: templates/partials/_search.html:70
+msgid "Cron Job"
+msgstr ""
 
 #: templates/partials/_service.html:24
 msgid "Loading service data..."
@@ -9628,10 +10008,6 @@ msgstr "Vezi logurile serviciului."
 #: templates/partials/_service_log.html:42
 msgid "View container log"
 msgstr "Vezi logul containerului"
-
-#: templates/partials/_service_log.html:62 templates/system/services.html:94
-msgid "Service"
-msgstr "Serviciu"
 
 #: templates/partials/_service_log.html:62
 msgid "log contains"
@@ -10525,6 +10901,10 @@ msgstr "Nu există încă cronjoburi; pentru a crea unul, apasă butonul de mai 
 msgid "view mode is unknown, only code and table are allowed"
 msgstr "modul de vizualizare este necunoscut, sunt permise doar code și table"
 
+#: templates/system/cronjobs.html:424
+msgid "Add new cron job"
+msgstr ""
+
 #: templates/system/cronjobs_new.html:11
 msgid "Create Cron Job"
 msgstr "Creează cron job"
@@ -10957,6 +11337,50 @@ msgstr "(100+ acțiuni într-un minut)."
 #: templates/user/activity.html:174
 msgid "IPs show bot-like activity (100+ actions in one minute)."
 msgstr "IP-urile arată activitate de tip bot (100+ acțiuni într-un minut)."
+
+#: templates/user/api_docs.html:55
+msgid "API Reference"
+msgstr ""
+
+#: templates/user/api_docs.html:58
+msgid "Programmatic access to all panel features. Authenticate with a Bearer token via"
+msgstr ""
+
+#: templates/user/api_docs.html:70
+msgid "Authentication"
+msgstr ""
+
+#: templates/user/api_docs.html:72
+msgid "Get a token:"
+msgstr ""
+
+#: templates/user/api_docs.html:72
+msgid "with"
+msgstr ""
+
+#: templates/user/api_docs.html:73
+msgid "Use it on every request:"
+msgstr ""
+
+#: templates/user/api_docs.html:74
+msgid "Tokens expire in 24 hours. The API must be enabled in your plan and individual features must be permitted."
+msgstr ""
+
+#: templates/user/api_docs.html:84
+msgid "Search endpoints…"
+msgstr ""
+
+#: templates/user/api_docs.html:93
+msgid "Filter by path, method, or description"
+msgstr ""
+
+#: templates/user/api_docs.html:138
+msgid "Example body"
+msgstr ""
+
+#: templates/user/api_docs.html:144
+msgid "cURL example"
+msgstr ""
 
 #: templates/user/email_template.html:50
 msgid "Click the button below to reset your password:"
