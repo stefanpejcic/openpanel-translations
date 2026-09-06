@@ -1,0 +1,56 @@
+name: Sync locale catalogs
+
+on:
+  schedule:
+    # 03:17 UTC every Monday
+    - cron: "17 3 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout translations
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout openpanel (source of translatable strings)
+        uses: actions/checkout@v4
+        with:
+          repository: stefanpejcic/openpanel
+          path: openpanel-src
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install polib
+
+      - name: Run sync script
+        run: python3 scripts/sync_locales.py --source openpanel-src
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "openpanel-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "No changes - catalogs already in sync."
+            exit 0
+          fi
+          git add -A -- ':!openpanel-src'
+          git commit -m "Sync locale catalogs with openpanel source
+
+          Automated run of scripts/sync_locales.py: re-extracted every
+          string the Go app routes through .T.Get/.T.GetN, refreshed
+          en-us/messages.pot and messages.po, and merged all other locales
+          against the new template (carrying over existing translations,
+          dropping obsolete entries, adding empty entries for new strings).
+
+          New strings still need a human/AI translation pass to fill in."
+          git push origin HEAD:main
