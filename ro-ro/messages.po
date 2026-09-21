@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-09-14 10:59+0200\n"
+"POT-Creation-Date: 2026-09-21 11:00+0200\n"
 "PO-Revision-Date: 2026-03-17 19:53+0200\n"
 "Last-Translator: Cuța Mihail-Sebastian <contact.mhi.yt@gmail.com>\n"
 "Language-Team: ro-ro\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 
 #: openpanel/internal/modules/account/api_login.go:56
-#: openpanel/internal/modules/account/login.go:162
+#: openpanel/internal/modules/account/login.go:171
 msgid "Username and password are required."
 msgstr "Numele de utilizator și parola sunt obligatorii."
 
@@ -89,29 +89,33 @@ msgstr "Parola a fost resetată. Te rog autentifică-te."
 msgid "Reset Password"
 msgstr "Resetează parola"
 
-#: openpanel/internal/modules/account/login.go:110
+#: openpanel/internal/modules/account/login.go:116
 #: openpanel/internal/web/templates/manager/dokuwiki_app.html:283
 msgid "Login"
 msgstr "Autentificare"
 
-#: openpanel/internal/modules/account/login.go:201
-#: openpanel/internal/modules/account/login.go:207
+#: openpanel/internal/modules/account/login.go:179
+msgid "Captcha verification failed. Please try again."
+msgstr ""
+
+#: openpanel/internal/modules/account/login.go:219
+#: openpanel/internal/modules/account/login.go:225
 msgid "Invalid 2FA code. Please try again."
 msgstr "Cod 2FA invalid. Te rog încearcă din nou."
 
-#: openpanel/internal/modules/account/login.go:341
+#: openpanel/internal/modules/account/login.go:359
 msgid "Autologin failed: Invalid username."
 msgstr "Autentificarea automată a eșuat: Nume de utilizator invalid."
 
-#: openpanel/internal/modules/account/login.go:349
+#: openpanel/internal/modules/account/login.go:367
 msgid "Error reading token from user files."
 msgstr "Eroare la citirea token-ului din fișierele utilizatorului."
 
-#: openpanel/internal/modules/account/login.go:356
+#: openpanel/internal/modules/account/login.go:374
 msgid "Autologin failed: Invalid or expired token."
 msgstr "Autentificarea automată a eșuat: token invalid sau expirat."
 
-#: openpanel/internal/modules/account/login.go:364
+#: openpanel/internal/modules/account/login.go:382
 msgid "Autologin failed: User does not exist."
 msgstr "Autentificarea automată a eșuat: utilizatorul nu există."
 
@@ -285,6 +289,8 @@ msgid "The home directory"
 msgstr "Directorul principal (home)"
 
 #: openpanel/internal/modules/backupwizard/render.go:41
+#: openpanel/internal/web/sidebar.go:118 openpanel/internal/web/sidebar.go:141
+#: openpanel/internal/web/sidebar.go:164
 #: openpanel/internal/web/templates/dashboard/usage.html:78
 #: openpanel/internal/web/templates/files/backup_restore.html:173
 #: openpanel/internal/web/templates/mysql/databases.html:9
@@ -292,7 +298,7 @@ msgid "Databases"
 msgstr "Baze de date"
 
 #: openpanel/internal/modules/backupwizard/render.go:41
-#: openpanel/internal/modules/dashboard/sections.go:36
+#: openpanel/internal/modules/dashboard/sections.go:41
 #: openpanel/internal/web/templates/cache/service.html:145
 #: openpanel/internal/web/templates/dashboard/usage.html:55
 #: openpanel/internal/web/templates/domains/domains.html:14
@@ -302,7 +308,7 @@ msgid "Domains"
 msgstr "Domenii"
 
 #: openpanel/internal/modules/backupwizard/render.go:42
-#: openpanel/internal/modules/dashboard/sections.go:71
+#: openpanel/internal/modules/dashboard/sections.go:82
 #: openpanel/internal/web/templates/dashboard/usage.html:32
 #: openpanel/internal/web/templates/domains/domains.html:77
 #: openpanel/internal/web/templates/domains/domains.html:120
@@ -361,15 +367,25 @@ msgstr ""
 "Varnish este un proxy invers de cache folosit ca accelerator HTTP pentru "
 "site-uri web dinamice cu conținut bogat, precum și pentru API-uri."
 
-#: openpanel/internal/modules/dashboard/dashboard.go:137
+#: openpanel/internal/modules/dashboard/dashboard.go:145
 msgid "Dashboard"
 msgstr "Panou de control"
+
+#: openpanel/internal/modules/dashboard/page.go:71
+#: openpanel/internal/web/templates/user/twofa_settings.html:20
+msgid "disabled"
+msgstr "dezactivat"
+
+#: openpanel/internal/modules/dashboard/page.go:73
+#: openpanel/internal/web/templates/user/twofa_settings.html:18
+msgid "enabled"
+msgstr "activat"
 
 #: openpanel/internal/modules/dashboard/page.go:75
 msgid "2FA is <b>{status}</b> for your account."
 msgstr "2FA este <b>{status}</b> pentru contul tău."
 
-#: openpanel/internal/modules/dashboard/sections.go:22
+#: openpanel/internal/modules/dashboard/sections.go:27
 #: openpanel/internal/web/templates/domains/ssl.html:226
 #: openpanel/internal/web/templates/files/filemanager.html:147
 #: openpanel/internal/web/templates/files/filemanager.html:405
@@ -396,18 +412,23 @@ msgstr "2FA este <b>{status}</b> pentru contul tău."
 msgid "Files"
 msgstr "Fișiere"
 
-#: openpanel/internal/modules/dashboard/sections.go:49
+#: openpanel/internal/modules/dashboard/sections.go:54
 #: openpanel/internal/web/templates/dashboard/onboarding.html:497
 #: openpanel/internal/web/templates/partials/_header.html:76
 msgid "MySQL"
 msgstr "MySQL"
 
-#: openpanel/internal/modules/dashboard/sections.go:61
+#: openpanel/internal/modules/dashboard/sections.go:66
 #: openpanel/internal/web/templates/partials/_header.html:81
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
-#: openpanel/internal/modules/dashboard/sections.go:76
+#: openpanel/internal/modules/dashboard/sections.go:75
+#: openpanel/internal/web/templates/partials/_header.html:86
+msgid "MongoDB"
+msgstr ""
+
+#: openpanel/internal/modules/dashboard/sections.go:87
 #: openpanel/internal/web/templates/manager/drupal_app.html:1204
 #: openpanel/internal/web/templates/manager/flarum_app.html:1067
 #: openpanel/internal/web/templates/manager/joomla_app.html:1179
@@ -422,7 +443,7 @@ msgstr "PostgreSQL"
 msgid "Cache"
 msgstr "Cache"
 
-#: openpanel/internal/modules/dashboard/sections.go:84
+#: openpanel/internal/modules/dashboard/sections.go:95
 #: openpanel/internal/web/templates/dashboard/onboarding.html:202
 #: openpanel/internal/web/templates/emails/accounts.html:9
 #: openpanel/internal/web/templates/files/backup_settings.html:84
@@ -430,27 +451,27 @@ msgstr "Cache"
 msgid "Emails"
 msgstr "Emailuri"
 
-#: openpanel/internal/modules/dashboard/sections.go:94
+#: openpanel/internal/modules/dashboard/sections.go:105
 #: openpanel/internal/web/templates/dashboard/onboarding.html:589
 #: openpanel/internal/web/templates/manager/autoinstaller.html:763
-#: openpanel/internal/web/templates/partials/_header.html:86
+#: openpanel/internal/web/templates/partials/_header.html:91
 msgid "PHP"
 msgstr "PHP"
 
-#: openpanel/internal/modules/dashboard/sections.go:101
+#: openpanel/internal/modules/dashboard/sections.go:112
 #: openpanel/internal/web/templates/docker/containers.html:13
 #: openpanel/internal/web/templates/docker/containers.html:268
-#: openpanel/internal/web/templates/partials/_header.html:91
+#: openpanel/internal/web/templates/partials/_header.html:96
 msgid "Containers"
 msgstr "Containere"
 
-#: openpanel/internal/modules/dashboard/sections.go:109
-#: openpanel/internal/web/templates/partials/_header.html:96
+#: openpanel/internal/modules/dashboard/sections.go:120
+#: openpanel/internal/web/templates/partials/_header.html:101
 msgid "Advanced"
 msgstr "Avansat"
 
-#: openpanel/internal/modules/dashboard/sections.go:122
-#: openpanel/internal/web/templates/partials/_header.html:101
+#: openpanel/internal/modules/dashboard/sections.go:133
+#: openpanel/internal/web/templates/partials/_header.html:106
 msgid "Account"
 msgstr "Cont"
 
@@ -479,6 +500,120 @@ msgstr "Click pentru a activa"
 #: openpanel/internal/modules/webserverconf/webserverconf.go:41
 msgid "Web Server Configuration Editor"
 msgstr "Editor de configurare server web"
+
+#: openpanel/internal/web/sidebar.go:79
+#: openpanel/internal/web/templates/manager/sites.html:8
+msgid "Site Manager"
+msgstr "Manager site-uri"
+
+#: openpanel/internal/web/sidebar.go:91 openpanel/internal/web/sidebar.go:97
+#: openpanel/internal/web/templates/files/disk_usage.html:90
+#: openpanel/internal/web/templates/files/filemanager.html:59
+#: openpanel/internal/web/templates/files/inodes.html:88
+msgid "File Manager"
+msgstr "Manager de fișiere"
+
+#: openpanel/internal/web/sidebar.go:92 openpanel/internal/web/sidebar.go:98
+msgid "Upload from device"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:93 openpanel/internal/web/sidebar.go:99
+#: openpanel/internal/web/templates/files/upload_file.html:11
+msgid "Download from URL"
+msgstr "Descarcă din URL"
+
+#: openpanel/internal/web/sidebar.go:119 openpanel/internal/web/sidebar.go:142
+#: openpanel/internal/web/sidebar.go:165
+#: openpanel/internal/web/templates/mysql/users.html:9
+msgid "Users"
+msgstr "Utilizatori"
+
+#: openpanel/internal/web/sidebar.go:123 openpanel/internal/web/sidebar.go:145
+#: openpanel/internal/web/sidebar.go:168
+#: openpanel/internal/web/templates/mongodb/databases.html:27
+#: openpanel/internal/web/templates/mongodb/databases.html:30
+#: openpanel/internal/web/templates/mongodb/wizard.html:8
+#: openpanel/internal/web/templates/mysql/databases.html:196
+#: openpanel/internal/web/templates/mysql/databases.html:199
+#: openpanel/internal/web/templates/mysql/wizard.html:8
+#: openpanel/internal/web/templates/psql/databases.html:91
+#: openpanel/internal/web/templates/psql/databases.html:94
+#: openpanel/internal/web/templates/psql/wizard.html:8
+msgid "Database Wizard"
+msgstr "Asistent baze de date"
+
+#: openpanel/internal/web/sidebar.go:124 openpanel/internal/web/sidebar.go:146
+#: openpanel/internal/web/sidebar.go:169
+#: openpanel/internal/web/templates/mongodb/new.html:42
+#: openpanel/internal/web/templates/mysql/new.html:44
+#: openpanel/internal/web/templates/psql/new.html:42
+msgid "Create Database"
+msgstr "Creează Baza de date"
+
+#: openpanel/internal/web/sidebar.go:125 openpanel/internal/web/sidebar.go:147
+#: openpanel/internal/web/sidebar.go:170
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:83
+#: openpanel/internal/web/templates/mongodb/users.html:26
+#: openpanel/internal/web/templates/mongodb/users.html:30
+#: openpanel/internal/web/templates/mysql/mysql_user.html:112
+#: openpanel/internal/web/templates/mysql/users.html:52
+#: openpanel/internal/web/templates/mysql/users.html:58
+#: openpanel/internal/web/templates/psql/psql_user.html:83
+#: openpanel/internal/web/templates/psql/users.html:42
+#: openpanel/internal/web/templates/psql/users.html:46
+msgid "Create User"
+msgstr "Creează Utilizator"
+
+#: openpanel/internal/web/sidebar.go:126 openpanel/internal/web/sidebar.go:148
+#: openpanel/internal/web/sidebar.go:171
+msgid "Assign User to DB"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:127 openpanel/internal/web/sidebar.go:149
+#: openpanel/internal/web/sidebar.go:172
+msgid "Remove User from DB"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:130 openpanel/internal/web/sidebar.go:153
+#: openpanel/internal/web/templates/mysql/remote_mysql.html:10
+msgid "Remote Access"
+msgstr "Acces la distanță"
+
+#: openpanel/internal/web/sidebar.go:154
+msgid "Show Processes"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:184 openpanel/internal/web/sidebar.go:209
+msgid "Domain Names"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:185 openpanel/internal/web/sidebar.go:210
+msgid "Add New Domain"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:194 openpanel/internal/web/sidebar.go:199
+msgid "Suspend a Domain"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:195 openpanel/internal/web/sidebar.go:200
+msgid "Unsuspend a Domain"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:222 openpanel/internal/web/sidebar.go:227
+msgid "Email Accounts"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:223 openpanel/internal/web/sidebar.go:228
+msgid "Create New Account"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:258
+msgid "Select PHP version"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:259
+msgid "Default version"
+msgstr ""
 
 #: openpanel/internal/web/templates/base.html:58
 #: openpanel/internal/web/templates/manager/grapejs_editor.html:110
@@ -511,10 +646,11 @@ msgid "Warning"
 msgstr "Avertisment"
 
 #: openpanel/internal/web/templates/base.html:64
-#: openpanel/internal/web/templates/base.html:513
-#: openpanel/internal/web/templates/base.html:554
+#: openpanel/internal/web/templates/base.html:540
+#: openpanel/internal/web/templates/base.html:594
 #: openpanel/internal/web/templates/files/backup_restore.html:494
 #: openpanel/internal/web/templates/mysql/databases.html:627
+#: openpanel/internal/web/templates/system/cronjobs.html:454
 msgid "Close"
 msgstr "Închide"
 
@@ -682,32 +818,71 @@ msgstr "Valoarea trebuie să fie cel mult {max}."
 msgid "Looks good."
 msgstr "Arată bine."
 
-#: openpanel/internal/web/templates/base.html:381
+#: openpanel/internal/web/templates/base.html:399
 #: openpanel/internal/web/templates/user/favorites.html:10
 msgid "Favorites"
 msgstr "Favorite"
 
-#: openpanel/internal/web/templates/base.html:511
+#: openpanel/internal/web/templates/base.html:484
+#: openpanel/internal/web/templates/dashboard/dashboard.html:46
+#: openpanel/internal/web/templates/dashboard/usage.html:13
+#: openpanel/internal/web/templates/manager/autoinstaller.html:22
+#: openpanel/internal/web/templates/manager/autoinstaller.html:54
+#: openpanel/internal/web/templates/manager/autoinstaller.html:86
+#: openpanel/internal/web/templates/manager/autoinstaller.html:118
+#: openpanel/internal/web/templates/manager/autoinstaller.html:158
+#: openpanel/internal/web/templates/manager/autoinstaller.html:190
+#: openpanel/internal/web/templates/manager/autoinstaller.html:228
+#: openpanel/internal/web/templates/manager/autoinstaller.html:260
+#: openpanel/internal/web/templates/manager/autoinstaller.html:313
+#: openpanel/internal/web/templates/manager/autoinstaller.html:345
+#: openpanel/internal/web/templates/manager/autoinstaller.html:377
+#: openpanel/internal/web/templates/manager/autoinstaller.html:415
+#: openpanel/internal/web/templates/manager/autoinstaller.html:453
+#: openpanel/internal/web/templates/manager/autoinstaller.html:485
+#: openpanel/internal/web/templates/manager/autoinstaller.html:517
+#: openpanel/internal/web/templates/manager/autoinstaller.html:555
+#: openpanel/internal/web/templates/manager/autoinstaller.html:587
+#: openpanel/internal/web/templates/manager/autoinstaller.html:625
+#: openpanel/internal/web/templates/manager/autoinstaller.html:657
+#: openpanel/internal/web/templates/manager/autoinstaller.html:689
+#: openpanel/internal/web/templates/manager/autoinstaller.html:721
+#: openpanel/internal/web/templates/manager/autoinstaller.html:753
+#: openpanel/internal/web/templates/manager/autoinstaller.html:785
+msgid "Upgrade to"
+msgstr "Faceți upgrade la"
+
+#: openpanel/internal/web/templates/base.html:484
+#: openpanel/internal/web/templates/dashboard/dashboard.html:46
+msgid "to use this feature."
+msgstr ""
+
+#: openpanel/internal/web/templates/base.html:484
+#: openpanel/internal/web/templates/dashboard/dashboard.html:46
+msgid "Not included in your plan. Contact your administrator to enable it."
+msgstr ""
+
+#: openpanel/internal/web/templates/base.html:538
 msgid "Notification"
 msgstr "Notificare"
 
-#: openpanel/internal/web/templates/base.html:514
+#: openpanel/internal/web/templates/base.html:541
 msgid "Dismiss"
 msgstr "Respinge"
 
-#: openpanel/internal/web/templates/base.html:553
+#: openpanel/internal/web/templates/base.html:593
 msgid "Keyboard shortcuts"
 msgstr "Comenzi rapide de la tastatură"
 
-#: openpanel/internal/web/templates/base.html:566
+#: openpanel/internal/web/templates/base.html:606
 msgid "Toggle sidebar"
 msgstr "Comutați bara laterală"
 
-#: openpanel/internal/web/templates/base.html:567
+#: openpanel/internal/web/templates/base.html:607
 msgid "Show this dialog"
 msgstr "Afișați acest dialog"
 
-#: openpanel/internal/web/templates/base.html:630
+#: openpanel/internal/web/templates/base.html:670
 msgid "Found a bug? Let us know"
 msgstr "Ai găsit un bug? Spune-ne"
 
@@ -783,7 +958,7 @@ msgstr "Nume domeniu"
 #: openpanel/internal/web/templates/cache/service.html:205
 #: openpanel/internal/web/templates/docker/containers.html:266
 #: openpanel/internal/web/templates/manager/python_node_apps.html:384
-#: openpanel/internal/web/templates/partials/_search.html:64
+#: openpanel/internal/web/templates/partials/_search.html:68
 #: openpanel/internal/web/templates/system/cronjobs.html:67
 #: openpanel/internal/web/templates/system/cronjobs.html:282
 #: openpanel/internal/web/templates/system/process_manager.html:56
@@ -832,7 +1007,7 @@ msgid "View container log"
 msgstr "Vezi logul containerului"
 
 #: openpanel/internal/web/templates/cache/service.html:311
-#: openpanel/internal/web/templates/partials/_search.html:67
+#: openpanel/internal/web/templates/partials/_search.html:71
 #: openpanel/internal/web/templates/system/services.html:73
 #: openpanel/internal/web/templates/system/services.html:211
 msgid "Service"
@@ -876,25 +1051,25 @@ msgstr "Click pentru a reîmprospăta"
 #: openpanel/internal/web/templates/system/server_info.html:30
 #: openpanel/internal/web/templates/system/server_info.html:38
 #: openpanel/internal/web/templates/system/server_info.html:44
-#: openpanel/internal/web/templates/system/server_info.html:77
-#: openpanel/internal/web/templates/system/server_info.html:83
-#: openpanel/internal/web/templates/system/server_info.html:89
-#: openpanel/internal/web/templates/system/server_info.html:95
-#: openpanel/internal/web/templates/system/server_info.html:102
-#: openpanel/internal/web/templates/system/server_info.html:118
-#: openpanel/internal/web/templates/system/server_info.html:124
-#: openpanel/internal/web/templates/system/server_info.html:130
-#: openpanel/internal/web/templates/system/server_info.html:136
-#: openpanel/internal/web/templates/system/server_info.html:142
-#: openpanel/internal/web/templates/system/server_info.html:148
-#: openpanel/internal/web/templates/system/server_info.html:154
-#: openpanel/internal/web/templates/system/server_info.html:160
-#: openpanel/internal/web/templates/system/server_info.html:166
-#: openpanel/internal/web/templates/system/server_info.html:172
-#: openpanel/internal/web/templates/system/server_info.html:178
-#: openpanel/internal/web/templates/system/server_info.html:184
-#: openpanel/internal/web/templates/system/server_info.html:190
-#: openpanel/internal/web/templates/system/server_info.html:196
+#: openpanel/internal/web/templates/system/server_info.html:91
+#: openpanel/internal/web/templates/system/server_info.html:97
+#: openpanel/internal/web/templates/system/server_info.html:103
+#: openpanel/internal/web/templates/system/server_info.html:109
+#: openpanel/internal/web/templates/system/server_info.html:116
+#: openpanel/internal/web/templates/system/server_info.html:132
+#: openpanel/internal/web/templates/system/server_info.html:138
+#: openpanel/internal/web/templates/system/server_info.html:144
+#: openpanel/internal/web/templates/system/server_info.html:150
+#: openpanel/internal/web/templates/system/server_info.html:156
+#: openpanel/internal/web/templates/system/server_info.html:162
+#: openpanel/internal/web/templates/system/server_info.html:168
+#: openpanel/internal/web/templates/system/server_info.html:174
+#: openpanel/internal/web/templates/system/server_info.html:180
+#: openpanel/internal/web/templates/system/server_info.html:186
+#: openpanel/internal/web/templates/system/server_info.html:192
+#: openpanel/internal/web/templates/system/server_info.html:198
+#: openpanel/internal/web/templates/system/server_info.html:204
+#: openpanel/internal/web/templates/system/server_info.html:210
 #: openpanel/internal/web/templates/system/services.html:230
 msgid "Loading..."
 msgstr "Se încarcă..."
@@ -984,6 +1159,10 @@ msgstr "Informații"
 #: openpanel/internal/web/templates/manager/opencart_install.html:130
 #: openpanel/internal/web/templates/manager/phpbb_install.html:146
 #: openpanel/internal/web/templates/manager/wp/install.html:111
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:23
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:25
+#: openpanel/internal/web/templates/mongodb/password.html:21
+#: openpanel/internal/web/templates/mongodb/users.html:42
 #: openpanel/internal/web/templates/mysql/mysql_user.html:23
 #: openpanel/internal/web/templates/mysql/mysql_user.html:25
 #: openpanel/internal/web/templates/mysql/password.html:21
@@ -1020,7 +1199,7 @@ msgid "/"
 msgstr "/"
 
 #: openpanel/internal/web/templates/dashboard/information.html:80
-#: openpanel/internal/web/templates/system/server_info.html:99
+#: openpanel/internal/web/templates/system/server_info.html:113
 msgid "Nameservers"
 msgstr "Nameservere"
 
@@ -1245,7 +1424,7 @@ msgid "You're all set! What would you like to do next?"
 msgstr "Totul este pregătit! Ce doriți să faceți în continuare?"
 
 #: openpanel/internal/web/templates/dashboard/onboarding.html:376
-#: openpanel/internal/web/templates/partials/_footer.html:79
+#: openpanel/internal/web/templates/partials/_footer.html:92
 msgid "Take the tour"
 msgstr "Fă turul"
 
@@ -1274,6 +1453,7 @@ msgid "Upload your website files using the file manager."
 msgstr "Încărcați fișierele site-ului dvs. folosind managerul de fișiere."
 
 #: openpanel/internal/web/templates/dashboard/onboarding.html:397
+#: openpanel/internal/web/templates/mongodb/wizard.html:24
 #: openpanel/internal/web/templates/mysql/wizard.html:183
 #: openpanel/internal/web/templates/psql/wizard.html:24
 msgid "Create a database"
@@ -1476,6 +1656,10 @@ msgstr "Server web"
 #: openpanel/internal/web/templates/manager/prestashop_app.html:768
 #: openpanel/internal/web/templates/manager/wp/single.html:435
 #: openpanel/internal/web/templates/manager/wp/single.html:1587
+#: openpanel/internal/web/templates/mongodb/users.html:27
+#: openpanel/internal/web/templates/mongodb/users.html:28
+#: openpanel/internal/web/templates/mongodb/users.html:31
+#: openpanel/internal/web/templates/mongodb/users.html:32
 #: openpanel/internal/web/templates/mysql/users.html:54
 #: openpanel/internal/web/templates/mysql/users.html:56
 #: openpanel/internal/web/templates/mysql/users.html:60
@@ -1512,7 +1696,7 @@ msgstr "Varnish"
 #: openpanel/internal/web/templates/manager/tinyphotogallery_app.html:47
 #: openpanel/internal/web/templates/manager/websitebuilder.html:55
 #: openpanel/internal/web/templates/manager/wp/single.html:214
-#: openpanel/internal/web/templates/partials/_header.html:106
+#: openpanel/internal/web/templates/partials/_header.html:111
 msgid "Backups"
 msgstr "Backup-uri"
 
@@ -1671,33 +1855,6 @@ msgstr "Utilizare"
 #: openpanel/internal/web/templates/dashboard/usage.html:10
 msgid "You've reached one or more limits of your current plan."
 msgstr "Ați atins una sau mai multe limite ale planului dvs. curent."
-
-#: openpanel/internal/web/templates/dashboard/usage.html:13
-#: openpanel/internal/web/templates/manager/autoinstaller.html:22
-#: openpanel/internal/web/templates/manager/autoinstaller.html:54
-#: openpanel/internal/web/templates/manager/autoinstaller.html:86
-#: openpanel/internal/web/templates/manager/autoinstaller.html:118
-#: openpanel/internal/web/templates/manager/autoinstaller.html:158
-#: openpanel/internal/web/templates/manager/autoinstaller.html:190
-#: openpanel/internal/web/templates/manager/autoinstaller.html:228
-#: openpanel/internal/web/templates/manager/autoinstaller.html:260
-#: openpanel/internal/web/templates/manager/autoinstaller.html:313
-#: openpanel/internal/web/templates/manager/autoinstaller.html:345
-#: openpanel/internal/web/templates/manager/autoinstaller.html:377
-#: openpanel/internal/web/templates/manager/autoinstaller.html:415
-#: openpanel/internal/web/templates/manager/autoinstaller.html:453
-#: openpanel/internal/web/templates/manager/autoinstaller.html:485
-#: openpanel/internal/web/templates/manager/autoinstaller.html:517
-#: openpanel/internal/web/templates/manager/autoinstaller.html:555
-#: openpanel/internal/web/templates/manager/autoinstaller.html:587
-#: openpanel/internal/web/templates/manager/autoinstaller.html:625
-#: openpanel/internal/web/templates/manager/autoinstaller.html:657
-#: openpanel/internal/web/templates/manager/autoinstaller.html:689
-#: openpanel/internal/web/templates/manager/autoinstaller.html:721
-#: openpanel/internal/web/templates/manager/autoinstaller.html:753
-#: openpanel/internal/web/templates/manager/autoinstaller.html:785
-msgid "Upgrade to"
-msgstr "Faceți upgrade la"
 
 #: openpanel/internal/web/templates/dashboard/usage.html:13
 msgid "for higher limits."
@@ -1914,7 +2071,7 @@ msgid "Add a new docker service"
 msgstr "Adaugă un serviciu docker nou"
 
 #: openpanel/internal/web/templates/docker/container_form.html:67
-#: openpanel/internal/web/templates/files/filemanager_partials.html:886
+#: openpanel/internal/web/templates/files/filemanager_partials.html:889
 #: openpanel/internal/web/templates/system/services.html:77
 msgid "Name:"
 msgstr "Nume:"
@@ -2048,6 +2205,8 @@ msgstr "Total memorie:"
 #: openpanel/internal/web/templates/files/ftp.html:24
 #: openpanel/internal/web/templates/manager/sites.html:124
 #: openpanel/internal/web/templates/manager/wp/list.html:37
+#: openpanel/internal/web/templates/mongodb/databases.html:16
+#: openpanel/internal/web/templates/mongodb/users.html:16
 #: openpanel/internal/web/templates/mysql/configuration.html:14
 #: openpanel/internal/web/templates/mysql/databases.html:185
 #: openpanel/internal/web/templates/mysql/processlist.html:16
@@ -2085,7 +2244,7 @@ msgstr "Afișează coloanele"
 #: openpanel/internal/web/templates/domains/dns.html:105
 #: openpanel/internal/web/templates/domains/dns.html:119
 #: openpanel/internal/web/templates/files/filemanager.html:117
-#: openpanel/internal/web/templates/files/filemanager_partials.html:374
+#: openpanel/internal/web/templates/files/filemanager_partials.html:377
 #: openpanel/internal/web/templates/files/trash.html:70
 #: openpanel/internal/web/templates/files/trash_partials.html:17
 #: openpanel/internal/web/templates/manager/app_install.html:118
@@ -2125,6 +2284,8 @@ msgstr "PID-uri"
 #: openpanel/internal/web/templates/manager/python_node_apps.html:198
 #: openpanel/internal/web/templates/manager/sites.html:212
 #: openpanel/internal/web/templates/manager/wp/list.html:114
+#: openpanel/internal/web/templates/mongodb/databases.html:42
+#: openpanel/internal/web/templates/mongodb/users.html:44
 #: openpanel/internal/web/templates/mysql/databases.html:212
 #: openpanel/internal/web/templates/mysql/users.html:77
 #: openpanel/internal/web/templates/psql/databases.html:107
@@ -2226,6 +2387,7 @@ msgstr ""
 "interiorul containerului."
 
 #: openpanel/internal/web/templates/docker/terminal.html:35
+#: openpanel/internal/web/templates/mongodb/databases.html:100
 #: openpanel/internal/web/templates/mysql/databases.html:601
 #: openpanel/internal/web/templates/mysql/users.html:176
 #: openpanel/internal/web/templates/psql/databases.html:166
@@ -2250,6 +2412,7 @@ msgstr "Reconectare"
 
 #: openpanel/internal/web/templates/docker/terminal.html:78
 #: openpanel/internal/web/templates/docker/terminal.html:147
+#: openpanel/internal/web/templates/system/cronjobs.html:414
 msgid "Connecting…"
 msgstr "Se conectează…"
 
@@ -2521,7 +2684,7 @@ msgstr "TTL"
 #: openpanel/internal/web/templates/domains/domains.html:109
 #: openpanel/internal/web/templates/domains/dynamic_dns.html:166
 #: openpanel/internal/web/templates/files/filemanager.html:125
-#: openpanel/internal/web/templates/files/filemanager_partials.html:396
+#: openpanel/internal/web/templates/files/filemanager_partials.html:399
 #: openpanel/internal/web/templates/files/trash.html:80
 #: openpanel/internal/web/templates/files/trash_partials.html:49
 #: openpanel/internal/web/templates/manager/sites.html:207
@@ -2598,12 +2761,15 @@ msgid "Protocol"
 msgstr "Protocol"
 
 #: openpanel/internal/web/templates/domains/dns.html:197
-#: openpanel/internal/web/templates/files/filemanager_partials.html:946
+#: openpanel/internal/web/templates/files/filemanager_partials.html:953
 #: openpanel/internal/web/templates/files/ftp.html:130
 #: openpanel/internal/web/templates/manager/sites.html:508
+#: openpanel/internal/web/templates/mongodb/databases.html:122
+#: openpanel/internal/web/templates/mongodb/users.html:83
 #: openpanel/internal/web/templates/mysql/users.html:116
 #: openpanel/internal/web/templates/psql/databases.html:188
 #: openpanel/internal/web/templates/psql/users.html:97
+#: openpanel/internal/web/templates/system/cronjobs.html:492
 #: openpanel/internal/web/templates/user/twofa_settings.html:135
 msgid "Confirm"
 msgstr "Confirmă"
@@ -2652,7 +2818,7 @@ msgstr "Adresă"
 #: openpanel/internal/web/templates/manager/websitebuilder_install.html:36
 #: openpanel/internal/web/templates/manager/wp/install.html:71
 #: openpanel/internal/web/templates/manager/wp/list.html:96
-#: openpanel/internal/web/templates/partials/_search.html:55
+#: openpanel/internal/web/templates/partials/_search.html:59
 #: openpanel/internal/web/templates/php/settings.html:73
 msgid "Domain"
 msgstr "Domeniu"
@@ -3008,8 +3174,8 @@ msgstr "Suspendă"
 #: openpanel/internal/web/templates/emails/single_account.html:13
 #: openpanel/internal/web/templates/files/clamav/quarantine.html:84
 #: openpanel/internal/web/templates/files/filemanager_partials.html:262
-#: openpanel/internal/web/templates/files/filemanager_partials.html:329
-#: openpanel/internal/web/templates/files/filemanager_partials.html:848
+#: openpanel/internal/web/templates/files/filemanager_partials.html:332
+#: openpanel/internal/web/templates/files/filemanager_partials.html:851
 #: openpanel/internal/web/templates/files/ftp.html:113
 #: openpanel/internal/web/templates/files/ftp.html:131
 #: openpanel/internal/web/templates/files/trash.html:57
@@ -3034,6 +3200,10 @@ msgstr "Suspendă"
 #: openpanel/internal/web/templates/manager/tinyfilemanager_app.html:446
 #: openpanel/internal/web/templates/manager/tinyphotogallery_app.html:448
 #: openpanel/internal/web/templates/manager/websitebuilder.html:238
+#: openpanel/internal/web/templates/mongodb/databases.html:65
+#: openpanel/internal/web/templates/mongodb/databases.html:146
+#: openpanel/internal/web/templates/mongodb/users.html:63
+#: openpanel/internal/web/templates/mongodb/users.html:107
 #: openpanel/internal/web/templates/mysql/databases.html:488
 #: openpanel/internal/web/templates/mysql/databases.html:490
 #: openpanel/internal/web/templates/mysql/remote_mysql.html:207
@@ -3044,6 +3214,7 @@ msgstr "Suspendă"
 #: openpanel/internal/web/templates/psql/users.html:77
 #: openpanel/internal/web/templates/psql/users.html:121
 #: openpanel/internal/web/templates/system/cronjobs.html:357
+#: openpanel/internal/web/templates/system/cronjobs.html:493
 #: openpanel/internal/web/templates/user/favorites.html:83
 msgid "Delete"
 msgstr "Șterge"
@@ -3068,6 +3239,8 @@ msgstr "Se afișează"
 
 #: openpanel/internal/web/templates/domains/domains.html:409
 #: openpanel/internal/web/templates/files/filemanager.html:348
+#: openpanel/internal/web/templates/mongodb/users.html:27
+#: openpanel/internal/web/templates/mongodb/users.html:31
 #: openpanel/internal/web/templates/mysql/users.html:54
 #: openpanel/internal/web/templates/mysql/users.html:60
 #: openpanel/internal/web/templates/psql/users.html:43
@@ -3157,8 +3330,8 @@ msgid "Will be updated automatically on first webcall."
 msgstr "Va fi actualizat automat la primul apel web."
 
 #: openpanel/internal/web/templates/domains/dynamic_dns.html:64
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1116
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1160
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1123
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1167
 #: openpanel/internal/web/templates/mysql/mysql_user.html:8
 #: openpanel/internal/web/templates/mysql/wizard.html:303
 msgid "Create"
@@ -3221,7 +3394,7 @@ msgstr "Copiază URL"
 #: openpanel/internal/web/templates/domains/vhost.html:23
 #: openpanel/internal/web/templates/domains/vhost.html:180
 #: openpanel/internal/web/templates/files/filemanager_partials.html:277
-#: openpanel/internal/web/templates/files/filemanager_partials.html:341
+#: openpanel/internal/web/templates/files/filemanager_partials.html:344
 #: openpanel/internal/web/templates/mysql/remote_mysql.html:201
 #: openpanel/internal/web/templates/system/cronjobs.html:343
 msgid "Edit"
@@ -3301,9 +3474,10 @@ msgstr "URI"
 #: openpanel/internal/web/templates/files/backup_wizard.html:125
 #: openpanel/internal/web/templates/files/disk_usage.html:61
 #: openpanel/internal/web/templates/files/filemanager.html:124
-#: openpanel/internal/web/templates/files/filemanager_partials.html:375
+#: openpanel/internal/web/templates/files/filemanager_partials.html:378
 #: openpanel/internal/web/templates/files/trash.html:79
 #: openpanel/internal/web/templates/files/trash_partials.html:18
+#: openpanel/internal/web/templates/mongodb/databases.html:41
 #: openpanel/internal/web/templates/mysql/databases.html:210
 #: openpanel/internal/web/templates/psql/databases.html:105
 msgid "Size"
@@ -4149,6 +4323,11 @@ msgstr "Email"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:164
 #: openpanel/internal/web/templates/manager/prestashop_install.html:156
 #: openpanel/internal/web/templates/manager/wp/install.html:129
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:40
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:49
+#: openpanel/internal/web/templates/mongodb/password.html:38
+#: openpanel/internal/web/templates/mongodb/password.html:47
+#: openpanel/internal/web/templates/mongodb/wizard.html:71
 #: openpanel/internal/web/templates/mysql/mysql_user.html:40
 #: openpanel/internal/web/templates/mysql/mysql_user.html:50
 #: openpanel/internal/web/templates/mysql/password.html:38
@@ -4185,6 +4364,7 @@ msgid "Start Import"
 msgstr "Pornește importul"
 
 #: openpanel/internal/web/templates/emails/confirm_import.html:111
+#: openpanel/internal/web/templates/mongodb/import.html:43
 #: openpanel/internal/web/templates/mysql/import.html:47
 #: openpanel/internal/web/templates/psql/import.html:43
 msgid "Importing..."
@@ -4425,7 +4605,7 @@ msgstr "Selectează o adresă de email pentru a gestiona filtrele Sieve."
 #: openpanel/internal/web/templates/emails/filter.html:15
 #: openpanel/internal/web/templates/emails/import.html:10
 #: openpanel/internal/web/templates/files/edit_file.html:101
-#: openpanel/internal/web/templates/partials/_footer.html:60
+#: openpanel/internal/web/templates/partials/_footer.html:73
 msgid "Documentation"
 msgstr "Documentație"
 
@@ -4743,6 +4923,9 @@ msgstr "Sunt permise doar litere, cifre și caracterele . _ % + -"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:156
 #: openpanel/internal/web/templates/manager/prestashop_install.html:148
 #: openpanel/internal/web/templates/manager/wp/install.html:121
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:32
+#: openpanel/internal/web/templates/mongodb/password.html:30
+#: openpanel/internal/web/templates/mongodb/wizard.html:57
 #: openpanel/internal/web/templates/mysql/mysql_user.html:32
 #: openpanel/internal/web/templates/mysql/password.html:30
 #: openpanel/internal/web/templates/mysql/root_password.html:23
@@ -4771,6 +4954,9 @@ msgstr "Parolă slabă"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:157
 #: openpanel/internal/web/templates/manager/prestashop_install.html:149
 #: openpanel/internal/web/templates/manager/wp/install.html:122
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:33
+#: openpanel/internal/web/templates/mongodb/password.html:31
+#: openpanel/internal/web/templates/mongodb/wizard.html:58
 #: openpanel/internal/web/templates/mysql/mysql_user.html:33
 #: openpanel/internal/web/templates/mysql/password.html:31
 #: openpanel/internal/web/templates/mysql/root_password.html:24
@@ -4799,6 +4985,9 @@ msgstr "Parolă medie"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:158
 #: openpanel/internal/web/templates/manager/prestashop_install.html:150
 #: openpanel/internal/web/templates/manager/wp/install.html:123
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:34
+#: openpanel/internal/web/templates/mongodb/password.html:32
+#: openpanel/internal/web/templates/mongodb/wizard.html:59
 #: openpanel/internal/web/templates/mysql/mysql_user.html:34
 #: openpanel/internal/web/templates/mysql/password.html:32
 #: openpanel/internal/web/templates/mysql/root_password.html:25
@@ -4827,6 +5016,9 @@ msgstr "Parolă puternică"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:159
 #: openpanel/internal/web/templates/manager/prestashop_install.html:151
 #: openpanel/internal/web/templates/manager/wp/install.html:124
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:35
+#: openpanel/internal/web/templates/mongodb/password.html:33
+#: openpanel/internal/web/templates/mongodb/wizard.html:60
 #: openpanel/internal/web/templates/mysql/mysql_user.html:35
 #: openpanel/internal/web/templates/mysql/password.html:33
 #: openpanel/internal/web/templates/mysql/root_password.html:26
@@ -4983,7 +5175,7 @@ msgstr "Restaurează"
 #: openpanel/internal/web/templates/files/backup_restore.html:510
 #: openpanel/internal/web/templates/files/backup_wizard.html:168
 #: openpanel/internal/web/templates/files/filemanager_partials.html:267
-#: openpanel/internal/web/templates/files/filemanager_partials.html:333
+#: openpanel/internal/web/templates/files/filemanager_partials.html:336
 #: openpanel/internal/web/templates/files/upload_file.html:140
 msgid "Download"
 msgstr "Descarcă"
@@ -5514,36 +5706,36 @@ msgstr "Pornește scanarea"
 msgid "Scanning..."
 msgstr "Se scanează..."
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:72
+#: openpanel/internal/web/templates/files/clamav/scanner.html:108
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:756
 msgid "files scanned"
 msgstr "fișiere scanate"
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:83
+#: openpanel/internal/web/templates/files/clamav/scanner.html:119
 msgid "Scan Results"
 msgstr "Rezultatele scanării"
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:97
+#: openpanel/internal/web/templates/files/clamav/scanner.html:129
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:775
 msgid "Scan failed: "
 msgstr "Scanarea a eșuat: "
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:98
+#: openpanel/internal/web/templates/files/clamav/scanner.html:130
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:776
 msgid "Scan is complete!"
 msgstr "Scanarea este completă!"
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:99
+#: openpanel/internal/web/templates/files/clamav/scanner.html:131
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:777
 msgid "files scanned."
 msgstr "fișiere scanate."
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:100
+#: openpanel/internal/web/templates/files/clamav/scanner.html:132
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:778
 msgid "No malware found."
 msgstr "Nu a fost găsit niciun malware."
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:173
+#: openpanel/internal/web/templates/files/clamav/scanner.html:210
 #: openpanel/internal/web/templates/files/fix_permissions.html:91
 msgid "Network response was not ok"
 msgstr "Răspunsul de rețea nu a fost ok"
@@ -5594,12 +5786,6 @@ msgstr "Director"
 #: openpanel/internal/web/templates/files/inodes.html:121
 msgid "Up One Level"
 msgstr "Sus un nivel"
-
-#: openpanel/internal/web/templates/files/disk_usage.html:90
-#: openpanel/internal/web/templates/files/filemanager.html:59
-#: openpanel/internal/web/templates/files/inodes.html:88
-msgid "File Manager"
-msgstr "Manager de fișiere"
 
 #: openpanel/internal/web/templates/files/disk_usage.html:193
 msgid "Calculating disk usage for parent directory.."
@@ -5680,7 +5866,7 @@ msgid "New Folder"
 msgstr "Folder nou"
 
 #: openpanel/internal/web/templates/files/filemanager.html:118
-#: openpanel/internal/web/templates/files/filemanager_partials.html:378
+#: openpanel/internal/web/templates/files/filemanager_partials.html:381
 #: openpanel/internal/web/templates/files/trash.html:73
 #: openpanel/internal/web/templates/files/trash_partials.html:21
 #: openpanel/internal/web/templates/user/history_usage.html:127
@@ -5688,21 +5874,21 @@ msgid "Date"
 msgstr "Dată"
 
 #: openpanel/internal/web/templates/files/filemanager.html:119
-#: openpanel/internal/web/templates/files/filemanager_partials.html:381
+#: openpanel/internal/web/templates/files/filemanager_partials.html:384
 #: openpanel/internal/web/templates/files/trash.html:74
 #: openpanel/internal/web/templates/files/trash_partials.html:34
 msgid "Owner"
 msgstr "Proprietar"
 
 #: openpanel/internal/web/templates/files/filemanager.html:120
-#: openpanel/internal/web/templates/files/filemanager_partials.html:384
+#: openpanel/internal/web/templates/files/filemanager_partials.html:387
 #: openpanel/internal/web/templates/files/trash.html:75
 #: openpanel/internal/web/templates/files/trash_partials.html:37
 msgid "Group"
 msgstr "Grup"
 
 #: openpanel/internal/web/templates/files/filemanager.html:121
-#: openpanel/internal/web/templates/files/filemanager_partials.html:388
+#: openpanel/internal/web/templates/files/filemanager_partials.html:391
 #: openpanel/internal/web/templates/files/trash.html:76
 #: openpanel/internal/web/templates/files/trash_partials.html:41
 msgid "Links"
@@ -5715,8 +5901,8 @@ msgstr "Țintă link"
 
 #: openpanel/internal/web/templates/files/filemanager.html:123
 #: openpanel/internal/web/templates/files/filemanager_partials.html:287
-#: openpanel/internal/web/templates/files/filemanager_partials.html:349
-#: openpanel/internal/web/templates/files/filemanager_partials.html:401
+#: openpanel/internal/web/templates/files/filemanager_partials.html:352
+#: openpanel/internal/web/templates/files/filemanager_partials.html:404
 #: openpanel/internal/web/templates/files/trash.html:78
 #: openpanel/internal/web/templates/files/trash_partials.html:54
 msgid "Permissions"
@@ -5799,8 +5985,8 @@ msgid "Start creating new folders or uploading a new file!"
 msgstr "Începe prin a crea foldere noi sau a încărca un fișier nou!"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:247
-#: openpanel/internal/web/templates/files/filemanager_partials.html:317
-#: openpanel/internal/web/templates/files/filemanager_partials.html:512
+#: openpanel/internal/web/templates/files/filemanager_partials.html:320
+#: openpanel/internal/web/templates/files/filemanager_partials.html:515
 #: openpanel/internal/web/templates/files/trash.html:43
 #: openpanel/internal/web/templates/files/trash_partials.html:525
 #: openpanel/internal/web/templates/manager/sites.html:205
@@ -5809,8 +5995,8 @@ msgid "Select all"
 msgstr "Selectează tot"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:252
-#: openpanel/internal/web/templates/files/filemanager_partials.html:321
-#: openpanel/internal/web/templates/files/filemanager_partials.html:659
+#: openpanel/internal/web/templates/files/filemanager_partials.html:324
+#: openpanel/internal/web/templates/files/filemanager_partials.html:662
 #: openpanel/internal/web/templates/mysql/wizard.html:80
 #: openpanel/internal/web/templates/mysql/wizard.html:139
 #: openpanel/internal/web/templates/user/mcp.html:30
@@ -5820,178 +6006,182 @@ msgid "Copy"
 msgstr "Copiază"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:257
-#: openpanel/internal/web/templates/files/filemanager_partials.html:325
-#: openpanel/internal/web/templates/files/filemanager_partials.html:795
+#: openpanel/internal/web/templates/files/filemanager_partials.html:328
+#: openpanel/internal/web/templates/files/filemanager_partials.html:798
 msgid "Move"
 msgstr "Mută"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:272
-#: openpanel/internal/web/templates/files/filemanager_partials.html:337
+#: openpanel/internal/web/templates/files/filemanager_partials.html:340
 msgid "View"
 msgstr "Vezi"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:282
-#: openpanel/internal/web/templates/files/filemanager_partials.html:345
-#: openpanel/internal/web/templates/files/filemanager_partials.html:895
+#: openpanel/internal/web/templates/files/filemanager_partials.html:348
+#: openpanel/internal/web/templates/files/filemanager_partials.html:898
 msgid "Rename"
 msgstr "Redenumește"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:292
-#: openpanel/internal/web/templates/files/filemanager_partials.html:353
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1006
+#: openpanel/internal/web/templates/files/filemanager_partials.html:356
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1013
 msgid "Compress"
 msgstr "Comprimă"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:297
-#: openpanel/internal/web/templates/files/filemanager_partials.html:357
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1066
+#: openpanel/internal/web/templates/files/filemanager_partials.html:360
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1073
 msgid "Extract"
 msgstr "Extrage"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:377
+#: openpanel/internal/web/templates/files/filemanager_partials.html:380
 #: openpanel/internal/web/templates/files/trash_partials.html:20
 msgid "Last Modified"
 msgstr "Ultima modificare"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:392
+#: openpanel/internal/web/templates/files/filemanager_partials.html:395
 #: openpanel/internal/web/templates/files/trash_partials.html:45
 msgid "Link target"
 msgstr "Țintă link"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:414
+#: openpanel/internal/web/templates/files/filemanager_partials.html:417
 msgid "Go Up"
 msgstr "Mergi Sus"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:455
-#: openpanel/internal/web/templates/files/filemanager_partials.html:516
+#: openpanel/internal/web/templates/files/filemanager_partials.html:458
+#: openpanel/internal/web/templates/files/filemanager_partials.html:519
 msgid "Calculate"
 msgstr "Calculează"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:513
+#: openpanel/internal/web/templates/files/filemanager_partials.html:516
 #: openpanel/internal/web/templates/files/trash_partials.html:524
 msgid "Deselect"
 msgstr "Deselectează"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:514
+#: openpanel/internal/web/templates/files/filemanager_partials.html:517
 #: openpanel/internal/web/templates/manager/sites.html:471
 msgid "selected"
 msgstr "selectate"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:515
+#: openpanel/internal/web/templates/files/filemanager_partials.html:518
 msgid "Calculating..."
 msgstr "Se calculează..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:517
+#: openpanel/internal/web/templates/files/filemanager_partials.html:520
 msgid "Change permissions for"
 msgstr "Schimbă permisiunile pentru"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:537
+#: openpanel/internal/web/templates/files/filemanager_partials.html:540
 msgid "Copy items"
 msgstr "Copiază elemente"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:553
+#: openpanel/internal/web/templates/files/filemanager_partials.html:556
 msgid "Copy to:"
 msgstr "Copiază în:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:653
+#: openpanel/internal/web/templates/files/filemanager_partials.html:656
 msgid "Copying..."
 msgstr "Se copiază..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:675
+#: openpanel/internal/web/templates/files/filemanager_partials.html:678
 msgid "Move items"
 msgstr "Mută elemente"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:691
+#: openpanel/internal/web/templates/files/filemanager_partials.html:694
 msgid "Where to:"
 msgstr "Unde:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:789
+#: openpanel/internal/web/templates/files/filemanager_partials.html:792
 msgid "Moving..."
 msgstr "Se mută..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:811
+#: openpanel/internal/web/templates/files/filemanager_partials.html:814
 #: openpanel/internal/web/templates/files/trash_partials.html:237
 msgid "Delete items"
 msgstr "Șterge elemente"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:836
+#: openpanel/internal/web/templates/files/filemanager_partials.html:839
 msgid "deleting..."
 msgstr "se șterge..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:844
+#: openpanel/internal/web/templates/files/filemanager_partials.html:847
 msgid "Skip the trash and permanently delete the files"
 msgstr "Sari peste coș și șterge permanent fișierele"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:868
+#: openpanel/internal/web/templates/files/filemanager_partials.html:871
 msgid "Rename item"
 msgstr "Redenumește elementul"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:916
+#: openpanel/internal/web/templates/files/filemanager_partials.html:919
 msgid "Change file permissions"
 msgstr "Schimbă permisiunile fișierului"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:917
+#: openpanel/internal/web/templates/files/filemanager_partials.html:920
 msgid "Set permissions"
 msgstr "Setează permisiunile"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:936
+#: openpanel/internal/web/templates/files/filemanager_partials.html:939
 msgid "Enter exactly 3 digits (e.g. 755) for the octal permission value."
 msgstr ""
 "Introduceți exact 3 cifre (ex. 755) pentru valoarea octală a permisiunii."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:963
+#: openpanel/internal/web/templates/files/filemanager_partials.html:943
+msgid "Apply recursively to subdirectories"
+msgstr ""
+
+#: openpanel/internal/web/templates/files/filemanager_partials.html:970
 msgid "Compress items"
 msgstr "Comprimă elementele"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:979
+#: openpanel/internal/web/templates/files/filemanager_partials.html:986
 msgid "Archive path"
 msgstr "Cale arhivă"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1000
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1007
 msgid "compressing..."
 msgstr "se comprimă..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1026
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1033
 msgid "Extract items"
 msgstr "Extrage elemente"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1041
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1048
 msgid "Archive name:"
 msgstr "Numele arhivei:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1046
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1053
 msgid "Extract destination:"
 msgstr "Destinație de extragere:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1060
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1067
 msgid "Extracting..."
 msgstr "Se extrage..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1086
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1093
 msgid "Create New File"
 msgstr "Creează fișier nou"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1098
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1105
 msgid "File Name"
 msgstr "Nume fișier"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1104
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1111
 msgid "Open in File Editor after creation"
 msgstr "Deschide în Editorul de fișiere după creare"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1110
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1117
 msgid "New file will be created in:"
 msgstr "Fișierul nou va fi creat în:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1137
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1144
 msgid "Create New Folder"
 msgstr "Creează folder nou"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1148
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1155
 msgid "Folder Name"
 msgstr "Nume folder"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1154
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1161
 msgid "New folder will be created in:"
 msgstr "Folderul nou va fi creat în:"
 
@@ -6079,6 +6269,8 @@ msgid "Add your first account"
 msgstr "Adaugă primul tău cont"
 
 #: openpanel/internal/web/templates/files/ftp.html:106
+#: openpanel/internal/web/templates/mongodb/password.html:81
+#: openpanel/internal/web/templates/mongodb/users.html:59
 #: openpanel/internal/web/templates/mysql/password.html:116
 #: openpanel/internal/web/templates/mysql/root_password.html:103
 #: openpanel/internal/web/templates/mysql/users.html:96
@@ -6324,10 +6516,6 @@ msgstr "Restaurează elemente"
 msgid "File Upload"
 msgstr "Încărcare fișier"
 
-#: openpanel/internal/web/templates/files/upload_file.html:11
-msgid "Download from URL"
-msgstr "Descarcă din URL"
-
 #: openpanel/internal/web/templates/files/upload_file.html:103
 msgid "Download from URL instead"
 msgstr "Descarcă din URL în schimb"
@@ -6442,7 +6630,7 @@ msgstr "Portul este opțional; dacă este lăsat gol, va fi folosit portul '80'.
 #: openpanel/internal/web/templates/manager/sites.html:210
 #: openpanel/internal/web/templates/manager/wp/list.html:105
 #: openpanel/internal/web/templates/manager/wp/single.html:1153
-#: openpanel/internal/web/templates/system/server_info.html:87
+#: openpanel/internal/web/templates/system/server_info.html:101
 msgid "Version"
 msgstr "Versiune"
 
@@ -8989,6 +9177,10 @@ msgstr ""
 #: openpanel/internal/web/templates/manager/phpbb_app.html:472
 #: openpanel/internal/web/templates/manager/prestashop_app.html:774
 #: openpanel/internal/web/templates/manager/wp/single.html:1593
+#: openpanel/internal/web/templates/mongodb/databases.html:40
+#: openpanel/internal/web/templates/mongodb/new.html:21
+#: openpanel/internal/web/templates/mongodb/new.html:23
+#: openpanel/internal/web/templates/mongodb/wizard.html:27
 #: openpanel/internal/web/templates/mysql/databases.html:209
 #: openpanel/internal/web/templates/mysql/new.html:23
 #: openpanel/internal/web/templates/mysql/new.html:25
@@ -11258,10 +11450,6 @@ msgstr "Instalarea pachetelor a eșuat."
 msgid "Error running package install for application."
 msgstr "Eroare la rularea instalării de pachete pentru aplicație."
 
-#: openpanel/internal/web/templates/manager/sites.html:8
-msgid "Site Manager"
-msgstr "Manager site-uri"
-
 #: openpanel/internal/web/templates/manager/sites.html:9
 msgid "and other websites."
 msgstr "și alte site-uri."
@@ -12264,7 +12452,7 @@ msgstr ""
 "WordPress nou sau scanează pentru a găsi instalări existente."
 
 #: openpanel/internal/web/templates/manager/wp/list.html:341
-#: openpanel/internal/web/templates/system/cronjobs.html:386
+#: openpanel/internal/web/templates/system/cronjobs.html:480
 #: openpanel/internal/web/templates/user/favorites.html:126
 msgid "View Documentation"
 msgstr "Vezi documentația"
@@ -12840,6 +13028,349 @@ msgstr "WordPress a fost actualizat cu succes."
 msgid "Update failed."
 msgstr "Actualizarea a eșuat."
 
+#: openpanel/internal/web/templates/mongodb/assign.html:8
+#: openpanel/internal/web/templates/mongodb/assign.html:55
+#: openpanel/internal/web/templates/psql/assign.html:8
+#: openpanel/internal/web/templates/psql/assign.html:46
+msgid "Assign User to Database"
+msgstr "Trimiteți utilizatorul la Baza de date"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:9
+msgid ""
+"Grant a MongoDB user a role scoped to a database, enabling access for "
+"reading or writing documents within it."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/assign.html:21
+#: openpanel/internal/web/templates/mongodb/remove.html:21
+#: openpanel/internal/web/templates/mysql/assign.html:37
+#: openpanel/internal/web/templates/mysql/remove.html:21
+#: openpanel/internal/web/templates/psql/assign.html:21
+#: openpanel/internal/web/templates/psql/remove.html:21
+msgid "Select user:"
+msgstr "Selectează utilizatorul:"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:30
+#: openpanel/internal/web/templates/mongodb/import.html:21
+#: openpanel/internal/web/templates/mongodb/remove.html:30
+#: openpanel/internal/web/templates/mysql/assign.html:50
+#: openpanel/internal/web/templates/mysql/import.html:24
+#: openpanel/internal/web/templates/mysql/remove.html:33
+#: openpanel/internal/web/templates/psql/assign.html:30
+#: openpanel/internal/web/templates/psql/import.html:21
+#: openpanel/internal/web/templates/psql/remove.html:30
+msgid "Select database:"
+msgstr "Selectează baza de date:"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:33
+#: openpanel/internal/web/templates/mongodb/import.html:66
+#: openpanel/internal/web/templates/mysql/import.html:75
+#: openpanel/internal/web/templates/psql/assign.html:33
+#: openpanel/internal/web/templates/psql/import.html:66
+msgid "Select a database"
+msgstr "Selectează o bază de date"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:39
+#: openpanel/internal/web/templates/mongodb/remove.html:39
+msgid "Select role:"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/assign.html:53
+#: openpanel/internal/web/templates/mongodb/new.html:39
+#: openpanel/internal/web/templates/mongodb/remove.html:53
+#: openpanel/internal/web/templates/mongodb/wizard.html:117
+#: openpanel/internal/web/templates/mysql/assign.html:80
+#: openpanel/internal/web/templates/mysql/new.html:41
+#: openpanel/internal/web/templates/mysql/remove.html:49
+#: openpanel/internal/web/templates/mysql/root_password.html:101
+#: openpanel/internal/web/templates/mysql/wizard.html:299
+#: openpanel/internal/web/templates/psql/assign.html:44
+#: openpanel/internal/web/templates/psql/new.html:39
+#: openpanel/internal/web/templates/psql/remove.html:44
+#: openpanel/internal/web/templates/psql/wizard.html:114
+msgid "Back to Databases"
+msgstr "Înapoi la baze de date"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:9
+msgid "MongoDB Databases"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/databases.html:10
+#: openpanel/internal/web/templates/mysql/databases.html:22
+#: openpanel/internal/web/templates/psql/databases.html:10
+msgid "Total databases:"
+msgstr "Total baze de date:"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:26
+#: openpanel/internal/web/templates/mongodb/databases.html:29
+#: openpanel/internal/web/templates/mysql/databases.html:195
+#: openpanel/internal/web/templates/mysql/databases.html:198
+#: openpanel/internal/web/templates/psql/databases.html:90
+#: openpanel/internal/web/templates/psql/databases.html:93
+msgid "New Database"
+msgstr "Bază de date nouă"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:29
+#: openpanel/internal/web/templates/mongodb/databases.html:30
+#: openpanel/internal/web/templates/mongodb/users.html:30
+#: openpanel/internal/web/templates/mongodb/users.html:31
+#: openpanel/internal/web/templates/mongodb/users.html:32
+#: openpanel/internal/web/templates/mysql/databases.html:198
+#: openpanel/internal/web/templates/mysql/databases.html:199
+#: openpanel/internal/web/templates/mysql/users.html:58
+#: openpanel/internal/web/templates/mysql/users.html:60
+#: openpanel/internal/web/templates/mysql/users.html:62
+#: openpanel/internal/web/templates/psql/databases.html:93
+#: openpanel/internal/web/templates/psql/databases.html:94
+#: openpanel/internal/web/templates/psql/users.html:46
+#: openpanel/internal/web/templates/psql/users.html:47
+#: openpanel/internal/web/templates/psql/users.html:48
+msgid "Unavailable while the service is not running."
+msgstr "Indisponibil cât timp serviciul nu rulează."
+
+#: openpanel/internal/web/templates/mongodb/databases.html:57
+#: openpanel/internal/web/templates/mysql/databases.html:353
+#: openpanel/internal/web/templates/psql/databases.html:123
+msgid "System Database"
+msgstr "Bază de date de sistem"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:60
+#: openpanel/internal/web/templates/mysql/databases.html:365
+#: openpanel/internal/web/templates/psql/databases.html:126
+msgid "Import"
+msgstr "Importă"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:74
+#: openpanel/internal/web/templates/mysql/databases.html:575
+#: openpanel/internal/web/templates/psql/databases.html:140
+msgid "No databases yet."
+msgstr "Nu există încă baze de date."
+
+#: openpanel/internal/web/templates/mongodb/databases.html:74
+#: openpanel/internal/web/templates/mysql/databases.html:575
+#: openpanel/internal/web/templates/psql/databases.html:140
+msgid "Create your first database"
+msgstr "Creează prima ta bază de date"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:100
+#: openpanel/internal/web/templates/mysql/databases.html:601
+#: openpanel/internal/web/templates/mysql/users.html:176
+#: openpanel/internal/web/templates/psql/databases.html:166
+msgid "The page will refresh in"
+msgstr "Pagina se va reîncărca în"
+
+#: openpanel/internal/web/templates/mongodb/import.html:8
+#: openpanel/internal/web/templates/mysql/import.html:8
+#: openpanel/internal/web/templates/psql/import.html:8
+msgid "Import into Database"
+msgstr "Importă în baza de date"
+
+#: openpanel/internal/web/templates/mongodb/import.html:9
+msgid ""
+"Select a local mongodump archive to upload and restore into a MongoDB "
+"database."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/import.html:32
+#: openpanel/internal/web/templates/mysql/import.html:36
+#: openpanel/internal/web/templates/psql/import.html:32
+msgid "Select File"
+msgstr "Selectează fișier"
+
+#: openpanel/internal/web/templates/mongodb/import.html:34
+#: openpanel/internal/web/templates/mysql/import.html:38
+#: openpanel/internal/web/templates/psql/import.html:34
+msgid "Select file to upload"
+msgstr "Selectează fișierul de încărcat"
+
+#: openpanel/internal/web/templates/mongodb/import.html:43
+#: openpanel/internal/web/templates/mysql/import.html:47
+#: openpanel/internal/web/templates/psql/import.html:43
+msgid "Upload & Import"
+msgstr "Încarcă și Importă"
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:8
+msgid "Create MongoDB User"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:9
+msgid ""
+"Create a new MongoDB user with a unique username and password. Assign it a "
+"role on a database afterward from the Assign User page."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:25
+#: openpanel/internal/web/templates/mongodb/wizard.html:44
+#: openpanel/internal/web/templates/mysql/mysql_user.html:25
+#: openpanel/internal/web/templates/mysql/wizard.html:217
+#: openpanel/internal/web/templates/psql/psql_user.html:25
+#: openpanel/internal/web/templates/psql/wizard.html:44
+msgid "Only letters, numbers, and underscores are allowed (1-31 characters)."
+msgstr "Sunt permise doar litere, cifre și underscore (1-31 caractere)."
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:81
+#: openpanel/internal/web/templates/mongodb/password.html:79
+#: openpanel/internal/web/templates/mysql/mysql_user.html:110
+#: openpanel/internal/web/templates/mysql/password.html:114
+#: openpanel/internal/web/templates/psql/password.html:79
+#: openpanel/internal/web/templates/psql/psql_user.html:81
+msgid "Back to Users"
+msgstr "Înapoi la utilizatori"
+
+#: openpanel/internal/web/templates/mongodb/new.html:8
+#: openpanel/internal/web/templates/mysql/new.html:8
+#: openpanel/internal/web/templates/psql/new.html:8
+msgid "Create a Database"
+msgstr "Creează o bază de date"
+
+#: openpanel/internal/web/templates/mongodb/new.html:9
+msgid ""
+"Create a new MongoDB database to store and organize collections of "
+"documents."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/new.html:23
+#: openpanel/internal/web/templates/mongodb/wizard.html:27
+#: openpanel/internal/web/templates/mysql/new.html:25
+#: openpanel/internal/web/templates/mysql/wizard.html:189
+#: openpanel/internal/web/templates/psql/new.html:23
+#: openpanel/internal/web/templates/psql/wizard.html:27
+msgid "Only letters, numbers, and underscores are allowed (1-63 characters)."
+msgstr "Sunt permise doar litere, cifre și underscore (1-63 caractere)."
+
+#: openpanel/internal/web/templates/mongodb/password.html:8
+#: openpanel/internal/web/templates/mysql/password.html:8
+#: openpanel/internal/web/templates/psql/password.html:8
+msgid "Change User Password"
+msgstr "Schimbă parola utilizatorului"
+
+#: openpanel/internal/web/templates/mongodb/password.html:9
+msgid "Change password for a MongoDB database user."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/remove.html:8
+#: openpanel/internal/web/templates/mysql/remove.html:8
+#: openpanel/internal/web/templates/psql/remove.html:8
+msgid "Remove User access from Database"
+msgstr "Elimină accesul utilizatorului din baza de date"
+
+#: openpanel/internal/web/templates/mongodb/remove.html:9
+msgid ""
+"Revoke a role from a MongoDB user on a database, removing their access to "
+"it."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/remove.html:24
+#: openpanel/internal/web/templates/mysql/remove.html:26
+#: openpanel/internal/web/templates/psql/remove.html:24
+msgid "Select a Username"
+msgstr "Selectează un Nume de Utilizator"
+
+#: openpanel/internal/web/templates/mongodb/remove.html:33
+#: openpanel/internal/web/templates/mysql/remove.html:37
+#: openpanel/internal/web/templates/psql/remove.html:33
+msgid "Select a Database"
+msgstr "Selectează o Bază de Date"
+
+#: openpanel/internal/web/templates/mongodb/remove.html:55
+#: openpanel/internal/web/templates/mysql/remove.html:51
+#: openpanel/internal/web/templates/psql/remove.html:46
+msgid "Remove User from Database"
+msgstr "Elimină utilizatorul din Baza de date"
+
+#: openpanel/internal/web/templates/mongodb/users.html:9
+msgid "MongoDB Users"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/users.html:10
+#: openpanel/internal/web/templates/mysql/users.html:10
+#: openpanel/internal/web/templates/psql/users.html:10
+msgid "Total users:"
+msgstr "Total utilizatori:"
+
+#: openpanel/internal/web/templates/mongodb/users.html:27
+#: openpanel/internal/web/templates/mongodb/users.html:31
+#: openpanel/internal/web/templates/mysql/users.html:54
+#: openpanel/internal/web/templates/mysql/users.html:60
+#: openpanel/internal/web/templates/psql/users.html:43
+#: openpanel/internal/web/templates/psql/users.html:47
+msgid "Assign User"
+msgstr "Atribuie utilizator"
+
+#: openpanel/internal/web/templates/mongodb/users.html:28
+#: openpanel/internal/web/templates/mongodb/users.html:32
+#: openpanel/internal/web/templates/mysql/users.html:56
+#: openpanel/internal/web/templates/mysql/users.html:62
+#: openpanel/internal/web/templates/psql/users.html:44
+#: openpanel/internal/web/templates/psql/users.html:48
+msgid "Remove User"
+msgstr "Elimină utilizator"
+
+#: openpanel/internal/web/templates/mongodb/users.html:28
+#: openpanel/internal/web/templates/mongodb/users.html:32
+#: openpanel/internal/web/templates/mysql/users.html:56
+#: openpanel/internal/web/templates/mysql/users.html:62
+#: openpanel/internal/web/templates/psql/users.html:44
+#: openpanel/internal/web/templates/psql/users.html:48
+msgid "from"
+msgstr "din"
+
+#: openpanel/internal/web/templates/mongodb/users.html:43
+msgid "Roles"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/users.html:57
+#: openpanel/internal/web/templates/psql/users.html:71
+msgid "System User"
+msgstr "Utilizator de sistem"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:9
+msgid ""
+"Create a new MongoDB database, set up a user with a secure password, and "
+"grant it a role on the database."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:41
+#: openpanel/internal/web/templates/mysql/wizard.html:211
+#: openpanel/internal/web/templates/psql/wizard.html:41
+msgid "Create a user"
+msgstr "Creează un utilizator"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:44
+#: openpanel/internal/web/templates/mysql/wizard.html:220
+#: openpanel/internal/web/templates/psql/wizard.html:44
+msgid "Database User"
+msgstr "Utilizator bază de date"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:101
+msgid "Grant a role on the database"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:120
+msgid "Create DB, User, and Grant Role"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:139
+#: openpanel/internal/web/templates/psql/wizard.html:136
+msgid "All fields are required"
+msgstr "Toate câmpurile sunt obligatorii"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:144
+#: openpanel/internal/web/templates/psql/wizard.html:141
+msgid "Password can only contain letters, numbers, and underscores"
+msgstr "Parola poate conține doar litere, cifre și liniuțe de subliniere"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:148
+#: openpanel/internal/web/templates/psql/wizard.html:145
+msgid "Password must be at least 8 characters long"
+msgstr "Parola trebuie să aibă cel puțin 8 caractere"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:168
+#: openpanel/internal/web/templates/mysql/wizard.html:339
+#: openpanel/internal/web/templates/psql/wizard.html:166
+msgid "Creating..."
+msgstr "Se creează..."
+
 #: openpanel/internal/web/templates/mysql/assign.html:8
 msgid "Manage User Privileges"
 msgstr "Gestionează Privilegiile Utilizatorului"
@@ -12855,22 +13386,6 @@ msgstr ""
 "interogărilor, modificarea tabelelor sau gestionarea datelor în baza de date"
 " specificată."
 
-#: openpanel/internal/web/templates/mysql/assign.html:37
-#: openpanel/internal/web/templates/mysql/remove.html:21
-#: openpanel/internal/web/templates/psql/assign.html:21
-#: openpanel/internal/web/templates/psql/remove.html:21
-msgid "Select user:"
-msgstr "Selectează utilizatorul:"
-
-#: openpanel/internal/web/templates/mysql/assign.html:50
-#: openpanel/internal/web/templates/mysql/import.html:24
-#: openpanel/internal/web/templates/mysql/remove.html:33
-#: openpanel/internal/web/templates/psql/assign.html:30
-#: openpanel/internal/web/templates/psql/import.html:21
-#: openpanel/internal/web/templates/psql/remove.html:30
-msgid "Select database:"
-msgstr "Selectează baza de date:"
-
 #: openpanel/internal/web/templates/mysql/assign.html:52
 #: openpanel/internal/web/templates/mysql/processlist.html:36
 #: openpanel/internal/web/templates/mysql/remove.html:35
@@ -12880,18 +13395,6 @@ msgstr "Gazdă"
 #: openpanel/internal/web/templates/mysql/assign.html:62
 msgid "Select privileges:"
 msgstr "Selectează privilegiile:"
-
-#: openpanel/internal/web/templates/mysql/assign.html:80
-#: openpanel/internal/web/templates/mysql/new.html:41
-#: openpanel/internal/web/templates/mysql/remove.html:49
-#: openpanel/internal/web/templates/mysql/root_password.html:101
-#: openpanel/internal/web/templates/mysql/wizard.html:299
-#: openpanel/internal/web/templates/psql/assign.html:44
-#: openpanel/internal/web/templates/psql/new.html:39
-#: openpanel/internal/web/templates/psql/remove.html:44
-#: openpanel/internal/web/templates/psql/wizard.html:114
-msgid "Back to Databases"
-msgstr "Înapoi la baze de date"
 
 #: openpanel/internal/web/templates/mysql/assign.html:82
 msgid "Make Changes"
@@ -12948,11 +13451,6 @@ msgstr "server:"
 msgid "port:"
 msgstr "port:"
 
-#: openpanel/internal/web/templates/mysql/databases.html:22
-#: openpanel/internal/web/templates/psql/databases.html:10
-msgid "Total databases:"
-msgstr "Total baze de date:"
-
 #: openpanel/internal/web/templates/mysql/databases.html:29
 #: openpanel/internal/web/templates/psql/databases.html:16
 msgid "Show system databases"
@@ -12962,35 +13460,6 @@ msgstr "Afișează bazele de date de sistem"
 msgid "Show database sizes"
 msgstr "Afișează dimensiunile bazelor de date"
 
-#: openpanel/internal/web/templates/mysql/databases.html:195
-#: openpanel/internal/web/templates/mysql/databases.html:198
-#: openpanel/internal/web/templates/psql/databases.html:90
-#: openpanel/internal/web/templates/psql/databases.html:93
-msgid "New Database"
-msgstr "Bază de date nouă"
-
-#: openpanel/internal/web/templates/mysql/databases.html:196
-#: openpanel/internal/web/templates/mysql/databases.html:199
-#: openpanel/internal/web/templates/mysql/wizard.html:8
-#: openpanel/internal/web/templates/psql/databases.html:91
-#: openpanel/internal/web/templates/psql/databases.html:94
-#: openpanel/internal/web/templates/psql/wizard.html:8
-msgid "Database Wizard"
-msgstr "Asistent baze de date"
-
-#: openpanel/internal/web/templates/mysql/databases.html:198
-#: openpanel/internal/web/templates/mysql/databases.html:199
-#: openpanel/internal/web/templates/mysql/users.html:58
-#: openpanel/internal/web/templates/mysql/users.html:60
-#: openpanel/internal/web/templates/mysql/users.html:62
-#: openpanel/internal/web/templates/psql/databases.html:93
-#: openpanel/internal/web/templates/psql/databases.html:94
-#: openpanel/internal/web/templates/psql/users.html:46
-#: openpanel/internal/web/templates/psql/users.html:47
-#: openpanel/internal/web/templates/psql/users.html:48
-msgid "Unavailable while the service is not running."
-msgstr "Indisponibil cât timp serviciul nu rulează."
-
 #: openpanel/internal/web/templates/mysql/databases.html:211
 #: openpanel/internal/web/templates/psql/databases.html:106
 msgid "Assigned Users"
@@ -12999,16 +13468,6 @@ msgstr "Utilizatori atribuiți"
 #: openpanel/internal/web/templates/mysql/databases.html:227
 msgid "Manage privileges"
 msgstr "Gestionează privilegiile"
-
-#: openpanel/internal/web/templates/mysql/databases.html:353
-#: openpanel/internal/web/templates/psql/databases.html:123
-msgid "System Database"
-msgstr "Bază de date de sistem"
-
-#: openpanel/internal/web/templates/mysql/databases.html:365
-#: openpanel/internal/web/templates/psql/databases.html:126
-msgid "Import"
-msgstr "Importă"
 
 #: openpanel/internal/web/templates/mysql/databases.html:391
 msgid "Format:"
@@ -13031,22 +13490,6 @@ msgstr "Repară"
 msgid "phpMyAdmin"
 msgstr "phpMyAdmin"
 
-#: openpanel/internal/web/templates/mysql/databases.html:575
-#: openpanel/internal/web/templates/psql/databases.html:140
-msgid "No databases yet."
-msgstr "Nu există încă baze de date."
-
-#: openpanel/internal/web/templates/mysql/databases.html:575
-#: openpanel/internal/web/templates/psql/databases.html:140
-msgid "Create your first database"
-msgstr "Creează prima ta bază de date"
-
-#: openpanel/internal/web/templates/mysql/databases.html:601
-#: openpanel/internal/web/templates/mysql/users.html:176
-#: openpanel/internal/web/templates/psql/databases.html:166
-msgid "The page will refresh in"
-msgstr "Pagina se va reîncărca în"
-
 #: openpanel/internal/web/templates/mysql/databases.html:628
 msgid "Running.."
 msgstr "Se rulează.."
@@ -13056,6 +13499,7 @@ msgid "Run again"
 msgstr "Rulează din nou"
 
 #: openpanel/internal/web/templates/mysql/databases.html:630
+#: openpanel/internal/web/templates/system/cronjobs.html:422
 msgid "Run"
 msgstr "Rulează"
 
@@ -13091,11 +13535,6 @@ msgstr "Tabel"
 msgid "Add new database"
 msgstr "Adăugați bază de date nouă"
 
-#: openpanel/internal/web/templates/mysql/import.html:8
-#: openpanel/internal/web/templates/psql/import.html:8
-msgid "Import into Database"
-msgstr "Importă în baza de date"
-
 #: openpanel/internal/web/templates/mysql/import.html:10
 msgid "Select a local file to upload and import into a MySQL database."
 msgstr ""
@@ -13107,27 +13546,6 @@ msgid "Select a local file to upload and import into a MariaDB database."
 msgstr ""
 "Selectează un fișier local pentru încărcare și import într-o bază de date "
 "MariaDB."
-
-#: openpanel/internal/web/templates/mysql/import.html:36
-#: openpanel/internal/web/templates/psql/import.html:32
-msgid "Select File"
-msgstr "Selectează fișier"
-
-#: openpanel/internal/web/templates/mysql/import.html:38
-#: openpanel/internal/web/templates/psql/import.html:34
-msgid "Select file to upload"
-msgstr "Selectează fișierul de încărcat"
-
-#: openpanel/internal/web/templates/mysql/import.html:47
-#: openpanel/internal/web/templates/psql/import.html:43
-msgid "Upload & Import"
-msgstr "Încarcă și Importă"
-
-#: openpanel/internal/web/templates/mysql/import.html:75
-#: openpanel/internal/web/templates/psql/assign.html:33
-#: openpanel/internal/web/templates/psql/import.html:66
-msgid "Select a database"
-msgstr "Selectează o bază de date"
 
 #: openpanel/internal/web/templates/mysql/mysql_user.html:8
 #: openpanel/internal/web/templates/mysql/processlist.html:35
@@ -13145,34 +13563,6 @@ msgstr ""
 "a gestiona în siguranță accesul și permisiunile de interacțiune cu bazele de"
 " date sau serverul de baze de date."
 
-#: openpanel/internal/web/templates/mysql/mysql_user.html:25
-#: openpanel/internal/web/templates/mysql/wizard.html:217
-#: openpanel/internal/web/templates/psql/psql_user.html:25
-#: openpanel/internal/web/templates/psql/wizard.html:44
-msgid "Only letters, numbers, and underscores are allowed (1-31 characters)."
-msgstr "Sunt permise doar litere, cifre și underscore (1-31 caractere)."
-
-#: openpanel/internal/web/templates/mysql/mysql_user.html:110
-#: openpanel/internal/web/templates/mysql/password.html:114
-#: openpanel/internal/web/templates/psql/password.html:79
-#: openpanel/internal/web/templates/psql/psql_user.html:81
-msgid "Back to Users"
-msgstr "Înapoi la utilizatori"
-
-#: openpanel/internal/web/templates/mysql/mysql_user.html:112
-#: openpanel/internal/web/templates/mysql/users.html:52
-#: openpanel/internal/web/templates/mysql/users.html:58
-#: openpanel/internal/web/templates/psql/psql_user.html:83
-#: openpanel/internal/web/templates/psql/users.html:42
-#: openpanel/internal/web/templates/psql/users.html:46
-msgid "Create User"
-msgstr "Creează Utilizator"
-
-#: openpanel/internal/web/templates/mysql/new.html:8
-#: openpanel/internal/web/templates/psql/new.html:8
-msgid "Create a Database"
-msgstr "Creează o bază de date"
-
 #: openpanel/internal/web/templates/mysql/new.html:9
 msgid ""
 "Create a new database to store and organize data, providing a foundational "
@@ -13181,23 +13571,6 @@ msgstr ""
 "Creează o nouă bază de date pentru a stoca și organiza date, oferind o "
 "structură de bază pentru aplicații în gestionarea și recuperarea eficientă a"
 " informațiilor."
-
-#: openpanel/internal/web/templates/mysql/new.html:25
-#: openpanel/internal/web/templates/mysql/wizard.html:189
-#: openpanel/internal/web/templates/psql/new.html:23
-#: openpanel/internal/web/templates/psql/wizard.html:27
-msgid "Only letters, numbers, and underscores are allowed (1-63 characters)."
-msgstr "Sunt permise doar litere, cifre și underscore (1-63 caractere)."
-
-#: openpanel/internal/web/templates/mysql/new.html:44
-#: openpanel/internal/web/templates/psql/new.html:42
-msgid "Create Database"
-msgstr "Creează Baza de date"
-
-#: openpanel/internal/web/templates/mysql/password.html:8
-#: openpanel/internal/web/templates/psql/password.html:8
-msgid "Change User Password"
-msgstr "Schimbă parola utilizatorului"
 
 #: openpanel/internal/web/templates/mysql/password.html:9
 msgid "Change password for a MySQL database user."
@@ -13260,10 +13633,6 @@ msgstr "Stare"
 #: openpanel/internal/web/templates/mysql/processlist.html:66
 msgid "No active processes."
 msgstr "Niciun proces activ."
-
-#: openpanel/internal/web/templates/mysql/remote_mysql.html:10
-msgid "Remote Access"
-msgstr "Acces la distanță"
 
 #: openpanel/internal/web/templates/mysql/remote_mysql.html:11
 msgid ""
@@ -13372,11 +13741,6 @@ msgstr "Nu au fost găsiți utilizatori MySQL."
 msgid "Confirm?"
 msgstr "Confirmați?"
 
-#: openpanel/internal/web/templates/mysql/remove.html:8
-#: openpanel/internal/web/templates/psql/remove.html:8
-msgid "Remove User access from Database"
-msgstr "Elimină accesul utilizatorului din baza de date"
-
 #: openpanel/internal/web/templates/mysql/remove.html:9
 msgid ""
 "Remove a user from an existing MySQL database to revoke their permissions "
@@ -13387,21 +13751,6 @@ msgstr ""
 " permisiunile și a preveni accesul la executarea interogărilor, modificarea "
 "tabelelor sau gestionarea datelor în baza de date specificată."
 
-#: openpanel/internal/web/templates/mysql/remove.html:26
-#: openpanel/internal/web/templates/psql/remove.html:24
-msgid "Select a Username"
-msgstr "Selectează un Nume de Utilizator"
-
-#: openpanel/internal/web/templates/mysql/remove.html:37
-#: openpanel/internal/web/templates/psql/remove.html:33
-msgid "Select a Database"
-msgstr "Selectează o Bază de Date"
-
-#: openpanel/internal/web/templates/mysql/remove.html:51
-#: openpanel/internal/web/templates/psql/remove.html:46
-msgid "Remove User from Database"
-msgstr "Elimină utilizatorul din Baza de date"
-
 #: openpanel/internal/web/templates/mysql/root_password.html:8
 msgid "Change MySQL root password"
 msgstr "Schimbă parola root MySQL"
@@ -13411,40 +13760,10 @@ msgid "Change MySQL root user password and restart mysql service."
 msgstr ""
 "Schimbă parola utilizatorului root MySQL și repornește serviciul mysql."
 
-#: openpanel/internal/web/templates/mysql/users.html:9
-msgid "Users"
-msgstr "Utilizatori"
-
-#: openpanel/internal/web/templates/mysql/users.html:10
-#: openpanel/internal/web/templates/psql/users.html:10
-msgid "Total users:"
-msgstr "Total utilizatori:"
-
 #: openpanel/internal/web/templates/mysql/users.html:17
 #: openpanel/internal/web/templates/psql/users.html:16
 msgid "Show system users"
 msgstr "Afișează utilizatorii de sistem"
-
-#: openpanel/internal/web/templates/mysql/users.html:54
-#: openpanel/internal/web/templates/mysql/users.html:60
-#: openpanel/internal/web/templates/psql/users.html:43
-#: openpanel/internal/web/templates/psql/users.html:47
-msgid "Assign User"
-msgstr "Atribuie utilizator"
-
-#: openpanel/internal/web/templates/mysql/users.html:56
-#: openpanel/internal/web/templates/mysql/users.html:62
-#: openpanel/internal/web/templates/psql/users.html:44
-#: openpanel/internal/web/templates/psql/users.html:48
-msgid "Remove User"
-msgstr "Elimină utilizator"
-
-#: openpanel/internal/web/templates/mysql/users.html:56
-#: openpanel/internal/web/templates/mysql/users.html:62
-#: openpanel/internal/web/templates/psql/users.html:44
-#: openpanel/internal/web/templates/psql/users.html:48
-msgid "from"
-msgstr "din"
 
 #: openpanel/internal/web/templates/mysql/users.html:149
 msgid "No users yet."
@@ -13494,25 +13813,10 @@ msgstr "Vizualizează Bazele de Date"
 msgid "Create Another"
 msgstr "Creează Altul"
 
-#: openpanel/internal/web/templates/mysql/wizard.html:211
-#: openpanel/internal/web/templates/psql/wizard.html:41
-msgid "Create a user"
-msgstr "Creează un utilizator"
-
-#: openpanel/internal/web/templates/mysql/wizard.html:220
-#: openpanel/internal/web/templates/psql/wizard.html:44
-msgid "Database User"
-msgstr "Utilizator bază de date"
-
 #: openpanel/internal/web/templates/mysql/wizard.html:283
 #: openpanel/internal/web/templates/psql/wizard.html:101
 msgid "Assign user to database"
 msgstr "Atribuie utilizatorul bazei de date"
-
-#: openpanel/internal/web/templates/mysql/wizard.html:339
-#: openpanel/internal/web/templates/psql/wizard.html:166
-msgid "Creating..."
-msgstr "Se creează..."
 
 #: openpanel/internal/web/templates/partials/_footer.html:5
 #: openpanel/internal/web/templates/partials/_footer.html:9
@@ -13532,15 +13836,27 @@ msgstr "Poziția iconițelor"
 msgid "Top"
 msgstr "Sus"
 
-#: openpanel/internal/web/templates/partials/_footer.html:49
+#: openpanel/internal/web/templates/partials/_footer.html:42
+msgid "Buttons style"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_footer.html:44
+msgid "Classic"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_footer.html:45
+msgid "Modern"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_footer.html:62
 msgid "Changelog"
 msgstr "Jurnal de Modificări"
 
-#: openpanel/internal/web/templates/partials/_footer.html:71
+#: openpanel/internal/web/templates/partials/_footer.html:84
 msgid "Community Forums"
 msgstr "Forumuri Comunitare"
 
-#: openpanel/internal/web/templates/partials/_footer.html:84
+#: openpanel/internal/web/templates/partials/_footer.html:97
 msgid "Sign out"
 msgstr "Deconectare"
 
@@ -13552,44 +13868,44 @@ msgstr "Servicii"
 msgid "Caching"
 msgstr "Cache"
 
-#: openpanel/internal/web/templates/partials/_header.html:111
+#: openpanel/internal/web/templates/partials/_header.html:116
 msgid "Sites"
 msgstr "Site-uri"
 
-#: openpanel/internal/web/templates/partials/_header.html:158
-#: openpanel/internal/web/templates/partials/_header.html:217
+#: openpanel/internal/web/templates/partials/_header.html:163
+#: openpanel/internal/web/templates/partials/_header.html:222
 msgid "Left-click to add to Favorites"
 msgstr "Click stânga pentru a adăuga la Favorite"
 
-#: openpanel/internal/web/templates/partials/_header.html:185
-#: openpanel/internal/web/templates/partials/_header.html:261
+#: openpanel/internal/web/templates/partials/_header.html:190
+#: openpanel/internal/web/templates/partials/_header.html:266
 msgid "Right-click to remove from Favorites"
 msgstr "Clic dreapta pentru a elimina din Favorite"
 
-#: openpanel/internal/web/templates/partials/_header.html:194
+#: openpanel/internal/web/templates/partials/_header.html:199
 msgid "This page is not in your favorites! Left-click to add it."
 msgstr ""
 "Această pagină nu este în favoritele tale! Click stânga pentru a o adăuga."
 
-#: openpanel/internal/web/templates/partials/_header.html:210
+#: openpanel/internal/web/templates/partials/_header.html:215
 msgid "Successfully removed from favorites!"
 msgstr "Eliminat din favorite cu succes!"
 
-#: openpanel/internal/web/templates/partials/_header.html:222
+#: openpanel/internal/web/templates/partials/_header.html:227
 msgid "Failed to remove favorite."
 msgstr "Nu s-a putut elimina din favorite."
 
-#: openpanel/internal/web/templates/partials/_header.html:229
+#: openpanel/internal/web/templates/partials/_header.html:234
 msgid "This page is already in your favorites! Right-click to remove it."
 msgstr ""
 "Această pagină este deja în favoritele tale! Click dreapta pentru a o "
 "elimina."
 
-#: openpanel/internal/web/templates/partials/_header.html:253
+#: openpanel/internal/web/templates/partials/_header.html:258
 msgid "Successfully added to favorites!"
 msgstr "Adăugat la favorite cu succes!"
 
-#: openpanel/internal/web/templates/partials/_header.html:267
+#: openpanel/internal/web/templates/partials/_header.html:272
 msgid "Failed to add favorite."
 msgstr "Nu s-a putut adăuga la favorite."
 
@@ -13621,15 +13937,23 @@ msgstr "Bază de date PostgreSQL"
 msgid "PostgreSQL User"
 msgstr "Utilizator PostgreSQL"
 
-#: openpanel/internal/web/templates/partials/_search.html:58
+#: openpanel/internal/web/templates/partials/_search.html:55
+msgid "MongoDB Database"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_search.html:56
+msgid "MongoDB User"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_search.html:62
 msgid "Email Account"
 msgstr "Cont de email"
 
-#: openpanel/internal/web/templates/partials/_search.html:61
+#: openpanel/internal/web/templates/partials/_search.html:65
 msgid "FTP Account"
 msgstr "Cont FTP"
 
-#: openpanel/internal/web/templates/partials/_search.html:70
+#: openpanel/internal/web/templates/partials/_search.html:74
 msgid "Cron Job"
 msgstr "Sarcină cron"
 
@@ -14042,11 +14366,6 @@ msgstr "Versiunea PHP curentă"
 msgid "Change version"
 msgstr "Schimbă versiunea"
 
-#: openpanel/internal/web/templates/psql/assign.html:8
-#: openpanel/internal/web/templates/psql/assign.html:46
-msgid "Assign User to Database"
-msgstr "Trimiteți utilizatorul la Baza de date"
-
 #: openpanel/internal/web/templates/psql/assign.html:9
 msgid ""
 "Assign a user to an existing PostgreSQL database to manage database "
@@ -14198,10 +14517,6 @@ msgstr ""
 msgid "PostgreSQL Users"
 msgstr "Utilizatori PostgreSQL"
 
-#: openpanel/internal/web/templates/psql/users.html:71
-msgid "System User"
-msgstr "Utilizator de sistem"
-
 #: openpanel/internal/web/templates/psql/wizard.html:9
 msgid ""
 "Create a new PostgreSQL database, set up a user with a secure password, and "
@@ -14213,18 +14528,6 @@ msgstr ""
 #: openpanel/internal/web/templates/psql/wizard.html:117
 msgid "Create DB, User, and Grant Privileges"
 msgstr "Creează baza de date, utilizatorul și acordă privilegii"
-
-#: openpanel/internal/web/templates/psql/wizard.html:136
-msgid "All fields are required"
-msgstr "Toate câmpurile sunt obligatorii"
-
-#: openpanel/internal/web/templates/psql/wizard.html:141
-msgid "Password can only contain letters, numbers, and underscores"
-msgstr "Parola poate conține doar litere, cifre și liniuțe de subliniere"
-
-#: openpanel/internal/web/templates/psql/wizard.html:145
-msgid "Password must be at least 8 characters long"
-msgstr "Parola trebuie să aibă cel puțin 8 caractere"
 
 #: openpanel/internal/web/templates/system/apache_nginx_conf_editor.html:20
 msgid "Edit main webserver configuration file:"
@@ -14285,7 +14588,7 @@ msgstr "Programare"
 #: openpanel/internal/web/templates/system/cronjobs.html:68
 #: openpanel/internal/web/templates/system/cronjobs.html:73
 #: openpanel/internal/web/templates/system/cronjobs.html:78
-#: openpanel/internal/web/templates/system/server_info.html:116
+#: openpanel/internal/web/templates/system/server_info.html:130
 msgid "Description"
 msgstr "Descriere"
 
@@ -14414,20 +14717,48 @@ msgstr "intrări afișate"
 msgid "Name/Comment"
 msgstr "Nume/Comentariu"
 
-#: openpanel/internal/web/templates/system/cronjobs.html:383
+#: openpanel/internal/web/templates/system/cronjobs.html:415
+msgid "Running…"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:416
+msgid "Connection error"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:417
+msgid "Finished successfully"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:418
+msgid "Finished with exit code"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:432
+msgid "Run Cron Job"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:449
+msgid "Waiting for output…"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:455
+msgid "Run Again"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:477
 msgid "No cronjobs."
 msgstr "Nu există cronjoburi."
 
-#: openpanel/internal/web/templates/system/cronjobs.html:385
+#: openpanel/internal/web/templates/system/cronjobs.html:479
 msgid "No cronjobs yet, to create a cron click on the button above."
 msgstr ""
 "Nu există încă cronjoburi; pentru a crea unul, apasă butonul de mai sus."
 
-#: openpanel/internal/web/templates/system/cronjobs.html:422
+#: openpanel/internal/web/templates/system/cronjobs.html:557
 msgid "view mode is unknown, only code and table are allowed"
 msgstr "modul de vizualizare este necunoscut, sunt permise doar code și table"
 
-#: openpanel/internal/web/templates/system/cronjobs.html:435
+#: openpanel/internal/web/templates/system/cronjobs.html:570
 msgid "Add new cron job"
 msgstr "Adăugați sarcină cron nouă"
 
@@ -14703,87 +15034,95 @@ msgstr "Port MySQL local"
 msgid "Remote PostgreSQL port"
 msgstr "Port PostgreSQL la distanță"
 
-#: openpanel/internal/web/templates/system/server_info.html:75
+#: openpanel/internal/web/templates/system/server_info.html:73
+msgid "Local PostgreSQL port"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/server_info.html:80
+msgid "Local MongoDB port"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/server_info.html:89
 msgid "OS"
 msgstr "Sistem de operare"
 
-#: openpanel/internal/web/templates/system/server_info.html:81
+#: openpanel/internal/web/templates/system/server_info.html:95
 msgid "Release"
 msgstr "Versiune"
 
-#: openpanel/internal/web/templates/system/server_info.html:93
+#: openpanel/internal/web/templates/system/server_info.html:107
 msgid "Processor"
 msgstr "Procesor"
 
-#: openpanel/internal/web/templates/system/server_info.html:106
+#: openpanel/internal/web/templates/system/server_info.html:120
 msgid "Hosting Plan"
 msgstr "Plan de hosting"
 
-#: openpanel/internal/web/templates/system/server_info.html:110
+#: openpanel/internal/web/templates/system/server_info.html:124
 msgid "Plan Name"
 msgstr "Nume plan"
 
-#: openpanel/internal/web/templates/system/server_info.html:122
+#: openpanel/internal/web/templates/system/server_info.html:136
 msgid "Context"
 msgstr "Context"
 
-#: openpanel/internal/web/templates/system/server_info.html:128
+#: openpanel/internal/web/templates/system/server_info.html:142
 msgid "Bandwidth Limit"
 msgstr "Limită lățime de bandă"
 
-#: openpanel/internal/web/templates/system/server_info.html:134
+#: openpanel/internal/web/templates/system/server_info.html:148
 msgid "CPU Limit"
 msgstr "Limită CPU"
 
-#: openpanel/internal/web/templates/system/server_info.html:140
+#: openpanel/internal/web/templates/system/server_info.html:154
 msgid "Memory Limit"
 msgstr "Limită memorie"
 
-#: openpanel/internal/web/templates/system/server_info.html:146
+#: openpanel/internal/web/templates/system/server_info.html:160
 msgid "Database Limit"
 msgstr "Limită baze de date"
 
-#: openpanel/internal/web/templates/system/server_info.html:152
+#: openpanel/internal/web/templates/system/server_info.html:166
 msgid "Websites Limit"
 msgstr "Limită site-uri"
 
-#: openpanel/internal/web/templates/system/server_info.html:158
+#: openpanel/internal/web/templates/system/server_info.html:172
 msgid "Disk Limit"
 msgstr "Limită disc"
 
-#: openpanel/internal/web/templates/system/server_info.html:164
+#: openpanel/internal/web/templates/system/server_info.html:178
 msgid "Domains Limit"
 msgstr "Limită domenii"
 
-#: openpanel/internal/web/templates/system/server_info.html:170
+#: openpanel/internal/web/templates/system/server_info.html:184
 msgid "Email Limit"
 msgstr "Limită email"
 
-#: openpanel/internal/web/templates/system/server_info.html:176
+#: openpanel/internal/web/templates/system/server_info.html:190
 msgid "FTP Limit"
 msgstr "Limită FTP"
 
-#: openpanel/internal/web/templates/system/server_info.html:182
+#: openpanel/internal/web/templates/system/server_info.html:196
 msgid "Inodes Limit"
 msgstr "Limită inodes"
 
-#: openpanel/internal/web/templates/system/server_info.html:188
+#: openpanel/internal/web/templates/system/server_info.html:202
 msgid "MySQL Server"
 msgstr "Server MySQL"
 
-#: openpanel/internal/web/templates/system/server_info.html:194
+#: openpanel/internal/web/templates/system/server_info.html:208
 msgid "Web Server"
 msgstr "Server web"
 
-#: openpanel/internal/web/templates/system/server_info.html:199
+#: openpanel/internal/web/templates/system/server_info.html:213
 msgid "Panel Information"
 msgstr "Informații despre panou"
 
-#: openpanel/internal/web/templates/system/server_info.html:203
+#: openpanel/internal/web/templates/system/server_info.html:217
 msgid "Panel Version"
 msgstr "Versiune panou"
 
-#: openpanel/internal/web/templates/system/server_info.html:213
+#: openpanel/internal/web/templates/system/server_info.html:227
 msgid "Enabled Features"
 msgstr "Funcționalități activate"
 
@@ -15080,15 +15419,15 @@ msgstr "Ai uitat parola?"
 msgid "Two-Factor Authentication Code"
 msgstr "Cod de autentificare cu doi factori"
 
-#: openpanel/internal/web/templates/user/login.html:37
+#: openpanel/internal/web/templates/user/login.html:50
 msgid "Sign In"
 msgstr "Autentifică-te"
 
-#: openpanel/internal/web/templates/user/login.html:41
+#: openpanel/internal/web/templates/user/login.html:54
 msgid "Sign in with a passkey"
 msgstr "Autentifică-te cu o cheie de acces"
 
-#: openpanel/internal/web/templates/user/login.html:46
+#: openpanel/internal/web/templates/user/login.html:59
 msgid ""
 "Passkeys require this panel to be accessed over HTTPS with a domain name."
 msgstr ""
@@ -15392,14 +15731,6 @@ msgstr "Nu există încă date despre utilizarea resurselor."
 #: openpanel/internal/web/templates/user/twofa_settings.html:16
 msgid "2FA is currently"
 msgstr "2FA este în prezent"
-
-#: openpanel/internal/web/templates/user/twofa_settings.html:18
-msgid "enabled"
-msgstr "activat"
-
-#: openpanel/internal/web/templates/user/twofa_settings.html:20
-msgid "disabled"
-msgstr "dezactivat"
 
 #: openpanel/internal/web/templates/user/twofa_settings.html:22
 msgid "for your account."

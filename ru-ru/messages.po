@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-09-14 10:59+0200\n"
+"POT-Creation-Date: 2026-09-21 11:00+0200\n"
 "PO-Revision-Date: 2025-05-17 03:48+0300\n"
 "Last-Translator: Vladyslav Samoilenko <admin@mig-studio.com>\n"
 "Language-Team: \n"
@@ -19,7 +19,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 
 #: openpanel/internal/modules/account/api_login.go:56
-#: openpanel/internal/modules/account/login.go:162
+#: openpanel/internal/modules/account/login.go:171
 msgid "Username and password are required."
 msgstr "Необходимо указать имя пользователя и пароль."
 
@@ -87,29 +87,33 @@ msgstr "Ваш пароль сброшен. Пожалуйста, войдите
 msgid "Reset Password"
 msgstr "Сбросить пароль"
 
-#: openpanel/internal/modules/account/login.go:110
+#: openpanel/internal/modules/account/login.go:116
 #: openpanel/internal/web/templates/manager/dokuwiki_app.html:283
 msgid "Login"
 msgstr "Вход"
 
-#: openpanel/internal/modules/account/login.go:201
-#: openpanel/internal/modules/account/login.go:207
+#: openpanel/internal/modules/account/login.go:179
+msgid "Captcha verification failed. Please try again."
+msgstr ""
+
+#: openpanel/internal/modules/account/login.go:219
+#: openpanel/internal/modules/account/login.go:225
 msgid "Invalid 2FA code. Please try again."
 msgstr "Неверный код 2FA. Пожалуйста, попробуйте снова."
 
-#: openpanel/internal/modules/account/login.go:341
+#: openpanel/internal/modules/account/login.go:359
 msgid "Autologin failed: Invalid username."
 msgstr "Автоматический вход не удался: неверное имя пользователя."
 
-#: openpanel/internal/modules/account/login.go:349
+#: openpanel/internal/modules/account/login.go:367
 msgid "Error reading token from user files."
 msgstr "Ошибка чтения токена из файлов пользователя."
 
-#: openpanel/internal/modules/account/login.go:356
+#: openpanel/internal/modules/account/login.go:374
 msgid "Autologin failed: Invalid or expired token."
 msgstr "Автоматический вход не удался: неверный или просроченный токен."
 
-#: openpanel/internal/modules/account/login.go:364
+#: openpanel/internal/modules/account/login.go:382
 msgid "Autologin failed: User does not exist."
 msgstr "Автоматический вход не удался: пользователь не существует."
 
@@ -283,6 +287,8 @@ msgid "The home directory"
 msgstr "Домашнюю директорию"
 
 #: openpanel/internal/modules/backupwizard/render.go:41
+#: openpanel/internal/web/sidebar.go:118 openpanel/internal/web/sidebar.go:141
+#: openpanel/internal/web/sidebar.go:164
 #: openpanel/internal/web/templates/dashboard/usage.html:78
 #: openpanel/internal/web/templates/files/backup_restore.html:173
 #: openpanel/internal/web/templates/mysql/databases.html:9
@@ -290,7 +296,7 @@ msgid "Databases"
 msgstr "Базы данных"
 
 #: openpanel/internal/modules/backupwizard/render.go:41
-#: openpanel/internal/modules/dashboard/sections.go:36
+#: openpanel/internal/modules/dashboard/sections.go:41
 #: openpanel/internal/web/templates/cache/service.html:145
 #: openpanel/internal/web/templates/dashboard/usage.html:55
 #: openpanel/internal/web/templates/domains/domains.html:14
@@ -300,7 +306,7 @@ msgid "Domains"
 msgstr "Домены"
 
 #: openpanel/internal/modules/backupwizard/render.go:42
-#: openpanel/internal/modules/dashboard/sections.go:71
+#: openpanel/internal/modules/dashboard/sections.go:82
 #: openpanel/internal/web/templates/dashboard/usage.html:32
 #: openpanel/internal/web/templates/domains/domains.html:77
 #: openpanel/internal/web/templates/domains/domains.html:120
@@ -360,16 +366,26 @@ msgstr ""
 "HTTP-ускорителя для динамических веб-сайтов с большим объемом контента, а "
 "также для API."
 
-#: openpanel/internal/modules/dashboard/dashboard.go:137
+#: openpanel/internal/modules/dashboard/dashboard.go:145
 msgid "Dashboard"
 msgstr "Панель управления"
+
+#: openpanel/internal/modules/dashboard/page.go:71
+#: openpanel/internal/web/templates/user/twofa_settings.html:20
+msgid "disabled"
+msgstr "отключена"
+
+#: openpanel/internal/modules/dashboard/page.go:73
+#: openpanel/internal/web/templates/user/twofa_settings.html:18
+msgid "enabled"
+msgstr "включена"
 
 #: openpanel/internal/modules/dashboard/page.go:75
 msgid "2FA is <b>{status}</b> for your account."
 msgstr ""
 "Двухфакторная аутентификация <b>{status}</b> для вашей учётной записи."
 
-#: openpanel/internal/modules/dashboard/sections.go:22
+#: openpanel/internal/modules/dashboard/sections.go:27
 #: openpanel/internal/web/templates/domains/ssl.html:226
 #: openpanel/internal/web/templates/files/filemanager.html:147
 #: openpanel/internal/web/templates/files/filemanager.html:405
@@ -396,18 +412,23 @@ msgstr ""
 msgid "Files"
 msgstr "Файлы"
 
-#: openpanel/internal/modules/dashboard/sections.go:49
+#: openpanel/internal/modules/dashboard/sections.go:54
 #: openpanel/internal/web/templates/dashboard/onboarding.html:497
 #: openpanel/internal/web/templates/partials/_header.html:76
 msgid "MySQL"
 msgstr "MySQL"
 
-#: openpanel/internal/modules/dashboard/sections.go:61
+#: openpanel/internal/modules/dashboard/sections.go:66
 #: openpanel/internal/web/templates/partials/_header.html:81
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
-#: openpanel/internal/modules/dashboard/sections.go:76
+#: openpanel/internal/modules/dashboard/sections.go:75
+#: openpanel/internal/web/templates/partials/_header.html:86
+msgid "MongoDB"
+msgstr ""
+
+#: openpanel/internal/modules/dashboard/sections.go:87
 #: openpanel/internal/web/templates/manager/drupal_app.html:1204
 #: openpanel/internal/web/templates/manager/flarum_app.html:1067
 #: openpanel/internal/web/templates/manager/joomla_app.html:1179
@@ -422,7 +443,7 @@ msgstr "PostgreSQL"
 msgid "Cache"
 msgstr "Кэш"
 
-#: openpanel/internal/modules/dashboard/sections.go:84
+#: openpanel/internal/modules/dashboard/sections.go:95
 #: openpanel/internal/web/templates/dashboard/onboarding.html:202
 #: openpanel/internal/web/templates/emails/accounts.html:9
 #: openpanel/internal/web/templates/files/backup_settings.html:84
@@ -430,27 +451,27 @@ msgstr "Кэш"
 msgid "Emails"
 msgstr "Электронные письма"
 
-#: openpanel/internal/modules/dashboard/sections.go:94
+#: openpanel/internal/modules/dashboard/sections.go:105
 #: openpanel/internal/web/templates/dashboard/onboarding.html:589
 #: openpanel/internal/web/templates/manager/autoinstaller.html:763
-#: openpanel/internal/web/templates/partials/_header.html:86
+#: openpanel/internal/web/templates/partials/_header.html:91
 msgid "PHP"
 msgstr "PHP"
 
-#: openpanel/internal/modules/dashboard/sections.go:101
+#: openpanel/internal/modules/dashboard/sections.go:112
 #: openpanel/internal/web/templates/docker/containers.html:13
 #: openpanel/internal/web/templates/docker/containers.html:268
-#: openpanel/internal/web/templates/partials/_header.html:91
+#: openpanel/internal/web/templates/partials/_header.html:96
 msgid "Containers"
 msgstr "Контейнеры"
 
-#: openpanel/internal/modules/dashboard/sections.go:109
-#: openpanel/internal/web/templates/partials/_header.html:96
+#: openpanel/internal/modules/dashboard/sections.go:120
+#: openpanel/internal/web/templates/partials/_header.html:101
 msgid "Advanced"
 msgstr "Расширенные"
 
-#: openpanel/internal/modules/dashboard/sections.go:122
-#: openpanel/internal/web/templates/partials/_header.html:101
+#: openpanel/internal/modules/dashboard/sections.go:133
+#: openpanel/internal/web/templates/partials/_header.html:106
 msgid "Account"
 msgstr "Учетная запись"
 
@@ -479,6 +500,120 @@ msgstr "Нажмите, чтобы включить"
 #: openpanel/internal/modules/webserverconf/webserverconf.go:41
 msgid "Web Server Configuration Editor"
 msgstr "Редактор конфигурации веб-сервера"
+
+#: openpanel/internal/web/sidebar.go:79
+#: openpanel/internal/web/templates/manager/sites.html:8
+msgid "Site Manager"
+msgstr "Менеджер сайтов"
+
+#: openpanel/internal/web/sidebar.go:91 openpanel/internal/web/sidebar.go:97
+#: openpanel/internal/web/templates/files/disk_usage.html:90
+#: openpanel/internal/web/templates/files/filemanager.html:59
+#: openpanel/internal/web/templates/files/inodes.html:88
+msgid "File Manager"
+msgstr "Файловый менеджер"
+
+#: openpanel/internal/web/sidebar.go:92 openpanel/internal/web/sidebar.go:98
+msgid "Upload from device"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:93 openpanel/internal/web/sidebar.go:99
+#: openpanel/internal/web/templates/files/upload_file.html:11
+msgid "Download from URL"
+msgstr "Скачать по URL"
+
+#: openpanel/internal/web/sidebar.go:119 openpanel/internal/web/sidebar.go:142
+#: openpanel/internal/web/sidebar.go:165
+#: openpanel/internal/web/templates/mysql/users.html:9
+msgid "Users"
+msgstr "Пользователи"
+
+#: openpanel/internal/web/sidebar.go:123 openpanel/internal/web/sidebar.go:145
+#: openpanel/internal/web/sidebar.go:168
+#: openpanel/internal/web/templates/mongodb/databases.html:27
+#: openpanel/internal/web/templates/mongodb/databases.html:30
+#: openpanel/internal/web/templates/mongodb/wizard.html:8
+#: openpanel/internal/web/templates/mysql/databases.html:196
+#: openpanel/internal/web/templates/mysql/databases.html:199
+#: openpanel/internal/web/templates/mysql/wizard.html:8
+#: openpanel/internal/web/templates/psql/databases.html:91
+#: openpanel/internal/web/templates/psql/databases.html:94
+#: openpanel/internal/web/templates/psql/wizard.html:8
+msgid "Database Wizard"
+msgstr "Мастер баз данных"
+
+#: openpanel/internal/web/sidebar.go:124 openpanel/internal/web/sidebar.go:146
+#: openpanel/internal/web/sidebar.go:169
+#: openpanel/internal/web/templates/mongodb/new.html:42
+#: openpanel/internal/web/templates/mysql/new.html:44
+#: openpanel/internal/web/templates/psql/new.html:42
+msgid "Create Database"
+msgstr "Создать базу данных"
+
+#: openpanel/internal/web/sidebar.go:125 openpanel/internal/web/sidebar.go:147
+#: openpanel/internal/web/sidebar.go:170
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:83
+#: openpanel/internal/web/templates/mongodb/users.html:26
+#: openpanel/internal/web/templates/mongodb/users.html:30
+#: openpanel/internal/web/templates/mysql/mysql_user.html:112
+#: openpanel/internal/web/templates/mysql/users.html:52
+#: openpanel/internal/web/templates/mysql/users.html:58
+#: openpanel/internal/web/templates/psql/psql_user.html:83
+#: openpanel/internal/web/templates/psql/users.html:42
+#: openpanel/internal/web/templates/psql/users.html:46
+msgid "Create User"
+msgstr "Создать пользователя"
+
+#: openpanel/internal/web/sidebar.go:126 openpanel/internal/web/sidebar.go:148
+#: openpanel/internal/web/sidebar.go:171
+msgid "Assign User to DB"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:127 openpanel/internal/web/sidebar.go:149
+#: openpanel/internal/web/sidebar.go:172
+msgid "Remove User from DB"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:130 openpanel/internal/web/sidebar.go:153
+#: openpanel/internal/web/templates/mysql/remote_mysql.html:10
+msgid "Remote Access"
+msgstr "Удалённый доступ"
+
+#: openpanel/internal/web/sidebar.go:154
+msgid "Show Processes"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:184 openpanel/internal/web/sidebar.go:209
+msgid "Domain Names"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:185 openpanel/internal/web/sidebar.go:210
+msgid "Add New Domain"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:194 openpanel/internal/web/sidebar.go:199
+msgid "Suspend a Domain"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:195 openpanel/internal/web/sidebar.go:200
+msgid "Unsuspend a Domain"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:222 openpanel/internal/web/sidebar.go:227
+msgid "Email Accounts"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:223 openpanel/internal/web/sidebar.go:228
+msgid "Create New Account"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:258
+msgid "Select PHP version"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:259
+msgid "Default version"
+msgstr ""
 
 #: openpanel/internal/web/templates/base.html:58
 #: openpanel/internal/web/templates/manager/grapejs_editor.html:110
@@ -511,10 +646,11 @@ msgid "Warning"
 msgstr "Предупреждение"
 
 #: openpanel/internal/web/templates/base.html:64
-#: openpanel/internal/web/templates/base.html:513
-#: openpanel/internal/web/templates/base.html:554
+#: openpanel/internal/web/templates/base.html:540
+#: openpanel/internal/web/templates/base.html:594
 #: openpanel/internal/web/templates/files/backup_restore.html:494
 #: openpanel/internal/web/templates/mysql/databases.html:627
+#: openpanel/internal/web/templates/system/cronjobs.html:454
 msgid "Close"
 msgstr "Закрыть"
 
@@ -682,32 +818,71 @@ msgstr "Значение должно быть не более {max}."
 msgid "Looks good."
 msgstr "Всё в порядке."
 
-#: openpanel/internal/web/templates/base.html:381
+#: openpanel/internal/web/templates/base.html:399
 #: openpanel/internal/web/templates/user/favorites.html:10
 msgid "Favorites"
 msgstr "Избранное"
 
-#: openpanel/internal/web/templates/base.html:511
+#: openpanel/internal/web/templates/base.html:484
+#: openpanel/internal/web/templates/dashboard/dashboard.html:46
+#: openpanel/internal/web/templates/dashboard/usage.html:13
+#: openpanel/internal/web/templates/manager/autoinstaller.html:22
+#: openpanel/internal/web/templates/manager/autoinstaller.html:54
+#: openpanel/internal/web/templates/manager/autoinstaller.html:86
+#: openpanel/internal/web/templates/manager/autoinstaller.html:118
+#: openpanel/internal/web/templates/manager/autoinstaller.html:158
+#: openpanel/internal/web/templates/manager/autoinstaller.html:190
+#: openpanel/internal/web/templates/manager/autoinstaller.html:228
+#: openpanel/internal/web/templates/manager/autoinstaller.html:260
+#: openpanel/internal/web/templates/manager/autoinstaller.html:313
+#: openpanel/internal/web/templates/manager/autoinstaller.html:345
+#: openpanel/internal/web/templates/manager/autoinstaller.html:377
+#: openpanel/internal/web/templates/manager/autoinstaller.html:415
+#: openpanel/internal/web/templates/manager/autoinstaller.html:453
+#: openpanel/internal/web/templates/manager/autoinstaller.html:485
+#: openpanel/internal/web/templates/manager/autoinstaller.html:517
+#: openpanel/internal/web/templates/manager/autoinstaller.html:555
+#: openpanel/internal/web/templates/manager/autoinstaller.html:587
+#: openpanel/internal/web/templates/manager/autoinstaller.html:625
+#: openpanel/internal/web/templates/manager/autoinstaller.html:657
+#: openpanel/internal/web/templates/manager/autoinstaller.html:689
+#: openpanel/internal/web/templates/manager/autoinstaller.html:721
+#: openpanel/internal/web/templates/manager/autoinstaller.html:753
+#: openpanel/internal/web/templates/manager/autoinstaller.html:785
+msgid "Upgrade to"
+msgstr "Перейти на"
+
+#: openpanel/internal/web/templates/base.html:484
+#: openpanel/internal/web/templates/dashboard/dashboard.html:46
+msgid "to use this feature."
+msgstr ""
+
+#: openpanel/internal/web/templates/base.html:484
+#: openpanel/internal/web/templates/dashboard/dashboard.html:46
+msgid "Not included in your plan. Contact your administrator to enable it."
+msgstr ""
+
+#: openpanel/internal/web/templates/base.html:538
 msgid "Notification"
 msgstr "Уведомление"
 
-#: openpanel/internal/web/templates/base.html:514
+#: openpanel/internal/web/templates/base.html:541
 msgid "Dismiss"
 msgstr "Отклонить"
 
-#: openpanel/internal/web/templates/base.html:553
+#: openpanel/internal/web/templates/base.html:593
 msgid "Keyboard shortcuts"
 msgstr "Горячие клавиши"
 
-#: openpanel/internal/web/templates/base.html:566
+#: openpanel/internal/web/templates/base.html:606
 msgid "Toggle sidebar"
 msgstr "Переключить боковую панель"
 
-#: openpanel/internal/web/templates/base.html:567
+#: openpanel/internal/web/templates/base.html:607
 msgid "Show this dialog"
 msgstr "Показать это окно"
 
-#: openpanel/internal/web/templates/base.html:630
+#: openpanel/internal/web/templates/base.html:670
 msgid "Found a bug? Let us know"
 msgstr "Нашли ошибку? Сообщите нам"
 
@@ -784,7 +959,7 @@ msgstr "Доменное имя"
 #: openpanel/internal/web/templates/cache/service.html:205
 #: openpanel/internal/web/templates/docker/containers.html:266
 #: openpanel/internal/web/templates/manager/python_node_apps.html:384
-#: openpanel/internal/web/templates/partials/_search.html:64
+#: openpanel/internal/web/templates/partials/_search.html:68
 #: openpanel/internal/web/templates/system/cronjobs.html:67
 #: openpanel/internal/web/templates/system/cronjobs.html:282
 #: openpanel/internal/web/templates/system/process_manager.html:56
@@ -833,7 +1008,7 @@ msgid "View container log"
 msgstr "Просмотр журнала контейнера"
 
 #: openpanel/internal/web/templates/cache/service.html:311
-#: openpanel/internal/web/templates/partials/_search.html:67
+#: openpanel/internal/web/templates/partials/_search.html:71
 #: openpanel/internal/web/templates/system/services.html:73
 #: openpanel/internal/web/templates/system/services.html:211
 msgid "Service"
@@ -877,25 +1052,25 @@ msgstr "Нажмите, чтобы обновить"
 #: openpanel/internal/web/templates/system/server_info.html:30
 #: openpanel/internal/web/templates/system/server_info.html:38
 #: openpanel/internal/web/templates/system/server_info.html:44
-#: openpanel/internal/web/templates/system/server_info.html:77
-#: openpanel/internal/web/templates/system/server_info.html:83
-#: openpanel/internal/web/templates/system/server_info.html:89
-#: openpanel/internal/web/templates/system/server_info.html:95
-#: openpanel/internal/web/templates/system/server_info.html:102
-#: openpanel/internal/web/templates/system/server_info.html:118
-#: openpanel/internal/web/templates/system/server_info.html:124
-#: openpanel/internal/web/templates/system/server_info.html:130
-#: openpanel/internal/web/templates/system/server_info.html:136
-#: openpanel/internal/web/templates/system/server_info.html:142
-#: openpanel/internal/web/templates/system/server_info.html:148
-#: openpanel/internal/web/templates/system/server_info.html:154
-#: openpanel/internal/web/templates/system/server_info.html:160
-#: openpanel/internal/web/templates/system/server_info.html:166
-#: openpanel/internal/web/templates/system/server_info.html:172
-#: openpanel/internal/web/templates/system/server_info.html:178
-#: openpanel/internal/web/templates/system/server_info.html:184
-#: openpanel/internal/web/templates/system/server_info.html:190
-#: openpanel/internal/web/templates/system/server_info.html:196
+#: openpanel/internal/web/templates/system/server_info.html:91
+#: openpanel/internal/web/templates/system/server_info.html:97
+#: openpanel/internal/web/templates/system/server_info.html:103
+#: openpanel/internal/web/templates/system/server_info.html:109
+#: openpanel/internal/web/templates/system/server_info.html:116
+#: openpanel/internal/web/templates/system/server_info.html:132
+#: openpanel/internal/web/templates/system/server_info.html:138
+#: openpanel/internal/web/templates/system/server_info.html:144
+#: openpanel/internal/web/templates/system/server_info.html:150
+#: openpanel/internal/web/templates/system/server_info.html:156
+#: openpanel/internal/web/templates/system/server_info.html:162
+#: openpanel/internal/web/templates/system/server_info.html:168
+#: openpanel/internal/web/templates/system/server_info.html:174
+#: openpanel/internal/web/templates/system/server_info.html:180
+#: openpanel/internal/web/templates/system/server_info.html:186
+#: openpanel/internal/web/templates/system/server_info.html:192
+#: openpanel/internal/web/templates/system/server_info.html:198
+#: openpanel/internal/web/templates/system/server_info.html:204
+#: openpanel/internal/web/templates/system/server_info.html:210
 #: openpanel/internal/web/templates/system/services.html:230
 msgid "Loading..."
 msgstr "Загрузка..."
@@ -985,6 +1160,10 @@ msgstr "Информация"
 #: openpanel/internal/web/templates/manager/opencart_install.html:130
 #: openpanel/internal/web/templates/manager/phpbb_install.html:146
 #: openpanel/internal/web/templates/manager/wp/install.html:111
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:23
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:25
+#: openpanel/internal/web/templates/mongodb/password.html:21
+#: openpanel/internal/web/templates/mongodb/users.html:42
 #: openpanel/internal/web/templates/mysql/mysql_user.html:23
 #: openpanel/internal/web/templates/mysql/mysql_user.html:25
 #: openpanel/internal/web/templates/mysql/password.html:21
@@ -1021,7 +1200,7 @@ msgid "/"
 msgstr "/"
 
 #: openpanel/internal/web/templates/dashboard/information.html:80
-#: openpanel/internal/web/templates/system/server_info.html:99
+#: openpanel/internal/web/templates/system/server_info.html:113
 msgid "Nameservers"
 msgstr "Серверы имен"
 
@@ -1243,7 +1422,7 @@ msgid "You're all set! What would you like to do next?"
 msgstr "Всё готово! Что вы хотите сделать дальше?"
 
 #: openpanel/internal/web/templates/dashboard/onboarding.html:376
-#: openpanel/internal/web/templates/partials/_footer.html:79
+#: openpanel/internal/web/templates/partials/_footer.html:92
 msgid "Take the tour"
 msgstr "Пройти обзор"
 
@@ -1272,6 +1451,7 @@ msgid "Upload your website files using the file manager."
 msgstr "Загрузите файлы вашего сайта с помощью файлового менеджера."
 
 #: openpanel/internal/web/templates/dashboard/onboarding.html:397
+#: openpanel/internal/web/templates/mongodb/wizard.html:24
 #: openpanel/internal/web/templates/mysql/wizard.html:183
 #: openpanel/internal/web/templates/psql/wizard.html:24
 msgid "Create a database"
@@ -1477,6 +1657,10 @@ msgstr "Веб-сервер"
 #: openpanel/internal/web/templates/manager/prestashop_app.html:768
 #: openpanel/internal/web/templates/manager/wp/single.html:435
 #: openpanel/internal/web/templates/manager/wp/single.html:1587
+#: openpanel/internal/web/templates/mongodb/users.html:27
+#: openpanel/internal/web/templates/mongodb/users.html:28
+#: openpanel/internal/web/templates/mongodb/users.html:31
+#: openpanel/internal/web/templates/mongodb/users.html:32
 #: openpanel/internal/web/templates/mysql/users.html:54
 #: openpanel/internal/web/templates/mysql/users.html:56
 #: openpanel/internal/web/templates/mysql/users.html:60
@@ -1513,7 +1697,7 @@ msgstr "Varnish"
 #: openpanel/internal/web/templates/manager/tinyphotogallery_app.html:47
 #: openpanel/internal/web/templates/manager/websitebuilder.html:55
 #: openpanel/internal/web/templates/manager/wp/single.html:214
-#: openpanel/internal/web/templates/partials/_header.html:106
+#: openpanel/internal/web/templates/partials/_header.html:111
 msgid "Backups"
 msgstr "Резервное копирование"
 
@@ -1670,33 +1854,6 @@ msgstr "Использование"
 #: openpanel/internal/web/templates/dashboard/usage.html:10
 msgid "You've reached one or more limits of your current plan."
 msgstr "Вы достигли одного или нескольких лимитов вашего текущего тарифа."
-
-#: openpanel/internal/web/templates/dashboard/usage.html:13
-#: openpanel/internal/web/templates/manager/autoinstaller.html:22
-#: openpanel/internal/web/templates/manager/autoinstaller.html:54
-#: openpanel/internal/web/templates/manager/autoinstaller.html:86
-#: openpanel/internal/web/templates/manager/autoinstaller.html:118
-#: openpanel/internal/web/templates/manager/autoinstaller.html:158
-#: openpanel/internal/web/templates/manager/autoinstaller.html:190
-#: openpanel/internal/web/templates/manager/autoinstaller.html:228
-#: openpanel/internal/web/templates/manager/autoinstaller.html:260
-#: openpanel/internal/web/templates/manager/autoinstaller.html:313
-#: openpanel/internal/web/templates/manager/autoinstaller.html:345
-#: openpanel/internal/web/templates/manager/autoinstaller.html:377
-#: openpanel/internal/web/templates/manager/autoinstaller.html:415
-#: openpanel/internal/web/templates/manager/autoinstaller.html:453
-#: openpanel/internal/web/templates/manager/autoinstaller.html:485
-#: openpanel/internal/web/templates/manager/autoinstaller.html:517
-#: openpanel/internal/web/templates/manager/autoinstaller.html:555
-#: openpanel/internal/web/templates/manager/autoinstaller.html:587
-#: openpanel/internal/web/templates/manager/autoinstaller.html:625
-#: openpanel/internal/web/templates/manager/autoinstaller.html:657
-#: openpanel/internal/web/templates/manager/autoinstaller.html:689
-#: openpanel/internal/web/templates/manager/autoinstaller.html:721
-#: openpanel/internal/web/templates/manager/autoinstaller.html:753
-#: openpanel/internal/web/templates/manager/autoinstaller.html:785
-msgid "Upgrade to"
-msgstr "Перейти на"
 
 #: openpanel/internal/web/templates/dashboard/usage.html:13
 msgid "for higher limits."
@@ -1911,7 +2068,7 @@ msgid "Add a new docker service"
 msgstr "Добавить новую службу Docker"
 
 #: openpanel/internal/web/templates/docker/container_form.html:67
-#: openpanel/internal/web/templates/files/filemanager_partials.html:886
+#: openpanel/internal/web/templates/files/filemanager_partials.html:889
 #: openpanel/internal/web/templates/system/services.html:77
 msgid "Name:"
 msgstr "Имя:"
@@ -2046,6 +2203,8 @@ msgstr "Всего памяти:"
 #: openpanel/internal/web/templates/files/ftp.html:24
 #: openpanel/internal/web/templates/manager/sites.html:124
 #: openpanel/internal/web/templates/manager/wp/list.html:37
+#: openpanel/internal/web/templates/mongodb/databases.html:16
+#: openpanel/internal/web/templates/mongodb/users.html:16
 #: openpanel/internal/web/templates/mysql/configuration.html:14
 #: openpanel/internal/web/templates/mysql/databases.html:185
 #: openpanel/internal/web/templates/mysql/processlist.html:16
@@ -2083,7 +2242,7 @@ msgstr "Показать столбцы"
 #: openpanel/internal/web/templates/domains/dns.html:105
 #: openpanel/internal/web/templates/domains/dns.html:119
 #: openpanel/internal/web/templates/files/filemanager.html:117
-#: openpanel/internal/web/templates/files/filemanager_partials.html:374
+#: openpanel/internal/web/templates/files/filemanager_partials.html:377
 #: openpanel/internal/web/templates/files/trash.html:70
 #: openpanel/internal/web/templates/files/trash_partials.html:17
 #: openpanel/internal/web/templates/manager/app_install.html:118
@@ -2123,6 +2282,8 @@ msgstr "PIDs"
 #: openpanel/internal/web/templates/manager/python_node_apps.html:198
 #: openpanel/internal/web/templates/manager/sites.html:212
 #: openpanel/internal/web/templates/manager/wp/list.html:114
+#: openpanel/internal/web/templates/mongodb/databases.html:42
+#: openpanel/internal/web/templates/mongodb/users.html:44
 #: openpanel/internal/web/templates/mysql/databases.html:212
 #: openpanel/internal/web/templates/mysql/users.html:77
 #: openpanel/internal/web/templates/psql/databases.html:107
@@ -2224,6 +2385,7 @@ msgstr ""
 "внутри контейнера."
 
 #: openpanel/internal/web/templates/docker/terminal.html:35
+#: openpanel/internal/web/templates/mongodb/databases.html:100
 #: openpanel/internal/web/templates/mysql/databases.html:601
 #: openpanel/internal/web/templates/mysql/users.html:176
 #: openpanel/internal/web/templates/psql/databases.html:166
@@ -2248,6 +2410,7 @@ msgstr "Переподключить"
 
 #: openpanel/internal/web/templates/docker/terminal.html:78
 #: openpanel/internal/web/templates/docker/terminal.html:147
+#: openpanel/internal/web/templates/system/cronjobs.html:414
 msgid "Connecting…"
 msgstr "Подключение…"
 
@@ -2517,7 +2680,7 @@ msgstr "TTL"
 #: openpanel/internal/web/templates/domains/domains.html:109
 #: openpanel/internal/web/templates/domains/dynamic_dns.html:166
 #: openpanel/internal/web/templates/files/filemanager.html:125
-#: openpanel/internal/web/templates/files/filemanager_partials.html:396
+#: openpanel/internal/web/templates/files/filemanager_partials.html:399
 #: openpanel/internal/web/templates/files/trash.html:80
 #: openpanel/internal/web/templates/files/trash_partials.html:49
 #: openpanel/internal/web/templates/manager/sites.html:207
@@ -2594,12 +2757,15 @@ msgid "Protocol"
 msgstr "Протокол"
 
 #: openpanel/internal/web/templates/domains/dns.html:197
-#: openpanel/internal/web/templates/files/filemanager_partials.html:946
+#: openpanel/internal/web/templates/files/filemanager_partials.html:953
 #: openpanel/internal/web/templates/files/ftp.html:130
 #: openpanel/internal/web/templates/manager/sites.html:508
+#: openpanel/internal/web/templates/mongodb/databases.html:122
+#: openpanel/internal/web/templates/mongodb/users.html:83
 #: openpanel/internal/web/templates/mysql/users.html:116
 #: openpanel/internal/web/templates/psql/databases.html:188
 #: openpanel/internal/web/templates/psql/users.html:97
+#: openpanel/internal/web/templates/system/cronjobs.html:492
 #: openpanel/internal/web/templates/user/twofa_settings.html:135
 msgid "Confirm"
 msgstr "Подтвердить"
@@ -2648,7 +2814,7 @@ msgstr "Адрес"
 #: openpanel/internal/web/templates/manager/websitebuilder_install.html:36
 #: openpanel/internal/web/templates/manager/wp/install.html:71
 #: openpanel/internal/web/templates/manager/wp/list.html:96
-#: openpanel/internal/web/templates/partials/_search.html:55
+#: openpanel/internal/web/templates/partials/_search.html:59
 #: openpanel/internal/web/templates/php/settings.html:73
 msgid "Domain"
 msgstr "Домен"
@@ -3004,8 +3170,8 @@ msgstr "Приостановить"
 #: openpanel/internal/web/templates/emails/single_account.html:13
 #: openpanel/internal/web/templates/files/clamav/quarantine.html:84
 #: openpanel/internal/web/templates/files/filemanager_partials.html:262
-#: openpanel/internal/web/templates/files/filemanager_partials.html:329
-#: openpanel/internal/web/templates/files/filemanager_partials.html:848
+#: openpanel/internal/web/templates/files/filemanager_partials.html:332
+#: openpanel/internal/web/templates/files/filemanager_partials.html:851
 #: openpanel/internal/web/templates/files/ftp.html:113
 #: openpanel/internal/web/templates/files/ftp.html:131
 #: openpanel/internal/web/templates/files/trash.html:57
@@ -3030,6 +3196,10 @@ msgstr "Приостановить"
 #: openpanel/internal/web/templates/manager/tinyfilemanager_app.html:446
 #: openpanel/internal/web/templates/manager/tinyphotogallery_app.html:448
 #: openpanel/internal/web/templates/manager/websitebuilder.html:238
+#: openpanel/internal/web/templates/mongodb/databases.html:65
+#: openpanel/internal/web/templates/mongodb/databases.html:146
+#: openpanel/internal/web/templates/mongodb/users.html:63
+#: openpanel/internal/web/templates/mongodb/users.html:107
 #: openpanel/internal/web/templates/mysql/databases.html:488
 #: openpanel/internal/web/templates/mysql/databases.html:490
 #: openpanel/internal/web/templates/mysql/remote_mysql.html:207
@@ -3040,6 +3210,7 @@ msgstr "Приостановить"
 #: openpanel/internal/web/templates/psql/users.html:77
 #: openpanel/internal/web/templates/psql/users.html:121
 #: openpanel/internal/web/templates/system/cronjobs.html:357
+#: openpanel/internal/web/templates/system/cronjobs.html:493
 #: openpanel/internal/web/templates/user/favorites.html:83
 msgid "Delete"
 msgstr "Удалить"
@@ -3064,6 +3235,8 @@ msgstr "Показ"
 
 #: openpanel/internal/web/templates/domains/domains.html:409
 #: openpanel/internal/web/templates/files/filemanager.html:348
+#: openpanel/internal/web/templates/mongodb/users.html:27
+#: openpanel/internal/web/templates/mongodb/users.html:31
 #: openpanel/internal/web/templates/mysql/users.html:54
 #: openpanel/internal/web/templates/mysql/users.html:60
 #: openpanel/internal/web/templates/psql/users.html:43
@@ -3152,8 +3325,8 @@ msgid "Will be updated automatically on first webcall."
 msgstr "Будет обновлён автоматически при первом веб-вызове."
 
 #: openpanel/internal/web/templates/domains/dynamic_dns.html:64
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1116
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1160
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1123
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1167
 #: openpanel/internal/web/templates/mysql/mysql_user.html:8
 #: openpanel/internal/web/templates/mysql/wizard.html:303
 msgid "Create"
@@ -3216,7 +3389,7 @@ msgstr "Скопировать URL"
 #: openpanel/internal/web/templates/domains/vhost.html:23
 #: openpanel/internal/web/templates/domains/vhost.html:180
 #: openpanel/internal/web/templates/files/filemanager_partials.html:277
-#: openpanel/internal/web/templates/files/filemanager_partials.html:341
+#: openpanel/internal/web/templates/files/filemanager_partials.html:344
 #: openpanel/internal/web/templates/mysql/remote_mysql.html:201
 #: openpanel/internal/web/templates/system/cronjobs.html:343
 msgid "Edit"
@@ -3295,9 +3468,10 @@ msgstr "URI"
 #: openpanel/internal/web/templates/files/backup_wizard.html:125
 #: openpanel/internal/web/templates/files/disk_usage.html:61
 #: openpanel/internal/web/templates/files/filemanager.html:124
-#: openpanel/internal/web/templates/files/filemanager_partials.html:375
+#: openpanel/internal/web/templates/files/filemanager_partials.html:378
 #: openpanel/internal/web/templates/files/trash.html:79
 #: openpanel/internal/web/templates/files/trash_partials.html:18
+#: openpanel/internal/web/templates/mongodb/databases.html:41
 #: openpanel/internal/web/templates/mysql/databases.html:210
 #: openpanel/internal/web/templates/psql/databases.html:105
 msgid "Size"
@@ -4142,6 +4316,11 @@ msgstr "Email"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:164
 #: openpanel/internal/web/templates/manager/prestashop_install.html:156
 #: openpanel/internal/web/templates/manager/wp/install.html:129
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:40
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:49
+#: openpanel/internal/web/templates/mongodb/password.html:38
+#: openpanel/internal/web/templates/mongodb/password.html:47
+#: openpanel/internal/web/templates/mongodb/wizard.html:71
 #: openpanel/internal/web/templates/mysql/mysql_user.html:40
 #: openpanel/internal/web/templates/mysql/mysql_user.html:50
 #: openpanel/internal/web/templates/mysql/password.html:38
@@ -4178,6 +4357,7 @@ msgid "Start Import"
 msgstr "Начать импорт"
 
 #: openpanel/internal/web/templates/emails/confirm_import.html:111
+#: openpanel/internal/web/templates/mongodb/import.html:43
 #: openpanel/internal/web/templates/mysql/import.html:47
 #: openpanel/internal/web/templates/psql/import.html:43
 msgid "Importing..."
@@ -4418,7 +4598,7 @@ msgstr "Выберите адрес электронной почты для у�
 #: openpanel/internal/web/templates/emails/filter.html:15
 #: openpanel/internal/web/templates/emails/import.html:10
 #: openpanel/internal/web/templates/files/edit_file.html:101
-#: openpanel/internal/web/templates/partials/_footer.html:60
+#: openpanel/internal/web/templates/partials/_footer.html:73
 msgid "Documentation"
 msgstr "Документация"
 
@@ -4736,6 +4916,9 @@ msgstr "Разрешены только буквы, цифры и символы
 #: openpanel/internal/web/templates/manager/phpbb_install.html:156
 #: openpanel/internal/web/templates/manager/prestashop_install.html:148
 #: openpanel/internal/web/templates/manager/wp/install.html:121
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:32
+#: openpanel/internal/web/templates/mongodb/password.html:30
+#: openpanel/internal/web/templates/mongodb/wizard.html:57
 #: openpanel/internal/web/templates/mysql/mysql_user.html:32
 #: openpanel/internal/web/templates/mysql/password.html:30
 #: openpanel/internal/web/templates/mysql/root_password.html:23
@@ -4764,6 +4947,9 @@ msgstr "Слабый пароль"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:157
 #: openpanel/internal/web/templates/manager/prestashop_install.html:149
 #: openpanel/internal/web/templates/manager/wp/install.html:122
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:33
+#: openpanel/internal/web/templates/mongodb/password.html:31
+#: openpanel/internal/web/templates/mongodb/wizard.html:58
 #: openpanel/internal/web/templates/mysql/mysql_user.html:33
 #: openpanel/internal/web/templates/mysql/password.html:31
 #: openpanel/internal/web/templates/mysql/root_password.html:24
@@ -4792,6 +4978,9 @@ msgstr "Пароль средней надёжности"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:158
 #: openpanel/internal/web/templates/manager/prestashop_install.html:150
 #: openpanel/internal/web/templates/manager/wp/install.html:123
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:34
+#: openpanel/internal/web/templates/mongodb/password.html:32
+#: openpanel/internal/web/templates/mongodb/wizard.html:59
 #: openpanel/internal/web/templates/mysql/mysql_user.html:34
 #: openpanel/internal/web/templates/mysql/password.html:32
 #: openpanel/internal/web/templates/mysql/root_password.html:25
@@ -4820,6 +5009,9 @@ msgstr "Надёжный пароль"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:159
 #: openpanel/internal/web/templates/manager/prestashop_install.html:151
 #: openpanel/internal/web/templates/manager/wp/install.html:124
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:35
+#: openpanel/internal/web/templates/mongodb/password.html:33
+#: openpanel/internal/web/templates/mongodb/wizard.html:60
 #: openpanel/internal/web/templates/mysql/mysql_user.html:35
 #: openpanel/internal/web/templates/mysql/password.html:33
 #: openpanel/internal/web/templates/mysql/root_password.html:26
@@ -4976,7 +5168,7 @@ msgstr "Восстановить"
 #: openpanel/internal/web/templates/files/backup_restore.html:510
 #: openpanel/internal/web/templates/files/backup_wizard.html:168
 #: openpanel/internal/web/templates/files/filemanager_partials.html:267
-#: openpanel/internal/web/templates/files/filemanager_partials.html:333
+#: openpanel/internal/web/templates/files/filemanager_partials.html:336
 #: openpanel/internal/web/templates/files/upload_file.html:140
 msgid "Download"
 msgstr "Скачать"
@@ -5505,36 +5697,36 @@ msgstr "Начать сканирование"
 msgid "Scanning..."
 msgstr "Сканирование..."
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:72
+#: openpanel/internal/web/templates/files/clamav/scanner.html:108
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:756
 msgid "files scanned"
 msgstr "файлов проверено"
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:83
+#: openpanel/internal/web/templates/files/clamav/scanner.html:119
 msgid "Scan Results"
 msgstr "Результаты сканирования"
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:97
+#: openpanel/internal/web/templates/files/clamav/scanner.html:129
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:775
 msgid "Scan failed: "
 msgstr "Сканирование не удалось: "
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:98
+#: openpanel/internal/web/templates/files/clamav/scanner.html:130
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:776
 msgid "Scan is complete!"
 msgstr "Сканирование завершено!"
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:99
+#: openpanel/internal/web/templates/files/clamav/scanner.html:131
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:777
 msgid "files scanned."
 msgstr "файлов проверено."
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:100
+#: openpanel/internal/web/templates/files/clamav/scanner.html:132
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:778
 msgid "No malware found."
 msgstr "Вредоносное ПО не обнаружено."
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:173
+#: openpanel/internal/web/templates/files/clamav/scanner.html:210
 #: openpanel/internal/web/templates/files/fix_permissions.html:91
 msgid "Network response was not ok"
 msgstr "Сетевой ответ был не в порядке"
@@ -5585,12 +5777,6 @@ msgstr "Каталог"
 #: openpanel/internal/web/templates/files/inodes.html:121
 msgid "Up One Level"
 msgstr "На один уровень вверх"
-
-#: openpanel/internal/web/templates/files/disk_usage.html:90
-#: openpanel/internal/web/templates/files/filemanager.html:59
-#: openpanel/internal/web/templates/files/inodes.html:88
-msgid "File Manager"
-msgstr "Файловый менеджер"
 
 #: openpanel/internal/web/templates/files/disk_usage.html:193
 msgid "Calculating disk usage for parent directory.."
@@ -5671,7 +5857,7 @@ msgid "New Folder"
 msgstr "Новая папка"
 
 #: openpanel/internal/web/templates/files/filemanager.html:118
-#: openpanel/internal/web/templates/files/filemanager_partials.html:378
+#: openpanel/internal/web/templates/files/filemanager_partials.html:381
 #: openpanel/internal/web/templates/files/trash.html:73
 #: openpanel/internal/web/templates/files/trash_partials.html:21
 #: openpanel/internal/web/templates/user/history_usage.html:127
@@ -5679,21 +5865,21 @@ msgid "Date"
 msgstr "Дата"
 
 #: openpanel/internal/web/templates/files/filemanager.html:119
-#: openpanel/internal/web/templates/files/filemanager_partials.html:381
+#: openpanel/internal/web/templates/files/filemanager_partials.html:384
 #: openpanel/internal/web/templates/files/trash.html:74
 #: openpanel/internal/web/templates/files/trash_partials.html:34
 msgid "Owner"
 msgstr "Владелец"
 
 #: openpanel/internal/web/templates/files/filemanager.html:120
-#: openpanel/internal/web/templates/files/filemanager_partials.html:384
+#: openpanel/internal/web/templates/files/filemanager_partials.html:387
 #: openpanel/internal/web/templates/files/trash.html:75
 #: openpanel/internal/web/templates/files/trash_partials.html:37
 msgid "Group"
 msgstr "Группа"
 
 #: openpanel/internal/web/templates/files/filemanager.html:121
-#: openpanel/internal/web/templates/files/filemanager_partials.html:388
+#: openpanel/internal/web/templates/files/filemanager_partials.html:391
 #: openpanel/internal/web/templates/files/trash.html:76
 #: openpanel/internal/web/templates/files/trash_partials.html:41
 msgid "Links"
@@ -5706,8 +5892,8 @@ msgstr "Цель ссылки"
 
 #: openpanel/internal/web/templates/files/filemanager.html:123
 #: openpanel/internal/web/templates/files/filemanager_partials.html:287
-#: openpanel/internal/web/templates/files/filemanager_partials.html:349
-#: openpanel/internal/web/templates/files/filemanager_partials.html:401
+#: openpanel/internal/web/templates/files/filemanager_partials.html:352
+#: openpanel/internal/web/templates/files/filemanager_partials.html:404
 #: openpanel/internal/web/templates/files/trash.html:78
 #: openpanel/internal/web/templates/files/trash_partials.html:54
 msgid "Permissions"
@@ -5790,8 +5976,8 @@ msgid "Start creating new folders or uploading a new file!"
 msgstr "Начните создавать новые папки или загружать новый файл!"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:247
-#: openpanel/internal/web/templates/files/filemanager_partials.html:317
-#: openpanel/internal/web/templates/files/filemanager_partials.html:512
+#: openpanel/internal/web/templates/files/filemanager_partials.html:320
+#: openpanel/internal/web/templates/files/filemanager_partials.html:515
 #: openpanel/internal/web/templates/files/trash.html:43
 #: openpanel/internal/web/templates/files/trash_partials.html:525
 #: openpanel/internal/web/templates/manager/sites.html:205
@@ -5800,8 +5986,8 @@ msgid "Select all"
 msgstr "Выбрать все"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:252
-#: openpanel/internal/web/templates/files/filemanager_partials.html:321
-#: openpanel/internal/web/templates/files/filemanager_partials.html:659
+#: openpanel/internal/web/templates/files/filemanager_partials.html:324
+#: openpanel/internal/web/templates/files/filemanager_partials.html:662
 #: openpanel/internal/web/templates/mysql/wizard.html:80
 #: openpanel/internal/web/templates/mysql/wizard.html:139
 #: openpanel/internal/web/templates/user/mcp.html:30
@@ -5811,179 +5997,183 @@ msgid "Copy"
 msgstr "Копировать"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:257
-#: openpanel/internal/web/templates/files/filemanager_partials.html:325
-#: openpanel/internal/web/templates/files/filemanager_partials.html:795
+#: openpanel/internal/web/templates/files/filemanager_partials.html:328
+#: openpanel/internal/web/templates/files/filemanager_partials.html:798
 msgid "Move"
 msgstr "Переместить"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:272
-#: openpanel/internal/web/templates/files/filemanager_partials.html:337
+#: openpanel/internal/web/templates/files/filemanager_partials.html:340
 msgid "View"
 msgstr "Просмотр"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:282
-#: openpanel/internal/web/templates/files/filemanager_partials.html:345
-#: openpanel/internal/web/templates/files/filemanager_partials.html:895
+#: openpanel/internal/web/templates/files/filemanager_partials.html:348
+#: openpanel/internal/web/templates/files/filemanager_partials.html:898
 msgid "Rename"
 msgstr "Переименовать"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:292
-#: openpanel/internal/web/templates/files/filemanager_partials.html:353
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1006
+#: openpanel/internal/web/templates/files/filemanager_partials.html:356
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1013
 msgid "Compress"
 msgstr "Сжать"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:297
-#: openpanel/internal/web/templates/files/filemanager_partials.html:357
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1066
+#: openpanel/internal/web/templates/files/filemanager_partials.html:360
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1073
 msgid "Extract"
 msgstr "Извлечь"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:377
+#: openpanel/internal/web/templates/files/filemanager_partials.html:380
 #: openpanel/internal/web/templates/files/trash_partials.html:20
 msgid "Last Modified"
 msgstr "Последнее изменение"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:392
+#: openpanel/internal/web/templates/files/filemanager_partials.html:395
 #: openpanel/internal/web/templates/files/trash_partials.html:45
 msgid "Link target"
 msgstr "Цель ссылки"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:414
+#: openpanel/internal/web/templates/files/filemanager_partials.html:417
 msgid "Go Up"
 msgstr "Наверх"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:455
-#: openpanel/internal/web/templates/files/filemanager_partials.html:516
+#: openpanel/internal/web/templates/files/filemanager_partials.html:458
+#: openpanel/internal/web/templates/files/filemanager_partials.html:519
 msgid "Calculate"
 msgstr "Вычислить"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:513
+#: openpanel/internal/web/templates/files/filemanager_partials.html:516
 #: openpanel/internal/web/templates/files/trash_partials.html:524
 msgid "Deselect"
 msgstr "Снять выделение"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:514
+#: openpanel/internal/web/templates/files/filemanager_partials.html:517
 #: openpanel/internal/web/templates/manager/sites.html:471
 msgid "selected"
 msgstr "выбрано"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:515
+#: openpanel/internal/web/templates/files/filemanager_partials.html:518
 msgid "Calculating..."
 msgstr "Вычисление..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:517
+#: openpanel/internal/web/templates/files/filemanager_partials.html:520
 msgid "Change permissions for"
 msgstr "Изменить права доступа для"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:537
+#: openpanel/internal/web/templates/files/filemanager_partials.html:540
 msgid "Copy items"
 msgstr "Копировать элементы"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:553
+#: openpanel/internal/web/templates/files/filemanager_partials.html:556
 msgid "Copy to:"
 msgstr "Копировать в:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:653
+#: openpanel/internal/web/templates/files/filemanager_partials.html:656
 msgid "Copying..."
 msgstr "Копирование..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:675
+#: openpanel/internal/web/templates/files/filemanager_partials.html:678
 msgid "Move items"
 msgstr "Переместить объекты"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:691
+#: openpanel/internal/web/templates/files/filemanager_partials.html:694
 msgid "Where to:"
 msgstr "Куда:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:789
+#: openpanel/internal/web/templates/files/filemanager_partials.html:792
 msgid "Moving..."
 msgstr "Перемещение..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:811
+#: openpanel/internal/web/templates/files/filemanager_partials.html:814
 #: openpanel/internal/web/templates/files/trash_partials.html:237
 msgid "Delete items"
 msgstr "Удалить объекты"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:836
+#: openpanel/internal/web/templates/files/filemanager_partials.html:839
 msgid "deleting..."
 msgstr "удаление..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:844
+#: openpanel/internal/web/templates/files/filemanager_partials.html:847
 msgid "Skip the trash and permanently delete the files"
 msgstr "Пропустить корзину и удалить файлы безвозвратно"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:868
+#: openpanel/internal/web/templates/files/filemanager_partials.html:871
 msgid "Rename item"
 msgstr "Переименовать объект"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:916
+#: openpanel/internal/web/templates/files/filemanager_partials.html:919
 msgid "Change file permissions"
 msgstr "Изменить права доступа к файлу"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:917
+#: openpanel/internal/web/templates/files/filemanager_partials.html:920
 msgid "Set permissions"
 msgstr "Установить права доступа"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:936
+#: openpanel/internal/web/templates/files/filemanager_partials.html:939
 msgid "Enter exactly 3 digits (e.g. 755) for the octal permission value."
 msgstr ""
 "Введите ровно 3 цифры (например, 755) для восьмеричного значения прав "
 "доступа."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:963
+#: openpanel/internal/web/templates/files/filemanager_partials.html:943
+msgid "Apply recursively to subdirectories"
+msgstr ""
+
+#: openpanel/internal/web/templates/files/filemanager_partials.html:970
 msgid "Compress items"
 msgstr "Сжать объекты"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:979
+#: openpanel/internal/web/templates/files/filemanager_partials.html:986
 msgid "Archive path"
 msgstr "Путь к архиву"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1000
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1007
 msgid "compressing..."
 msgstr "сжатие..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1026
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1033
 msgid "Extract items"
 msgstr "Извлечь объекты"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1041
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1048
 msgid "Archive name:"
 msgstr "Имя архива:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1046
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1053
 msgid "Extract destination:"
 msgstr "Место извлечения:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1060
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1067
 msgid "Extracting..."
 msgstr "Извлечение..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1086
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1093
 msgid "Create New File"
 msgstr "Создать новый файл"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1098
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1105
 msgid "File Name"
 msgstr "Имя файла"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1104
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1111
 msgid "Open in File Editor after creation"
 msgstr "Открыть в редакторе файлов после создания"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1110
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1117
 msgid "New file will be created in:"
 msgstr "Новый файл будет создан в:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1137
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1144
 msgid "Create New Folder"
 msgstr "Создать новую папку"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1148
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1155
 msgid "Folder Name"
 msgstr "Имя папки"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1154
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1161
 msgid "New folder will be created in:"
 msgstr "Новая папка будет создана в:"
 
@@ -6071,6 +6261,8 @@ msgid "Add your first account"
 msgstr "Добавьте свою первую учётную запись"
 
 #: openpanel/internal/web/templates/files/ftp.html:106
+#: openpanel/internal/web/templates/mongodb/password.html:81
+#: openpanel/internal/web/templates/mongodb/users.html:59
 #: openpanel/internal/web/templates/mysql/password.html:116
 #: openpanel/internal/web/templates/mysql/root_password.html:103
 #: openpanel/internal/web/templates/mysql/users.html:96
@@ -6317,10 +6509,6 @@ msgstr "Восстановить объекты"
 msgid "File Upload"
 msgstr "Загрузка файла"
 
-#: openpanel/internal/web/templates/files/upload_file.html:11
-msgid "Download from URL"
-msgstr "Скачать по URL"
-
 #: openpanel/internal/web/templates/files/upload_file.html:103
 msgid "Download from URL instead"
 msgstr "Вместо этого скачать по URL"
@@ -6434,7 +6622,7 @@ msgstr "Порт необязателен, если оставить пусты�
 #: openpanel/internal/web/templates/manager/sites.html:210
 #: openpanel/internal/web/templates/manager/wp/list.html:105
 #: openpanel/internal/web/templates/manager/wp/single.html:1153
-#: openpanel/internal/web/templates/system/server_info.html:87
+#: openpanel/internal/web/templates/system/server_info.html:101
 msgid "Version"
 msgstr "Версия"
 
@@ -8972,6 +9160,10 @@ msgstr "Имя базы данных и пользователь для клон
 #: openpanel/internal/web/templates/manager/phpbb_app.html:472
 #: openpanel/internal/web/templates/manager/prestashop_app.html:774
 #: openpanel/internal/web/templates/manager/wp/single.html:1593
+#: openpanel/internal/web/templates/mongodb/databases.html:40
+#: openpanel/internal/web/templates/mongodb/new.html:21
+#: openpanel/internal/web/templates/mongodb/new.html:23
+#: openpanel/internal/web/templates/mongodb/wizard.html:27
 #: openpanel/internal/web/templates/mysql/databases.html:209
 #: openpanel/internal/web/templates/mysql/new.html:23
 #: openpanel/internal/web/templates/mysql/new.html:25
@@ -11211,10 +11403,6 @@ msgstr "Установка пакетов не удалась."
 msgid "Error running package install for application."
 msgstr "Ошибка выполнения установки пакетов для приложения."
 
-#: openpanel/internal/web/templates/manager/sites.html:8
-msgid "Site Manager"
-msgstr "Менеджер сайтов"
-
 #: openpanel/internal/web/templates/manager/sites.html:9
 msgid "and other websites."
 msgstr "и другие сайты."
@@ -12200,7 +12388,7 @@ msgstr ""
 "WordPress или выполните сканирование для поиска существующих установок."
 
 #: openpanel/internal/web/templates/manager/wp/list.html:341
-#: openpanel/internal/web/templates/system/cronjobs.html:386
+#: openpanel/internal/web/templates/system/cronjobs.html:480
 #: openpanel/internal/web/templates/user/favorites.html:126
 msgid "View Documentation"
 msgstr "Просмотреть документацию"
@@ -12771,6 +12959,349 @@ msgstr "WordPress успешно обновлен."
 msgid "Update failed."
 msgstr "Обновление не удалось."
 
+#: openpanel/internal/web/templates/mongodb/assign.html:8
+#: openpanel/internal/web/templates/mongodb/assign.html:55
+#: openpanel/internal/web/templates/psql/assign.html:8
+#: openpanel/internal/web/templates/psql/assign.html:46
+msgid "Assign User to Database"
+msgstr "Назначить пользователя базе данных"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:9
+msgid ""
+"Grant a MongoDB user a role scoped to a database, enabling access for "
+"reading or writing documents within it."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/assign.html:21
+#: openpanel/internal/web/templates/mongodb/remove.html:21
+#: openpanel/internal/web/templates/mysql/assign.html:37
+#: openpanel/internal/web/templates/mysql/remove.html:21
+#: openpanel/internal/web/templates/psql/assign.html:21
+#: openpanel/internal/web/templates/psql/remove.html:21
+msgid "Select user:"
+msgstr "Выберите пользователя:"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:30
+#: openpanel/internal/web/templates/mongodb/import.html:21
+#: openpanel/internal/web/templates/mongodb/remove.html:30
+#: openpanel/internal/web/templates/mysql/assign.html:50
+#: openpanel/internal/web/templates/mysql/import.html:24
+#: openpanel/internal/web/templates/mysql/remove.html:33
+#: openpanel/internal/web/templates/psql/assign.html:30
+#: openpanel/internal/web/templates/psql/import.html:21
+#: openpanel/internal/web/templates/psql/remove.html:30
+msgid "Select database:"
+msgstr "Выберите базу данных:"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:33
+#: openpanel/internal/web/templates/mongodb/import.html:66
+#: openpanel/internal/web/templates/mysql/import.html:75
+#: openpanel/internal/web/templates/psql/assign.html:33
+#: openpanel/internal/web/templates/psql/import.html:66
+msgid "Select a database"
+msgstr "Выберите базу данных"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:39
+#: openpanel/internal/web/templates/mongodb/remove.html:39
+msgid "Select role:"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/assign.html:53
+#: openpanel/internal/web/templates/mongodb/new.html:39
+#: openpanel/internal/web/templates/mongodb/remove.html:53
+#: openpanel/internal/web/templates/mongodb/wizard.html:117
+#: openpanel/internal/web/templates/mysql/assign.html:80
+#: openpanel/internal/web/templates/mysql/new.html:41
+#: openpanel/internal/web/templates/mysql/remove.html:49
+#: openpanel/internal/web/templates/mysql/root_password.html:101
+#: openpanel/internal/web/templates/mysql/wizard.html:299
+#: openpanel/internal/web/templates/psql/assign.html:44
+#: openpanel/internal/web/templates/psql/new.html:39
+#: openpanel/internal/web/templates/psql/remove.html:44
+#: openpanel/internal/web/templates/psql/wizard.html:114
+msgid "Back to Databases"
+msgstr "Назад к базам данных"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:9
+msgid "MongoDB Databases"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/databases.html:10
+#: openpanel/internal/web/templates/mysql/databases.html:22
+#: openpanel/internal/web/templates/psql/databases.html:10
+msgid "Total databases:"
+msgstr "Всего баз данных:"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:26
+#: openpanel/internal/web/templates/mongodb/databases.html:29
+#: openpanel/internal/web/templates/mysql/databases.html:195
+#: openpanel/internal/web/templates/mysql/databases.html:198
+#: openpanel/internal/web/templates/psql/databases.html:90
+#: openpanel/internal/web/templates/psql/databases.html:93
+msgid "New Database"
+msgstr "Новая база данных"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:29
+#: openpanel/internal/web/templates/mongodb/databases.html:30
+#: openpanel/internal/web/templates/mongodb/users.html:30
+#: openpanel/internal/web/templates/mongodb/users.html:31
+#: openpanel/internal/web/templates/mongodb/users.html:32
+#: openpanel/internal/web/templates/mysql/databases.html:198
+#: openpanel/internal/web/templates/mysql/databases.html:199
+#: openpanel/internal/web/templates/mysql/users.html:58
+#: openpanel/internal/web/templates/mysql/users.html:60
+#: openpanel/internal/web/templates/mysql/users.html:62
+#: openpanel/internal/web/templates/psql/databases.html:93
+#: openpanel/internal/web/templates/psql/databases.html:94
+#: openpanel/internal/web/templates/psql/users.html:46
+#: openpanel/internal/web/templates/psql/users.html:47
+#: openpanel/internal/web/templates/psql/users.html:48
+msgid "Unavailable while the service is not running."
+msgstr "Недоступно, пока сервис не запущен."
+
+#: openpanel/internal/web/templates/mongodb/databases.html:57
+#: openpanel/internal/web/templates/mysql/databases.html:353
+#: openpanel/internal/web/templates/psql/databases.html:123
+msgid "System Database"
+msgstr "Системная база данных"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:60
+#: openpanel/internal/web/templates/mysql/databases.html:365
+#: openpanel/internal/web/templates/psql/databases.html:126
+msgid "Import"
+msgstr "Импорт"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:74
+#: openpanel/internal/web/templates/mysql/databases.html:575
+#: openpanel/internal/web/templates/psql/databases.html:140
+msgid "No databases yet."
+msgstr "Пока нет баз данных."
+
+#: openpanel/internal/web/templates/mongodb/databases.html:74
+#: openpanel/internal/web/templates/mysql/databases.html:575
+#: openpanel/internal/web/templates/psql/databases.html:140
+msgid "Create your first database"
+msgstr "Создать первую базу данных"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:100
+#: openpanel/internal/web/templates/mysql/databases.html:601
+#: openpanel/internal/web/templates/mysql/users.html:176
+#: openpanel/internal/web/templates/psql/databases.html:166
+msgid "The page will refresh in"
+msgstr "Страница обновится через"
+
+#: openpanel/internal/web/templates/mongodb/import.html:8
+#: openpanel/internal/web/templates/mysql/import.html:8
+#: openpanel/internal/web/templates/psql/import.html:8
+msgid "Import into Database"
+msgstr "Импорт в базу данных"
+
+#: openpanel/internal/web/templates/mongodb/import.html:9
+msgid ""
+"Select a local mongodump archive to upload and restore into a MongoDB "
+"database."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/import.html:32
+#: openpanel/internal/web/templates/mysql/import.html:36
+#: openpanel/internal/web/templates/psql/import.html:32
+msgid "Select File"
+msgstr "Выбрать файл"
+
+#: openpanel/internal/web/templates/mongodb/import.html:34
+#: openpanel/internal/web/templates/mysql/import.html:38
+#: openpanel/internal/web/templates/psql/import.html:34
+msgid "Select file to upload"
+msgstr "Выберите файл для загрузки"
+
+#: openpanel/internal/web/templates/mongodb/import.html:43
+#: openpanel/internal/web/templates/mysql/import.html:47
+#: openpanel/internal/web/templates/psql/import.html:43
+msgid "Upload & Import"
+msgstr "Загрузить и импортировать"
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:8
+msgid "Create MongoDB User"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:9
+msgid ""
+"Create a new MongoDB user with a unique username and password. Assign it a "
+"role on a database afterward from the Assign User page."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:25
+#: openpanel/internal/web/templates/mongodb/wizard.html:44
+#: openpanel/internal/web/templates/mysql/mysql_user.html:25
+#: openpanel/internal/web/templates/mysql/wizard.html:217
+#: openpanel/internal/web/templates/psql/psql_user.html:25
+#: openpanel/internal/web/templates/psql/wizard.html:44
+msgid "Only letters, numbers, and underscores are allowed (1-31 characters)."
+msgstr "Разрешены только буквы, цифры и символ подчёркивания (1-31 символ)."
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:81
+#: openpanel/internal/web/templates/mongodb/password.html:79
+#: openpanel/internal/web/templates/mysql/mysql_user.html:110
+#: openpanel/internal/web/templates/mysql/password.html:114
+#: openpanel/internal/web/templates/psql/password.html:79
+#: openpanel/internal/web/templates/psql/psql_user.html:81
+msgid "Back to Users"
+msgstr "Назад к пользователям"
+
+#: openpanel/internal/web/templates/mongodb/new.html:8
+#: openpanel/internal/web/templates/mysql/new.html:8
+#: openpanel/internal/web/templates/psql/new.html:8
+msgid "Create a Database"
+msgstr "Создать базу данных"
+
+#: openpanel/internal/web/templates/mongodb/new.html:9
+msgid ""
+"Create a new MongoDB database to store and organize collections of "
+"documents."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/new.html:23
+#: openpanel/internal/web/templates/mongodb/wizard.html:27
+#: openpanel/internal/web/templates/mysql/new.html:25
+#: openpanel/internal/web/templates/mysql/wizard.html:189
+#: openpanel/internal/web/templates/psql/new.html:23
+#: openpanel/internal/web/templates/psql/wizard.html:27
+msgid "Only letters, numbers, and underscores are allowed (1-63 characters)."
+msgstr "Разрешены только буквы, цифры и символ подчёркивания (1-63 символа)."
+
+#: openpanel/internal/web/templates/mongodb/password.html:8
+#: openpanel/internal/web/templates/mysql/password.html:8
+#: openpanel/internal/web/templates/psql/password.html:8
+msgid "Change User Password"
+msgstr "Изменить пароль пользователя"
+
+#: openpanel/internal/web/templates/mongodb/password.html:9
+msgid "Change password for a MongoDB database user."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/remove.html:8
+#: openpanel/internal/web/templates/mysql/remove.html:8
+#: openpanel/internal/web/templates/psql/remove.html:8
+msgid "Remove User access from Database"
+msgstr "Удалить доступ пользователя к базе данных"
+
+#: openpanel/internal/web/templates/mongodb/remove.html:9
+msgid ""
+"Revoke a role from a MongoDB user on a database, removing their access to "
+"it."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/remove.html:24
+#: openpanel/internal/web/templates/mysql/remove.html:26
+#: openpanel/internal/web/templates/psql/remove.html:24
+msgid "Select a Username"
+msgstr "Выберите имя пользователя"
+
+#: openpanel/internal/web/templates/mongodb/remove.html:33
+#: openpanel/internal/web/templates/mysql/remove.html:37
+#: openpanel/internal/web/templates/psql/remove.html:33
+msgid "Select a Database"
+msgstr "Выберите базу данных"
+
+#: openpanel/internal/web/templates/mongodb/remove.html:55
+#: openpanel/internal/web/templates/mysql/remove.html:51
+#: openpanel/internal/web/templates/psql/remove.html:46
+msgid "Remove User from Database"
+msgstr "Удалить пользователя из базы данных"
+
+#: openpanel/internal/web/templates/mongodb/users.html:9
+msgid "MongoDB Users"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/users.html:10
+#: openpanel/internal/web/templates/mysql/users.html:10
+#: openpanel/internal/web/templates/psql/users.html:10
+msgid "Total users:"
+msgstr "Всего пользователей:"
+
+#: openpanel/internal/web/templates/mongodb/users.html:27
+#: openpanel/internal/web/templates/mongodb/users.html:31
+#: openpanel/internal/web/templates/mysql/users.html:54
+#: openpanel/internal/web/templates/mysql/users.html:60
+#: openpanel/internal/web/templates/psql/users.html:43
+#: openpanel/internal/web/templates/psql/users.html:47
+msgid "Assign User"
+msgstr "Назначить пользователя"
+
+#: openpanel/internal/web/templates/mongodb/users.html:28
+#: openpanel/internal/web/templates/mongodb/users.html:32
+#: openpanel/internal/web/templates/mysql/users.html:56
+#: openpanel/internal/web/templates/mysql/users.html:62
+#: openpanel/internal/web/templates/psql/users.html:44
+#: openpanel/internal/web/templates/psql/users.html:48
+msgid "Remove User"
+msgstr "Удалить пользователя"
+
+#: openpanel/internal/web/templates/mongodb/users.html:28
+#: openpanel/internal/web/templates/mongodb/users.html:32
+#: openpanel/internal/web/templates/mysql/users.html:56
+#: openpanel/internal/web/templates/mysql/users.html:62
+#: openpanel/internal/web/templates/psql/users.html:44
+#: openpanel/internal/web/templates/psql/users.html:48
+msgid "from"
+msgstr "из"
+
+#: openpanel/internal/web/templates/mongodb/users.html:43
+msgid "Roles"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/users.html:57
+#: openpanel/internal/web/templates/psql/users.html:71
+msgid "System User"
+msgstr "Системный пользователь"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:9
+msgid ""
+"Create a new MongoDB database, set up a user with a secure password, and "
+"grant it a role on the database."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:41
+#: openpanel/internal/web/templates/mysql/wizard.html:211
+#: openpanel/internal/web/templates/psql/wizard.html:41
+msgid "Create a user"
+msgstr "Создать пользователя"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:44
+#: openpanel/internal/web/templates/mysql/wizard.html:220
+#: openpanel/internal/web/templates/psql/wizard.html:44
+msgid "Database User"
+msgstr "Пользователь базы данных"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:101
+msgid "Grant a role on the database"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:120
+msgid "Create DB, User, and Grant Role"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:139
+#: openpanel/internal/web/templates/psql/wizard.html:136
+msgid "All fields are required"
+msgstr "Все поля обязательны для заполнения"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:144
+#: openpanel/internal/web/templates/psql/wizard.html:141
+msgid "Password can only contain letters, numbers, and underscores"
+msgstr "Пароль может содержать только буквы, цифры и символ подчёркивания"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:148
+#: openpanel/internal/web/templates/psql/wizard.html:145
+msgid "Password must be at least 8 characters long"
+msgstr "Пароль должен содержать не менее 8 символов"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:168
+#: openpanel/internal/web/templates/mysql/wizard.html:339
+#: openpanel/internal/web/templates/psql/wizard.html:166
+msgid "Creating..."
+msgstr "Создание..."
+
 #: openpanel/internal/web/templates/mysql/assign.html:8
 msgid "Manage User Privileges"
 msgstr "Управление привилегиями пользователя"
@@ -12785,22 +13316,6 @@ msgstr ""
 "разрешениями базы данных и обеспечения доступа к выполнению запросов, "
 "изменению таблиц или управлению данными в указанной базе данных."
 
-#: openpanel/internal/web/templates/mysql/assign.html:37
-#: openpanel/internal/web/templates/mysql/remove.html:21
-#: openpanel/internal/web/templates/psql/assign.html:21
-#: openpanel/internal/web/templates/psql/remove.html:21
-msgid "Select user:"
-msgstr "Выберите пользователя:"
-
-#: openpanel/internal/web/templates/mysql/assign.html:50
-#: openpanel/internal/web/templates/mysql/import.html:24
-#: openpanel/internal/web/templates/mysql/remove.html:33
-#: openpanel/internal/web/templates/psql/assign.html:30
-#: openpanel/internal/web/templates/psql/import.html:21
-#: openpanel/internal/web/templates/psql/remove.html:30
-msgid "Select database:"
-msgstr "Выберите базу данных:"
-
 #: openpanel/internal/web/templates/mysql/assign.html:52
 #: openpanel/internal/web/templates/mysql/processlist.html:36
 #: openpanel/internal/web/templates/mysql/remove.html:35
@@ -12810,18 +13325,6 @@ msgstr "Хост"
 #: openpanel/internal/web/templates/mysql/assign.html:62
 msgid "Select privileges:"
 msgstr "Выберите привилегии:"
-
-#: openpanel/internal/web/templates/mysql/assign.html:80
-#: openpanel/internal/web/templates/mysql/new.html:41
-#: openpanel/internal/web/templates/mysql/remove.html:49
-#: openpanel/internal/web/templates/mysql/root_password.html:101
-#: openpanel/internal/web/templates/mysql/wizard.html:299
-#: openpanel/internal/web/templates/psql/assign.html:44
-#: openpanel/internal/web/templates/psql/new.html:39
-#: openpanel/internal/web/templates/psql/remove.html:44
-#: openpanel/internal/web/templates/psql/wizard.html:114
-msgid "Back to Databases"
-msgstr "Назад к базам данных"
 
 #: openpanel/internal/web/templates/mysql/assign.html:82
 msgid "Make Changes"
@@ -12878,11 +13381,6 @@ msgstr "сервер:"
 msgid "port:"
 msgstr "порт:"
 
-#: openpanel/internal/web/templates/mysql/databases.html:22
-#: openpanel/internal/web/templates/psql/databases.html:10
-msgid "Total databases:"
-msgstr "Всего баз данных:"
-
 #: openpanel/internal/web/templates/mysql/databases.html:29
 #: openpanel/internal/web/templates/psql/databases.html:16
 msgid "Show system databases"
@@ -12892,35 +13390,6 @@ msgstr "Показать системные базы данных"
 msgid "Show database sizes"
 msgstr "Показать размеры баз данных"
 
-#: openpanel/internal/web/templates/mysql/databases.html:195
-#: openpanel/internal/web/templates/mysql/databases.html:198
-#: openpanel/internal/web/templates/psql/databases.html:90
-#: openpanel/internal/web/templates/psql/databases.html:93
-msgid "New Database"
-msgstr "Новая база данных"
-
-#: openpanel/internal/web/templates/mysql/databases.html:196
-#: openpanel/internal/web/templates/mysql/databases.html:199
-#: openpanel/internal/web/templates/mysql/wizard.html:8
-#: openpanel/internal/web/templates/psql/databases.html:91
-#: openpanel/internal/web/templates/psql/databases.html:94
-#: openpanel/internal/web/templates/psql/wizard.html:8
-msgid "Database Wizard"
-msgstr "Мастер баз данных"
-
-#: openpanel/internal/web/templates/mysql/databases.html:198
-#: openpanel/internal/web/templates/mysql/databases.html:199
-#: openpanel/internal/web/templates/mysql/users.html:58
-#: openpanel/internal/web/templates/mysql/users.html:60
-#: openpanel/internal/web/templates/mysql/users.html:62
-#: openpanel/internal/web/templates/psql/databases.html:93
-#: openpanel/internal/web/templates/psql/databases.html:94
-#: openpanel/internal/web/templates/psql/users.html:46
-#: openpanel/internal/web/templates/psql/users.html:47
-#: openpanel/internal/web/templates/psql/users.html:48
-msgid "Unavailable while the service is not running."
-msgstr "Недоступно, пока сервис не запущен."
-
 #: openpanel/internal/web/templates/mysql/databases.html:211
 #: openpanel/internal/web/templates/psql/databases.html:106
 msgid "Assigned Users"
@@ -12929,16 +13398,6 @@ msgstr "Назначенные пользователи"
 #: openpanel/internal/web/templates/mysql/databases.html:227
 msgid "Manage privileges"
 msgstr "Управление привилегиями"
-
-#: openpanel/internal/web/templates/mysql/databases.html:353
-#: openpanel/internal/web/templates/psql/databases.html:123
-msgid "System Database"
-msgstr "Системная база данных"
-
-#: openpanel/internal/web/templates/mysql/databases.html:365
-#: openpanel/internal/web/templates/psql/databases.html:126
-msgid "Import"
-msgstr "Импорт"
 
 #: openpanel/internal/web/templates/mysql/databases.html:391
 msgid "Format:"
@@ -12961,22 +13420,6 @@ msgstr "Восстановить"
 msgid "phpMyAdmin"
 msgstr "phpMyAdmin"
 
-#: openpanel/internal/web/templates/mysql/databases.html:575
-#: openpanel/internal/web/templates/psql/databases.html:140
-msgid "No databases yet."
-msgstr "Пока нет баз данных."
-
-#: openpanel/internal/web/templates/mysql/databases.html:575
-#: openpanel/internal/web/templates/psql/databases.html:140
-msgid "Create your first database"
-msgstr "Создать первую базу данных"
-
-#: openpanel/internal/web/templates/mysql/databases.html:601
-#: openpanel/internal/web/templates/mysql/users.html:176
-#: openpanel/internal/web/templates/psql/databases.html:166
-msgid "The page will refresh in"
-msgstr "Страница обновится через"
-
 #: openpanel/internal/web/templates/mysql/databases.html:628
 msgid "Running.."
 msgstr "Выполняется.."
@@ -12986,6 +13429,7 @@ msgid "Run again"
 msgstr "Запустить снова"
 
 #: openpanel/internal/web/templates/mysql/databases.html:630
+#: openpanel/internal/web/templates/system/cronjobs.html:422
 msgid "Run"
 msgstr "Запустить"
 
@@ -13021,11 +13465,6 @@ msgstr "Таблица"
 msgid "Add new database"
 msgstr "Добавить новую базу данных"
 
-#: openpanel/internal/web/templates/mysql/import.html:8
-#: openpanel/internal/web/templates/psql/import.html:8
-msgid "Import into Database"
-msgstr "Импорт в базу данных"
-
 #: openpanel/internal/web/templates/mysql/import.html:10
 msgid "Select a local file to upload and import into a MySQL database."
 msgstr "Выберите локальный файл для загрузки и импорта в базу данных MySQL."
@@ -13033,27 +13472,6 @@ msgstr "Выберите локальный файл для загрузки и 
 #: openpanel/internal/web/templates/mysql/import.html:11
 msgid "Select a local file to upload and import into a MariaDB database."
 msgstr "Выберите локальный файл для загрузки и импорта в базу данных MariaDB."
-
-#: openpanel/internal/web/templates/mysql/import.html:36
-#: openpanel/internal/web/templates/psql/import.html:32
-msgid "Select File"
-msgstr "Выбрать файл"
-
-#: openpanel/internal/web/templates/mysql/import.html:38
-#: openpanel/internal/web/templates/psql/import.html:34
-msgid "Select file to upload"
-msgstr "Выберите файл для загрузки"
-
-#: openpanel/internal/web/templates/mysql/import.html:47
-#: openpanel/internal/web/templates/psql/import.html:43
-msgid "Upload & Import"
-msgstr "Загрузить и импортировать"
-
-#: openpanel/internal/web/templates/mysql/import.html:75
-#: openpanel/internal/web/templates/psql/assign.html:33
-#: openpanel/internal/web/templates/psql/import.html:66
-msgid "Select a database"
-msgstr "Выберите базу данных"
 
 #: openpanel/internal/web/templates/mysql/mysql_user.html:8
 #: openpanel/internal/web/templates/mysql/processlist.html:35
@@ -13071,34 +13489,6 @@ msgstr ""
 "управления доступом и правами при работе с базами данных или сервером баз "
 "данных."
 
-#: openpanel/internal/web/templates/mysql/mysql_user.html:25
-#: openpanel/internal/web/templates/mysql/wizard.html:217
-#: openpanel/internal/web/templates/psql/psql_user.html:25
-#: openpanel/internal/web/templates/psql/wizard.html:44
-msgid "Only letters, numbers, and underscores are allowed (1-31 characters)."
-msgstr "Разрешены только буквы, цифры и символ подчёркивания (1-31 символ)."
-
-#: openpanel/internal/web/templates/mysql/mysql_user.html:110
-#: openpanel/internal/web/templates/mysql/password.html:114
-#: openpanel/internal/web/templates/psql/password.html:79
-#: openpanel/internal/web/templates/psql/psql_user.html:81
-msgid "Back to Users"
-msgstr "Назад к пользователям"
-
-#: openpanel/internal/web/templates/mysql/mysql_user.html:112
-#: openpanel/internal/web/templates/mysql/users.html:52
-#: openpanel/internal/web/templates/mysql/users.html:58
-#: openpanel/internal/web/templates/psql/psql_user.html:83
-#: openpanel/internal/web/templates/psql/users.html:42
-#: openpanel/internal/web/templates/psql/users.html:46
-msgid "Create User"
-msgstr "Создать пользователя"
-
-#: openpanel/internal/web/templates/mysql/new.html:8
-#: openpanel/internal/web/templates/psql/new.html:8
-msgid "Create a Database"
-msgstr "Создать базу данных"
-
 #: openpanel/internal/web/templates/mysql/new.html:9
 msgid ""
 "Create a new database to store and organize data, providing a foundational "
@@ -13107,23 +13497,6 @@ msgstr ""
 "Создайте новую базу данных для хранения и организации данных — это основа "
 "для приложений, позволяющая эффективно управлять информацией и получать к "
 "ней доступ."
-
-#: openpanel/internal/web/templates/mysql/new.html:25
-#: openpanel/internal/web/templates/mysql/wizard.html:189
-#: openpanel/internal/web/templates/psql/new.html:23
-#: openpanel/internal/web/templates/psql/wizard.html:27
-msgid "Only letters, numbers, and underscores are allowed (1-63 characters)."
-msgstr "Разрешены только буквы, цифры и символ подчёркивания (1-63 символа)."
-
-#: openpanel/internal/web/templates/mysql/new.html:44
-#: openpanel/internal/web/templates/psql/new.html:42
-msgid "Create Database"
-msgstr "Создать базу данных"
-
-#: openpanel/internal/web/templates/mysql/password.html:8
-#: openpanel/internal/web/templates/psql/password.html:8
-msgid "Change User Password"
-msgstr "Изменить пароль пользователя"
 
 #: openpanel/internal/web/templates/mysql/password.html:9
 msgid "Change password for a MySQL database user."
@@ -13186,10 +13559,6 @@ msgstr "Состояние"
 #: openpanel/internal/web/templates/mysql/processlist.html:66
 msgid "No active processes."
 msgstr "Нет активных процессов."
-
-#: openpanel/internal/web/templates/mysql/remote_mysql.html:10
-msgid "Remote Access"
-msgstr "Удалённый доступ"
 
 #: openpanel/internal/web/templates/mysql/remote_mysql.html:11
 msgid ""
@@ -13298,11 +13667,6 @@ msgstr "Пользователи MySQL не найдены."
 msgid "Confirm?"
 msgstr "Подтвердить?"
 
-#: openpanel/internal/web/templates/mysql/remove.html:8
-#: openpanel/internal/web/templates/psql/remove.html:8
-msgid "Remove User access from Database"
-msgstr "Удалить доступ пользователя к базе данных"
-
 #: openpanel/internal/web/templates/mysql/remove.html:9
 msgid ""
 "Remove a user from an existing MySQL database to revoke their permissions "
@@ -13313,21 +13677,6 @@ msgstr ""
 "разрешения и предотвратить доступ к выполнению запросов, изменению таблиц "
 "или управлению данными в указанной базе данных."
 
-#: openpanel/internal/web/templates/mysql/remove.html:26
-#: openpanel/internal/web/templates/psql/remove.html:24
-msgid "Select a Username"
-msgstr "Выберите имя пользователя"
-
-#: openpanel/internal/web/templates/mysql/remove.html:37
-#: openpanel/internal/web/templates/psql/remove.html:33
-msgid "Select a Database"
-msgstr "Выберите базу данных"
-
-#: openpanel/internal/web/templates/mysql/remove.html:51
-#: openpanel/internal/web/templates/psql/remove.html:46
-msgid "Remove User from Database"
-msgstr "Удалить пользователя из базы данных"
-
 #: openpanel/internal/web/templates/mysql/root_password.html:8
 msgid "Change MySQL root password"
 msgstr "Изменить пароль root MySQL"
@@ -13336,40 +13685,10 @@ msgstr "Изменить пароль root MySQL"
 msgid "Change MySQL root user password and restart mysql service."
 msgstr "Изменить пароль пользователя root MySQL и перезапустить службу mysql."
 
-#: openpanel/internal/web/templates/mysql/users.html:9
-msgid "Users"
-msgstr "Пользователи"
-
-#: openpanel/internal/web/templates/mysql/users.html:10
-#: openpanel/internal/web/templates/psql/users.html:10
-msgid "Total users:"
-msgstr "Всего пользователей:"
-
 #: openpanel/internal/web/templates/mysql/users.html:17
 #: openpanel/internal/web/templates/psql/users.html:16
 msgid "Show system users"
 msgstr "Показать системных пользователей"
-
-#: openpanel/internal/web/templates/mysql/users.html:54
-#: openpanel/internal/web/templates/mysql/users.html:60
-#: openpanel/internal/web/templates/psql/users.html:43
-#: openpanel/internal/web/templates/psql/users.html:47
-msgid "Assign User"
-msgstr "Назначить пользователя"
-
-#: openpanel/internal/web/templates/mysql/users.html:56
-#: openpanel/internal/web/templates/mysql/users.html:62
-#: openpanel/internal/web/templates/psql/users.html:44
-#: openpanel/internal/web/templates/psql/users.html:48
-msgid "Remove User"
-msgstr "Удалить пользователя"
-
-#: openpanel/internal/web/templates/mysql/users.html:56
-#: openpanel/internal/web/templates/mysql/users.html:62
-#: openpanel/internal/web/templates/psql/users.html:44
-#: openpanel/internal/web/templates/psql/users.html:48
-msgid "from"
-msgstr "из"
 
 #: openpanel/internal/web/templates/mysql/users.html:149
 msgid "No users yet."
@@ -13420,25 +13739,10 @@ msgstr "Просмотреть базы данных"
 msgid "Create Another"
 msgstr "Создать ещё одну"
 
-#: openpanel/internal/web/templates/mysql/wizard.html:211
-#: openpanel/internal/web/templates/psql/wizard.html:41
-msgid "Create a user"
-msgstr "Создать пользователя"
-
-#: openpanel/internal/web/templates/mysql/wizard.html:220
-#: openpanel/internal/web/templates/psql/wizard.html:44
-msgid "Database User"
-msgstr "Пользователь базы данных"
-
 #: openpanel/internal/web/templates/mysql/wizard.html:283
 #: openpanel/internal/web/templates/psql/wizard.html:101
 msgid "Assign user to database"
 msgstr "Назначить пользователя базе данных"
-
-#: openpanel/internal/web/templates/mysql/wizard.html:339
-#: openpanel/internal/web/templates/psql/wizard.html:166
-msgid "Creating..."
-msgstr "Создание..."
 
 #: openpanel/internal/web/templates/partials/_footer.html:5
 #: openpanel/internal/web/templates/partials/_footer.html:9
@@ -13458,15 +13762,27 @@ msgstr "Расположение значков"
 msgid "Top"
 msgstr "Сверху"
 
-#: openpanel/internal/web/templates/partials/_footer.html:49
+#: openpanel/internal/web/templates/partials/_footer.html:42
+msgid "Buttons style"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_footer.html:44
+msgid "Classic"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_footer.html:45
+msgid "Modern"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_footer.html:62
 msgid "Changelog"
 msgstr "Журнал изменений"
 
-#: openpanel/internal/web/templates/partials/_footer.html:71
+#: openpanel/internal/web/templates/partials/_footer.html:84
 msgid "Community Forums"
 msgstr "Форум сообщества"
 
-#: openpanel/internal/web/templates/partials/_footer.html:84
+#: openpanel/internal/web/templates/partials/_footer.html:97
 msgid "Sign out"
 msgstr "Выйти"
 
@@ -13478,44 +13794,44 @@ msgstr "Службы"
 msgid "Caching"
 msgstr "Кэширование"
 
-#: openpanel/internal/web/templates/partials/_header.html:111
+#: openpanel/internal/web/templates/partials/_header.html:116
 msgid "Sites"
 msgstr "Сайты"
 
-#: openpanel/internal/web/templates/partials/_header.html:158
-#: openpanel/internal/web/templates/partials/_header.html:217
+#: openpanel/internal/web/templates/partials/_header.html:163
+#: openpanel/internal/web/templates/partials/_header.html:222
 msgid "Left-click to add to Favorites"
 msgstr "Щелкните левой кнопкой мыши, чтобы добавить в избранное"
 
-#: openpanel/internal/web/templates/partials/_header.html:185
-#: openpanel/internal/web/templates/partials/_header.html:261
+#: openpanel/internal/web/templates/partials/_header.html:190
+#: openpanel/internal/web/templates/partials/_header.html:266
 msgid "Right-click to remove from Favorites"
 msgstr "Нажмите правой кнопкой мыши, чтобы удалить из избранного"
 
-#: openpanel/internal/web/templates/partials/_header.html:194
+#: openpanel/internal/web/templates/partials/_header.html:199
 msgid "This page is not in your favorites! Left-click to add it."
 msgstr ""
 "Эта страница не в избранном! Щелкните левой кнопкой мыши, чтобы добавить ее."
 
-#: openpanel/internal/web/templates/partials/_header.html:210
+#: openpanel/internal/web/templates/partials/_header.html:215
 msgid "Successfully removed from favorites!"
 msgstr "Успешно удалено из избранного!"
 
-#: openpanel/internal/web/templates/partials/_header.html:222
+#: openpanel/internal/web/templates/partials/_header.html:227
 msgid "Failed to remove favorite."
 msgstr "Не удалось удалить из избранного."
 
-#: openpanel/internal/web/templates/partials/_header.html:229
+#: openpanel/internal/web/templates/partials/_header.html:234
 msgid "This page is already in your favorites! Right-click to remove it."
 msgstr ""
 "Эта страница уже в избранном! Щелкните правой кнопкой мыши, чтобы удалить "
 "ее."
 
-#: openpanel/internal/web/templates/partials/_header.html:253
+#: openpanel/internal/web/templates/partials/_header.html:258
 msgid "Successfully added to favorites!"
 msgstr "Успешно добавлено в избранное!"
 
-#: openpanel/internal/web/templates/partials/_header.html:267
+#: openpanel/internal/web/templates/partials/_header.html:272
 msgid "Failed to add favorite."
 msgstr "Не удалось добавить в избранное."
 
@@ -13547,15 +13863,23 @@ msgstr "База данных PostgreSQL"
 msgid "PostgreSQL User"
 msgstr "Пользователь PostgreSQL"
 
-#: openpanel/internal/web/templates/partials/_search.html:58
+#: openpanel/internal/web/templates/partials/_search.html:55
+msgid "MongoDB Database"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_search.html:56
+msgid "MongoDB User"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_search.html:62
 msgid "Email Account"
 msgstr "Учётная запись email"
 
-#: openpanel/internal/web/templates/partials/_search.html:61
+#: openpanel/internal/web/templates/partials/_search.html:65
 msgid "FTP Account"
 msgstr "Учётная запись FTP"
 
-#: openpanel/internal/web/templates/partials/_search.html:70
+#: openpanel/internal/web/templates/partials/_search.html:74
 msgid "Cron Job"
 msgstr "Задание cron"
 
@@ -13965,11 +14289,6 @@ msgstr "Текущая версия PHP"
 msgid "Change version"
 msgstr "Изменить версию"
 
-#: openpanel/internal/web/templates/psql/assign.html:8
-#: openpanel/internal/web/templates/psql/assign.html:46
-msgid "Assign User to Database"
-msgstr "Назначить пользователя базе данных"
-
 #: openpanel/internal/web/templates/psql/assign.html:9
 msgid ""
 "Assign a user to an existing PostgreSQL database to manage database "
@@ -14119,10 +14438,6 @@ msgstr ""
 msgid "PostgreSQL Users"
 msgstr "Пользователи PostgreSQL"
 
-#: openpanel/internal/web/templates/psql/users.html:71
-msgid "System User"
-msgstr "Системный пользователь"
-
 #: openpanel/internal/web/templates/psql/wizard.html:9
 msgid ""
 "Create a new PostgreSQL database, set up a user with a secure password, and "
@@ -14134,18 +14449,6 @@ msgstr ""
 #: openpanel/internal/web/templates/psql/wizard.html:117
 msgid "Create DB, User, and Grant Privileges"
 msgstr "Создать БД, пользователя и предоставить привилегии"
-
-#: openpanel/internal/web/templates/psql/wizard.html:136
-msgid "All fields are required"
-msgstr "Все поля обязательны для заполнения"
-
-#: openpanel/internal/web/templates/psql/wizard.html:141
-msgid "Password can only contain letters, numbers, and underscores"
-msgstr "Пароль может содержать только буквы, цифры и символ подчёркивания"
-
-#: openpanel/internal/web/templates/psql/wizard.html:145
-msgid "Password must be at least 8 characters long"
-msgstr "Пароль должен содержать не менее 8 символов"
 
 #: openpanel/internal/web/templates/system/apache_nginx_conf_editor.html:20
 msgid "Edit main webserver configuration file:"
@@ -14206,7 +14509,7 @@ msgstr "Расписание"
 #: openpanel/internal/web/templates/system/cronjobs.html:68
 #: openpanel/internal/web/templates/system/cronjobs.html:73
 #: openpanel/internal/web/templates/system/cronjobs.html:78
-#: openpanel/internal/web/templates/system/server_info.html:116
+#: openpanel/internal/web/templates/system/server_info.html:130
 msgid "Description"
 msgstr "Описание"
 
@@ -14334,20 +14637,48 @@ msgstr "показано записей"
 msgid "Name/Comment"
 msgstr "Имя/Комментарий"
 
-#: openpanel/internal/web/templates/system/cronjobs.html:383
+#: openpanel/internal/web/templates/system/cronjobs.html:415
+msgid "Running…"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:416
+msgid "Connection error"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:417
+msgid "Finished successfully"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:418
+msgid "Finished with exit code"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:432
+msgid "Run Cron Job"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:449
+msgid "Waiting for output…"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:455
+msgid "Run Again"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:477
 msgid "No cronjobs."
 msgstr "Нет заданий cron."
 
-#: openpanel/internal/web/templates/system/cronjobs.html:385
+#: openpanel/internal/web/templates/system/cronjobs.html:479
 msgid "No cronjobs yet, to create a cron click on the button above."
 msgstr ""
 "Пока нет заданий cron, чтобы создать задание cron, нажмите на кнопку выше."
 
-#: openpanel/internal/web/templates/system/cronjobs.html:422
+#: openpanel/internal/web/templates/system/cronjobs.html:557
 msgid "view mode is unknown, only code and table are allowed"
 msgstr "режим просмотра неизвестен, допускаются только code и table"
 
-#: openpanel/internal/web/templates/system/cronjobs.html:435
+#: openpanel/internal/web/templates/system/cronjobs.html:570
 msgid "Add new cron job"
 msgstr "Добавить новое задание cron"
 
@@ -14625,87 +14956,95 @@ msgstr "Порт локального MySQL"
 msgid "Remote PostgreSQL port"
 msgstr "Порт удалённого PostgreSQL"
 
-#: openpanel/internal/web/templates/system/server_info.html:75
+#: openpanel/internal/web/templates/system/server_info.html:73
+msgid "Local PostgreSQL port"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/server_info.html:80
+msgid "Local MongoDB port"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/server_info.html:89
 msgid "OS"
 msgstr "ОС"
 
-#: openpanel/internal/web/templates/system/server_info.html:81
+#: openpanel/internal/web/templates/system/server_info.html:95
 msgid "Release"
 msgstr "Релиз"
 
-#: openpanel/internal/web/templates/system/server_info.html:93
+#: openpanel/internal/web/templates/system/server_info.html:107
 msgid "Processor"
 msgstr "Процессор"
 
-#: openpanel/internal/web/templates/system/server_info.html:106
+#: openpanel/internal/web/templates/system/server_info.html:120
 msgid "Hosting Plan"
 msgstr "Тарифный план"
 
-#: openpanel/internal/web/templates/system/server_info.html:110
+#: openpanel/internal/web/templates/system/server_info.html:124
 msgid "Plan Name"
 msgstr "Название тарифа"
 
-#: openpanel/internal/web/templates/system/server_info.html:122
+#: openpanel/internal/web/templates/system/server_info.html:136
 msgid "Context"
 msgstr "Контекст"
 
-#: openpanel/internal/web/templates/system/server_info.html:128
+#: openpanel/internal/web/templates/system/server_info.html:142
 msgid "Bandwidth Limit"
 msgstr "Ограничение пропускной способности"
 
-#: openpanel/internal/web/templates/system/server_info.html:134
+#: openpanel/internal/web/templates/system/server_info.html:148
 msgid "CPU Limit"
 msgstr "Ограничение CPU"
 
-#: openpanel/internal/web/templates/system/server_info.html:140
+#: openpanel/internal/web/templates/system/server_info.html:154
 msgid "Memory Limit"
 msgstr "Ограничение памяти"
 
-#: openpanel/internal/web/templates/system/server_info.html:146
+#: openpanel/internal/web/templates/system/server_info.html:160
 msgid "Database Limit"
 msgstr "Ограничение баз данных"
 
-#: openpanel/internal/web/templates/system/server_info.html:152
+#: openpanel/internal/web/templates/system/server_info.html:166
 msgid "Websites Limit"
 msgstr "Ограничение веб-сайтов"
 
-#: openpanel/internal/web/templates/system/server_info.html:158
+#: openpanel/internal/web/templates/system/server_info.html:172
 msgid "Disk Limit"
 msgstr "Ограничение диска"
 
-#: openpanel/internal/web/templates/system/server_info.html:164
+#: openpanel/internal/web/templates/system/server_info.html:178
 msgid "Domains Limit"
 msgstr "Ограничение доменов"
 
-#: openpanel/internal/web/templates/system/server_info.html:170
+#: openpanel/internal/web/templates/system/server_info.html:184
 msgid "Email Limit"
 msgstr "Ограничение электронной почты"
 
-#: openpanel/internal/web/templates/system/server_info.html:176
+#: openpanel/internal/web/templates/system/server_info.html:190
 msgid "FTP Limit"
 msgstr "Ограничение FTP"
 
-#: openpanel/internal/web/templates/system/server_info.html:182
+#: openpanel/internal/web/templates/system/server_info.html:196
 msgid "Inodes Limit"
 msgstr "Ограничение индексных дескрипторов"
 
-#: openpanel/internal/web/templates/system/server_info.html:188
+#: openpanel/internal/web/templates/system/server_info.html:202
 msgid "MySQL Server"
 msgstr "Сервер MySQL"
 
-#: openpanel/internal/web/templates/system/server_info.html:194
+#: openpanel/internal/web/templates/system/server_info.html:208
 msgid "Web Server"
 msgstr "Веб-сервер"
 
-#: openpanel/internal/web/templates/system/server_info.html:199
+#: openpanel/internal/web/templates/system/server_info.html:213
 msgid "Panel Information"
 msgstr "Информация о панели"
 
-#: openpanel/internal/web/templates/system/server_info.html:203
+#: openpanel/internal/web/templates/system/server_info.html:217
 msgid "Panel Version"
 msgstr "Версия панели"
 
-#: openpanel/internal/web/templates/system/server_info.html:213
+#: openpanel/internal/web/templates/system/server_info.html:227
 msgid "Enabled Features"
 msgstr "Включённые функции"
 
@@ -15006,15 +15345,15 @@ msgstr "Забыли пароль?"
 msgid "Two-Factor Authentication Code"
 msgstr "Код двухфакторной аутентификации"
 
-#: openpanel/internal/web/templates/user/login.html:37
+#: openpanel/internal/web/templates/user/login.html:50
 msgid "Sign In"
 msgstr "Войти"
 
-#: openpanel/internal/web/templates/user/login.html:41
+#: openpanel/internal/web/templates/user/login.html:54
 msgid "Sign in with a passkey"
 msgstr "Войти с помощью ключа доступа"
 
-#: openpanel/internal/web/templates/user/login.html:46
+#: openpanel/internal/web/templates/user/login.html:59
 msgid ""
 "Passkeys require this panel to be accessed over HTTPS with a domain name."
 msgstr ""
@@ -15315,14 +15654,6 @@ msgstr "Данные об использовании ресурсов пока �
 #: openpanel/internal/web/templates/user/twofa_settings.html:16
 msgid "2FA is currently"
 msgstr "2FA в настоящее время"
-
-#: openpanel/internal/web/templates/user/twofa_settings.html:18
-msgid "enabled"
-msgstr "включена"
-
-#: openpanel/internal/web/templates/user/twofa_settings.html:20
-msgid "disabled"
-msgstr "отключена"
 
 #: openpanel/internal/web/templates/user/twofa_settings.html:22
 msgid "for your account."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-14 10:59+0200\n"
+"POT-Creation-Date: 2026-09-21 11:00+0200\n"
 "PO-Revision-Date: 2025-11-15 12:00+0300\n"
 "Last-Translator: Anupam Bista <anupambista3@gmail.com>\n"
 "Language-Team: Nepali <anupambista3@gmail.com>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 
 #: openpanel/internal/modules/account/api_login.go:56
-#: openpanel/internal/modules/account/login.go:162
+#: openpanel/internal/modules/account/login.go:171
 msgid "Username and password are required."
 msgstr "प्रयोगकर्तानाम र पासवर्ड आवश्यक छन्।"
 
@@ -89,29 +89,33 @@ msgstr "तपाईंको पासवर्ड रिसेट गरिए
 msgid "Reset Password"
 msgstr "पासवर्ड रिसेट गर्नुहोस्"
 
-#: openpanel/internal/modules/account/login.go:110
+#: openpanel/internal/modules/account/login.go:116
 #: openpanel/internal/web/templates/manager/dokuwiki_app.html:283
 msgid "Login"
 msgstr "लगिन"
 
-#: openpanel/internal/modules/account/login.go:201
-#: openpanel/internal/modules/account/login.go:207
+#: openpanel/internal/modules/account/login.go:179
+msgid "Captcha verification failed. Please try again."
+msgstr ""
+
+#: openpanel/internal/modules/account/login.go:219
+#: openpanel/internal/modules/account/login.go:225
 msgid "Invalid 2FA code. Please try again."
 msgstr "अमान्य 2FA कोड। कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: openpanel/internal/modules/account/login.go:341
+#: openpanel/internal/modules/account/login.go:359
 msgid "Autologin failed: Invalid username."
 msgstr "स्वतः लगइन असफल भयो: अमान्य प्रयोगकर्ता नाम।"
 
-#: openpanel/internal/modules/account/login.go:349
+#: openpanel/internal/modules/account/login.go:367
 msgid "Error reading token from user files."
 msgstr "प्रयोगकर्ता फाइलहरूबाट टोकन पढ्दा त्रुटि भयो।"
 
-#: openpanel/internal/modules/account/login.go:356
+#: openpanel/internal/modules/account/login.go:374
 msgid "Autologin failed: Invalid or expired token."
 msgstr "स्वतः लगइन असफल भयो: अमान्य वा म्याद सकिएको टोकन।"
 
-#: openpanel/internal/modules/account/login.go:364
+#: openpanel/internal/modules/account/login.go:382
 msgid "Autologin failed: User does not exist."
 msgstr "स्वतः लगइन असफल भयो: प्रयोगकर्ता अवस्थित छैन।"
 
@@ -282,6 +286,8 @@ msgid "The home directory"
 msgstr "होम डाइरेक्टरी"
 
 #: openpanel/internal/modules/backupwizard/render.go:41
+#: openpanel/internal/web/sidebar.go:118 openpanel/internal/web/sidebar.go:141
+#: openpanel/internal/web/sidebar.go:164
 #: openpanel/internal/web/templates/dashboard/usage.html:78
 #: openpanel/internal/web/templates/files/backup_restore.html:173
 #: openpanel/internal/web/templates/mysql/databases.html:9
@@ -289,7 +295,7 @@ msgid "Databases"
 msgstr "डाटाबेसहरू"
 
 #: openpanel/internal/modules/backupwizard/render.go:41
-#: openpanel/internal/modules/dashboard/sections.go:36
+#: openpanel/internal/modules/dashboard/sections.go:41
 #: openpanel/internal/web/templates/cache/service.html:145
 #: openpanel/internal/web/templates/dashboard/usage.html:55
 #: openpanel/internal/web/templates/domains/domains.html:14
@@ -299,7 +305,7 @@ msgid "Domains"
 msgstr "डोमेनहरू"
 
 #: openpanel/internal/modules/backupwizard/render.go:42
-#: openpanel/internal/modules/dashboard/sections.go:71
+#: openpanel/internal/modules/dashboard/sections.go:82
 #: openpanel/internal/web/templates/dashboard/usage.html:32
 #: openpanel/internal/web/templates/domains/domains.html:77
 #: openpanel/internal/web/templates/domains/domains.html:120
@@ -358,15 +364,25 @@ msgstr ""
 "Varnish एउटा रिभर्स क्यासिङ प्रोक्सी हो, जसले सामग्री-धनी गतिशील वेबसाइटहरू "
 "र API हरूको HTTP गति बढाउन प्रयोग हुन्छ।"
 
-#: openpanel/internal/modules/dashboard/dashboard.go:137
+#: openpanel/internal/modules/dashboard/dashboard.go:145
 msgid "Dashboard"
 msgstr "ड्यासबोर्ड"
+
+#: openpanel/internal/modules/dashboard/page.go:71
+#: openpanel/internal/web/templates/user/twofa_settings.html:20
+msgid "disabled"
+msgstr "निष्क्रिय छ"
+
+#: openpanel/internal/modules/dashboard/page.go:73
+#: openpanel/internal/web/templates/user/twofa_settings.html:18
+msgid "enabled"
+msgstr "सक्रिय छ"
 
 #: openpanel/internal/modules/dashboard/page.go:75
 msgid "2FA is <b>{status}</b> for your account."
 msgstr "तपाईंको खातामा 2FA <b>{status}</b> छ।"
 
-#: openpanel/internal/modules/dashboard/sections.go:22
+#: openpanel/internal/modules/dashboard/sections.go:27
 #: openpanel/internal/web/templates/domains/ssl.html:226
 #: openpanel/internal/web/templates/files/filemanager.html:147
 #: openpanel/internal/web/templates/files/filemanager.html:405
@@ -393,18 +409,23 @@ msgstr "तपाईंको खातामा 2FA <b>{status}</b> छ।"
 msgid "Files"
 msgstr "फाइलहरू"
 
-#: openpanel/internal/modules/dashboard/sections.go:49
+#: openpanel/internal/modules/dashboard/sections.go:54
 #: openpanel/internal/web/templates/dashboard/onboarding.html:497
 #: openpanel/internal/web/templates/partials/_header.html:76
 msgid "MySQL"
 msgstr "MySQL"
 
-#: openpanel/internal/modules/dashboard/sections.go:61
+#: openpanel/internal/modules/dashboard/sections.go:66
 #: openpanel/internal/web/templates/partials/_header.html:81
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
-#: openpanel/internal/modules/dashboard/sections.go:76
+#: openpanel/internal/modules/dashboard/sections.go:75
+#: openpanel/internal/web/templates/partials/_header.html:86
+msgid "MongoDB"
+msgstr ""
+
+#: openpanel/internal/modules/dashboard/sections.go:87
 #: openpanel/internal/web/templates/manager/drupal_app.html:1204
 #: openpanel/internal/web/templates/manager/flarum_app.html:1067
 #: openpanel/internal/web/templates/manager/joomla_app.html:1179
@@ -419,7 +440,7 @@ msgstr "PostgreSQL"
 msgid "Cache"
 msgstr "क्यास"
 
-#: openpanel/internal/modules/dashboard/sections.go:84
+#: openpanel/internal/modules/dashboard/sections.go:95
 #: openpanel/internal/web/templates/dashboard/onboarding.html:202
 #: openpanel/internal/web/templates/emails/accounts.html:9
 #: openpanel/internal/web/templates/files/backup_settings.html:84
@@ -427,27 +448,27 @@ msgstr "क्यास"
 msgid "Emails"
 msgstr "इमेलहरू"
 
-#: openpanel/internal/modules/dashboard/sections.go:94
+#: openpanel/internal/modules/dashboard/sections.go:105
 #: openpanel/internal/web/templates/dashboard/onboarding.html:589
 #: openpanel/internal/web/templates/manager/autoinstaller.html:763
-#: openpanel/internal/web/templates/partials/_header.html:86
+#: openpanel/internal/web/templates/partials/_header.html:91
 msgid "PHP"
 msgstr "PHP"
 
-#: openpanel/internal/modules/dashboard/sections.go:101
+#: openpanel/internal/modules/dashboard/sections.go:112
 #: openpanel/internal/web/templates/docker/containers.html:13
 #: openpanel/internal/web/templates/docker/containers.html:268
-#: openpanel/internal/web/templates/partials/_header.html:91
+#: openpanel/internal/web/templates/partials/_header.html:96
 msgid "Containers"
 msgstr "कन्टेनरहरू"
 
-#: openpanel/internal/modules/dashboard/sections.go:109
-#: openpanel/internal/web/templates/partials/_header.html:96
+#: openpanel/internal/modules/dashboard/sections.go:120
+#: openpanel/internal/web/templates/partials/_header.html:101
 msgid "Advanced"
 msgstr "उन्नत"
 
-#: openpanel/internal/modules/dashboard/sections.go:122
-#: openpanel/internal/web/templates/partials/_header.html:101
+#: openpanel/internal/modules/dashboard/sections.go:133
+#: openpanel/internal/web/templates/partials/_header.html:106
 msgid "Account"
 msgstr "खाता"
 
@@ -476,6 +497,120 @@ msgstr "सक्रिय गर्न क्लिक गर्नुहोस
 #: openpanel/internal/modules/webserverconf/webserverconf.go:41
 msgid "Web Server Configuration Editor"
 msgstr "वेब सर्वर कन्फिगरेसन सम्पादक"
+
+#: openpanel/internal/web/sidebar.go:79
+#: openpanel/internal/web/templates/manager/sites.html:8
+msgid "Site Manager"
+msgstr "साइट म्यानेजर"
+
+#: openpanel/internal/web/sidebar.go:91 openpanel/internal/web/sidebar.go:97
+#: openpanel/internal/web/templates/files/disk_usage.html:90
+#: openpanel/internal/web/templates/files/filemanager.html:59
+#: openpanel/internal/web/templates/files/inodes.html:88
+msgid "File Manager"
+msgstr "फाइल म्यानेजर"
+
+#: openpanel/internal/web/sidebar.go:92 openpanel/internal/web/sidebar.go:98
+msgid "Upload from device"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:93 openpanel/internal/web/sidebar.go:99
+#: openpanel/internal/web/templates/files/upload_file.html:11
+msgid "Download from URL"
+msgstr "URL बाट डाउनलोड गर्नुहोस्"
+
+#: openpanel/internal/web/sidebar.go:119 openpanel/internal/web/sidebar.go:142
+#: openpanel/internal/web/sidebar.go:165
+#: openpanel/internal/web/templates/mysql/users.html:9
+msgid "Users"
+msgstr "प्रयोगकर्ताहरू"
+
+#: openpanel/internal/web/sidebar.go:123 openpanel/internal/web/sidebar.go:145
+#: openpanel/internal/web/sidebar.go:168
+#: openpanel/internal/web/templates/mongodb/databases.html:27
+#: openpanel/internal/web/templates/mongodb/databases.html:30
+#: openpanel/internal/web/templates/mongodb/wizard.html:8
+#: openpanel/internal/web/templates/mysql/databases.html:196
+#: openpanel/internal/web/templates/mysql/databases.html:199
+#: openpanel/internal/web/templates/mysql/wizard.html:8
+#: openpanel/internal/web/templates/psql/databases.html:91
+#: openpanel/internal/web/templates/psql/databases.html:94
+#: openpanel/internal/web/templates/psql/wizard.html:8
+msgid "Database Wizard"
+msgstr "डेटाबेस विजार्ड"
+
+#: openpanel/internal/web/sidebar.go:124 openpanel/internal/web/sidebar.go:146
+#: openpanel/internal/web/sidebar.go:169
+#: openpanel/internal/web/templates/mongodb/new.html:42
+#: openpanel/internal/web/templates/mysql/new.html:44
+#: openpanel/internal/web/templates/psql/new.html:42
+msgid "Create Database"
+msgstr "डाटाबेस सिर्जना गर्नुहोस्"
+
+#: openpanel/internal/web/sidebar.go:125 openpanel/internal/web/sidebar.go:147
+#: openpanel/internal/web/sidebar.go:170
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:83
+#: openpanel/internal/web/templates/mongodb/users.html:26
+#: openpanel/internal/web/templates/mongodb/users.html:30
+#: openpanel/internal/web/templates/mysql/mysql_user.html:112
+#: openpanel/internal/web/templates/mysql/users.html:52
+#: openpanel/internal/web/templates/mysql/users.html:58
+#: openpanel/internal/web/templates/psql/psql_user.html:83
+#: openpanel/internal/web/templates/psql/users.html:42
+#: openpanel/internal/web/templates/psql/users.html:46
+msgid "Create User"
+msgstr "प्रयोगकर्ता सिर्जना गर्नुहोस्"
+
+#: openpanel/internal/web/sidebar.go:126 openpanel/internal/web/sidebar.go:148
+#: openpanel/internal/web/sidebar.go:171
+msgid "Assign User to DB"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:127 openpanel/internal/web/sidebar.go:149
+#: openpanel/internal/web/sidebar.go:172
+msgid "Remove User from DB"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:130 openpanel/internal/web/sidebar.go:153
+#: openpanel/internal/web/templates/mysql/remote_mysql.html:10
+msgid "Remote Access"
+msgstr "रिमोट पहुँच"
+
+#: openpanel/internal/web/sidebar.go:154
+msgid "Show Processes"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:184 openpanel/internal/web/sidebar.go:209
+msgid "Domain Names"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:185 openpanel/internal/web/sidebar.go:210
+msgid "Add New Domain"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:194 openpanel/internal/web/sidebar.go:199
+msgid "Suspend a Domain"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:195 openpanel/internal/web/sidebar.go:200
+msgid "Unsuspend a Domain"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:222 openpanel/internal/web/sidebar.go:227
+msgid "Email Accounts"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:223 openpanel/internal/web/sidebar.go:228
+msgid "Create New Account"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:258
+msgid "Select PHP version"
+msgstr ""
+
+#: openpanel/internal/web/sidebar.go:259
+msgid "Default version"
+msgstr ""
 
 #: openpanel/internal/web/templates/base.html:58
 #: openpanel/internal/web/templates/manager/grapejs_editor.html:110
@@ -508,10 +643,11 @@ msgid "Warning"
 msgstr "चेतावनी"
 
 #: openpanel/internal/web/templates/base.html:64
-#: openpanel/internal/web/templates/base.html:513
-#: openpanel/internal/web/templates/base.html:554
+#: openpanel/internal/web/templates/base.html:540
+#: openpanel/internal/web/templates/base.html:594
 #: openpanel/internal/web/templates/files/backup_restore.html:494
 #: openpanel/internal/web/templates/mysql/databases.html:627
+#: openpanel/internal/web/templates/system/cronjobs.html:454
 msgid "Close"
 msgstr "बन्द गर्नुहोस्"
 
@@ -679,32 +815,71 @@ msgstr "मान बढीमा {max} हुनुपर्छ।"
 msgid "Looks good."
 msgstr "राम्रो देखियो।"
 
-#: openpanel/internal/web/templates/base.html:381
+#: openpanel/internal/web/templates/base.html:399
 #: openpanel/internal/web/templates/user/favorites.html:10
 msgid "Favorites"
 msgstr "मनपर्ने"
 
-#: openpanel/internal/web/templates/base.html:511
+#: openpanel/internal/web/templates/base.html:484
+#: openpanel/internal/web/templates/dashboard/dashboard.html:46
+#: openpanel/internal/web/templates/dashboard/usage.html:13
+#: openpanel/internal/web/templates/manager/autoinstaller.html:22
+#: openpanel/internal/web/templates/manager/autoinstaller.html:54
+#: openpanel/internal/web/templates/manager/autoinstaller.html:86
+#: openpanel/internal/web/templates/manager/autoinstaller.html:118
+#: openpanel/internal/web/templates/manager/autoinstaller.html:158
+#: openpanel/internal/web/templates/manager/autoinstaller.html:190
+#: openpanel/internal/web/templates/manager/autoinstaller.html:228
+#: openpanel/internal/web/templates/manager/autoinstaller.html:260
+#: openpanel/internal/web/templates/manager/autoinstaller.html:313
+#: openpanel/internal/web/templates/manager/autoinstaller.html:345
+#: openpanel/internal/web/templates/manager/autoinstaller.html:377
+#: openpanel/internal/web/templates/manager/autoinstaller.html:415
+#: openpanel/internal/web/templates/manager/autoinstaller.html:453
+#: openpanel/internal/web/templates/manager/autoinstaller.html:485
+#: openpanel/internal/web/templates/manager/autoinstaller.html:517
+#: openpanel/internal/web/templates/manager/autoinstaller.html:555
+#: openpanel/internal/web/templates/manager/autoinstaller.html:587
+#: openpanel/internal/web/templates/manager/autoinstaller.html:625
+#: openpanel/internal/web/templates/manager/autoinstaller.html:657
+#: openpanel/internal/web/templates/manager/autoinstaller.html:689
+#: openpanel/internal/web/templates/manager/autoinstaller.html:721
+#: openpanel/internal/web/templates/manager/autoinstaller.html:753
+#: openpanel/internal/web/templates/manager/autoinstaller.html:785
+msgid "Upgrade to"
+msgstr "यसमा अपग्रेड गर्नुहोस्"
+
+#: openpanel/internal/web/templates/base.html:484
+#: openpanel/internal/web/templates/dashboard/dashboard.html:46
+msgid "to use this feature."
+msgstr ""
+
+#: openpanel/internal/web/templates/base.html:484
+#: openpanel/internal/web/templates/dashboard/dashboard.html:46
+msgid "Not included in your plan. Contact your administrator to enable it."
+msgstr ""
+
+#: openpanel/internal/web/templates/base.html:538
 msgid "Notification"
 msgstr "सूचना"
 
-#: openpanel/internal/web/templates/base.html:514
+#: openpanel/internal/web/templates/base.html:541
 msgid "Dismiss"
 msgstr "हटाउनुहोस्"
 
-#: openpanel/internal/web/templates/base.html:553
+#: openpanel/internal/web/templates/base.html:593
 msgid "Keyboard shortcuts"
 msgstr "किबोर्ड सर्टकटहरू"
 
-#: openpanel/internal/web/templates/base.html:566
+#: openpanel/internal/web/templates/base.html:606
 msgid "Toggle sidebar"
 msgstr "साइडबार टगल गर्नुहोस्"
 
-#: openpanel/internal/web/templates/base.html:567
+#: openpanel/internal/web/templates/base.html:607
 msgid "Show this dialog"
 msgstr "यो डायलग देखाउनुहोस्"
 
-#: openpanel/internal/web/templates/base.html:630
+#: openpanel/internal/web/templates/base.html:670
 msgid "Found a bug? Let us know"
 msgstr "बग फेला पार्नुभयो? हामीलाई जानकारी दिनुहोस्"
 
@@ -780,7 +955,7 @@ msgstr "डोमेन नाम"
 #: openpanel/internal/web/templates/cache/service.html:205
 #: openpanel/internal/web/templates/docker/containers.html:266
 #: openpanel/internal/web/templates/manager/python_node_apps.html:384
-#: openpanel/internal/web/templates/partials/_search.html:64
+#: openpanel/internal/web/templates/partials/_search.html:68
 #: openpanel/internal/web/templates/system/cronjobs.html:67
 #: openpanel/internal/web/templates/system/cronjobs.html:282
 #: openpanel/internal/web/templates/system/process_manager.html:56
@@ -829,7 +1004,7 @@ msgid "View container log"
 msgstr "कन्टेनर लग हेर्नुहोस्"
 
 #: openpanel/internal/web/templates/cache/service.html:311
-#: openpanel/internal/web/templates/partials/_search.html:67
+#: openpanel/internal/web/templates/partials/_search.html:71
 #: openpanel/internal/web/templates/system/services.html:73
 #: openpanel/internal/web/templates/system/services.html:211
 msgid "Service"
@@ -873,25 +1048,25 @@ msgstr "रिफ्रेस गर्न क्लिक गर्नुहो
 #: openpanel/internal/web/templates/system/server_info.html:30
 #: openpanel/internal/web/templates/system/server_info.html:38
 #: openpanel/internal/web/templates/system/server_info.html:44
-#: openpanel/internal/web/templates/system/server_info.html:77
-#: openpanel/internal/web/templates/system/server_info.html:83
-#: openpanel/internal/web/templates/system/server_info.html:89
-#: openpanel/internal/web/templates/system/server_info.html:95
-#: openpanel/internal/web/templates/system/server_info.html:102
-#: openpanel/internal/web/templates/system/server_info.html:118
-#: openpanel/internal/web/templates/system/server_info.html:124
-#: openpanel/internal/web/templates/system/server_info.html:130
-#: openpanel/internal/web/templates/system/server_info.html:136
-#: openpanel/internal/web/templates/system/server_info.html:142
-#: openpanel/internal/web/templates/system/server_info.html:148
-#: openpanel/internal/web/templates/system/server_info.html:154
-#: openpanel/internal/web/templates/system/server_info.html:160
-#: openpanel/internal/web/templates/system/server_info.html:166
-#: openpanel/internal/web/templates/system/server_info.html:172
-#: openpanel/internal/web/templates/system/server_info.html:178
-#: openpanel/internal/web/templates/system/server_info.html:184
-#: openpanel/internal/web/templates/system/server_info.html:190
-#: openpanel/internal/web/templates/system/server_info.html:196
+#: openpanel/internal/web/templates/system/server_info.html:91
+#: openpanel/internal/web/templates/system/server_info.html:97
+#: openpanel/internal/web/templates/system/server_info.html:103
+#: openpanel/internal/web/templates/system/server_info.html:109
+#: openpanel/internal/web/templates/system/server_info.html:116
+#: openpanel/internal/web/templates/system/server_info.html:132
+#: openpanel/internal/web/templates/system/server_info.html:138
+#: openpanel/internal/web/templates/system/server_info.html:144
+#: openpanel/internal/web/templates/system/server_info.html:150
+#: openpanel/internal/web/templates/system/server_info.html:156
+#: openpanel/internal/web/templates/system/server_info.html:162
+#: openpanel/internal/web/templates/system/server_info.html:168
+#: openpanel/internal/web/templates/system/server_info.html:174
+#: openpanel/internal/web/templates/system/server_info.html:180
+#: openpanel/internal/web/templates/system/server_info.html:186
+#: openpanel/internal/web/templates/system/server_info.html:192
+#: openpanel/internal/web/templates/system/server_info.html:198
+#: openpanel/internal/web/templates/system/server_info.html:204
+#: openpanel/internal/web/templates/system/server_info.html:210
 #: openpanel/internal/web/templates/system/services.html:230
 msgid "Loading..."
 msgstr "लोड हुँदै..."
@@ -981,6 +1156,10 @@ msgstr "सूचना"
 #: openpanel/internal/web/templates/manager/opencart_install.html:130
 #: openpanel/internal/web/templates/manager/phpbb_install.html:146
 #: openpanel/internal/web/templates/manager/wp/install.html:111
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:23
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:25
+#: openpanel/internal/web/templates/mongodb/password.html:21
+#: openpanel/internal/web/templates/mongodb/users.html:42
 #: openpanel/internal/web/templates/mysql/mysql_user.html:23
 #: openpanel/internal/web/templates/mysql/mysql_user.html:25
 #: openpanel/internal/web/templates/mysql/password.html:21
@@ -1017,7 +1196,7 @@ msgid "/"
 msgstr "/"
 
 #: openpanel/internal/web/templates/dashboard/information.html:80
-#: openpanel/internal/web/templates/system/server_info.html:99
+#: openpanel/internal/web/templates/system/server_info.html:113
 msgid "Nameservers"
 msgstr "नेमसर्भरहरू"
 
@@ -1242,7 +1421,7 @@ msgid "You're all set! What would you like to do next?"
 msgstr "सबै तयार भयो! अब तपाईं के गर्न चाहनुहुन्छ?"
 
 #: openpanel/internal/web/templates/dashboard/onboarding.html:376
-#: openpanel/internal/web/templates/partials/_footer.html:79
+#: openpanel/internal/web/templates/partials/_footer.html:92
 msgid "Take the tour"
 msgstr "टुर लिनुहोस्"
 
@@ -1272,6 +1451,7 @@ msgid "Upload your website files using the file manager."
 msgstr "फाइल म्यानेजर प्रयोग गरेर आफ्नो वेबसाइटका फाइलहरू अपलोड गर्नुहोस्।"
 
 #: openpanel/internal/web/templates/dashboard/onboarding.html:397
+#: openpanel/internal/web/templates/mongodb/wizard.html:24
 #: openpanel/internal/web/templates/mysql/wizard.html:183
 #: openpanel/internal/web/templates/psql/wizard.html:24
 msgid "Create a database"
@@ -1471,6 +1651,10 @@ msgstr "वेबसर्भर"
 #: openpanel/internal/web/templates/manager/prestashop_app.html:768
 #: openpanel/internal/web/templates/manager/wp/single.html:435
 #: openpanel/internal/web/templates/manager/wp/single.html:1587
+#: openpanel/internal/web/templates/mongodb/users.html:27
+#: openpanel/internal/web/templates/mongodb/users.html:28
+#: openpanel/internal/web/templates/mongodb/users.html:31
+#: openpanel/internal/web/templates/mongodb/users.html:32
 #: openpanel/internal/web/templates/mysql/users.html:54
 #: openpanel/internal/web/templates/mysql/users.html:56
 #: openpanel/internal/web/templates/mysql/users.html:60
@@ -1507,7 +1691,7 @@ msgstr "Varnish"
 #: openpanel/internal/web/templates/manager/tinyphotogallery_app.html:47
 #: openpanel/internal/web/templates/manager/websitebuilder.html:55
 #: openpanel/internal/web/templates/manager/wp/single.html:214
-#: openpanel/internal/web/templates/partials/_header.html:106
+#: openpanel/internal/web/templates/partials/_header.html:111
 msgid "Backups"
 msgstr "ब्याकअपहरू"
 
@@ -1664,33 +1848,6 @@ msgstr "प्रयोग"
 #: openpanel/internal/web/templates/dashboard/usage.html:10
 msgid "You've reached one or more limits of your current plan."
 msgstr "तपाईंले आफ्नो हालको योजनाको एक वा बढी सीमा पुर्‍याउनुभएको छ।"
-
-#: openpanel/internal/web/templates/dashboard/usage.html:13
-#: openpanel/internal/web/templates/manager/autoinstaller.html:22
-#: openpanel/internal/web/templates/manager/autoinstaller.html:54
-#: openpanel/internal/web/templates/manager/autoinstaller.html:86
-#: openpanel/internal/web/templates/manager/autoinstaller.html:118
-#: openpanel/internal/web/templates/manager/autoinstaller.html:158
-#: openpanel/internal/web/templates/manager/autoinstaller.html:190
-#: openpanel/internal/web/templates/manager/autoinstaller.html:228
-#: openpanel/internal/web/templates/manager/autoinstaller.html:260
-#: openpanel/internal/web/templates/manager/autoinstaller.html:313
-#: openpanel/internal/web/templates/manager/autoinstaller.html:345
-#: openpanel/internal/web/templates/manager/autoinstaller.html:377
-#: openpanel/internal/web/templates/manager/autoinstaller.html:415
-#: openpanel/internal/web/templates/manager/autoinstaller.html:453
-#: openpanel/internal/web/templates/manager/autoinstaller.html:485
-#: openpanel/internal/web/templates/manager/autoinstaller.html:517
-#: openpanel/internal/web/templates/manager/autoinstaller.html:555
-#: openpanel/internal/web/templates/manager/autoinstaller.html:587
-#: openpanel/internal/web/templates/manager/autoinstaller.html:625
-#: openpanel/internal/web/templates/manager/autoinstaller.html:657
-#: openpanel/internal/web/templates/manager/autoinstaller.html:689
-#: openpanel/internal/web/templates/manager/autoinstaller.html:721
-#: openpanel/internal/web/templates/manager/autoinstaller.html:753
-#: openpanel/internal/web/templates/manager/autoinstaller.html:785
-msgid "Upgrade to"
-msgstr "यसमा अपग्रेड गर्नुहोस्"
 
 #: openpanel/internal/web/templates/dashboard/usage.html:13
 msgid "for higher limits."
@@ -1904,7 +2061,7 @@ msgid "Add a new docker service"
 msgstr "नयाँ डोकर सेवा थप्नुहोस्"
 
 #: openpanel/internal/web/templates/docker/container_form.html:67
-#: openpanel/internal/web/templates/files/filemanager_partials.html:886
+#: openpanel/internal/web/templates/files/filemanager_partials.html:889
 #: openpanel/internal/web/templates/system/services.html:77
 msgid "Name:"
 msgstr "नाम:"
@@ -2038,6 +2195,8 @@ msgstr "कुल मेमोरी:"
 #: openpanel/internal/web/templates/files/ftp.html:24
 #: openpanel/internal/web/templates/manager/sites.html:124
 #: openpanel/internal/web/templates/manager/wp/list.html:37
+#: openpanel/internal/web/templates/mongodb/databases.html:16
+#: openpanel/internal/web/templates/mongodb/users.html:16
 #: openpanel/internal/web/templates/mysql/configuration.html:14
 #: openpanel/internal/web/templates/mysql/databases.html:185
 #: openpanel/internal/web/templates/mysql/processlist.html:16
@@ -2075,7 +2234,7 @@ msgstr "स्तम्भहरू देखाउनुहोस्"
 #: openpanel/internal/web/templates/domains/dns.html:105
 #: openpanel/internal/web/templates/domains/dns.html:119
 #: openpanel/internal/web/templates/files/filemanager.html:117
-#: openpanel/internal/web/templates/files/filemanager_partials.html:374
+#: openpanel/internal/web/templates/files/filemanager_partials.html:377
 #: openpanel/internal/web/templates/files/trash.html:70
 #: openpanel/internal/web/templates/files/trash_partials.html:17
 #: openpanel/internal/web/templates/manager/app_install.html:118
@@ -2115,6 +2274,8 @@ msgstr "PIDs"
 #: openpanel/internal/web/templates/manager/python_node_apps.html:198
 #: openpanel/internal/web/templates/manager/sites.html:212
 #: openpanel/internal/web/templates/manager/wp/list.html:114
+#: openpanel/internal/web/templates/mongodb/databases.html:42
+#: openpanel/internal/web/templates/mongodb/users.html:44
 #: openpanel/internal/web/templates/mysql/databases.html:212
 #: openpanel/internal/web/templates/mysql/users.html:77
 #: openpanel/internal/web/templates/psql/databases.html:107
@@ -2216,6 +2377,7 @@ msgstr ""
 "कमाण्डहरू कार्यान्वयन गर्छ।"
 
 #: openpanel/internal/web/templates/docker/terminal.html:35
+#: openpanel/internal/web/templates/mongodb/databases.html:100
 #: openpanel/internal/web/templates/mysql/databases.html:601
 #: openpanel/internal/web/templates/mysql/users.html:176
 #: openpanel/internal/web/templates/psql/databases.html:166
@@ -2240,6 +2402,7 @@ msgstr "पुनः जडान गर्नुहोस्"
 
 #: openpanel/internal/web/templates/docker/terminal.html:78
 #: openpanel/internal/web/templates/docker/terminal.html:147
+#: openpanel/internal/web/templates/system/cronjobs.html:414
 msgid "Connecting…"
 msgstr "जडान हुँदैछ…"
 
@@ -2503,7 +2666,7 @@ msgstr "TTL"
 #: openpanel/internal/web/templates/domains/domains.html:109
 #: openpanel/internal/web/templates/domains/dynamic_dns.html:166
 #: openpanel/internal/web/templates/files/filemanager.html:125
-#: openpanel/internal/web/templates/files/filemanager_partials.html:396
+#: openpanel/internal/web/templates/files/filemanager_partials.html:399
 #: openpanel/internal/web/templates/files/trash.html:80
 #: openpanel/internal/web/templates/files/trash_partials.html:49
 #: openpanel/internal/web/templates/manager/sites.html:207
@@ -2580,12 +2743,15 @@ msgid "Protocol"
 msgstr "प्रोटोकल"
 
 #: openpanel/internal/web/templates/domains/dns.html:197
-#: openpanel/internal/web/templates/files/filemanager_partials.html:946
+#: openpanel/internal/web/templates/files/filemanager_partials.html:953
 #: openpanel/internal/web/templates/files/ftp.html:130
 #: openpanel/internal/web/templates/manager/sites.html:508
+#: openpanel/internal/web/templates/mongodb/databases.html:122
+#: openpanel/internal/web/templates/mongodb/users.html:83
 #: openpanel/internal/web/templates/mysql/users.html:116
 #: openpanel/internal/web/templates/psql/databases.html:188
 #: openpanel/internal/web/templates/psql/users.html:97
+#: openpanel/internal/web/templates/system/cronjobs.html:492
 #: openpanel/internal/web/templates/user/twofa_settings.html:135
 msgid "Confirm"
 msgstr "पुष्टि गर्नुहोस्"
@@ -2634,7 +2800,7 @@ msgstr "ठेगाना"
 #: openpanel/internal/web/templates/manager/websitebuilder_install.html:36
 #: openpanel/internal/web/templates/manager/wp/install.html:71
 #: openpanel/internal/web/templates/manager/wp/list.html:96
-#: openpanel/internal/web/templates/partials/_search.html:55
+#: openpanel/internal/web/templates/partials/_search.html:59
 #: openpanel/internal/web/templates/php/settings.html:73
 msgid "Domain"
 msgstr "डोमेन"
@@ -2988,8 +3154,8 @@ msgstr "Suspend"
 #: openpanel/internal/web/templates/emails/single_account.html:13
 #: openpanel/internal/web/templates/files/clamav/quarantine.html:84
 #: openpanel/internal/web/templates/files/filemanager_partials.html:262
-#: openpanel/internal/web/templates/files/filemanager_partials.html:329
-#: openpanel/internal/web/templates/files/filemanager_partials.html:848
+#: openpanel/internal/web/templates/files/filemanager_partials.html:332
+#: openpanel/internal/web/templates/files/filemanager_partials.html:851
 #: openpanel/internal/web/templates/files/ftp.html:113
 #: openpanel/internal/web/templates/files/ftp.html:131
 #: openpanel/internal/web/templates/files/trash.html:57
@@ -3014,6 +3180,10 @@ msgstr "Suspend"
 #: openpanel/internal/web/templates/manager/tinyfilemanager_app.html:446
 #: openpanel/internal/web/templates/manager/tinyphotogallery_app.html:448
 #: openpanel/internal/web/templates/manager/websitebuilder.html:238
+#: openpanel/internal/web/templates/mongodb/databases.html:65
+#: openpanel/internal/web/templates/mongodb/databases.html:146
+#: openpanel/internal/web/templates/mongodb/users.html:63
+#: openpanel/internal/web/templates/mongodb/users.html:107
 #: openpanel/internal/web/templates/mysql/databases.html:488
 #: openpanel/internal/web/templates/mysql/databases.html:490
 #: openpanel/internal/web/templates/mysql/remote_mysql.html:207
@@ -3024,6 +3194,7 @@ msgstr "Suspend"
 #: openpanel/internal/web/templates/psql/users.html:77
 #: openpanel/internal/web/templates/psql/users.html:121
 #: openpanel/internal/web/templates/system/cronjobs.html:357
+#: openpanel/internal/web/templates/system/cronjobs.html:493
 #: openpanel/internal/web/templates/user/favorites.html:83
 msgid "Delete"
 msgstr "हटाउनुहोस्"
@@ -3048,6 +3219,8 @@ msgstr "देखाइँदै"
 
 #: openpanel/internal/web/templates/domains/domains.html:409
 #: openpanel/internal/web/templates/files/filemanager.html:348
+#: openpanel/internal/web/templates/mongodb/users.html:27
+#: openpanel/internal/web/templates/mongodb/users.html:31
 #: openpanel/internal/web/templates/mysql/users.html:54
 #: openpanel/internal/web/templates/mysql/users.html:60
 #: openpanel/internal/web/templates/psql/users.html:43
@@ -3137,8 +3310,8 @@ msgid "Will be updated automatically on first webcall."
 msgstr "पहिलो वेबकलमा स्वतः अद्यावधिक हुनेछ।"
 
 #: openpanel/internal/web/templates/domains/dynamic_dns.html:64
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1116
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1160
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1123
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1167
 #: openpanel/internal/web/templates/mysql/mysql_user.html:8
 #: openpanel/internal/web/templates/mysql/wizard.html:303
 msgid "Create"
@@ -3201,7 +3374,7 @@ msgstr "URL प्रतिलिपि गर्नुहोस्"
 #: openpanel/internal/web/templates/domains/vhost.html:23
 #: openpanel/internal/web/templates/domains/vhost.html:180
 #: openpanel/internal/web/templates/files/filemanager_partials.html:277
-#: openpanel/internal/web/templates/files/filemanager_partials.html:341
+#: openpanel/internal/web/templates/files/filemanager_partials.html:344
 #: openpanel/internal/web/templates/mysql/remote_mysql.html:201
 #: openpanel/internal/web/templates/system/cronjobs.html:343
 msgid "Edit"
@@ -3280,9 +3453,10 @@ msgstr "URI"
 #: openpanel/internal/web/templates/files/backup_wizard.html:125
 #: openpanel/internal/web/templates/files/disk_usage.html:61
 #: openpanel/internal/web/templates/files/filemanager.html:124
-#: openpanel/internal/web/templates/files/filemanager_partials.html:375
+#: openpanel/internal/web/templates/files/filemanager_partials.html:378
 #: openpanel/internal/web/templates/files/trash.html:79
 #: openpanel/internal/web/templates/files/trash_partials.html:18
+#: openpanel/internal/web/templates/mongodb/databases.html:41
 #: openpanel/internal/web/templates/mysql/databases.html:210
 #: openpanel/internal/web/templates/psql/databases.html:105
 msgid "Size"
@@ -4116,6 +4290,11 @@ msgstr "इमेल"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:164
 #: openpanel/internal/web/templates/manager/prestashop_install.html:156
 #: openpanel/internal/web/templates/manager/wp/install.html:129
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:40
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:49
+#: openpanel/internal/web/templates/mongodb/password.html:38
+#: openpanel/internal/web/templates/mongodb/password.html:47
+#: openpanel/internal/web/templates/mongodb/wizard.html:71
 #: openpanel/internal/web/templates/mysql/mysql_user.html:40
 #: openpanel/internal/web/templates/mysql/mysql_user.html:50
 #: openpanel/internal/web/templates/mysql/password.html:38
@@ -4152,6 +4331,7 @@ msgid "Start Import"
 msgstr "इम्पोर्ट सुरु गर्नुहोस्"
 
 #: openpanel/internal/web/templates/emails/confirm_import.html:111
+#: openpanel/internal/web/templates/mongodb/import.html:43
 #: openpanel/internal/web/templates/mysql/import.html:47
 #: openpanel/internal/web/templates/psql/import.html:43
 msgid "Importing..."
@@ -4391,7 +4571,7 @@ msgstr "यसका Sieve फिल्टरहरू व्यवस्था�
 #: openpanel/internal/web/templates/emails/filter.html:15
 #: openpanel/internal/web/templates/emails/import.html:10
 #: openpanel/internal/web/templates/files/edit_file.html:101
-#: openpanel/internal/web/templates/partials/_footer.html:60
+#: openpanel/internal/web/templates/partials/_footer.html:73
 msgid "Documentation"
 msgstr "दस्तावेज"
 
@@ -4709,6 +4889,9 @@ msgstr "केवल अक्षर, अंक, र . _ % + - जस्ता �
 #: openpanel/internal/web/templates/manager/phpbb_install.html:156
 #: openpanel/internal/web/templates/manager/prestashop_install.html:148
 #: openpanel/internal/web/templates/manager/wp/install.html:121
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:32
+#: openpanel/internal/web/templates/mongodb/password.html:30
+#: openpanel/internal/web/templates/mongodb/wizard.html:57
 #: openpanel/internal/web/templates/mysql/mysql_user.html:32
 #: openpanel/internal/web/templates/mysql/password.html:30
 #: openpanel/internal/web/templates/mysql/root_password.html:23
@@ -4737,6 +4920,9 @@ msgstr " कमजोर पासवर्ड"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:157
 #: openpanel/internal/web/templates/manager/prestashop_install.html:149
 #: openpanel/internal/web/templates/manager/wp/install.html:122
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:33
+#: openpanel/internal/web/templates/mongodb/password.html:31
+#: openpanel/internal/web/templates/mongodb/wizard.html:58
 #: openpanel/internal/web/templates/mysql/mysql_user.html:33
 #: openpanel/internal/web/templates/mysql/password.html:31
 #: openpanel/internal/web/templates/mysql/root_password.html:24
@@ -4765,6 +4951,9 @@ msgstr "मध्यम शक्तिको पासवर्ड"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:158
 #: openpanel/internal/web/templates/manager/prestashop_install.html:150
 #: openpanel/internal/web/templates/manager/wp/install.html:123
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:34
+#: openpanel/internal/web/templates/mongodb/password.html:32
+#: openpanel/internal/web/templates/mongodb/wizard.html:59
 #: openpanel/internal/web/templates/mysql/mysql_user.html:34
 #: openpanel/internal/web/templates/mysql/password.html:32
 #: openpanel/internal/web/templates/mysql/root_password.html:25
@@ -4793,6 +4982,9 @@ msgstr "बलियो पासवर्ड"
 #: openpanel/internal/web/templates/manager/phpbb_install.html:159
 #: openpanel/internal/web/templates/manager/prestashop_install.html:151
 #: openpanel/internal/web/templates/manager/wp/install.html:124
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:35
+#: openpanel/internal/web/templates/mongodb/password.html:33
+#: openpanel/internal/web/templates/mongodb/wizard.html:60
 #: openpanel/internal/web/templates/mysql/mysql_user.html:35
 #: openpanel/internal/web/templates/mysql/password.html:33
 #: openpanel/internal/web/templates/mysql/root_password.html:26
@@ -4949,7 +5141,7 @@ msgstr "पुनर्स्थापना गर्नुहोस्"
 #: openpanel/internal/web/templates/files/backup_restore.html:510
 #: openpanel/internal/web/templates/files/backup_wizard.html:168
 #: openpanel/internal/web/templates/files/filemanager_partials.html:267
-#: openpanel/internal/web/templates/files/filemanager_partials.html:333
+#: openpanel/internal/web/templates/files/filemanager_partials.html:336
 #: openpanel/internal/web/templates/files/upload_file.html:140
 msgid "Download"
 msgstr "डाउनलोड"
@@ -5476,36 +5668,36 @@ msgstr "स्क्यान सुरु गर्नुहोस्"
 msgid "Scanning..."
 msgstr "स्क्यान हुँदैछ..."
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:72
+#: openpanel/internal/web/templates/files/clamav/scanner.html:108
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:756
 msgid "files scanned"
 msgstr "फाइलहरू स्क्यान गरियो"
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:83
+#: openpanel/internal/web/templates/files/clamav/scanner.html:119
 msgid "Scan Results"
 msgstr "स्क्यान परिणामहरू"
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:97
+#: openpanel/internal/web/templates/files/clamav/scanner.html:129
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:775
 msgid "Scan failed: "
 msgstr "स्क्यान असफल भयो: "
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:98
+#: openpanel/internal/web/templates/files/clamav/scanner.html:130
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:776
 msgid "Scan is complete!"
 msgstr "स्क्यान पूरा भयो!"
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:99
+#: openpanel/internal/web/templates/files/clamav/scanner.html:131
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:777
 msgid "files scanned."
 msgstr "फाइलहरू स्क्यान गरियो।"
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:100
+#: openpanel/internal/web/templates/files/clamav/scanner.html:132
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:778
 msgid "No malware found."
 msgstr "कुनै मालवेयर फेला परेन।"
 
-#: openpanel/internal/web/templates/files/clamav/scanner.html:173
+#: openpanel/internal/web/templates/files/clamav/scanner.html:210
 #: openpanel/internal/web/templates/files/fix_permissions.html:91
 msgid "Network response was not ok"
 msgstr "नेटवर्क प्रतिकृया ठीक भएन"
@@ -5555,12 +5747,6 @@ msgstr "डाइरेक्टरी"
 #: openpanel/internal/web/templates/files/inodes.html:121
 msgid "Up One Level"
 msgstr "एक तह माथि"
-
-#: openpanel/internal/web/templates/files/disk_usage.html:90
-#: openpanel/internal/web/templates/files/filemanager.html:59
-#: openpanel/internal/web/templates/files/inodes.html:88
-msgid "File Manager"
-msgstr "फाइल म्यानेजर"
 
 #: openpanel/internal/web/templates/files/disk_usage.html:193
 msgid "Calculating disk usage for parent directory.."
@@ -5639,7 +5825,7 @@ msgid "New Folder"
 msgstr "नयाँ फोल्डर"
 
 #: openpanel/internal/web/templates/files/filemanager.html:118
-#: openpanel/internal/web/templates/files/filemanager_partials.html:378
+#: openpanel/internal/web/templates/files/filemanager_partials.html:381
 #: openpanel/internal/web/templates/files/trash.html:73
 #: openpanel/internal/web/templates/files/trash_partials.html:21
 #: openpanel/internal/web/templates/user/history_usage.html:127
@@ -5647,21 +5833,21 @@ msgid "Date"
 msgstr "मिति"
 
 #: openpanel/internal/web/templates/files/filemanager.html:119
-#: openpanel/internal/web/templates/files/filemanager_partials.html:381
+#: openpanel/internal/web/templates/files/filemanager_partials.html:384
 #: openpanel/internal/web/templates/files/trash.html:74
 #: openpanel/internal/web/templates/files/trash_partials.html:34
 msgid "Owner"
 msgstr "मालिक"
 
 #: openpanel/internal/web/templates/files/filemanager.html:120
-#: openpanel/internal/web/templates/files/filemanager_partials.html:384
+#: openpanel/internal/web/templates/files/filemanager_partials.html:387
 #: openpanel/internal/web/templates/files/trash.html:75
 #: openpanel/internal/web/templates/files/trash_partials.html:37
 msgid "Group"
 msgstr "समूह"
 
 #: openpanel/internal/web/templates/files/filemanager.html:121
-#: openpanel/internal/web/templates/files/filemanager_partials.html:388
+#: openpanel/internal/web/templates/files/filemanager_partials.html:391
 #: openpanel/internal/web/templates/files/trash.html:76
 #: openpanel/internal/web/templates/files/trash_partials.html:41
 msgid "Links"
@@ -5674,8 +5860,8 @@ msgstr "लिङ्क लक्ष्य"
 
 #: openpanel/internal/web/templates/files/filemanager.html:123
 #: openpanel/internal/web/templates/files/filemanager_partials.html:287
-#: openpanel/internal/web/templates/files/filemanager_partials.html:349
-#: openpanel/internal/web/templates/files/filemanager_partials.html:401
+#: openpanel/internal/web/templates/files/filemanager_partials.html:352
+#: openpanel/internal/web/templates/files/filemanager_partials.html:404
 #: openpanel/internal/web/templates/files/trash.html:78
 #: openpanel/internal/web/templates/files/trash_partials.html:54
 msgid "Permissions"
@@ -5758,8 +5944,8 @@ msgid "Start creating new folders or uploading a new file!"
 msgstr "नयाँ फोल्डरहरू बनाउन वा नयाँ फाइल अपलोड गर्न सुरू गर्नुहोस्!"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:247
-#: openpanel/internal/web/templates/files/filemanager_partials.html:317
-#: openpanel/internal/web/templates/files/filemanager_partials.html:512
+#: openpanel/internal/web/templates/files/filemanager_partials.html:320
+#: openpanel/internal/web/templates/files/filemanager_partials.html:515
 #: openpanel/internal/web/templates/files/trash.html:43
 #: openpanel/internal/web/templates/files/trash_partials.html:525
 #: openpanel/internal/web/templates/manager/sites.html:205
@@ -5768,8 +5954,8 @@ msgid "Select all"
 msgstr "सबै चयन गर्नुहोस्"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:252
-#: openpanel/internal/web/templates/files/filemanager_partials.html:321
-#: openpanel/internal/web/templates/files/filemanager_partials.html:659
+#: openpanel/internal/web/templates/files/filemanager_partials.html:324
+#: openpanel/internal/web/templates/files/filemanager_partials.html:662
 #: openpanel/internal/web/templates/mysql/wizard.html:80
 #: openpanel/internal/web/templates/mysql/wizard.html:139
 #: openpanel/internal/web/templates/user/mcp.html:30
@@ -5779,178 +5965,182 @@ msgid "Copy"
 msgstr "कपी"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:257
-#: openpanel/internal/web/templates/files/filemanager_partials.html:325
-#: openpanel/internal/web/templates/files/filemanager_partials.html:795
+#: openpanel/internal/web/templates/files/filemanager_partials.html:328
+#: openpanel/internal/web/templates/files/filemanager_partials.html:798
 msgid "Move"
 msgstr "सार्नुहोस्"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:272
-#: openpanel/internal/web/templates/files/filemanager_partials.html:337
+#: openpanel/internal/web/templates/files/filemanager_partials.html:340
 msgid "View"
 msgstr "हेर्नुहोस्"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:282
-#: openpanel/internal/web/templates/files/filemanager_partials.html:345
-#: openpanel/internal/web/templates/files/filemanager_partials.html:895
+#: openpanel/internal/web/templates/files/filemanager_partials.html:348
+#: openpanel/internal/web/templates/files/filemanager_partials.html:898
 msgid "Rename"
 msgstr "नाम परिवर्तन गर्नुहोस्"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:292
-#: openpanel/internal/web/templates/files/filemanager_partials.html:353
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1006
+#: openpanel/internal/web/templates/files/filemanager_partials.html:356
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1013
 msgid "Compress"
 msgstr "कम्प्रेस गर्नुहोस्"
 
 #: openpanel/internal/web/templates/files/filemanager_partials.html:297
-#: openpanel/internal/web/templates/files/filemanager_partials.html:357
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1066
+#: openpanel/internal/web/templates/files/filemanager_partials.html:360
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1073
 msgid "Extract"
 msgstr "एक्स्ट्र्याक्ट गर्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:377
+#: openpanel/internal/web/templates/files/filemanager_partials.html:380
 #: openpanel/internal/web/templates/files/trash_partials.html:20
 msgid "Last Modified"
 msgstr "अन्तिम परिवर्तन"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:392
+#: openpanel/internal/web/templates/files/filemanager_partials.html:395
 #: openpanel/internal/web/templates/files/trash_partials.html:45
 msgid "Link target"
 msgstr "लिङ्क लक्ष्य"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:414
+#: openpanel/internal/web/templates/files/filemanager_partials.html:417
 msgid "Go Up"
 msgstr "माथि जानुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:455
-#: openpanel/internal/web/templates/files/filemanager_partials.html:516
+#: openpanel/internal/web/templates/files/filemanager_partials.html:458
+#: openpanel/internal/web/templates/files/filemanager_partials.html:519
 msgid "Calculate"
 msgstr "गणना गर्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:513
+#: openpanel/internal/web/templates/files/filemanager_partials.html:516
 #: openpanel/internal/web/templates/files/trash_partials.html:524
 msgid "Deselect"
 msgstr "चयन हटाउनुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:514
+#: openpanel/internal/web/templates/files/filemanager_partials.html:517
 #: openpanel/internal/web/templates/manager/sites.html:471
 msgid "selected"
 msgstr "चयन गरियो"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:515
+#: openpanel/internal/web/templates/files/filemanager_partials.html:518
 msgid "Calculating..."
 msgstr "गणना गर्दै..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:517
+#: openpanel/internal/web/templates/files/filemanager_partials.html:520
 msgid "Change permissions for"
 msgstr "यसका लागि अनुमतिहरू परिवर्तन गर्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:537
+#: openpanel/internal/web/templates/files/filemanager_partials.html:540
 msgid "Copy items"
 msgstr "वस्तुहरू कपी गर्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:553
+#: openpanel/internal/web/templates/files/filemanager_partials.html:556
 msgid "Copy to:"
 msgstr "यहाँ कपी गर्नुहोस्:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:653
+#: openpanel/internal/web/templates/files/filemanager_partials.html:656
 msgid "Copying..."
 msgstr "कपी हुँदैछ..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:675
+#: openpanel/internal/web/templates/files/filemanager_partials.html:678
 msgid "Move items"
 msgstr "वस्तुहरू सार्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:691
+#: openpanel/internal/web/templates/files/filemanager_partials.html:694
 msgid "Where to:"
 msgstr "कहाँ सार्ने:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:789
+#: openpanel/internal/web/templates/files/filemanager_partials.html:792
 msgid "Moving..."
 msgstr "सार्दै..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:811
+#: openpanel/internal/web/templates/files/filemanager_partials.html:814
 #: openpanel/internal/web/templates/files/trash_partials.html:237
 msgid "Delete items"
 msgstr "वस्तुहरू मेट्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:836
+#: openpanel/internal/web/templates/files/filemanager_partials.html:839
 msgid "deleting..."
 msgstr "मेटिँदैछ..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:844
+#: openpanel/internal/web/templates/files/filemanager_partials.html:847
 msgid "Skip the trash and permanently delete the files"
 msgstr "ट्र्यास छोडेर फाइलहरू स्थायी रूपमा मेट्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:868
+#: openpanel/internal/web/templates/files/filemanager_partials.html:871
 msgid "Rename item"
 msgstr "वस्तुको नाम परिवर्तन गर्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:916
+#: openpanel/internal/web/templates/files/filemanager_partials.html:919
 msgid "Change file permissions"
 msgstr "फाइल अनुमति परिवर्तन गर्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:917
+#: openpanel/internal/web/templates/files/filemanager_partials.html:920
 msgid "Set permissions"
 msgstr "अनुमतिहरू सेट गर्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:936
+#: openpanel/internal/web/templates/files/filemanager_partials.html:939
 msgid "Enter exactly 3 digits (e.g. 755) for the octal permission value."
 msgstr ""
 "अक्टल अनुमति मानका लागि ठ्याक्कै 3 अंक प्रविष्ट गर्नुहोस् (उदाहरण: 755)।"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:963
+#: openpanel/internal/web/templates/files/filemanager_partials.html:943
+msgid "Apply recursively to subdirectories"
+msgstr ""
+
+#: openpanel/internal/web/templates/files/filemanager_partials.html:970
 msgid "Compress items"
 msgstr "वस्तुहरू सङ्कुचन गर्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:979
+#: openpanel/internal/web/templates/files/filemanager_partials.html:986
 msgid "Archive path"
 msgstr "आर्काइभ पथ"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1000
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1007
 msgid "compressing..."
 msgstr "कम्प्रेस हुँदैछ..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1026
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1033
 msgid "Extract items"
 msgstr "वस्तुहरू निकाल्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1041
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1048
 msgid "Archive name:"
 msgstr "आर्काइभ नाम:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1046
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1053
 msgid "Extract destination:"
 msgstr "निकाल्ने गन्तव्य:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1060
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1067
 msgid "Extracting..."
 msgstr "एक्स्ट्र्याक्ट गर्दै..."
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1086
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1093
 msgid "Create New File"
 msgstr "नयाँ फाइल बनाउनुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1098
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1105
 msgid "File Name"
 msgstr "फाइल नाम"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1104
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1111
 msgid "Open in File Editor after creation"
 msgstr "बनेपछि फाइल सम्पादकमा खोल्नुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1110
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1117
 msgid "New file will be created in:"
 msgstr "नयाँ फाइल यहाँ बन्नेछ:"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1137
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1144
 msgid "Create New Folder"
 msgstr "नयाँ फोल्डर बनाउनुहोस्"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1148
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1155
 msgid "Folder Name"
 msgstr "फोल्डर नाम"
 
-#: openpanel/internal/web/templates/files/filemanager_partials.html:1154
+#: openpanel/internal/web/templates/files/filemanager_partials.html:1161
 msgid "New folder will be created in:"
 msgstr "नयाँ फोल्डर यहाँ बन्नेछ:"
 
@@ -6040,6 +6230,8 @@ msgid "Add your first account"
 msgstr "आफ्नो पहिलो खाता थप्नुहोस्"
 
 #: openpanel/internal/web/templates/files/ftp.html:106
+#: openpanel/internal/web/templates/mongodb/password.html:81
+#: openpanel/internal/web/templates/mongodb/users.html:59
 #: openpanel/internal/web/templates/mysql/password.html:116
 #: openpanel/internal/web/templates/mysql/root_password.html:103
 #: openpanel/internal/web/templates/mysql/users.html:96
@@ -6284,10 +6476,6 @@ msgstr "वस्तुहरू पुनर्स्थापना गर्�
 msgid "File Upload"
 msgstr "फाइल अपलोड"
 
-#: openpanel/internal/web/templates/files/upload_file.html:11
-msgid "Download from URL"
-msgstr "URL बाट डाउनलोड गर्नुहोस्"
-
 #: openpanel/internal/web/templates/files/upload_file.html:103
 msgid "Download from URL instead"
 msgstr "URL बाट डाउनलोड गर्नुहोस्"
@@ -6399,7 +6587,7 @@ msgstr "पोर्ट ऐच्छिक हो, खाली छोडिए�
 #: openpanel/internal/web/templates/manager/sites.html:210
 #: openpanel/internal/web/templates/manager/wp/list.html:105
 #: openpanel/internal/web/templates/manager/wp/single.html:1153
-#: openpanel/internal/web/templates/system/server_info.html:87
+#: openpanel/internal/web/templates/system/server_info.html:101
 msgid "Version"
 msgstr "संस्करण"
 
@@ -8925,6 +9113,10 @@ msgstr "क्लोनका लागि प्रयोग गर्ने �
 #: openpanel/internal/web/templates/manager/phpbb_app.html:472
 #: openpanel/internal/web/templates/manager/prestashop_app.html:774
 #: openpanel/internal/web/templates/manager/wp/single.html:1593
+#: openpanel/internal/web/templates/mongodb/databases.html:40
+#: openpanel/internal/web/templates/mongodb/new.html:21
+#: openpanel/internal/web/templates/mongodb/new.html:23
+#: openpanel/internal/web/templates/mongodb/wizard.html:27
 #: openpanel/internal/web/templates/mysql/databases.html:209
 #: openpanel/internal/web/templates/mysql/new.html:23
 #: openpanel/internal/web/templates/mysql/new.html:25
@@ -11145,10 +11337,6 @@ msgstr "प्याकेज इन्स्टलेशन असफल भय
 msgid "Error running package install for application."
 msgstr "एप्लिकेशनका लागि प्याकेज इन्स्टल चलाउँदा त्रुटि भयो।"
 
-#: openpanel/internal/web/templates/manager/sites.html:8
-msgid "Site Manager"
-msgstr "साइट म्यानेजर"
-
 #: openpanel/internal/web/templates/manager/sites.html:9
 msgid "and other websites."
 msgstr "र अन्य वेबसाइटहरू।"
@@ -12127,7 +12315,7 @@ msgstr ""
 "गर्नुहोस्।"
 
 #: openpanel/internal/web/templates/manager/wp/list.html:341
-#: openpanel/internal/web/templates/system/cronjobs.html:386
+#: openpanel/internal/web/templates/system/cronjobs.html:480
 #: openpanel/internal/web/templates/user/favorites.html:126
 msgid "View Documentation"
 msgstr "डक्स हेर्नुहोस्"
@@ -12696,6 +12884,349 @@ msgstr "WordPress सफलतापूर्वक अपडेट भयो।
 msgid "Update failed."
 msgstr "अद्यावधिक असफल भयो।"
 
+#: openpanel/internal/web/templates/mongodb/assign.html:8
+#: openpanel/internal/web/templates/mongodb/assign.html:55
+#: openpanel/internal/web/templates/psql/assign.html:8
+#: openpanel/internal/web/templates/psql/assign.html:46
+msgid "Assign User to Database"
+msgstr "प्रयोगकर्ता डाटाबेसमा अनुबंध गर्नुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:9
+msgid ""
+"Grant a MongoDB user a role scoped to a database, enabling access for "
+"reading or writing documents within it."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/assign.html:21
+#: openpanel/internal/web/templates/mongodb/remove.html:21
+#: openpanel/internal/web/templates/mysql/assign.html:37
+#: openpanel/internal/web/templates/mysql/remove.html:21
+#: openpanel/internal/web/templates/psql/assign.html:21
+#: openpanel/internal/web/templates/psql/remove.html:21
+msgid "Select user:"
+msgstr "प्रयोगकर्ता चयन गर्नुहोस्:"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:30
+#: openpanel/internal/web/templates/mongodb/import.html:21
+#: openpanel/internal/web/templates/mongodb/remove.html:30
+#: openpanel/internal/web/templates/mysql/assign.html:50
+#: openpanel/internal/web/templates/mysql/import.html:24
+#: openpanel/internal/web/templates/mysql/remove.html:33
+#: openpanel/internal/web/templates/psql/assign.html:30
+#: openpanel/internal/web/templates/psql/import.html:21
+#: openpanel/internal/web/templates/psql/remove.html:30
+msgid "Select database:"
+msgstr "डेटाबेस चयन गर्नुहोस्:"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:33
+#: openpanel/internal/web/templates/mongodb/import.html:66
+#: openpanel/internal/web/templates/mysql/import.html:75
+#: openpanel/internal/web/templates/psql/assign.html:33
+#: openpanel/internal/web/templates/psql/import.html:66
+msgid "Select a database"
+msgstr "डेटाबेस चयन गर्नुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/assign.html:39
+#: openpanel/internal/web/templates/mongodb/remove.html:39
+msgid "Select role:"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/assign.html:53
+#: openpanel/internal/web/templates/mongodb/new.html:39
+#: openpanel/internal/web/templates/mongodb/remove.html:53
+#: openpanel/internal/web/templates/mongodb/wizard.html:117
+#: openpanel/internal/web/templates/mysql/assign.html:80
+#: openpanel/internal/web/templates/mysql/new.html:41
+#: openpanel/internal/web/templates/mysql/remove.html:49
+#: openpanel/internal/web/templates/mysql/root_password.html:101
+#: openpanel/internal/web/templates/mysql/wizard.html:299
+#: openpanel/internal/web/templates/psql/assign.html:44
+#: openpanel/internal/web/templates/psql/new.html:39
+#: openpanel/internal/web/templates/psql/remove.html:44
+#: openpanel/internal/web/templates/psql/wizard.html:114
+msgid "Back to Databases"
+msgstr "डेटाबेसमा फर्कनुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:9
+msgid "MongoDB Databases"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/databases.html:10
+#: openpanel/internal/web/templates/mysql/databases.html:22
+#: openpanel/internal/web/templates/psql/databases.html:10
+msgid "Total databases:"
+msgstr "कुल डेटाबेस:"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:26
+#: openpanel/internal/web/templates/mongodb/databases.html:29
+#: openpanel/internal/web/templates/mysql/databases.html:195
+#: openpanel/internal/web/templates/mysql/databases.html:198
+#: openpanel/internal/web/templates/psql/databases.html:90
+#: openpanel/internal/web/templates/psql/databases.html:93
+msgid "New Database"
+msgstr "नयाँ डेटाबेस"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:29
+#: openpanel/internal/web/templates/mongodb/databases.html:30
+#: openpanel/internal/web/templates/mongodb/users.html:30
+#: openpanel/internal/web/templates/mongodb/users.html:31
+#: openpanel/internal/web/templates/mongodb/users.html:32
+#: openpanel/internal/web/templates/mysql/databases.html:198
+#: openpanel/internal/web/templates/mysql/databases.html:199
+#: openpanel/internal/web/templates/mysql/users.html:58
+#: openpanel/internal/web/templates/mysql/users.html:60
+#: openpanel/internal/web/templates/mysql/users.html:62
+#: openpanel/internal/web/templates/psql/databases.html:93
+#: openpanel/internal/web/templates/psql/databases.html:94
+#: openpanel/internal/web/templates/psql/users.html:46
+#: openpanel/internal/web/templates/psql/users.html:47
+#: openpanel/internal/web/templates/psql/users.html:48
+msgid "Unavailable while the service is not running."
+msgstr "सेवा नचलिरहेको बेला अनुपलब्ध।"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:57
+#: openpanel/internal/web/templates/mysql/databases.html:353
+#: openpanel/internal/web/templates/psql/databases.html:123
+msgid "System Database"
+msgstr "सिस्टम डेटाबेस"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:60
+#: openpanel/internal/web/templates/mysql/databases.html:365
+#: openpanel/internal/web/templates/psql/databases.html:126
+msgid "Import"
+msgstr "आयात"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:74
+#: openpanel/internal/web/templates/mysql/databases.html:575
+#: openpanel/internal/web/templates/psql/databases.html:140
+msgid "No databases yet."
+msgstr "अहिलेसम्म कुनै डाटाबेस छैन।"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:74
+#: openpanel/internal/web/templates/mysql/databases.html:575
+#: openpanel/internal/web/templates/psql/databases.html:140
+msgid "Create your first database"
+msgstr "आफ्नो पहिलो डाटाबेस सिर्जना गर्नुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/databases.html:100
+#: openpanel/internal/web/templates/mysql/databases.html:601
+#: openpanel/internal/web/templates/mysql/users.html:176
+#: openpanel/internal/web/templates/psql/databases.html:166
+msgid "The page will refresh in"
+msgstr "पृष्ठ ताजा हुनेछ"
+
+#: openpanel/internal/web/templates/mongodb/import.html:8
+#: openpanel/internal/web/templates/mysql/import.html:8
+#: openpanel/internal/web/templates/psql/import.html:8
+msgid "Import into Database"
+msgstr "डेटाबेसमा इम्पोर्ट गर्नुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/import.html:9
+msgid ""
+"Select a local mongodump archive to upload and restore into a MongoDB "
+"database."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/import.html:32
+#: openpanel/internal/web/templates/mysql/import.html:36
+#: openpanel/internal/web/templates/psql/import.html:32
+msgid "Select File"
+msgstr "फाइल चयन गर्नुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/import.html:34
+#: openpanel/internal/web/templates/mysql/import.html:38
+#: openpanel/internal/web/templates/psql/import.html:34
+msgid "Select file to upload"
+msgstr "अपलोड गर्न फाइल चयन गर्नुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/import.html:43
+#: openpanel/internal/web/templates/mysql/import.html:47
+#: openpanel/internal/web/templates/psql/import.html:43
+msgid "Upload & Import"
+msgstr "अपलोड र आयात गर्नुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:8
+msgid "Create MongoDB User"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:9
+msgid ""
+"Create a new MongoDB user with a unique username and password. Assign it a "
+"role on a database afterward from the Assign User page."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:25
+#: openpanel/internal/web/templates/mongodb/wizard.html:44
+#: openpanel/internal/web/templates/mysql/mysql_user.html:25
+#: openpanel/internal/web/templates/mysql/wizard.html:217
+#: openpanel/internal/web/templates/psql/psql_user.html:25
+#: openpanel/internal/web/templates/psql/wizard.html:44
+msgid "Only letters, numbers, and underscores are allowed (1-31 characters)."
+msgstr "केवल अक्षर, अंक, र अन्डरस्कोरहरू मात्र अनुमति छ (1-31 क्यारेक्टर)।"
+
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:81
+#: openpanel/internal/web/templates/mongodb/password.html:79
+#: openpanel/internal/web/templates/mysql/mysql_user.html:110
+#: openpanel/internal/web/templates/mysql/password.html:114
+#: openpanel/internal/web/templates/psql/password.html:79
+#: openpanel/internal/web/templates/psql/psql_user.html:81
+msgid "Back to Users"
+msgstr "प्रयोगकर्ताहरूमा फर्कनुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/new.html:8
+#: openpanel/internal/web/templates/mysql/new.html:8
+#: openpanel/internal/web/templates/psql/new.html:8
+msgid "Create a Database"
+msgstr "डेटाबेस बनाउनुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/new.html:9
+msgid ""
+"Create a new MongoDB database to store and organize collections of "
+"documents."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/new.html:23
+#: openpanel/internal/web/templates/mongodb/wizard.html:27
+#: openpanel/internal/web/templates/mysql/new.html:25
+#: openpanel/internal/web/templates/mysql/wizard.html:189
+#: openpanel/internal/web/templates/psql/new.html:23
+#: openpanel/internal/web/templates/psql/wizard.html:27
+msgid "Only letters, numbers, and underscores are allowed (1-63 characters)."
+msgstr "केवल अक्षर, अंक, र अन्डरस्कोरहरू मात्र अनुमति छ (1-63 क्यारेक्टर)।"
+
+#: openpanel/internal/web/templates/mongodb/password.html:8
+#: openpanel/internal/web/templates/mysql/password.html:8
+#: openpanel/internal/web/templates/psql/password.html:8
+msgid "Change User Password"
+msgstr "प्रयोगकर्ता पासवर्ड परिवर्तन गर्नुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/password.html:9
+msgid "Change password for a MongoDB database user."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/remove.html:8
+#: openpanel/internal/web/templates/mysql/remove.html:8
+#: openpanel/internal/web/templates/psql/remove.html:8
+msgid "Remove User access from Database"
+msgstr "डेटाबेसबाट प्रयोगकर्ता पहुँच हटाउनुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/remove.html:9
+msgid ""
+"Revoke a role from a MongoDB user on a database, removing their access to "
+"it."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/remove.html:24
+#: openpanel/internal/web/templates/mysql/remove.html:26
+#: openpanel/internal/web/templates/psql/remove.html:24
+msgid "Select a Username"
+msgstr "प्रयोगकर्ता नाम चयन गर्नुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/remove.html:33
+#: openpanel/internal/web/templates/mysql/remove.html:37
+#: openpanel/internal/web/templates/psql/remove.html:33
+msgid "Select a Database"
+msgstr "डाटाबेस चयन गर्नुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/remove.html:55
+#: openpanel/internal/web/templates/mysql/remove.html:51
+#: openpanel/internal/web/templates/psql/remove.html:46
+msgid "Remove User from Database"
+msgstr "डाटाबेसबाट प्रयोगकर्ता हटाउनुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/users.html:9
+msgid "MongoDB Users"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/users.html:10
+#: openpanel/internal/web/templates/mysql/users.html:10
+#: openpanel/internal/web/templates/psql/users.html:10
+msgid "Total users:"
+msgstr "कुल प्रयोगकर्ताहरू:"
+
+#: openpanel/internal/web/templates/mongodb/users.html:27
+#: openpanel/internal/web/templates/mongodb/users.html:31
+#: openpanel/internal/web/templates/mysql/users.html:54
+#: openpanel/internal/web/templates/mysql/users.html:60
+#: openpanel/internal/web/templates/psql/users.html:43
+#: openpanel/internal/web/templates/psql/users.html:47
+msgid "Assign User"
+msgstr "प्रयोगकर्ता असाइन गर्नुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/users.html:28
+#: openpanel/internal/web/templates/mongodb/users.html:32
+#: openpanel/internal/web/templates/mysql/users.html:56
+#: openpanel/internal/web/templates/mysql/users.html:62
+#: openpanel/internal/web/templates/psql/users.html:44
+#: openpanel/internal/web/templates/psql/users.html:48
+msgid "Remove User"
+msgstr "प्रयोगकर्ता हटाउनुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/users.html:28
+#: openpanel/internal/web/templates/mongodb/users.html:32
+#: openpanel/internal/web/templates/mysql/users.html:56
+#: openpanel/internal/web/templates/mysql/users.html:62
+#: openpanel/internal/web/templates/psql/users.html:44
+#: openpanel/internal/web/templates/psql/users.html:48
+msgid "from"
+msgstr "बाट"
+
+#: openpanel/internal/web/templates/mongodb/users.html:43
+msgid "Roles"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/users.html:57
+#: openpanel/internal/web/templates/psql/users.html:71
+msgid "System User"
+msgstr "प्रणाली प्रयोगकर्ता"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:9
+msgid ""
+"Create a new MongoDB database, set up a user with a secure password, and "
+"grant it a role on the database."
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:41
+#: openpanel/internal/web/templates/mysql/wizard.html:211
+#: openpanel/internal/web/templates/psql/wizard.html:41
+msgid "Create a user"
+msgstr "प्रयोगकर्ता बनाउनुहोस्"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:44
+#: openpanel/internal/web/templates/mysql/wizard.html:220
+#: openpanel/internal/web/templates/psql/wizard.html:44
+msgid "Database User"
+msgstr "डेटाबेस प्रयोगकर्ता"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:101
+msgid "Grant a role on the database"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:120
+msgid "Create DB, User, and Grant Role"
+msgstr ""
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:139
+#: openpanel/internal/web/templates/psql/wizard.html:136
+msgid "All fields are required"
+msgstr "सबै फिल्डहरू आवश्यक छन्"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:144
+#: openpanel/internal/web/templates/psql/wizard.html:141
+msgid "Password can only contain letters, numbers, and underscores"
+msgstr "पासवर्डमा केवल अक्षर, अंक, र अन्डरस्कोरहरू मात्र हुन सक्छन्"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:148
+#: openpanel/internal/web/templates/psql/wizard.html:145
+msgid "Password must be at least 8 characters long"
+msgstr "पासवर्ड कम्तीमा 8 क्यारेक्टर लामो हुनुपर्छ"
+
+#: openpanel/internal/web/templates/mongodb/wizard.html:168
+#: openpanel/internal/web/templates/mysql/wizard.html:339
+#: openpanel/internal/web/templates/psql/wizard.html:166
+msgid "Creating..."
+msgstr "सिर्जना गर्दै..."
+
 #: openpanel/internal/web/templates/mysql/assign.html:8
 msgid "Manage User Privileges"
 msgstr "प्रयोगकर्ता विशेषाधिकार व्यवस्थापन गर्नुहोस्"
@@ -12710,22 +13241,6 @@ msgstr ""
 "डेटाबेस भित्रका डेटा व्यवस्थापन गर्न एक प्रयोगकर्तालाई अवस्थित MySQL "
 "डेटाबेसमा असाइन गर्नुहोस्।"
 
-#: openpanel/internal/web/templates/mysql/assign.html:37
-#: openpanel/internal/web/templates/mysql/remove.html:21
-#: openpanel/internal/web/templates/psql/assign.html:21
-#: openpanel/internal/web/templates/psql/remove.html:21
-msgid "Select user:"
-msgstr "प्रयोगकर्ता चयन गर्नुहोस्:"
-
-#: openpanel/internal/web/templates/mysql/assign.html:50
-#: openpanel/internal/web/templates/mysql/import.html:24
-#: openpanel/internal/web/templates/mysql/remove.html:33
-#: openpanel/internal/web/templates/psql/assign.html:30
-#: openpanel/internal/web/templates/psql/import.html:21
-#: openpanel/internal/web/templates/psql/remove.html:30
-msgid "Select database:"
-msgstr "डेटाबेस चयन गर्नुहोस्:"
-
 #: openpanel/internal/web/templates/mysql/assign.html:52
 #: openpanel/internal/web/templates/mysql/processlist.html:36
 #: openpanel/internal/web/templates/mysql/remove.html:35
@@ -12735,18 +13250,6 @@ msgstr "होस्ट"
 #: openpanel/internal/web/templates/mysql/assign.html:62
 msgid "Select privileges:"
 msgstr "विशेषाधिकारहरू चयन गर्नुहोस्:"
-
-#: openpanel/internal/web/templates/mysql/assign.html:80
-#: openpanel/internal/web/templates/mysql/new.html:41
-#: openpanel/internal/web/templates/mysql/remove.html:49
-#: openpanel/internal/web/templates/mysql/root_password.html:101
-#: openpanel/internal/web/templates/mysql/wizard.html:299
-#: openpanel/internal/web/templates/psql/assign.html:44
-#: openpanel/internal/web/templates/psql/new.html:39
-#: openpanel/internal/web/templates/psql/remove.html:44
-#: openpanel/internal/web/templates/psql/wizard.html:114
-msgid "Back to Databases"
-msgstr "डेटाबेसमा फर्कनुहोस्"
 
 #: openpanel/internal/web/templates/mysql/assign.html:82
 msgid "Make Changes"
@@ -12803,11 +13306,6 @@ msgstr "सर्भर:"
 msgid "port:"
 msgstr "पोर्ट:"
 
-#: openpanel/internal/web/templates/mysql/databases.html:22
-#: openpanel/internal/web/templates/psql/databases.html:10
-msgid "Total databases:"
-msgstr "कुल डेटाबेस:"
-
 #: openpanel/internal/web/templates/mysql/databases.html:29
 #: openpanel/internal/web/templates/psql/databases.html:16
 msgid "Show system databases"
@@ -12817,35 +13315,6 @@ msgstr "सिस्टम डेटाबेसहरू देखाउनु�
 msgid "Show database sizes"
 msgstr "डाटाबेस साइजहरू देखाउनुहोस्"
 
-#: openpanel/internal/web/templates/mysql/databases.html:195
-#: openpanel/internal/web/templates/mysql/databases.html:198
-#: openpanel/internal/web/templates/psql/databases.html:90
-#: openpanel/internal/web/templates/psql/databases.html:93
-msgid "New Database"
-msgstr "नयाँ डेटाबेस"
-
-#: openpanel/internal/web/templates/mysql/databases.html:196
-#: openpanel/internal/web/templates/mysql/databases.html:199
-#: openpanel/internal/web/templates/mysql/wizard.html:8
-#: openpanel/internal/web/templates/psql/databases.html:91
-#: openpanel/internal/web/templates/psql/databases.html:94
-#: openpanel/internal/web/templates/psql/wizard.html:8
-msgid "Database Wizard"
-msgstr "डेटाबेस विजार्ड"
-
-#: openpanel/internal/web/templates/mysql/databases.html:198
-#: openpanel/internal/web/templates/mysql/databases.html:199
-#: openpanel/internal/web/templates/mysql/users.html:58
-#: openpanel/internal/web/templates/mysql/users.html:60
-#: openpanel/internal/web/templates/mysql/users.html:62
-#: openpanel/internal/web/templates/psql/databases.html:93
-#: openpanel/internal/web/templates/psql/databases.html:94
-#: openpanel/internal/web/templates/psql/users.html:46
-#: openpanel/internal/web/templates/psql/users.html:47
-#: openpanel/internal/web/templates/psql/users.html:48
-msgid "Unavailable while the service is not running."
-msgstr "सेवा नचलिरहेको बेला अनुपलब्ध।"
-
 #: openpanel/internal/web/templates/mysql/databases.html:211
 #: openpanel/internal/web/templates/psql/databases.html:106
 msgid "Assigned Users"
@@ -12854,16 +13323,6 @@ msgstr "असाइन गरिएका प्रयोगकर्ताह�
 #: openpanel/internal/web/templates/mysql/databases.html:227
 msgid "Manage privileges"
 msgstr "विशेषाधिकारहरू व्यवस्थापन गर्नुहोस्"
-
-#: openpanel/internal/web/templates/mysql/databases.html:353
-#: openpanel/internal/web/templates/psql/databases.html:123
-msgid "System Database"
-msgstr "सिस्टम डेटाबेस"
-
-#: openpanel/internal/web/templates/mysql/databases.html:365
-#: openpanel/internal/web/templates/psql/databases.html:126
-msgid "Import"
-msgstr "आयात"
 
 #: openpanel/internal/web/templates/mysql/databases.html:391
 msgid "Format:"
@@ -12886,22 +13345,6 @@ msgstr "मर्मत गर्नुहोस्"
 msgid "phpMyAdmin"
 msgstr "phpMyAdmin"
 
-#: openpanel/internal/web/templates/mysql/databases.html:575
-#: openpanel/internal/web/templates/psql/databases.html:140
-msgid "No databases yet."
-msgstr "अहिलेसम्म कुनै डाटाबेस छैन।"
-
-#: openpanel/internal/web/templates/mysql/databases.html:575
-#: openpanel/internal/web/templates/psql/databases.html:140
-msgid "Create your first database"
-msgstr "आफ्नो पहिलो डाटाबेस सिर्जना गर्नुहोस्"
-
-#: openpanel/internal/web/templates/mysql/databases.html:601
-#: openpanel/internal/web/templates/mysql/users.html:176
-#: openpanel/internal/web/templates/psql/databases.html:166
-msgid "The page will refresh in"
-msgstr "पृष्ठ ताजा हुनेछ"
-
 #: openpanel/internal/web/templates/mysql/databases.html:628
 msgid "Running.."
 msgstr "चलिरहेको छ.."
@@ -12911,6 +13354,7 @@ msgid "Run again"
 msgstr "फेरि चलाउनुहोस्"
 
 #: openpanel/internal/web/templates/mysql/databases.html:630
+#: openpanel/internal/web/templates/system/cronjobs.html:422
 msgid "Run"
 msgstr "चलाउनुहोस्"
 
@@ -12946,11 +13390,6 @@ msgstr "टेबल"
 msgid "Add new database"
 msgstr "नयाँ डाटाबेस थप्नुहोस्"
 
-#: openpanel/internal/web/templates/mysql/import.html:8
-#: openpanel/internal/web/templates/psql/import.html:8
-msgid "Import into Database"
-msgstr "डेटाबेसमा इम्पोर्ट गर्नुहोस्"
-
 #: openpanel/internal/web/templates/mysql/import.html:10
 msgid "Select a local file to upload and import into a MySQL database."
 msgstr "MySQL डेटाबेसमा अपलोड र इम्पोर्ट गर्न स्थानीय फाइल चयन गर्नुहोस्।"
@@ -12958,27 +13397,6 @@ msgstr "MySQL डेटाबेसमा अपलोड र इम्पोर
 #: openpanel/internal/web/templates/mysql/import.html:11
 msgid "Select a local file to upload and import into a MariaDB database."
 msgstr "MariaDB डेटाबेसमा अपलोड र इम्पोर्ट गर्न स्थानीय फाइल चयन गर्नुहोस्।"
-
-#: openpanel/internal/web/templates/mysql/import.html:36
-#: openpanel/internal/web/templates/psql/import.html:32
-msgid "Select File"
-msgstr "फाइल चयन गर्नुहोस्"
-
-#: openpanel/internal/web/templates/mysql/import.html:38
-#: openpanel/internal/web/templates/psql/import.html:34
-msgid "Select file to upload"
-msgstr "अपलोड गर्न फाइल चयन गर्नुहोस्"
-
-#: openpanel/internal/web/templates/mysql/import.html:47
-#: openpanel/internal/web/templates/psql/import.html:43
-msgid "Upload & Import"
-msgstr "अपलोड र आयात गर्नुहोस्"
-
-#: openpanel/internal/web/templates/mysql/import.html:75
-#: openpanel/internal/web/templates/psql/assign.html:33
-#: openpanel/internal/web/templates/psql/import.html:66
-msgid "Select a database"
-msgstr "डेटाबेस चयन गर्नुहोस्"
 
 #: openpanel/internal/web/templates/mysql/mysql_user.html:8
 #: openpanel/internal/web/templates/mysql/processlist.html:35
@@ -12996,34 +13414,6 @@ msgstr ""
 "रूपमा व्यवस्थापन गर्न अद्वितीय प्रयोगकर्ता नाम र पासवर्डसहित नयाँ "
 "प्रयोगकर्ता सिर्जना गर्नुहोस्।"
 
-#: openpanel/internal/web/templates/mysql/mysql_user.html:25
-#: openpanel/internal/web/templates/mysql/wizard.html:217
-#: openpanel/internal/web/templates/psql/psql_user.html:25
-#: openpanel/internal/web/templates/psql/wizard.html:44
-msgid "Only letters, numbers, and underscores are allowed (1-31 characters)."
-msgstr "केवल अक्षर, अंक, र अन्डरस्कोरहरू मात्र अनुमति छ (1-31 क्यारेक्टर)।"
-
-#: openpanel/internal/web/templates/mysql/mysql_user.html:110
-#: openpanel/internal/web/templates/mysql/password.html:114
-#: openpanel/internal/web/templates/psql/password.html:79
-#: openpanel/internal/web/templates/psql/psql_user.html:81
-msgid "Back to Users"
-msgstr "प्रयोगकर्ताहरूमा फर्कनुहोस्"
-
-#: openpanel/internal/web/templates/mysql/mysql_user.html:112
-#: openpanel/internal/web/templates/mysql/users.html:52
-#: openpanel/internal/web/templates/mysql/users.html:58
-#: openpanel/internal/web/templates/psql/psql_user.html:83
-#: openpanel/internal/web/templates/psql/users.html:42
-#: openpanel/internal/web/templates/psql/users.html:46
-msgid "Create User"
-msgstr "प्रयोगकर्ता सिर्जना गर्नुहोस्"
-
-#: openpanel/internal/web/templates/mysql/new.html:8
-#: openpanel/internal/web/templates/psql/new.html:8
-msgid "Create a Database"
-msgstr "डेटाबेस बनाउनुहोस्"
-
 #: openpanel/internal/web/templates/mysql/new.html:9
 msgid ""
 "Create a new database to store and organize data, providing a foundational "
@@ -13032,23 +13422,6 @@ msgstr ""
 "डेटा भण्डारण र व्यवस्थित गर्न नयाँ डाटाबेस सिर्जना गर्नुहोस्, जसले "
 "एप्लिकेसनहरूलाई जानकारी कुशलतापूर्वक व्यवस्थापन र प्राप्त गर्न आधारभूत "
 "संरचना प्रदान गर्छ।"
-
-#: openpanel/internal/web/templates/mysql/new.html:25
-#: openpanel/internal/web/templates/mysql/wizard.html:189
-#: openpanel/internal/web/templates/psql/new.html:23
-#: openpanel/internal/web/templates/psql/wizard.html:27
-msgid "Only letters, numbers, and underscores are allowed (1-63 characters)."
-msgstr "केवल अक्षर, अंक, र अन्डरस्कोरहरू मात्र अनुमति छ (1-63 क्यारेक्टर)।"
-
-#: openpanel/internal/web/templates/mysql/new.html:44
-#: openpanel/internal/web/templates/psql/new.html:42
-msgid "Create Database"
-msgstr "डाटाबेस सिर्जना गर्नुहोस्"
-
-#: openpanel/internal/web/templates/mysql/password.html:8
-#: openpanel/internal/web/templates/psql/password.html:8
-msgid "Change User Password"
-msgstr "प्रयोगकर्ता पासवर्ड परिवर्तन गर्नुहोस्"
 
 #: openpanel/internal/web/templates/mysql/password.html:9
 msgid "Change password for a MySQL database user."
@@ -13110,10 +13483,6 @@ msgstr "स्थिति"
 #: openpanel/internal/web/templates/mysql/processlist.html:66
 msgid "No active processes."
 msgstr "कुनै सक्रिय प्रक्रिया छैन।"
-
-#: openpanel/internal/web/templates/mysql/remote_mysql.html:10
-msgid "Remote Access"
-msgstr "रिमोट पहुँच"
 
 #: openpanel/internal/web/templates/mysql/remote_mysql.html:11
 msgid ""
@@ -13222,11 +13591,6 @@ msgstr "कुनै MySQL प्रयोगकर्ता फेला पर
 msgid "Confirm?"
 msgstr "पुष्टि गर्ने?"
 
-#: openpanel/internal/web/templates/mysql/remove.html:8
-#: openpanel/internal/web/templates/psql/remove.html:8
-msgid "Remove User access from Database"
-msgstr "डेटाबेसबाट प्रयोगकर्ता पहुँच हटाउनुहोस्"
-
 #: openpanel/internal/web/templates/mysql/remove.html:9
 msgid ""
 "Remove a user from an existing MySQL database to revoke their permissions "
@@ -13237,21 +13601,6 @@ msgstr ""
 "क्वेरी चलाउने, टेबल परिवर्तन गर्ने वा डेटाबेस भित्र डाटा व्यवस्थापन गर्न "
 "रोक्नुहोस्।"
 
-#: openpanel/internal/web/templates/mysql/remove.html:26
-#: openpanel/internal/web/templates/psql/remove.html:24
-msgid "Select a Username"
-msgstr "प्रयोगकर्ता नाम चयन गर्नुहोस्"
-
-#: openpanel/internal/web/templates/mysql/remove.html:37
-#: openpanel/internal/web/templates/psql/remove.html:33
-msgid "Select a Database"
-msgstr "डाटाबेस चयन गर्नुहोस्"
-
-#: openpanel/internal/web/templates/mysql/remove.html:51
-#: openpanel/internal/web/templates/psql/remove.html:46
-msgid "Remove User from Database"
-msgstr "डाटाबेसबाट प्रयोगकर्ता हटाउनुहोस्"
-
 #: openpanel/internal/web/templates/mysql/root_password.html:8
 msgid "Change MySQL root password"
 msgstr "MySQL root पासवर्ड परिवर्तन गर्नुहोस्"
@@ -13261,40 +13610,10 @@ msgid "Change MySQL root user password and restart mysql service."
 msgstr ""
 "MySQL root प्रयोगकर्ता पासवर्ड परिवर्तन गरी MySQL सेवा पुनः सुरु गर्नुहोस्।"
 
-#: openpanel/internal/web/templates/mysql/users.html:9
-msgid "Users"
-msgstr "प्रयोगकर्ताहरू"
-
-#: openpanel/internal/web/templates/mysql/users.html:10
-#: openpanel/internal/web/templates/psql/users.html:10
-msgid "Total users:"
-msgstr "कुल प्रयोगकर्ताहरू:"
-
 #: openpanel/internal/web/templates/mysql/users.html:17
 #: openpanel/internal/web/templates/psql/users.html:16
 msgid "Show system users"
 msgstr "सिस्टम प्रयोगकर्ताहरू देखाउनुहोस्"
-
-#: openpanel/internal/web/templates/mysql/users.html:54
-#: openpanel/internal/web/templates/mysql/users.html:60
-#: openpanel/internal/web/templates/psql/users.html:43
-#: openpanel/internal/web/templates/psql/users.html:47
-msgid "Assign User"
-msgstr "प्रयोगकर्ता असाइन गर्नुहोस्"
-
-#: openpanel/internal/web/templates/mysql/users.html:56
-#: openpanel/internal/web/templates/mysql/users.html:62
-#: openpanel/internal/web/templates/psql/users.html:44
-#: openpanel/internal/web/templates/psql/users.html:48
-msgid "Remove User"
-msgstr "प्रयोगकर्ता हटाउनुहोस्"
-
-#: openpanel/internal/web/templates/mysql/users.html:56
-#: openpanel/internal/web/templates/mysql/users.html:62
-#: openpanel/internal/web/templates/psql/users.html:44
-#: openpanel/internal/web/templates/psql/users.html:48
-msgid "from"
-msgstr "बाट"
 
 #: openpanel/internal/web/templates/mysql/users.html:149
 msgid "No users yet."
@@ -13344,25 +13663,10 @@ msgstr "डाटाबेसहरू हेर्नुहोस्"
 msgid "Create Another"
 msgstr "अर्को सिर्जना गर्नुहोस्"
 
-#: openpanel/internal/web/templates/mysql/wizard.html:211
-#: openpanel/internal/web/templates/psql/wizard.html:41
-msgid "Create a user"
-msgstr "प्रयोगकर्ता बनाउनुहोस्"
-
-#: openpanel/internal/web/templates/mysql/wizard.html:220
-#: openpanel/internal/web/templates/psql/wizard.html:44
-msgid "Database User"
-msgstr "डेटाबेस प्रयोगकर्ता"
-
 #: openpanel/internal/web/templates/mysql/wizard.html:283
 #: openpanel/internal/web/templates/psql/wizard.html:101
 msgid "Assign user to database"
 msgstr "प्रयोगकर्ता डेटाबेसमा असाइन गर्नुहोस्"
-
-#: openpanel/internal/web/templates/mysql/wizard.html:339
-#: openpanel/internal/web/templates/psql/wizard.html:166
-msgid "Creating..."
-msgstr "सिर्जना गर्दै..."
 
 #: openpanel/internal/web/templates/partials/_footer.html:5
 #: openpanel/internal/web/templates/partials/_footer.html:9
@@ -13382,15 +13686,27 @@ msgstr "आइकन स्थिति"
 msgid "Top"
 msgstr "माथि"
 
-#: openpanel/internal/web/templates/partials/_footer.html:49
+#: openpanel/internal/web/templates/partials/_footer.html:42
+msgid "Buttons style"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_footer.html:44
+msgid "Classic"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_footer.html:45
+msgid "Modern"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_footer.html:62
 msgid "Changelog"
 msgstr "परिवर्तन लग"
 
-#: openpanel/internal/web/templates/partials/_footer.html:71
+#: openpanel/internal/web/templates/partials/_footer.html:84
 msgid "Community Forums"
 msgstr "सामुदायिक फोरमहरू"
 
-#: openpanel/internal/web/templates/partials/_footer.html:84
+#: openpanel/internal/web/templates/partials/_footer.html:97
 msgid "Sign out"
 msgstr "साइन आउट गर्नुहोस्"
 
@@ -13402,41 +13718,41 @@ msgstr "सेवाहरू"
 msgid "Caching"
 msgstr "क्यासिङ"
 
-#: openpanel/internal/web/templates/partials/_header.html:111
+#: openpanel/internal/web/templates/partials/_header.html:116
 msgid "Sites"
 msgstr "साइटहरू"
 
-#: openpanel/internal/web/templates/partials/_header.html:158
-#: openpanel/internal/web/templates/partials/_header.html:217
+#: openpanel/internal/web/templates/partials/_header.html:163
+#: openpanel/internal/web/templates/partials/_header.html:222
 msgid "Left-click to add to Favorites"
 msgstr "मनपर्नेमा थप्न बायाँ-क्लिक गर्नुहोस्"
 
-#: openpanel/internal/web/templates/partials/_header.html:185
-#: openpanel/internal/web/templates/partials/_header.html:261
+#: openpanel/internal/web/templates/partials/_header.html:190
+#: openpanel/internal/web/templates/partials/_header.html:266
 msgid "Right-click to remove from Favorites"
 msgstr "मनपर्नेबाट हटाउन दायाँ-क्लिक गर्नुहोस्"
 
-#: openpanel/internal/web/templates/partials/_header.html:194
+#: openpanel/internal/web/templates/partials/_header.html:199
 msgid "This page is not in your favorites! Left-click to add it."
 msgstr "यो पृष्ठ तपाईँको मनपर्नेमा छैन! थप्न बायाँ-क्लिक गर्नुहोस्।"
 
-#: openpanel/internal/web/templates/partials/_header.html:210
+#: openpanel/internal/web/templates/partials/_header.html:215
 msgid "Successfully removed from favorites!"
 msgstr "मनपर्नेबाट सफलतापूर्वक हटाइयो!"
 
-#: openpanel/internal/web/templates/partials/_header.html:222
+#: openpanel/internal/web/templates/partials/_header.html:227
 msgid "Failed to remove favorite."
 msgstr "मनपर्ने हटाउन असफल।"
 
-#: openpanel/internal/web/templates/partials/_header.html:229
+#: openpanel/internal/web/templates/partials/_header.html:234
 msgid "This page is already in your favorites! Right-click to remove it."
 msgstr "यो पृष्ठ पहिले नै मनपर्नेमा छ! हटाउन दायाँ-क्लिक गर्नुहोस्।"
 
-#: openpanel/internal/web/templates/partials/_header.html:253
+#: openpanel/internal/web/templates/partials/_header.html:258
 msgid "Successfully added to favorites!"
 msgstr "मनपर्नेमा सफलतापूर्वक थपियो!"
 
-#: openpanel/internal/web/templates/partials/_header.html:267
+#: openpanel/internal/web/templates/partials/_header.html:272
 msgid "Failed to add favorite."
 msgstr "मनपर्नेमा थप्न असफल।"
 
@@ -13468,15 +13784,23 @@ msgstr "PostgreSQL डाटाबेस"
 msgid "PostgreSQL User"
 msgstr "PostgreSQL प्रयोगकर्ता"
 
-#: openpanel/internal/web/templates/partials/_search.html:58
+#: openpanel/internal/web/templates/partials/_search.html:55
+msgid "MongoDB Database"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_search.html:56
+msgid "MongoDB User"
+msgstr ""
+
+#: openpanel/internal/web/templates/partials/_search.html:62
 msgid "Email Account"
 msgstr "इमेल खाता"
 
-#: openpanel/internal/web/templates/partials/_search.html:61
+#: openpanel/internal/web/templates/partials/_search.html:65
 msgid "FTP Account"
 msgstr "FTP खाता"
 
-#: openpanel/internal/web/templates/partials/_search.html:70
+#: openpanel/internal/web/templates/partials/_search.html:74
 msgid "Cron Job"
 msgstr "क्रोन कार्य"
 
@@ -13888,11 +14212,6 @@ msgstr "हालको PHP संस्करण"
 msgid "Change version"
 msgstr "संस्करण परिवर्तन गर्नुहोस्"
 
-#: openpanel/internal/web/templates/psql/assign.html:8
-#: openpanel/internal/web/templates/psql/assign.html:46
-msgid "Assign User to Database"
-msgstr "प्रयोगकर्ता डाटाबेसमा अनुबंध गर्नुहोस्"
-
 #: openpanel/internal/web/templates/psql/assign.html:9
 msgid ""
 "Assign a user to an existing PostgreSQL database to manage database "
@@ -14041,10 +14360,6 @@ msgstr ""
 msgid "PostgreSQL Users"
 msgstr "PostgreSQL प्रयोगकर्ताहरू"
 
-#: openpanel/internal/web/templates/psql/users.html:71
-msgid "System User"
-msgstr "प्रणाली प्रयोगकर्ता"
-
 #: openpanel/internal/web/templates/psql/wizard.html:9
 msgid ""
 "Create a new PostgreSQL database, set up a user with a secure password, and "
@@ -14057,18 +14372,6 @@ msgstr ""
 #: openpanel/internal/web/templates/psql/wizard.html:117
 msgid "Create DB, User, and Grant Privileges"
 msgstr "डेटाबेस, प्रयोगकर्ता बनाउनुहोस् र प्रिभिलेजहरू प्रदान गर्नुहोस्"
-
-#: openpanel/internal/web/templates/psql/wizard.html:136
-msgid "All fields are required"
-msgstr "सबै फिल्डहरू आवश्यक छन्"
-
-#: openpanel/internal/web/templates/psql/wizard.html:141
-msgid "Password can only contain letters, numbers, and underscores"
-msgstr "पासवर्डमा केवल अक्षर, अंक, र अन्डरस्कोरहरू मात्र हुन सक्छन्"
-
-#: openpanel/internal/web/templates/psql/wizard.html:145
-msgid "Password must be at least 8 characters long"
-msgstr "पासवर्ड कम्तीमा 8 क्यारेक्टर लामो हुनुपर्छ"
 
 #: openpanel/internal/web/templates/system/apache_nginx_conf_editor.html:20
 msgid "Edit main webserver configuration file:"
@@ -14129,7 +14432,7 @@ msgstr "समय तालिका"
 #: openpanel/internal/web/templates/system/cronjobs.html:68
 #: openpanel/internal/web/templates/system/cronjobs.html:73
 #: openpanel/internal/web/templates/system/cronjobs.html:78
-#: openpanel/internal/web/templates/system/server_info.html:116
+#: openpanel/internal/web/templates/system/server_info.html:130
 msgid "Description"
 msgstr "विवरण"
 
@@ -14253,20 +14556,48 @@ msgstr "इन्ट्रीहरू देखाइयो"
 msgid "Name/Comment"
 msgstr "नाम/टिप्पणी"
 
-#: openpanel/internal/web/templates/system/cronjobs.html:383
+#: openpanel/internal/web/templates/system/cronjobs.html:415
+msgid "Running…"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:416
+msgid "Connection error"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:417
+msgid "Finished successfully"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:418
+msgid "Finished with exit code"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:432
+msgid "Run Cron Job"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:449
+msgid "Waiting for output…"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:455
+msgid "Run Again"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/cronjobs.html:477
 msgid "No cronjobs."
 msgstr "कुनै क्रोन जबस छैन।"
 
-#: openpanel/internal/web/templates/system/cronjobs.html:385
+#: openpanel/internal/web/templates/system/cronjobs.html:479
 msgid "No cronjobs yet, to create a cron click on the button above."
 msgstr ""
 "अहिलेसम्म कुनै क्रोन जब छैन, नयाँ क्रोन बनाउन माथिको बटन क्लिक गर्नुहोस्।"
 
-#: openpanel/internal/web/templates/system/cronjobs.html:422
+#: openpanel/internal/web/templates/system/cronjobs.html:557
 msgid "view mode is unknown, only code and table are allowed"
 msgstr "दृश्य मोड अज्ञात छ, केवल code र table मात्र अनुमति छ"
 
-#: openpanel/internal/web/templates/system/cronjobs.html:435
+#: openpanel/internal/web/templates/system/cronjobs.html:570
 msgid "Add new cron job"
 msgstr "नयाँ क्रोन कार्य थप्नुहोस्"
 
@@ -14541,87 +14872,95 @@ msgstr "लोकल MySQL पोर्ट"
 msgid "Remote PostgreSQL port"
 msgstr "रिमोट PostgreSQL पोर्ट"
 
-#: openpanel/internal/web/templates/system/server_info.html:75
+#: openpanel/internal/web/templates/system/server_info.html:73
+msgid "Local PostgreSQL port"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/server_info.html:80
+msgid "Local MongoDB port"
+msgstr ""
+
+#: openpanel/internal/web/templates/system/server_info.html:89
 msgid "OS"
 msgstr "OS"
 
-#: openpanel/internal/web/templates/system/server_info.html:81
+#: openpanel/internal/web/templates/system/server_info.html:95
 msgid "Release"
 msgstr "रिलिज"
 
-#: openpanel/internal/web/templates/system/server_info.html:93
+#: openpanel/internal/web/templates/system/server_info.html:107
 msgid "Processor"
 msgstr "प्रोसेसर"
 
-#: openpanel/internal/web/templates/system/server_info.html:106
+#: openpanel/internal/web/templates/system/server_info.html:120
 msgid "Hosting Plan"
 msgstr "होस्टिङ योजना"
 
-#: openpanel/internal/web/templates/system/server_info.html:110
+#: openpanel/internal/web/templates/system/server_info.html:124
 msgid "Plan Name"
 msgstr "योजनाको नाम"
 
-#: openpanel/internal/web/templates/system/server_info.html:122
+#: openpanel/internal/web/templates/system/server_info.html:136
 msgid "Context"
 msgstr "सन्दर्भ"
 
-#: openpanel/internal/web/templates/system/server_info.html:128
+#: openpanel/internal/web/templates/system/server_info.html:142
 msgid "Bandwidth Limit"
 msgstr "ब्यान्डविथ सीमा"
 
-#: openpanel/internal/web/templates/system/server_info.html:134
+#: openpanel/internal/web/templates/system/server_info.html:148
 msgid "CPU Limit"
 msgstr "CPU सीमा"
 
-#: openpanel/internal/web/templates/system/server_info.html:140
+#: openpanel/internal/web/templates/system/server_info.html:154
 msgid "Memory Limit"
 msgstr "मेमोरी सीमा"
 
-#: openpanel/internal/web/templates/system/server_info.html:146
+#: openpanel/internal/web/templates/system/server_info.html:160
 msgid "Database Limit"
 msgstr "डेटाबेस सीमा"
 
-#: openpanel/internal/web/templates/system/server_info.html:152
+#: openpanel/internal/web/templates/system/server_info.html:166
 msgid "Websites Limit"
 msgstr "वेबसाइट सीमा"
 
-#: openpanel/internal/web/templates/system/server_info.html:158
+#: openpanel/internal/web/templates/system/server_info.html:172
 msgid "Disk Limit"
 msgstr "डिस्क सीमा"
 
-#: openpanel/internal/web/templates/system/server_info.html:164
+#: openpanel/internal/web/templates/system/server_info.html:178
 msgid "Domains Limit"
 msgstr "डोमेन सीमा"
 
-#: openpanel/internal/web/templates/system/server_info.html:170
+#: openpanel/internal/web/templates/system/server_info.html:184
 msgid "Email Limit"
 msgstr "इमेल सीमा"
 
-#: openpanel/internal/web/templates/system/server_info.html:176
+#: openpanel/internal/web/templates/system/server_info.html:190
 msgid "FTP Limit"
 msgstr "FTP सीमा"
 
-#: openpanel/internal/web/templates/system/server_info.html:182
+#: openpanel/internal/web/templates/system/server_info.html:196
 msgid "Inodes Limit"
 msgstr "इनोड सीमा"
 
-#: openpanel/internal/web/templates/system/server_info.html:188
+#: openpanel/internal/web/templates/system/server_info.html:202
 msgid "MySQL Server"
 msgstr "MySQL सर्भर"
 
-#: openpanel/internal/web/templates/system/server_info.html:194
+#: openpanel/internal/web/templates/system/server_info.html:208
 msgid "Web Server"
 msgstr "वेब सर्भर"
 
-#: openpanel/internal/web/templates/system/server_info.html:199
+#: openpanel/internal/web/templates/system/server_info.html:213
 msgid "Panel Information"
 msgstr "प्यानल जानकारी"
 
-#: openpanel/internal/web/templates/system/server_info.html:203
+#: openpanel/internal/web/templates/system/server_info.html:217
 msgid "Panel Version"
 msgstr "प्यानल संस्करण"
 
-#: openpanel/internal/web/templates/system/server_info.html:213
+#: openpanel/internal/web/templates/system/server_info.html:227
 msgid "Enabled Features"
 msgstr "सक्रिय फिचरहरू"
 
@@ -14917,15 +15256,15 @@ msgstr "पासवर्ड बिर्सनुभयो?"
 msgid "Two-Factor Authentication Code"
 msgstr "दुई-फ्याक्टर प्रमाणीकरण कोड"
 
-#: openpanel/internal/web/templates/user/login.html:37
+#: openpanel/internal/web/templates/user/login.html:50
 msgid "Sign In"
 msgstr "साइन इन"
 
-#: openpanel/internal/web/templates/user/login.html:41
+#: openpanel/internal/web/templates/user/login.html:54
 msgid "Sign in with a passkey"
 msgstr "पासकीसँग साइन इन गर्नुहोस्"
 
-#: openpanel/internal/web/templates/user/login.html:46
+#: openpanel/internal/web/templates/user/login.html:59
 msgid ""
 "Passkeys require this panel to be accessed over HTTPS with a domain name."
 msgstr "पासकीहरूलाई यो प्यानल डोमेन नामसहित HTTPS मार्फत पहुँच गर्न आवश्यक छ।"
@@ -15221,14 +15560,6 @@ msgstr "अहिलेसम्म कुनै स्रोत प्रयो
 #: openpanel/internal/web/templates/user/twofa_settings.html:16
 msgid "2FA is currently"
 msgstr "२FA हाल"
-
-#: openpanel/internal/web/templates/user/twofa_settings.html:18
-msgid "enabled"
-msgstr "सक्रिय छ"
-
-#: openpanel/internal/web/templates/user/twofa_settings.html:20
-msgid "disabled"
-msgstr "निष्क्रिय छ"
 
 #: openpanel/internal/web/templates/user/twofa_settings.html:22
 msgid "for your account."
