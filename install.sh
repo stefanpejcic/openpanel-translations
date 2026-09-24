@@ -33,18 +33,16 @@ if [ "$#" -lt 1 ]; then
     exit 0
 fi
 
+if ! command -v podman >/dev/null 2>&1; then
+    echo "Error: podman not found."
+    exit 1
+fi
+
 validate_locale() {
     [[ "$1" =~ ^[a-z]{2}-[a-z]{2}$ ]]
 }
 
-if command -v docker >/dev/null 2>&1; then
-    CONTAINER_CMD="docker"
-elif command -v podman >/dev/null 2>&1; then
-    CONTAINER_CMD="podman"
-else
-    echo "Error: neither docker nor podman found."
-    exit 1
-fi
+installed=0
 
 for locale in "$@"; do
     formatted_locale=$(echo "$locale" | tr '[:upper:]' '[:lower:]')
@@ -66,18 +64,20 @@ for locale in "$@"; do
         continue
     fi
 
-    $CONTAINER_CMD exec openpanel pybabel update -i "$babel_translations/$two_letter/LC_MESSAGES/messages.po" -d "$babel_translations" -l "$two_letter" >/dev/null 2>&1
+    podman exec openpanel pybabel update -i "$babel_translations/$two_letter/LC_MESSAGES/messages.po" -d "$babel_translations" -l "$two_letter" >/dev/null 2>&1
+    (( installed++ ))
     echo
 done
 
-
-if [ "$CONTAINER_CMD" = "docker" ]; then
-    echo "Compiling .mo files..."
-    docker exec openpanel pybabel compile -f -d "$babel_translations" >/dev/null 2>&1
+if [ "$installed" -eq 0 ]; then
+    echo "No locales were installed."
+    exit 1
 fi
 
-echo "Flushing cache..."
-docker exec openpanel_redis redis-cli DEL openpanel_cache_app.get_available_locales_memver >/dev/null 2>&1
+echo "Compiling .mo files..."
+podman exec openpanel pybabel compile -f -d "$babel_translations" >/dev/null 2>&1
 
+echo "Flushing cache..."
+podman exec openpanel_redis redis-cli DEL openpanel_cache_app.get_available_locales_memver >/dev/null 2>&1
 
 echo "DONE"
