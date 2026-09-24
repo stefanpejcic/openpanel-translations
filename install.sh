@@ -13,7 +13,8 @@
 ###
 
 github_repo="stefanpejcic/openpanel-translations"
-babel_translations="/etc/openpanel/openpanel/translations"
+translations_dir="/etc/openpanel/openpanel/translations"
+cache_key="openpanel_cache_app.get_available_locales"
 
 if [ "$#" -lt 1 ]; then
     if ! command -v jq >/dev/null 2>&1; then
@@ -24,8 +25,7 @@ if [ "$#" -lt 1 ]; then
     echo "Please provide at least one locale."
     echo
     echo "Available locales:"
-    curl -s "https://api.github.com/repos/$github_repo/contents" \
-        | jq -r '.[] | select(.type=="dir" and (.name|test("^\\.")|not)) | .name'
+    curl -s "https://api.github.com/repos/$github_repo/contents" | jq -r '.[] | select(.type=="dir" and (.name|test("^[a-z]{2}-[a-z]{2}$"))) | .name'
     echo
     echo "Example:"
     echo "  opencli locale de-de"
@@ -33,15 +33,11 @@ if [ "$#" -lt 1 ]; then
     exit 0
 fi
 
-if ! command -v podman >/dev/null 2>&1; then
-    echo "Error: podman not found."
-    exit 1
-fi
-
 validate_locale() {
     [[ "$1" =~ ^[a-z]{2}-[a-z]{2}$ ]]
 }
 
+failed=0
 installed=0
 
 for locale in "$@"; do
@@ -49,35 +45,39 @@ for locale in "$@"; do
 
     if ! validate_locale "$formatted_locale"; then
         echo "Invalid locale format: $locale. Skipping."
+        failed=1
         continue
     fi
 
     two_letter="${formatted_locale%%-*}"
+    target_dir="$translations_dir/$two_letter/LC_MESSAGES"
 
-    echo "Creating directory for $formatted_locale..."
-    mkdir -p "$babel_translations/$two_letter/LC_MESSAGES"
-
-    echo "Downloading locale..."
-    if ! wget -q -O "$babel_translations/$two_letter/LC_MESSAGES/messages.po" \
-        "https://raw.githubusercontent.com/$github_repo/main/$formatted_locale/messages.po"; then
+    echo "Downloading $formatted_locale..."
+    tmp_file=$(mktemp)
+    if ! wget -q -O "$tmp_file" "https://raw.githubusercontent.com/$github_repo/main/$formatted_locale/messages.po" || [ ! -s "$tmp_file" ]; then
         echo "Failed to download $formatted_locale"
+        rm -f "$tmp_file"
+        failed=1
         continue
     fi
+    mkdir -p "$target_dir"
+    mv "$tmp_file" "$target_dir/messages.po"
+    chmod 644 "$target_dir/messages.po"
 
-    podman exec openpanel pybabel update -i "$babel_translations/$two_letter/LC_MESSAGES/messages.po" -d "$babel_translations" -l "$two_letter" >/dev/null 2>&1
-    (( installed++ ))
+    installed=1
     echo
 done
 
-if [ "$installed" -eq 0 ]; then
-    echo "No locales were installed."
-    exit 1
+if [ "$installed" -eq 1 ]; then
+    echo "Flushing cache..."
+    if command -v podman >/dev/null 2>&1; then
+        podman exec openpanel_redis redis-cli DEL "$cache_key" >/dev/null 2>&1
+    fi
 fi
 
-echo "Compiling .mo files..."
-podman exec openpanel pybabel compile -f -d "$babel_translations" >/dev/null 2>&1
-
-echo "Flushing cache..."
-podman exec openpanel_redis redis-cli DEL openpanel_cache_app.get_available_locales_memver >/dev/null 2>&1
+if [ "$failed" -eq 1 ]; then
+    echo "DONE with errors"
+    exit 1
+fi
 
 echo "DONE"
