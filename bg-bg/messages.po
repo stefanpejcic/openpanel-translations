@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.10\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-09-25 22:34+0200\n"
+"POT-Creation-Date: 2026-09-25 22:48+0200\n"
 "PO-Revision-Date: 2026-02-08 21:25+0200\n"
 "Last-Translator: Svetoslav Slavkov <contact@sslavkov.eu>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -97,6 +97,14 @@ msgstr "Passkey е премахнат."
 msgid "Passkey not found."
 msgstr "Passkey не е намерен."
 
+#: internal/modules/account/locale.go:48
+msgid "Language changed from %(old_locale)s to %(locale)s"
+msgstr "Езикът е сменен от %(old_locale)s на %(locale)s"
+
+#: internal/modules/account/locale.go:50
+msgid "Language changed to %(locale)s"
+msgstr "Езикът е сменен на %(locale)s"
+
 #: internal/modules/account/login.go:133
 #: internal/web/templates/manager/dokuwiki_app.html:283
 msgid "Login"
@@ -126,17 +134,23 @@ msgstr "Автоматичното влизане се провали: Нева�
 msgid "Autologin failed: User does not exist."
 msgstr "Автоматичното влизане се провали: Потребителят не съществува."
 
-#: internal/modules/account/mcp.go:61
+#: internal/modules/account/mcp.go:62
 msgid "Could not create token: database is unavailable. Please try again."
 msgstr ""
 "Токенът не може да бъде създаден: базата данни не е достъпна. Моля, опитайте"
 " отново."
 
-#: internal/modules/account/mcp.go:111
+#: internal/modules/account/mcp.go:84
+msgid "Token \"%(name)s\" created. Copy it below - it will not be shown again."
+msgstr ""
+"Токенът \"%(name)s\" е създаден. Копирайте го по-долу - няма да бъде показан"
+" отново."
+
+#: internal/modules/account/mcp.go:112
 msgid "Token revoked."
 msgstr "Токенът е отменен."
 
-#: internal/modules/account/mcp.go:113
+#: internal/modules/account/mcp.go:114
 msgid "Token not found."
 msgstr "Токенът не е намерен."
 
@@ -435,7 +449,13 @@ msgstr "Сесията е прекратена успешно."
 msgid "Failed to terminate session or session already expired."
 msgstr "Сесията не можа да бъде прекратена или вече е изтекла."
 
-#: internal/modules/account/settings.go:115
+#: internal/modules/account/settings.go:116
+#: internal/modules/emails/emails.go:368 internal/modules/mongodb/users.go:85
+#: internal/modules/mongodb/users.go:179 internal/modules/mongodb/wizard.go:67
+#: internal/modules/mysql/users.go:94 internal/modules/mysql/users.go:202
+#: internal/modules/postgresql/users.go:96
+#: internal/modules/postgresql/users.go:202
+#: internal/modules/postgresql/wizard.go:65
 #: internal/web/templates/emails/new.html:68
 #: internal/web/templates/emails/single_account.html:180
 #: internal/web/templates/files/ftp_new.html:50
@@ -467,11 +487,19 @@ msgstr "Сесията не можа да бъде прекратена или �
 msgid "Password does not meet the required strength."
 msgstr "Паролата не отговаря на изискваната сложност."
 
-#: internal/modules/account/settings.go:148
+#: internal/modules/account/settings.go:149
 msgid "Username must be 3-20 characters, letters and numbers only."
 msgstr "Потребителското име трябва да е 3-20 знака, само букви и цифри."
 
-#: internal/modules/account/settings.go:172
+#: internal/modules/account/settings.go:157
+msgid ""
+"Username has been changed successfully from %(current_username)s to "
+"%(new_username)s."
+msgstr ""
+"Потребителското име е сменено успешно от %(current_username)s на "
+"%(new_username)s."
+
+#: internal/modules/account/settings.go:173
 msgid "Failed to change username."
 msgstr "Потребителското име не можа да бъде променено."
 
@@ -494,6 +522,24 @@ msgid ""
 msgstr ""
 "Passkeys изискват панелът да се достъпва чрез име на домейн, а не IP адрес. "
 "Помолете администратора си да настрои домейн за този панел."
+
+#: internal/modules/appinstall/install.go:129
+#: internal/modules/dokuwiki/install.go:47
+#: internal/modules/drupal/install.go:46 internal/modules/flarum/install.go:49
+#: internal/modules/joomla/install.go:47 internal/modules/matomo/install.go:47
+#: internal/modules/mediawiki/install.go:48
+#: internal/modules/moodle/install.go:47
+#: internal/modules/nextcloud/install.go:47 internal/modules/ojs/install.go:48
+#: internal/modules/opencart/install.go:47
+#: internal/modules/phpapp/install.go:62 internal/modules/phpbb/install.go:61
+#: internal/modules/prestashop/install.go:47
+#: internal/modules/sofawiki/install.go:48
+#: internal/modules/tinyfilemanager/install.go:55
+#: internal/modules/tinyphotogallery/install.go:50
+#: internal/modules/wordpress/install.go:48
+msgid ""
+"You have reached the maximum number of sites allowed.%(upgrade_message)s"
+msgstr "Достигнахте максималния брой разрешени сайтове.%(upgrade_message)s"
 
 #: internal/modules/appinstall/java.go:10
 #: internal/web/templates/manager/autoinstaller.html:731
@@ -551,6 +597,126 @@ msgstr ""
 msgid "Install NodeJS Application"
 msgstr "Инсталиране на NodeJS приложение"
 
+#: internal/modules/appinstall/pm2.go:119
+msgid ""
+"Invalid action '%(action)s'. Allowed actions: start, stop, update, restart."
+msgstr ""
+"Невалидно действие '%(action)s'. Разрешени действия: start, stop, update, "
+"restart."
+
+#: internal/modules/appinstall/pm2.go:123
+msgid "Hacker! Service '%(site_name)s' cannot be deleted."
+msgstr "Хакер! Услугата '%(site_name)s' не може да бъде изтрита."
+
+#: internal/modules/appinstall/pm2.go:153
+msgid "Failed to stop container '%(site_name)s': %(error)s"
+msgstr "Контейнерът '%(site_name)s' не можа да бъде спрян: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:156
+msgid "Stopped container for application: '%(site_name)s'."
+msgstr "Контейнерът за приложението '%(site_name)s' е спрян."
+
+#: internal/modules/appinstall/pm2.go:163
+msgid "Failed to start container '%(site_name)s': %(error)s"
+msgstr "Контейнерът '%(site_name)s' не можа да бъде стартиран: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:166
+msgid "Started container for application '%(site_name)s'."
+msgstr "Контейнерът за приложението '%(site_name)s' е стартиран."
+
+#: internal/modules/appinstall/pm2.go:173
+#: internal/modules/appinstall/pm2.go:178
+#: internal/modules/appinstall/pm2.go:183
+msgid "Failed to restart container '%(site_name)s': %(error)s"
+msgstr "Контейнерът '%(site_name)s' не можа да бъде рестартиран: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:187
+msgid ""
+"Re-downloaded image and started container for application '%(site_name)s'."
+msgstr ""
+"Образът е изтеглен отново и контейнерът за приложението '%(site_name)s' е "
+"стартиран."
+
+#: internal/modules/appinstall/pm2.go:214
+msgid "Error saving: invalid line \"%(line)s\" - each line must be KEY=VALUE."
+msgstr ""
+"Грешка при запазване: невалиден ред \"%(line)s\" - всеки ред трябва да е "
+"KEY=VALUE."
+
+#: internal/modules/appinstall/pm2.go:222
+msgid "Error saving: could not read docker-compose.yml."
+msgstr "Грешка при запазване: docker-compose.yml не може да бъде прочетен."
+
+#: internal/modules/appinstall/pm2.go:227
+msgid "Error saving: docker-compose.yml has no services."
+msgstr "Грешка при запазване: docker-compose.yml няма услуги."
+
+#: internal/modules/appinstall/pm2.go:232
+msgid ""
+"Error saving: service '%(container_name)s' not found in docker-compose.yml."
+msgstr ""
+"Грешка при запазване: услугата '%(container_name)s' не е намерена в docker-"
+"compose.yml."
+
+#: internal/modules/appinstall/pm2.go:246
+#: internal/modules/appinstall/pm2.go:427
+#: internal/modules/appinstall/pm2.go:457
+msgid "Error saving: %(error)s"
+msgstr "Грешка при запазване: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:251
+msgid ""
+"Environment variables saved, make sure to restart the application for "
+"changes to take effect."
+msgstr ""
+"Променливите на средата са запазени, рестартирайте приложението, за да "
+"влязат в сила промените."
+
+#: internal/modules/appinstall/pm2.go:419
+#: internal/modules/appinstall/pm2.go:448
+msgid "Error saving: %(errs)s"
+msgstr "Грешка при запазване: %(errs)s"
+
+#: internal/modules/appinstall/pm2.go:423
+#: internal/modules/appinstall/pm2.go:452
+msgid "Environment file not found."
+msgstr "Файлът на средата не е намерен."
+
+#: internal/modules/appinstall/pm2.go:430
+#: internal/modules/appinstall/pm2.go:461
+msgid ""
+"Changes saved, make sure to restart the application for changes to take "
+"effect."
+msgstr ""
+"Промените са запазени, рестартирайте приложението, за да влязат в сила."
+
+#: internal/modules/appinstall/pm2.go:528
+msgid "Application '%(site_name)s' removed successfully"
+msgstr "Приложението '%(site_name)s' е премахнато успешно"
+
+#: internal/modules/appinstall/pm2.go:530
+msgid "Service '%(service_key)s' not found in compose file"
+msgstr "Услугата '%(service_key)s' не е намерена в compose файла"
+
+#: internal/modules/appinstall/pm2.go:551
+msgid "Environment variables for '%(service_name)s' removed from .env"
+msgstr "Променливите на средата за '%(service_name)s' са премахнати от .env"
+
+#: internal/modules/appinstall/pm2.go:553
+msgid ".env file not found at %(env_file)s"
+msgstr "Файлът .env не е намерен в %(env_file)s"
+
+#: internal/modules/appinstall/pm2.go:558
+msgid "Application '%(site_name)s' deleted from the database"
+msgstr "Приложението '%(site_name)s' е изтрито от базата данни"
+
+#: internal/modules/appinstall/pm2.go:560
+msgid ""
+"Failed to delete application '%(site_name)s' from the database: %(error)s"
+msgstr ""
+"Приложението '%(site_name)s' не можа да бъде изтрито от базата данни: "
+"%(error)s"
+
 #: internal/modules/appinstall/python.go:11
 #: internal/web/templates/manager/autoinstaller.html:667
 #: internal/web/templates/manager/python_node_apps.html:166
@@ -604,6 +770,29 @@ msgstr "Инсталиране на Ruby приложение"
 #: internal/web/templates/manager/autoinstaller.html:8
 msgid "Install App"
 msgstr "Инсталиране на приложение"
+
+#: internal/modules/backups/backups.go:74
+msgid ""
+"A backup is currently in progress. Please wait until it finishes before "
+"saving settings. Or if you want to interrupt the backup process: stop and "
+"start the backup service."
+msgstr ""
+"В момента се прави резервно копие. Изчакайте да приключи, преди да запазите "
+"настройките. Ако искате да го прекъснете, спрете и стартирайте услугата за "
+"резервни копия."
+
+#: internal/modules/backups/backups.go:79
+msgid "Error updating settings."
+msgstr "Грешка при обновяване на настройките."
+
+#: internal/modules/backups/backups.go:81
+msgid "Settings updated successfully."
+msgstr "Настройките са обновени успешно."
+
+#: internal/modules/backups/backups.go:285
+msgid "Backup target switched to '%(target)s' successfully."
+msgstr ""
+"Местоназначението за резервни копия е сменено на '%(target)s' успешно."
 
 #: internal/modules/backups/render.go:40
 #: internal/modules/dashboard/sections.go:85
@@ -695,6 +884,42 @@ msgstr "Дистанционно архивиране в облачното хр
 #: internal/web/templates/files/trash_partials.html:222
 msgid "Restore"
 msgstr "Възстановяване"
+
+#: internal/modules/backupwizard/backupwizard.go:244
+msgid "A backup is already in progress. Please wait for it to finish."
+msgstr "Вече се прави резервно копие. Моля, изчакайте да приключи."
+
+#: internal/modules/backupwizard/backupwizard.go:249
+#: internal/modules/backupwizard/backupwizard.go:256
+msgid "Failed to start backup."
+msgstr "Резервното копие не можа да бъде стартирано."
+
+#: internal/modules/backupwizard/backupwizard.go:262
+msgid "Backup started. It will appear in the list below once complete."
+msgstr ""
+"Резервното копие е стартирано. Ще се появи в списъка по-долу, когато "
+"приключи."
+
+#: internal/modules/backupwizard/backupwizard.go:275
+msgid "Invalid filename."
+msgstr "Невалидно име на файл."
+
+#: internal/modules/backupwizard/backupwizard.go:285
+msgid "Invalid file path."
+msgstr "Невалиден път на файл."
+
+#: internal/modules/backupwizard/backupwizard.go:291
+#: internal/modules/backupwizard/backupwizard.go:307
+msgid "Backup file not found."
+msgstr "Файлът с резервното копие не е намерен."
+
+#: internal/modules/backupwizard/backupwizard.go:298
+msgid ""
+"This backup is still being created. Please wait until it completes before "
+"downloading."
+msgstr ""
+"Това резервно копие все още се създава. Изчакайте да приключи, преди да го "
+"изтеглите."
 
 #: internal/modules/backupwizard/render.go:35
 #: internal/modules/dashboard/sections.go:90
@@ -857,6 +1082,99 @@ msgid ""
 msgstr ""
 "Varnish е прокси сървър с обратно кеширане, използван като HTTP ускорител за"
 " динамични уеб-сайтове с голямо съдържание, както и за API."
+
+#: internal/modules/cache/varnish.go:153
+msgid ""
+"Failed to start %(webserver)s: could not bring it back up with the Varnish "
+"proxy port"
+msgstr ""
+"%(webserver)s не можа да бъде стартиран: не може да бъде пуснат отново с "
+"прокси порта на Varnish"
+
+#: internal/modules/cache/varnish.go:168
+msgid "Failed to start %(service)s: %(message)s"
+msgstr "%(service)s не можа да бъде стартиран: %(message)s"
+
+#: internal/modules/cache/varnish.go:178
+msgid "Varnish caching is now enabled."
+msgstr "Кеширането с Varnish вече е включено."
+
+#: internal/modules/cache/varnish.go:193
+msgid "Failed to start %(webserver)s after disabling %(service)s: %(message)s"
+msgstr ""
+"%(webserver)s не можа да бъде стартиран след изключване на %(service)s: "
+"%(message)s"
+
+#: internal/modules/cache/varnish.go:201
+msgid "Varnish caching is now disabled."
+msgstr "Кеширането с Varnish вече е изключено."
+
+#: internal/modules/cache/varnish.go:222
+msgid "Varnish cache is now %(new_status)s for domain %(domain_name)s"
+msgstr "Кешът на Varnish вече е %(new_status)s за домейна %(domain_name)s"
+
+#: internal/modules/crons/handlers.go:221
+msgid "Invalid cron file path"
+msgstr "Невалиден път на cron файла"
+
+#: internal/modules/crons/handlers.go:238
+#: internal/modules/crons/handlers.go:476
+msgid "Missing one or more required fields (schedule, command, container)."
+msgstr ""
+"Липсва едно или повече задължителни полета (график, команда, контейнер)."
+
+#: internal/modules/crons/handlers.go:242
+#: internal/modules/crons/handlers.go:372
+msgid "Invalid characters in input."
+msgstr "Невалидни знаци във въведеното."
+
+#: internal/modules/crons/handlers.go:275
+#: internal/modules/crons/handlers.go:302
+#: internal/modules/crons/handlers.go:385
+#: internal/modules/crons/handlers.go:421
+msgid "Error saving cron job. Please try again."
+msgstr "Грешка при запазване на cron задачата. Моля, опитайте отново."
+
+#: internal/modules/crons/handlers.go:280
+msgid "Cron job created and saved successfully!"
+msgstr "Cron задачата е създадена и запазена успешно!"
+
+#: internal/modules/crons/handlers.go:297
+msgid "Invalid crons file format: %(err_msg)s"
+msgstr "Невалиден формат на crons файла: %(err_msg)s"
+
+#: internal/modules/crons/handlers.go:314
+msgid "Crons file saved successfully!"
+msgstr "Crons файлът е запазен успешно!"
+
+#: internal/modules/crons/handlers.go:364
+msgid "Missing one or more required fields."
+msgstr "Липсва едно или повече задължителни полета."
+
+#: internal/modules/crons/handlers.go:368
+msgid "Missing original cron job fields."
+msgstr "Липсват полета на оригиналната cron задача."
+
+#: internal/modules/crons/handlers.go:379
+msgid "Invalid cron file path."
+msgstr "Невалиден път на cron файла."
+
+#: internal/modules/crons/handlers.go:416
+msgid "Cron job not found."
+msgstr "Cron задачата не е намерена."
+
+#: internal/modules/crons/handlers.go:429
+msgid "Cron job was successfully edited."
+msgstr "Cron задачата е редактирана успешно."
+
+#: internal/modules/crons/handlers.go:483
+#: internal/modules/crons/handlers.go:530
+msgid "Error deleting cron job."
+msgstr "Грешка при изтриване на cron задачата."
+
+#: internal/modules/crons/handlers.go:543
+msgid "Cron job was successfully deleted."
+msgstr "Cron задачата е изтрита успешно."
 
 #: internal/modules/crons/render.go:45
 msgid "CronJobs File Editor"
@@ -1724,6 +2042,46 @@ msgstr "Активност на акаунта"
 msgid "Upgrade now"
 msgstr "Надградете сега"
 
+#: internal/modules/dns/crud.go:53
+msgid "Error:Zone file not found for domain: %(domain)s"
+msgstr "Грешка: не е намерен зонален файл за домейна: %(domain)s"
+
+#: internal/modules/dns/crud.go:193
+msgid "Please provide all required fields."
+msgstr "Моля, попълнете всички задължителни полета."
+
+#: internal/modules/dns/crud.go:199
+msgid "Invalid characters in submitted data."
+msgstr "Невалидни знаци в изпратените данни."
+
+#: internal/modules/dns/crud.go:212 internal/modules/dns/list.go:94
+msgid "Zone file not found."
+msgstr "Зоналният файл не е намерен."
+
+#: internal/modules/dns/crud.go:234
+msgid "CNAME record with this name already exists."
+msgstr "Вече съществува CNAME запис с това име."
+
+#: internal/modules/dns/crud.go:240 internal/modules/dns/crud.go:246
+msgid "Error adding DNS record: %(error)s"
+msgstr "Грешка при добавяне на DNS запис: %(error)s"
+
+#: internal/modules/dns/crud.go:253
+msgid "DNS record added successfully."
+msgstr "DNS записът е добавен успешно."
+
+#: internal/modules/dns/crud.go:332
+msgid "Please provide a domain name."
+msgstr "Моля, въведете име на домейн."
+
+#: internal/modules/dns/crud.go:344
+msgid "Failed to restart DNS zone: %(error)s"
+msgstr "DNS зоната не можа да бъде рестартирана: %(error)s"
+
+#: internal/modules/dns/crud.go:350
+msgid "DNS zone restarted successfully."
+msgstr "DNS зоната е рестартирана успешно."
+
 #: internal/modules/dns/render.go:62
 #: internal/web/templates/domains/domains.html:284
 msgid "Edit DNS Zone"
@@ -1735,10 +2093,70 @@ msgstr "Редактиране на DNS зона"
 msgid "Edit DNS File"
 msgstr "Редактиране на DNS файл"
 
-#: internal/modules/docker/containers.go:171
-#: internal/modules/docker/containers.go:187
+#: internal/modules/docker/actions.go:276
+msgid "Image pulled and container %(container_name)s activated successfully."
+msgstr ""
+"Образът е изтеглен и контейнерът %(container_name)s е активиран успешно."
+
+#: internal/modules/docker/actions.go:277
+msgid ""
+"Image pulled and container %(container_name)s deactivated successfully."
+msgstr ""
+"Образът е изтеглен и контейнерът %(container_name)s е деактивиран успешно."
+
+#: internal/modules/docker/actions.go:278
+msgid "Image pulled and container %(container_name)s restarted successfully."
+msgstr ""
+"Образът е изтеглен и контейнерът %(container_name)s е рестартиран успешно."
+
+#: internal/modules/docker/actions.go:282
+msgid "Container %(container_name)s restarted successfully."
+msgstr "Контейнерът %(container_name)s е рестартиран успешно."
+
+#: internal/modules/docker/actions.go:286
+msgid "Container %(container_name)s deactivated successfully."
+msgstr "Контейнерът %(container_name)s е деактивиран успешно."
+
+#: internal/modules/docker/actions.go:288
+msgid "Container %(container_name)s activated successfully."
+msgstr "Контейнерът %(container_name)s е активиран успешно."
+
+#: internal/modules/docker/containers.go:91
+msgid ""
+"Missing environment variables. Please check the configuration or restore "
+"from backup."
+msgstr ""
+"Липсват променливи на средата. Проверете конфигурацията или възстановете от "
+"резервно копие."
+
+#: internal/modules/docker/containers.go:172
+#: internal/modules/docker/containers.go:188
 msgid "Add service"
 msgstr "Добави услуга"
+
+#: internal/modules/docker/containers.go:291
+msgid "Container %(service_name)s created successfully!"
+msgstr "Контейнерът %(service_name)s е създаден успешно!"
+
+#: internal/modules/docker/containers.go:434
+msgid "Container updated successfully."
+msgstr "Контейнерът е обновен успешно."
+
+#: internal/modules/docker/images.go:32
+msgid "The image of %(service)s can't be changed."
+msgstr "Образът на %(service)s не може да бъде сменен."
+
+#: internal/modules/docker/images.go:39
+msgid "Invalid image tag."
+msgstr "Невалиден таг на образа."
+
+#: internal/modules/docker/images.go:48
+msgid "Successfully changed image tag for %(service)s to %(value)s!"
+msgstr "Тагът на образа за %(service)s е сменен успешно на %(value)s!"
+
+#: internal/modules/docker/images.go:51
+msgid "Failed to stop the service in order to delete old image."
+msgstr "Услугата не можа да бъде спряна, за да се изтрие старият образ."
 
 #: internal/modules/docker/render.go:392
 #: internal/web/templates/dashboard/onboarding.html:498
@@ -1841,6 +2259,54 @@ msgstr "Уеб сървър"
 msgid "Change docker image tag"
 msgstr "Промяна на етикета на Docker образа"
 
+#: internal/modules/docker/switch.go:60
+msgid ""
+"Existing databases must first be deleted and %(mysql_type)s container "
+"stopped in order to change mysql type."
+msgstr ""
+"За да смените типа MySQL, първо изтрийте съществуващите бази данни и спрете "
+"контейнера %(mysql_type)s."
+
+#: internal/modules/docker/switch.go:73
+msgid "Already using %(flavor)s."
+msgstr "Вече се използва %(flavor)s."
+
+#: internal/modules/docker/switch.go:107
+msgid "Failed to update mysql image: %(error)s"
+msgstr "MySQL образът не можа да бъде обновен: %(error)s"
+
+#: internal/modules/docker/switch.go:127
+msgid "Failed to start %(target_service)s."
+msgstr "%(target_service)s не можа да бъде стартиран."
+
+#: internal/modules/docker/switch.go:143
+msgid "Successfully switched to %(new_sql)s!"
+msgstr "Успешно превключване към %(new_sql)s!"
+
+#: internal/modules/docker/switch.go:157
+msgid "Invalid mysql server selected"
+msgstr "Избран е невалиден MySQL сървър"
+
+#: internal/modules/docker/switch.go:202
+msgid ""
+"Existing domains (%(count)s) must first be removed in order to change "
+"webserver."
+msgstr ""
+"За да смените уеб сървъра, първо премахнете съществуващите домейни "
+"(%(count)s)."
+
+#: internal/modules/docker/switch.go:234
+msgid "Failed to start %(new_webserver)s."
+msgstr "%(new_webserver)s не можа да бъде стартиран."
+
+#: internal/modules/docker/switch.go:253
+msgid "Successfully switched to %(new_webserver)s!"
+msgstr "Успешно превключване към %(new_webserver)s!"
+
+#: internal/modules/docker/switch.go:266
+msgid "Invalid web server selected"
+msgstr "Избран е невалиден уеб сървър"
+
 #: internal/modules/docker/terminal.go:36
 #: internal/web/templates/docker/terminal.html:20
 #: internal/web/templates/docker/terminal.html:224
@@ -1851,11 +2317,139 @@ msgstr "Терминал на контейнера"
 msgid "Select Container"
 msgstr "Изберете контейнер"
 
+#: internal/modules/dokuwiki/install.go:261
+msgid "DokuWiki installed successfully on %(selected_domain)s"
+msgstr "DokuWiki е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/dokuwiki/manage.go:33 internal/modules/drupal/manage.go:54
+#: internal/modules/flarum/manage.go:42 internal/modules/joomla/manage.go:42
+#: internal/modules/matomo/manage.go:42
+#: internal/modules/mediawiki/manage.go:43
+#: internal/modules/moodle/manage.go:39
+#: internal/modules/nextcloud/manage.go:42 internal/modules/ojs/manage.go:33
+#: internal/modules/opencart/manage.go:42 internal/modules/phpbb/manage.go:37
+#: internal/modules/prestashop/manage.go:42
+#: internal/modules/sofawiki/manage.go:33
+#: internal/modules/tinyfilemanager/manage.go:33
+#: internal/modules/tinyphotogallery/manage.go:33
+#: internal/modules/websites/websitebuilder.go:64
+#: internal/modules/websites/websitebuilder.go:102
+#: internal/modules/wordpress/manage.go:265
+#: internal/modules/wordpress/manage.go:359
+msgid "No data found for the provided site ID"
+msgstr "Няма намерени данни за посочения ID на сайт"
+
+#: internal/modules/dokuwiki/manage.go:42
+msgid "DokuWiki installation not found in the database"
+msgstr "Инсталацията на DokuWiki не е намерена в базата данни"
+
+#: internal/modules/dokuwiki/manage.go:68
+msgid "An error occurred during DokuWiki uninstall."
+msgstr "Възникна грешка при деинсталирането на DokuWiki."
+
+#: internal/modules/dokuwiki/manage.go:79
+msgid "DokuWiki uninstalled successfully"
+msgstr "DokuWiki е деинсталиран успешно"
+
 #: internal/modules/dokuwiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:370
 #: internal/web/templates/manager/dokuwiki_install.html:9
 msgid "Install DokuWiki"
 msgstr "Инсталиране на DokuWiki"
+
+#: internal/modules/domains/capitalize.go:83
+msgid "Domain has been capitalized to %(capitalized_domain)s"
+msgstr "Домейнът вече се показва като %(capitalized_domain)s"
+
+#: internal/modules/domains/delete.go:39
+#: internal/modules/domains/redirect.go:95
+msgid "Domain name not provided."
+msgstr "Не е посочено име на домейн."
+
+#: internal/modules/domains/delete.go:54
+msgid "Domain %(domain_url)s deleted successfully."
+msgstr "Домейнът %(domain_url)s е изтрит успешно."
+
+#: internal/modules/domains/delete.go:56
+msgid "Failed to delete domain %(domain_url)s. Output: %(output)s"
+msgstr "Домейнът %(domain_url)s не можа да бъде изтрит. Изход: %(output)s"
+
+#: internal/modules/domains/docroot.go:24 internal/modules/domains/ssl.go:50
+#: internal/modules/domains/suspend.go:26
+#: internal/modules/domains/suspend.go:73
+msgid "Invalid request. Domain name must be provided."
+msgstr "Невалидна заявка. Трябва да бъде посочено име на домейн."
+
+#: internal/modules/domains/docroot.go:51
+msgid "Docroot must be inside '/var/www/html/' directory."
+msgstr "Docroot трябва да е в директорията '/var/www/html/'."
+
+#: internal/modules/domains/logs.go:53 internal/modules/waf/handlers_log.go:51
+msgid "Log file not found for domain %(domain_name)s."
+msgstr "Лог файлът за домейна %(domain_name)s не е намерен."
+
+#: internal/modules/domains/logs.go:57 internal/modules/waf/handlers_log.go:55
+msgid "Log file for domain %(domain_name)s is empty."
+msgstr "Лог файлът за домейна %(domain_name)s е празен."
+
+#: internal/modules/domains/logs.go:63 internal/modules/waf/handlers_log.go:61
+msgid "Error reading log file: %(error)s"
+msgstr "Грешка при четене на лог файла: %(error)s"
+
+#: internal/modules/domains/new.go:76
+msgid "Domain name is required"
+msgstr "Името на домейна е задължително"
+
+#: internal/modules/domains/new.go:97
+msgid "Domain name contains invalid characters."
+msgstr "Името на домейна съдържа невалидни знаци."
+
+#: internal/modules/domains/new.go:107
+#: internal/web/templates/domains/new.html:217
+msgid ""
+"Paths for both public and secret files must be set for importing .onion "
+"domain."
+msgstr ""
+"Пътищата за публичните и тайните файлове трябва да бъдат зададени за "
+"импортиране на домейн .onion."
+
+#: internal/modules/domains/new.go:113
+msgid "Path for public file must start with /var/www/html/"
+msgstr "Пътят до публичния файл трябва да започва с /var/www/html/"
+
+#: internal/modules/domains/new.go:118
+msgid "Public key file: %(onion_public_key)s does not exist!"
+msgstr "Файлът с публичния ключ %(onion_public_key)s не съществува!"
+
+#: internal/modules/domains/new.go:124
+msgid "Path for secret file must start with /var/www/html/"
+msgstr "Пътят до тайния файл трябва да започва с /var/www/html/"
+
+#: internal/modules/domains/new.go:129
+msgid "Secret key file: %(onion_secret_key)s does not exist!"
+msgstr "Файлът с тайния ключ %(onion_secret_key)s не съществува!"
+
+#: internal/modules/domains/redirect.go:47
+msgid "Domain %(domain_url)s does not have a redirect URL configured."
+msgstr "Домейнът %(domain_url)s няма конфигуриран URL за пренасочване."
+
+#: internal/modules/domains/redirect.go:76
+msgid ""
+"Successfully deleted the redirect link %(redirect_url)s for domain "
+"%(domain_url)s"
+msgstr ""
+"Пренасочването %(redirect_url)s за домейна %(domain_url)s е изтрито успешно"
+
+#: internal/modules/domains/redirect.go:103
+msgid "Invalid URL. Please provide a URL with 'http://' or 'https://' prefix."
+msgstr "Невалиден URL. Въведете URL с префикс 'http://' или 'https://'."
+
+#: internal/modules/domains/redirect.go:122
+msgid ""
+"Successfully created redirect from domain %(domain_url)s to %(redirect_url)s"
+msgstr ""
+"Пренасочването от домейна %(domain_url)s към %(redirect_url)s е създадено "
+"успешно"
 
 #: internal/modules/domains/render.go:99
 #: internal/web/templates/domains/new.html:128
@@ -1872,11 +2466,213 @@ msgstr "Редактиране на файла VirtualHosts"
 msgid "Redirect Domain to URL"
 msgstr "Пренасочване на домейн към URL адрес"
 
+#: internal/modules/domains/ssl.go:111
+msgid "Invalid action! Only AutoSSL or Custom are available."
+msgstr "Невалидно действие! Налични са само AutoSSL или Custom."
+
+#: internal/modules/domains/ssl.go:135
+msgid "Certificate and private key are required."
+msgstr "Сертификатът и частният ключ са задължителни."
+
+#: internal/modules/domains/ssl.go:139
+msgid "Invalid certificate."
+msgstr "Невалиден сертификат."
+
+#: internal/modules/domains/ssl.go:143
+msgid "Invalid private key."
+msgstr "Невалиден частен ключ."
+
+#: internal/modules/domains/vhost.go:35
+msgid "Invalid request. Domain name and Vhost content must be provided."
+msgstr ""
+"Невалидна заявка. Трябва да бъдат посочени име на домейн и съдържание на "
+"vhost."
+
+#: internal/modules/drupal/install.go:308
+msgid "Drupal installed successfully on %(selected_domain)s"
+msgstr "Drupal е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/drupal/manage.go:63
+msgid "Drupal installation not found in the database"
+msgstr "Инсталацията на Drupal не е намерена в базата данни"
+
+#: internal/modules/drupal/manage.go:88
+msgid "Database name or user not found in settings.php"
+msgstr "Името на базата данни или потребителят не са намерени в settings.php"
+
+#: internal/modules/drupal/manage.go:109
+msgid "An error occurred during Drupal uninstall."
+msgstr "Възникна грешка при деинсталирането на Drupal."
+
+#: internal/modules/drupal/manage.go:120
+msgid "Drupal uninstalled successfully"
+msgstr "Drupal е деинсталиран успешно"
+
 #: internal/modules/drupal/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:111
 #: internal/web/templates/manager/drupal_install.html:9
 msgid "Install Drupal"
 msgstr "Инсталиране на Drupal"
+
+#: internal/modules/dynamicdns/handlers.go:63
+msgid "You do not own this domain."
+msgstr "Не сте собственик на този домейн."
+
+#: internal/modules/dynamicdns/handlers.go:77
+#: internal/modules/dynamicdns/handlers.go:101
+msgid "Invalid subdomain."
+msgstr "Невалиден поддомейн."
+
+#: internal/modules/dynamicdns/handlers.go:81
+#: internal/modules/dynamicdns/handlers.go:105
+msgid "Invalid IP address."
+msgstr "Невалиден IP адрес."
+
+#: internal/modules/dynamicdns/handlers.go:87
+msgid "Dynamic DNS entry created."
+msgstr "Записът за динамичен DNS е създаден."
+
+#: internal/modules/dynamicdns/handlers.go:93
+#: internal/modules/dynamicdns/handlers.go:125
+msgid "Invalid line number."
+msgstr "Невалиден номер на ред."
+
+#: internal/modules/dynamicdns/handlers.go:109
+msgid "Invalid token."
+msgstr "Невалиден токен."
+
+#: internal/modules/dynamicdns/handlers.go:116
+msgid "Dynamic DNS entry updated."
+msgstr "Записът за динамичен DNS е обновен."
+
+#: internal/modules/dynamicdns/handlers.go:118
+msgid "Failed to update Dynamic DNS entry."
+msgstr "Записът за динамичен DNS не можа да бъде обновен."
+
+#: internal/modules/dynamicdns/handlers.go:130
+msgid "Dynamic DNS entry deleted."
+msgstr "Записът за динамичен DNS е изтрит."
+
+#: internal/modules/dynamicdns/handlers.go:132
+msgid "Failed to delete Dynamic DNS entry."
+msgstr "Записът за динамичен DNS не можа да бъде изтрит."
+
+#: internal/modules/emails/aliases.go:203
+msgid "Error: a valid target email address is required."
+msgstr "Грешка: изисква се валиден целеви имейл адрес."
+
+#: internal/modules/emails/aliases.go:209
+msgid "Error adding alias: %(output)s"
+msgstr "Грешка при добавяне на псевдоним: %(output)s"
+
+#: internal/modules/emails/aliases.go:216
+msgid "Alias %(email)s → %(target)s added successfully."
+msgstr "Псевдонимът %(email)s → %(target)s е добавен успешно."
+
+#: internal/modules/emails/aliases.go:250
+msgid "Error deleting alias %(email)s -> %(target)s: %(output)s"
+msgstr ""
+"Грешка при изтриване на псевдонима %(email)s -> %(target)s: %(output)s"
+
+#: internal/modules/emails/aliases.go:258
+msgid "Alias %(email)s deleted successfully."
+msgstr "Псевдонимът %(email)s е изтрит успешно."
+
+#: internal/modules/emails/aliases.go:306
+#: internal/modules/emails/emails.go:349
+msgid "Error: %(field)s not provided."
+msgstr "Грешка: %(field)s не е посочено."
+
+#: internal/modules/emails/aliases.go:313
+#: internal/modules/emails/emails.go:362
+msgid "Username can only contain letters, numbers, and . _ % + - (no @)."
+msgstr ""
+"Потребителското име може да съдържа само букви, цифри и . _ % + - (без @)."
+
+#: internal/modules/emails/aliases.go:318
+msgid "Error: target must be a valid email address."
+msgstr "Грешка: целта трябва да е валиден имейл адрес."
+
+#: internal/modules/emails/aliases.go:331
+msgid "Error creating alias: %(output)s"
+msgstr "Грешка при създаване на псевдоним: %(output)s"
+
+#: internal/modules/emails/aliases.go:338
+msgid "Alias %(source)s → %(target)s created successfully."
+msgstr "Псевдонимът %(source)s → %(target)s е създаден успешно."
+
+#: internal/modules/emails/default.go:86
+msgid "Invalid destination email address."
+msgstr "Невалиден целеви имейл адрес."
+
+#: internal/modules/emails/default.go:91
+msgid "Failed to update default email: %(error)s"
+msgstr "Имейлът по подразбиране не можа да бъде обновен: %(error)s"
+
+#: internal/modules/emails/emails.go:374
+msgid "Error: reached max number of email accounts on the hosting plan."
+msgstr "Грешка: достигнат е максималният брой имейл акаунти за хостинг плана."
+
+#: internal/modules/emails/emails.go:396
+msgid "Failed to add email %(email)s: %(msg)s"
+msgstr "Имейлът %(email)s не можа да бъде добавен: %(msg)s"
+
+#: internal/modules/emails/emails.go:415
+msgid "Email %(email)s added successfully."
+msgstr "Имейлът %(email)s е добавен успешно."
+
+#: internal/modules/emails/emails.go:683
+msgid "Settings saved for email %(email)s"
+msgstr "Настройките за имейла %(email)s са запазени"
+
+#: internal/modules/emails/emails.go:694
+msgid "Email %(email)s deleted successfully."
+msgstr "Имейлът %(email)s е изтрит успешно."
+
+#: internal/modules/emails/emails.go:697
+msgid "ERROR: Failed to delete email %(email)s: %(output)s"
+msgstr "ГРЕШКА: имейлът %(email)s не можа да бъде изтрит: %(output)s"
+
+#: internal/modules/emails/emails.go:762
+msgid "Error: Invalid configuration type."
+msgstr "Грешка: невалиден тип конфигурация."
+
+#: internal/modules/emails/filters.go:114
+msgid "No content provided."
+msgstr "Не е предоставено съдържание."
+
+#: internal/modules/emails/filters.go:118
+msgid "Error saving filter."
+msgstr "Грешка при запазване на филтъра."
+
+#: internal/modules/emails/filters.go:127
+msgid "Filter saved successfully."
+msgstr "Филтърът е запазен успешно."
+
+#: internal/modules/emails/import.go:78
+msgid "Error: No file uploaded."
+msgstr "Грешка: не е качен файл."
+
+#: internal/modules/emails/import.go:92
+msgid "Error reading file: %(error)s"
+msgstr "Грешка при четене на файла: %(error)s"
+
+#: internal/modules/emails/import.go:97
+msgid "Error: File must have at least 2 columns: email, password"
+msgstr "Грешка: файлът трябва да има поне 2 колони: имейл, парола"
+
+#: internal/modules/emails/import.go:103
+msgid ""
+"Error: File is invalid - the first column must contain valid email "
+"addresses."
+msgstr ""
+"Грешка: файлът е невалиден - първата колона трябва да съдържа валидни имейл "
+"адреси."
+
+#: internal/modules/emails/import.go:164 internal/modules/emails/import.go:172
+#: internal/modules/emails/import.go:177
+msgid "Error: No import data found, please try again."
+msgstr "Грешка: не са намерени данни за импорт, моля, опитайте отново."
 
 #: internal/modules/emails/render.go:132
 #: internal/web/templates/files/ftp_new.html:172
@@ -1908,51 +2704,328 @@ msgstr "Имейл по подразбиране"
 msgid "Import Emails"
 msgstr "Импортиране на е-писма"
 
-#: internal/modules/filemanager/archive.go:302
+#: internal/modules/emails/webmail.go:215
+msgid ""
+"Webmail service is not yet started, please contact Administrator to enable "
+"it."
+msgstr ""
+"Услугата за уеб поща все още не е стартирана, свържете се с администратора, "
+"за да я активира."
+
+#: internal/modules/filemanager/archive.go:59
+msgid "Error occurred before starting archive extraction: %(error)s"
+msgstr "Възникна грешка преди започване на разархивирането: %(error)s"
+
+#: internal/modules/filemanager/archive.go:92
+msgid "Unsupported file format!"
+msgstr "Неподдържан формат на файла!"
+
+#: internal/modules/filemanager/archive.go:98
+msgid "Extraction timed out after %(minutes)s minutes!"
+msgstr "Разархивирането прекъсна след %(minutes)s минути!"
+
+#: internal/modules/filemanager/archive.go:101
+msgid "Extraction failed."
+msgstr "Разархивирането не бе успешно."
+
+#: internal/modules/filemanager/archive.go:107
+msgid "File extracted successfully"
+msgstr "Файлът е разархивиран успешно"
+
+#: internal/modules/filemanager/archive.go:228
+msgid "Missing required form data for compression: %(missing)s"
+msgstr "Липсват задължителни данни от формата за компресиране: %(missing)s"
+
+#: internal/modules/filemanager/archive.go:284
+msgid "Unsupported archive format."
+msgstr "Неподдържан формат на архива."
+
+#: internal/modules/filemanager/archive.go:295
+msgid "Archive creation failed: %(err_msg)s"
+msgstr "Архивът не можа да бъде създаден: %(err_msg)s"
+
+#: internal/modules/filemanager/archive.go:303
 msgid "Failed to set archive ownership"
 msgstr "Собственикът на архива не можа да бъде зададен"
 
-#: internal/modules/filemanager/archive.go:304
+#: internal/modules/filemanager/archive.go:305
 msgid "FILEMANAGER - Archive created successfully."
 msgstr "Архивът е създаден успешно."
 
-#: internal/modules/filemanager/crud.go:57
+#: internal/modules/filemanager/crud.go:34
+msgid "Filename is missing"
+msgstr "Липсва име на файла"
+
+#: internal/modules/filemanager/crud.go:45
+msgid "Error creating file: already exists."
+msgstr "Грешка при създаване на файла: вече съществува."
+
+#: internal/modules/filemanager/crud.go:51
+msgid "Error creating file! Check permissions."
+msgstr "Грешка при създаване на файла! Проверете правата."
+
+#: internal/modules/filemanager/crud.go:58
 msgid "Failed to set ownership for the new file."
 msgstr "Собственикът на новия файл не можа да бъде зададен."
 
-#: internal/modules/filemanager/crud.go:60
+#: internal/modules/filemanager/crud.go:61
 msgid "File created successfully."
 msgstr "Файлът е създаден успешно."
 
-#: internal/modules/filemanager/crud.go:105
+#: internal/modules/filemanager/crud.go:88
+msgid "Foldername is missing"
+msgstr "Липсва име на папката"
+
+#: internal/modules/filemanager/crud.go:100
+msgid "Error creating directory! Check permissions."
+msgstr "Грешка при създаване на директорията! Проверете правата."
+
+#: internal/modules/filemanager/crud.go:106
 msgid "Failed to set ownership for the new folder."
 msgstr "Собственикът на новата папка не можа да бъде зададен."
 
-#: internal/modules/filemanager/crud.go:107
+#: internal/modules/filemanager/crud.go:108
 msgid "Folder created successfully."
 msgstr "Папката е създадена успешно."
 
-#: internal/modules/filemanager/crud.go:273
+#: internal/modules/filemanager/crud.go:146
+msgid ""
+"Error renaming item! Check permissions or if the new name already exists."
+msgstr ""
+"Грешка при преименуване! Проверете правата или дали новото име вече "
+"съществува."
+
+#: internal/modules/filemanager/crud.go:152
+msgid "File renamed successfully."
+msgstr "Файлът е преименуван успешно."
+
+#: internal/modules/filemanager/crud.go:233
+msgid "Invalid permissions format."
+msgstr "Невалиден формат на правата."
+
+#: internal/modules/filemanager/crud.go:274
 msgid "Permissions changed."
 msgstr "Правата са променени."
 
-#: internal/modules/filemanager/editor.go:138
+#: internal/modules/filemanager/crud.go:276
+msgid "%(changed)s items updated."
+msgstr "Обновени елементи: %(changed)s."
+
+#: internal/modules/filemanager/crud.go:279
+msgid "Error changing permissions for: %(errored)s. Check ownership."
+msgstr ""
+"Грешка при промяна на правата за: %(errored)s. Проверете собствеността."
+
+#: internal/modules/filemanager/editor.go:115
+#: internal/modules/filemanager/editor.go:280
+msgid "Editing this file type is not allowed."
+msgstr "Редактирането на този тип файл не е разрешено."
+
+#: internal/modules/filemanager/editor.go:139
 msgid "Error saving file."
 msgstr "Грешка при запазване на файла."
 
-#: internal/modules/filemanager/editor.go:141
+#: internal/modules/filemanager/editor.go:142
 msgid "File saved successfully"
 msgstr "Файлът е запазен успешно"
+
+#: internal/modules/filemanager/editor.go:160
+#: internal/modules/filemanager/editor.go:298
+msgid "Error accessing file size."
+msgstr "Грешка при достъп до размера на файла."
+
+#: internal/modules/filemanager/editor.go:165
+msgid ""
+"File is too large to open in the editor (limit is %(file_limit_mb)s MB)"
+msgstr "Файлът е твърде голям за редактора (лимитът е %(file_limit_mb)s MB)"
+
+#: internal/modules/filemanager/editor.go:173
+msgid "Error reading file"
+msgstr "Грешка при четене на файла"
+
+#: internal/modules/filemanager/editor.go:215
+#: internal/modules/filemanager/editor.go:226
+msgid "Error retrieving file size."
+msgstr "Грешка при извличане на размера на файла."
+
+#: internal/modules/filemanager/editor.go:220
+msgid "File size exceeds %(file_limit_mb)sMB limit. Download aborted."
+msgstr ""
+"Размерът на файла надвишава лимита от %(file_limit_mb)s MB. Изтеглянето е "
+"прекратено."
+
+#: internal/modules/filemanager/editor.go:302
+msgid ""
+"File is too large to view in the browser (limit is %(file_limit_mb)s MB)"
+msgstr ""
+"Файлът е твърде голям за преглед в браузъра (лимитът е %(file_limit_mb)s MB)"
+
+#: internal/modules/filemanager/editor.go:324
+msgid "Error opening file."
+msgstr "Грешка при отваряне на файла."
+
+#: internal/modules/filemanager/listing.go:86
+#: internal/modules/trash/trash.go:88
+msgid "Directory does not exist."
+msgstr "Директорията не съществува."
+
+#: internal/modules/filemanager/listing.go:113
+msgid "Error accessing the specified directory."
+msgstr "Грешка при достъп до посочената директория."
 
 #: internal/modules/filemanager/render.go:236
 msgid "Upload Files"
 msgstr "Качване на файлове"
+
+#: internal/modules/filemanager/upload.go:62
+msgid "No files were uploaded"
+msgstr "Не са качени файлове"
+
+#: internal/modules/filemanager/upload.go:122
+msgid "Files uploaded successfully."
+msgstr "Файловете са качени успешно."
+
+#: internal/modules/filemanager/upload.go:124
+msgid "Some files failed: %(errs)s"
+msgstr "Някои файлове не успяха: %(errs)s"
+
+#: internal/modules/flarum/install.go:308
+msgid "Flarum installed successfully on %(selected_domain)s"
+msgstr "Flarum е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/flarum/manage.go:51
+msgid "Flarum installation not found in the database"
+msgstr "Инсталацията на Flarum не е намерена в базата данни"
+
+#: internal/modules/flarum/manage.go:76 internal/modules/moodle/manage.go:77
+#: internal/modules/opencart/manage.go:75
+msgid "Database name or user not found in config.php"
+msgstr "Името на базата данни или потребителят не са намерени в config.php"
+
+#: internal/modules/flarum/manage.go:97
+msgid "An error occurred during Flarum uninstall."
+msgstr "Възникна грешка при деинсталирането на Flarum."
+
+#: internal/modules/flarum/manage.go:108
+msgid "Flarum uninstalled successfully"
+msgstr "Flarum е деинсталиран успешно"
 
 #: internal/modules/flarum/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:300
 #: internal/web/templates/manager/flarum_install.html:9
 msgid "Install Flarum"
 msgstr "Инсталиране на Flarum"
+
+#: internal/modules/ftp/ftp.go:104
+msgid ""
+"FTP service is not yet started, please contact Administrator to enable it."
+msgstr ""
+"FTP услугата все още не е стартирана, свържете се с администратора, за да я "
+"активира."
+
+#: internal/modules/ftp/ftp.go:182
+msgid "No currently active FTP connections"
+msgstr "В момента няма активни FTP връзки"
+
+#: internal/modules/ftp/ftp.go:213
+msgid "FTP username not provided."
+msgstr "Не е посочено FTP потребителско име."
+
+#: internal/modules/ftp/ftp.go:217
+msgid "FTP domain not provided."
+msgstr "Не е посочен FTP домейн."
+
+#: internal/modules/ftp/ftp.go:225
+msgid "FTP path not provided."
+msgstr "Не е посочен FTP път."
+
+#: internal/modules/ftp/ftp.go:229
+msgid "FTP password not provided."
+msgstr "Не е посочена FTP парола."
+
+#: internal/modules/ftp/ftp.go:235
+msgid "The FTP path must start with %(real_path)s"
+msgstr "FTP пътят трябва да започва с %(real_path)s"
+
+#: internal/modules/ftp/ftp.go:241
+msgid ""
+"Username %(ftp_username)s contains invalid characters, only allowed: "
+"BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
+msgstr ""
+"Потребителското име %(ftp_username)s съдържа невалидни знаци, разрешени са "
+"само: BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
+
+#: internal/modules/ftp/ftp.go:247
+msgid "Error creating FTP user %(ftp_username)s: %(output)s"
+msgstr "Грешка при създаване на FTP потребител %(ftp_username)s: %(output)s"
+
+#: internal/modules/ftp/ftp.go:253
+msgid "FTP account %(ftp_username)s created successfully."
+msgstr "FTP акаунтът %(ftp_username)s е създаден успешно."
+
+#: internal/modules/ftp/ftp.go:256
+msgid "Failed to create FTP account %(ftp_username)s: %(output)s"
+msgstr "FTP акаунтът %(ftp_username)s не можа да бъде създаден: %(output)s"
+
+#: internal/modules/ftp/ftp.go:280 internal/modules/ftp/ftp.go:301
+#: internal/modules/ftp/ftp.go:357
+msgid "Invalid FTP username."
+msgstr "Невалидно FTP потребителско име."
+
+#: internal/modules/ftp/ftp.go:292
+msgid "FTP account %(username_to_delete)s deleted successfully!"
+msgstr "FTP акаунтът %(username_to_delete)s е изтрит успешно!"
+
+#: internal/modules/ftp/ftp.go:295
+msgid ""
+"Failed to delete FTP account %(username_to_delete)s. Output: %(output)s"
+msgstr ""
+"FTP акаунтът %(username_to_delete)s не можа да бъде изтрит. Изход: "
+"%(output)s"
+
+#: internal/modules/ftp/ftp.go:313
+msgid "Missing new password"
+msgstr "Липсва нова парола"
+
+#: internal/modules/ftp/ftp.go:325
+msgid "Error changing FTP password: %(output)s"
+msgstr "Грешка при смяна на FTP паролата: %(output)s"
+
+#: internal/modules/ftp/ftp.go:330
+msgid "FTP password changed successfully for user %(username)s"
+msgstr "FTP паролата е сменена успешно за потребителя %(username)s"
+
+#: internal/modules/ftp/ftp.go:332
+msgid "Failed to change FTP password: %(output)s"
+msgstr "FTP паролата не можа да бъде сменена: %(output)s"
+
+#: internal/modules/ftp/ftp.go:367
+msgid "Error changing FTP path for user %(username_to_modify)s: %(output)s"
+msgstr ""
+"Грешка при смяна на FTP пътя за потребителя %(username_to_modify)s: "
+"%(output)s"
+
+#: internal/modules/ftp/ftp.go:372
+msgid "FTP path changed successfully for user %(username_to_modify)s"
+msgstr "FTP пътят е сменен успешно за потребителя %(username_to_modify)s"
+
+#: internal/modules/ftp/ftp.go:374
+msgid "Failed to change FTP path for user %(username_to_modify)s: %(output)s"
+msgstr ""
+"FTP пътят за потребителя %(username_to_modify)s не можа да бъде сменен: "
+"%(output)s"
+
+#: internal/modules/ftp/ftp.go:385
+msgid "Invalid configuration type, please use cyberduck or filezilla only!"
+msgstr "Невалиден тип конфигурация, използвайте само cyberduck или filezilla!"
+
+#: internal/modules/ftp/ftp.go:398
+msgid "User has no FTP accounts."
+msgstr "Потребителят няма FTP акаунти."
+
+#: internal/modules/ftp/ftp.go:415
+msgid "FTP account not found."
+msgstr "FTP акаунтът не е намерен."
 
 #: internal/modules/ftp/render.go:76
 #: internal/web/templates/files/ftp_new.html:9
@@ -1967,9 +3040,38 @@ msgstr "Смяна на FTP парола"
 msgid "Change FTP Path"
 msgstr "Смяна на FTP път"
 
+#: internal/modules/goaccess/goaccess.go:58
+msgid ""
+"Stats file for domain %(domain_name)s not found. Data is generated every "
+"24h."
+msgstr ""
+"Файлът със статистика за домейна %(domain_name)s не е намерен. Данните се "
+"генерират на всеки 24 ч."
+
 #: internal/modules/ipblocker/handlers.go:54
 msgid "Failed to block IP addresses - please try again"
 msgstr "IP адресите не можаха да бъдат блокирани - моля, опитайте отново"
+
+#: internal/modules/joomla/install.go:318
+msgid "Joomla installed successfully on %(selected_domain)s"
+msgstr "Joomla е инсталирана успешно на %(selected_domain)s"
+
+#: internal/modules/joomla/manage.go:51
+msgid "Joomla installation not found in the database"
+msgstr "Инсталацията на Joomla не е намерена в базата данни"
+
+#: internal/modules/joomla/manage.go:75
+msgid "Database name or user not found in configuration.php"
+msgstr ""
+"Името на базата данни или потребителят не са намерени в configuration.php"
+
+#: internal/modules/joomla/manage.go:96
+msgid "An error occurred during Joomla uninstall."
+msgstr "Възникна грешка при деинсталирането на Joomla."
+
+#: internal/modules/joomla/manage.go:107
+msgid "Joomla uninstalled successfully"
+msgstr "Joomla е деинсталирана успешно"
 
 #: internal/modules/joomla/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:79
@@ -1981,17 +3083,265 @@ msgstr "Инсталиране на Joomla"
 msgid "Malware Quarantine"
 msgstr "Карантина за зловреден софтуер"
 
+#: internal/modules/matomo/install.go:368
+msgid "Matomo installed successfully on %(selected_domain)s"
+msgstr "Matomo е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/matomo/manage.go:51
+msgid "Matomo installation not found in the database"
+msgstr "Инсталацията на Matomo не е намерена в базата данни"
+
+#: internal/modules/matomo/manage.go:75
+msgid "Database name or user not found in config/config.ini.php"
+msgstr ""
+"Името на базата данни или потребителят не са намерени в "
+"config/config.ini.php"
+
+#: internal/modules/matomo/manage.go:98
+msgid "An error occurred during Matomo uninstall."
+msgstr "Възникна грешка при деинсталирането на Matomo."
+
+#: internal/modules/matomo/manage.go:109
+msgid "Matomo uninstalled successfully"
+msgstr "Matomo е деинсталиран успешно"
+
 #: internal/modules/matomo/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:440
 #: internal/web/templates/manager/matomo_install.html:9
 msgid "Install Matomo"
 msgstr "Инсталиране на Matomo"
 
+#: internal/modules/mediawiki/install.go:340
+msgid "MediaWiki installed successfully on %(selected_domain)s"
+msgstr "MediaWiki е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/mediawiki/manage.go:52
+msgid "MediaWiki installation not found in the database"
+msgstr "Инсталацията на MediaWiki не е намерена в базата данни"
+
+#: internal/modules/mediawiki/manage.go:76
+msgid "Database name or user not found in LocalSettings.php"
+msgstr ""
+"Името на базата данни или потребителят не са намерени в LocalSettings.php"
+
+#: internal/modules/mediawiki/manage.go:99
+msgid "An error occurred during MediaWiki uninstall."
+msgstr "Възникна грешка при деинсталирането на MediaWiki."
+
+#: internal/modules/mediawiki/manage.go:110
+msgid "MediaWiki uninstalled successfully"
+msgstr "MediaWiki е деинсталиран успешно"
+
 #: internal/modules/mediawiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:338
 #: internal/web/templates/manager/mediawiki_install.html:9
 msgid "Install MediaWiki"
 msgstr "Инсталиране на MediaWiki"
+
+#: internal/modules/mongodb/assign.go:34 internal/modules/mongodb/assign.go:86
+#: internal/modules/postgresql/assign.go:30
+#: internal/modules/postgresql/assign.go:79
+msgid "Invalid or missing user name."
+msgstr "Невалидно или липсващо потребителско име."
+
+#: internal/modules/mongodb/assign.go:37 internal/modules/mongodb/assign.go:89
+#: internal/modules/postgresql/assign.go:33
+#: internal/modules/postgresql/assign.go:82
+msgid "Invalid or missing database name."
+msgstr "Невалидно или липсващо име на база данни."
+
+#: internal/modules/mongodb/assign.go:40
+#: internal/modules/postgresql/assign.go:36
+msgid "This is a system database that cannot be used."
+msgstr "Това е системна база данни, която не може да се използва."
+
+#: internal/modules/mongodb/assign.go:43 internal/modules/mongodb/wizard.go:70
+msgid "Invalid role."
+msgstr "Невалидна роля."
+
+#: internal/modules/mongodb/assign.go:48
+msgid "Failed to assign user to database: %(error)s"
+msgstr "Потребителят не можа да бъде присвоен към базата данни: %(error)s"
+
+#: internal/modules/mongodb/assign.go:52
+msgid "Successfully added a user %(db_user)s to MongoDB database"
+msgstr "Потребителят %(db_user)s е добавен успешно към MongoDB базата данни"
+
+#: internal/modules/mongodb/assign.go:92
+#: internal/modules/postgresql/assign.go:85
+msgid "This is a system username that cannot be edited."
+msgstr "Това е системно потребителско име, което не може да се редактира."
+
+#: internal/modules/mongodb/assign.go:95
+#: internal/modules/postgresql/assign.go:88
+msgid "This is a system database that cannot be edited."
+msgstr "Това е системна база данни, която не може да се редактира."
+
+#: internal/modules/mongodb/assign.go:100
+msgid ""
+"Failed to revoke role for user %(db_user)s from MongoDB database "
+"%(database_name)s: %(error)s"
+msgstr ""
+"Ролята на потребителя %(db_user)s в MongoDB базата данни %(database_name)s "
+"не можа да бъде отнета: %(error)s"
+
+#: internal/modules/mongodb/assign.go:104
+msgid ""
+"Successfully revoked access for user %(db_user)s from MongoDB database "
+"%(database_name)s"
+msgstr ""
+"Достъпът на потребителя %(db_user)s до MongoDB базата данни "
+"%(database_name)s е отнет успешно"
+
+#: internal/modules/mongodb/databases.go:49
+#: internal/modules/mongodb/users.go:34
+msgid "MongoDB service is not yet installed. Starting it in the background.."
+msgstr ""
+"Услугата MongoDB все още не е инсталирана. Стартира се във фонов режим.."
+
+#: internal/modules/mongodb/databases.go:52
+#: internal/modules/mongodb/users.go:37
+msgid ""
+"MongoDB container is not running. Please allow a few moments for the "
+"initialization.."
+msgstr ""
+"Контейнерът на MongoDB не работи. Моля, изчакайте няколко мига за "
+"инициализация.."
+
+#: internal/modules/mongodb/databases.go:56
+#: internal/modules/mysql/databases.go:100
+#: internal/modules/postgresql/databases.go:62
+msgid "Error fetching databases: %(error)s"
+msgstr "Грешка при извличане на базите данни: %(error)s"
+
+#: internal/modules/mongodb/databases.go:87
+#: internal/modules/mongodb/wizard.go:28
+msgid ""
+"MongoDB service is not ready yet. Please wait for the installation to finish"
+" before creating a database."
+msgstr ""
+"Услугата MongoDB още не е готова. Изчакайте инсталацията да приключи, преди "
+"да създадете база данни."
+
+#: internal/modules/mongodb/databases.go:100
+#: internal/modules/mongodb/databases.go:163
+#: internal/modules/mongodb/export.go:36 internal/modules/mongodb/wizard.go:49
+#: internal/modules/mysql/assign.go:48 internal/modules/mysql/assign.go:180
+#: internal/modules/mysql/databases.go:173
+#: internal/modules/mysql/databases.go:230 internal/modules/mysql/export.go:39
+#: internal/modules/postgresql/databases.go:132
+#: internal/modules/postgresql/databases.go:191
+#: internal/modules/postgresql/export.go:33
+#: internal/modules/postgresql/wizard.go:47
+msgid "Database name is required."
+msgstr "Името на базата данни е задължително."
+
+#: internal/modules/mongodb/databases.go:104
+#: internal/modules/mongodb/databases.go:166
+#: internal/modules/mongodb/wizard.go:52 internal/modules/mysql/assign.go:51
+#: internal/modules/mysql/assign.go:183
+#: internal/modules/mysql/databases.go:177
+#: internal/modules/mysql/databases.go:234
+#: internal/modules/postgresql/databases.go:136
+#: internal/modules/postgresql/databases.go:195
+#: internal/modules/postgresql/wizard.go:50
+msgid ""
+"Name %(database_name)s is not allowed. Please use alphanumeric characters "
+"and '_' - [a-zA-Z0-9_]+ "
+msgstr ""
+"Името %(database_name)s не е разрешено. Използвайте буквено-цифрови знаци и "
+"'_' - [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/databases.go:108
+#: internal/modules/mongodb/wizard.go:55 internal/modules/mysql/assign.go:58
+#: internal/modules/postgresql/wizard.go:53
+msgid "This is a system database that can not be used."
+msgstr "Това е системна база данни, която не може да се използва."
+
+#: internal/modules/mongodb/databases.go:130
+#: internal/modules/mongodb/wizard.go:89
+#: internal/modules/postgresql/databases.go:159
+#: internal/modules/postgresql/wizard.go:85
+msgid ""
+"You have reached the maximum number of databases allowed.%(upgrade_message)s"
+msgstr "Достигнахте максималния брой разрешени бази данни.%(upgrade_message)s"
+
+#: internal/modules/mongodb/databases.go:135
+#: internal/modules/mongodb/wizard.go:94
+#: internal/modules/postgresql/databases.go:164
+#: internal/modules/postgresql/wizard.go:90
+msgid "Failed to create database: %(error)s"
+msgstr "Базата данни не можа да бъде създадена: %(error)s"
+
+#: internal/modules/mongodb/databases.go:141
+msgid "Successfully created a MongoDB database %(database_name)s"
+msgstr "MongoDB базата данни %(database_name)s е създадена успешно"
+
+#: internal/modules/mongodb/databases.go:169
+msgid "This is a system database that cannot be deleted."
+msgstr "Това е системна база данни, която не може да бъде изтрита."
+
+#: internal/modules/mongodb/databases.go:174
+#: internal/modules/postgresql/databases.go:202
+msgid "Error deleting database %(database_name)s: %(error)s"
+msgstr "Грешка при изтриване на базата данни %(database_name)s: %(error)s"
+
+#: internal/modules/mongodb/databases.go:180
+msgid "Successfully deleted a MongoDB database %(database_name)s"
+msgstr "MongoDB базата данни %(database_name)s е изтрита успешно"
+
+#: internal/modules/mongodb/export.go:39 internal/modules/mysql/export.go:42
+#: internal/modules/postgresql/export.go:36
+msgid ""
+"Name %(database_name)s is not allowed. Please use alphanumeric characters "
+"and '_' - [a-zA-Z0-9_]+"
+msgstr ""
+"Името %(database_name)s не е разрешено. Използвайте буквено-цифрови знаци и "
+"'_' - [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/export.go:42
+#: internal/modules/postgresql/export.go:39
+msgid ""
+"Database '%(database_name)s' is a system database and cannot be exported."
+msgstr ""
+"Базата данни '%(database_name)s' е системна и не може да бъде експортирана."
+
+#: internal/modules/mongodb/export.go:45
+msgid "Invalid export format provided, select Archive or GZIP."
+msgstr "Невалиден формат за експорт, изберете Archive или GZIP."
+
+#: internal/modules/mongodb/export.go:48 internal/modules/mysql/export.go:88
+#: internal/modules/postgresql/export.go:45
+msgid "Invalid export destination."
+msgstr "Невалидно местоназначение за експорт."
+
+#: internal/modules/mongodb/export.go:61 internal/modules/mysql/export.go:66
+#: internal/modules/postgresql/export.go:52
+msgid "Failed to export database %(database_name)s."
+msgstr "Базата данни %(database_name)s не можа да бъде експортирана."
+
+#: internal/modules/mongodb/export.go:78 internal/modules/mysql/export.go:84
+#: internal/modules/postgresql/export.go:69
+msgid "Database '%(database_name)s' exported to %(display_file)s"
+msgstr "Базата данни '%(database_name)s' е експортирана в %(display_file)s"
+
+#: internal/modules/mongodb/importdb.go:80
+#: internal/modules/postgresql/importdb.go:80
+msgid "Successfully imported %(filename)s into database: %(db_name)s"
+msgstr "%(filename)s е импортиран успешно в базата данни: %(db_name)s"
+
+#: internal/modules/mongodb/importdb.go:84
+#: internal/modules/postgresql/importdb.go:84
+msgid "Error importing %(filename)s into database %(db_name)s: %(import_err)s"
+msgstr ""
+"Грешка при импортиране на %(filename)s в базата данни %(db_name)s: "
+"%(import_err)s"
+
+#: internal/modules/mongodb/importdb.go:89
+#: internal/modules/mysql/importdb.go:97
+#: internal/modules/postgresql/importdb.go:89
+msgid "No database file uploaded!"
+msgstr "Не е качен файл с база данни!"
 
 #: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:233
 #: internal/modules/postgresql/postgresql.go:65
@@ -2070,6 +3420,20 @@ msgstr ""
 "Състоянието на услугата не може да бъде получено. Моля, свържете се с "
 "администратора."
 
+#: internal/modules/mongodb/processlist.go:47
+#: internal/modules/mysql/processlist.go:40
+#: internal/modules/postgresql/processlist.go:62
+msgid "Error fetching process list: %(error)s"
+msgstr "Грешка при извличане на списъка с процеси: %(error)s"
+
+#: internal/modules/mongodb/processlist.go:106
+msgid "Error killing operation %(opid)s: %(error)s"
+msgstr "Грешка при прекратяване на операцията %(opid)s: %(error)s"
+
+#: internal/modules/mongodb/processlist.go:110
+msgid "Operation %(opid)s killed."
+msgstr "Операцията %(opid)s е прекратена."
+
 #: internal/modules/mongodb/render.go:56
 #: internal/web/templates/mongodb/databases.html:9
 msgid "MongoDB Databases"
@@ -2136,11 +3500,390 @@ msgstr "Присвояване на потребител към база дан�
 msgid "Remove User from Database"
 msgstr "Премахване на потребител от базата данни"
 
+#: internal/modules/mongodb/users.go:41 internal/modules/mysql/users.go:40
+#: internal/modules/postgresql/users.go:48
+msgid "Error fetching users: %(error)s"
+msgstr "Грешка при извличане на потребителите: %(error)s"
+
+#: internal/modules/mongodb/users.go:76 internal/modules/mongodb/users.go:133
+#: internal/modules/mongodb/users.go:170 internal/modules/mongodb/wizard.go:58
+#: internal/modules/mysql/assign.go:42 internal/modules/mysql/assign.go:174
+#: internal/modules/mysql/users.go:82 internal/modules/mysql/users.go:146
+#: internal/modules/mysql/users.go:190 internal/modules/postgresql/users.go:87
+#: internal/modules/postgresql/users.go:144
+#: internal/modules/postgresql/users.go:193
+#: internal/modules/postgresql/wizard.go:56
+msgid "User name is required."
+msgstr "Потребителското име е задължително."
+
+#: internal/modules/mongodb/users.go:79 internal/modules/mongodb/users.go:173
+#: internal/modules/mongodb/wizard.go:61 internal/modules/mysql/assign.go:45
+#: internal/modules/mysql/assign.go:177 internal/modules/mysql/users.go:85
+#: internal/modules/mysql/users.go:149 internal/modules/mysql/users.go:193
+#: internal/modules/postgresql/users.go:90
+#: internal/modules/postgresql/users.go:196
+#: internal/modules/postgresql/wizard.go:59
+msgid ""
+"Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
+"- [a-zA-Z0-9_]+ "
+msgstr ""
+"Името %(db_user)s не е разрешено. Използвайте буквено-цифрови знаци и '_' - "
+"[a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/users.go:82 internal/modules/mongodb/wizard.go:64
+#: internal/modules/mysql/remotemysql.go:158
+#: internal/modules/mysql/users.go:88 internal/modules/postgresql/users.go:93
+#: internal/modules/postgresql/wizard.go:62
+msgid "This username is not allowed."
+msgstr "Това потребителско име не е разрешено."
+
+#: internal/modules/mongodb/users.go:90 internal/modules/mongodb/wizard.go:99
+#: internal/modules/postgresql/users.go:101
+#: internal/modules/postgresql/wizard.go:95
+msgid "Failed to create user: %(error)s"
+msgstr "Потребителят не можа да бъде създаден: %(error)s"
+
+#: internal/modules/mongodb/users.go:94
+msgid "Successfully created a MongoDB user %(db_user)s"
+msgstr "MongoDB потребителят %(db_user)s е създаден успешно"
+
+#: internal/modules/mongodb/users.go:108 internal/modules/mongodb/users.go:176
+#: internal/modules/mysql/assign.go:189
+#: internal/modules/mysql/remotemysql.go:222
+#: internal/modules/mysql/users.go:116 internal/modules/mysql/users.go:196
+#: internal/modules/postgresql/users.go:119
+#: internal/modules/postgresql/users.go:199
+msgid "This is a system username that can not be edited."
+msgstr "Това е системно потребителско име, което не може да се редактира."
+
+#: internal/modules/mongodb/users.go:136
+#: internal/modules/postgresql/users.go:147
+msgid ""
+"Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
+"- [a-zA-Z0-9_]+"
+msgstr ""
+"Името %(db_user)s не е разрешено. Използвайте буквено-цифрови знаци и '_' - "
+"[a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/users.go:139
+#: internal/modules/postgresql/users.go:150
+msgid "This is a system username that cannot be deleted."
+msgstr "Това е системно потребителско име, което не може да бъде изтрито."
+
+#: internal/modules/mongodb/users.go:144
+#: internal/modules/postgresql/users.go:167
+msgid "Error deleting user %(db_user)s: %(error)s"
+msgstr "Грешка при изтриване на потребителя %(db_user)s: %(error)s"
+
+#: internal/modules/mongodb/users.go:146 internal/modules/mysql/users.go:167
+#: internal/modules/postgresql/users.go:169
+msgid "Successfully deleted user %(db_user)s"
+msgstr "Потребителят %(db_user)s е изтрит успешно"
+
+#: internal/modules/mongodb/users.go:184
+#: internal/modules/postgresql/users.go:207
+msgid "Error changing password for user %(db_user)s: %(error)s"
+msgstr "Грешка при смяна на паролата за потребителя %(db_user)s: %(error)s"
+
+#: internal/modules/mongodb/users.go:188 internal/modules/mysql/users.go:215
+#: internal/modules/postgresql/users.go:211
+msgid "Successfully changed password for user %(db_user)s"
+msgstr "Паролата за потребителя %(db_user)s е сменена успешно"
+
+#: internal/modules/mongodb/wizard.go:104
+msgid "Database and user created, but failed to grant role: %(error)s"
+msgstr ""
+"Базата данни и потребителят са създадени, но ролята не можа да бъде дадена: "
+"%(error)s"
+
+#: internal/modules/mongodb/wizard.go:111
+msgid ""
+"Successfully created database %(database_name)s, user %(db_user)s, and "
+"granted %(role)s."
+msgstr ""
+"Успешно създадени база данни %(database_name)s, потребител %(db_user)s и "
+"дадена роля %(role)s."
+
+#: internal/modules/moodle/install.go:390
+msgid "Moodle installed successfully on %(selected_domain)s"
+msgstr "Moodle е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/moodle/manage.go:47
+msgid "Moodle installation not found in the database"
+msgstr "Инсталацията на Moodle не е намерена в базата данни"
+
+#: internal/modules/moodle/manage.go:87
+msgid "An error occurred during Moodle uninstall."
+msgstr "Възникна грешка при деинсталирането на Moodle."
+
+#: internal/modules/moodle/manage.go:98
+msgid "Moodle uninstalled successfully"
+msgstr "Moodle е деинсталиран успешно"
+
 #: internal/modules/moodle/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:580
 #: internal/web/templates/manager/moodle_install.html:9
 msgid "Install Moodle"
 msgstr "Инсталиране на Moodle"
+
+#: internal/modules/mysql/assign.go:55
+msgid "At least one privilege must be selected."
+msgstr "Трябва да бъде избрана поне една привилегия."
+
+#: internal/modules/mysql/assign.go:61 internal/modules/mysql/assign.go:192
+#: internal/modules/mysql/remotemysql.go:161
+#: internal/modules/mysql/remotemysql.go:225
+#: internal/modules/mysql/remotemysql.go:267
+#: internal/modules/mysql/users.go:91 internal/modules/mysql/users.go:155
+#: internal/modules/mysql/users.go:199
+msgid "Invalid host format."
+msgstr "Невалиден формат на хост."
+
+#: internal/modules/mysql/assign.go:67
+msgid "Invalid privilege selected."
+msgstr "Избрана е невалидна привилегия."
+
+#: internal/modules/mysql/assign.go:95
+msgid ""
+"Privileges granted successfully for user '%(db_user)s' on database "
+"'%(database_name)s'"
+msgstr ""
+"Привилегиите са дадени успешно на потребителя '%(db_user)s' за базата данни "
+"'%(database_name)s'"
+
+#: internal/modules/mysql/assign.go:186
+msgid "This is a system database that can not be edited."
+msgstr "Това е системна база данни, която не може да се редактира."
+
+#: internal/modules/mysql/assign.go:197 internal/modules/mysql/assign.go:201
+msgid "Failed to revoke privileges: %(error)s"
+msgstr "Привилегиите не можаха да бъдат отнети: %(error)s"
+
+#: internal/modules/mysql/assign.go:207
+msgid ""
+"Successfully revoked all privileges for user %(db_user)s from database "
+"%(database_name)s"
+msgstr ""
+"Всички привилегии на потребителя %(db_user)s за базата данни "
+"%(database_name)s са отнети успешно"
+
+#: internal/modules/mysql/conf.go:177
+msgid "Unknown database service, cannot restart"
+msgstr "Неизвестна услуга за бази данни, рестартирането не е възможно"
+
+#: internal/modules/mysql/conf.go:181
+msgid "%(mysql_version)s configuration saved but service failed to restart."
+msgstr ""
+"Конфигурацията на %(mysql_version)s е запазена, но услугата не можа да бъде "
+"рестартирана."
+
+#: internal/modules/mysql/conf.go:183
+msgid "%(mysql_version)s configuration updated and service restarted."
+msgstr ""
+"Конфигурацията на %(mysql_version)s е обновена и услугата е рестартирана."
+
+#: internal/modules/mysql/conf.go:189
+msgid ""
+"%(mysql_version)s container is not running. Please wait for initialization."
+msgstr ""
+"Контейнерът на %(mysql_version)s не работи. Моля, изчакайте инициализацията."
+
+#: internal/modules/mysql/databases.go:165 internal/modules/mysql/wizard.go:30
+msgid ""
+"%(mysql_version)s service is not ready yet. Please wait for the installation"
+" to finish before creating a database."
+msgstr ""
+"Услугата %(mysql_version)s още не е готова. Изчакайте инсталацията да "
+"приключи, преди да създадете база данни."
+
+#: internal/modules/mysql/databases.go:181
+msgid ""
+"Database name is too long. MySQL identifiers are limited to 64 characters."
+msgstr ""
+"Името на базата данни е твърде дълго. MySQL идентификаторите са ограничени "
+"до 64 знака."
+
+#: internal/modules/mysql/databases.go:196
+msgid ""
+"Error creating database: '%(database_name)s' - You have reached the maximum "
+"number of databases allowed.%(upgrade_message)s"
+msgstr ""
+"Грешка при създаване на базата данни: '%(database_name)s' - достигнахте "
+"максималния брой разрешени бази данни.%(upgrade_message)s"
+
+#: internal/modules/mysql/databases.go:201
+msgid "Error creating database: %(error)s"
+msgstr "Грешка при създаване на базата данни: %(error)s"
+
+#: internal/modules/mysql/databases.go:209
+msgid "Successfully created a database %(database_name)s"
+msgstr "Базата данни %(database_name)s е създадена успешно"
+
+#: internal/modules/mysql/databases.go:239
+msgid "Error deleting database: %(error)s"
+msgstr "Грешка при изтриване на базата данни: %(error)s"
+
+#: internal/modules/mysql/databases.go:247
+msgid "Successfully deleted a database %(database_name)s"
+msgstr "Базата данни %(database_name)s е изтрита успешно"
+
+#: internal/modules/mysql/export.go:45
+msgid ""
+"Database '%(database_name)s' is restricted and cannot be exported. Contact "
+"Administrator"
+msgstr ""
+"Базата данни '%(database_name)s' е ограничена и не може да бъде "
+"експортирана. Свържете се с администратора"
+
+#: internal/modules/mysql/export.go:48
+#: internal/modules/postgresql/export.go:42
+msgid "Invalid export format provided, select SQL or GZIP."
+msgstr "Невалиден формат за експорт, изберете SQL или GZIP."
+
+#: internal/modules/mysql/export.go:59
+msgid "Unsupported database engine: %(mysql_version)s"
+msgstr "Неподдържан енджин за бази данни: %(mysql_version)s"
+
+#: internal/modules/mysql/importdb.go:48
+msgid ""
+"%(mysql_version)s container is not running. Please allow a few moments for "
+"the initialization.."
+msgstr ""
+"Контейнерът на %(mysql_version)s не работи. Моля, изчакайте няколко мига за "
+"инициализация.."
+
+#: internal/modules/mysql/importdb.go:74
+msgid "Uploaded file exceeds %(mysql_import_max_size_gb)s GB limit."
+msgstr "Каченият файл надвишава лимита от %(mysql_import_max_size_gb)s GB."
+
+#: internal/modules/mysql/importdb.go:90
+msgid "Successfully imported from %(filename)s file to database: %(db_name)s"
+msgstr "Успешно импортиране от файла %(filename)s в базата данни: %(db_name)s"
+
+#: internal/modules/mysql/importdb.go:94
+msgid "Import into '%(db_name)s' failed: %(err_detail)s"
+msgstr "Импортирането в '%(db_name)s' не бе успешно: %(err_detail)s"
+
+#: internal/modules/mysql/mysql.go:276
+msgid ""
+"%(service)s service is not yet installed. Starting it in the background.."
+msgstr ""
+"Услугата %(service)s все още не е инсталирана. Стартира се във фонов режим.."
+
+#: internal/modules/mysql/mysql.go:278
+msgid "%(service)s service is not accessible. Current status: %(state)s."
+msgstr "Услугата %(service)s не е достъпна. Текущо състояние: %(state)s."
+
+#: internal/modules/mysql/mysql.go:280
+msgid ""
+"%(service)s is running but still initializing. If it stays in this state for"
+" more than 60s, check the logs."
+msgstr ""
+"%(service)s работи, но все още се инициализира. Ако остане в това състояние "
+"повече от 60 с, проверете логовете."
+
+#: internal/modules/mysql/mysql.go:282
+msgid "%(service)s is starting. It is not ready to handle queries yet."
+msgstr "%(service)s стартира. Все още не е готов да обработва заявки."
+
+#: internal/modules/mysql/mysql.go:284
+msgid ""
+"%(service)s is running, but health status is unknown. It may or may not be "
+"ready to handle queries."
+msgstr ""
+"%(service)s работи, но състоянието му е неизвестно. Може да не е готов да "
+"обработва заявки."
+
+#: internal/modules/mysql/processlist.go:102
+msgid "Error killing query %(id)s: %(error)s"
+msgstr "Грешка при прекратяване на заявката %(id)s: %(error)s"
+
+#: internal/modules/mysql/processlist.go:106
+msgid "Query %(id)s killed."
+msgstr "Заявката %(id)s е прекратена."
+
+#: internal/modules/mysql/remotemysql.go:79
+msgid "Remote MySQL access is now enabled."
+msgstr "Отдалеченият достъп до MySQL вече е включен."
+
+#: internal/modules/mysql/remotemysql.go:83
+msgid "Remote MySQL access is already disabled."
+msgstr "Отдалеченият достъп до MySQL вече е изключен."
+
+#: internal/modules/mysql/remotemysql.go:87
+msgid "Remote MySQL access is now disabled."
+msgstr "Отдалеченият достъп до MySQL е изключен."
+
+#: internal/modules/mysql/remotemysql.go:95
+msgid ""
+"Port changed but the MySQL service failed to restart. Try restarting it "
+"manually from Services."
+msgstr ""
+"Портът е сменен, но MySQL услугата не можа да бъде рестартирана. Опитайте да"
+" я рестартирате ръчно от Услуги."
+
+#: internal/modules/mysql/remotemysql.go:112
+msgid ""
+"Could not load MySQL users yet - the database may still be starting. Please "
+"refresh in a moment."
+msgstr ""
+"MySQL потребителите все още не могат да бъдат заредени - базата данни може "
+"още да стартира. Опреснете след малко."
+
+#: internal/modules/mysql/remotemysql.go:155
+msgid "A valid username is required - alphanumeric characters and '_' only."
+msgstr ""
+"Изисква се валидно потребителско име - само буквено-цифрови знаци и '_'."
+
+#: internal/modules/mysql/remotemysql.go:164
+msgid "Password is required."
+msgstr "Паролата е задължителна."
+
+#: internal/modules/mysql/remotemysql.go:172
+#: internal/modules/mysql/remotemysql.go:187
+#: internal/modules/mysql/remotemysql.go:194
+msgid "Error adding access: %(error)s"
+msgstr "Грешка при добавяне на достъп: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:181
+msgid "User %(db_user)s already has access from host %(db_host)s."
+msgstr "Потребителят %(db_user)s вече има достъп от хоста %(db_host)s."
+
+#: internal/modules/mysql/remotemysql.go:200
+msgid "Successfully granted access for %(db_user)s from %(db_host)s"
+msgstr "Достъпът за %(db_user)s от %(db_host)s е даден успешно"
+
+#: internal/modules/mysql/remotemysql.go:219
+#: internal/modules/mysql/remotemysql.go:261
+msgid "A valid username is required."
+msgstr "Изисква се валидно потребителско име."
+
+#: internal/modules/mysql/remotemysql.go:228
+msgid "No changes made."
+msgstr "Няма направени промени."
+
+#: internal/modules/mysql/remotemysql.go:233
+#: internal/modules/mysql/remotemysql.go:237
+msgid "Error updating access: %(error)s"
+msgstr "Грешка при обновяване на достъпа: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:243
+msgid "Successfully updated access for %(db_user)s"
+msgstr "Достъпът за %(db_user)s е обновен успешно"
+
+#: internal/modules/mysql/remotemysql.go:264
+#: internal/modules/mysql/users.go:152
+msgid "This is a system username that can not be deleted."
+msgstr "Това е системно потребителско име, което не може да бъде изтрито."
+
+#: internal/modules/mysql/remotemysql.go:272
+#: internal/modules/mysql/remotemysql.go:276
+msgid "Error removing access: %(error)s"
+msgstr "Грешка при премахване на достъпа: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:282
+msgid "Successfully removed access for %(db_user)s from %(db_host)s"
+msgstr "Достъпът за %(db_user)s от %(db_host)s е премахнат успешно"
 
 #: internal/modules/mysql/render.go:117
 msgid "Database Users"
@@ -2158,11 +3901,80 @@ msgstr "Смяна на root паролата"
 msgid "Remote MySQL"
 msgstr "Отдалечен MySQL"
 
+#: internal/modules/mysql/rootpassword.go:37
+#: internal/modules/mysql/rootpassword.go:41
+#: internal/modules/mysql/rootpassword.go:45
+msgid "Error changing MySQL root password: %(error)s"
+msgstr "Грешка при смяна на root паролата на MySQL: %(error)s"
+
+#: internal/modules/mysql/rootpassword.go:57
+#: internal/modules/mysql/rootpassword.go:63
+msgid "Password changed but failed to restart MySQL."
+msgstr "Паролата е сменена, но MySQL не можа да бъде рестартиран."
+
+#: internal/modules/mysql/rootpassword.go:67
+msgid "Successfully changed root password."
+msgstr "Root паролата е сменена успешно."
+
+#: internal/modules/mysql/users.go:105
+msgid "Successfully created a database user %(db_user)s"
+msgstr "Потребителят на базата данни %(db_user)s е създаден успешно"
+
+#: internal/modules/mysql/users.go:160
+msgid "Error deleting user: %(error)s"
+msgstr "Грешка при изтриване на потребителя: %(error)s"
+
+#: internal/modules/mysql/users.go:208
+msgid "Error changing password: %(error)s"
+msgstr "Грешка при смяна на паролата: %(error)s"
+
+#: internal/modules/nextcloud/install.go:352
+msgid "Nextcloud installed successfully on %(selected_domain)s"
+msgstr "Nextcloud е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/nextcloud/manage.go:51
+msgid "Nextcloud installation not found in the database"
+msgstr "Инсталацията на Nextcloud не е намерена в базата данни"
+
+#: internal/modules/nextcloud/manage.go:75
+msgid "Database name or user not found in config/config.php"
+msgstr ""
+"Името на базата данни или потребителят не са намерени в config/config.php"
+
+#: internal/modules/nextcloud/manage.go:96
+msgid "An error occurred during Nextcloud uninstall."
+msgstr "Възникна грешка при деинсталирането на Nextcloud."
+
+#: internal/modules/nextcloud/manage.go:107
+msgid "Nextcloud uninstalled successfully"
+msgstr "Nextcloud е деинсталиран успешно"
+
 #: internal/modules/nextcloud/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:478
 #: internal/web/templates/manager/nextcloud_install.html:9
 msgid "Install Nextcloud"
 msgstr "Инсталиране на Nextcloud"
+
+#: internal/modules/ojs/install.go:418
+msgid "OJS installed successfully on %(selected_domain)s"
+msgstr "OJS е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/ojs/manage.go:41
+msgid "OJS installation not found in the database"
+msgstr "Инсталацията на OJS не е намерена в базата данни"
+
+#: internal/modules/ojs/manage.go:69
+msgid "Database name or user not found in config.inc.php"
+msgstr ""
+"Името на базата данни или потребителят не са намерени в config.inc.php"
+
+#: internal/modules/ojs/manage.go:79
+msgid "An error occurred during OJS uninstall."
+msgstr "Възникна грешка при деинсталирането на OJS."
+
+#: internal/modules/ojs/manage.go:90
+msgid "OJS uninstalled successfully"
+msgstr "OJS е деинсталиран успешно"
 
 #: internal/modules/ojs/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:612
@@ -2170,11 +3982,160 @@ msgstr "Инсталиране на Nextcloud"
 msgid "Install OJS"
 msgstr "Инсталиране на OJS"
 
+#: internal/modules/opencart/install.go:361
+msgid "OpenCart installed successfully on %(selected_domain)s"
+msgstr "OpenCart е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/opencart/manage.go:51
+msgid "OpenCart installation not found in the database"
+msgstr "Инсталацията на OpenCart не е намерена в базата данни"
+
+#: internal/modules/opencart/manage.go:96
+msgid "An error occurred during OpenCart uninstall."
+msgstr "Възникна грешка при деинсталирането на OpenCart."
+
+#: internal/modules/opencart/manage.go:107
+msgid "OpenCart uninstalled successfully"
+msgstr "OpenCart е деинсталиран успешно"
+
 #: internal/modules/opencart/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:215
 #: internal/web/templates/manager/opencart_install.html:9
 msgid "Install OpenCart"
 msgstr "Инсталиране на OpenCart"
+
+#: internal/modules/php/default.go:55
+msgid "Invalid PHP version format"
+msgstr "Невалиден формат на PHP версията"
+
+#: internal/modules/php/default.go:59
+msgid ""
+"Default PHP version for OpenLitespeed can not be set to %(new_phpversion)s -"
+" only available tags are: 8.5 8.4 8.3 8.2"
+msgstr ""
+"PHP версията по подразбиране за OpenLitespeed не може да бъде "
+"%(new_phpversion)s - налични са само: 8.5 8.4 8.3 8.2"
+
+#: internal/modules/php/default.go:67
+msgid "PHP version %(new_phpversion)s set as default for new domains"
+msgstr ""
+"PHP версия %(new_phpversion)s е зададена по подразбиране за нови домейни"
+
+#: internal/modules/php/default.go:71
+msgid ""
+"PHP version %(new_phpversion)s saved, and Litespeed restarted to apply the "
+"version."
+msgstr ""
+"PHP версия %(new_phpversion)s е запазена и Litespeed е рестартиран, за да я "
+"приложи."
+
+#: internal/modules/php/default.go:75
+msgid ""
+"PHP version %(new_phpversion)s saved and will be used by Litespeed for new "
+"domains."
+msgstr ""
+"PHP версия %(new_phpversion)s е запазена и ще се използва от Litespeed за "
+"нови домейни."
+
+#: internal/modules/php/default.go:87
+msgid "Default PHP version could not be changed to %(new_phpversion)s"
+msgstr ""
+"PHP версията по подразбиране не можа да бъде сменена на %(new_phpversion)s"
+
+#: internal/modules/php/domains.go:67
+msgid ""
+"Only one PHP version can be used on Litespeed, to change version for all "
+"domains use this page."
+msgstr ""
+"В Litespeed може да се използва само една PHP версия, за смяна на версията "
+"за всички домейни използвайте тази страница."
+
+#: internal/modules/php/domains.go:95
+msgid "Invalid or unavailable PHP version selected."
+msgstr "Избрана е невалидна или недостъпна PHP версия."
+
+#: internal/modules/php/domains.go:99
+msgid "Invalid current PHP version."
+msgstr "Невалидна текуща PHP версия."
+
+#: internal/modules/php/domains.go:107
+msgid "Failed to start PHP %(new_phpversion)s: %(message)s"
+msgstr "PHP %(new_phpversion)s не можа да бъде стартиран: %(message)s"
+
+#: internal/modules/php/domains.go:115
+msgid "Failed to read vhost configuration for %(domain_url)s: %(error)s"
+msgstr ""
+"Конфигурацията на vhost за %(domain_url)s не можа да бъде прочетена: "
+"%(error)s"
+
+#: internal/modules/php/domains.go:123
+msgid "Error occurred while updating PHP version for domain %(domain_url)s"
+msgstr ""
+"Възникна грешка при обновяване на PHP версията за домейна %(domain_url)s"
+
+#: internal/modules/php/domains.go:136
+msgid ""
+"PHP version for domain %(domain_url)s updated from %(old_phpversion)s to "
+"%(new_phpversion)s"
+msgstr ""
+"PHP версията за домейна %(domain_url)s е обновена от %(old_phpversion)s на "
+"%(new_phpversion)s"
+
+#: internal/modules/php/extensions.go:587
+msgid "Failed to start PHP %(version)s: %(err_msg)s"
+msgstr "PHP %(version)s не можа да бъде стартиран: %(err_msg)s"
+
+#: internal/modules/php/extensions.go:597
+msgid "Invalid extension name."
+msgstr "Невалидно име на разширение."
+
+#: internal/modules/php/extensions.go:620
+msgid ""
+"Extension %(extension)s %(action_word)s, PHP %(version)s restarted to apply "
+"changes."
+msgstr ""
+"Разширението %(extension)s %(action_word)s, PHP %(version)s е рестартиран, "
+"за да приложи промените."
+
+#: internal/modules/php/extensions.go:622
+msgid "Could not change extension %(extension)s: %(err_msg)s"
+msgstr "Разширението %(extension)s не можа да бъде променено: %(err_msg)s"
+
+#: internal/modules/php/info.go:44
+msgid "Failed to start PHP %(service)s: %(message)s"
+msgstr "PHP %(service)s не можа да бъде стартиран: %(message)s"
+
+#: internal/modules/php/ini.go:68
+msgid "Error saving %(text)s php.ini file!"
+msgstr "Грешка при запазване на php.ini файла за %(text)s!"
+
+#: internal/modules/php/ini.go:74
+msgid ""
+"PHP.INI file for %(text)s version %(version)s edited successfully, and "
+"%(container_to_restart)s service restarted to apply."
+msgstr ""
+"PHP.INI файлът за %(text)s версия %(version)s е редактиран успешно и "
+"услугата %(container_to_restart)s е рестартирана, за да го приложи."
+
+#: internal/modules/php/ini.go:78
+msgid "PHP.INI file for %(text)s version %(version)s edited successfully."
+msgstr "PHP.INI файлът за %(text)s версия %(version)s е редактиран успешно."
+
+#: internal/modules/php/options.go:277
+msgid ""
+"Configuration edited successfully and %(text)s service restarted to apply "
+"new settings."
+msgstr ""
+"Конфигурацията е редактирана успешно и услугата %(text)s е рестартирана, за "
+"да приложи новите настройки."
+
+#: internal/modules/php/options.go:279
+msgid ""
+"Configuration edited successfully, but %(text)s failed to restart. Try "
+"restarting it manually from Services."
+msgstr ""
+"Конфигурацията е редактирана успешно, но %(text)s не можа да бъде "
+"рестартиран. Опитайте да го рестартирате ръчно от Услуги."
 
 #: internal/modules/php/render.go:128
 #: internal/web/templates/php/default.html:7
@@ -2186,11 +4147,120 @@ msgstr "Версия на PHP по подразбиране"
 msgid "Install PHP Application"
 msgstr "Инсталиране на PHP приложение"
 
+#: internal/modules/phpbb/install.go:306
+msgid "phpBB installed successfully on %(selected_domain)s"
+msgstr "phpBB е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/phpbb/manage.go:81
+msgid "An error occurred during phpBB uninstall."
+msgstr "Възникна грешка при деинсталирането на phpBB."
+
 #: internal/modules/phpbb/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:253
 #: internal/web/templates/manager/phpbb_install.html:9
 msgid "Install phpBB"
 msgstr "Инсталиране на phpBB"
+
+#: internal/modules/postgresql/assign.go:45
+msgid "Failed to assign user to database."
+msgstr "Потребителят не можа да бъде присвоен към базата данни."
+
+#: internal/modules/postgresql/assign.go:49
+msgid "Successfully added a user %(db_user)s to PostgreSQL database"
+msgstr ""
+"Потребителят %(db_user)s е добавен успешно към PostgreSQL базата данни"
+
+#: internal/modules/postgresql/assign.go:93
+msgid ""
+"Failed to revoke privileges for user %(db_user)s from PostgreSQL database "
+"%(database_name)s"
+msgstr ""
+"Привилегиите на потребителя %(db_user)s за PostgreSQL базата данни "
+"%(database_name)s не можаха да бъдат отнети"
+
+#: internal/modules/postgresql/assign.go:97
+msgid ""
+"Successfully revoked all privileges for user %(db_user)s from PostgreSQL "
+"database %(database_name)s"
+msgstr ""
+"Всички привилегии на потребителя %(db_user)s за PostgreSQL базата данни "
+"%(database_name)s са отнети успешно"
+
+#: internal/modules/postgresql/conf.go:149
+msgid ""
+"PostgreSQL configuration was saved successfully but postgres service failed "
+"to start! Please revert the changes to restart postgres."
+msgstr ""
+"PostgreSQL конфигурацията е запазена, но услугата postgres не можа да "
+"стартира! Моля, върнете промените, за да рестартирате postgres."
+
+#: internal/modules/postgresql/conf.go:151
+msgid ""
+"PostgreSQL Configuration was edited successfully and service restarted to "
+"apply new settings."
+msgstr ""
+"PostgreSQL конфигурацията е редактирана успешно и услугата е рестартирана, "
+"за да приложи новите настройки."
+
+#: internal/modules/postgresql/databases.go:46
+#: internal/modules/postgresql/users.go:37
+msgid "Postgres service is not yet installed. Starting it in the background.."
+msgstr ""
+"Услугата Postgres все още не е инсталирана. Стартира се във фонов режим.."
+
+#: internal/modules/postgresql/databases.go:49
+#: internal/modules/postgresql/users.go:40
+msgid ""
+"Postgres container is not running. Please allow a few moments for the "
+"initialization.."
+msgstr ""
+"Контейнерът на Postgres не работи. Моля, изчакайте няколко мига за "
+"инициализация.."
+
+#: internal/modules/postgresql/databases.go:119
+#: internal/modules/postgresql/wizard.go:30
+msgid ""
+"Postgres service is not ready yet. Please wait for the installation to "
+"finish before creating a database."
+msgstr ""
+"Услугата Postgres още не е готова. Изчакайте инсталацията да приключи, преди"
+" да създадете база данни."
+
+#: internal/modules/postgresql/databases.go:170
+msgid "Successfully created a PostgreSQL database %(database_name)s"
+msgstr "PostgreSQL базата данни %(database_name)s е създадена успешно"
+
+#: internal/modules/postgresql/databases.go:208
+msgid "Successfully deleted a PostgreSQL database %(database_name)s"
+msgstr "PostgreSQL базата данни %(database_name)s е изтрита успешно"
+
+#: internal/modules/postgresql/processlist.go:128
+msgid "Error killing query %(pid)s: %(error)s"
+msgstr "Грешка при прекратяване на заявката %(pid)s: %(error)s"
+
+#: internal/modules/postgresql/processlist.go:132
+msgid "Query %(pid)s killed."
+msgstr "Заявката %(pid)s е прекратена."
+
+#: internal/modules/postgresql/remote.go:43
+msgid "Remote PostgreSQL access is now enabled."
+msgstr "Отдалеченият достъп до PostgreSQL вече е включен."
+
+#: internal/modules/postgresql/remote.go:47
+msgid "Remote PostgreSQL access is already disabled."
+msgstr "Отдалеченият достъп до PostgreSQL вече е изключен."
+
+#: internal/modules/postgresql/remote.go:51
+msgid "Remote PostgreSQL access is now disabled."
+msgstr "Отдалеченият достъп до PostgreSQL е изключен."
+
+#: internal/modules/postgresql/remote.go:57
+msgid ""
+"Port changed but the PostgreSQL service failed to restart. Try restarting it"
+" manually from Services."
+msgstr ""
+"Портът е сменен, но PostgreSQL услугата не можа да бъде рестартирана. "
+"Опитайте да я рестартирате ръчно от Услуги."
 
 #: internal/modules/postgresql/render.go:60
 #: internal/web/templates/dashboard/onboarding.html:205
@@ -2211,6 +4281,46 @@ msgstr "Отдалечен PostgreSQL"
 #: internal/modules/postgresql/render.go:258
 msgid "Edit PostgreSQL configuration"
 msgstr "Редактиране на конфигурацията на PostgreSQL"
+
+#: internal/modules/postgresql/users.go:105
+msgid "Successfully created a PostgreSQL user %(db_user)s"
+msgstr "PostgreSQL потребителят %(db_user)s е създаден успешно"
+
+#: internal/modules/postgresql/wizard.go:103
+msgid "Database and user created, but failed to grant privileges: %(error)s"
+msgstr ""
+"Базата данни и потребителят са създадени, но привилегиите не можаха да бъдат"
+" дадени: %(error)s"
+
+#: internal/modules/postgresql/wizard.go:110
+msgid ""
+"Successfully created database %(database_name)s, user %(db_user)s, and "
+"granted privileges."
+msgstr ""
+"Успешно създадени база данни %(database_name)s, потребител %(db_user)s и "
+"дадени привилегии."
+
+#: internal/modules/prestashop/install.go:395
+msgid "PrestaShop installed successfully on %(selected_domain)s"
+msgstr "PrestaShop е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/prestashop/manage.go:51
+msgid "PrestaShop installation not found in the database"
+msgstr "Инсталацията на PrestaShop не е намерена в базата данни"
+
+#: internal/modules/prestashop/manage.go:75
+msgid "Database name or user not found in app/config/parameters.php"
+msgstr ""
+"Името на базата данни или потребителят не са намерени в "
+"app/config/parameters.php"
+
+#: internal/modules/prestashop/manage.go:96
+msgid "An error occurred during PrestaShop uninstall."
+msgstr "Възникна грешка при деинсталирането на PrestaShop."
+
+#: internal/modules/prestashop/manage.go:107
+msgid "PrestaShop uninstalled successfully"
+msgstr "PrestaShop е деинсталиран успешно"
 
 #: internal/modules/prestashop/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:183
@@ -2380,11 +4490,71 @@ msgstr "Кликнете, за да деактивирате"
 msgid "Click to Enable"
 msgstr "Кликнете, за да активирате"
 
+#: internal/modules/services/services.go:120
+msgid "%(service)s service is now restarted."
+msgstr "Услугата %(service)s е рестартирана."
+
+#: internal/modules/services/services.go:124
+msgid "Failed to restart the %(service)s service."
+msgstr "Услугата %(service)s не можа да бъде рестартирана."
+
+#: internal/modules/services/services.go:130
+msgid "%(service)s service is now disabled."
+msgstr "Услугата %(service)s вече е изключена."
+
+#: internal/modules/services/services.go:131
+msgid "Failed to stop the %(service)s service."
+msgstr "Услугата %(service)s не можа да бъде спряна."
+
+#: internal/modules/services/services.go:134
+msgid "%(service)s service is now enabled."
+msgstr "Услугата %(service)s вече е включена."
+
+#: internal/modules/services/services.go:135
+msgid "Failed to start the %(service)s service."
+msgstr "Услугата %(service)s не можа да бъде стартирана."
+
+#: internal/modules/services/services.go:142
+msgid "%(fail_msg)s Try restart."
+msgstr "%(fail_msg)s Опитайте рестартиране."
+
+#: internal/modules/sofawiki/install.go:207
+msgid "SofaWiki installed successfully on %(selected_domain)s"
+msgstr "SofaWiki е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/sofawiki/manage.go:42
+msgid "SofaWiki installation not found in the database"
+msgstr "Инсталацията на SofaWiki не е намерена в базата данни"
+
+#: internal/modules/sofawiki/manage.go:68
+msgid "An error occurred during SofaWiki uninstall."
+msgstr "Възникна грешка при деинсталирането на SofaWiki."
+
+#: internal/modules/sofawiki/manage.go:79
+msgid "SofaWiki uninstalled successfully"
+msgstr "SofaWiki е деинсталиран успешно"
+
 #: internal/modules/sofawiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:402
 #: internal/web/templates/manager/sofawiki_install.html:9
 msgid "Install SofaWiki"
 msgstr "Инсталиране на SofaWiki"
+
+#: internal/modules/tinyfilemanager/install.go:212
+msgid "TinyFileManager installed successfully on %(selected_domain)s"
+msgstr "TinyFileManager е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/tinyfilemanager/manage.go:42
+msgid "TinyFileManager installation not found in the database"
+msgstr "Инсталацията на TinyFileManager не е намерена в базата данни"
+
+#: internal/modules/tinyfilemanager/manage.go:68
+msgid "An error occurred during TinyFileManager uninstall."
+msgstr "Възникна грешка при деинсталирането на TinyFileManager."
+
+#: internal/modules/tinyfilemanager/manage.go:79
+msgid "TinyFileManager uninstalled successfully"
+msgstr "TinyFileManager е деинсталиран успешно"
 
 #: internal/modules/tinyfilemanager/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:542
@@ -2392,16 +4562,139 @@ msgstr "Инсталиране на SofaWiki"
 msgid "Install TinyFileManager"
 msgstr "Инсталиране на TinyFileManager"
 
+#: internal/modules/tinyphotogallery/install.go:183
+msgid "TinyPhotoGallery installed successfully on %(selected_domain)s"
+msgstr "TinyPhotoGallery е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/tinyphotogallery/manage.go:42
+msgid "TinyPhotoGallery installation not found in the database"
+msgstr "Инсталацията на TinyPhotoGallery не е намерена в базата данни"
+
+#: internal/modules/tinyphotogallery/manage.go:68
+msgid "An error occurred during TinyPhotoGallery uninstall."
+msgstr "Възникна грешка при деинсталирането на TinyPhotoGallery."
+
+#: internal/modules/tinyphotogallery/manage.go:79
+msgid "TinyPhotoGallery uninstalled successfully"
+msgstr "TinyPhotoGallery е деинсталиран успешно"
+
 #: internal/modules/tinyphotogallery/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:510
 #: internal/web/templates/manager/tinyphotogallery_install.html:9
 msgid "Install TinyPhotoGallery"
 msgstr "Инсталиране на TinyPhotoGallery"
 
-#: internal/modules/waf/handlers_list.go:93
-#: internal/modules/waf/handlers_list.go:97
+#: internal/modules/trash/crud.go:185 internal/modules/trash/crud.go:200
+#: internal/modules/trash/crud.go:205
+msgid "Unexpected error"
+msgstr "Неочаквана грешка"
+
+#: internal/modules/trash/crud.go:210
+msgid "Trash emptied successfully"
+msgstr "Кошчето е изпразнено успешно"
+
+#: internal/modules/trash/crud.go:227
+msgid "Nothing to restore"
+msgstr "Няма нищо за възстановяване"
+
+#: internal/modules/trash/crud.go:275
+msgid "Some items could not be restored."
+msgstr "Някои елементи не можаха да бъдат възстановени."
+
+#: internal/modules/trash/crud.go:280
+msgid "All items restored successfully"
+msgstr "Всички елементи са възстановени успешно"
+
+#: internal/modules/trash/trash.go:72
+msgid "Invalid directory."
+msgstr "Невалидна директория."
+
+#: internal/modules/waf/handlers_domain.go:73
+msgid "Error: IDs should only contain numbers separated by spaces."
+msgstr "Грешка: ID-тата трябва да съдържат само числа, разделени с интервали."
+
+#: internal/modules/waf/handlers_domain.go:87
+msgid "WAF configuration updated."
+msgstr "WAF конфигурацията е обновена."
+
+#: internal/modules/waf/handlers_domain.go:90
+#: internal/modules/waf/handlers_domain.go:94
+msgid "Error updating WAF!"
+msgstr "Грешка при обновяване на WAF!"
+
+#: internal/modules/waf/handlers_domain.go:98
+msgid "Configuration file not found."
+msgstr "Конфигурационният файл не е намерен."
+
+#: internal/modules/waf/handlers_list.go:91
+msgid "WAF for domain: %(domain_name)s is now %(status_text)s"
+msgstr "WAF за домейна %(domain_name)s вече е %(status_text)s"
+
+#: internal/modules/waf/handlers_list.go:94
+#: internal/modules/waf/handlers_list.go:98
 msgid "Error changing WAF status."
 msgstr "Грешка при промяна на състоянието на WAF."
+
+#: internal/modules/waf/handlers_list.go:102
+msgid "Config file for %(domain_name)s not found"
+msgstr "Конфигурационният файл за %(domain_name)s не е намерен"
+
+#: internal/modules/webserverconf/handlers.go:80
+msgid "No default configuration is available for %(service_name)s."
+msgstr "Няма налична конфигурация по подразбиране за %(service_name)s."
+
+#: internal/modules/webserverconf/handlers.go:86
+#: internal/modules/webserverconf/handlers.go:90
+msgid "Error restoring %(conf_file)s: %(error)s"
+msgstr "Грешка при възстановяване на %(conf_file)s: %(error)s"
+
+#: internal/modules/webserverconf/handlers.go:104
+msgid "Error writing to %(conf_file)s: %(error)s"
+msgstr "Грешка при запис в %(conf_file)s: %(error)s"
+
+#: internal/modules/webserverconf/handlers.go:114
+msgid ""
+"Configuration was not saved - it failed the %(service_name)s syntax check: "
+"%(test_output)s"
+msgstr ""
+"Конфигурацията не е запазена - не премина синтактичната проверка на "
+"%(service_name)s: %(test_output)s"
+
+#: internal/modules/webserverconf/handlers.go:126
+msgid "Error restarting %(service_name)s container."
+msgstr "Грешка при рестартиране на контейнера %(service_name)s."
+
+#: internal/modules/webserverconf/handlers.go:130
+msgid ""
+"Restored %(conf_file)s to the default configuration and %(service_name)s "
+"container restarted successfully."
+msgstr ""
+"%(conf_file)s е възстановен към конфигурацията по подразбиране и контейнерът"
+" %(service_name)s е рестартиран успешно."
+
+#: internal/modules/webserverconf/handlers.go:132
+msgid ""
+"Changes saved to %(conf_file)s and %(service_name)s container restarted "
+"successfully."
+msgstr ""
+"Промените са запазени в %(conf_file)s и контейнерът %(service_name)s е "
+"рестартиран успешно."
+
+#: internal/modules/webserverconf/handlers.go:140
+msgid ""
+"Restored %(conf_file)s to the default configuration - the %(service_name)s "
+"container is not running."
+msgstr ""
+"%(conf_file)s е възстановен към конфигурацията по подразбиране - контейнерът"
+" %(service_name)s не работи."
+
+#: internal/modules/webserverconf/handlers.go:142
+msgid ""
+"Changes saved to %(conf_file)s - the %(service_name)s container is not "
+"running."
+msgstr ""
+"Промените са запазени в %(conf_file)s - контейнерът %(service_name)s не "
+"работи."
 
 #: internal/modules/webserverconf/webserverconf.go:29
 msgid "Nginx Configuration Editor"
@@ -2426,6 +4719,26 @@ msgstr "Редактор на конфигурацията на Litespeed"
 #: internal/modules/webserverconf/webserverconf.go:41
 msgid "Web Server Configuration Editor"
 msgstr "Редактор за конфигуриране на уеб сървър"
+
+#: internal/modules/websites/bulk.go:167
+msgid ""
+"%(action_title)s: completed successfully for all %(total)s selected site(s)."
+msgstr ""
+"%(action_title)s: завършено успешно за всички %(total)s избрани сайта."
+
+#: internal/modules/websites/bulk.go:170
+msgid "%(action_title)s: %(failed)s of %(total)s selected site(s) failed."
+msgstr "%(action_title)s: %(failed)s от %(total)s избрани сайта не успяха."
+
+#: internal/modules/websites/dispatch.go:135
+msgid "Invalid domain name format."
+msgstr "Невалиден формат на името на домейна."
+
+#: internal/modules/websites/dispatch.go:142
+#: internal/modules/websites/websitebuilder.go:154
+#: internal/modules/websites/websites.go:1009
+msgid "Unable to detect docroot for the domain."
+msgstr "Docroot за домейна не може да бъде открит."
 
 #: internal/modules/websites/render_dispatch.go:512
 msgid "Block access to wp-config.php"
@@ -2552,6 +4865,10 @@ msgstr ""
 "Използва филтър по User-Agent, за да блокира агресивни scraper-и и скенери "
 "за сигурност като AhrefsBot, SemrushBot, MJ12bot и Nikto."
 
+#: internal/modules/websites/websitebuilder.go:68
+msgid "Website not found in the database"
+msgstr "Уебсайтът не е намерен в базата данни"
+
 #: internal/modules/websites/websitebuilder_render.go:38
 #: internal/web/templates/manager/autoinstaller.html:145
 msgid "Create Website"
@@ -2560,6 +4877,45 @@ msgstr "Създаване на уеб-сайт"
 #: internal/modules/websites/websitebuilder_render.go:51
 msgid "GrapesJS Website Editor"
 msgstr "GrapesJS редактор на уебсайтове"
+
+#: internal/modules/websites/websitebuilder_render.go:91
+msgid "You have reached the maximum number of sites allowed."
+msgstr "Достигнахте максималния брой разрешени сайтове."
+
+#: internal/modules/websites/websitebuilder_render.go:210
+msgid "Website created successfully on %(selected_domain)s"
+msgstr "Уебсайтът е създаден успешно на %(selected_domain)s"
+
+#: internal/modules/wordpress/install.go:371
+msgid "WordPress installed successfully on %(selected_domain)s"
+msgstr "WordPress е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/wordpress/manage.go:274
+msgid "WordPress installation not found in the database"
+msgstr "Инсталацията на WordPress не е намерена в базата данни"
+
+#: internal/modules/wordpress/manage.go:301
+msgid "Database name or user not found in wp-config.php"
+msgstr "Името на базата данни или потребителят не са намерени в wp-config.php"
+
+#: internal/modules/wordpress/manage.go:347
+msgid "Missing site ID."
+msgstr "Липсва ID на сайта."
+
+#: internal/modules/wordpress/manage.go:378
+msgid "WordPress installation detached from Manager."
+msgstr "Инсталацията на WordPress е отделена от мениджъра."
+
+#: internal/modules/wordpress/manage.go:659
+msgid "Hardening rules have been successfully applied to the website"
+msgstr ""
+"Правилата за подсилване на сигурността са приложени успешно към уебсайта"
+
+#: internal/modules/wordpress/manage.go:661
+msgid "Failed to apply hardening rules to the website - please try again"
+msgstr ""
+"Правилата за подсилване на сигурността не можаха да бъдат приложени към "
+"уебсайта - моля, опитайте отново"
 
 #: internal/modules/wordpress/render.go:41
 msgid "WordPress Manager"
@@ -5799,14 +8155,6 @@ msgstr "Публичен ключ"
 #: internal/web/templates/domains/new.html:92
 msgid "Secret Key"
 msgstr "Таен ключ"
-
-#: internal/web/templates/domains/new.html:217
-msgid ""
-"Paths for both public and secret files must be set for importing .onion "
-"domain."
-msgstr ""
-"Пътищата за публичните и тайните файлове трябва да бъдат зададени за "
-"импортиране на домейн .onion."
 
 #: internal/web/templates/domains/new.html:224
 msgid "Paths for both public and secret files must start with /var/www/html/."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.10\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-25 22:34+0200\n"
+"POT-Creation-Date: 2026-09-25 22:48+0200\n"
 "PO-Revision-Date: 2025-11-07 15:10-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -96,6 +96,14 @@ msgstr "Passkey eliminada."
 msgid "Passkey not found."
 msgstr "Passkey no encontrada."
 
+#: internal/modules/account/locale.go:48
+msgid "Language changed from %(old_locale)s to %(locale)s"
+msgstr "Idioma cambiado de %(old_locale)s a %(locale)s"
+
+#: internal/modules/account/locale.go:50
+msgid "Language changed to %(locale)s"
+msgstr "Idioma cambiado a %(locale)s"
+
 #: internal/modules/account/login.go:133
 #: internal/web/templates/manager/dokuwiki_app.html:283
 msgid "Login"
@@ -126,17 +134,22 @@ msgstr "Inicio de sesión automático fallido: Token no válido o caducado."
 msgid "Autologin failed: User does not exist."
 msgstr "Error de inicio de sesión automático: el usuario no existe."
 
-#: internal/modules/account/mcp.go:61
+#: internal/modules/account/mcp.go:62
 msgid "Could not create token: database is unavailable. Please try again."
 msgstr ""
 "No se pudo crear el token: la base de datos no está disponible. Inténtelo de"
 " nuevo."
 
-#: internal/modules/account/mcp.go:111
+#: internal/modules/account/mcp.go:84
+msgid "Token \"%(name)s\" created. Copy it below - it will not be shown again."
+msgstr ""
+"Token \"%(name)s\" creado. Cópielo a continuación: no se volverá a mostrar."
+
+#: internal/modules/account/mcp.go:112
 msgid "Token revoked."
 msgstr "Token revocado."
 
-#: internal/modules/account/mcp.go:113
+#: internal/modules/account/mcp.go:114
 msgid "Token not found."
 msgstr "Token no encontrado."
 
@@ -436,7 +449,13 @@ msgstr "Sesión finalizada correctamente."
 msgid "Failed to terminate session or session already expired."
 msgstr "No se pudo finalizar la sesión o la sesión ya ha caducado."
 
-#: internal/modules/account/settings.go:115
+#: internal/modules/account/settings.go:116
+#: internal/modules/emails/emails.go:368 internal/modules/mongodb/users.go:85
+#: internal/modules/mongodb/users.go:179 internal/modules/mongodb/wizard.go:67
+#: internal/modules/mysql/users.go:94 internal/modules/mysql/users.go:202
+#: internal/modules/postgresql/users.go:96
+#: internal/modules/postgresql/users.go:202
+#: internal/modules/postgresql/wizard.go:65
 #: internal/web/templates/emails/new.html:68
 #: internal/web/templates/emails/single_account.html:180
 #: internal/web/templates/files/ftp_new.html:50
@@ -468,13 +487,21 @@ msgstr "No se pudo finalizar la sesión o la sesión ya ha caducado."
 msgid "Password does not meet the required strength."
 msgstr "La contraseña no cumple con la seguridad requerida."
 
-#: internal/modules/account/settings.go:148
+#: internal/modules/account/settings.go:149
 msgid "Username must be 3-20 characters, letters and numbers only."
 msgstr ""
 "El nombre de usuario debe tener entre 3 y 20 caracteres, solo letras y "
 "números."
 
-#: internal/modules/account/settings.go:172
+#: internal/modules/account/settings.go:157
+msgid ""
+"Username has been changed successfully from %(current_username)s to "
+"%(new_username)s."
+msgstr ""
+"El nombre de usuario se cambió correctamente de %(current_username)s a "
+"%(new_username)s."
+
+#: internal/modules/account/settings.go:173
 msgid "Failed to change username."
 msgstr "No se pudo cambiar el nombre de usuario."
 
@@ -498,6 +525,25 @@ msgstr ""
 "Las passkeys requieren que se acceda al panel mediante un nombre de dominio,"
 " no una dirección IP. Pida a su administrador que configure un dominio para "
 "este panel."
+
+#: internal/modules/appinstall/install.go:129
+#: internal/modules/dokuwiki/install.go:47
+#: internal/modules/drupal/install.go:46 internal/modules/flarum/install.go:49
+#: internal/modules/joomla/install.go:47 internal/modules/matomo/install.go:47
+#: internal/modules/mediawiki/install.go:48
+#: internal/modules/moodle/install.go:47
+#: internal/modules/nextcloud/install.go:47 internal/modules/ojs/install.go:48
+#: internal/modules/opencart/install.go:47
+#: internal/modules/phpapp/install.go:62 internal/modules/phpbb/install.go:61
+#: internal/modules/prestashop/install.go:47
+#: internal/modules/sofawiki/install.go:48
+#: internal/modules/tinyfilemanager/install.go:55
+#: internal/modules/tinyphotogallery/install.go:50
+#: internal/modules/wordpress/install.go:48
+msgid ""
+"You have reached the maximum number of sites allowed.%(upgrade_message)s"
+msgstr ""
+"Ha alcanzado el número máximo de sitios permitidos.%(upgrade_message)s"
 
 #: internal/modules/appinstall/java.go:10
 #: internal/web/templates/manager/autoinstaller.html:731
@@ -555,6 +601,127 @@ msgstr ""
 msgid "Install NodeJS Application"
 msgstr "Instalar aplicación NodeJS"
 
+#: internal/modules/appinstall/pm2.go:119
+msgid ""
+"Invalid action '%(action)s'. Allowed actions: start, stop, update, restart."
+msgstr ""
+"Acción no válida '%(action)s'. Acciones permitidas: start, stop, update, "
+"restart."
+
+#: internal/modules/appinstall/pm2.go:123
+msgid "Hacker! Service '%(site_name)s' cannot be deleted."
+msgstr "¡Hacker! El servicio '%(site_name)s' no se puede eliminar."
+
+#: internal/modules/appinstall/pm2.go:153
+msgid "Failed to stop container '%(site_name)s': %(error)s"
+msgstr "No se pudo detener el contenedor '%(site_name)s': %(error)s"
+
+#: internal/modules/appinstall/pm2.go:156
+msgid "Stopped container for application: '%(site_name)s'."
+msgstr "Contenedor detenido para la aplicación '%(site_name)s'."
+
+#: internal/modules/appinstall/pm2.go:163
+msgid "Failed to start container '%(site_name)s': %(error)s"
+msgstr "No se pudo iniciar el contenedor '%(site_name)s': %(error)s"
+
+#: internal/modules/appinstall/pm2.go:166
+msgid "Started container for application '%(site_name)s'."
+msgstr "Contenedor iniciado para la aplicación '%(site_name)s'."
+
+#: internal/modules/appinstall/pm2.go:173
+#: internal/modules/appinstall/pm2.go:178
+#: internal/modules/appinstall/pm2.go:183
+msgid "Failed to restart container '%(site_name)s': %(error)s"
+msgstr "No se pudo reiniciar el contenedor '%(site_name)s': %(error)s"
+
+#: internal/modules/appinstall/pm2.go:187
+msgid ""
+"Re-downloaded image and started container for application '%(site_name)s'."
+msgstr ""
+"Imagen descargada de nuevo y contenedor iniciado para la aplicación "
+"'%(site_name)s'."
+
+#: internal/modules/appinstall/pm2.go:214
+msgid "Error saving: invalid line \"%(line)s\" - each line must be KEY=VALUE."
+msgstr ""
+"Error al guardar: línea no válida \"%(line)s\": cada línea debe ser "
+"KEY=VALUE."
+
+#: internal/modules/appinstall/pm2.go:222
+msgid "Error saving: could not read docker-compose.yml."
+msgstr "Error al guardar: no se pudo leer docker-compose.yml."
+
+#: internal/modules/appinstall/pm2.go:227
+msgid "Error saving: docker-compose.yml has no services."
+msgstr "Error al guardar: docker-compose.yml no tiene servicios."
+
+#: internal/modules/appinstall/pm2.go:232
+msgid ""
+"Error saving: service '%(container_name)s' not found in docker-compose.yml."
+msgstr ""
+"Error al guardar: no se encontró el servicio '%(container_name)s' en docker-"
+"compose.yml."
+
+#: internal/modules/appinstall/pm2.go:246
+#: internal/modules/appinstall/pm2.go:427
+#: internal/modules/appinstall/pm2.go:457
+msgid "Error saving: %(error)s"
+msgstr "Error al guardar: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:251
+msgid ""
+"Environment variables saved, make sure to restart the application for "
+"changes to take effect."
+msgstr ""
+"Variables de entorno guardadas, reinicie la aplicación para que los cambios "
+"surtan efecto."
+
+#: internal/modules/appinstall/pm2.go:419
+#: internal/modules/appinstall/pm2.go:448
+msgid "Error saving: %(errs)s"
+msgstr "Error al guardar: %(errs)s"
+
+#: internal/modules/appinstall/pm2.go:423
+#: internal/modules/appinstall/pm2.go:452
+msgid "Environment file not found."
+msgstr "Archivo de entorno no encontrado."
+
+#: internal/modules/appinstall/pm2.go:430
+#: internal/modules/appinstall/pm2.go:461
+msgid ""
+"Changes saved, make sure to restart the application for changes to take "
+"effect."
+msgstr ""
+"Cambios guardados, reinicie la aplicación para que los cambios surtan "
+"efecto."
+
+#: internal/modules/appinstall/pm2.go:528
+msgid "Application '%(site_name)s' removed successfully"
+msgstr "Aplicación '%(site_name)s' eliminada correctamente"
+
+#: internal/modules/appinstall/pm2.go:530
+msgid "Service '%(service_key)s' not found in compose file"
+msgstr "Servicio '%(service_key)s' no encontrado en el archivo compose"
+
+#: internal/modules/appinstall/pm2.go:551
+msgid "Environment variables for '%(service_name)s' removed from .env"
+msgstr "Variables de entorno de '%(service_name)s' eliminadas de .env"
+
+#: internal/modules/appinstall/pm2.go:553
+msgid ".env file not found at %(env_file)s"
+msgstr "Archivo .env no encontrado en %(env_file)s"
+
+#: internal/modules/appinstall/pm2.go:558
+msgid "Application '%(site_name)s' deleted from the database"
+msgstr "Aplicación '%(site_name)s' eliminada de la base de datos"
+
+#: internal/modules/appinstall/pm2.go:560
+msgid ""
+"Failed to delete application '%(site_name)s' from the database: %(error)s"
+msgstr ""
+"No se pudo eliminar la aplicación '%(site_name)s' de la base de datos: "
+"%(error)s"
+
 #: internal/modules/appinstall/python.go:11
 #: internal/web/templates/manager/autoinstaller.html:667
 #: internal/web/templates/manager/python_node_apps.html:166
@@ -608,6 +775,28 @@ msgstr "Instalar aplicación Ruby"
 #: internal/web/templates/manager/autoinstaller.html:8
 msgid "Install App"
 msgstr "Instalar aplicación"
+
+#: internal/modules/backups/backups.go:74
+msgid ""
+"A backup is currently in progress. Please wait until it finishes before "
+"saving settings. Or if you want to interrupt the backup process: stop and "
+"start the backup service."
+msgstr ""
+"Hay una copia de seguridad en curso. Espere a que termine antes de guardar "
+"la configuración. Si quiere interrumpirla, detenga e inicie el servicio de "
+"copias de seguridad."
+
+#: internal/modules/backups/backups.go:79
+msgid "Error updating settings."
+msgstr "Error al actualizar la configuración."
+
+#: internal/modules/backups/backups.go:81
+msgid "Settings updated successfully."
+msgstr "Configuración actualizada correctamente."
+
+#: internal/modules/backups/backups.go:285
+msgid "Backup target switched to '%(target)s' successfully."
+msgstr "Destino de copia de seguridad cambiado a '%(target)s' correctamente."
 
 #: internal/modules/backups/render.go:40
 #: internal/modules/dashboard/sections.go:85
@@ -700,6 +889,41 @@ msgstr ""
 #: internal/web/templates/files/trash_partials.html:222
 msgid "Restore"
 msgstr "Restaurar"
+
+#: internal/modules/backupwizard/backupwizard.go:244
+msgid "A backup is already in progress. Please wait for it to finish."
+msgstr "Ya hay una copia de seguridad en curso. Espere a que termine."
+
+#: internal/modules/backupwizard/backupwizard.go:249
+#: internal/modules/backupwizard/backupwizard.go:256
+msgid "Failed to start backup."
+msgstr "No se pudo iniciar la copia de seguridad."
+
+#: internal/modules/backupwizard/backupwizard.go:262
+msgid "Backup started. It will appear in the list below once complete."
+msgstr ""
+"Copia de seguridad iniciada. Aparecerá en la lista de abajo cuando termine."
+
+#: internal/modules/backupwizard/backupwizard.go:275
+msgid "Invalid filename."
+msgstr "Nombre de archivo no válido."
+
+#: internal/modules/backupwizard/backupwizard.go:285
+msgid "Invalid file path."
+msgstr "Ruta de archivo no válida."
+
+#: internal/modules/backupwizard/backupwizard.go:291
+#: internal/modules/backupwizard/backupwizard.go:307
+msgid "Backup file not found."
+msgstr "Archivo de copia de seguridad no encontrado."
+
+#: internal/modules/backupwizard/backupwizard.go:298
+msgid ""
+"This backup is still being created. Please wait until it completes before "
+"downloading."
+msgstr ""
+"Esta copia de seguridad aún se está creando. Espere a que termine antes de "
+"descargarla."
 
 #: internal/modules/backupwizard/render.go:35
 #: internal/modules/dashboard/sections.go:90
@@ -863,6 +1087,100 @@ msgid ""
 msgstr ""
 "Varnish es un proxy de caché inverso utilizado como acelerador HTTP para "
 "sitios web dinámicos con mucho contenido y también para APIs."
+
+#: internal/modules/cache/varnish.go:153
+msgid ""
+"Failed to start %(webserver)s: could not bring it back up with the Varnish "
+"proxy port"
+msgstr ""
+"No se pudo iniciar %(webserver)s: no se pudo levantar con el puerto proxy de"
+" Varnish"
+
+#: internal/modules/cache/varnish.go:168
+msgid "Failed to start %(service)s: %(message)s"
+msgstr "No se pudo iniciar %(service)s: %(message)s"
+
+#: internal/modules/cache/varnish.go:178
+msgid "Varnish caching is now enabled."
+msgstr "La caché de Varnish está activada."
+
+#: internal/modules/cache/varnish.go:193
+msgid "Failed to start %(webserver)s after disabling %(service)s: %(message)s"
+msgstr ""
+"No se pudo iniciar %(webserver)s tras desactivar %(service)s: %(message)s"
+
+#: internal/modules/cache/varnish.go:201
+msgid "Varnish caching is now disabled."
+msgstr "La caché de Varnish está desactivada."
+
+#: internal/modules/cache/varnish.go:222
+msgid "Varnish cache is now %(new_status)s for domain %(domain_name)s"
+msgstr ""
+"La caché de Varnish ahora está %(new_status)s para el dominio "
+"%(domain_name)s"
+
+#: internal/modules/crons/handlers.go:221
+msgid "Invalid cron file path"
+msgstr "Ruta del archivo cron no válida"
+
+#: internal/modules/crons/handlers.go:238
+#: internal/modules/crons/handlers.go:476
+msgid "Missing one or more required fields (schedule, command, container)."
+msgstr ""
+"Faltan uno o más campos obligatorios (programación, comando, contenedor)."
+
+#: internal/modules/crons/handlers.go:242
+#: internal/modules/crons/handlers.go:372
+msgid "Invalid characters in input."
+msgstr "Caracteres no válidos en la entrada."
+
+#: internal/modules/crons/handlers.go:275
+#: internal/modules/crons/handlers.go:302
+#: internal/modules/crons/handlers.go:385
+#: internal/modules/crons/handlers.go:421
+msgid "Error saving cron job. Please try again."
+msgstr "Error al guardar el cronjob. Inténtelo de nuevo."
+
+#: internal/modules/crons/handlers.go:280
+msgid "Cron job created and saved successfully!"
+msgstr "¡Cronjob creado y guardado correctamente!"
+
+#: internal/modules/crons/handlers.go:297
+msgid "Invalid crons file format: %(err_msg)s"
+msgstr "Formato de archivo de crons no válido: %(err_msg)s"
+
+#: internal/modules/crons/handlers.go:314
+msgid "Crons file saved successfully!"
+msgstr "¡Archivo de crons guardado correctamente!"
+
+#: internal/modules/crons/handlers.go:364
+msgid "Missing one or more required fields."
+msgstr "Faltan uno o más campos obligatorios."
+
+#: internal/modules/crons/handlers.go:368
+msgid "Missing original cron job fields."
+msgstr "Faltan campos del cronjob original."
+
+#: internal/modules/crons/handlers.go:379
+msgid "Invalid cron file path."
+msgstr "Ruta del archivo cron no válida."
+
+#: internal/modules/crons/handlers.go:416
+msgid "Cron job not found."
+msgstr "Cronjob no encontrado."
+
+#: internal/modules/crons/handlers.go:429
+msgid "Cron job was successfully edited."
+msgstr "El cronjob se editó correctamente."
+
+#: internal/modules/crons/handlers.go:483
+#: internal/modules/crons/handlers.go:530
+msgid "Error deleting cron job."
+msgstr "Error al eliminar el cronjob."
+
+#: internal/modules/crons/handlers.go:543
+msgid "Cron job was successfully deleted."
+msgstr "El cronjob se eliminó correctamente."
 
 #: internal/modules/crons/render.go:45
 msgid "CronJobs File Editor"
@@ -1730,6 +2048,46 @@ msgstr "Actividad de la cuenta"
 msgid "Upgrade now"
 msgstr "Actualizar ahora"
 
+#: internal/modules/dns/crud.go:53
+msgid "Error:Zone file not found for domain: %(domain)s"
+msgstr "Error: no se encontró el archivo de zona para el dominio: %(domain)s"
+
+#: internal/modules/dns/crud.go:193
+msgid "Please provide all required fields."
+msgstr "Complete todos los campos obligatorios."
+
+#: internal/modules/dns/crud.go:199
+msgid "Invalid characters in submitted data."
+msgstr "Caracteres no válidos en los datos enviados."
+
+#: internal/modules/dns/crud.go:212 internal/modules/dns/list.go:94
+msgid "Zone file not found."
+msgstr "Archivo de zona no encontrado."
+
+#: internal/modules/dns/crud.go:234
+msgid "CNAME record with this name already exists."
+msgstr "Ya existe un registro CNAME con este nombre."
+
+#: internal/modules/dns/crud.go:240 internal/modules/dns/crud.go:246
+msgid "Error adding DNS record: %(error)s"
+msgstr "Error al añadir el registro DNS: %(error)s"
+
+#: internal/modules/dns/crud.go:253
+msgid "DNS record added successfully."
+msgstr "Registro DNS añadido correctamente."
+
+#: internal/modules/dns/crud.go:332
+msgid "Please provide a domain name."
+msgstr "Introduzca un nombre de dominio."
+
+#: internal/modules/dns/crud.go:344
+msgid "Failed to restart DNS zone: %(error)s"
+msgstr "No se pudo reiniciar la zona DNS: %(error)s"
+
+#: internal/modules/dns/crud.go:350
+msgid "DNS zone restarted successfully."
+msgstr "Zona DNS reiniciada correctamente."
+
 #: internal/modules/dns/render.go:62
 #: internal/web/templates/domains/domains.html:284
 msgid "Edit DNS Zone"
@@ -1741,10 +2099,71 @@ msgstr "Editar zona DNS"
 msgid "Edit DNS File"
 msgstr "Editar archivo DNS"
 
-#: internal/modules/docker/containers.go:171
-#: internal/modules/docker/containers.go:187
+#: internal/modules/docker/actions.go:276
+msgid "Image pulled and container %(container_name)s activated successfully."
+msgstr ""
+"Imagen descargada y contenedor %(container_name)s activado correctamente."
+
+#: internal/modules/docker/actions.go:277
+msgid ""
+"Image pulled and container %(container_name)s deactivated successfully."
+msgstr ""
+"Imagen descargada y contenedor %(container_name)s desactivado correctamente."
+
+#: internal/modules/docker/actions.go:278
+msgid "Image pulled and container %(container_name)s restarted successfully."
+msgstr ""
+"Imagen descargada y contenedor %(container_name)s reiniciado correctamente."
+
+#: internal/modules/docker/actions.go:282
+msgid "Container %(container_name)s restarted successfully."
+msgstr "Contenedor %(container_name)s reiniciado correctamente."
+
+#: internal/modules/docker/actions.go:286
+msgid "Container %(container_name)s deactivated successfully."
+msgstr "Contenedor %(container_name)s desactivado correctamente."
+
+#: internal/modules/docker/actions.go:288
+msgid "Container %(container_name)s activated successfully."
+msgstr "Contenedor %(container_name)s activado correctamente."
+
+#: internal/modules/docker/containers.go:91
+msgid ""
+"Missing environment variables. Please check the configuration or restore "
+"from backup."
+msgstr ""
+"Faltan variables de entorno. Revise la configuración o restaure desde una "
+"copia de seguridad."
+
+#: internal/modules/docker/containers.go:172
+#: internal/modules/docker/containers.go:188
 msgid "Add service"
 msgstr "Agregar servicio"
+
+#: internal/modules/docker/containers.go:291
+msgid "Container %(service_name)s created successfully!"
+msgstr "¡Contenedor %(service_name)s creado correctamente!"
+
+#: internal/modules/docker/containers.go:434
+msgid "Container updated successfully."
+msgstr "Contenedor actualizado correctamente."
+
+#: internal/modules/docker/images.go:32
+msgid "The image of %(service)s can't be changed."
+msgstr "La imagen de %(service)s no se puede cambiar."
+
+#: internal/modules/docker/images.go:39
+msgid "Invalid image tag."
+msgstr "Etiqueta de imagen no válida."
+
+#: internal/modules/docker/images.go:48
+msgid "Successfully changed image tag for %(service)s to %(value)s!"
+msgstr ""
+"¡Etiqueta de imagen de %(service)s cambiada a %(value)s correctamente!"
+
+#: internal/modules/docker/images.go:51
+msgid "Failed to stop the service in order to delete old image."
+msgstr "No se pudo detener el servicio para eliminar la imagen antigua."
 
 #: internal/modules/docker/render.go:392
 #: internal/web/templates/dashboard/onboarding.html:498
@@ -1846,6 +2265,54 @@ msgstr "Servidor web"
 msgid "Change docker image tag"
 msgstr "Cambiar etiqueta de imagen Docker"
 
+#: internal/modules/docker/switch.go:60
+msgid ""
+"Existing databases must first be deleted and %(mysql_type)s container "
+"stopped in order to change mysql type."
+msgstr ""
+"Primero debe eliminar las bases de datos existentes y detener el contenedor "
+"%(mysql_type)s para cambiar el tipo de MySQL."
+
+#: internal/modules/docker/switch.go:73
+msgid "Already using %(flavor)s."
+msgstr "Ya se está usando %(flavor)s."
+
+#: internal/modules/docker/switch.go:107
+msgid "Failed to update mysql image: %(error)s"
+msgstr "No se pudo actualizar la imagen de MySQL: %(error)s"
+
+#: internal/modules/docker/switch.go:127
+msgid "Failed to start %(target_service)s."
+msgstr "No se pudo iniciar %(target_service)s."
+
+#: internal/modules/docker/switch.go:143
+msgid "Successfully switched to %(new_sql)s!"
+msgstr "¡Cambiado a %(new_sql)s correctamente!"
+
+#: internal/modules/docker/switch.go:157
+msgid "Invalid mysql server selected"
+msgstr "Servidor MySQL seleccionado no válido"
+
+#: internal/modules/docker/switch.go:202
+msgid ""
+"Existing domains (%(count)s) must first be removed in order to change "
+"webserver."
+msgstr ""
+"Primero debe eliminar los dominios existentes (%(count)s) para cambiar el "
+"servidor web."
+
+#: internal/modules/docker/switch.go:234
+msgid "Failed to start %(new_webserver)s."
+msgstr "No se pudo iniciar %(new_webserver)s."
+
+#: internal/modules/docker/switch.go:253
+msgid "Successfully switched to %(new_webserver)s!"
+msgstr "¡Cambiado a %(new_webserver)s correctamente!"
+
+#: internal/modules/docker/switch.go:266
+msgid "Invalid web server selected"
+msgstr "Servidor web seleccionado no válido"
+
 #: internal/modules/docker/terminal.go:36
 #: internal/web/templates/docker/terminal.html:20
 #: internal/web/templates/docker/terminal.html:224
@@ -1856,11 +2323,141 @@ msgstr "Terminal del contenedor"
 msgid "Select Container"
 msgstr "Seleccionar contenedor"
 
+#: internal/modules/dokuwiki/install.go:261
+msgid "DokuWiki installed successfully on %(selected_domain)s"
+msgstr "DokuWiki instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/dokuwiki/manage.go:33 internal/modules/drupal/manage.go:54
+#: internal/modules/flarum/manage.go:42 internal/modules/joomla/manage.go:42
+#: internal/modules/matomo/manage.go:42
+#: internal/modules/mediawiki/manage.go:43
+#: internal/modules/moodle/manage.go:39
+#: internal/modules/nextcloud/manage.go:42 internal/modules/ojs/manage.go:33
+#: internal/modules/opencart/manage.go:42 internal/modules/phpbb/manage.go:37
+#: internal/modules/prestashop/manage.go:42
+#: internal/modules/sofawiki/manage.go:33
+#: internal/modules/tinyfilemanager/manage.go:33
+#: internal/modules/tinyphotogallery/manage.go:33
+#: internal/modules/websites/websitebuilder.go:64
+#: internal/modules/websites/websitebuilder.go:102
+#: internal/modules/wordpress/manage.go:265
+#: internal/modules/wordpress/manage.go:359
+msgid "No data found for the provided site ID"
+msgstr "No se encontraron datos para el ID de sitio indicado"
+
+#: internal/modules/dokuwiki/manage.go:42
+msgid "DokuWiki installation not found in the database"
+msgstr "Instalación de DokuWiki no encontrada en la base de datos"
+
+#: internal/modules/dokuwiki/manage.go:68
+msgid "An error occurred during DokuWiki uninstall."
+msgstr "Se produjo un error al desinstalar DokuWiki."
+
+#: internal/modules/dokuwiki/manage.go:79
+msgid "DokuWiki uninstalled successfully"
+msgstr "DokuWiki desinstalado correctamente"
+
 #: internal/modules/dokuwiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:370
 #: internal/web/templates/manager/dokuwiki_install.html:9
 msgid "Install DokuWiki"
 msgstr "Instalar DokuWiki"
+
+#: internal/modules/domains/capitalize.go:83
+msgid "Domain has been capitalized to %(capitalized_domain)s"
+msgstr "El dominio ahora se muestra como %(capitalized_domain)s"
+
+#: internal/modules/domains/delete.go:39
+#: internal/modules/domains/redirect.go:95
+msgid "Domain name not provided."
+msgstr "Nombre de dominio no indicado."
+
+#: internal/modules/domains/delete.go:54
+msgid "Domain %(domain_url)s deleted successfully."
+msgstr "Dominio %(domain_url)s eliminado correctamente."
+
+#: internal/modules/domains/delete.go:56
+msgid "Failed to delete domain %(domain_url)s. Output: %(output)s"
+msgstr "No se pudo eliminar el dominio %(domain_url)s. Salida: %(output)s"
+
+#: internal/modules/domains/docroot.go:24 internal/modules/domains/ssl.go:50
+#: internal/modules/domains/suspend.go:26
+#: internal/modules/domains/suspend.go:73
+msgid "Invalid request. Domain name must be provided."
+msgstr "Solicitud no válida. Debe indicar un nombre de dominio."
+
+#: internal/modules/domains/docroot.go:51
+msgid "Docroot must be inside '/var/www/html/' directory."
+msgstr "El docroot debe estar dentro del directorio '/var/www/html/'."
+
+#: internal/modules/domains/logs.go:53 internal/modules/waf/handlers_log.go:51
+msgid "Log file not found for domain %(domain_name)s."
+msgstr "Archivo de registro no encontrado para el dominio %(domain_name)s."
+
+#: internal/modules/domains/logs.go:57 internal/modules/waf/handlers_log.go:55
+msgid "Log file for domain %(domain_name)s is empty."
+msgstr "El archivo de registro del dominio %(domain_name)s está vacío."
+
+#: internal/modules/domains/logs.go:63 internal/modules/waf/handlers_log.go:61
+msgid "Error reading log file: %(error)s"
+msgstr "Error al leer el archivo de registro: %(error)s"
+
+#: internal/modules/domains/new.go:76
+msgid "Domain name is required"
+msgstr "El nombre de dominio es obligatorio"
+
+#: internal/modules/domains/new.go:97
+msgid "Domain name contains invalid characters."
+msgstr "El nombre de dominio contiene caracteres no válidos."
+
+#: internal/modules/domains/new.go:107
+#: internal/web/templates/domains/new.html:217
+msgid ""
+"Paths for both public and secret files must be set for importing .onion "
+"domain."
+msgstr ""
+"Se deben establecer las rutas para los archivos público y secreto para "
+"importar el dominio .onion."
+
+#: internal/modules/domains/new.go:113
+msgid "Path for public file must start with /var/www/html/"
+msgstr "La ruta del archivo público debe empezar por /var/www/html/"
+
+#: internal/modules/domains/new.go:118
+msgid "Public key file: %(onion_public_key)s does not exist!"
+msgstr "¡El archivo de clave pública %(onion_public_key)s no existe!"
+
+#: internal/modules/domains/new.go:124
+msgid "Path for secret file must start with /var/www/html/"
+msgstr "La ruta del archivo secreto debe empezar por /var/www/html/"
+
+#: internal/modules/domains/new.go:129
+msgid "Secret key file: %(onion_secret_key)s does not exist!"
+msgstr "¡El archivo de clave secreta %(onion_secret_key)s no existe!"
+
+#: internal/modules/domains/redirect.go:47
+msgid "Domain %(domain_url)s does not have a redirect URL configured."
+msgstr ""
+"El dominio %(domain_url)s no tiene una URL de redirección configurada."
+
+#: internal/modules/domains/redirect.go:76
+msgid ""
+"Successfully deleted the redirect link %(redirect_url)s for domain "
+"%(domain_url)s"
+msgstr ""
+"Se eliminó correctamente la redirección %(redirect_url)s del dominio "
+"%(domain_url)s"
+
+#: internal/modules/domains/redirect.go:103
+msgid "Invalid URL. Please provide a URL with 'http://' or 'https://' prefix."
+msgstr "URL no válida. Indique una URL con el prefijo 'http://' o 'https://'."
+
+#: internal/modules/domains/redirect.go:122
+msgid ""
+"Successfully created redirect from domain %(domain_url)s to %(redirect_url)s"
+msgstr ""
+"Se creó correctamente la redirección del dominio %(domain_url)s a "
+"%(redirect_url)s"
 
 #: internal/modules/domains/render.go:99
 #: internal/web/templates/domains/new.html:128
@@ -1877,11 +2474,214 @@ msgstr "Editar archivo VirtualHosts"
 msgid "Redirect Domain to URL"
 msgstr "Redirigir dominio a URL"
 
+#: internal/modules/domains/ssl.go:111
+msgid "Invalid action! Only AutoSSL or Custom are available."
+msgstr "¡Acción no válida! Solo están disponibles AutoSSL o Custom."
+
+#: internal/modules/domains/ssl.go:135
+msgid "Certificate and private key are required."
+msgstr "El certificado y la clave privada son obligatorios."
+
+#: internal/modules/domains/ssl.go:139
+msgid "Invalid certificate."
+msgstr "Certificado no válido."
+
+#: internal/modules/domains/ssl.go:143
+msgid "Invalid private key."
+msgstr "Clave privada no válida."
+
+#: internal/modules/domains/vhost.go:35
+msgid "Invalid request. Domain name and Vhost content must be provided."
+msgstr ""
+"Solicitud no válida. Debe indicar el nombre de dominio y el contenido del "
+"vhost."
+
+#: internal/modules/drupal/install.go:308
+msgid "Drupal installed successfully on %(selected_domain)s"
+msgstr "Drupal instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/drupal/manage.go:63
+msgid "Drupal installation not found in the database"
+msgstr "Instalación de Drupal no encontrada en la base de datos"
+
+#: internal/modules/drupal/manage.go:88
+msgid "Database name or user not found in settings.php"
+msgstr "Nombre de la base de datos o usuario no encontrado en settings.php"
+
+#: internal/modules/drupal/manage.go:109
+msgid "An error occurred during Drupal uninstall."
+msgstr "Se produjo un error al desinstalar Drupal."
+
+#: internal/modules/drupal/manage.go:120
+msgid "Drupal uninstalled successfully"
+msgstr "Drupal desinstalado correctamente"
+
 #: internal/modules/drupal/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:111
 #: internal/web/templates/manager/drupal_install.html:9
 msgid "Install Drupal"
 msgstr "Instalar Drupal"
+
+#: internal/modules/dynamicdns/handlers.go:63
+msgid "You do not own this domain."
+msgstr "Usted no es el propietario de este dominio."
+
+#: internal/modules/dynamicdns/handlers.go:77
+#: internal/modules/dynamicdns/handlers.go:101
+msgid "Invalid subdomain."
+msgstr "Subdominio no válido."
+
+#: internal/modules/dynamicdns/handlers.go:81
+#: internal/modules/dynamicdns/handlers.go:105
+msgid "Invalid IP address."
+msgstr "Dirección IP no válida."
+
+#: internal/modules/dynamicdns/handlers.go:87
+msgid "Dynamic DNS entry created."
+msgstr "Entrada de DNS dinámico creada."
+
+#: internal/modules/dynamicdns/handlers.go:93
+#: internal/modules/dynamicdns/handlers.go:125
+msgid "Invalid line number."
+msgstr "Número de línea no válido."
+
+#: internal/modules/dynamicdns/handlers.go:109
+msgid "Invalid token."
+msgstr "Token no válido."
+
+#: internal/modules/dynamicdns/handlers.go:116
+msgid "Dynamic DNS entry updated."
+msgstr "Entrada de DNS dinámico actualizada."
+
+#: internal/modules/dynamicdns/handlers.go:118
+msgid "Failed to update Dynamic DNS entry."
+msgstr "No se pudo actualizar la entrada de DNS dinámico."
+
+#: internal/modules/dynamicdns/handlers.go:130
+msgid "Dynamic DNS entry deleted."
+msgstr "Entrada de DNS dinámico eliminada."
+
+#: internal/modules/dynamicdns/handlers.go:132
+msgid "Failed to delete Dynamic DNS entry."
+msgstr "No se pudo eliminar la entrada de DNS dinámico."
+
+#: internal/modules/emails/aliases.go:203
+msgid "Error: a valid target email address is required."
+msgstr "Error: se requiere una dirección de correo de destino válida."
+
+#: internal/modules/emails/aliases.go:209
+msgid "Error adding alias: %(output)s"
+msgstr "Error al añadir el alias: %(output)s"
+
+#: internal/modules/emails/aliases.go:216
+msgid "Alias %(email)s → %(target)s added successfully."
+msgstr "Alias %(email)s → %(target)s añadido correctamente."
+
+#: internal/modules/emails/aliases.go:250
+msgid "Error deleting alias %(email)s -> %(target)s: %(output)s"
+msgstr "Error al eliminar el alias %(email)s -> %(target)s: %(output)s"
+
+#: internal/modules/emails/aliases.go:258
+msgid "Alias %(email)s deleted successfully."
+msgstr "Alias %(email)s eliminado correctamente."
+
+#: internal/modules/emails/aliases.go:306
+#: internal/modules/emails/emails.go:349
+msgid "Error: %(field)s not provided."
+msgstr "Error: no se indicó %(field)s."
+
+#: internal/modules/emails/aliases.go:313
+#: internal/modules/emails/emails.go:362
+msgid "Username can only contain letters, numbers, and . _ % + - (no @)."
+msgstr ""
+"El nombre de usuario solo puede contener letras, números y . _ % + - (sin "
+"@)."
+
+#: internal/modules/emails/aliases.go:318
+msgid "Error: target must be a valid email address."
+msgstr "Error: el destino debe ser una dirección de correo válida."
+
+#: internal/modules/emails/aliases.go:331
+msgid "Error creating alias: %(output)s"
+msgstr "Error al crear el alias: %(output)s"
+
+#: internal/modules/emails/aliases.go:338
+msgid "Alias %(source)s → %(target)s created successfully."
+msgstr "Alias %(source)s → %(target)s creado correctamente."
+
+#: internal/modules/emails/default.go:86
+msgid "Invalid destination email address."
+msgstr "Dirección de correo de destino no válida."
+
+#: internal/modules/emails/default.go:91
+msgid "Failed to update default email: %(error)s"
+msgstr "No se pudo actualizar el correo predeterminado: %(error)s"
+
+#: internal/modules/emails/emails.go:374
+msgid "Error: reached max number of email accounts on the hosting plan."
+msgstr ""
+"Error: se alcanzó el número máximo de cuentas de correo del plan de hosting."
+
+#: internal/modules/emails/emails.go:396
+msgid "Failed to add email %(email)s: %(msg)s"
+msgstr "No se pudo añadir el correo %(email)s: %(msg)s"
+
+#: internal/modules/emails/emails.go:415
+msgid "Email %(email)s added successfully."
+msgstr "Correo %(email)s añadido correctamente."
+
+#: internal/modules/emails/emails.go:683
+msgid "Settings saved for email %(email)s"
+msgstr "Configuración guardada para el correo %(email)s"
+
+#: internal/modules/emails/emails.go:694
+msgid "Email %(email)s deleted successfully."
+msgstr "Correo %(email)s eliminado correctamente."
+
+#: internal/modules/emails/emails.go:697
+msgid "ERROR: Failed to delete email %(email)s: %(output)s"
+msgstr "ERROR: no se pudo eliminar el correo %(email)s: %(output)s"
+
+#: internal/modules/emails/emails.go:762
+msgid "Error: Invalid configuration type."
+msgstr "Error: tipo de configuración no válido."
+
+#: internal/modules/emails/filters.go:114
+msgid "No content provided."
+msgstr "No se proporcionó contenido."
+
+#: internal/modules/emails/filters.go:118
+msgid "Error saving filter."
+msgstr "Error al guardar el filtro."
+
+#: internal/modules/emails/filters.go:127
+msgid "Filter saved successfully."
+msgstr "Filtro guardado correctamente."
+
+#: internal/modules/emails/import.go:78
+msgid "Error: No file uploaded."
+msgstr "Error: no se subió ningún archivo."
+
+#: internal/modules/emails/import.go:92
+msgid "Error reading file: %(error)s"
+msgstr "Error al leer el archivo: %(error)s"
+
+#: internal/modules/emails/import.go:97
+msgid "Error: File must have at least 2 columns: email, password"
+msgstr "Error: el archivo debe tener al menos 2 columnas: correo, contraseña"
+
+#: internal/modules/emails/import.go:103
+msgid ""
+"Error: File is invalid - the first column must contain valid email "
+"addresses."
+msgstr ""
+"Error: el archivo no es válido; la primera columna debe contener direcciones"
+" de correo válidas."
+
+#: internal/modules/emails/import.go:164 internal/modules/emails/import.go:172
+#: internal/modules/emails/import.go:177
+msgid "Error: No import data found, please try again."
+msgstr "Error: no se encontraron datos para importar, inténtelo de nuevo."
 
 #: internal/modules/emails/render.go:132
 #: internal/web/templates/files/ftp_new.html:172
@@ -1913,51 +2713,331 @@ msgstr "Correo predeterminado"
 msgid "Import Emails"
 msgstr "Importar correos electrónicos"
 
-#: internal/modules/filemanager/archive.go:302
+#: internal/modules/emails/webmail.go:215
+msgid ""
+"Webmail service is not yet started, please contact Administrator to enable "
+"it."
+msgstr ""
+"El servicio de webmail aún no se ha iniciado, contacte con el administrador "
+"para activarlo."
+
+#: internal/modules/filemanager/archive.go:59
+msgid "Error occurred before starting archive extraction: %(error)s"
+msgstr "Se produjo un error antes de empezar a extraer el archivo: %(error)s"
+
+#: internal/modules/filemanager/archive.go:92
+msgid "Unsupported file format!"
+msgstr "¡Formato de archivo no compatible!"
+
+#: internal/modules/filemanager/archive.go:98
+msgid "Extraction timed out after %(minutes)s minutes!"
+msgstr "¡La extracción superó el tiempo límite tras %(minutes)s minutos!"
+
+#: internal/modules/filemanager/archive.go:101
+msgid "Extraction failed."
+msgstr "La extracción falló."
+
+#: internal/modules/filemanager/archive.go:107
+msgid "File extracted successfully"
+msgstr "Archivo extraído correctamente"
+
+#: internal/modules/filemanager/archive.go:228
+msgid "Missing required form data for compression: %(missing)s"
+msgstr "Faltan datos obligatorios del formulario para comprimir: %(missing)s"
+
+#: internal/modules/filemanager/archive.go:284
+msgid "Unsupported archive format."
+msgstr "Formato de archivo comprimido no compatible."
+
+#: internal/modules/filemanager/archive.go:295
+msgid "Archive creation failed: %(err_msg)s"
+msgstr "No se pudo crear el archivo comprimido: %(err_msg)s"
+
+#: internal/modules/filemanager/archive.go:303
 msgid "Failed to set archive ownership"
 msgstr "No se pudo establecer el propietario del archivo comprimido"
 
-#: internal/modules/filemanager/archive.go:304
+#: internal/modules/filemanager/archive.go:305
 msgid "FILEMANAGER - Archive created successfully."
 msgstr "Archivo comprimido creado correctamente."
 
-#: internal/modules/filemanager/crud.go:57
+#: internal/modules/filemanager/crud.go:34
+msgid "Filename is missing"
+msgstr "Falta el nombre del archivo"
+
+#: internal/modules/filemanager/crud.go:45
+msgid "Error creating file: already exists."
+msgstr "Error al crear el archivo: ya existe."
+
+#: internal/modules/filemanager/crud.go:51
+msgid "Error creating file! Check permissions."
+msgstr "¡Error al crear el archivo! Compruebe los permisos."
+
+#: internal/modules/filemanager/crud.go:58
 msgid "Failed to set ownership for the new file."
 msgstr "No se pudo establecer el propietario del nuevo archivo."
 
-#: internal/modules/filemanager/crud.go:60
+#: internal/modules/filemanager/crud.go:61
 msgid "File created successfully."
 msgstr "Archivo creado correctamente."
 
-#: internal/modules/filemanager/crud.go:105
+#: internal/modules/filemanager/crud.go:88
+msgid "Foldername is missing"
+msgstr "Falta el nombre de la carpeta"
+
+#: internal/modules/filemanager/crud.go:100
+msgid "Error creating directory! Check permissions."
+msgstr "¡Error al crear el directorio! Compruebe los permisos."
+
+#: internal/modules/filemanager/crud.go:106
 msgid "Failed to set ownership for the new folder."
 msgstr "No se pudo establecer el propietario de la nueva carpeta."
 
-#: internal/modules/filemanager/crud.go:107
+#: internal/modules/filemanager/crud.go:108
 msgid "Folder created successfully."
 msgstr "Carpeta creada correctamente."
 
-#: internal/modules/filemanager/crud.go:273
+#: internal/modules/filemanager/crud.go:146
+msgid ""
+"Error renaming item! Check permissions or if the new name already exists."
+msgstr ""
+"¡Error al renombrar el elemento! Compruebe los permisos o si el nuevo nombre"
+" ya existe."
+
+#: internal/modules/filemanager/crud.go:152
+msgid "File renamed successfully."
+msgstr "Archivo renombrado correctamente."
+
+#: internal/modules/filemanager/crud.go:233
+msgid "Invalid permissions format."
+msgstr "Formato de permisos no válido."
+
+#: internal/modules/filemanager/crud.go:274
 msgid "Permissions changed."
 msgstr "Permisos cambiados."
 
-#: internal/modules/filemanager/editor.go:138
+#: internal/modules/filemanager/crud.go:276
+msgid "%(changed)s items updated."
+msgstr "%(changed)s elementos actualizados."
+
+#: internal/modules/filemanager/crud.go:279
+msgid "Error changing permissions for: %(errored)s. Check ownership."
+msgstr ""
+"Error al cambiar los permisos de: %(errored)s. Compruebe el propietario."
+
+#: internal/modules/filemanager/editor.go:115
+#: internal/modules/filemanager/editor.go:280
+msgid "Editing this file type is not allowed."
+msgstr "No se permite editar este tipo de archivo."
+
+#: internal/modules/filemanager/editor.go:139
 msgid "Error saving file."
 msgstr "Error al guardar el archivo."
 
-#: internal/modules/filemanager/editor.go:141
+#: internal/modules/filemanager/editor.go:142
 msgid "File saved successfully"
 msgstr "Archivo guardado correctamente"
+
+#: internal/modules/filemanager/editor.go:160
+#: internal/modules/filemanager/editor.go:298
+msgid "Error accessing file size."
+msgstr "Error al acceder al tamaño del archivo."
+
+#: internal/modules/filemanager/editor.go:165
+msgid ""
+"File is too large to open in the editor (limit is %(file_limit_mb)s MB)"
+msgstr ""
+"El archivo es demasiado grande para abrirlo en el editor (el límite es "
+"%(file_limit_mb)s MB)"
+
+#: internal/modules/filemanager/editor.go:173
+msgid "Error reading file"
+msgstr "Error al leer el archivo"
+
+#: internal/modules/filemanager/editor.go:215
+#: internal/modules/filemanager/editor.go:226
+msgid "Error retrieving file size."
+msgstr "Error al obtener el tamaño del archivo."
+
+#: internal/modules/filemanager/editor.go:220
+msgid "File size exceeds %(file_limit_mb)sMB limit. Download aborted."
+msgstr ""
+"El tamaño del archivo supera el límite de %(file_limit_mb)s MB. Descarga "
+"cancelada."
+
+#: internal/modules/filemanager/editor.go:302
+msgid ""
+"File is too large to view in the browser (limit is %(file_limit_mb)s MB)"
+msgstr ""
+"El archivo es demasiado grande para verlo en el navegador (el límite es "
+"%(file_limit_mb)s MB)"
+
+#: internal/modules/filemanager/editor.go:324
+msgid "Error opening file."
+msgstr "Error al abrir el archivo."
+
+#: internal/modules/filemanager/listing.go:86
+#: internal/modules/trash/trash.go:88
+msgid "Directory does not exist."
+msgstr "El directorio no existe."
+
+#: internal/modules/filemanager/listing.go:113
+msgid "Error accessing the specified directory."
+msgstr "Error al acceder al directorio indicado."
 
 #: internal/modules/filemanager/render.go:236
 msgid "Upload Files"
 msgstr "Subir archivos"
+
+#: internal/modules/filemanager/upload.go:62
+msgid "No files were uploaded"
+msgstr "No se subió ningún archivo"
+
+#: internal/modules/filemanager/upload.go:122
+msgid "Files uploaded successfully."
+msgstr "Archivos subidos correctamente."
+
+#: internal/modules/filemanager/upload.go:124
+msgid "Some files failed: %(errs)s"
+msgstr "Algunos archivos fallaron: %(errs)s"
+
+#: internal/modules/flarum/install.go:308
+msgid "Flarum installed successfully on %(selected_domain)s"
+msgstr "Flarum instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/flarum/manage.go:51
+msgid "Flarum installation not found in the database"
+msgstr "Instalación de Flarum no encontrada en la base de datos"
+
+#: internal/modules/flarum/manage.go:76 internal/modules/moodle/manage.go:77
+#: internal/modules/opencart/manage.go:75
+msgid "Database name or user not found in config.php"
+msgstr "Nombre de la base de datos o usuario no encontrado en config.php"
+
+#: internal/modules/flarum/manage.go:97
+msgid "An error occurred during Flarum uninstall."
+msgstr "Se produjo un error al desinstalar Flarum."
+
+#: internal/modules/flarum/manage.go:108
+msgid "Flarum uninstalled successfully"
+msgstr "Flarum desinstalado correctamente"
 
 #: internal/modules/flarum/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:300
 #: internal/web/templates/manager/flarum_install.html:9
 msgid "Install Flarum"
 msgstr "Instalar Flarum"
+
+#: internal/modules/ftp/ftp.go:104
+msgid ""
+"FTP service is not yet started, please contact Administrator to enable it."
+msgstr ""
+"El servicio FTP aún no se ha iniciado, contacte con el administrador para "
+"activarlo."
+
+#: internal/modules/ftp/ftp.go:182
+msgid "No currently active FTP connections"
+msgstr "No hay conexiones FTP activas actualmente"
+
+#: internal/modules/ftp/ftp.go:213
+msgid "FTP username not provided."
+msgstr "Nombre de usuario FTP no indicado."
+
+#: internal/modules/ftp/ftp.go:217
+msgid "FTP domain not provided."
+msgstr "Dominio FTP no indicado."
+
+#: internal/modules/ftp/ftp.go:225
+msgid "FTP path not provided."
+msgstr "Ruta FTP no indicada."
+
+#: internal/modules/ftp/ftp.go:229
+msgid "FTP password not provided."
+msgstr "Contraseña FTP no indicada."
+
+#: internal/modules/ftp/ftp.go:235
+msgid "The FTP path must start with %(real_path)s"
+msgstr "La ruta FTP debe empezar por %(real_path)s"
+
+#: internal/modules/ftp/ftp.go:241
+msgid ""
+"Username %(ftp_username)s contains invalid characters, only allowed: "
+"BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
+msgstr ""
+"El nombre de usuario %(ftp_username)s contiene caracteres no válidos, solo "
+"se permiten: "
+"BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
+
+#: internal/modules/ftp/ftp.go:247
+msgid "Error creating FTP user %(ftp_username)s: %(output)s"
+msgstr "Error al crear el usuario FTP %(ftp_username)s: %(output)s"
+
+#: internal/modules/ftp/ftp.go:253
+msgid "FTP account %(ftp_username)s created successfully."
+msgstr "Cuenta FTP %(ftp_username)s creada correctamente."
+
+#: internal/modules/ftp/ftp.go:256
+msgid "Failed to create FTP account %(ftp_username)s: %(output)s"
+msgstr "No se pudo crear la cuenta FTP %(ftp_username)s: %(output)s"
+
+#: internal/modules/ftp/ftp.go:280 internal/modules/ftp/ftp.go:301
+#: internal/modules/ftp/ftp.go:357
+msgid "Invalid FTP username."
+msgstr "Nombre de usuario FTP no válido."
+
+#: internal/modules/ftp/ftp.go:292
+msgid "FTP account %(username_to_delete)s deleted successfully!"
+msgstr "¡Cuenta FTP %(username_to_delete)s eliminada correctamente!"
+
+#: internal/modules/ftp/ftp.go:295
+msgid ""
+"Failed to delete FTP account %(username_to_delete)s. Output: %(output)s"
+msgstr ""
+"No se pudo eliminar la cuenta FTP %(username_to_delete)s. Salida: %(output)s"
+
+#: internal/modules/ftp/ftp.go:313
+msgid "Missing new password"
+msgstr "Falta la nueva contraseña"
+
+#: internal/modules/ftp/ftp.go:325
+msgid "Error changing FTP password: %(output)s"
+msgstr "Error al cambiar la contraseña FTP: %(output)s"
+
+#: internal/modules/ftp/ftp.go:330
+msgid "FTP password changed successfully for user %(username)s"
+msgstr "Contraseña FTP cambiada correctamente para el usuario %(username)s"
+
+#: internal/modules/ftp/ftp.go:332
+msgid "Failed to change FTP password: %(output)s"
+msgstr "No se pudo cambiar la contraseña FTP: %(output)s"
+
+#: internal/modules/ftp/ftp.go:367
+msgid "Error changing FTP path for user %(username_to_modify)s: %(output)s"
+msgstr ""
+"Error al cambiar la ruta FTP del usuario %(username_to_modify)s: %(output)s"
+
+#: internal/modules/ftp/ftp.go:372
+msgid "FTP path changed successfully for user %(username_to_modify)s"
+msgstr ""
+"Ruta FTP cambiada correctamente para el usuario %(username_to_modify)s"
+
+#: internal/modules/ftp/ftp.go:374
+msgid "Failed to change FTP path for user %(username_to_modify)s: %(output)s"
+msgstr ""
+"No se pudo cambiar la ruta FTP del usuario %(username_to_modify)s: "
+"%(output)s"
+
+#: internal/modules/ftp/ftp.go:385
+msgid "Invalid configuration type, please use cyberduck or filezilla only!"
+msgstr "Tipo de configuración no válido, ¡use solo cyberduck o filezilla!"
+
+#: internal/modules/ftp/ftp.go:398
+msgid "User has no FTP accounts."
+msgstr "El usuario no tiene cuentas FTP."
+
+#: internal/modules/ftp/ftp.go:415
+msgid "FTP account not found."
+msgstr "Cuenta FTP no encontrada."
 
 #: internal/modules/ftp/render.go:76
 #: internal/web/templates/files/ftp_new.html:9
@@ -1972,9 +3052,38 @@ msgstr "Cambiar contraseña FTP"
 msgid "Change FTP Path"
 msgstr "Cambiar ruta FTP"
 
+#: internal/modules/goaccess/goaccess.go:58
+msgid ""
+"Stats file for domain %(domain_name)s not found. Data is generated every "
+"24h."
+msgstr ""
+"Archivo de estadísticas del dominio %(domain_name)s no encontrado. Los datos"
+" se generan cada 24 h."
+
 #: internal/modules/ipblocker/handlers.go:54
 msgid "Failed to block IP addresses - please try again"
 msgstr "No se pudieron bloquear las direcciones IP, inténtelo de nuevo"
+
+#: internal/modules/joomla/install.go:318
+msgid "Joomla installed successfully on %(selected_domain)s"
+msgstr "Joomla instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/joomla/manage.go:51
+msgid "Joomla installation not found in the database"
+msgstr "Instalación de Joomla no encontrada en la base de datos"
+
+#: internal/modules/joomla/manage.go:75
+msgid "Database name or user not found in configuration.php"
+msgstr ""
+"Nombre de la base de datos o usuario no encontrado en configuration.php"
+
+#: internal/modules/joomla/manage.go:96
+msgid "An error occurred during Joomla uninstall."
+msgstr "Se produjo un error al desinstalar Joomla."
+
+#: internal/modules/joomla/manage.go:107
+msgid "Joomla uninstalled successfully"
+msgstr "Joomla desinstalado correctamente"
 
 #: internal/modules/joomla/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:79
@@ -1986,17 +3095,266 @@ msgstr "Instalar Joomla"
 msgid "Malware Quarantine"
 msgstr "Cuarentena de malware"
 
+#: internal/modules/matomo/install.go:368
+msgid "Matomo installed successfully on %(selected_domain)s"
+msgstr "Matomo instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/matomo/manage.go:51
+msgid "Matomo installation not found in the database"
+msgstr "Instalación de Matomo no encontrada en la base de datos"
+
+#: internal/modules/matomo/manage.go:75
+msgid "Database name or user not found in config/config.ini.php"
+msgstr ""
+"Nombre de la base de datos o usuario no encontrado en config/config.ini.php"
+
+#: internal/modules/matomo/manage.go:98
+msgid "An error occurred during Matomo uninstall."
+msgstr "Se produjo un error al desinstalar Matomo."
+
+#: internal/modules/matomo/manage.go:109
+msgid "Matomo uninstalled successfully"
+msgstr "Matomo desinstalado correctamente"
+
 #: internal/modules/matomo/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:440
 #: internal/web/templates/manager/matomo_install.html:9
 msgid "Install Matomo"
 msgstr "Instalar Matomo"
 
+#: internal/modules/mediawiki/install.go:340
+msgid "MediaWiki installed successfully on %(selected_domain)s"
+msgstr "MediaWiki instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/mediawiki/manage.go:52
+msgid "MediaWiki installation not found in the database"
+msgstr "Instalación de MediaWiki no encontrada en la base de datos"
+
+#: internal/modules/mediawiki/manage.go:76
+msgid "Database name or user not found in LocalSettings.php"
+msgstr ""
+"Nombre de la base de datos o usuario no encontrado en LocalSettings.php"
+
+#: internal/modules/mediawiki/manage.go:99
+msgid "An error occurred during MediaWiki uninstall."
+msgstr "Se produjo un error al desinstalar MediaWiki."
+
+#: internal/modules/mediawiki/manage.go:110
+msgid "MediaWiki uninstalled successfully"
+msgstr "MediaWiki desinstalado correctamente"
+
 #: internal/modules/mediawiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:338
 #: internal/web/templates/manager/mediawiki_install.html:9
 msgid "Install MediaWiki"
 msgstr "Instalar MediaWiki"
+
+#: internal/modules/mongodb/assign.go:34 internal/modules/mongodb/assign.go:86
+#: internal/modules/postgresql/assign.go:30
+#: internal/modules/postgresql/assign.go:79
+msgid "Invalid or missing user name."
+msgstr "Nombre de usuario no válido o ausente."
+
+#: internal/modules/mongodb/assign.go:37 internal/modules/mongodb/assign.go:89
+#: internal/modules/postgresql/assign.go:33
+#: internal/modules/postgresql/assign.go:82
+msgid "Invalid or missing database name."
+msgstr "Nombre de base de datos no válido o ausente."
+
+#: internal/modules/mongodb/assign.go:40
+#: internal/modules/postgresql/assign.go:36
+msgid "This is a system database that cannot be used."
+msgstr "Esta es una base de datos del sistema que no se puede usar."
+
+#: internal/modules/mongodb/assign.go:43 internal/modules/mongodb/wizard.go:70
+msgid "Invalid role."
+msgstr "Rol no válido."
+
+#: internal/modules/mongodb/assign.go:48
+msgid "Failed to assign user to database: %(error)s"
+msgstr "No se pudo asignar el usuario a la base de datos: %(error)s"
+
+#: internal/modules/mongodb/assign.go:52
+msgid "Successfully added a user %(db_user)s to MongoDB database"
+msgstr "Usuario %(db_user)s añadido correctamente a la base de datos MongoDB"
+
+#: internal/modules/mongodb/assign.go:92
+#: internal/modules/postgresql/assign.go:85
+msgid "This is a system username that cannot be edited."
+msgstr "Este es un nombre de usuario del sistema que no se puede editar."
+
+#: internal/modules/mongodb/assign.go:95
+#: internal/modules/postgresql/assign.go:88
+msgid "This is a system database that cannot be edited."
+msgstr "Esta es una base de datos del sistema que no se puede editar."
+
+#: internal/modules/mongodb/assign.go:100
+msgid ""
+"Failed to revoke role for user %(db_user)s from MongoDB database "
+"%(database_name)s: %(error)s"
+msgstr ""
+"No se pudo revocar el rol del usuario %(db_user)s en la base de datos "
+"MongoDB %(database_name)s: %(error)s"
+
+#: internal/modules/mongodb/assign.go:104
+msgid ""
+"Successfully revoked access for user %(db_user)s from MongoDB database "
+"%(database_name)s"
+msgstr ""
+"Acceso del usuario %(db_user)s a la base de datos MongoDB %(database_name)s "
+"revocado correctamente"
+
+#: internal/modules/mongodb/databases.go:49
+#: internal/modules/mongodb/users.go:34
+msgid "MongoDB service is not yet installed. Starting it in the background.."
+msgstr ""
+"El servicio MongoDB aún no está instalado. Iniciándolo en segundo plano.."
+
+#: internal/modules/mongodb/databases.go:52
+#: internal/modules/mongodb/users.go:37
+msgid ""
+"MongoDB container is not running. Please allow a few moments for the "
+"initialization.."
+msgstr ""
+"El contenedor de MongoDB no está en ejecución. Espere unos momentos a que se"
+" inicialice.."
+
+#: internal/modules/mongodb/databases.go:56
+#: internal/modules/mysql/databases.go:100
+#: internal/modules/postgresql/databases.go:62
+msgid "Error fetching databases: %(error)s"
+msgstr "Error al obtener las bases de datos: %(error)s"
+
+#: internal/modules/mongodb/databases.go:87
+#: internal/modules/mongodb/wizard.go:28
+msgid ""
+"MongoDB service is not ready yet. Please wait for the installation to finish"
+" before creating a database."
+msgstr ""
+"El servicio MongoDB aún no está listo. Espere a que termine la instalación "
+"antes de crear una base de datos."
+
+#: internal/modules/mongodb/databases.go:100
+#: internal/modules/mongodb/databases.go:163
+#: internal/modules/mongodb/export.go:36 internal/modules/mongodb/wizard.go:49
+#: internal/modules/mysql/assign.go:48 internal/modules/mysql/assign.go:180
+#: internal/modules/mysql/databases.go:173
+#: internal/modules/mysql/databases.go:230 internal/modules/mysql/export.go:39
+#: internal/modules/postgresql/databases.go:132
+#: internal/modules/postgresql/databases.go:191
+#: internal/modules/postgresql/export.go:33
+#: internal/modules/postgresql/wizard.go:47
+msgid "Database name is required."
+msgstr "El nombre de la base de datos es obligatorio."
+
+#: internal/modules/mongodb/databases.go:104
+#: internal/modules/mongodb/databases.go:166
+#: internal/modules/mongodb/wizard.go:52 internal/modules/mysql/assign.go:51
+#: internal/modules/mysql/assign.go:183
+#: internal/modules/mysql/databases.go:177
+#: internal/modules/mysql/databases.go:234
+#: internal/modules/postgresql/databases.go:136
+#: internal/modules/postgresql/databases.go:195
+#: internal/modules/postgresql/wizard.go:50
+msgid ""
+"Name %(database_name)s is not allowed. Please use alphanumeric characters "
+"and '_' - [a-zA-Z0-9_]+ "
+msgstr ""
+"El nombre %(database_name)s no está permitido. Use caracteres alfanuméricos "
+"y '_' - [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/databases.go:108
+#: internal/modules/mongodb/wizard.go:55 internal/modules/mysql/assign.go:58
+#: internal/modules/postgresql/wizard.go:53
+msgid "This is a system database that can not be used."
+msgstr "Esta es una base de datos del sistema que no se puede usar."
+
+#: internal/modules/mongodb/databases.go:130
+#: internal/modules/mongodb/wizard.go:89
+#: internal/modules/postgresql/databases.go:159
+#: internal/modules/postgresql/wizard.go:85
+msgid ""
+"You have reached the maximum number of databases allowed.%(upgrade_message)s"
+msgstr ""
+"Ha alcanzado el número máximo de bases de datos "
+"permitidas.%(upgrade_message)s"
+
+#: internal/modules/mongodb/databases.go:135
+#: internal/modules/mongodb/wizard.go:94
+#: internal/modules/postgresql/databases.go:164
+#: internal/modules/postgresql/wizard.go:90
+msgid "Failed to create database: %(error)s"
+msgstr "No se pudo crear la base de datos: %(error)s"
+
+#: internal/modules/mongodb/databases.go:141
+msgid "Successfully created a MongoDB database %(database_name)s"
+msgstr "Base de datos MongoDB %(database_name)s creada correctamente"
+
+#: internal/modules/mongodb/databases.go:169
+msgid "This is a system database that cannot be deleted."
+msgstr "Esta es una base de datos del sistema que no se puede eliminar."
+
+#: internal/modules/mongodb/databases.go:174
+#: internal/modules/postgresql/databases.go:202
+msgid "Error deleting database %(database_name)s: %(error)s"
+msgstr "Error al eliminar la base de datos %(database_name)s: %(error)s"
+
+#: internal/modules/mongodb/databases.go:180
+msgid "Successfully deleted a MongoDB database %(database_name)s"
+msgstr "Base de datos MongoDB %(database_name)s eliminada correctamente"
+
+#: internal/modules/mongodb/export.go:39 internal/modules/mysql/export.go:42
+#: internal/modules/postgresql/export.go:36
+msgid ""
+"Name %(database_name)s is not allowed. Please use alphanumeric characters "
+"and '_' - [a-zA-Z0-9_]+"
+msgstr ""
+"El nombre %(database_name)s no está permitido. Use caracteres alfanuméricos "
+"y '_' - [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/export.go:42
+#: internal/modules/postgresql/export.go:39
+msgid ""
+"Database '%(database_name)s' is a system database and cannot be exported."
+msgstr ""
+"La base de datos '%(database_name)s' es del sistema y no se puede exportar."
+
+#: internal/modules/mongodb/export.go:45
+msgid "Invalid export format provided, select Archive or GZIP."
+msgstr "Formato de exportación no válido, seleccione Archive o GZIP."
+
+#: internal/modules/mongodb/export.go:48 internal/modules/mysql/export.go:88
+#: internal/modules/postgresql/export.go:45
+msgid "Invalid export destination."
+msgstr "Destino de exportación no válido."
+
+#: internal/modules/mongodb/export.go:61 internal/modules/mysql/export.go:66
+#: internal/modules/postgresql/export.go:52
+msgid "Failed to export database %(database_name)s."
+msgstr "No se pudo exportar la base de datos %(database_name)s."
+
+#: internal/modules/mongodb/export.go:78 internal/modules/mysql/export.go:84
+#: internal/modules/postgresql/export.go:69
+msgid "Database '%(database_name)s' exported to %(display_file)s"
+msgstr "Base de datos '%(database_name)s' exportada a %(display_file)s"
+
+#: internal/modules/mongodb/importdb.go:80
+#: internal/modules/postgresql/importdb.go:80
+msgid "Successfully imported %(filename)s into database: %(db_name)s"
+msgstr "%(filename)s importado correctamente en la base de datos: %(db_name)s"
+
+#: internal/modules/mongodb/importdb.go:84
+#: internal/modules/postgresql/importdb.go:84
+msgid "Error importing %(filename)s into database %(db_name)s: %(import_err)s"
+msgstr ""
+"Error al importar %(filename)s en la base de datos %(db_name)s: "
+"%(import_err)s"
+
+#: internal/modules/mongodb/importdb.go:89
+#: internal/modules/mysql/importdb.go:97
+#: internal/modules/postgresql/importdb.go:89
+msgid "No database file uploaded!"
+msgstr "¡No se subió ningún archivo de base de datos!"
 
 #: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:233
 #: internal/modules/postgresql/postgresql.go:65
@@ -2076,6 +3434,20 @@ msgid "Unable to retrieve service status. Please contact your administrator."
 msgstr ""
 "No se pudo obtener el estado del servicio. Contacte con su administrador."
 
+#: internal/modules/mongodb/processlist.go:47
+#: internal/modules/mysql/processlist.go:40
+#: internal/modules/postgresql/processlist.go:62
+msgid "Error fetching process list: %(error)s"
+msgstr "Error al obtener la lista de procesos: %(error)s"
+
+#: internal/modules/mongodb/processlist.go:106
+msgid "Error killing operation %(opid)s: %(error)s"
+msgstr "Error al finalizar la operación %(opid)s: %(error)s"
+
+#: internal/modules/mongodb/processlist.go:110
+msgid "Operation %(opid)s killed."
+msgstr "Operación %(opid)s finalizada."
+
 #: internal/modules/mongodb/render.go:56
 #: internal/web/templates/mongodb/databases.html:9
 msgid "MongoDB Databases"
@@ -2142,11 +3514,395 @@ msgstr "Asignar usuario a la base de datos"
 msgid "Remove User from Database"
 msgstr "Eliminar usuario de la base de datos"
 
+#: internal/modules/mongodb/users.go:41 internal/modules/mysql/users.go:40
+#: internal/modules/postgresql/users.go:48
+msgid "Error fetching users: %(error)s"
+msgstr "Error al obtener los usuarios: %(error)s"
+
+#: internal/modules/mongodb/users.go:76 internal/modules/mongodb/users.go:133
+#: internal/modules/mongodb/users.go:170 internal/modules/mongodb/wizard.go:58
+#: internal/modules/mysql/assign.go:42 internal/modules/mysql/assign.go:174
+#: internal/modules/mysql/users.go:82 internal/modules/mysql/users.go:146
+#: internal/modules/mysql/users.go:190 internal/modules/postgresql/users.go:87
+#: internal/modules/postgresql/users.go:144
+#: internal/modules/postgresql/users.go:193
+#: internal/modules/postgresql/wizard.go:56
+msgid "User name is required."
+msgstr "El nombre de usuario es obligatorio."
+
+#: internal/modules/mongodb/users.go:79 internal/modules/mongodb/users.go:173
+#: internal/modules/mongodb/wizard.go:61 internal/modules/mysql/assign.go:45
+#: internal/modules/mysql/assign.go:177 internal/modules/mysql/users.go:85
+#: internal/modules/mysql/users.go:149 internal/modules/mysql/users.go:193
+#: internal/modules/postgresql/users.go:90
+#: internal/modules/postgresql/users.go:196
+#: internal/modules/postgresql/wizard.go:59
+msgid ""
+"Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
+"- [a-zA-Z0-9_]+ "
+msgstr ""
+"El nombre %(db_user)s no está permitido. Use caracteres alfanuméricos y '_' "
+"- [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/users.go:82 internal/modules/mongodb/wizard.go:64
+#: internal/modules/mysql/remotemysql.go:158
+#: internal/modules/mysql/users.go:88 internal/modules/postgresql/users.go:93
+#: internal/modules/postgresql/wizard.go:62
+msgid "This username is not allowed."
+msgstr "Este nombre de usuario no está permitido."
+
+#: internal/modules/mongodb/users.go:90 internal/modules/mongodb/wizard.go:99
+#: internal/modules/postgresql/users.go:101
+#: internal/modules/postgresql/wizard.go:95
+msgid "Failed to create user: %(error)s"
+msgstr "No se pudo crear el usuario: %(error)s"
+
+#: internal/modules/mongodb/users.go:94
+msgid "Successfully created a MongoDB user %(db_user)s"
+msgstr "Usuario MongoDB %(db_user)s creado correctamente"
+
+#: internal/modules/mongodb/users.go:108 internal/modules/mongodb/users.go:176
+#: internal/modules/mysql/assign.go:189
+#: internal/modules/mysql/remotemysql.go:222
+#: internal/modules/mysql/users.go:116 internal/modules/mysql/users.go:196
+#: internal/modules/postgresql/users.go:119
+#: internal/modules/postgresql/users.go:199
+msgid "This is a system username that can not be edited."
+msgstr "Este es un nombre de usuario del sistema que no se puede editar."
+
+#: internal/modules/mongodb/users.go:136
+#: internal/modules/postgresql/users.go:147
+msgid ""
+"Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
+"- [a-zA-Z0-9_]+"
+msgstr ""
+"El nombre %(db_user)s no está permitido. Use caracteres alfanuméricos y '_' "
+"- [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/users.go:139
+#: internal/modules/postgresql/users.go:150
+msgid "This is a system username that cannot be deleted."
+msgstr "Este es un nombre de usuario del sistema que no se puede eliminar."
+
+#: internal/modules/mongodb/users.go:144
+#: internal/modules/postgresql/users.go:167
+msgid "Error deleting user %(db_user)s: %(error)s"
+msgstr "Error al eliminar el usuario %(db_user)s: %(error)s"
+
+#: internal/modules/mongodb/users.go:146 internal/modules/mysql/users.go:167
+#: internal/modules/postgresql/users.go:169
+msgid "Successfully deleted user %(db_user)s"
+msgstr "Usuario %(db_user)s eliminado correctamente"
+
+#: internal/modules/mongodb/users.go:184
+#: internal/modules/postgresql/users.go:207
+msgid "Error changing password for user %(db_user)s: %(error)s"
+msgstr "Error al cambiar la contraseña del usuario %(db_user)s: %(error)s"
+
+#: internal/modules/mongodb/users.go:188 internal/modules/mysql/users.go:215
+#: internal/modules/postgresql/users.go:211
+msgid "Successfully changed password for user %(db_user)s"
+msgstr "Contraseña del usuario %(db_user)s cambiada correctamente"
+
+#: internal/modules/mongodb/wizard.go:104
+msgid "Database and user created, but failed to grant role: %(error)s"
+msgstr ""
+"Base de datos y usuario creados, pero no se pudo conceder el rol: %(error)s"
+
+#: internal/modules/mongodb/wizard.go:111
+msgid ""
+"Successfully created database %(database_name)s, user %(db_user)s, and "
+"granted %(role)s."
+msgstr ""
+"Base de datos %(database_name)s y usuario %(db_user)s creados correctamente,"
+" con el rol %(role)s concedido."
+
+#: internal/modules/moodle/install.go:390
+msgid "Moodle installed successfully on %(selected_domain)s"
+msgstr "Moodle instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/moodle/manage.go:47
+msgid "Moodle installation not found in the database"
+msgstr "Instalación de Moodle no encontrada en la base de datos"
+
+#: internal/modules/moodle/manage.go:87
+msgid "An error occurred during Moodle uninstall."
+msgstr "Se produjo un error al desinstalar Moodle."
+
+#: internal/modules/moodle/manage.go:98
+msgid "Moodle uninstalled successfully"
+msgstr "Moodle desinstalado correctamente"
+
 #: internal/modules/moodle/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:580
 #: internal/web/templates/manager/moodle_install.html:9
 msgid "Install Moodle"
 msgstr "Instalar Moodle"
+
+#: internal/modules/mysql/assign.go:55
+msgid "At least one privilege must be selected."
+msgstr "Debe seleccionar al menos un privilegio."
+
+#: internal/modules/mysql/assign.go:61 internal/modules/mysql/assign.go:192
+#: internal/modules/mysql/remotemysql.go:161
+#: internal/modules/mysql/remotemysql.go:225
+#: internal/modules/mysql/remotemysql.go:267
+#: internal/modules/mysql/users.go:91 internal/modules/mysql/users.go:155
+#: internal/modules/mysql/users.go:199
+msgid "Invalid host format."
+msgstr "Formato de host no válido."
+
+#: internal/modules/mysql/assign.go:67
+msgid "Invalid privilege selected."
+msgstr "Privilegio seleccionado no válido."
+
+#: internal/modules/mysql/assign.go:95
+msgid ""
+"Privileges granted successfully for user '%(db_user)s' on database "
+"'%(database_name)s'"
+msgstr ""
+"Privilegios concedidos correctamente al usuario '%(db_user)s' en la base de "
+"datos '%(database_name)s'"
+
+#: internal/modules/mysql/assign.go:186
+msgid "This is a system database that can not be edited."
+msgstr "Esta es una base de datos del sistema que no se puede editar."
+
+#: internal/modules/mysql/assign.go:197 internal/modules/mysql/assign.go:201
+msgid "Failed to revoke privileges: %(error)s"
+msgstr "No se pudieron revocar los privilegios: %(error)s"
+
+#: internal/modules/mysql/assign.go:207
+msgid ""
+"Successfully revoked all privileges for user %(db_user)s from database "
+"%(database_name)s"
+msgstr ""
+"Se revocaron correctamente todos los privilegios del usuario %(db_user)s en "
+"la base de datos %(database_name)s"
+
+#: internal/modules/mysql/conf.go:177
+msgid "Unknown database service, cannot restart"
+msgstr "Servicio de base de datos desconocido, no se puede reiniciar"
+
+#: internal/modules/mysql/conf.go:181
+msgid "%(mysql_version)s configuration saved but service failed to restart."
+msgstr ""
+"Configuración de %(mysql_version)s guardada, pero el servicio no se pudo "
+"reiniciar."
+
+#: internal/modules/mysql/conf.go:183
+msgid "%(mysql_version)s configuration updated and service restarted."
+msgstr "Configuración de %(mysql_version)s actualizada y servicio reiniciado."
+
+#: internal/modules/mysql/conf.go:189
+msgid ""
+"%(mysql_version)s container is not running. Please wait for initialization."
+msgstr ""
+"El contenedor de %(mysql_version)s no está en ejecución. Espere a que se "
+"inicialice."
+
+#: internal/modules/mysql/databases.go:165 internal/modules/mysql/wizard.go:30
+msgid ""
+"%(mysql_version)s service is not ready yet. Please wait for the installation"
+" to finish before creating a database."
+msgstr ""
+"El servicio %(mysql_version)s aún no está listo. Espere a que termine la "
+"instalación antes de crear una base de datos."
+
+#: internal/modules/mysql/databases.go:181
+msgid ""
+"Database name is too long. MySQL identifiers are limited to 64 characters."
+msgstr ""
+"El nombre de la base de datos es demasiado largo. Los identificadores de "
+"MySQL están limitados a 64 caracteres."
+
+#: internal/modules/mysql/databases.go:196
+msgid ""
+"Error creating database: '%(database_name)s' - You have reached the maximum "
+"number of databases allowed.%(upgrade_message)s"
+msgstr ""
+"Error al crear la base de datos: '%(database_name)s' - Ha alcanzado el "
+"número máximo de bases de datos permitidas.%(upgrade_message)s"
+
+#: internal/modules/mysql/databases.go:201
+msgid "Error creating database: %(error)s"
+msgstr "Error al crear la base de datos: %(error)s"
+
+#: internal/modules/mysql/databases.go:209
+msgid "Successfully created a database %(database_name)s"
+msgstr "Base de datos %(database_name)s creada correctamente"
+
+#: internal/modules/mysql/databases.go:239
+msgid "Error deleting database: %(error)s"
+msgstr "Error al eliminar la base de datos: %(error)s"
+
+#: internal/modules/mysql/databases.go:247
+msgid "Successfully deleted a database %(database_name)s"
+msgstr "Base de datos %(database_name)s eliminada correctamente"
+
+#: internal/modules/mysql/export.go:45
+msgid ""
+"Database '%(database_name)s' is restricted and cannot be exported. Contact "
+"Administrator"
+msgstr ""
+"La base de datos '%(database_name)s' está restringida y no se puede "
+"exportar. Contacte con el administrador"
+
+#: internal/modules/mysql/export.go:48
+#: internal/modules/postgresql/export.go:42
+msgid "Invalid export format provided, select SQL or GZIP."
+msgstr "Formato de exportación no válido, seleccione SQL o GZIP."
+
+#: internal/modules/mysql/export.go:59
+msgid "Unsupported database engine: %(mysql_version)s"
+msgstr "Motor de base de datos no compatible: %(mysql_version)s"
+
+#: internal/modules/mysql/importdb.go:48
+msgid ""
+"%(mysql_version)s container is not running. Please allow a few moments for "
+"the initialization.."
+msgstr ""
+"El contenedor de %(mysql_version)s no está en ejecución. Espere unos "
+"momentos a que se inicialice.."
+
+#: internal/modules/mysql/importdb.go:74
+msgid "Uploaded file exceeds %(mysql_import_max_size_gb)s GB limit."
+msgstr ""
+"El archivo subido supera el límite de %(mysql_import_max_size_gb)s GB."
+
+#: internal/modules/mysql/importdb.go:90
+msgid "Successfully imported from %(filename)s file to database: %(db_name)s"
+msgstr ""
+"Importado correctamente desde el archivo %(filename)s a la base de datos: "
+"%(db_name)s"
+
+#: internal/modules/mysql/importdb.go:94
+msgid "Import into '%(db_name)s' failed: %(err_detail)s"
+msgstr "La importación en '%(db_name)s' falló: %(err_detail)s"
+
+#: internal/modules/mysql/mysql.go:276
+msgid ""
+"%(service)s service is not yet installed. Starting it in the background.."
+msgstr ""
+"El servicio %(service)s aún no está instalado. Iniciándolo en segundo "
+"plano.."
+
+#: internal/modules/mysql/mysql.go:278
+msgid "%(service)s service is not accessible. Current status: %(state)s."
+msgstr "El servicio %(service)s no es accesible. Estado actual: %(state)s."
+
+#: internal/modules/mysql/mysql.go:280
+msgid ""
+"%(service)s is running but still initializing. If it stays in this state for"
+" more than 60s, check the logs."
+msgstr ""
+"%(service)s está en ejecución pero aún se está inicializando. Si sigue así "
+"más de 60 s, revise los registros."
+
+#: internal/modules/mysql/mysql.go:282
+msgid "%(service)s is starting. It is not ready to handle queries yet."
+msgstr ""
+"%(service)s se está iniciando. Aún no está listo para atender consultas."
+
+#: internal/modules/mysql/mysql.go:284
+msgid ""
+"%(service)s is running, but health status is unknown. It may or may not be "
+"ready to handle queries."
+msgstr ""
+"%(service)s está en ejecución, pero su estado de salud es desconocido. Puede"
+" que no esté listo para atender consultas."
+
+#: internal/modules/mysql/processlist.go:102
+msgid "Error killing query %(id)s: %(error)s"
+msgstr "Error al finalizar la consulta %(id)s: %(error)s"
+
+#: internal/modules/mysql/processlist.go:106
+msgid "Query %(id)s killed."
+msgstr "Consulta %(id)s finalizada."
+
+#: internal/modules/mysql/remotemysql.go:79
+msgid "Remote MySQL access is now enabled."
+msgstr "El acceso remoto a MySQL está activado."
+
+#: internal/modules/mysql/remotemysql.go:83
+msgid "Remote MySQL access is already disabled."
+msgstr "El acceso remoto a MySQL ya está desactivado."
+
+#: internal/modules/mysql/remotemysql.go:87
+msgid "Remote MySQL access is now disabled."
+msgstr "El acceso remoto a MySQL está desactivado."
+
+#: internal/modules/mysql/remotemysql.go:95
+msgid ""
+"Port changed but the MySQL service failed to restart. Try restarting it "
+"manually from Services."
+msgstr ""
+"Puerto cambiado, pero el servicio MySQL no se pudo reiniciar. Intente "
+"reiniciarlo manualmente desde Servicios."
+
+#: internal/modules/mysql/remotemysql.go:112
+msgid ""
+"Could not load MySQL users yet - the database may still be starting. Please "
+"refresh in a moment."
+msgstr ""
+"Aún no se pudieron cargar los usuarios de MySQL; puede que la base de datos "
+"se esté iniciando. Actualice en un momento."
+
+#: internal/modules/mysql/remotemysql.go:155
+msgid "A valid username is required - alphanumeric characters and '_' only."
+msgstr ""
+"Se requiere un nombre de usuario válido: solo caracteres alfanuméricos y "
+"'_'."
+
+#: internal/modules/mysql/remotemysql.go:164
+msgid "Password is required."
+msgstr "La contraseña es obligatoria."
+
+#: internal/modules/mysql/remotemysql.go:172
+#: internal/modules/mysql/remotemysql.go:187
+#: internal/modules/mysql/remotemysql.go:194
+msgid "Error adding access: %(error)s"
+msgstr "Error al añadir el acceso: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:181
+msgid "User %(db_user)s already has access from host %(db_host)s."
+msgstr "El usuario %(db_user)s ya tiene acceso desde el host %(db_host)s."
+
+#: internal/modules/mysql/remotemysql.go:200
+msgid "Successfully granted access for %(db_user)s from %(db_host)s"
+msgstr "Acceso concedido correctamente a %(db_user)s desde %(db_host)s"
+
+#: internal/modules/mysql/remotemysql.go:219
+#: internal/modules/mysql/remotemysql.go:261
+msgid "A valid username is required."
+msgstr "Se requiere un nombre de usuario válido."
+
+#: internal/modules/mysql/remotemysql.go:228
+msgid "No changes made."
+msgstr "No se realizaron cambios."
+
+#: internal/modules/mysql/remotemysql.go:233
+#: internal/modules/mysql/remotemysql.go:237
+msgid "Error updating access: %(error)s"
+msgstr "Error al actualizar el acceso: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:243
+msgid "Successfully updated access for %(db_user)s"
+msgstr "Acceso de %(db_user)s actualizado correctamente"
+
+#: internal/modules/mysql/remotemysql.go:264
+#: internal/modules/mysql/users.go:152
+msgid "This is a system username that can not be deleted."
+msgstr "Este es un nombre de usuario del sistema que no se puede eliminar."
+
+#: internal/modules/mysql/remotemysql.go:272
+#: internal/modules/mysql/remotemysql.go:276
+msgid "Error removing access: %(error)s"
+msgstr "Error al quitar el acceso: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:282
+msgid "Successfully removed access for %(db_user)s from %(db_host)s"
+msgstr "Acceso de %(db_user)s desde %(db_host)s eliminado correctamente"
 
 #: internal/modules/mysql/render.go:117
 msgid "Database Users"
@@ -2164,11 +3920,79 @@ msgstr "Cambiar contraseña de root"
 msgid "Remote MySQL"
 msgstr "MySQL remoto"
 
+#: internal/modules/mysql/rootpassword.go:37
+#: internal/modules/mysql/rootpassword.go:41
+#: internal/modules/mysql/rootpassword.go:45
+msgid "Error changing MySQL root password: %(error)s"
+msgstr "Error al cambiar la contraseña root de MySQL: %(error)s"
+
+#: internal/modules/mysql/rootpassword.go:57
+#: internal/modules/mysql/rootpassword.go:63
+msgid "Password changed but failed to restart MySQL."
+msgstr "Contraseña cambiada, pero no se pudo reiniciar MySQL."
+
+#: internal/modules/mysql/rootpassword.go:67
+msgid "Successfully changed root password."
+msgstr "Contraseña root cambiada correctamente."
+
+#: internal/modules/mysql/users.go:105
+msgid "Successfully created a database user %(db_user)s"
+msgstr "Usuario de base de datos %(db_user)s creado correctamente"
+
+#: internal/modules/mysql/users.go:160
+msgid "Error deleting user: %(error)s"
+msgstr "Error al eliminar el usuario: %(error)s"
+
+#: internal/modules/mysql/users.go:208
+msgid "Error changing password: %(error)s"
+msgstr "Error al cambiar la contraseña: %(error)s"
+
+#: internal/modules/nextcloud/install.go:352
+msgid "Nextcloud installed successfully on %(selected_domain)s"
+msgstr "Nextcloud instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/nextcloud/manage.go:51
+msgid "Nextcloud installation not found in the database"
+msgstr "Instalación de Nextcloud no encontrada en la base de datos"
+
+#: internal/modules/nextcloud/manage.go:75
+msgid "Database name or user not found in config/config.php"
+msgstr ""
+"Nombre de la base de datos o usuario no encontrado en config/config.php"
+
+#: internal/modules/nextcloud/manage.go:96
+msgid "An error occurred during Nextcloud uninstall."
+msgstr "Se produjo un error al desinstalar Nextcloud."
+
+#: internal/modules/nextcloud/manage.go:107
+msgid "Nextcloud uninstalled successfully"
+msgstr "Nextcloud desinstalado correctamente"
+
 #: internal/modules/nextcloud/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:478
 #: internal/web/templates/manager/nextcloud_install.html:9
 msgid "Install Nextcloud"
 msgstr "Instalar Nextcloud"
+
+#: internal/modules/ojs/install.go:418
+msgid "OJS installed successfully on %(selected_domain)s"
+msgstr "OJS instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/ojs/manage.go:41
+msgid "OJS installation not found in the database"
+msgstr "Instalación de OJS no encontrada en la base de datos"
+
+#: internal/modules/ojs/manage.go:69
+msgid "Database name or user not found in config.inc.php"
+msgstr "Nombre de la base de datos o usuario no encontrado en config.inc.php"
+
+#: internal/modules/ojs/manage.go:79
+msgid "An error occurred during OJS uninstall."
+msgstr "Se produjo un error al desinstalar OJS."
+
+#: internal/modules/ojs/manage.go:90
+msgid "OJS uninstalled successfully"
+msgstr "OJS desinstalado correctamente"
 
 #: internal/modules/ojs/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:612
@@ -2176,11 +4000,160 @@ msgstr "Instalar Nextcloud"
 msgid "Install OJS"
 msgstr "Instalar OJS"
 
+#: internal/modules/opencart/install.go:361
+msgid "OpenCart installed successfully on %(selected_domain)s"
+msgstr "OpenCart instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/opencart/manage.go:51
+msgid "OpenCart installation not found in the database"
+msgstr "Instalación de OpenCart no encontrada en la base de datos"
+
+#: internal/modules/opencart/manage.go:96
+msgid "An error occurred during OpenCart uninstall."
+msgstr "Se produjo un error al desinstalar OpenCart."
+
+#: internal/modules/opencart/manage.go:107
+msgid "OpenCart uninstalled successfully"
+msgstr "OpenCart desinstalado correctamente"
+
 #: internal/modules/opencart/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:215
 #: internal/web/templates/manager/opencart_install.html:9
 msgid "Install OpenCart"
 msgstr "Instalar OpenCart"
+
+#: internal/modules/php/default.go:55
+msgid "Invalid PHP version format"
+msgstr "Formato de versión de PHP no válido"
+
+#: internal/modules/php/default.go:59
+msgid ""
+"Default PHP version for OpenLitespeed can not be set to %(new_phpversion)s -"
+" only available tags are: 8.5 8.4 8.3 8.2"
+msgstr ""
+"La versión de PHP predeterminada de OpenLitespeed no se puede establecer en "
+"%(new_phpversion)s; solo están disponibles: 8.5 8.4 8.3 8.2"
+
+#: internal/modules/php/default.go:67
+msgid "PHP version %(new_phpversion)s set as default for new domains"
+msgstr ""
+"PHP %(new_phpversion)s establecido como predeterminado para nuevos dominios"
+
+#: internal/modules/php/default.go:71
+msgid ""
+"PHP version %(new_phpversion)s saved, and Litespeed restarted to apply the "
+"version."
+msgstr ""
+"PHP %(new_phpversion)s guardado y Litespeed reiniciado para aplicar la "
+"versión."
+
+#: internal/modules/php/default.go:75
+msgid ""
+"PHP version %(new_phpversion)s saved and will be used by Litespeed for new "
+"domains."
+msgstr ""
+"PHP %(new_phpversion)s guardado; Litespeed lo usará para nuevos dominios."
+
+#: internal/modules/php/default.go:87
+msgid "Default PHP version could not be changed to %(new_phpversion)s"
+msgstr ""
+"No se pudo cambiar la versión de PHP predeterminada a %(new_phpversion)s"
+
+#: internal/modules/php/domains.go:67
+msgid ""
+"Only one PHP version can be used on Litespeed, to change version for all "
+"domains use this page."
+msgstr ""
+"En Litespeed solo se puede usar una versión de PHP; para cambiarla en todos "
+"los dominios use esta página."
+
+#: internal/modules/php/domains.go:95
+msgid "Invalid or unavailable PHP version selected."
+msgstr "Versión de PHP seleccionada no válida o no disponible."
+
+#: internal/modules/php/domains.go:99
+msgid "Invalid current PHP version."
+msgstr "Versión de PHP actual no válida."
+
+#: internal/modules/php/domains.go:107
+msgid "Failed to start PHP %(new_phpversion)s: %(message)s"
+msgstr "No se pudo iniciar PHP %(new_phpversion)s: %(message)s"
+
+#: internal/modules/php/domains.go:115
+msgid "Failed to read vhost configuration for %(domain_url)s: %(error)s"
+msgstr ""
+"No se pudo leer la configuración del vhost de %(domain_url)s: %(error)s"
+
+#: internal/modules/php/domains.go:123
+msgid "Error occurred while updating PHP version for domain %(domain_url)s"
+msgstr ""
+"Se produjo un error al actualizar la versión de PHP del dominio "
+"%(domain_url)s"
+
+#: internal/modules/php/domains.go:136
+msgid ""
+"PHP version for domain %(domain_url)s updated from %(old_phpversion)s to "
+"%(new_phpversion)s"
+msgstr ""
+"Versión de PHP del dominio %(domain_url)s actualizada de %(old_phpversion)s "
+"a %(new_phpversion)s"
+
+#: internal/modules/php/extensions.go:587
+msgid "Failed to start PHP %(version)s: %(err_msg)s"
+msgstr "No se pudo iniciar PHP %(version)s: %(err_msg)s"
+
+#: internal/modules/php/extensions.go:597
+msgid "Invalid extension name."
+msgstr "Nombre de extensión no válido."
+
+#: internal/modules/php/extensions.go:620
+msgid ""
+"Extension %(extension)s %(action_word)s, PHP %(version)s restarted to apply "
+"changes."
+msgstr ""
+"Extensión %(extension)s %(action_word)s, PHP %(version)s reiniciado para "
+"aplicar los cambios."
+
+#: internal/modules/php/extensions.go:622
+msgid "Could not change extension %(extension)s: %(err_msg)s"
+msgstr "No se pudo cambiar la extensión %(extension)s: %(err_msg)s"
+
+#: internal/modules/php/info.go:44
+msgid "Failed to start PHP %(service)s: %(message)s"
+msgstr "No se pudo iniciar PHP %(service)s: %(message)s"
+
+#: internal/modules/php/ini.go:68
+msgid "Error saving %(text)s php.ini file!"
+msgstr "¡Error al guardar el archivo php.ini de %(text)s!"
+
+#: internal/modules/php/ini.go:74
+msgid ""
+"PHP.INI file for %(text)s version %(version)s edited successfully, and "
+"%(container_to_restart)s service restarted to apply."
+msgstr ""
+"Archivo PHP.INI de %(text)s versión %(version)s editado correctamente y "
+"servicio %(container_to_restart)s reiniciado para aplicarlo."
+
+#: internal/modules/php/ini.go:78
+msgid "PHP.INI file for %(text)s version %(version)s edited successfully."
+msgstr ""
+"Archivo PHP.INI de %(text)s versión %(version)s editado correctamente."
+
+#: internal/modules/php/options.go:277
+msgid ""
+"Configuration edited successfully and %(text)s service restarted to apply "
+"new settings."
+msgstr ""
+"Configuración editada correctamente y servicio %(text)s reiniciado para "
+"aplicar los nuevos ajustes."
+
+#: internal/modules/php/options.go:279
+msgid ""
+"Configuration edited successfully, but %(text)s failed to restart. Try "
+"restarting it manually from Services."
+msgstr ""
+"Configuración editada correctamente, pero %(text)s no se pudo reiniciar. "
+"Intente reiniciarlo manualmente desde Servicios."
 
 #: internal/modules/php/render.go:128
 #: internal/web/templates/php/default.html:7
@@ -2192,11 +4165,120 @@ msgstr "Versión de PHP predeterminada"
 msgid "Install PHP Application"
 msgstr "Instalar aplicación PHP"
 
+#: internal/modules/phpbb/install.go:306
+msgid "phpBB installed successfully on %(selected_domain)s"
+msgstr "phpBB instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/phpbb/manage.go:81
+msgid "An error occurred during phpBB uninstall."
+msgstr "Se produjo un error al desinstalar phpBB."
+
 #: internal/modules/phpbb/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:253
 #: internal/web/templates/manager/phpbb_install.html:9
 msgid "Install phpBB"
 msgstr "Instalar phpBB"
+
+#: internal/modules/postgresql/assign.go:45
+msgid "Failed to assign user to database."
+msgstr "No se pudo asignar el usuario a la base de datos."
+
+#: internal/modules/postgresql/assign.go:49
+msgid "Successfully added a user %(db_user)s to PostgreSQL database"
+msgstr ""
+"Usuario %(db_user)s añadido correctamente a la base de datos PostgreSQL"
+
+#: internal/modules/postgresql/assign.go:93
+msgid ""
+"Failed to revoke privileges for user %(db_user)s from PostgreSQL database "
+"%(database_name)s"
+msgstr ""
+"No se pudieron revocar los privilegios del usuario %(db_user)s en la base de"
+" datos PostgreSQL %(database_name)s"
+
+#: internal/modules/postgresql/assign.go:97
+msgid ""
+"Successfully revoked all privileges for user %(db_user)s from PostgreSQL "
+"database %(database_name)s"
+msgstr ""
+"Se revocaron correctamente todos los privilegios del usuario %(db_user)s en "
+"la base de datos PostgreSQL %(database_name)s"
+
+#: internal/modules/postgresql/conf.go:149
+msgid ""
+"PostgreSQL configuration was saved successfully but postgres service failed "
+"to start! Please revert the changes to restart postgres."
+msgstr ""
+"La configuración de PostgreSQL se guardó, ¡pero el servicio postgres no se "
+"pudo iniciar! Revierta los cambios para reiniciar postgres."
+
+#: internal/modules/postgresql/conf.go:151
+msgid ""
+"PostgreSQL Configuration was edited successfully and service restarted to "
+"apply new settings."
+msgstr ""
+"La configuración de PostgreSQL se editó correctamente y el servicio se "
+"reinició para aplicar los nuevos ajustes."
+
+#: internal/modules/postgresql/databases.go:46
+#: internal/modules/postgresql/users.go:37
+msgid "Postgres service is not yet installed. Starting it in the background.."
+msgstr ""
+"El servicio Postgres aún no está instalado. Iniciándolo en segundo plano.."
+
+#: internal/modules/postgresql/databases.go:49
+#: internal/modules/postgresql/users.go:40
+msgid ""
+"Postgres container is not running. Please allow a few moments for the "
+"initialization.."
+msgstr ""
+"El contenedor de Postgres no está en ejecución. Espere unos momentos a que "
+"se inicialice.."
+
+#: internal/modules/postgresql/databases.go:119
+#: internal/modules/postgresql/wizard.go:30
+msgid ""
+"Postgres service is not ready yet. Please wait for the installation to "
+"finish before creating a database."
+msgstr ""
+"El servicio Postgres aún no está listo. Espere a que termine la instalación "
+"antes de crear una base de datos."
+
+#: internal/modules/postgresql/databases.go:170
+msgid "Successfully created a PostgreSQL database %(database_name)s"
+msgstr "Base de datos PostgreSQL %(database_name)s creada correctamente"
+
+#: internal/modules/postgresql/databases.go:208
+msgid "Successfully deleted a PostgreSQL database %(database_name)s"
+msgstr "Base de datos PostgreSQL %(database_name)s eliminada correctamente"
+
+#: internal/modules/postgresql/processlist.go:128
+msgid "Error killing query %(pid)s: %(error)s"
+msgstr "Error al finalizar la consulta %(pid)s: %(error)s"
+
+#: internal/modules/postgresql/processlist.go:132
+msgid "Query %(pid)s killed."
+msgstr "Consulta %(pid)s finalizada."
+
+#: internal/modules/postgresql/remote.go:43
+msgid "Remote PostgreSQL access is now enabled."
+msgstr "El acceso remoto a PostgreSQL está activado."
+
+#: internal/modules/postgresql/remote.go:47
+msgid "Remote PostgreSQL access is already disabled."
+msgstr "El acceso remoto a PostgreSQL ya está desactivado."
+
+#: internal/modules/postgresql/remote.go:51
+msgid "Remote PostgreSQL access is now disabled."
+msgstr "El acceso remoto a PostgreSQL está desactivado."
+
+#: internal/modules/postgresql/remote.go:57
+msgid ""
+"Port changed but the PostgreSQL service failed to restart. Try restarting it"
+" manually from Services."
+msgstr ""
+"Puerto cambiado, pero el servicio PostgreSQL no se pudo reiniciar. Intente "
+"reiniciarlo manualmente desde Servicios."
 
 #: internal/modules/postgresql/render.go:60
 #: internal/web/templates/dashboard/onboarding.html:205
@@ -2217,6 +4299,46 @@ msgstr "PostgreSQL remoto"
 #: internal/modules/postgresql/render.go:258
 msgid "Edit PostgreSQL configuration"
 msgstr "Editar configuración de PostgreSQL"
+
+#: internal/modules/postgresql/users.go:105
+msgid "Successfully created a PostgreSQL user %(db_user)s"
+msgstr "Usuario PostgreSQL %(db_user)s creado correctamente"
+
+#: internal/modules/postgresql/wizard.go:103
+msgid "Database and user created, but failed to grant privileges: %(error)s"
+msgstr ""
+"Base de datos y usuario creados, pero no se pudieron conceder los "
+"privilegios: %(error)s"
+
+#: internal/modules/postgresql/wizard.go:110
+msgid ""
+"Successfully created database %(database_name)s, user %(db_user)s, and "
+"granted privileges."
+msgstr ""
+"Base de datos %(database_name)s y usuario %(db_user)s creados correctamente,"
+" con privilegios concedidos."
+
+#: internal/modules/prestashop/install.go:395
+msgid "PrestaShop installed successfully on %(selected_domain)s"
+msgstr "PrestaShop instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/prestashop/manage.go:51
+msgid "PrestaShop installation not found in the database"
+msgstr "Instalación de PrestaShop no encontrada en la base de datos"
+
+#: internal/modules/prestashop/manage.go:75
+msgid "Database name or user not found in app/config/parameters.php"
+msgstr ""
+"Nombre de la base de datos o usuario no encontrado en "
+"app/config/parameters.php"
+
+#: internal/modules/prestashop/manage.go:96
+msgid "An error occurred during PrestaShop uninstall."
+msgstr "Se produjo un error al desinstalar PrestaShop."
+
+#: internal/modules/prestashop/manage.go:107
+msgid "PrestaShop uninstalled successfully"
+msgstr "PrestaShop desinstalado correctamente"
 
 #: internal/modules/prestashop/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:183
@@ -2384,11 +4506,71 @@ msgstr "Haga clic para deshabilitar"
 msgid "Click to Enable"
 msgstr "Haga clic para habilitar"
 
+#: internal/modules/services/services.go:120
+msgid "%(service)s service is now restarted."
+msgstr "El servicio %(service)s se ha reiniciado."
+
+#: internal/modules/services/services.go:124
+msgid "Failed to restart the %(service)s service."
+msgstr "No se pudo reiniciar el servicio %(service)s."
+
+#: internal/modules/services/services.go:130
+msgid "%(service)s service is now disabled."
+msgstr "El servicio %(service)s está desactivado."
+
+#: internal/modules/services/services.go:131
+msgid "Failed to stop the %(service)s service."
+msgstr "No se pudo detener el servicio %(service)s."
+
+#: internal/modules/services/services.go:134
+msgid "%(service)s service is now enabled."
+msgstr "El servicio %(service)s está activado."
+
+#: internal/modules/services/services.go:135
+msgid "Failed to start the %(service)s service."
+msgstr "No se pudo iniciar el servicio %(service)s."
+
+#: internal/modules/services/services.go:142
+msgid "%(fail_msg)s Try restart."
+msgstr "%(fail_msg)s Intente reiniciarlo."
+
+#: internal/modules/sofawiki/install.go:207
+msgid "SofaWiki installed successfully on %(selected_domain)s"
+msgstr "SofaWiki instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/sofawiki/manage.go:42
+msgid "SofaWiki installation not found in the database"
+msgstr "Instalación de SofaWiki no encontrada en la base de datos"
+
+#: internal/modules/sofawiki/manage.go:68
+msgid "An error occurred during SofaWiki uninstall."
+msgstr "Se produjo un error al desinstalar SofaWiki."
+
+#: internal/modules/sofawiki/manage.go:79
+msgid "SofaWiki uninstalled successfully"
+msgstr "SofaWiki desinstalado correctamente"
+
 #: internal/modules/sofawiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:402
 #: internal/web/templates/manager/sofawiki_install.html:9
 msgid "Install SofaWiki"
 msgstr "Instalar SofaWiki"
+
+#: internal/modules/tinyfilemanager/install.go:212
+msgid "TinyFileManager installed successfully on %(selected_domain)s"
+msgstr "TinyFileManager instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/tinyfilemanager/manage.go:42
+msgid "TinyFileManager installation not found in the database"
+msgstr "Instalación de TinyFileManager no encontrada en la base de datos"
+
+#: internal/modules/tinyfilemanager/manage.go:68
+msgid "An error occurred during TinyFileManager uninstall."
+msgstr "Se produjo un error al desinstalar TinyFileManager."
+
+#: internal/modules/tinyfilemanager/manage.go:79
+msgid "TinyFileManager uninstalled successfully"
+msgstr "TinyFileManager desinstalado correctamente"
 
 #: internal/modules/tinyfilemanager/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:542
@@ -2396,16 +4578,139 @@ msgstr "Instalar SofaWiki"
 msgid "Install TinyFileManager"
 msgstr "Instalar TinyFileManager"
 
+#: internal/modules/tinyphotogallery/install.go:183
+msgid "TinyPhotoGallery installed successfully on %(selected_domain)s"
+msgstr "TinyPhotoGallery instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/tinyphotogallery/manage.go:42
+msgid "TinyPhotoGallery installation not found in the database"
+msgstr "Instalación de TinyPhotoGallery no encontrada en la base de datos"
+
+#: internal/modules/tinyphotogallery/manage.go:68
+msgid "An error occurred during TinyPhotoGallery uninstall."
+msgstr "Se produjo un error al desinstalar TinyPhotoGallery."
+
+#: internal/modules/tinyphotogallery/manage.go:79
+msgid "TinyPhotoGallery uninstalled successfully"
+msgstr "TinyPhotoGallery desinstalado correctamente"
+
 #: internal/modules/tinyphotogallery/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:510
 #: internal/web/templates/manager/tinyphotogallery_install.html:9
 msgid "Install TinyPhotoGallery"
 msgstr "Instalar TinyPhotoGallery"
 
-#: internal/modules/waf/handlers_list.go:93
-#: internal/modules/waf/handlers_list.go:97
+#: internal/modules/trash/crud.go:185 internal/modules/trash/crud.go:200
+#: internal/modules/trash/crud.go:205
+msgid "Unexpected error"
+msgstr "Error inesperado"
+
+#: internal/modules/trash/crud.go:210
+msgid "Trash emptied successfully"
+msgstr "Papelera vaciada correctamente"
+
+#: internal/modules/trash/crud.go:227
+msgid "Nothing to restore"
+msgstr "Nada que restaurar"
+
+#: internal/modules/trash/crud.go:275
+msgid "Some items could not be restored."
+msgstr "Algunos elementos no se pudieron restaurar."
+
+#: internal/modules/trash/crud.go:280
+msgid "All items restored successfully"
+msgstr "Todos los elementos se restauraron correctamente"
+
+#: internal/modules/trash/trash.go:72
+msgid "Invalid directory."
+msgstr "Directorio no válido."
+
+#: internal/modules/waf/handlers_domain.go:73
+msgid "Error: IDs should only contain numbers separated by spaces."
+msgstr "Error: los ID solo deben contener números separados por espacios."
+
+#: internal/modules/waf/handlers_domain.go:87
+msgid "WAF configuration updated."
+msgstr "Configuración de WAF actualizada."
+
+#: internal/modules/waf/handlers_domain.go:90
+#: internal/modules/waf/handlers_domain.go:94
+msgid "Error updating WAF!"
+msgstr "¡Error al actualizar el WAF!"
+
+#: internal/modules/waf/handlers_domain.go:98
+msgid "Configuration file not found."
+msgstr "Archivo de configuración no encontrado."
+
+#: internal/modules/waf/handlers_list.go:91
+msgid "WAF for domain: %(domain_name)s is now %(status_text)s"
+msgstr "El WAF del dominio %(domain_name)s ahora está %(status_text)s"
+
+#: internal/modules/waf/handlers_list.go:94
+#: internal/modules/waf/handlers_list.go:98
 msgid "Error changing WAF status."
 msgstr "Error al cambiar el estado del WAF."
+
+#: internal/modules/waf/handlers_list.go:102
+msgid "Config file for %(domain_name)s not found"
+msgstr "Archivo de configuración de %(domain_name)s no encontrado"
+
+#: internal/modules/webserverconf/handlers.go:80
+msgid "No default configuration is available for %(service_name)s."
+msgstr "No hay configuración predeterminada disponible para %(service_name)s."
+
+#: internal/modules/webserverconf/handlers.go:86
+#: internal/modules/webserverconf/handlers.go:90
+msgid "Error restoring %(conf_file)s: %(error)s"
+msgstr "Error al restaurar %(conf_file)s: %(error)s"
+
+#: internal/modules/webserverconf/handlers.go:104
+msgid "Error writing to %(conf_file)s: %(error)s"
+msgstr "Error al escribir en %(conf_file)s: %(error)s"
+
+#: internal/modules/webserverconf/handlers.go:114
+msgid ""
+"Configuration was not saved - it failed the %(service_name)s syntax check: "
+"%(test_output)s"
+msgstr ""
+"La configuración no se guardó: no superó la comprobación de sintaxis de "
+"%(service_name)s: %(test_output)s"
+
+#: internal/modules/webserverconf/handlers.go:126
+msgid "Error restarting %(service_name)s container."
+msgstr "Error al reiniciar el contenedor %(service_name)s."
+
+#: internal/modules/webserverconf/handlers.go:130
+msgid ""
+"Restored %(conf_file)s to the default configuration and %(service_name)s "
+"container restarted successfully."
+msgstr ""
+"%(conf_file)s restaurado a la configuración predeterminada y contenedor "
+"%(service_name)s reiniciado correctamente."
+
+#: internal/modules/webserverconf/handlers.go:132
+msgid ""
+"Changes saved to %(conf_file)s and %(service_name)s container restarted "
+"successfully."
+msgstr ""
+"Cambios guardados en %(conf_file)s y contenedor %(service_name)s reiniciado "
+"correctamente."
+
+#: internal/modules/webserverconf/handlers.go:140
+msgid ""
+"Restored %(conf_file)s to the default configuration - the %(service_name)s "
+"container is not running."
+msgstr ""
+"%(conf_file)s restaurado a la configuración predeterminada; el contenedor "
+"%(service_name)s no está en ejecución."
+
+#: internal/modules/webserverconf/handlers.go:142
+msgid ""
+"Changes saved to %(conf_file)s - the %(service_name)s container is not "
+"running."
+msgstr ""
+"Cambios guardados en %(conf_file)s; el contenedor %(service_name)s no está "
+"en ejecución."
 
 #: internal/modules/webserverconf/webserverconf.go:29
 msgid "Nginx Configuration Editor"
@@ -2430,6 +4735,28 @@ msgstr "Editor de configuración de Litespeed"
 #: internal/modules/webserverconf/webserverconf.go:41
 msgid "Web Server Configuration Editor"
 msgstr "Editor de configuración del servidor web"
+
+#: internal/modules/websites/bulk.go:167
+msgid ""
+"%(action_title)s: completed successfully for all %(total)s selected site(s)."
+msgstr ""
+"%(action_title)s: completado correctamente para los %(total)s sitios "
+"seleccionados."
+
+#: internal/modules/websites/bulk.go:170
+msgid "%(action_title)s: %(failed)s of %(total)s selected site(s) failed."
+msgstr ""
+"%(action_title)s: fallaron %(failed)s de %(total)s sitios seleccionados."
+
+#: internal/modules/websites/dispatch.go:135
+msgid "Invalid domain name format."
+msgstr "Formato de nombre de dominio no válido."
+
+#: internal/modules/websites/dispatch.go:142
+#: internal/modules/websites/websitebuilder.go:154
+#: internal/modules/websites/websites.go:1009
+msgid "Unable to detect docroot for the domain."
+msgstr "No se pudo detectar el docroot del dominio."
 
 #: internal/modules/websites/render_dispatch.go:512
 msgid "Block access to wp-config.php"
@@ -2559,6 +4886,10 @@ msgstr ""
 "Usa un filtro de User-Agent para bloquear scrapers agresivos y escáneres de "
 "seguridad como AhrefsBot, SemrushBot, MJ12bot y Nikto."
 
+#: internal/modules/websites/websitebuilder.go:68
+msgid "Website not found in the database"
+msgstr "Sitio web no encontrado en la base de datos"
+
 #: internal/modules/websites/websitebuilder_render.go:38
 #: internal/web/templates/manager/autoinstaller.html:145
 msgid "Create Website"
@@ -2567,6 +4898,44 @@ msgstr "Crear sitio web"
 #: internal/modules/websites/websitebuilder_render.go:51
 msgid "GrapesJS Website Editor"
 msgstr "Editor de sitios web GrapesJS"
+
+#: internal/modules/websites/websitebuilder_render.go:91
+msgid "You have reached the maximum number of sites allowed."
+msgstr "Ha alcanzado el número máximo de sitios permitidos."
+
+#: internal/modules/websites/websitebuilder_render.go:210
+msgid "Website created successfully on %(selected_domain)s"
+msgstr "Sitio web creado correctamente en %(selected_domain)s"
+
+#: internal/modules/wordpress/install.go:371
+msgid "WordPress installed successfully on %(selected_domain)s"
+msgstr "WordPress instalado correctamente en %(selected_domain)s"
+
+#: internal/modules/wordpress/manage.go:274
+msgid "WordPress installation not found in the database"
+msgstr "Instalación de WordPress no encontrada en la base de datos"
+
+#: internal/modules/wordpress/manage.go:301
+msgid "Database name or user not found in wp-config.php"
+msgstr "Nombre de la base de datos o usuario no encontrado en wp-config.php"
+
+#: internal/modules/wordpress/manage.go:347
+msgid "Missing site ID."
+msgstr "Falta el ID del sitio."
+
+#: internal/modules/wordpress/manage.go:378
+msgid "WordPress installation detached from Manager."
+msgstr "Instalación de WordPress desvinculada del gestor."
+
+#: internal/modules/wordpress/manage.go:659
+msgid "Hardening rules have been successfully applied to the website"
+msgstr "Las reglas de refuerzo se aplicaron correctamente al sitio web"
+
+#: internal/modules/wordpress/manage.go:661
+msgid "Failed to apply hardening rules to the website - please try again"
+msgstr ""
+"No se pudieron aplicar las reglas de refuerzo al sitio web; inténtelo de "
+"nuevo"
 
 #: internal/modules/wordpress/render.go:41
 msgid "WordPress Manager"
@@ -5816,14 +8185,6 @@ msgstr "Clave pública"
 #: internal/web/templates/domains/new.html:92
 msgid "Secret Key"
 msgstr "Clave secreta"
-
-#: internal/web/templates/domains/new.html:217
-msgid ""
-"Paths for both public and secret files must be set for importing .onion "
-"domain."
-msgstr ""
-"Se deben establecer las rutas para los archivos público y secreto para "
-"importar el dominio .onion."
 
 #: internal/web/templates/domains/new.html:224
 msgid "Paths for both public and secret files must start with /var/www/html/."
