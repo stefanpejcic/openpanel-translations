@@ -46,7 +46,9 @@ TMPL_DICT_RE = re.compile(r'"(?:Title|Intro|Checking)"\s+"((?:[^"\\]|\\.)*)"')
 TMPL_GETN = re.compile(r'\.T\.GetN\s+"((?:[^"\\]|\\.)*)"\s+"((?:[^"\\]|\\.)*)"')
 GO_GET = re.compile(r'(?:^|[^\w.])(?:t|T|layout\.T|[A-Za-z_][A-Za-z0-9_]*\.T)\.Get\(\s*"((?:[^"\\]|\\.)*)"')
 GO_GETN = re.compile(r'(?:^|[^\w.])(?:t|T|layout\.T|[A-Za-z_][A-Za-z0-9_]*\.T)\.GetN\(\s*"((?:[^"\\]|\\.)*)"\s*,\s*"((?:[^"\\]|\\.)*)"')
-FIELD_RE = re.compile(r'\b(?:Label|Title|PageTitle|TechDetails|Description|RequirementsLabel|RequirementsTooltip):\s*"((?:[^"\\]|\\.)*)"')
+FIELD_RE = re.compile(r'\b(?:Label|Title|PageTitle|TechDetails|Description|RequirementsLabel|RequirementsTooltip|Message):\s*"((?:[^"\\]|\\.)*)"(?=\s*(?:,|\}|$))')
+# form/page errors set before render and translated in the template, e.g. formView.Error = "..."
+ASSIGN_RE = re.compile(r'\.(?:Error|Message)\s*=\s*"((?:[^"\\]|\\.)*)"\s*$')
 
 # Positional-literal struct definitions that indirectly feed .T.Get in a
 # template. These are hand-picked because Go struct literals with
@@ -132,6 +134,9 @@ def extract(source_root):
                         add(results, m.group(1), None, rel, i)
                     for m in WEB_TR_RE.finditer(line):
                         add(results, m.group(1), None, rel, i)
+                    for m in ASSIGN_RE.finditer(line.rstrip()):
+                        if " " in m.group(1):
+                            add(results, m.group(1), None, rel, i)
                 content = "".join(lines)
                 for m in STATUS_DETAIL_FUNC_RE.finditer(content):
                     base = content[: m.start()].count("\n") + 1

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.10\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-09-25 22:34+0200\n"
+"POT-Creation-Date: 2026-09-25 22:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Csizmmár Norbert <inak1205@gmail.com>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -96,6 +96,14 @@ msgstr "Passkey eltávolítva."
 msgid "Passkey not found."
 msgstr "Passkey nem található."
 
+#: internal/modules/account/locale.go:48
+msgid "Language changed from %(old_locale)s to %(locale)s"
+msgstr "A nyelv módosítva: %(old_locale)s → %(locale)s"
+
+#: internal/modules/account/locale.go:50
+msgid "Language changed to %(locale)s"
+msgstr "A nyelv módosítva erre: %(locale)s"
+
 #: internal/modules/account/login.go:133
 #: internal/web/templates/manager/dokuwiki_app.html:283
 msgid "Login"
@@ -126,17 +134,23 @@ msgstr ""
 msgid "Autologin failed: User does not exist."
 msgstr "Az automatikus bejelentkezés sikertelen: A felhasználó nem létezik."
 
-#: internal/modules/account/mcp.go:61
+#: internal/modules/account/mcp.go:62
 msgid "Could not create token: database is unavailable. Please try again."
 msgstr ""
 "Nem sikerült létrehozni a tokent: az adatbázis nem érhető el. Kérjük, "
 "próbálja újra."
 
-#: internal/modules/account/mcp.go:111
+#: internal/modules/account/mcp.go:84
+msgid "Token \"%(name)s\" created. Copy it below - it will not be shown again."
+msgstr ""
+"A(z) \"%(name)s\" token létrehozva. Másolja ki alább – többé nem jelenik "
+"meg."
+
+#: internal/modules/account/mcp.go:112
 msgid "Token revoked."
 msgstr "Token visszavonva."
 
-#: internal/modules/account/mcp.go:113
+#: internal/modules/account/mcp.go:114
 msgid "Token not found."
 msgstr "Token nem található."
 
@@ -431,7 +445,13 @@ msgstr "Munkamenet sikeresen megszakítva."
 msgid "Failed to terminate session or session already expired."
 msgstr "Nem sikerült megszakítani a munkamenetet, vagy már lejárt."
 
-#: internal/modules/account/settings.go:115
+#: internal/modules/account/settings.go:116
+#: internal/modules/emails/emails.go:368 internal/modules/mongodb/users.go:85
+#: internal/modules/mongodb/users.go:179 internal/modules/mongodb/wizard.go:67
+#: internal/modules/mysql/users.go:94 internal/modules/mysql/users.go:202
+#: internal/modules/postgresql/users.go:96
+#: internal/modules/postgresql/users.go:202
+#: internal/modules/postgresql/wizard.go:65
 #: internal/web/templates/emails/new.html:68
 #: internal/web/templates/emails/single_account.html:180
 #: internal/web/templates/files/ftp_new.html:50
@@ -463,12 +483,20 @@ msgstr "Nem sikerült megszakítani a munkamenetet, vagy már lejárt."
 msgid "Password does not meet the required strength."
 msgstr "A jelszó nem felel meg a szükséges erősségi követelménynek."
 
-#: internal/modules/account/settings.go:148
+#: internal/modules/account/settings.go:149
 msgid "Username must be 3-20 characters, letters and numbers only."
 msgstr ""
 "A felhasználónévnek 3-20 karakterből kell állnia, csak betűk és számok."
 
-#: internal/modules/account/settings.go:172
+#: internal/modules/account/settings.go:157
+msgid ""
+"Username has been changed successfully from %(current_username)s to "
+"%(new_username)s."
+msgstr ""
+"A felhasználónév sikeresen módosítva: %(current_username)s → "
+"%(new_username)s."
+
+#: internal/modules/account/settings.go:173
 msgid "Failed to change username."
 msgstr "Nem sikerült megváltoztatni a felhasználónevet."
 
@@ -493,6 +521,25 @@ msgstr ""
 "A passkey-k használatához a panelt domainnéven, nem IP-címen keresztül kell "
 "elérni. Kérje meg a rendszergazdát, hogy állítson be egy domaint ehhez a "
 "panelhez."
+
+#: internal/modules/appinstall/install.go:129
+#: internal/modules/dokuwiki/install.go:47
+#: internal/modules/drupal/install.go:46 internal/modules/flarum/install.go:49
+#: internal/modules/joomla/install.go:47 internal/modules/matomo/install.go:47
+#: internal/modules/mediawiki/install.go:48
+#: internal/modules/moodle/install.go:47
+#: internal/modules/nextcloud/install.go:47 internal/modules/ojs/install.go:48
+#: internal/modules/opencart/install.go:47
+#: internal/modules/phpapp/install.go:62 internal/modules/phpbb/install.go:61
+#: internal/modules/prestashop/install.go:47
+#: internal/modules/sofawiki/install.go:48
+#: internal/modules/tinyfilemanager/install.go:55
+#: internal/modules/tinyphotogallery/install.go:50
+#: internal/modules/wordpress/install.go:48
+msgid ""
+"You have reached the maximum number of sites allowed.%(upgrade_message)s"
+msgstr ""
+"Elérte az engedélyezett webhelyek maximális számát.%(upgrade_message)s"
 
 #: internal/modules/appinstall/java.go:10
 #: internal/web/templates/manager/autoinstaller.html:731
@@ -550,6 +597,126 @@ msgstr ""
 msgid "Install NodeJS Application"
 msgstr "NodeJS alkalmazás telepítése"
 
+#: internal/modules/appinstall/pm2.go:119
+msgid ""
+"Invalid action '%(action)s'. Allowed actions: start, stop, update, restart."
+msgstr ""
+"Érvénytelen művelet: '%(action)s'. Engedélyezett műveletek: start, stop, "
+"update, restart."
+
+#: internal/modules/appinstall/pm2.go:123
+msgid "Hacker! Service '%(site_name)s' cannot be deleted."
+msgstr "Hacker! A(z) '%(site_name)s' szolgáltatás nem törölhető."
+
+#: internal/modules/appinstall/pm2.go:153
+msgid "Failed to stop container '%(site_name)s': %(error)s"
+msgstr "Nem sikerült leállítani a(z) '%(site_name)s' konténert: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:156
+msgid "Stopped container for application: '%(site_name)s'."
+msgstr "A(z) '%(site_name)s' alkalmazás konténere leállítva."
+
+#: internal/modules/appinstall/pm2.go:163
+msgid "Failed to start container '%(site_name)s': %(error)s"
+msgstr "Nem sikerült elindítani a(z) '%(site_name)s' konténert: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:166
+msgid "Started container for application '%(site_name)s'."
+msgstr "A(z) '%(site_name)s' alkalmazás konténere elindítva."
+
+#: internal/modules/appinstall/pm2.go:173
+#: internal/modules/appinstall/pm2.go:178
+#: internal/modules/appinstall/pm2.go:183
+msgid "Failed to restart container '%(site_name)s': %(error)s"
+msgstr "Nem sikerült újraindítani a(z) '%(site_name)s' konténert: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:187
+msgid ""
+"Re-downloaded image and started container for application '%(site_name)s'."
+msgstr ""
+"Az image újra letöltve, és a(z) '%(site_name)s' alkalmazás konténere "
+"elindítva."
+
+#: internal/modules/appinstall/pm2.go:214
+msgid "Error saving: invalid line \"%(line)s\" - each line must be KEY=VALUE."
+msgstr ""
+"Mentési hiba: érvénytelen sor: \"%(line)s\" – minden sornak KEY=VALUE "
+"formátumúnak kell lennie."
+
+#: internal/modules/appinstall/pm2.go:222
+msgid "Error saving: could not read docker-compose.yml."
+msgstr "Mentési hiba: a docker-compose.yml nem olvasható."
+
+#: internal/modules/appinstall/pm2.go:227
+msgid "Error saving: docker-compose.yml has no services."
+msgstr "Mentési hiba: a docker-compose.yml nem tartalmaz szolgáltatásokat."
+
+#: internal/modules/appinstall/pm2.go:232
+msgid ""
+"Error saving: service '%(container_name)s' not found in docker-compose.yml."
+msgstr ""
+"Mentési hiba: a(z) '%(container_name)s' szolgáltatás nem található a docker-"
+"compose.yml fájlban."
+
+#: internal/modules/appinstall/pm2.go:246
+#: internal/modules/appinstall/pm2.go:427
+#: internal/modules/appinstall/pm2.go:457
+msgid "Error saving: %(error)s"
+msgstr "Mentési hiba: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:251
+msgid ""
+"Environment variables saved, make sure to restart the application for "
+"changes to take effect."
+msgstr ""
+"Környezeti változók mentve, a módosítások érvényesítéséhez indítsa újra az "
+"alkalmazást."
+
+#: internal/modules/appinstall/pm2.go:419
+#: internal/modules/appinstall/pm2.go:448
+msgid "Error saving: %(errs)s"
+msgstr "Mentési hiba: %(errs)s"
+
+#: internal/modules/appinstall/pm2.go:423
+#: internal/modules/appinstall/pm2.go:452
+msgid "Environment file not found."
+msgstr "A környezeti fájl nem található."
+
+#: internal/modules/appinstall/pm2.go:430
+#: internal/modules/appinstall/pm2.go:461
+msgid ""
+"Changes saved, make sure to restart the application for changes to take "
+"effect."
+msgstr "Módosítások mentve, az érvényesítéshez indítsa újra az alkalmazást."
+
+#: internal/modules/appinstall/pm2.go:528
+msgid "Application '%(site_name)s' removed successfully"
+msgstr "A(z) '%(site_name)s' alkalmazás sikeresen eltávolítva"
+
+#: internal/modules/appinstall/pm2.go:530
+msgid "Service '%(service_key)s' not found in compose file"
+msgstr "A(z) '%(service_key)s' szolgáltatás nem található a compose fájlban"
+
+#: internal/modules/appinstall/pm2.go:551
+msgid "Environment variables for '%(service_name)s' removed from .env"
+msgstr ""
+"A(z) '%(service_name)s' környezeti változói eltávolítva a .env fájlból"
+
+#: internal/modules/appinstall/pm2.go:553
+msgid ".env file not found at %(env_file)s"
+msgstr "A .env fájl nem található itt: %(env_file)s"
+
+#: internal/modules/appinstall/pm2.go:558
+msgid "Application '%(site_name)s' deleted from the database"
+msgstr "A(z) '%(site_name)s' alkalmazás törölve az adatbázisból"
+
+#: internal/modules/appinstall/pm2.go:560
+msgid ""
+"Failed to delete application '%(site_name)s' from the database: %(error)s"
+msgstr ""
+"Nem sikerült törölni a(z) '%(site_name)s' alkalmazást az adatbázisból: "
+"%(error)s"
+
 #: internal/modules/appinstall/python.go:11
 #: internal/web/templates/manager/autoinstaller.html:667
 #: internal/web/templates/manager/python_node_apps.html:166
@@ -603,6 +770,28 @@ msgstr "Ruby alkalmazás telepítése"
 #: internal/web/templates/manager/autoinstaller.html:8
 msgid "Install App"
 msgstr "Alkalmazás telepítése"
+
+#: internal/modules/backups/backups.go:74
+msgid ""
+"A backup is currently in progress. Please wait until it finishes before "
+"saving settings. Or if you want to interrupt the backup process: stop and "
+"start the backup service."
+msgstr ""
+"Biztonsági mentés van folyamatban. Várja meg, amíg befejeződik, mielőtt "
+"menti a beállításokat. Ha meg akarja szakítani, állítsa le, majd indítsa el "
+"a mentési szolgáltatást."
+
+#: internal/modules/backups/backups.go:79
+msgid "Error updating settings."
+msgstr "Hiba a beállítások frissítésekor."
+
+#: internal/modules/backups/backups.go:81
+msgid "Settings updated successfully."
+msgstr "A beállítások sikeresen frissítve."
+
+#: internal/modules/backups/backups.go:285
+msgid "Backup target switched to '%(target)s' successfully."
+msgstr "A mentési cél sikeresen átállítva erre: '%(target)s'."
 
 #: internal/modules/backups/render.go:40
 #: internal/modules/dashboard/sections.go:85
@@ -694,6 +883,43 @@ msgstr "Távoli mentések a Dropbox felhőraktárba."
 #: internal/web/templates/files/trash_partials.html:222
 msgid "Restore"
 msgstr "Visszaállítás"
+
+#: internal/modules/backupwizard/backupwizard.go:244
+msgid "A backup is already in progress. Please wait for it to finish."
+msgstr ""
+"Már folyamatban van egy biztonsági mentés. Kérjük, várja meg, amíg "
+"befejeződik."
+
+#: internal/modules/backupwizard/backupwizard.go:249
+#: internal/modules/backupwizard/backupwizard.go:256
+msgid "Failed to start backup."
+msgstr "Nem sikerült elindítani a biztonsági mentést."
+
+#: internal/modules/backupwizard/backupwizard.go:262
+msgid "Backup started. It will appear in the list below once complete."
+msgstr ""
+"A biztonsági mentés elindult. Amint elkészül, megjelenik az alábbi listában."
+
+#: internal/modules/backupwizard/backupwizard.go:275
+msgid "Invalid filename."
+msgstr "Érvénytelen fájlnév."
+
+#: internal/modules/backupwizard/backupwizard.go:285
+msgid "Invalid file path."
+msgstr "Érvénytelen fájlútvonal."
+
+#: internal/modules/backupwizard/backupwizard.go:291
+#: internal/modules/backupwizard/backupwizard.go:307
+msgid "Backup file not found."
+msgstr "A mentési fájl nem található."
+
+#: internal/modules/backupwizard/backupwizard.go:298
+msgid ""
+"This backup is still being created. Please wait until it completes before "
+"downloading."
+msgstr ""
+"Ez a biztonsági mentés még készül. Várja meg, amíg elkészül, mielőtt "
+"letölti."
 
 #: internal/modules/backupwizard/render.go:35
 #: internal/modules/dashboard/sections.go:90
@@ -857,6 +1083,99 @@ msgid ""
 msgstr ""
 "A Varnish egy fordított gyorsítótárazó proxy, amelyet HTTP-gyorsítóként "
 "használnak nagy tartalommal rendelkező dinamikus webhelyek és API-k számára."
+
+#: internal/modules/cache/varnish.go:153
+msgid ""
+"Failed to start %(webserver)s: could not bring it back up with the Varnish "
+"proxy port"
+msgstr ""
+"Nem sikerült elindítani ezt: %(webserver)s – nem indítható újra a Varnish "
+"proxy porttal"
+
+#: internal/modules/cache/varnish.go:168
+msgid "Failed to start %(service)s: %(message)s"
+msgstr "Nem sikerült elindítani ezt: %(service)s – %(message)s"
+
+#: internal/modules/cache/varnish.go:178
+msgid "Varnish caching is now enabled."
+msgstr "A Varnish gyorsítótár most bekapcsolva."
+
+#: internal/modules/cache/varnish.go:193
+msgid "Failed to start %(webserver)s after disabling %(service)s: %(message)s"
+msgstr ""
+"Nem sikerült elindítani ezt: %(webserver)s a(z) %(service)s kikapcsolása "
+"után: %(message)s"
+
+#: internal/modules/cache/varnish.go:201
+msgid "Varnish caching is now disabled."
+msgstr "A Varnish gyorsítótár most kikapcsolva."
+
+#: internal/modules/cache/varnish.go:222
+msgid "Varnish cache is now %(new_status)s for domain %(domain_name)s"
+msgstr ""
+"A Varnish gyorsítótár most %(new_status)s a(z) %(domain_name)s domainhez"
+
+#: internal/modules/crons/handlers.go:221
+msgid "Invalid cron file path"
+msgstr "Érvénytelen cron fájlútvonal"
+
+#: internal/modules/crons/handlers.go:238
+#: internal/modules/crons/handlers.go:476
+msgid "Missing one or more required fields (schedule, command, container)."
+msgstr "Egy vagy több kötelező mező hiányzik (ütemezés, parancs, konténer)."
+
+#: internal/modules/crons/handlers.go:242
+#: internal/modules/crons/handlers.go:372
+msgid "Invalid characters in input."
+msgstr "Érvénytelen karakterek a bevitelben."
+
+#: internal/modules/crons/handlers.go:275
+#: internal/modules/crons/handlers.go:302
+#: internal/modules/crons/handlers.go:385
+#: internal/modules/crons/handlers.go:421
+msgid "Error saving cron job. Please try again."
+msgstr "Hiba a cron-feladat mentésekor. Kérjük, próbálja újra."
+
+#: internal/modules/crons/handlers.go:280
+msgid "Cron job created and saved successfully!"
+msgstr "A cron-feladat sikeresen létrehozva és mentve!"
+
+#: internal/modules/crons/handlers.go:297
+msgid "Invalid crons file format: %(err_msg)s"
+msgstr "Érvénytelen crons fájlformátum: %(err_msg)s"
+
+#: internal/modules/crons/handlers.go:314
+msgid "Crons file saved successfully!"
+msgstr "A crons fájl sikeresen mentve!"
+
+#: internal/modules/crons/handlers.go:364
+msgid "Missing one or more required fields."
+msgstr "Egy vagy több kötelező mező hiányzik."
+
+#: internal/modules/crons/handlers.go:368
+msgid "Missing original cron job fields."
+msgstr "Hiányoznak az eredeti cron-feladat mezői."
+
+#: internal/modules/crons/handlers.go:379
+msgid "Invalid cron file path."
+msgstr "Érvénytelen cron fájlútvonal."
+
+#: internal/modules/crons/handlers.go:416
+msgid "Cron job not found."
+msgstr "A cron-feladat nem található."
+
+#: internal/modules/crons/handlers.go:429
+msgid "Cron job was successfully edited."
+msgstr "A cron-feladat sikeresen szerkesztve."
+
+#: internal/modules/crons/handlers.go:483
+#: internal/modules/crons/handlers.go:530
+msgid "Error deleting cron job."
+msgstr "Hiba a cron-feladat törlésekor."
+
+#: internal/modules/crons/handlers.go:543
+msgid "Cron job was successfully deleted."
+msgstr "A cron-feladat sikeresen törölve."
 
 #: internal/modules/crons/render.go:45
 msgid "CronJobs File Editor"
@@ -1724,6 +2043,46 @@ msgstr "Fióktevékenység"
 msgid "Upgrade now"
 msgstr "Frissítés most"
 
+#: internal/modules/dns/crud.go:53
+msgid "Error:Zone file not found for domain: %(domain)s"
+msgstr "Hiba: nem található zónafájl ehhez a domainhez: %(domain)s"
+
+#: internal/modules/dns/crud.go:193
+msgid "Please provide all required fields."
+msgstr "Kérjük, töltse ki az összes kötelező mezőt."
+
+#: internal/modules/dns/crud.go:199
+msgid "Invalid characters in submitted data."
+msgstr "Érvénytelen karakterek az elküldött adatokban."
+
+#: internal/modules/dns/crud.go:212 internal/modules/dns/list.go:94
+msgid "Zone file not found."
+msgstr "A zónafájl nem található."
+
+#: internal/modules/dns/crud.go:234
+msgid "CNAME record with this name already exists."
+msgstr "Már létezik ilyen nevű CNAME rekord."
+
+#: internal/modules/dns/crud.go:240 internal/modules/dns/crud.go:246
+msgid "Error adding DNS record: %(error)s"
+msgstr "Hiba a DNS rekord hozzáadásakor: %(error)s"
+
+#: internal/modules/dns/crud.go:253
+msgid "DNS record added successfully."
+msgstr "A DNS rekord sikeresen hozzáadva."
+
+#: internal/modules/dns/crud.go:332
+msgid "Please provide a domain name."
+msgstr "Kérjük, adjon meg egy domainnevet."
+
+#: internal/modules/dns/crud.go:344
+msgid "Failed to restart DNS zone: %(error)s"
+msgstr "Nem sikerült újraindítani a DNS zónát: %(error)s"
+
+#: internal/modules/dns/crud.go:350
+msgid "DNS zone restarted successfully."
+msgstr "A DNS zóna sikeresen újraindítva."
+
 #: internal/modules/dns/render.go:62
 #: internal/web/templates/domains/domains.html:284
 msgid "Edit DNS Zone"
@@ -1735,10 +2094,72 @@ msgstr "DNS-zóna szerkesztése"
 msgid "Edit DNS File"
 msgstr "DNS-fájl szerkesztése"
 
-#: internal/modules/docker/containers.go:171
-#: internal/modules/docker/containers.go:187
+#: internal/modules/docker/actions.go:276
+msgid "Image pulled and container %(container_name)s activated successfully."
+msgstr ""
+"Az image letöltve, és a(z) %(container_name)s konténer sikeresen aktiválva."
+
+#: internal/modules/docker/actions.go:277
+msgid ""
+"Image pulled and container %(container_name)s deactivated successfully."
+msgstr ""
+"Az image letöltve, és a(z) %(container_name)s konténer sikeresen "
+"deaktiválva."
+
+#: internal/modules/docker/actions.go:278
+msgid "Image pulled and container %(container_name)s restarted successfully."
+msgstr ""
+"Az image letöltve, és a(z) %(container_name)s konténer sikeresen "
+"újraindítva."
+
+#: internal/modules/docker/actions.go:282
+msgid "Container %(container_name)s restarted successfully."
+msgstr "A(z) %(container_name)s konténer sikeresen újraindítva."
+
+#: internal/modules/docker/actions.go:286
+msgid "Container %(container_name)s deactivated successfully."
+msgstr "A(z) %(container_name)s konténer sikeresen deaktiválva."
+
+#: internal/modules/docker/actions.go:288
+msgid "Container %(container_name)s activated successfully."
+msgstr "A(z) %(container_name)s konténer sikeresen aktiválva."
+
+#: internal/modules/docker/containers.go:91
+msgid ""
+"Missing environment variables. Please check the configuration or restore "
+"from backup."
+msgstr ""
+"Hiányoznak környezeti változók. Ellenőrizze a konfigurációt, vagy állítsa "
+"vissza biztonsági mentésből."
+
+#: internal/modules/docker/containers.go:172
+#: internal/modules/docker/containers.go:188
 msgid "Add service"
 msgstr "Szolgáltatás hozzáadása"
+
+#: internal/modules/docker/containers.go:291
+msgid "Container %(service_name)s created successfully!"
+msgstr "A(z) %(service_name)s konténer sikeresen létrehozva!"
+
+#: internal/modules/docker/containers.go:434
+msgid "Container updated successfully."
+msgstr "A konténer sikeresen frissítve."
+
+#: internal/modules/docker/images.go:32
+msgid "The image of %(service)s can't be changed."
+msgstr "A(z) %(service)s image-e nem módosítható."
+
+#: internal/modules/docker/images.go:39
+msgid "Invalid image tag."
+msgstr "Érvénytelen image címke."
+
+#: internal/modules/docker/images.go:48
+msgid "Successfully changed image tag for %(service)s to %(value)s!"
+msgstr "A(z) %(service)s image címkéje sikeresen módosítva erre: %(value)s!"
+
+#: internal/modules/docker/images.go:51
+msgid "Failed to stop the service in order to delete old image."
+msgstr "Nem sikerült leállítani a szolgáltatást a régi image törléséhez."
 
 #: internal/modules/docker/render.go:392
 #: internal/web/templates/dashboard/onboarding.html:498
@@ -1842,6 +2263,54 @@ msgstr "Webkiszolgáló"
 msgid "Change docker image tag"
 msgstr "Docker képcímke módosítása"
 
+#: internal/modules/docker/switch.go:60
+msgid ""
+"Existing databases must first be deleted and %(mysql_type)s container "
+"stopped in order to change mysql type."
+msgstr ""
+"A MySQL típusának módosításához előbb törölni kell a meglévő adatbázisokat, "
+"és le kell állítani a(z) %(mysql_type)s konténert."
+
+#: internal/modules/docker/switch.go:73
+msgid "Already using %(flavor)s."
+msgstr "Már a(z) %(flavor)s van használatban."
+
+#: internal/modules/docker/switch.go:107
+msgid "Failed to update mysql image: %(error)s"
+msgstr "Nem sikerült frissíteni a MySQL image-et: %(error)s"
+
+#: internal/modules/docker/switch.go:127
+msgid "Failed to start %(target_service)s."
+msgstr "Nem sikerült elindítani ezt: %(target_service)s."
+
+#: internal/modules/docker/switch.go:143
+msgid "Successfully switched to %(new_sql)s!"
+msgstr "Sikeres váltás erre: %(new_sql)s!"
+
+#: internal/modules/docker/switch.go:157
+msgid "Invalid mysql server selected"
+msgstr "Érvénytelen MySQL szerver kiválasztva"
+
+#: internal/modules/docker/switch.go:202
+msgid ""
+"Existing domains (%(count)s) must first be removed in order to change "
+"webserver."
+msgstr ""
+"A webszerver módosításához előbb el kell távolítani a meglévő domaineket "
+"(%(count)s)."
+
+#: internal/modules/docker/switch.go:234
+msgid "Failed to start %(new_webserver)s."
+msgstr "Nem sikerült elindítani ezt: %(new_webserver)s."
+
+#: internal/modules/docker/switch.go:253
+msgid "Successfully switched to %(new_webserver)s!"
+msgstr "Sikeres váltás erre: %(new_webserver)s!"
+
+#: internal/modules/docker/switch.go:266
+msgid "Invalid web server selected"
+msgstr "Érvénytelen webszerver kiválasztva"
+
 #: internal/modules/docker/terminal.go:36
 #: internal/web/templates/docker/terminal.html:20
 #: internal/web/templates/docker/terminal.html:224
@@ -1852,11 +2321,139 @@ msgstr "Konténer terminál"
 msgid "Select Container"
 msgstr "Konténer kiválasztása"
 
+#: internal/modules/dokuwiki/install.go:261
+msgid "DokuWiki installed successfully on %(selected_domain)s"
+msgstr "A DokuWiki sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/dokuwiki/manage.go:33 internal/modules/drupal/manage.go:54
+#: internal/modules/flarum/manage.go:42 internal/modules/joomla/manage.go:42
+#: internal/modules/matomo/manage.go:42
+#: internal/modules/mediawiki/manage.go:43
+#: internal/modules/moodle/manage.go:39
+#: internal/modules/nextcloud/manage.go:42 internal/modules/ojs/manage.go:33
+#: internal/modules/opencart/manage.go:42 internal/modules/phpbb/manage.go:37
+#: internal/modules/prestashop/manage.go:42
+#: internal/modules/sofawiki/manage.go:33
+#: internal/modules/tinyfilemanager/manage.go:33
+#: internal/modules/tinyphotogallery/manage.go:33
+#: internal/modules/websites/websitebuilder.go:64
+#: internal/modules/websites/websitebuilder.go:102
+#: internal/modules/wordpress/manage.go:265
+#: internal/modules/wordpress/manage.go:359
+msgid "No data found for the provided site ID"
+msgstr "Nem található adat a megadott webhelyazonosítóhoz"
+
+#: internal/modules/dokuwiki/manage.go:42
+msgid "DokuWiki installation not found in the database"
+msgstr "A DokuWiki telepítés nem található az adatbázisban"
+
+#: internal/modules/dokuwiki/manage.go:68
+msgid "An error occurred during DokuWiki uninstall."
+msgstr "Hiba történt a DokuWiki eltávolítása közben."
+
+#: internal/modules/dokuwiki/manage.go:79
+msgid "DokuWiki uninstalled successfully"
+msgstr "A DokuWiki sikeresen eltávolítva"
+
 #: internal/modules/dokuwiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:370
 #: internal/web/templates/manager/dokuwiki_install.html:9
 msgid "Install DokuWiki"
 msgstr "DokuWiki telepítése"
+
+#: internal/modules/domains/capitalize.go:83
+msgid "Domain has been capitalized to %(capitalized_domain)s"
+msgstr "A domain mostantól így jelenik meg: %(capitalized_domain)s"
+
+#: internal/modules/domains/delete.go:39
+#: internal/modules/domains/redirect.go:95
+msgid "Domain name not provided."
+msgstr "Nincs megadva domainnév."
+
+#: internal/modules/domains/delete.go:54
+msgid "Domain %(domain_url)s deleted successfully."
+msgstr "A(z) %(domain_url)s domain sikeresen törölve."
+
+#: internal/modules/domains/delete.go:56
+msgid "Failed to delete domain %(domain_url)s. Output: %(output)s"
+msgstr "Nem sikerült törölni a(z) %(domain_url)s domaint. Kimenet: %(output)s"
+
+#: internal/modules/domains/docroot.go:24 internal/modules/domains/ssl.go:50
+#: internal/modules/domains/suspend.go:26
+#: internal/modules/domains/suspend.go:73
+msgid "Invalid request. Domain name must be provided."
+msgstr "Érvénytelen kérés. Meg kell adni a domainnevet."
+
+#: internal/modules/domains/docroot.go:51
+msgid "Docroot must be inside '/var/www/html/' directory."
+msgstr "A docrootnak a '/var/www/html/' könyvtáron belül kell lennie."
+
+#: internal/modules/domains/logs.go:53 internal/modules/waf/handlers_log.go:51
+msgid "Log file not found for domain %(domain_name)s."
+msgstr "Nem található naplófájl a(z) %(domain_name)s domainhez."
+
+#: internal/modules/domains/logs.go:57 internal/modules/waf/handlers_log.go:55
+msgid "Log file for domain %(domain_name)s is empty."
+msgstr "A(z) %(domain_name)s domain naplófájlja üres."
+
+#: internal/modules/domains/logs.go:63 internal/modules/waf/handlers_log.go:61
+msgid "Error reading log file: %(error)s"
+msgstr "Hiba a naplófájl olvasásakor: %(error)s"
+
+#: internal/modules/domains/new.go:76
+msgid "Domain name is required"
+msgstr "A domainnév megadása kötelező"
+
+#: internal/modules/domains/new.go:97
+msgid "Domain name contains invalid characters."
+msgstr "A domainnév érvénytelen karaktereket tartalmaz."
+
+#: internal/modules/domains/new.go:107
+#: internal/web/templates/domains/new.html:217
+msgid ""
+"Paths for both public and secret files must be set for importing .onion "
+"domain."
+msgstr ""
+"A nyilvános és titkos fájlokat egyaránt be kell állítani importálásra "
+".hagyma domain."
+
+#: internal/modules/domains/new.go:113
+msgid "Path for public file must start with /var/www/html/"
+msgstr "A nyilvános fájl útvonalának /var/www/html/ kezdetűnek kell lennie"
+
+#: internal/modules/domains/new.go:118
+msgid "Public key file: %(onion_public_key)s does not exist!"
+msgstr "A(z) %(onion_public_key)s nyilvános kulcsfájl nem létezik!"
+
+#: internal/modules/domains/new.go:124
+msgid "Path for secret file must start with /var/www/html/"
+msgstr "A titkos fájl útvonalának /var/www/html/ kezdetűnek kell lennie"
+
+#: internal/modules/domains/new.go:129
+msgid "Secret key file: %(onion_secret_key)s does not exist!"
+msgstr "A(z) %(onion_secret_key)s titkos kulcsfájl nem létezik!"
+
+#: internal/modules/domains/redirect.go:47
+msgid "Domain %(domain_url)s does not have a redirect URL configured."
+msgstr "A(z) %(domain_url)s domainhez nincs beállítva átirányítási URL."
+
+#: internal/modules/domains/redirect.go:76
+msgid ""
+"Successfully deleted the redirect link %(redirect_url)s for domain "
+"%(domain_url)s"
+msgstr ""
+"A(z) %(redirect_url)s átirányítás sikeresen törölve a(z) %(domain_url)s "
+"domainnél"
+
+#: internal/modules/domains/redirect.go:103
+msgid "Invalid URL. Please provide a URL with 'http://' or 'https://' prefix."
+msgstr "Érvénytelen URL. Adjon meg 'http://' vagy 'https://' előtagú URL-t."
+
+#: internal/modules/domains/redirect.go:122
+msgid ""
+"Successfully created redirect from domain %(domain_url)s to %(redirect_url)s"
+msgstr ""
+"Az átirányítás sikeresen létrehozva: %(domain_url)s → %(redirect_url)s"
 
 #: internal/modules/domains/render.go:99
 #: internal/web/templates/domains/new.html:128
@@ -1873,11 +2470,212 @@ msgstr "VirtualHosts fájl szerkesztése"
 msgid "Redirect Domain to URL"
 msgstr "Tartomány átirányítása URL-re"
 
+#: internal/modules/domains/ssl.go:111
+msgid "Invalid action! Only AutoSSL or Custom are available."
+msgstr "Érvénytelen művelet! Csak AutoSSL vagy Custom érhető el."
+
+#: internal/modules/domains/ssl.go:135
+msgid "Certificate and private key are required."
+msgstr "A tanúsítvány és a privát kulcs megadása kötelező."
+
+#: internal/modules/domains/ssl.go:139
+msgid "Invalid certificate."
+msgstr "Érvénytelen tanúsítvány."
+
+#: internal/modules/domains/ssl.go:143
+msgid "Invalid private key."
+msgstr "Érvénytelen privát kulcs."
+
+#: internal/modules/domains/vhost.go:35
+msgid "Invalid request. Domain name and Vhost content must be provided."
+msgstr "Érvénytelen kérés. Meg kell adni a domainnevet és a vhost tartalmát."
+
+#: internal/modules/drupal/install.go:308
+msgid "Drupal installed successfully on %(selected_domain)s"
+msgstr "A Drupal sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/drupal/manage.go:63
+msgid "Drupal installation not found in the database"
+msgstr "A Drupal telepítés nem található az adatbázisban"
+
+#: internal/modules/drupal/manage.go:88
+msgid "Database name or user not found in settings.php"
+msgstr ""
+"Az adatbázisnév vagy a felhasználó nem található a settings.php fájlban"
+
+#: internal/modules/drupal/manage.go:109
+msgid "An error occurred during Drupal uninstall."
+msgstr "Hiba történt a Drupal eltávolítása közben."
+
+#: internal/modules/drupal/manage.go:120
+msgid "Drupal uninstalled successfully"
+msgstr "A Drupal sikeresen eltávolítva"
+
 #: internal/modules/drupal/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:111
 #: internal/web/templates/manager/drupal_install.html:9
 msgid "Install Drupal"
 msgstr "Drupal telepítése"
+
+#: internal/modules/dynamicdns/handlers.go:63
+msgid "You do not own this domain."
+msgstr "Ez a domain nem az Öné."
+
+#: internal/modules/dynamicdns/handlers.go:77
+#: internal/modules/dynamicdns/handlers.go:101
+msgid "Invalid subdomain."
+msgstr "Érvénytelen aldomain."
+
+#: internal/modules/dynamicdns/handlers.go:81
+#: internal/modules/dynamicdns/handlers.go:105
+msgid "Invalid IP address."
+msgstr "Érvénytelen IP-cím."
+
+#: internal/modules/dynamicdns/handlers.go:87
+msgid "Dynamic DNS entry created."
+msgstr "Dinamikus DNS bejegyzés létrehozva."
+
+#: internal/modules/dynamicdns/handlers.go:93
+#: internal/modules/dynamicdns/handlers.go:125
+msgid "Invalid line number."
+msgstr "Érvénytelen sorszám."
+
+#: internal/modules/dynamicdns/handlers.go:109
+msgid "Invalid token."
+msgstr "Érvénytelen token."
+
+#: internal/modules/dynamicdns/handlers.go:116
+msgid "Dynamic DNS entry updated."
+msgstr "Dinamikus DNS bejegyzés frissítve."
+
+#: internal/modules/dynamicdns/handlers.go:118
+msgid "Failed to update Dynamic DNS entry."
+msgstr "Nem sikerült frissíteni a dinamikus DNS bejegyzést."
+
+#: internal/modules/dynamicdns/handlers.go:130
+msgid "Dynamic DNS entry deleted."
+msgstr "Dinamikus DNS bejegyzés törölve."
+
+#: internal/modules/dynamicdns/handlers.go:132
+msgid "Failed to delete Dynamic DNS entry."
+msgstr "Nem sikerült törölni a dinamikus DNS bejegyzést."
+
+#: internal/modules/emails/aliases.go:203
+msgid "Error: a valid target email address is required."
+msgstr "Hiba: érvényes cél e-mail-cím szükséges."
+
+#: internal/modules/emails/aliases.go:209
+msgid "Error adding alias: %(output)s"
+msgstr "Hiba az alias hozzáadásakor: %(output)s"
+
+#: internal/modules/emails/aliases.go:216
+msgid "Alias %(email)s → %(target)s added successfully."
+msgstr "A(z) %(email)s → %(target)s alias sikeresen hozzáadva."
+
+#: internal/modules/emails/aliases.go:250
+msgid "Error deleting alias %(email)s -> %(target)s: %(output)s"
+msgstr "Hiba a(z) %(email)s -> %(target)s alias törlésekor: %(output)s"
+
+#: internal/modules/emails/aliases.go:258
+msgid "Alias %(email)s deleted successfully."
+msgstr "A(z) %(email)s alias sikeresen törölve."
+
+#: internal/modules/emails/aliases.go:306
+#: internal/modules/emails/emails.go:349
+msgid "Error: %(field)s not provided."
+msgstr "Hiba: nincs megadva: %(field)s."
+
+#: internal/modules/emails/aliases.go:313
+#: internal/modules/emails/emails.go:362
+msgid "Username can only contain letters, numbers, and . _ % + - (no @)."
+msgstr ""
+"A felhasználónév csak betűket, számokat és . _ % + - karaktereket "
+"tartalmazhat (@ nélkül)."
+
+#: internal/modules/emails/aliases.go:318
+msgid "Error: target must be a valid email address."
+msgstr "Hiba: a célnak érvényes e-mail-címnek kell lennie."
+
+#: internal/modules/emails/aliases.go:331
+msgid "Error creating alias: %(output)s"
+msgstr "Hiba az alias létrehozásakor: %(output)s"
+
+#: internal/modules/emails/aliases.go:338
+msgid "Alias %(source)s → %(target)s created successfully."
+msgstr "A(z) %(source)s → %(target)s alias sikeresen létrehozva."
+
+#: internal/modules/emails/default.go:86
+msgid "Invalid destination email address."
+msgstr "Érvénytelen cél e-mail-cím."
+
+#: internal/modules/emails/default.go:91
+msgid "Failed to update default email: %(error)s"
+msgstr "Nem sikerült frissíteni az alapértelmezett e-mailt: %(error)s"
+
+#: internal/modules/emails/emails.go:374
+msgid "Error: reached max number of email accounts on the hosting plan."
+msgstr "Hiba: elérte a tárhelycsomag e-mail-fiókjainak maximális számát."
+
+#: internal/modules/emails/emails.go:396
+msgid "Failed to add email %(email)s: %(msg)s"
+msgstr "Nem sikerült hozzáadni a(z) %(email)s e-mailt: %(msg)s"
+
+#: internal/modules/emails/emails.go:415
+msgid "Email %(email)s added successfully."
+msgstr "A(z) %(email)s e-mail sikeresen hozzáadva."
+
+#: internal/modules/emails/emails.go:683
+msgid "Settings saved for email %(email)s"
+msgstr "Beállítások mentve a(z) %(email)s e-mailhez"
+
+#: internal/modules/emails/emails.go:694
+msgid "Email %(email)s deleted successfully."
+msgstr "A(z) %(email)s e-mail sikeresen törölve."
+
+#: internal/modules/emails/emails.go:697
+msgid "ERROR: Failed to delete email %(email)s: %(output)s"
+msgstr "HIBA: nem sikerült törölni a(z) %(email)s e-mailt: %(output)s"
+
+#: internal/modules/emails/emails.go:762
+msgid "Error: Invalid configuration type."
+msgstr "Hiba: érvénytelen konfigurációtípus."
+
+#: internal/modules/emails/filters.go:114
+msgid "No content provided."
+msgstr "Nincs megadva tartalom."
+
+#: internal/modules/emails/filters.go:118
+msgid "Error saving filter."
+msgstr "Hiba a szűrő mentésekor."
+
+#: internal/modules/emails/filters.go:127
+msgid "Filter saved successfully."
+msgstr "A szűrő sikeresen mentve."
+
+#: internal/modules/emails/import.go:78
+msgid "Error: No file uploaded."
+msgstr "Hiba: nincs feltöltött fájl."
+
+#: internal/modules/emails/import.go:92
+msgid "Error reading file: %(error)s"
+msgstr "Hiba a fájl olvasásakor: %(error)s"
+
+#: internal/modules/emails/import.go:97
+msgid "Error: File must have at least 2 columns: email, password"
+msgstr "Hiba: a fájlnak legalább 2 oszlopot kell tartalmaznia: e-mail, jelszó"
+
+#: internal/modules/emails/import.go:103
+msgid ""
+"Error: File is invalid - the first column must contain valid email "
+"addresses."
+msgstr ""
+"Hiba: a fájl érvénytelen – az első oszlopnak érvényes e-mail-címeket kell "
+"tartalmaznia."
+
+#: internal/modules/emails/import.go:164 internal/modules/emails/import.go:172
+#: internal/modules/emails/import.go:177
+msgid "Error: No import data found, please try again."
+msgstr "Hiba: nem található importálandó adat, kérjük, próbálja újra."
 
 #: internal/modules/emails/render.go:132
 #: internal/web/templates/files/ftp_new.html:172
@@ -1909,51 +2707,332 @@ msgstr "Alapértelmezett e-mail"
 msgid "Import Emails"
 msgstr "E-mailek importálása"
 
-#: internal/modules/filemanager/archive.go:302
+#: internal/modules/emails/webmail.go:215
+msgid ""
+"Webmail service is not yet started, please contact Administrator to enable "
+"it."
+msgstr ""
+"A webmail szolgáltatás még nem indult el, kérje meg a rendszergazdát, hogy "
+"engedélyezze."
+
+#: internal/modules/filemanager/archive.go:59
+msgid "Error occurred before starting archive extraction: %(error)s"
+msgstr "Hiba történt az archívum kicsomagolásának megkezdése előtt: %(error)s"
+
+#: internal/modules/filemanager/archive.go:92
+msgid "Unsupported file format!"
+msgstr "Nem támogatott fájlformátum!"
+
+#: internal/modules/filemanager/archive.go:98
+msgid "Extraction timed out after %(minutes)s minutes!"
+msgstr "A kicsomagolás %(minutes)s perc után időtúllépés miatt leállt!"
+
+#: internal/modules/filemanager/archive.go:101
+msgid "Extraction failed."
+msgstr "A kicsomagolás sikertelen."
+
+#: internal/modules/filemanager/archive.go:107
+msgid "File extracted successfully"
+msgstr "A fájl sikeresen kicsomagolva"
+
+#: internal/modules/filemanager/archive.go:228
+msgid "Missing required form data for compression: %(missing)s"
+msgstr "Hiányoznak a tömörítéshez szükséges űrlapadatok: %(missing)s"
+
+#: internal/modules/filemanager/archive.go:284
+msgid "Unsupported archive format."
+msgstr "Nem támogatott archívumformátum."
+
+#: internal/modules/filemanager/archive.go:295
+msgid "Archive creation failed: %(err_msg)s"
+msgstr "Az archívum létrehozása sikertelen: %(err_msg)s"
+
+#: internal/modules/filemanager/archive.go:303
 msgid "Failed to set archive ownership"
 msgstr "Nem sikerült beállítani az archívum tulajdonosát"
 
-#: internal/modules/filemanager/archive.go:304
+#: internal/modules/filemanager/archive.go:305
 msgid "FILEMANAGER - Archive created successfully."
 msgstr "Archívum sikeresen létrehozva."
 
-#: internal/modules/filemanager/crud.go:57
+#: internal/modules/filemanager/crud.go:34
+msgid "Filename is missing"
+msgstr "Hiányzik a fájlnév"
+
+#: internal/modules/filemanager/crud.go:45
+msgid "Error creating file: already exists."
+msgstr "Hiba a fájl létrehozásakor: már létezik."
+
+#: internal/modules/filemanager/crud.go:51
+msgid "Error creating file! Check permissions."
+msgstr "Hiba a fájl létrehozásakor! Ellenőrizze a jogosultságokat."
+
+#: internal/modules/filemanager/crud.go:58
 msgid "Failed to set ownership for the new file."
 msgstr "Nem sikerült beállítani az új fájl tulajdonosát."
 
-#: internal/modules/filemanager/crud.go:60
+#: internal/modules/filemanager/crud.go:61
 msgid "File created successfully."
 msgstr "Fájl sikeresen létrehozva."
 
-#: internal/modules/filemanager/crud.go:105
+#: internal/modules/filemanager/crud.go:88
+msgid "Foldername is missing"
+msgstr "Hiányzik a mappanév"
+
+#: internal/modules/filemanager/crud.go:100
+msgid "Error creating directory! Check permissions."
+msgstr "Hiba a könyvtár létrehozásakor! Ellenőrizze a jogosultságokat."
+
+#: internal/modules/filemanager/crud.go:106
 msgid "Failed to set ownership for the new folder."
 msgstr "Nem sikerült beállítani az új mappa tulajdonosát."
 
-#: internal/modules/filemanager/crud.go:107
+#: internal/modules/filemanager/crud.go:108
 msgid "Folder created successfully."
 msgstr "Mappa sikeresen létrehozva."
 
-#: internal/modules/filemanager/crud.go:273
+#: internal/modules/filemanager/crud.go:146
+msgid ""
+"Error renaming item! Check permissions or if the new name already exists."
+msgstr ""
+"Hiba az átnevezéskor! Ellenőrizze a jogosultságokat, vagy hogy az új név "
+"létezik-e már."
+
+#: internal/modules/filemanager/crud.go:152
+msgid "File renamed successfully."
+msgstr "A fájl sikeresen átnevezve."
+
+#: internal/modules/filemanager/crud.go:233
+msgid "Invalid permissions format."
+msgstr "Érvénytelen jogosultságformátum."
+
+#: internal/modules/filemanager/crud.go:274
 msgid "Permissions changed."
 msgstr "Jogosultságok módosítva."
 
-#: internal/modules/filemanager/editor.go:138
+#: internal/modules/filemanager/crud.go:276
+msgid "%(changed)s items updated."
+msgstr "%(changed)s elem frissítve."
+
+#: internal/modules/filemanager/crud.go:279
+msgid "Error changing permissions for: %(errored)s. Check ownership."
+msgstr ""
+"Hiba a jogosultságok módosításakor: %(errored)s. Ellenőrizze a tulajdonost."
+
+#: internal/modules/filemanager/editor.go:115
+#: internal/modules/filemanager/editor.go:280
+msgid "Editing this file type is not allowed."
+msgstr "Az ilyen típusú fájl szerkesztése nem engedélyezett."
+
+#: internal/modules/filemanager/editor.go:139
 msgid "Error saving file."
 msgstr "Hiba a fájl mentésekor."
 
-#: internal/modules/filemanager/editor.go:141
+#: internal/modules/filemanager/editor.go:142
 msgid "File saved successfully"
 msgstr "Fájl sikeresen mentve"
+
+#: internal/modules/filemanager/editor.go:160
+#: internal/modules/filemanager/editor.go:298
+msgid "Error accessing file size."
+msgstr "Hiba a fájlméret lekérésekor."
+
+#: internal/modules/filemanager/editor.go:165
+msgid ""
+"File is too large to open in the editor (limit is %(file_limit_mb)s MB)"
+msgstr "A fájl túl nagy a szerkesztőhöz (a korlát %(file_limit_mb)s MB)"
+
+#: internal/modules/filemanager/editor.go:173
+msgid "Error reading file"
+msgstr "Hiba a fájl olvasásakor"
+
+#: internal/modules/filemanager/editor.go:215
+#: internal/modules/filemanager/editor.go:226
+msgid "Error retrieving file size."
+msgstr "Hiba a fájlméret lekérésekor."
+
+#: internal/modules/filemanager/editor.go:220
+msgid "File size exceeds %(file_limit_mb)sMB limit. Download aborted."
+msgstr ""
+"A fájlméret meghaladja a(z) %(file_limit_mb)s MB-os korlátot. Letöltés "
+"megszakítva."
+
+#: internal/modules/filemanager/editor.go:302
+msgid ""
+"File is too large to view in the browser (limit is %(file_limit_mb)s MB)"
+msgstr ""
+"A fájl túl nagy a böngészőben való megjelenítéshez (a korlát "
+"%(file_limit_mb)s MB)"
+
+#: internal/modules/filemanager/editor.go:324
+msgid "Error opening file."
+msgstr "Hiba a fájl megnyitásakor."
+
+#: internal/modules/filemanager/listing.go:86
+#: internal/modules/trash/trash.go:88
+msgid "Directory does not exist."
+msgstr "A könyvtár nem létezik."
+
+#: internal/modules/filemanager/listing.go:113
+msgid "Error accessing the specified directory."
+msgstr "Hiba a megadott könyvtár elérésekor."
 
 #: internal/modules/filemanager/render.go:236
 msgid "Upload Files"
 msgstr "Fájlok feltöltése"
+
+#: internal/modules/filemanager/upload.go:62
+msgid "No files were uploaded"
+msgstr "Nem lett feltöltve fájl"
+
+#: internal/modules/filemanager/upload.go:122
+msgid "Files uploaded successfully."
+msgstr "A fájlok sikeresen feltöltve."
+
+#: internal/modules/filemanager/upload.go:124
+msgid "Some files failed: %(errs)s"
+msgstr "Néhány fájl sikertelen: %(errs)s"
+
+#: internal/modules/flarum/install.go:308
+msgid "Flarum installed successfully on %(selected_domain)s"
+msgstr "A Flarum sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/flarum/manage.go:51
+msgid "Flarum installation not found in the database"
+msgstr "A Flarum telepítés nem található az adatbázisban"
+
+#: internal/modules/flarum/manage.go:76 internal/modules/moodle/manage.go:77
+#: internal/modules/opencart/manage.go:75
+msgid "Database name or user not found in config.php"
+msgstr "Az adatbázisnév vagy a felhasználó nem található a config.php fájlban"
+
+#: internal/modules/flarum/manage.go:97
+msgid "An error occurred during Flarum uninstall."
+msgstr "Hiba történt a Flarum eltávolítása közben."
+
+#: internal/modules/flarum/manage.go:108
+msgid "Flarum uninstalled successfully"
+msgstr "A Flarum sikeresen eltávolítva"
 
 #: internal/modules/flarum/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:300
 #: internal/web/templates/manager/flarum_install.html:9
 msgid "Install Flarum"
 msgstr "Flarum telepítése"
+
+#: internal/modules/ftp/ftp.go:104
+msgid ""
+"FTP service is not yet started, please contact Administrator to enable it."
+msgstr ""
+"Az FTP szolgáltatás még nem indult el, kérje meg a rendszergazdát, hogy "
+"engedélyezze."
+
+#: internal/modules/ftp/ftp.go:182
+msgid "No currently active FTP connections"
+msgstr "Jelenleg nincsenek aktív FTP-kapcsolatok"
+
+#: internal/modules/ftp/ftp.go:213
+msgid "FTP username not provided."
+msgstr "Nincs megadva FTP felhasználónév."
+
+#: internal/modules/ftp/ftp.go:217
+msgid "FTP domain not provided."
+msgstr "Nincs megadva FTP domain."
+
+#: internal/modules/ftp/ftp.go:225
+msgid "FTP path not provided."
+msgstr "Nincs megadva FTP útvonal."
+
+#: internal/modules/ftp/ftp.go:229
+msgid "FTP password not provided."
+msgstr "Nincs megadva FTP jelszó."
+
+#: internal/modules/ftp/ftp.go:235
+msgid "The FTP path must start with %(real_path)s"
+msgstr "Az FTP útvonalnak ezzel kell kezdődnie: %(real_path)s"
+
+#: internal/modules/ftp/ftp.go:241
+msgid ""
+"Username %(ftp_username)s contains invalid characters, only allowed: "
+"BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
+msgstr ""
+"A(z) %(ftp_username)s felhasználónév érvénytelen karaktereket tartalmaz, "
+"csak ezek engedélyezettek: "
+"BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
+
+#: internal/modules/ftp/ftp.go:247
+msgid "Error creating FTP user %(ftp_username)s: %(output)s"
+msgstr "Hiba a(z) %(ftp_username)s FTP-felhasználó létrehozásakor: %(output)s"
+
+#: internal/modules/ftp/ftp.go:253
+msgid "FTP account %(ftp_username)s created successfully."
+msgstr "A(z) %(ftp_username)s FTP-fiók sikeresen létrehozva."
+
+#: internal/modules/ftp/ftp.go:256
+msgid "Failed to create FTP account %(ftp_username)s: %(output)s"
+msgstr "Nem sikerült létrehozni a(z) %(ftp_username)s FTP-fiókot: %(output)s"
+
+#: internal/modules/ftp/ftp.go:280 internal/modules/ftp/ftp.go:301
+#: internal/modules/ftp/ftp.go:357
+msgid "Invalid FTP username."
+msgstr "Érvénytelen FTP felhasználónév."
+
+#: internal/modules/ftp/ftp.go:292
+msgid "FTP account %(username_to_delete)s deleted successfully!"
+msgstr "A(z) %(username_to_delete)s FTP-fiók sikeresen törölve!"
+
+#: internal/modules/ftp/ftp.go:295
+msgid ""
+"Failed to delete FTP account %(username_to_delete)s. Output: %(output)s"
+msgstr ""
+"Nem sikerült törölni a(z) %(username_to_delete)s FTP-fiókot. Kimenet: "
+"%(output)s"
+
+#: internal/modules/ftp/ftp.go:313
+msgid "Missing new password"
+msgstr "Hiányzik az új jelszó"
+
+#: internal/modules/ftp/ftp.go:325
+msgid "Error changing FTP password: %(output)s"
+msgstr "Hiba az FTP jelszó módosításakor: %(output)s"
+
+#: internal/modules/ftp/ftp.go:330
+msgid "FTP password changed successfully for user %(username)s"
+msgstr "Az FTP jelszó sikeresen módosítva a(z) %(username)s felhasználónál"
+
+#: internal/modules/ftp/ftp.go:332
+msgid "Failed to change FTP password: %(output)s"
+msgstr "Nem sikerült módosítani az FTP jelszót: %(output)s"
+
+#: internal/modules/ftp/ftp.go:367
+msgid "Error changing FTP path for user %(username_to_modify)s: %(output)s"
+msgstr ""
+"Hiba a(z) %(username_to_modify)s felhasználó FTP útvonalának módosításakor: "
+"%(output)s"
+
+#: internal/modules/ftp/ftp.go:372
+msgid "FTP path changed successfully for user %(username_to_modify)s"
+msgstr ""
+"A(z) %(username_to_modify)s felhasználó FTP útvonala sikeresen módosítva"
+
+#: internal/modules/ftp/ftp.go:374
+msgid "Failed to change FTP path for user %(username_to_modify)s: %(output)s"
+msgstr ""
+"Nem sikerült módosítani a(z) %(username_to_modify)s felhasználó FTP "
+"útvonalát: %(output)s"
+
+#: internal/modules/ftp/ftp.go:385
+msgid "Invalid configuration type, please use cyberduck or filezilla only!"
+msgstr ""
+"Érvénytelen konfigurációtípus, csak cyberduck vagy filezilla használható!"
+
+#: internal/modules/ftp/ftp.go:398
+msgid "User has no FTP accounts."
+msgstr "A felhasználónak nincs FTP-fiókja."
+
+#: internal/modules/ftp/ftp.go:415
+msgid "FTP account not found."
+msgstr "Az FTP-fiók nem található."
 
 #: internal/modules/ftp/render.go:76
 #: internal/web/templates/files/ftp_new.html:9
@@ -1968,9 +3047,38 @@ msgstr "FTP jelszó módosítása"
 msgid "Change FTP Path"
 msgstr "FTP útvonal módosítása"
 
+#: internal/modules/goaccess/goaccess.go:58
+msgid ""
+"Stats file for domain %(domain_name)s not found. Data is generated every "
+"24h."
+msgstr ""
+"A(z) %(domain_name)s domain statisztikai fájlja nem található. Az adatok 24 "
+"óránként készülnek."
+
 #: internal/modules/ipblocker/handlers.go:54
 msgid "Failed to block IP addresses - please try again"
 msgstr "Nem sikerült letiltani az IP-címeket - kérjük, próbálja újra"
+
+#: internal/modules/joomla/install.go:318
+msgid "Joomla installed successfully on %(selected_domain)s"
+msgstr "A Joomla sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/joomla/manage.go:51
+msgid "Joomla installation not found in the database"
+msgstr "A Joomla telepítés nem található az adatbázisban"
+
+#: internal/modules/joomla/manage.go:75
+msgid "Database name or user not found in configuration.php"
+msgstr ""
+"Az adatbázisnév vagy a felhasználó nem található a configuration.php fájlban"
+
+#: internal/modules/joomla/manage.go:96
+msgid "An error occurred during Joomla uninstall."
+msgstr "Hiba történt a Joomla eltávolítása közben."
+
+#: internal/modules/joomla/manage.go:107
+msgid "Joomla uninstalled successfully"
+msgstr "A Joomla sikeresen eltávolítva"
 
 #: internal/modules/joomla/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:79
@@ -1982,17 +3090,267 @@ msgstr "Joomla telepítése"
 msgid "Malware Quarantine"
 msgstr "Kártevő-karantén"
 
+#: internal/modules/matomo/install.go:368
+msgid "Matomo installed successfully on %(selected_domain)s"
+msgstr "A Matomo sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/matomo/manage.go:51
+msgid "Matomo installation not found in the database"
+msgstr "A Matomo telepítés nem található az adatbázisban"
+
+#: internal/modules/matomo/manage.go:75
+msgid "Database name or user not found in config/config.ini.php"
+msgstr ""
+"Az adatbázisnév vagy a felhasználó nem található a config/config.ini.php "
+"fájlban"
+
+#: internal/modules/matomo/manage.go:98
+msgid "An error occurred during Matomo uninstall."
+msgstr "Hiba történt a Matomo eltávolítása közben."
+
+#: internal/modules/matomo/manage.go:109
+msgid "Matomo uninstalled successfully"
+msgstr "A Matomo sikeresen eltávolítva"
+
 #: internal/modules/matomo/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:440
 #: internal/web/templates/manager/matomo_install.html:9
 msgid "Install Matomo"
 msgstr "Matomo telepítése"
 
+#: internal/modules/mediawiki/install.go:340
+msgid "MediaWiki installed successfully on %(selected_domain)s"
+msgstr "A MediaWiki sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/mediawiki/manage.go:52
+msgid "MediaWiki installation not found in the database"
+msgstr "A MediaWiki telepítés nem található az adatbázisban"
+
+#: internal/modules/mediawiki/manage.go:76
+msgid "Database name or user not found in LocalSettings.php"
+msgstr ""
+"Az adatbázisnév vagy a felhasználó nem található a LocalSettings.php fájlban"
+
+#: internal/modules/mediawiki/manage.go:99
+msgid "An error occurred during MediaWiki uninstall."
+msgstr "Hiba történt a MediaWiki eltávolítása közben."
+
+#: internal/modules/mediawiki/manage.go:110
+msgid "MediaWiki uninstalled successfully"
+msgstr "A MediaWiki sikeresen eltávolítva"
+
 #: internal/modules/mediawiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:338
 #: internal/web/templates/manager/mediawiki_install.html:9
 msgid "Install MediaWiki"
 msgstr "MediaWiki telepítése"
+
+#: internal/modules/mongodb/assign.go:34 internal/modules/mongodb/assign.go:86
+#: internal/modules/postgresql/assign.go:30
+#: internal/modules/postgresql/assign.go:79
+msgid "Invalid or missing user name."
+msgstr "Érvénytelen vagy hiányzó felhasználónév."
+
+#: internal/modules/mongodb/assign.go:37 internal/modules/mongodb/assign.go:89
+#: internal/modules/postgresql/assign.go:33
+#: internal/modules/postgresql/assign.go:82
+msgid "Invalid or missing database name."
+msgstr "Érvénytelen vagy hiányzó adatbázisnév."
+
+#: internal/modules/mongodb/assign.go:40
+#: internal/modules/postgresql/assign.go:36
+msgid "This is a system database that cannot be used."
+msgstr "Ez egy rendszeradatbázis, amely nem használható."
+
+#: internal/modules/mongodb/assign.go:43 internal/modules/mongodb/wizard.go:70
+msgid "Invalid role."
+msgstr "Érvénytelen szerepkör."
+
+#: internal/modules/mongodb/assign.go:48
+msgid "Failed to assign user to database: %(error)s"
+msgstr "Nem sikerült hozzárendelni a felhasználót az adatbázishoz: %(error)s"
+
+#: internal/modules/mongodb/assign.go:52
+msgid "Successfully added a user %(db_user)s to MongoDB database"
+msgstr ""
+"A(z) %(db_user)s felhasználó sikeresen hozzáadva a MongoDB adatbázishoz"
+
+#: internal/modules/mongodb/assign.go:92
+#: internal/modules/postgresql/assign.go:85
+msgid "This is a system username that cannot be edited."
+msgstr "Ez egy rendszerfelhasználónév, amely nem szerkeszthető."
+
+#: internal/modules/mongodb/assign.go:95
+#: internal/modules/postgresql/assign.go:88
+msgid "This is a system database that cannot be edited."
+msgstr "Ez egy rendszeradatbázis, amely nem szerkeszthető."
+
+#: internal/modules/mongodb/assign.go:100
+msgid ""
+"Failed to revoke role for user %(db_user)s from MongoDB database "
+"%(database_name)s: %(error)s"
+msgstr ""
+"Nem sikerült visszavonni a(z) %(db_user)s felhasználó szerepkörét a(z) "
+"%(database_name)s MongoDB adatbázisban: %(error)s"
+
+#: internal/modules/mongodb/assign.go:104
+msgid ""
+"Successfully revoked access for user %(db_user)s from MongoDB database "
+"%(database_name)s"
+msgstr ""
+"A(z) %(db_user)s felhasználó hozzáférése a(z) %(database_name)s MongoDB "
+"adatbázishoz sikeresen visszavonva"
+
+#: internal/modules/mongodb/databases.go:49
+#: internal/modules/mongodb/users.go:34
+msgid "MongoDB service is not yet installed. Starting it in the background.."
+msgstr "A MongoDB szolgáltatás még nincs telepítve. Indítás a háttérben.."
+
+#: internal/modules/mongodb/databases.go:52
+#: internal/modules/mongodb/users.go:37
+msgid ""
+"MongoDB container is not running. Please allow a few moments for the "
+"initialization.."
+msgstr ""
+"A MongoDB konténer nem fut. Kérjük, várjon néhány pillanatot az "
+"inicializálásra.."
+
+#: internal/modules/mongodb/databases.go:56
+#: internal/modules/mysql/databases.go:100
+#: internal/modules/postgresql/databases.go:62
+msgid "Error fetching databases: %(error)s"
+msgstr "Hiba az adatbázisok lekérésekor: %(error)s"
+
+#: internal/modules/mongodb/databases.go:87
+#: internal/modules/mongodb/wizard.go:28
+msgid ""
+"MongoDB service is not ready yet. Please wait for the installation to finish"
+" before creating a database."
+msgstr ""
+"A MongoDB szolgáltatás még nem áll készen. Várja meg a telepítés "
+"befejezését, mielőtt adatbázist hoz létre."
+
+#: internal/modules/mongodb/databases.go:100
+#: internal/modules/mongodb/databases.go:163
+#: internal/modules/mongodb/export.go:36 internal/modules/mongodb/wizard.go:49
+#: internal/modules/mysql/assign.go:48 internal/modules/mysql/assign.go:180
+#: internal/modules/mysql/databases.go:173
+#: internal/modules/mysql/databases.go:230 internal/modules/mysql/export.go:39
+#: internal/modules/postgresql/databases.go:132
+#: internal/modules/postgresql/databases.go:191
+#: internal/modules/postgresql/export.go:33
+#: internal/modules/postgresql/wizard.go:47
+msgid "Database name is required."
+msgstr "Az adatbázisnév megadása kötelező."
+
+#: internal/modules/mongodb/databases.go:104
+#: internal/modules/mongodb/databases.go:166
+#: internal/modules/mongodb/wizard.go:52 internal/modules/mysql/assign.go:51
+#: internal/modules/mysql/assign.go:183
+#: internal/modules/mysql/databases.go:177
+#: internal/modules/mysql/databases.go:234
+#: internal/modules/postgresql/databases.go:136
+#: internal/modules/postgresql/databases.go:195
+#: internal/modules/postgresql/wizard.go:50
+msgid ""
+"Name %(database_name)s is not allowed. Please use alphanumeric characters "
+"and '_' - [a-zA-Z0-9_]+ "
+msgstr ""
+"A(z) %(database_name)s név nem engedélyezett. Használjon alfanumerikus "
+"karaktereket és '_' jelet - [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/databases.go:108
+#: internal/modules/mongodb/wizard.go:55 internal/modules/mysql/assign.go:58
+#: internal/modules/postgresql/wizard.go:53
+msgid "This is a system database that can not be used."
+msgstr "Ez egy rendszeradatbázis, amely nem használható."
+
+#: internal/modules/mongodb/databases.go:130
+#: internal/modules/mongodb/wizard.go:89
+#: internal/modules/postgresql/databases.go:159
+#: internal/modules/postgresql/wizard.go:85
+msgid ""
+"You have reached the maximum number of databases allowed.%(upgrade_message)s"
+msgstr ""
+"Elérte az engedélyezett adatbázisok maximális számát.%(upgrade_message)s"
+
+#: internal/modules/mongodb/databases.go:135
+#: internal/modules/mongodb/wizard.go:94
+#: internal/modules/postgresql/databases.go:164
+#: internal/modules/postgresql/wizard.go:90
+msgid "Failed to create database: %(error)s"
+msgstr "Nem sikerült létrehozni az adatbázist: %(error)s"
+
+#: internal/modules/mongodb/databases.go:141
+msgid "Successfully created a MongoDB database %(database_name)s"
+msgstr "A(z) %(database_name)s MongoDB adatbázis sikeresen létrehozva"
+
+#: internal/modules/mongodb/databases.go:169
+msgid "This is a system database that cannot be deleted."
+msgstr "Ez egy rendszeradatbázis, amely nem törölhető."
+
+#: internal/modules/mongodb/databases.go:174
+#: internal/modules/postgresql/databases.go:202
+msgid "Error deleting database %(database_name)s: %(error)s"
+msgstr "Hiba a(z) %(database_name)s adatbázis törlésekor: %(error)s"
+
+#: internal/modules/mongodb/databases.go:180
+msgid "Successfully deleted a MongoDB database %(database_name)s"
+msgstr "A(z) %(database_name)s MongoDB adatbázis sikeresen törölve"
+
+#: internal/modules/mongodb/export.go:39 internal/modules/mysql/export.go:42
+#: internal/modules/postgresql/export.go:36
+msgid ""
+"Name %(database_name)s is not allowed. Please use alphanumeric characters "
+"and '_' - [a-zA-Z0-9_]+"
+msgstr ""
+"A(z) %(database_name)s név nem engedélyezett. Használjon alfanumerikus "
+"karaktereket és '_' jelet - [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/export.go:42
+#: internal/modules/postgresql/export.go:39
+msgid ""
+"Database '%(database_name)s' is a system database and cannot be exported."
+msgstr ""
+"A(z) '%(database_name)s' adatbázis rendszeradatbázis, nem exportálható."
+
+#: internal/modules/mongodb/export.go:45
+msgid "Invalid export format provided, select Archive or GZIP."
+msgstr ""
+"Érvénytelen exportformátum, válassza az Archive vagy a GZIP lehetőséget."
+
+#: internal/modules/mongodb/export.go:48 internal/modules/mysql/export.go:88
+#: internal/modules/postgresql/export.go:45
+msgid "Invalid export destination."
+msgstr "Érvénytelen exportálási cél."
+
+#: internal/modules/mongodb/export.go:61 internal/modules/mysql/export.go:66
+#: internal/modules/postgresql/export.go:52
+msgid "Failed to export database %(database_name)s."
+msgstr "Nem sikerült exportálni a(z) %(database_name)s adatbázist."
+
+#: internal/modules/mongodb/export.go:78 internal/modules/mysql/export.go:84
+#: internal/modules/postgresql/export.go:69
+msgid "Database '%(database_name)s' exported to %(display_file)s"
+msgstr "A(z) '%(database_name)s' adatbázis exportálva ide: %(display_file)s"
+
+#: internal/modules/mongodb/importdb.go:80
+#: internal/modules/postgresql/importdb.go:80
+msgid "Successfully imported %(filename)s into database: %(db_name)s"
+msgstr "%(filename)s sikeresen importálva az adatbázisba: %(db_name)s"
+
+#: internal/modules/mongodb/importdb.go:84
+#: internal/modules/postgresql/importdb.go:84
+msgid "Error importing %(filename)s into database %(db_name)s: %(import_err)s"
+msgstr ""
+"Hiba a(z) %(filename)s importálásakor a(z) %(db_name)s adatbázisba: "
+"%(import_err)s"
+
+#: internal/modules/mongodb/importdb.go:89
+#: internal/modules/mysql/importdb.go:97
+#: internal/modules/postgresql/importdb.go:89
+msgid "No database file uploaded!"
+msgstr "Nincs feltöltött adatbázisfájl!"
 
 #: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:233
 #: internal/modules/postgresql/postgresql.go:65
@@ -2074,6 +3432,20 @@ msgstr ""
 "Nem sikerült lekérdezni a szolgáltatás állapotát. Kérjük, forduljon a "
 "rendszergazdához."
 
+#: internal/modules/mongodb/processlist.go:47
+#: internal/modules/mysql/processlist.go:40
+#: internal/modules/postgresql/processlist.go:62
+msgid "Error fetching process list: %(error)s"
+msgstr "Hiba a folyamatlista lekérésekor: %(error)s"
+
+#: internal/modules/mongodb/processlist.go:106
+msgid "Error killing operation %(opid)s: %(error)s"
+msgstr "Hiba a(z) %(opid)s művelet leállításakor: %(error)s"
+
+#: internal/modules/mongodb/processlist.go:110
+msgid "Operation %(opid)s killed."
+msgstr "A(z) %(opid)s művelet leállítva."
+
 #: internal/modules/mongodb/render.go:56
 #: internal/web/templates/mongodb/databases.html:9
 msgid "MongoDB Databases"
@@ -2140,11 +3512,399 @@ msgstr "Felhasználó hozzárendelése az adatbázishoz"
 msgid "Remove User from Database"
 msgstr "Felhasználó eltávolítása az adatbázisból"
 
+#: internal/modules/mongodb/users.go:41 internal/modules/mysql/users.go:40
+#: internal/modules/postgresql/users.go:48
+msgid "Error fetching users: %(error)s"
+msgstr "Hiba a felhasználók lekérésekor: %(error)s"
+
+#: internal/modules/mongodb/users.go:76 internal/modules/mongodb/users.go:133
+#: internal/modules/mongodb/users.go:170 internal/modules/mongodb/wizard.go:58
+#: internal/modules/mysql/assign.go:42 internal/modules/mysql/assign.go:174
+#: internal/modules/mysql/users.go:82 internal/modules/mysql/users.go:146
+#: internal/modules/mysql/users.go:190 internal/modules/postgresql/users.go:87
+#: internal/modules/postgresql/users.go:144
+#: internal/modules/postgresql/users.go:193
+#: internal/modules/postgresql/wizard.go:56
+msgid "User name is required."
+msgstr "A felhasználónév megadása kötelező."
+
+#: internal/modules/mongodb/users.go:79 internal/modules/mongodb/users.go:173
+#: internal/modules/mongodb/wizard.go:61 internal/modules/mysql/assign.go:45
+#: internal/modules/mysql/assign.go:177 internal/modules/mysql/users.go:85
+#: internal/modules/mysql/users.go:149 internal/modules/mysql/users.go:193
+#: internal/modules/postgresql/users.go:90
+#: internal/modules/postgresql/users.go:196
+#: internal/modules/postgresql/wizard.go:59
+msgid ""
+"Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
+"- [a-zA-Z0-9_]+ "
+msgstr ""
+"A(z) %(db_user)s név nem engedélyezett. Használjon alfanumerikus "
+"karaktereket és '_' jelet - [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/users.go:82 internal/modules/mongodb/wizard.go:64
+#: internal/modules/mysql/remotemysql.go:158
+#: internal/modules/mysql/users.go:88 internal/modules/postgresql/users.go:93
+#: internal/modules/postgresql/wizard.go:62
+msgid "This username is not allowed."
+msgstr "Ez a felhasználónév nem engedélyezett."
+
+#: internal/modules/mongodb/users.go:90 internal/modules/mongodb/wizard.go:99
+#: internal/modules/postgresql/users.go:101
+#: internal/modules/postgresql/wizard.go:95
+msgid "Failed to create user: %(error)s"
+msgstr "Nem sikerült létrehozni a felhasználót: %(error)s"
+
+#: internal/modules/mongodb/users.go:94
+msgid "Successfully created a MongoDB user %(db_user)s"
+msgstr "A(z) %(db_user)s MongoDB felhasználó sikeresen létrehozva"
+
+#: internal/modules/mongodb/users.go:108 internal/modules/mongodb/users.go:176
+#: internal/modules/mysql/assign.go:189
+#: internal/modules/mysql/remotemysql.go:222
+#: internal/modules/mysql/users.go:116 internal/modules/mysql/users.go:196
+#: internal/modules/postgresql/users.go:119
+#: internal/modules/postgresql/users.go:199
+msgid "This is a system username that can not be edited."
+msgstr "Ez egy rendszerfelhasználónév, amely nem szerkeszthető."
+
+#: internal/modules/mongodb/users.go:136
+#: internal/modules/postgresql/users.go:147
+msgid ""
+"Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
+"- [a-zA-Z0-9_]+"
+msgstr ""
+"A(z) %(db_user)s név nem engedélyezett. Használjon alfanumerikus "
+"karaktereket és '_' jelet - [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/users.go:139
+#: internal/modules/postgresql/users.go:150
+msgid "This is a system username that cannot be deleted."
+msgstr "Ez egy rendszerfelhasználónév, amely nem törölhető."
+
+#: internal/modules/mongodb/users.go:144
+#: internal/modules/postgresql/users.go:167
+msgid "Error deleting user %(db_user)s: %(error)s"
+msgstr "Hiba a(z) %(db_user)s felhasználó törlésekor: %(error)s"
+
+#: internal/modules/mongodb/users.go:146 internal/modules/mysql/users.go:167
+#: internal/modules/postgresql/users.go:169
+msgid "Successfully deleted user %(db_user)s"
+msgstr "A(z) %(db_user)s felhasználó sikeresen törölve"
+
+#: internal/modules/mongodb/users.go:184
+#: internal/modules/postgresql/users.go:207
+msgid "Error changing password for user %(db_user)s: %(error)s"
+msgstr ""
+"Hiba a(z) %(db_user)s felhasználó jelszavának módosításakor: %(error)s"
+
+#: internal/modules/mongodb/users.go:188 internal/modules/mysql/users.go:215
+#: internal/modules/postgresql/users.go:211
+msgid "Successfully changed password for user %(db_user)s"
+msgstr "A(z) %(db_user)s felhasználó jelszava sikeresen módosítva"
+
+#: internal/modules/mongodb/wizard.go:104
+msgid "Database and user created, but failed to grant role: %(error)s"
+msgstr ""
+"Az adatbázis és a felhasználó létrejött, de a szerepkör hozzárendelése "
+"sikertelen: %(error)s"
+
+#: internal/modules/mongodb/wizard.go:111
+msgid ""
+"Successfully created database %(database_name)s, user %(db_user)s, and "
+"granted %(role)s."
+msgstr ""
+"A(z) %(database_name)s adatbázis és a(z) %(db_user)s felhasználó sikeresen "
+"létrehozva, a(z) %(role)s szerepkör hozzárendelve."
+
+#: internal/modules/moodle/install.go:390
+msgid "Moodle installed successfully on %(selected_domain)s"
+msgstr "A Moodle sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/moodle/manage.go:47
+msgid "Moodle installation not found in the database"
+msgstr "A Moodle telepítés nem található az adatbázisban"
+
+#: internal/modules/moodle/manage.go:87
+msgid "An error occurred during Moodle uninstall."
+msgstr "Hiba történt a Moodle eltávolítása közben."
+
+#: internal/modules/moodle/manage.go:98
+msgid "Moodle uninstalled successfully"
+msgstr "A Moodle sikeresen eltávolítva"
+
 #: internal/modules/moodle/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:580
 #: internal/web/templates/manager/moodle_install.html:9
 msgid "Install Moodle"
 msgstr "Moodle telepítése"
+
+#: internal/modules/mysql/assign.go:55
+msgid "At least one privilege must be selected."
+msgstr "Legalább egy jogosultságot ki kell választani."
+
+#: internal/modules/mysql/assign.go:61 internal/modules/mysql/assign.go:192
+#: internal/modules/mysql/remotemysql.go:161
+#: internal/modules/mysql/remotemysql.go:225
+#: internal/modules/mysql/remotemysql.go:267
+#: internal/modules/mysql/users.go:91 internal/modules/mysql/users.go:155
+#: internal/modules/mysql/users.go:199
+msgid "Invalid host format."
+msgstr "Érvénytelen hostformátum."
+
+#: internal/modules/mysql/assign.go:67
+msgid "Invalid privilege selected."
+msgstr "Érvénytelen jogosultság kiválasztva."
+
+#: internal/modules/mysql/assign.go:95
+msgid ""
+"Privileges granted successfully for user '%(db_user)s' on database "
+"'%(database_name)s'"
+msgstr ""
+"Jogosultságok sikeresen megadva a(z) '%(db_user)s' felhasználónak a(z) "
+"'%(database_name)s' adatbázison"
+
+#: internal/modules/mysql/assign.go:186
+msgid "This is a system database that can not be edited."
+msgstr "Ez egy rendszeradatbázis, amely nem szerkeszthető."
+
+#: internal/modules/mysql/assign.go:197 internal/modules/mysql/assign.go:201
+msgid "Failed to revoke privileges: %(error)s"
+msgstr "Nem sikerült visszavonni a jogosultságokat: %(error)s"
+
+#: internal/modules/mysql/assign.go:207
+msgid ""
+"Successfully revoked all privileges for user %(db_user)s from database "
+"%(database_name)s"
+msgstr ""
+"A(z) %(db_user)s felhasználó összes jogosultsága sikeresen visszavonva a(z) "
+"%(database_name)s adatbázison"
+
+#: internal/modules/mysql/conf.go:177
+msgid "Unknown database service, cannot restart"
+msgstr "Ismeretlen adatbázis-szolgáltatás, újraindítás nem lehetséges"
+
+#: internal/modules/mysql/conf.go:181
+msgid "%(mysql_version)s configuration saved but service failed to restart."
+msgstr ""
+"A(z) %(mysql_version)s konfiguráció mentve, de a szolgáltatás újraindítása "
+"sikertelen."
+
+#: internal/modules/mysql/conf.go:183
+msgid "%(mysql_version)s configuration updated and service restarted."
+msgstr ""
+"A(z) %(mysql_version)s konfiguráció frissítve, a szolgáltatás újraindítva."
+
+#: internal/modules/mysql/conf.go:189
+msgid ""
+"%(mysql_version)s container is not running. Please wait for initialization."
+msgstr ""
+"A(z) %(mysql_version)s konténer nem fut. Kérjük, várja meg az "
+"inicializálást."
+
+#: internal/modules/mysql/databases.go:165 internal/modules/mysql/wizard.go:30
+msgid ""
+"%(mysql_version)s service is not ready yet. Please wait for the installation"
+" to finish before creating a database."
+msgstr ""
+"A(z) %(mysql_version)s szolgáltatás még nem áll készen. Várja meg a "
+"telepítés befejezését, mielőtt adatbázist hoz létre."
+
+#: internal/modules/mysql/databases.go:181
+msgid ""
+"Database name is too long. MySQL identifiers are limited to 64 characters."
+msgstr ""
+"Az adatbázisnév túl hosszú. A MySQL azonosítók legfeljebb 64 karakteresek "
+"lehetnek."
+
+#: internal/modules/mysql/databases.go:196
+msgid ""
+"Error creating database: '%(database_name)s' - You have reached the maximum "
+"number of databases allowed.%(upgrade_message)s"
+msgstr ""
+"Hiba az adatbázis létrehozásakor: '%(database_name)s' – elérte az "
+"engedélyezett adatbázisok maximális számát.%(upgrade_message)s"
+
+#: internal/modules/mysql/databases.go:201
+msgid "Error creating database: %(error)s"
+msgstr "Hiba az adatbázis létrehozásakor: %(error)s"
+
+#: internal/modules/mysql/databases.go:209
+msgid "Successfully created a database %(database_name)s"
+msgstr "A(z) %(database_name)s adatbázis sikeresen létrehozva"
+
+#: internal/modules/mysql/databases.go:239
+msgid "Error deleting database: %(error)s"
+msgstr "Hiba az adatbázis törlésekor: %(error)s"
+
+#: internal/modules/mysql/databases.go:247
+msgid "Successfully deleted a database %(database_name)s"
+msgstr "A(z) %(database_name)s adatbázis sikeresen törölve"
+
+#: internal/modules/mysql/export.go:45
+msgid ""
+"Database '%(database_name)s' is restricted and cannot be exported. Contact "
+"Administrator"
+msgstr ""
+"A(z) '%(database_name)s' adatbázis korlátozott, nem exportálható. Forduljon "
+"a rendszergazdához"
+
+#: internal/modules/mysql/export.go:48
+#: internal/modules/postgresql/export.go:42
+msgid "Invalid export format provided, select SQL or GZIP."
+msgstr "Érvénytelen exportformátum, válassza az SQL vagy a GZIP lehetőséget."
+
+#: internal/modules/mysql/export.go:59
+msgid "Unsupported database engine: %(mysql_version)s"
+msgstr "Nem támogatott adatbázismotor: %(mysql_version)s"
+
+#: internal/modules/mysql/importdb.go:48
+msgid ""
+"%(mysql_version)s container is not running. Please allow a few moments for "
+"the initialization.."
+msgstr ""
+"A(z) %(mysql_version)s konténer nem fut. Kérjük, várjon néhány pillanatot az"
+" inicializálásra.."
+
+#: internal/modules/mysql/importdb.go:74
+msgid "Uploaded file exceeds %(mysql_import_max_size_gb)s GB limit."
+msgstr ""
+"A feltöltött fájl meghaladja a(z) %(mysql_import_max_size_gb)s GB-os "
+"korlátot."
+
+#: internal/modules/mysql/importdb.go:90
+msgid "Successfully imported from %(filename)s file to database: %(db_name)s"
+msgstr ""
+"Sikeres importálás a(z) %(filename)s fájlból az adatbázisba: %(db_name)s"
+
+#: internal/modules/mysql/importdb.go:94
+msgid "Import into '%(db_name)s' failed: %(err_detail)s"
+msgstr ""
+"Az importálás a(z) '%(db_name)s' adatbázisba sikertelen: %(err_detail)s"
+
+#: internal/modules/mysql/mysql.go:276
+msgid ""
+"%(service)s service is not yet installed. Starting it in the background.."
+msgstr ""
+"A(z) %(service)s szolgáltatás még nincs telepítve. Indítás a háttérben.."
+
+#: internal/modules/mysql/mysql.go:278
+msgid "%(service)s service is not accessible. Current status: %(state)s."
+msgstr ""
+"A(z) %(service)s szolgáltatás nem érhető el. Jelenlegi állapot: %(state)s."
+
+#: internal/modules/mysql/mysql.go:280
+msgid ""
+"%(service)s is running but still initializing. If it stays in this state for"
+" more than 60s, check the logs."
+msgstr ""
+"A(z) %(service)s fut, de még inicializálódik. Ha 60 másodpercnél tovább "
+"marad ebben az állapotban, nézze meg a naplókat."
+
+#: internal/modules/mysql/mysql.go:282
+msgid "%(service)s is starting. It is not ready to handle queries yet."
+msgstr "A(z) %(service)s indul. Még nem kész lekérdezések kezelésére."
+
+#: internal/modules/mysql/mysql.go:284
+msgid ""
+"%(service)s is running, but health status is unknown. It may or may not be "
+"ready to handle queries."
+msgstr ""
+"A(z) %(service)s fut, de az állapota ismeretlen. Lehet, hogy még nem kész "
+"lekérdezések kezelésére."
+
+#: internal/modules/mysql/processlist.go:102
+msgid "Error killing query %(id)s: %(error)s"
+msgstr "Hiba a(z) %(id)s lekérdezés leállításakor: %(error)s"
+
+#: internal/modules/mysql/processlist.go:106
+msgid "Query %(id)s killed."
+msgstr "A(z) %(id)s lekérdezés leállítva."
+
+#: internal/modules/mysql/remotemysql.go:79
+msgid "Remote MySQL access is now enabled."
+msgstr "A távoli MySQL-hozzáférés most engedélyezve."
+
+#: internal/modules/mysql/remotemysql.go:83
+msgid "Remote MySQL access is already disabled."
+msgstr "A távoli MySQL-hozzáférés már le van tiltva."
+
+#: internal/modules/mysql/remotemysql.go:87
+msgid "Remote MySQL access is now disabled."
+msgstr "A távoli MySQL-hozzáférés most letiltva."
+
+#: internal/modules/mysql/remotemysql.go:95
+msgid ""
+"Port changed but the MySQL service failed to restart. Try restarting it "
+"manually from Services."
+msgstr ""
+"A port módosult, de a MySQL szolgáltatás újraindítása sikertelen. Próbálja "
+"meg kézzel újraindítani a Szolgáltatások oldalon."
+
+#: internal/modules/mysql/remotemysql.go:112
+msgid ""
+"Could not load MySQL users yet - the database may still be starting. Please "
+"refresh in a moment."
+msgstr ""
+"A MySQL felhasználók még nem tölthetők be – lehet, hogy az adatbázis még "
+"indul. Frissítsen egy pillanat múlva."
+
+#: internal/modules/mysql/remotemysql.go:155
+msgid "A valid username is required - alphanumeric characters and '_' only."
+msgstr ""
+"Érvényes felhasználónév szükséges – csak alfanumerikus karakterek és '_'."
+
+#: internal/modules/mysql/remotemysql.go:164
+msgid "Password is required."
+msgstr "A jelszó megadása kötelező."
+
+#: internal/modules/mysql/remotemysql.go:172
+#: internal/modules/mysql/remotemysql.go:187
+#: internal/modules/mysql/remotemysql.go:194
+msgid "Error adding access: %(error)s"
+msgstr "Hiba a hozzáférés hozzáadásakor: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:181
+msgid "User %(db_user)s already has access from host %(db_host)s."
+msgstr ""
+"A(z) %(db_user)s felhasználó már rendelkezik hozzáféréssel a(z) %(db_host)s "
+"hostról."
+
+#: internal/modules/mysql/remotemysql.go:200
+msgid "Successfully granted access for %(db_user)s from %(db_host)s"
+msgstr "Hozzáférés sikeresen megadva: %(db_user)s, innen: %(db_host)s"
+
+#: internal/modules/mysql/remotemysql.go:219
+#: internal/modules/mysql/remotemysql.go:261
+msgid "A valid username is required."
+msgstr "Érvényes felhasználónév szükséges."
+
+#: internal/modules/mysql/remotemysql.go:228
+msgid "No changes made."
+msgstr "Nem történt módosítás."
+
+#: internal/modules/mysql/remotemysql.go:233
+#: internal/modules/mysql/remotemysql.go:237
+msgid "Error updating access: %(error)s"
+msgstr "Hiba a hozzáférés frissítésekor: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:243
+msgid "Successfully updated access for %(db_user)s"
+msgstr "A(z) %(db_user)s hozzáférése sikeresen frissítve"
+
+#: internal/modules/mysql/remotemysql.go:264
+#: internal/modules/mysql/users.go:152
+msgid "This is a system username that can not be deleted."
+msgstr "Ez egy rendszerfelhasználónév, amely nem törölhető."
+
+#: internal/modules/mysql/remotemysql.go:272
+#: internal/modules/mysql/remotemysql.go:276
+msgid "Error removing access: %(error)s"
+msgstr "Hiba a hozzáférés eltávolításakor: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:282
+msgid "Successfully removed access for %(db_user)s from %(db_host)s"
+msgstr "A(z) %(db_user)s hozzáférése innen: %(db_host)s sikeresen eltávolítva"
 
 #: internal/modules/mysql/render.go:117
 msgid "Database Users"
@@ -2162,11 +3922,80 @@ msgstr "Root jelszó módosítása"
 msgid "Remote MySQL"
 msgstr "Távoli MySQL"
 
+#: internal/modules/mysql/rootpassword.go:37
+#: internal/modules/mysql/rootpassword.go:41
+#: internal/modules/mysql/rootpassword.go:45
+msgid "Error changing MySQL root password: %(error)s"
+msgstr "Hiba a MySQL root jelszó módosításakor: %(error)s"
+
+#: internal/modules/mysql/rootpassword.go:57
+#: internal/modules/mysql/rootpassword.go:63
+msgid "Password changed but failed to restart MySQL."
+msgstr "A jelszó módosult, de a MySQL újraindítása sikertelen."
+
+#: internal/modules/mysql/rootpassword.go:67
+msgid "Successfully changed root password."
+msgstr "A root jelszó sikeresen módosítva."
+
+#: internal/modules/mysql/users.go:105
+msgid "Successfully created a database user %(db_user)s"
+msgstr "A(z) %(db_user)s adatbázis-felhasználó sikeresen létrehozva"
+
+#: internal/modules/mysql/users.go:160
+msgid "Error deleting user: %(error)s"
+msgstr "Hiba a felhasználó törlésekor: %(error)s"
+
+#: internal/modules/mysql/users.go:208
+msgid "Error changing password: %(error)s"
+msgstr "Hiba a jelszó módosításakor: %(error)s"
+
+#: internal/modules/nextcloud/install.go:352
+msgid "Nextcloud installed successfully on %(selected_domain)s"
+msgstr "A Nextcloud sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/nextcloud/manage.go:51
+msgid "Nextcloud installation not found in the database"
+msgstr "A Nextcloud telepítés nem található az adatbázisban"
+
+#: internal/modules/nextcloud/manage.go:75
+msgid "Database name or user not found in config/config.php"
+msgstr ""
+"Az adatbázisnév vagy a felhasználó nem található a config/config.php fájlban"
+
+#: internal/modules/nextcloud/manage.go:96
+msgid "An error occurred during Nextcloud uninstall."
+msgstr "Hiba történt a Nextcloud eltávolítása közben."
+
+#: internal/modules/nextcloud/manage.go:107
+msgid "Nextcloud uninstalled successfully"
+msgstr "A Nextcloud sikeresen eltávolítva"
+
 #: internal/modules/nextcloud/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:478
 #: internal/web/templates/manager/nextcloud_install.html:9
 msgid "Install Nextcloud"
 msgstr "Nextcloud telepítése"
+
+#: internal/modules/ojs/install.go:418
+msgid "OJS installed successfully on %(selected_domain)s"
+msgstr "Az OJS sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/ojs/manage.go:41
+msgid "OJS installation not found in the database"
+msgstr "Az OJS telepítés nem található az adatbázisban"
+
+#: internal/modules/ojs/manage.go:69
+msgid "Database name or user not found in config.inc.php"
+msgstr ""
+"Az adatbázisnév vagy a felhasználó nem található a config.inc.php fájlban"
+
+#: internal/modules/ojs/manage.go:79
+msgid "An error occurred during OJS uninstall."
+msgstr "Hiba történt az OJS eltávolítása közben."
+
+#: internal/modules/ojs/manage.go:90
+msgid "OJS uninstalled successfully"
+msgstr "Az OJS sikeresen eltávolítva"
 
 #: internal/modules/ojs/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:612
@@ -2174,11 +4003,161 @@ msgstr "Nextcloud telepítése"
 msgid "Install OJS"
 msgstr "OJS telepítése"
 
+#: internal/modules/opencart/install.go:361
+msgid "OpenCart installed successfully on %(selected_domain)s"
+msgstr "Az OpenCart sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/opencart/manage.go:51
+msgid "OpenCart installation not found in the database"
+msgstr "Az OpenCart telepítés nem található az adatbázisban"
+
+#: internal/modules/opencart/manage.go:96
+msgid "An error occurred during OpenCart uninstall."
+msgstr "Hiba történt az OpenCart eltávolítása közben."
+
+#: internal/modules/opencart/manage.go:107
+msgid "OpenCart uninstalled successfully"
+msgstr "Az OpenCart sikeresen eltávolítva"
+
 #: internal/modules/opencart/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:215
 #: internal/web/templates/manager/opencart_install.html:9
 msgid "Install OpenCart"
 msgstr "OpenCart telepítése"
+
+#: internal/modules/php/default.go:55
+msgid "Invalid PHP version format"
+msgstr "Érvénytelen PHP-verzióformátum"
+
+#: internal/modules/php/default.go:59
+msgid ""
+"Default PHP version for OpenLitespeed can not be set to %(new_phpversion)s -"
+" only available tags are: 8.5 8.4 8.3 8.2"
+msgstr ""
+"Az OpenLitespeed alapértelmezett PHP-verziója nem lehet %(new_phpversion)s –"
+" csak ezek érhetők el: 8.5 8.4 8.3 8.2"
+
+#: internal/modules/php/default.go:67
+msgid "PHP version %(new_phpversion)s set as default for new domains"
+msgstr ""
+"A(z) %(new_phpversion)s PHP-verzió beállítva alapértelmezettként az új "
+"domainekhez"
+
+#: internal/modules/php/default.go:71
+msgid ""
+"PHP version %(new_phpversion)s saved, and Litespeed restarted to apply the "
+"version."
+msgstr ""
+"A(z) %(new_phpversion)s PHP-verzió mentve, a Litespeed újraindítva a verzió "
+"alkalmazásához."
+
+#: internal/modules/php/default.go:75
+msgid ""
+"PHP version %(new_phpversion)s saved and will be used by Litespeed for new "
+"domains."
+msgstr ""
+"A(z) %(new_phpversion)s PHP-verzió mentve, a Litespeed ezt használja az új "
+"domainekhez."
+
+#: internal/modules/php/default.go:87
+msgid "Default PHP version could not be changed to %(new_phpversion)s"
+msgstr ""
+"Nem sikerült az alapértelmezett PHP-verziót erre módosítani: "
+"%(new_phpversion)s"
+
+#: internal/modules/php/domains.go:67
+msgid ""
+"Only one PHP version can be used on Litespeed, to change version for all "
+"domains use this page."
+msgstr ""
+"Litespeeden csak egy PHP-verzió használható, az összes domain verziójának "
+"módosításához használja ezt az oldalt."
+
+#: internal/modules/php/domains.go:95
+msgid "Invalid or unavailable PHP version selected."
+msgstr "Érvénytelen vagy nem elérhető PHP-verzió kiválasztva."
+
+#: internal/modules/php/domains.go:99
+msgid "Invalid current PHP version."
+msgstr "Érvénytelen jelenlegi PHP-verzió."
+
+#: internal/modules/php/domains.go:107
+msgid "Failed to start PHP %(new_phpversion)s: %(message)s"
+msgstr "Nem sikerült elindítani a PHP %(new_phpversion)s verziót: %(message)s"
+
+#: internal/modules/php/domains.go:115
+msgid "Failed to read vhost configuration for %(domain_url)s: %(error)s"
+msgstr ""
+"Nem sikerült beolvasni a(z) %(domain_url)s vhost konfigurációját: %(error)s"
+
+#: internal/modules/php/domains.go:123
+msgid "Error occurred while updating PHP version for domain %(domain_url)s"
+msgstr "Hiba történt a(z) %(domain_url)s domain PHP-verziójának frissítésekor"
+
+#: internal/modules/php/domains.go:136
+msgid ""
+"PHP version for domain %(domain_url)s updated from %(old_phpversion)s to "
+"%(new_phpversion)s"
+msgstr ""
+"A(z) %(domain_url)s domain PHP-verziója frissítve: %(old_phpversion)s → "
+"%(new_phpversion)s"
+
+#: internal/modules/php/extensions.go:587
+msgid "Failed to start PHP %(version)s: %(err_msg)s"
+msgstr "Nem sikerült elindítani a PHP %(version)s verziót: %(err_msg)s"
+
+#: internal/modules/php/extensions.go:597
+msgid "Invalid extension name."
+msgstr "Érvénytelen bővítménynév."
+
+#: internal/modules/php/extensions.go:620
+msgid ""
+"Extension %(extension)s %(action_word)s, PHP %(version)s restarted to apply "
+"changes."
+msgstr ""
+"A(z) %(extension)s bővítmény %(action_word)s, a PHP %(version)s újraindítva "
+"a módosítások alkalmazásához."
+
+#: internal/modules/php/extensions.go:622
+msgid "Could not change extension %(extension)s: %(err_msg)s"
+msgstr "Nem sikerült módosítani a(z) %(extension)s bővítményt: %(err_msg)s"
+
+#: internal/modules/php/info.go:44
+msgid "Failed to start PHP %(service)s: %(message)s"
+msgstr "Nem sikerült elindítani a PHP %(service)s szolgáltatást: %(message)s"
+
+#: internal/modules/php/ini.go:68
+msgid "Error saving %(text)s php.ini file!"
+msgstr "Hiba a(z) %(text)s php.ini fájl mentésekor!"
+
+#: internal/modules/php/ini.go:74
+msgid ""
+"PHP.INI file for %(text)s version %(version)s edited successfully, and "
+"%(container_to_restart)s service restarted to apply."
+msgstr ""
+"A(z) %(text)s %(version)s verzió PHP.INI fájlja sikeresen szerkesztve, a(z) "
+"%(container_to_restart)s szolgáltatás újraindítva az alkalmazáshoz."
+
+#: internal/modules/php/ini.go:78
+msgid "PHP.INI file for %(text)s version %(version)s edited successfully."
+msgstr ""
+"A(z) %(text)s %(version)s verzió PHP.INI fájlja sikeresen szerkesztve."
+
+#: internal/modules/php/options.go:277
+msgid ""
+"Configuration edited successfully and %(text)s service restarted to apply "
+"new settings."
+msgstr ""
+"A konfiguráció sikeresen szerkesztve, a(z) %(text)s szolgáltatás újraindítva"
+" az új beállítások alkalmazásához."
+
+#: internal/modules/php/options.go:279
+msgid ""
+"Configuration edited successfully, but %(text)s failed to restart. Try "
+"restarting it manually from Services."
+msgstr ""
+"A konfiguráció sikeresen szerkesztve, de a(z) %(text)s újraindítása "
+"sikertelen. Próbálja meg kézzel újraindítani a Szolgáltatások oldalon."
 
 #: internal/modules/php/render.go:128
 #: internal/web/templates/php/default.html:7
@@ -2190,11 +4169,119 @@ msgstr "Alapértelmezett PHP verzió"
 msgid "Install PHP Application"
 msgstr "PHP alkalmazás telepítése"
 
+#: internal/modules/phpbb/install.go:306
+msgid "phpBB installed successfully on %(selected_domain)s"
+msgstr "A phpBB sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/phpbb/manage.go:81
+msgid "An error occurred during phpBB uninstall."
+msgstr "Hiba történt a phpBB eltávolítása közben."
+
 #: internal/modules/phpbb/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:253
 #: internal/web/templates/manager/phpbb_install.html:9
 msgid "Install phpBB"
 msgstr "phpBB telepítése"
+
+#: internal/modules/postgresql/assign.go:45
+msgid "Failed to assign user to database."
+msgstr "Nem sikerült hozzárendelni a felhasználót az adatbázishoz."
+
+#: internal/modules/postgresql/assign.go:49
+msgid "Successfully added a user %(db_user)s to PostgreSQL database"
+msgstr ""
+"A(z) %(db_user)s felhasználó sikeresen hozzáadva a PostgreSQL adatbázishoz"
+
+#: internal/modules/postgresql/assign.go:93
+msgid ""
+"Failed to revoke privileges for user %(db_user)s from PostgreSQL database "
+"%(database_name)s"
+msgstr ""
+"Nem sikerült visszavonni a(z) %(db_user)s felhasználó jogosultságait a(z) "
+"%(database_name)s PostgreSQL adatbázison"
+
+#: internal/modules/postgresql/assign.go:97
+msgid ""
+"Successfully revoked all privileges for user %(db_user)s from PostgreSQL "
+"database %(database_name)s"
+msgstr ""
+"A(z) %(db_user)s felhasználó összes jogosultsága sikeresen visszavonva a(z) "
+"%(database_name)s PostgreSQL adatbázison"
+
+#: internal/modules/postgresql/conf.go:149
+msgid ""
+"PostgreSQL configuration was saved successfully but postgres service failed "
+"to start! Please revert the changes to restart postgres."
+msgstr ""
+"A PostgreSQL konfiguráció mentve, de a postgres szolgáltatás nem indult el! "
+"Vonja vissza a módosításokat a postgres újraindításához."
+
+#: internal/modules/postgresql/conf.go:151
+msgid ""
+"PostgreSQL Configuration was edited successfully and service restarted to "
+"apply new settings."
+msgstr ""
+"A PostgreSQL konfiguráció sikeresen szerkesztve, a szolgáltatás újraindítva "
+"az új beállítások alkalmazásához."
+
+#: internal/modules/postgresql/databases.go:46
+#: internal/modules/postgresql/users.go:37
+msgid "Postgres service is not yet installed. Starting it in the background.."
+msgstr "A Postgres szolgáltatás még nincs telepítve. Indítás a háttérben.."
+
+#: internal/modules/postgresql/databases.go:49
+#: internal/modules/postgresql/users.go:40
+msgid ""
+"Postgres container is not running. Please allow a few moments for the "
+"initialization.."
+msgstr ""
+"A Postgres konténer nem fut. Kérjük, várjon néhány pillanatot az "
+"inicializálásra.."
+
+#: internal/modules/postgresql/databases.go:119
+#: internal/modules/postgresql/wizard.go:30
+msgid ""
+"Postgres service is not ready yet. Please wait for the installation to "
+"finish before creating a database."
+msgstr ""
+"A Postgres szolgáltatás még nem áll készen. Várja meg a telepítés "
+"befejezését, mielőtt adatbázist hoz létre."
+
+#: internal/modules/postgresql/databases.go:170
+msgid "Successfully created a PostgreSQL database %(database_name)s"
+msgstr "A(z) %(database_name)s PostgreSQL adatbázis sikeresen létrehozva"
+
+#: internal/modules/postgresql/databases.go:208
+msgid "Successfully deleted a PostgreSQL database %(database_name)s"
+msgstr "A(z) %(database_name)s PostgreSQL adatbázis sikeresen törölve"
+
+#: internal/modules/postgresql/processlist.go:128
+msgid "Error killing query %(pid)s: %(error)s"
+msgstr "Hiba a(z) %(pid)s lekérdezés leállításakor: %(error)s"
+
+#: internal/modules/postgresql/processlist.go:132
+msgid "Query %(pid)s killed."
+msgstr "A(z) %(pid)s lekérdezés leállítva."
+
+#: internal/modules/postgresql/remote.go:43
+msgid "Remote PostgreSQL access is now enabled."
+msgstr "A távoli PostgreSQL-hozzáférés most engedélyezve."
+
+#: internal/modules/postgresql/remote.go:47
+msgid "Remote PostgreSQL access is already disabled."
+msgstr "A távoli PostgreSQL-hozzáférés már le van tiltva."
+
+#: internal/modules/postgresql/remote.go:51
+msgid "Remote PostgreSQL access is now disabled."
+msgstr "A távoli PostgreSQL-hozzáférés most letiltva."
+
+#: internal/modules/postgresql/remote.go:57
+msgid ""
+"Port changed but the PostgreSQL service failed to restart. Try restarting it"
+" manually from Services."
+msgstr ""
+"A port módosult, de a PostgreSQL szolgáltatás újraindítása sikertelen. "
+"Próbálja meg kézzel újraindítani a Szolgáltatások oldalon."
 
 #: internal/modules/postgresql/render.go:60
 #: internal/web/templates/dashboard/onboarding.html:205
@@ -2215,6 +4302,46 @@ msgstr "Távoli PostgreSQL"
 #: internal/modules/postgresql/render.go:258
 msgid "Edit PostgreSQL configuration"
 msgstr "PostgreSQL konfiguráció szerkesztése"
+
+#: internal/modules/postgresql/users.go:105
+msgid "Successfully created a PostgreSQL user %(db_user)s"
+msgstr "A(z) %(db_user)s PostgreSQL felhasználó sikeresen létrehozva"
+
+#: internal/modules/postgresql/wizard.go:103
+msgid "Database and user created, but failed to grant privileges: %(error)s"
+msgstr ""
+"Az adatbázis és a felhasználó létrejött, de a jogosultságok megadása "
+"sikertelen: %(error)s"
+
+#: internal/modules/postgresql/wizard.go:110
+msgid ""
+"Successfully created database %(database_name)s, user %(db_user)s, and "
+"granted privileges."
+msgstr ""
+"A(z) %(database_name)s adatbázis és a(z) %(db_user)s felhasználó sikeresen "
+"létrehozva, jogosultságok megadva."
+
+#: internal/modules/prestashop/install.go:395
+msgid "PrestaShop installed successfully on %(selected_domain)s"
+msgstr "A PrestaShop sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/prestashop/manage.go:51
+msgid "PrestaShop installation not found in the database"
+msgstr "A PrestaShop telepítés nem található az adatbázisban"
+
+#: internal/modules/prestashop/manage.go:75
+msgid "Database name or user not found in app/config/parameters.php"
+msgstr ""
+"Az adatbázisnév vagy a felhasználó nem található az "
+"app/config/parameters.php fájlban"
+
+#: internal/modules/prestashop/manage.go:96
+msgid "An error occurred during PrestaShop uninstall."
+msgstr "Hiba történt a PrestaShop eltávolítása közben."
+
+#: internal/modules/prestashop/manage.go:107
+msgid "PrestaShop uninstalled successfully"
+msgstr "A PrestaShop sikeresen eltávolítva"
 
 #: internal/modules/prestashop/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:183
@@ -2383,11 +4510,71 @@ msgstr "Kattintson a letiltáshoz"
 msgid "Click to Enable"
 msgstr "Kattintson az engedélyezéshez"
 
+#: internal/modules/services/services.go:120
+msgid "%(service)s service is now restarted."
+msgstr "A(z) %(service)s szolgáltatás újraindítva."
+
+#: internal/modules/services/services.go:124
+msgid "Failed to restart the %(service)s service."
+msgstr "Nem sikerült újraindítani a(z) %(service)s szolgáltatást."
+
+#: internal/modules/services/services.go:130
+msgid "%(service)s service is now disabled."
+msgstr "A(z) %(service)s szolgáltatás most letiltva."
+
+#: internal/modules/services/services.go:131
+msgid "Failed to stop the %(service)s service."
+msgstr "Nem sikerült leállítani a(z) %(service)s szolgáltatást."
+
+#: internal/modules/services/services.go:134
+msgid "%(service)s service is now enabled."
+msgstr "A(z) %(service)s szolgáltatás most engedélyezve."
+
+#: internal/modules/services/services.go:135
+msgid "Failed to start the %(service)s service."
+msgstr "Nem sikerült elindítani a(z) %(service)s szolgáltatást."
+
+#: internal/modules/services/services.go:142
+msgid "%(fail_msg)s Try restart."
+msgstr "%(fail_msg)s Próbálja meg újraindítani."
+
+#: internal/modules/sofawiki/install.go:207
+msgid "SofaWiki installed successfully on %(selected_domain)s"
+msgstr "A SofaWiki sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/sofawiki/manage.go:42
+msgid "SofaWiki installation not found in the database"
+msgstr "A SofaWiki telepítés nem található az adatbázisban"
+
+#: internal/modules/sofawiki/manage.go:68
+msgid "An error occurred during SofaWiki uninstall."
+msgstr "Hiba történt a SofaWiki eltávolítása közben."
+
+#: internal/modules/sofawiki/manage.go:79
+msgid "SofaWiki uninstalled successfully"
+msgstr "A SofaWiki sikeresen eltávolítva"
+
 #: internal/modules/sofawiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:402
 #: internal/web/templates/manager/sofawiki_install.html:9
 msgid "Install SofaWiki"
 msgstr "SofaWiki telepítése"
+
+#: internal/modules/tinyfilemanager/install.go:212
+msgid "TinyFileManager installed successfully on %(selected_domain)s"
+msgstr "A TinyFileManager sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/tinyfilemanager/manage.go:42
+msgid "TinyFileManager installation not found in the database"
+msgstr "A TinyFileManager telepítés nem található az adatbázisban"
+
+#: internal/modules/tinyfilemanager/manage.go:68
+msgid "An error occurred during TinyFileManager uninstall."
+msgstr "Hiba történt a TinyFileManager eltávolítása közben."
+
+#: internal/modules/tinyfilemanager/manage.go:79
+msgid "TinyFileManager uninstalled successfully"
+msgstr "A TinyFileManager sikeresen eltávolítva"
 
 #: internal/modules/tinyfilemanager/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:542
@@ -2395,16 +4582,140 @@ msgstr "SofaWiki telepítése"
 msgid "Install TinyFileManager"
 msgstr "TinyFileManager telepítése"
 
+#: internal/modules/tinyphotogallery/install.go:183
+msgid "TinyPhotoGallery installed successfully on %(selected_domain)s"
+msgstr "A TinyPhotoGallery sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/tinyphotogallery/manage.go:42
+msgid "TinyPhotoGallery installation not found in the database"
+msgstr "A TinyPhotoGallery telepítés nem található az adatbázisban"
+
+#: internal/modules/tinyphotogallery/manage.go:68
+msgid "An error occurred during TinyPhotoGallery uninstall."
+msgstr "Hiba történt a TinyPhotoGallery eltávolítása közben."
+
+#: internal/modules/tinyphotogallery/manage.go:79
+msgid "TinyPhotoGallery uninstalled successfully"
+msgstr "A TinyPhotoGallery sikeresen eltávolítva"
+
 #: internal/modules/tinyphotogallery/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:510
 #: internal/web/templates/manager/tinyphotogallery_install.html:9
 msgid "Install TinyPhotoGallery"
 msgstr "TinyPhotoGallery telepítése"
 
-#: internal/modules/waf/handlers_list.go:93
-#: internal/modules/waf/handlers_list.go:97
+#: internal/modules/trash/crud.go:185 internal/modules/trash/crud.go:200
+#: internal/modules/trash/crud.go:205
+msgid "Unexpected error"
+msgstr "Váratlan hiba"
+
+#: internal/modules/trash/crud.go:210
+msgid "Trash emptied successfully"
+msgstr "A kuka sikeresen kiürítve"
+
+#: internal/modules/trash/crud.go:227
+msgid "Nothing to restore"
+msgstr "Nincs mit visszaállítani"
+
+#: internal/modules/trash/crud.go:275
+msgid "Some items could not be restored."
+msgstr "Néhány elemet nem sikerült visszaállítani."
+
+#: internal/modules/trash/crud.go:280
+msgid "All items restored successfully"
+msgstr "Minden elem sikeresen visszaállítva"
+
+#: internal/modules/trash/trash.go:72
+msgid "Invalid directory."
+msgstr "Érvénytelen könyvtár."
+
+#: internal/modules/waf/handlers_domain.go:73
+msgid "Error: IDs should only contain numbers separated by spaces."
+msgstr ""
+"Hiba: az azonosítók csak szóközzel elválasztott számokat tartalmazhatnak."
+
+#: internal/modules/waf/handlers_domain.go:87
+msgid "WAF configuration updated."
+msgstr "WAF konfiguráció frissítve."
+
+#: internal/modules/waf/handlers_domain.go:90
+#: internal/modules/waf/handlers_domain.go:94
+msgid "Error updating WAF!"
+msgstr "Hiba a WAF frissítésekor!"
+
+#: internal/modules/waf/handlers_domain.go:98
+msgid "Configuration file not found."
+msgstr "A konfigurációs fájl nem található."
+
+#: internal/modules/waf/handlers_list.go:91
+msgid "WAF for domain: %(domain_name)s is now %(status_text)s"
+msgstr "A(z) %(domain_name)s domain WAF-ja most: %(status_text)s"
+
+#: internal/modules/waf/handlers_list.go:94
+#: internal/modules/waf/handlers_list.go:98
 msgid "Error changing WAF status."
 msgstr "Hiba a WAF állapotának módosításakor."
+
+#: internal/modules/waf/handlers_list.go:102
+msgid "Config file for %(domain_name)s not found"
+msgstr "A(z) %(domain_name)s konfigurációs fájlja nem található"
+
+#: internal/modules/webserverconf/handlers.go:80
+msgid "No default configuration is available for %(service_name)s."
+msgstr "Nincs elérhető alapértelmezett konfiguráció ehhez: %(service_name)s."
+
+#: internal/modules/webserverconf/handlers.go:86
+#: internal/modules/webserverconf/handlers.go:90
+msgid "Error restoring %(conf_file)s: %(error)s"
+msgstr "Hiba a(z) %(conf_file)s visszaállításakor: %(error)s"
+
+#: internal/modules/webserverconf/handlers.go:104
+msgid "Error writing to %(conf_file)s: %(error)s"
+msgstr "Hiba a(z) %(conf_file)s írásakor: %(error)s"
+
+#: internal/modules/webserverconf/handlers.go:114
+msgid ""
+"Configuration was not saved - it failed the %(service_name)s syntax check: "
+"%(test_output)s"
+msgstr ""
+"A konfiguráció nincs mentve – nem ment át a(z) %(service_name)s szintaxis-"
+"ellenőrzésén: %(test_output)s"
+
+#: internal/modules/webserverconf/handlers.go:126
+msgid "Error restarting %(service_name)s container."
+msgstr "Hiba a(z) %(service_name)s konténer újraindításakor."
+
+#: internal/modules/webserverconf/handlers.go:130
+msgid ""
+"Restored %(conf_file)s to the default configuration and %(service_name)s "
+"container restarted successfully."
+msgstr ""
+"A(z) %(conf_file)s visszaállítva az alapértelmezett konfigurációra, a(z) "
+"%(service_name)s konténer sikeresen újraindítva."
+
+#: internal/modules/webserverconf/handlers.go:132
+msgid ""
+"Changes saved to %(conf_file)s and %(service_name)s container restarted "
+"successfully."
+msgstr ""
+"Módosítások mentve ide: %(conf_file)s, a(z) %(service_name)s konténer "
+"sikeresen újraindítva."
+
+#: internal/modules/webserverconf/handlers.go:140
+msgid ""
+"Restored %(conf_file)s to the default configuration - the %(service_name)s "
+"container is not running."
+msgstr ""
+"A(z) %(conf_file)s visszaállítva az alapértelmezett konfigurációra – a(z) "
+"%(service_name)s konténer nem fut."
+
+#: internal/modules/webserverconf/handlers.go:142
+msgid ""
+"Changes saved to %(conf_file)s - the %(service_name)s container is not "
+"running."
+msgstr ""
+"Módosítások mentve ide: %(conf_file)s – a(z) %(service_name)s konténer nem "
+"fut."
 
 #: internal/modules/webserverconf/webserverconf.go:29
 msgid "Nginx Configuration Editor"
@@ -2429,6 +4740,28 @@ msgstr "Litespeed konfigurációszerkesztő"
 #: internal/modules/webserverconf/webserverconf.go:41
 msgid "Web Server Configuration Editor"
 msgstr "Webszerver konfigurációs szerkesztő"
+
+#: internal/modules/websites/bulk.go:167
+msgid ""
+"%(action_title)s: completed successfully for all %(total)s selected site(s)."
+msgstr ""
+"%(action_title)s: sikeresen befejeződött mind a(z) %(total)s kiválasztott "
+"webhelyen."
+
+#: internal/modules/websites/bulk.go:170
+msgid "%(action_title)s: %(failed)s of %(total)s selected site(s) failed."
+msgstr ""
+"%(action_title)s: %(total)s kiválasztott webhelyből %(failed)s sikertelen."
+
+#: internal/modules/websites/dispatch.go:135
+msgid "Invalid domain name format."
+msgstr "Érvénytelen domainnév-formátum."
+
+#: internal/modules/websites/dispatch.go:142
+#: internal/modules/websites/websitebuilder.go:154
+#: internal/modules/websites/websites.go:1009
+msgid "Unable to detect docroot for the domain."
+msgstr "Nem sikerült meghatározni a domain docrootját."
 
 #: internal/modules/websites/render_dispatch.go:512
 msgid "Block access to wp-config.php"
@@ -2557,6 +4890,10 @@ msgstr ""
 "User-Agent szűrővel blokkolja az agresszív scrapereket és biztonsági "
 "szkennereket, például az AhrefsBot, SemrushBot, MJ12bot és Nikto eszközöket."
 
+#: internal/modules/websites/websitebuilder.go:68
+msgid "Website not found in the database"
+msgstr "A webhely nem található az adatbázisban"
+
 #: internal/modules/websites/websitebuilder_render.go:38
 #: internal/web/templates/manager/autoinstaller.html:145
 msgid "Create Website"
@@ -2565,6 +4902,45 @@ msgstr "Webhely létrehozása"
 #: internal/modules/websites/websitebuilder_render.go:51
 msgid "GrapesJS Website Editor"
 msgstr "GrapesJS weboldal-szerkesztő"
+
+#: internal/modules/websites/websitebuilder_render.go:91
+msgid "You have reached the maximum number of sites allowed."
+msgstr "Elérte az engedélyezett webhelyek maximális számát."
+
+#: internal/modules/websites/websitebuilder_render.go:210
+msgid "Website created successfully on %(selected_domain)s"
+msgstr "A webhely sikeresen létrehozva ide: %(selected_domain)s"
+
+#: internal/modules/wordpress/install.go:371
+msgid "WordPress installed successfully on %(selected_domain)s"
+msgstr "A WordPress sikeresen telepítve ide: %(selected_domain)s"
+
+#: internal/modules/wordpress/manage.go:274
+msgid "WordPress installation not found in the database"
+msgstr "A WordPress telepítés nem található az adatbázisban"
+
+#: internal/modules/wordpress/manage.go:301
+msgid "Database name or user not found in wp-config.php"
+msgstr ""
+"Az adatbázisnév vagy a felhasználó nem található a wp-config.php fájlban"
+
+#: internal/modules/wordpress/manage.go:347
+msgid "Missing site ID."
+msgstr "Hiányzik a webhelyazonosító."
+
+#: internal/modules/wordpress/manage.go:378
+msgid "WordPress installation detached from Manager."
+msgstr "A WordPress telepítés leválasztva a kezelőről."
+
+#: internal/modules/wordpress/manage.go:659
+msgid "Hardening rules have been successfully applied to the website"
+msgstr "A biztonsági keményítési szabályok sikeresen alkalmazva a webhelyre"
+
+#: internal/modules/wordpress/manage.go:661
+msgid "Failed to apply hardening rules to the website - please try again"
+msgstr ""
+"Nem sikerült alkalmazni a biztonsági keményítési szabályokat a webhelyre – "
+"kérjük, próbálja újra"
 
 #: internal/modules/wordpress/render.go:41
 msgid "WordPress Manager"
@@ -5795,14 +8171,6 @@ msgstr "Nyilvános kulcs"
 #: internal/web/templates/domains/new.html:92
 msgid "Secret Key"
 msgstr "Titkos kulcs"
-
-#: internal/web/templates/domains/new.html:217
-msgid ""
-"Paths for both public and secret files must be set for importing .onion "
-"domain."
-msgstr ""
-"A nyilvános és titkos fájlokat egyaránt be kell állítani importálásra "
-".hagyma domain."
 
 #: internal/web/templates/domains/new.html:224
 msgid "Paths for both public and secret files must start with /var/www/html/."
