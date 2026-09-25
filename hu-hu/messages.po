@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.10\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-09-25 22:15+0200\n"
+"POT-Creation-Date: 2026-09-25 22:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Csizmmár Norbert <inak1205@gmail.com>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -88,6 +88,14 @@ msgstr "Jelszava visszaállításra került. Kérjük, jelentkezzen be."
 msgid "Reset Password"
 msgstr "Jelszó visszaállítása"
 
+#: internal/modules/account/handlers_passkeys.go:204
+msgid "Passkey removed."
+msgstr "Passkey eltávolítva."
+
+#: internal/modules/account/handlers_passkeys.go:206
+msgid "Passkey not found."
+msgstr "Passkey nem található."
+
 #: internal/modules/account/login.go:133
 #: internal/web/templates/manager/dokuwiki_app.html:283
 msgid "Login"
@@ -118,9 +126,31 @@ msgstr ""
 msgid "Autologin failed: User does not exist."
 msgstr "Az automatikus bejelentkezés sikertelen: A felhasználó nem létezik."
 
+#: internal/modules/account/mcp.go:61
+msgid "Could not create token: database is unavailable. Please try again."
+msgstr ""
+"Nem sikerült létrehozni a tokent: az adatbázis nem érhető el. Kérjük, "
+"próbálja újra."
+
+#: internal/modules/account/mcp.go:111
+msgid "Token revoked."
+msgstr "Token visszavonva."
+
+#: internal/modules/account/mcp.go:113
+msgid "Token not found."
+msgstr "Token nem található."
+
 #: internal/modules/account/notifications.go:33
 msgid "New login"
 msgstr "Új bejelentkezés"
+
+#: internal/modules/account/notifications.go:33
+msgid ""
+"Get an email every time someone logs in to your account, with the IP "
+"address, country and browser."
+msgstr ""
+"Kapjon e-mailt minden alkalommal, amikor valaki bejelentkezik a fiókjába, az"
+" IP-címmel, országgal és böngészővel."
 
 #: internal/modules/account/notifications.go:34
 msgid "Also for IP addresses I logged in from before"
@@ -134,6 +164,10 @@ msgstr "Küldjön e-mailt, ha a bejelentkezési riasztásokat kikapcsolják"
 msgid "Password changed"
 msgstr "Jelszó megváltozott"
 
+#: internal/modules/account/notifications.go:36
+msgid "Get an email when the password for your account is changed."
+msgstr "Kapjon e-mailt, ha megváltozik a fiókja jelszava."
+
 #: internal/modules/account/notifications.go:37
 #: internal/modules/account/notifications.go:39
 #: internal/modules/account/notifications.go:41
@@ -146,41 +180,113 @@ msgstr "Küldjön e-mailt, ha ezt a riasztást kikapcsolják"
 msgid "Contact email changed"
 msgstr "Kapcsolattartási e-mail megváltozott"
 
+#: internal/modules/account/notifications.go:38
+msgid ""
+"Get an email when the contact email address for your account is changed."
+msgstr "Kapjon e-mailt, ha megváltozik a fiókja kapcsolattartási e-mail-címe."
+
 #: internal/modules/account/notifications.go:40
 msgid "Two-factor authentication changed"
 msgstr "Kétfaktoros hitelesítés megváltozott"
+
+#: internal/modules/account/notifications.go:40
+msgid "Get an email when two-factor authentication is turned on or off."
+msgstr "Kapjon e-mailt, ha a kétfaktoros hitelesítést be- vagy kikapcsolják."
 
 #: internal/modules/account/notifications.go:42
 msgid "Passkey added or removed"
 msgstr "Passkey hozzáadva vagy eltávolítva"
 
+#: internal/modules/account/notifications.go:42
+msgid ""
+"Get an email when a passkey is added to your account or removed from it."
+msgstr ""
+"Kapjon e-mailt, ha passkey-t adnak a fiókjához vagy eltávolítanak belőle."
+
 #: internal/modules/account/notifications.go:44
 msgid "API token created or revoked"
 msgstr "API-token létrehozva vagy visszavonva"
+
+#: internal/modules/account/notifications.go:44
+msgid ""
+"Get an email when an AI Assistant (MCP) token is created or revoked for your"
+" account."
+msgstr ""
+"Kapjon e-mailt, ha AI asszisztens (MCP) tokent hoznak létre vagy vonnak "
+"vissza a fiókjához."
 
 #: internal/modules/account/notifications.go:46
 msgid "SSL certificate problem"
 msgstr "SSL-tanúsítvány probléma"
 
+#: internal/modules/account/notifications.go:46
+msgid ""
+"Get an email when an SSL certificate fails to renew or is about to expire, "
+"before visitors see a security warning."
+msgstr ""
+"Kapjon e-mailt, ha egy SSL-tanúsítvány megújítása sikertelen vagy hamarosan "
+"lejár, mielőtt a látogatók biztonsági figyelmeztetést látnának."
+
 #: internal/modules/account/notifications.go:47
 msgid "Malware found"
 msgstr "Kártevő található"
+
+#: internal/modules/account/notifications.go:47
+msgid ""
+"Get an email when the scheduled malware scan finds infected files and moves "
+"them to quarantine."
+msgstr ""
+"Kapjon e-mailt, ha az ütemezett kártevőkeresés fertőzött fájlokat talál és "
+"karanténba helyezi őket."
 
 #: internal/modules/account/notifications.go:48
 msgid "Disk space running out"
 msgstr "Fogy a lemezterület"
 
+#: internal/modules/account/notifications.go:48
+msgid ""
+"Get an email when your account uses 85% of its disk space or 95% of its "
+"inodes."
+msgstr ""
+"Kapjon e-mailt, ha a fiókja a lemezterület 85%-át vagy az inode-ok 95%-át "
+"használja."
+
 #: internal/modules/account/notifications.go:49
 msgid "Mailbox almost full"
 msgstr "A postafiók majdnem megtelt"
+
+#: internal/modules/account/notifications.go:49
+msgid "Get an email when one of your email accounts uses 90% of its quota."
+msgstr ""
+"Kapjon e-mailt, ha valamelyik e-mail-fiókja a kvótája 90%-át használja."
 
 #: internal/modules/account/notifications.go:50
 msgid "Hourly email limit reached"
 msgstr "Elérte az óránkénti e-mail-korlátot"
 
+#: internal/modules/account/notifications.go:50
+msgid ""
+"Get an email when your account reaches its limit of emails sent per hour and"
+" new emails are rejected."
+msgstr ""
+"Kapjon e-mailt, ha a fiókja eléri az óránként küldhető e-mailek korlátját, "
+"és az új e-maileket elutasítják."
+
 #: internal/modules/account/notifications.go:51
 msgid "Service stopped"
 msgstr "Szolgáltatás leállt"
+
+#: internal/modules/account/notifications.go:51
+msgid ""
+"Get an email when a service like MySQL or PHP stopped or ran out of memory "
+"and had to be restarted."
+msgstr ""
+"Kapjon e-mailt, ha egy szolgáltatás, például a MySQL vagy a PHP leállt, vagy"
+" elfogyott a memóriája, és újra kellett indítani."
+
+#: internal/modules/account/notifications.go:170
+msgid "Notification preferences updated successfully!"
+msgstr "Értesítési beállítások sikeresen frissítve!"
 
 #: internal/modules/account/notify.go:47
 #: internal/web/templates/mongodb/processlist.html:36
@@ -224,6 +330,51 @@ msgid "Too many failed login attempts. Please try again later."
 msgstr ""
 "Túl sok sikertelen bejelentkezési kísérlet. Kérjük, próbálja újra később."
 
+#: internal/modules/account/render.go:51 internal/modules/backups/render.go:61
+#: internal/modules/php/render.go:152
+msgid "Settings"
+msgstr "Beállítások"
+
+#: internal/modules/account/render.go:71
+#: internal/modules/dashboard/sections.go:297
+#: internal/web/templates/user/_login.html:102
+#: internal/web/templates/user/locale.html:10
+msgid "Change Language"
+msgstr "Nyelv módosítása"
+
+#: internal/modules/account/render.go:94
+#: internal/modules/dashboard/sections.go:299
+#: internal/web/templates/dashboard/onboarding.html:265
+#: internal/web/templates/dashboard/onboarding.html:325
+#: internal/web/templates/dashboard/twofa.html:6
+#: internal/web/templates/user/twofa_settings.html:14
+msgid "Two-Factor Authentication"
+msgstr "Kéttényezős hitelesítés"
+
+#: internal/modules/account/render.go:113
+#: internal/modules/dashboard/sections.go:177 internal/web/sidebar.go:362
+#: internal/web/templates/user/passkeys.html:10
+msgid "Passkeys"
+msgstr "Jelszókulcsok"
+
+#: internal/modules/account/render.go:162
+msgid "Notification Preferences"
+msgstr "Értesítési beállítások"
+
+#: internal/modules/account/render.go:180
+#: internal/modules/dashboard/sections.go:153 internal/web/sidebar.go:330
+#: internal/web/templates/base.html:410
+#: internal/web/templates/user/favorites.html:10
+msgid "Favorites"
+msgstr "Kedvencek"
+
+#: internal/modules/account/render.go:198
+#: internal/modules/dashboard/sections.go:178
+#: internal/modules/dashboard/sections.go:300 internal/web/sidebar.go:363
+#: internal/web/templates/user/active_sessions.html:10
+msgid "Active Sessions"
+msgstr "Aktív munkamenetek"
+
 #: internal/modules/account/render.go:218
 #: internal/modules/account/render.go:219
 msgid "Today"
@@ -248,6 +399,82 @@ msgstr "Elmúlt 6 hónap"
 #: internal/modules/account/render.go:224
 msgid "Year to date"
 msgstr "Év elejétől"
+
+#: internal/modules/account/render.go:229
+#: internal/modules/dashboard/sections.go:179 internal/web/sidebar.go:364
+#: internal/web/templates/user/activity.html:27
+msgid "Activity Log"
+msgstr "Tevékenységi napló"
+
+#: internal/modules/account/render.go:247
+#: internal/modules/dashboard/sections.go:180
+#: internal/modules/dashboard/sections.go:303 internal/web/sidebar.go:365
+#: internal/web/templates/user/loginlog.html:10
+msgid "Login History"
+msgstr "Bejelentkezési előzmények"
+
+#: internal/modules/account/render.go:267
+#: internal/modules/dashboard/sections.go:155 internal/web/sidebar.go:332
+msgid "AI Assistant (MCP)"
+msgstr "AI asszisztens (MCP)"
+
+#: internal/modules/account/render.go:285
+#: internal/modules/dashboard/sections.go:154 internal/web/sidebar.go:331
+msgid "API"
+msgstr "API"
+
+#: internal/modules/account/sessions.go:96
+msgid "Session terminated successfully."
+msgstr "Munkamenet sikeresen megszakítva."
+
+#: internal/modules/account/sessions.go:114
+msgid "Failed to terminate session or session already expired."
+msgstr "Nem sikerült megszakítani a munkamenetet, vagy már lejárt."
+
+#: internal/modules/account/settings.go:115
+#: internal/web/templates/emails/new.html:68
+#: internal/web/templates/emails/single_account.html:180
+#: internal/web/templates/files/ftp_new.html:50
+#: internal/web/templates/files/ftp_password.html:36
+#: internal/web/templates/manager/drupal_install.html:151
+#: internal/web/templates/manager/flarum_install.html:151
+#: internal/web/templates/manager/joomla_install.html:158
+#: internal/web/templates/manager/matomo_install.html:143
+#: internal/web/templates/manager/mediawiki_install.html:150
+#: internal/web/templates/manager/moodle_install.html:134
+#: internal/web/templates/manager/nextcloud_install.html:143
+#: internal/web/templates/manager/ojs_install.html:143
+#: internal/web/templates/manager/opencart_install.html:143
+#: internal/web/templates/manager/phpbb_install.html:159
+#: internal/web/templates/manager/prestashop_install.html:151
+#: internal/web/templates/manager/wp/install.html:124
+#: internal/web/templates/mongodb/mongodb_user.html:35
+#: internal/web/templates/mongodb/password.html:33
+#: internal/web/templates/mongodb/wizard.html:60
+#: internal/web/templates/mysql/mysql_user.html:35
+#: internal/web/templates/mysql/password.html:33
+#: internal/web/templates/mysql/root_password.html:26
+#: internal/web/templates/mysql/wizard.html:236
+#: internal/web/templates/psql/password.html:33
+#: internal/web/templates/psql/psql_user.html:35
+#: internal/web/templates/psql/wizard.html:60
+#: internal/web/templates/user/account.html:80
+#: internal/web/templates/user/reset_password/set_new_password.html:84
+msgid "Password does not meet the required strength."
+msgstr "A jelszó nem felel meg a szükséges erősségi követelménynek."
+
+#: internal/modules/account/settings.go:148
+msgid "Username must be 3-20 characters, letters and numbers only."
+msgstr ""
+"A felhasználónévnek 3-20 karakterből kell állnia, csak betűk és számok."
+
+#: internal/modules/account/settings.go:172
+msgid "Failed to change username."
+msgstr "Nem sikerült megváltoztatni a felhasználónevet."
+
+#: internal/modules/account/twofa.go:62
+msgid "Invalid verification code. Please try again."
+msgstr "Érvénytelen ellenőrző kód. Kérjük, próbálja újra."
 
 #: internal/modules/account/webauthn.go:63
 msgid ""
@@ -371,6 +598,45 @@ msgstr ""
 msgid "Install Ruby Application"
 msgstr "Ruby alkalmazás telepítése"
 
+#: internal/modules/autoinstaller/render.go:38
+#: internal/modules/dashboard/sections.go:64 internal/web/sidebar.go:226
+#: internal/web/templates/manager/autoinstaller.html:8
+msgid "Install App"
+msgstr "Alkalmazás telepítése"
+
+#: internal/modules/backups/render.go:40
+#: internal/modules/dashboard/sections.go:85
+#: internal/modules/dashboard/sections.go:86
+#: internal/modules/dashboard/sections.go:195 internal/web/sidebar.go:256
+#: internal/web/templates/dashboard/onboarding.html:592
+#: internal/web/templates/files/backups.html:10
+#: internal/web/templates/manager/dokuwiki_app.html:65
+#: internal/web/templates/manager/drupal_app.html:132
+#: internal/web/templates/manager/flarum_app.html:74
+#: internal/web/templates/manager/joomla_app.html:132
+#: internal/web/templates/manager/matomo_app.html:123
+#: internal/web/templates/manager/mediawiki_app.html:123
+#: internal/web/templates/manager/moodle_app.html:83
+#: internal/web/templates/manager/nextcloud_app.html:132
+#: internal/web/templates/manager/ojs_app.html:123
+#: internal/web/templates/manager/opencart_app.html:132
+#: internal/web/templates/manager/phpbb_app.html:65
+#: internal/web/templates/manager/prestashop_app.html:132
+#: internal/web/templates/manager/sites.html:448
+#: internal/web/templates/manager/sofawiki_app.html:56
+#: internal/web/templates/manager/tinyfilemanager_app.html:47
+#: internal/web/templates/manager/tinyphotogallery_app.html:47
+#: internal/web/templates/manager/websitebuilder.html:55
+#: internal/web/templates/manager/wp/single.html:214
+#: internal/web/templates/partials/_header.html:136
+msgid "Backups"
+msgstr "Biztonsági mentések"
+
+#: internal/modules/backups/render.go:96
+#: internal/modules/dashboard/sections.go:89 internal/web/sidebar.go:263
+msgid "Destination"
+msgstr "Cél"
+
 #: internal/modules/backups/render.go:104
 #: internal/web/templates/dashboard/onboarding.html:530
 msgid "S3-compatible"
@@ -419,13 +685,34 @@ msgstr "Doboz"
 msgid "Remote backups to Dropbox cloud storage."
 msgstr "Távoli mentések a Dropbox felhőraktárba."
 
-#: internal/modules/backupwizard/render.go:41
-msgid "The home directory"
-msgstr "A saját (home) könyvtár"
+#: internal/modules/backups/render.go:155
+#: internal/modules/dashboard/sections.go:87 internal/web/sidebar.go:260
+#: internal/web/templates/files/backup_restore.html:241
+#: internal/web/templates/files/clamav/quarantine.html:82
+#: internal/web/templates/files/clamav/quarantine.html:113
+#: internal/web/templates/files/trash.html:51
+#: internal/web/templates/files/trash_partials.html:222
+msgid "Restore"
+msgstr "Visszaállítás"
+
+#: internal/modules/backupwizard/render.go:35
+#: internal/modules/dashboard/sections.go:90
+#: internal/modules/dashboard/sections.go:196 internal/web/sidebar.go:265
+#: internal/web/templates/files/backup_wizard.html:10
+msgid "Backup Wizard"
+msgstr "Biztonsági mentés varázsló"
 
 #: internal/modules/backupwizard/render.go:41
-#: internal/web/sidebar_classic.go:88 internal/web/sidebar_classic.go:111
-#: internal/web/sidebar_classic.go:134
+#: internal/modules/dashboard/sections.go:93
+#: internal/modules/dashboard/sections.go:106
+#: internal/modules/dashboard/sections.go:115
+#: internal/modules/dashboard/sections.go:216
+#: internal/modules/dashboard/sections.go:228
+#: internal/modules/dashboard/sections.go:237
+#: internal/modules/mysql/render.go:74 internal/web/sidebar.go:172
+#: internal/web/sidebar.go:186 internal/web/sidebar.go:197
+#: internal/web/sidebar.go:269 internal/web/sidebar_classic.go:88
+#: internal/web/sidebar_classic.go:111 internal/web/sidebar_classic.go:134
 #: internal/web/templates/dashboard/usage.html:78
 #: internal/web/templates/files/backup_restore.html:173
 #: internal/web/templates/mysql/databases.html:9
@@ -433,8 +720,16 @@ msgid "Databases"
 msgstr "Adatbázisok"
 
 #: internal/modules/backupwizard/render.go:41
+msgid "The home directory"
+msgstr "A saját (home) könyvtár"
+
+#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:53
-#: internal/modules/dashboard/sections.go:202 internal/web/sidebar.go:212
+#: internal/modules/dashboard/sections.go:54
+#: internal/modules/dashboard/sections.go:202
+#: internal/modules/dashboard/sections.go:203
+#: internal/modules/domains/render.go:77 internal/web/sidebar.go:206
+#: internal/web/sidebar.go:210 internal/web/sidebar.go:212
 #: internal/web/templates/cache/service.html:145
 #: internal/web/templates/dashboard/usage.html:55
 #: internal/web/templates/domains/domains.html:14
@@ -446,6 +741,7 @@ msgstr "Domains"
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/sections.go:61
 #: internal/modules/dashboard/sections.go:244
+#: internal/modules/websites/render.go:39 internal/web/sidebar.go:221
 #: internal/web/templates/dashboard/usage.html:32
 #: internal/web/templates/domains/domains.html:77
 #: internal/web/templates/domains/domains.html:120
@@ -477,24 +773,82 @@ msgid "Containers and images"
 msgstr "Konténerek és image-ek"
 
 #: internal/modules/cache/cache.go:23
+#: internal/modules/dashboard/sections.go:129
+#: internal/modules/dashboard/sections.go:250
 msgid "Redis"
 msgstr "Redis"
 
+#: internal/modules/cache/cache.go:24
+msgid ""
+"Redis (Remote Dictionary Server) is an in-memory, key/value store that is "
+"used primarily as an application cache or quick-response database."
+msgstr ""
+"A Redis (Remote Dictionary Server) egy memóriában futó kulcs/érték tároló, "
+"amelyet elsősorban alkalmazás-gyorsítótárként vagy gyors válaszidejű "
+"adatbázisként használnak."
+
 #: internal/modules/cache/cache.go:27
+#: internal/modules/dashboard/sections.go:131
+#: internal/modules/dashboard/sections.go:252
 msgid "Memcached"
 msgstr "Memcached"
 
+#: internal/modules/cache/cache.go:28
+msgid ""
+"A high-performance, distributed in-memory key-value caching system designed "
+"to accelerate dynamic web applications."
+msgstr ""
+"Nagy teljesítményű, elosztott, memóriában futó kulcs-érték gyorsítótár-"
+"rendszer dinamikus webalkalmazások gyorsítására."
+
 #: internal/modules/cache/cache.go:31
+#: internal/modules/dashboard/sections.go:255
 msgid "ElasticSearch"
 msgstr "ElasticSearch"
 
+#: internal/modules/cache/cache.go:32
+msgid ""
+"The leading distributed, RESTful, open source search and analytics engine "
+"designed for speed and reliability."
+msgstr ""
+"A vezető elosztott, RESTful, nyílt forráskódú kereső- és elemzőmotor, "
+"sebességre és megbízhatóságra tervezve."
+
 #: internal/modules/cache/cache.go:35
+#: internal/modules/dashboard/sections.go:133
+#: internal/modules/dashboard/sections.go:254
 msgid "OpenSearch"
 msgstr "OpenSearch"
 
+#: internal/modules/cache/cache.go:36
+msgid ""
+"OpenSearch is an open-source, distributed search and analytics suite for "
+"large volumes of data."
+msgstr ""
+"Az OpenSearch egy elosztott, nyílt forráskódú kereső- és elemzőcsomag nagy "
+"adatmennyiségekhez."
+
 #: internal/modules/cache/cache.go:39
+#: internal/modules/dashboard/sections.go:130
+#: internal/modules/dashboard/sections.go:251
 msgid "Valkey"
 msgstr "Valkey"
+
+#: internal/modules/cache/cache.go:40
+msgid ""
+"Valkey is an in-memory key/value store (a community-driven fork of Redis) "
+"used primarily as an application cache or fast, low-latency database."
+msgstr ""
+"A Valkey egy memóriában futó kulcs/érték tároló (a Redis közösség által "
+"fejlesztett forkja), amelyet elsősorban alkalmazás-gyorsítótárként vagy "
+"gyors, alacsony késleltetésű adatbázisként használnak."
+
+#: internal/modules/cache/render.go:74
+#: internal/modules/dashboard/sections.go:132
+#: internal/modules/dashboard/sections.go:253
+#: internal/web/templates/dashboard/onboarding.html:591
+msgid "Varnish"
+msgstr "Lakk"
 
 #: internal/modules/cache/render.go:90
 msgid ""
@@ -503,6 +857,22 @@ msgid ""
 msgstr ""
 "A Varnish egy fordított gyorsítótárazó proxy, amelyet HTTP-gyorsítóként "
 "használnak nagy tartalommal rendelkező dinamikus webhelyek és API-k számára."
+
+#: internal/modules/crons/render.go:45
+msgid "CronJobs File Editor"
+msgstr "Cron-feladatok fájlszerkesztője"
+
+#: internal/modules/crons/render.go:58
+msgid "CronJobs Logs"
+msgstr "Cron-feladatok naplói"
+
+#: internal/modules/crons/render.go:70
+msgid "CronJobs"
+msgstr "Cron-feladatok"
+
+#: internal/modules/crons/render.go:92
+msgid "New CronJob"
+msgstr "Új cron-feladat"
 
 #: internal/modules/dashboard/dashboard.go:155
 #: internal/modules/dashboard/dashboard.go:161 internal/web/sidebar.go:577
@@ -524,7 +894,41 @@ msgstr "engedélyezve"
 msgid "2FA is <b>{status}</b> for your account."
 msgstr "A 2FA <b>{status}</b> a fiókjában."
 
-#: internal/modules/dashboard/sections.go:66
+#: internal/modules/dashboard/sections.go:55
+#: internal/modules/dashboard/sections.go:205
+#: internal/modules/dns/render.go:44 internal/web/sidebar.go:213
+#: internal/web/templates/domains/dns.html:740
+msgid "DNS Zone Editor"
+msgstr "DNS-zónaszerkesztő"
+
+#: internal/modules/dashboard/sections.go:56
+#: internal/modules/dashboard/sections.go:206
+#: internal/modules/dynamicdns/render.go:77 internal/web/sidebar.go:214
+#: internal/web/templates/domains/dynamic_dns.html:10
+msgid "Dynamic DNS"
+msgstr "Dinamikus DNS"
+
+#: internal/modules/dashboard/sections.go:57 internal/web/sidebar.go:215
+msgid "SSL Certificates"
+msgstr "SSL-tanúsítványok"
+
+#: internal/modules/dashboard/sections.go:58
+#: internal/modules/dashboard/sections.go:204 internal/web/sidebar.go:216
+msgid "Redirects"
+msgstr "Átirányítások"
+
+#: internal/modules/dashboard/sections.go:62 internal/web/sidebar.go:224
+#: internal/web/templates/partials/_header.html:141
+msgid "Sites"
+msgstr "Oldalak"
+
+#: internal/modules/dashboard/sections.go:63 internal/web/sidebar.go:225
+#: internal/web/templates/manager/autoinstaller.html:32
+#: internal/web/templates/manager/wp/list.html:194
+msgid "WordPress"
+msgstr "WordPress"
+
+#: internal/modules/dashboard/sections.go:66 internal/web/sidebar.go:230
 #: internal/web/templates/emails/confirm_import.html:45
 #: internal/web/templates/manager/app_install.html:400
 #: internal/web/templates/manager/dokuwiki_install.html:135
@@ -545,8 +949,70 @@ msgstr "A 2FA <b>{status}</b> a fiókjában."
 msgid "Email"
 msgstr "E-mail"
 
+#: internal/modules/dashboard/sections.go:67
+#: internal/modules/dashboard/sections.go:258
+#: internal/web/sidebar_classic.go:193 internal/web/sidebar_classic.go:198
+msgid "Email Accounts"
+msgstr "E-mail-fiókok"
+
+#: internal/modules/dashboard/sections.go:68
+#: internal/modules/dashboard/sections.go:259
+#: internal/modules/emails/render.go:226 internal/web/sidebar.go:234
+#: internal/web/templates/emails/aliases.html:10
+msgid "Aliases"
+msgstr "Aliasok"
+
+#: internal/modules/dashboard/sections.go:69 internal/web/sidebar.go:235
+msgid "Catch-all Address"
+msgstr "Catch-all cím"
+
+#: internal/modules/dashboard/sections.go:70
+#: internal/modules/dashboard/sections.go:260
+#: internal/modules/emails/render.go:377 internal/web/sidebar.go:236
+msgid "Filters"
+msgstr "Szűrők"
+
+#: internal/modules/dashboard/sections.go:71 internal/web/sidebar.go:237
+msgid "Deliverability"
+msgstr "Kézbesíthetőség"
+
+#: internal/modules/dashboard/sections.go:72
+#: internal/modules/dashboard/sections.go:96
+#: internal/modules/dashboard/sections.go:109
+#: internal/modules/dashboard/sections.go:118
+#: internal/modules/emails/render.go:394
+#: internal/modules/mongodb/render.go:205 internal/modules/mysql/render.go:278
+#: internal/modules/postgresql/render.go:194 internal/web/sidebar.go:174
+#: internal/web/sidebar.go:188 internal/web/sidebar.go:199
+#: internal/web/sidebar.go:238
+#: internal/web/templates/mongodb/databases.html:79
+#: internal/web/templates/mysql/databases.html:318
+#: internal/web/templates/psql/databases.html:145
+msgid "Import"
+msgstr "Importálás"
+
+#: internal/modules/dashboard/sections.go:73
+#: internal/web/templates/emails/accounts.html:27
+#: internal/web/templates/mongodb/databases.html:85
+#: internal/web/templates/mongodb/databases.html:91
+#: internal/web/templates/mongodb/databases.html:149
+#: internal/web/templates/mysql/databases.html:326
+#: internal/web/templates/mysql/databases.html:332
+#: internal/web/templates/mysql/databases.html:390
+#: internal/web/templates/psql/databases.html:151
+#: internal/web/templates/psql/databases.html:157
+#: internal/web/templates/psql/databases.html:215
+msgid "Export"
+msgstr "Exportálás"
+
+#: internal/modules/dashboard/sections.go:74
+#: internal/modules/dashboard/sections.go:265 internal/web/sidebar.go:240
+#: internal/web/templates/emails/accounts.html:74
+msgid "Webmail"
+msgstr "Webmail"
+
 #: internal/modules/dashboard/sections.go:76
-#: internal/modules/dashboard/sections.go:188
+#: internal/modules/dashboard/sections.go:188 internal/web/sidebar.go:244
 #: internal/web/templates/domains/ssl.html:226
 #: internal/web/templates/files/filemanager.html:147
 #: internal/web/templates/files/filemanager.html:405
@@ -576,90 +1042,398 @@ msgstr "E-mail"
 msgid "Files"
 msgstr "Fájlok"
 
-#: internal/modules/dashboard/sections.go:85
-#: internal/web/templates/dashboard/onboarding.html:592
-#: internal/web/templates/files/backups.html:10
-#: internal/web/templates/manager/dokuwiki_app.html:65
-#: internal/web/templates/manager/drupal_app.html:132
-#: internal/web/templates/manager/flarum_app.html:74
-#: internal/web/templates/manager/joomla_app.html:132
-#: internal/web/templates/manager/matomo_app.html:123
-#: internal/web/templates/manager/mediawiki_app.html:123
-#: internal/web/templates/manager/moodle_app.html:83
-#: internal/web/templates/manager/nextcloud_app.html:132
-#: internal/web/templates/manager/ojs_app.html:123
-#: internal/web/templates/manager/opencart_app.html:132
-#: internal/web/templates/manager/phpbb_app.html:65
-#: internal/web/templates/manager/prestashop_app.html:132
-#: internal/web/templates/manager/sites.html:448
-#: internal/web/templates/manager/sofawiki_app.html:56
-#: internal/web/templates/manager/tinyfilemanager_app.html:47
-#: internal/web/templates/manager/tinyphotogallery_app.html:47
-#: internal/web/templates/manager/websitebuilder.html:55
-#: internal/web/templates/manager/wp/single.html:214
-#: internal/web/templates/partials/_header.html:136
-msgid "Backups"
-msgstr "Biztonsági mentések"
+#: internal/modules/dashboard/sections.go:77
+#: internal/modules/dashboard/sections.go:189 internal/web/sidebar.go:247
+#: internal/web/sidebar_classic.go:61 internal/web/sidebar_classic.go:67
+#: internal/web/templates/files/disk_usage.html:90
+#: internal/web/templates/files/filemanager.html:59
+#: internal/web/templates/files/inodes.html:88
+msgid "File Manager"
+msgstr "Fájlkezelő"
+
+#: internal/modules/dashboard/sections.go:78 internal/web/sidebar.go:248
+#: internal/web/templates/emails/import.html:40
+#: internal/web/templates/files/filemanager.html:105
+#: internal/web/templates/files/upload_file.html:106
+msgid "Upload"
+msgstr "Feltöltés"
+
+#: internal/modules/dashboard/sections.go:79 internal/web/sidebar.go:249
+#: internal/web/sidebar_classic.go:63 internal/web/sidebar_classic.go:69
+#: internal/web/templates/files/upload_file.html:11
+msgid "Download from URL"
+msgstr "Letöltés URL-ből"
+
+#: internal/modules/dashboard/sections.go:80
+#: internal/modules/dashboard/sections.go:200 internal/web/sidebar.go:250
+#: internal/web/templates/files/trash.html:32
+msgid "Trash"
+msgstr "Szemét"
+
+#: internal/modules/dashboard/sections.go:81
+#: internal/modules/dashboard/sections.go:192
+#: internal/modules/ftp/render.go:39 internal/web/sidebar.go:251
+#: internal/web/templates/dashboard/usage.html:124
+#: internal/web/templates/files/ftp.html:9
+#: internal/web/templates/manager/dokuwiki_app.html:256
+#: internal/web/templates/manager/drupal_app.html:323
+#: internal/web/templates/manager/flarum_app.html:264
+#: internal/web/templates/manager/joomla_app.html:322
+#: internal/web/templates/manager/matomo_app.html:314
+#: internal/web/templates/manager/mediawiki_app.html:314
+#: internal/web/templates/manager/moodle_app.html:274
+#: internal/web/templates/manager/n8n_app.html:316
+#: internal/web/templates/manager/nextcloud_app.html:323
+#: internal/web/templates/manager/ojs_app.html:313
+#: internal/web/templates/manager/opencart_app.html:323
+#: internal/web/templates/manager/phpbb_app.html:255
+#: internal/web/templates/manager/prestashop_app.html:323
+#: internal/web/templates/manager/python_node_apps.html:365
+#: internal/web/templates/manager/sofawiki_app.html:247
+#: internal/web/templates/manager/tinyfilemanager_app.html:229
+#: internal/web/templates/manager/tinyphotogallery_app.html:229
+#: internal/web/templates/manager/websitebuilder.html:137
+#: internal/web/templates/manager/wp/single.html:408
+msgid "FTP Accounts"
+msgstr "FTP-fiókok"
+
+#: internal/modules/dashboard/sections.go:82
+#: internal/modules/dashboard/sections.go:193
+#: internal/modules/ftp/render.go:58
+#: internal/web/templates/files/ftp_connections.html:9
+msgid "FTP Connections"
+msgstr "FTP kapcsolatok"
+
+#: internal/modules/dashboard/sections.go:83
+#: internal/modules/dashboard/sections.go:199
+#: internal/modules/fixpermissions/render.go:31 internal/web/sidebar.go:252
+#: internal/web/templates/files/fix_permissions.html:11
+#: internal/web/templates/files/fix_permissions.html:45
+msgid "Fix Permissions"
+msgstr "Engedélyek javítása"
+
+#: internal/modules/dashboard/sections.go:88
+#: internal/modules/dashboard/sections.go:101
+#: internal/modules/dashboard/sections.go:112 internal/web/sidebar.go:178
+#: internal/web/sidebar.go:191 internal/web/sidebar.go:262
+#: internal/web/templates/files/ftp.html:63
+msgid "Configuration"
+msgstr "Beállítás"
 
 #: internal/modules/dashboard/sections.go:92
 #: internal/modules/dashboard/sections.go:215
-#: internal/modules/docker/render.go:392
+#: internal/modules/docker/render.go:392 internal/web/sidebar.go:269
 #: internal/web/templates/dashboard/onboarding.html:497
 #: internal/web/templates/partials/_header.html:101
 msgid "MySQL"
 msgstr "MySQL"
 
+#: internal/modules/dashboard/sections.go:94
+#: internal/modules/dashboard/sections.go:107
+#: internal/modules/dashboard/sections.go:116
+#: internal/modules/dashboard/sections.go:217
+#: internal/modules/dashboard/sections.go:229
+#: internal/modules/dashboard/sections.go:238 internal/web/sidebar.go:173
+#: internal/web/sidebar.go:187 internal/web/sidebar.go:198
+#: internal/web/sidebar_classic.go:89 internal/web/sidebar_classic.go:112
+#: internal/web/sidebar_classic.go:135
+#: internal/web/templates/mysql/users.html:9
+msgid "Users"
+msgstr "Felhasználók"
+
+#: internal/modules/dashboard/sections.go:95
+#: internal/modules/dashboard/sections.go:108
+#: internal/modules/dashboard/sections.go:117
+#: internal/modules/dashboard/sections.go:218
+#: internal/modules/dashboard/sections.go:230
+#: internal/modules/dashboard/sections.go:239
+#: internal/modules/mongodb/render.go:154
+#: internal/modules/postgresql/render.go:152
+#: internal/web/sidebar_classic.go:93 internal/web/sidebar_classic.go:115
+#: internal/web/sidebar_classic.go:138
+#: internal/web/templates/mongodb/databases.html:38
+#: internal/web/templates/mongodb/databases.html:41
+#: internal/web/templates/mongodb/wizard.html:8
+#: internal/web/templates/mysql/databases.html:196
+#: internal/web/templates/mysql/databases.html:199
+#: internal/web/templates/mysql/wizard.html:8
+#: internal/web/templates/psql/databases.html:102
+#: internal/web/templates/psql/databases.html:105
+#: internal/web/templates/psql/wizard.html:8
+msgid "Database Wizard"
+msgstr "Adatbázis varázsló"
+
+#: internal/modules/dashboard/sections.go:97
+#: internal/modules/php/render.go:292 internal/web/sidebar.go:175
+#: internal/web/templates/mysql/databases.html:431
+#: internal/web/templates/mysql/phpmyadmin_unavailable.html:6
+msgid "phpMyAdmin"
+msgstr "phpMyAdmin"
+
+#: internal/modules/dashboard/sections.go:98
+#: internal/modules/dashboard/sections.go:221
+msgid "phpMyAdmin Login Form"
+msgstr "phpMyAdmin bejelentkezési űrlap"
+
+#: internal/modules/dashboard/sections.go:99
+#: internal/modules/dashboard/sections.go:110
+#: internal/modules/dashboard/sections.go:223
+#: internal/modules/dashboard/sections.go:233 internal/web/sidebar.go:176
+#: internal/web/sidebar.go:189 internal/web/sidebar_classic.go:100
+#: internal/web/sidebar_classic.go:123
+#: internal/web/templates/mysql/remote_mysql.html:10
+msgid "Remote Access"
+msgstr "Távoli hozzáférés"
+
+#: internal/modules/dashboard/sections.go:100
+#: internal/modules/dashboard/sections.go:111
+#: internal/modules/dashboard/sections.go:119
+#: internal/modules/mongodb/render.go:224 internal/modules/mysql/render.go:296
+#: internal/modules/postgresql/render.go:213 internal/web/sidebar.go:177
+#: internal/web/sidebar.go:190 internal/web/sidebar.go:200
+msgid "Running Queries"
+msgstr "Futó lekérdezések"
+
+#: internal/modules/dashboard/sections.go:102 internal/web/sidebar.go:179
+msgid "Root Password"
+msgstr "Root jelszó"
+
+#: internal/modules/dashboard/sections.go:103 internal/web/sidebar.go:180
+msgid "Server Type"
+msgstr "Szervertípus"
+
 #: internal/modules/dashboard/sections.go:105
-#: internal/modules/dashboard/sections.go:227
+#: internal/modules/dashboard/sections.go:227 internal/web/sidebar.go:272
 #: internal/web/templates/partials/_header.html:106
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
 #: internal/modules/dashboard/sections.go:114
-#: internal/modules/dashboard/sections.go:236
+#: internal/modules/dashboard/sections.go:236 internal/web/sidebar.go:275
 #: internal/web/templates/partials/_header.html:111
 msgid "MongoDB"
 msgstr "MongoDB"
 
 #: internal/modules/dashboard/sections.go:121
-#: internal/modules/dashboard/sections.go:267
+#: internal/modules/dashboard/sections.go:267 internal/web/sidebar.go:278
 #: internal/web/templates/dashboard/onboarding.html:589
 #: internal/web/templates/manager/autoinstaller.html:795
 #: internal/web/templates/partials/_header.html:116
 msgid "PHP"
 msgstr "PHP"
 
-#: internal/modules/dashboard/sections.go:128
+#: internal/modules/dashboard/sections.go:122 internal/web/sidebar.go:281
+msgid "Version per Domain"
+msgstr "Verzió domainenként"
+
+#: internal/modules/dashboard/sections.go:123
+#: internal/modules/dashboard/sections.go:269 internal/web/sidebar.go:282
+msgid "Default Version"
+msgstr "Alapértelmezett verzió"
+
+#: internal/modules/dashboard/sections.go:124 internal/web/sidebar.go:283
+#: internal/web/templates/emails/accounts.html:39
+#: internal/web/templates/emails/aliases.html:40
+#: internal/web/templates/emails/deliverability.html:35
+#: internal/web/templates/manager/wp/single.html:164
+msgid "Options"
+msgstr "Opciók"
+
+#: internal/modules/dashboard/sections.go:125 internal/web/sidebar.go:284
+msgid "Extensions"
+msgstr "Bővítmények"
+
+#: internal/modules/dashboard/sections.go:126 internal/web/sidebar.go:285
+msgid "php.ini Editor"
+msgstr "php.ini szerkesztő"
+
+#: internal/modules/dashboard/sections.go:128 internal/web/sidebar.go:296
 msgid "Cache & Search"
 msgstr "Gyorsítótár és keresés"
 
-#: internal/modules/dashboard/sections.go:136
+#: internal/modules/dashboard/sections.go:134
+msgid "Elasticsearch"
+msgstr "Elasticsearch"
+
+#: internal/modules/dashboard/sections.go:136 internal/web/sidebar.go:305
 msgid "Web Server Config"
 msgstr "Webszerver-konfiguráció"
 
+#: internal/modules/dashboard/sections.go:137 internal/web/sidebar.go:308
+msgid "Server Settings"
+msgstr "Szerverbeállítások"
+
+#: internal/modules/dashboard/sections.go:138 internal/web/sidebar.go:309
+msgid "Domain VHosts"
+msgstr "Domain VHostok"
+
+#: internal/modules/dashboard/sections.go:139 internal/web/sidebar.go:310
+msgid "Web Server Type"
+msgstr "Webszerver típusa"
+
 #: internal/modules/dashboard/sections.go:141
+#: internal/modules/dashboard/sections.go:142
 #: internal/modules/dashboard/sections.go:274
+#: internal/modules/dashboard/sections.go:275
+#: internal/modules/docker/render.go:182 internal/web/sidebar.go:314
+#: internal/web/sidebar.go:317
 #: internal/web/templates/docker/containers.html:13
 #: internal/web/templates/docker/containers.html:268
 #: internal/web/templates/partials/_header.html:121
 msgid "Containers"
 msgstr "Konténerek"
 
+#: internal/modules/dashboard/sections.go:143
+#: internal/modules/dashboard/sections.go:276 internal/web/sidebar.go:318
+#: internal/web/templates/docker/containers.html:488
+msgid "Terminal"
+msgstr "Terminál"
+
+#: internal/modules/dashboard/sections.go:144
+#: internal/modules/dashboard/sections.go:277
+#: internal/modules/docker/render.go:581 internal/web/sidebar.go:293
+#: internal/web/sidebar.go:319 internal/web/templates/cache/service.html:267
+#: internal/web/templates/docker/containers.html:491
+#: internal/web/templates/docker/logs.html:11
+#: internal/web/templates/docker/logs.html:87
+#: internal/web/templates/manager/drupal_app.html:96
+#: internal/web/templates/manager/flarum_app.html:47
+#: internal/web/templates/manager/joomla_app.html:96
+#: internal/web/templates/manager/matomo_app.html:96
+#: internal/web/templates/manager/mediawiki_app.html:96
+#: internal/web/templates/manager/moodle_app.html:47
+#: internal/web/templates/manager/n8n_app.html:63
+#: internal/web/templates/manager/nextcloud_app.html:96
+#: internal/web/templates/manager/ojs_app.html:96
+#: internal/web/templates/manager/opencart_app.html:96
+#: internal/web/templates/manager/php_app.html:62
+#: internal/web/templates/manager/prestashop_app.html:96
+#: internal/web/templates/manager/python_node_apps.html:90
+#: internal/web/templates/system/cronjobs.html:241
+#: internal/web/templates/system/services.html:160
+msgid "Logs"
+msgstr "Naplók"
+
+#: internal/modules/dashboard/sections.go:145 internal/web/sidebar.go:320
+msgid "Software Versions"
+msgstr "Szoftververziók"
+
+#: internal/modules/dashboard/sections.go:146
+#: internal/modules/dashboard/sections.go:284 internal/web/sidebar.go:289
+#: internal/web/sidebar.go:291
+#: internal/web/templates/dashboard/onboarding.html:206
+#: internal/web/templates/files/backup_settings.html:89
+#: internal/web/templates/system/cronjobs.html:24
+msgid "Cron Jobs"
+msgstr "Cron Jobs"
+
+#: internal/modules/dashboard/sections.go:147
+#: internal/modules/dashboard/sections.go:289
+msgid "Change TimeZone"
+msgstr "Időzóna módosítása"
+
 #: internal/modules/dashboard/sections.go:149
-#: internal/modules/dashboard/sections.go:295
+#: internal/modules/dashboard/sections.go:295 internal/web/sidebar.go:324
 #: internal/web/templates/partials/_header.html:131
 msgid "Account"
 msgstr "fiók"
 
-#: internal/modules/dashboard/sections.go:158
+#: internal/modules/dashboard/sections.go:150 internal/web/sidebar.go:327
+msgid "Login Details"
+msgstr "Bejelentkezési adatok"
+
+#: internal/modules/dashboard/sections.go:151 internal/web/sidebar.go:328
+msgid "Language"
+msgstr "Nyelv"
+
+#: internal/modules/dashboard/sections.go:152 internal/web/sidebar.go:329
+msgid "Notifications"
+msgstr "Értesítések"
+
+#: internal/modules/dashboard/sections.go:156
+#: internal/modules/dashboard/sections.go:304
+msgid "Log out"
+msgstr "Kijelentkezés"
+
+#: internal/modules/dashboard/sections.go:158 internal/web/sidebar.go:336
 msgid "Statistics"
 msgstr "Statisztika"
 
-#: internal/modules/dashboard/sections.go:167
+#: internal/modules/dashboard/sections.go:159
+#: internal/modules/dashboard/sections.go:286
+#: internal/modules/serverinfo/render.go:58 internal/web/sidebar.go:339
+#: internal/web/templates/user/stats.html:16
+msgid "Resource Usage"
+msgstr "Erőforrás-használat"
+
+#: internal/modules/dashboard/sections.go:160
+#: internal/modules/dashboard/sections.go:287
+#: internal/modules/serverinfo/render.go:114
+msgid "Resource Usage History"
+msgstr "Erőforrás-használati előzmények"
+
+#: internal/modules/dashboard/sections.go:161
+#: internal/modules/dashboard/sections.go:194
+#: internal/modules/diskusage/render.go:95 internal/web/sidebar.go:340
+#: internal/web/templates/files/disk_usage.html:15
+#: internal/web/templates/manager/dokuwiki_app.html:214
+#: internal/web/templates/manager/drupal_app.html:281
+#: internal/web/templates/manager/flarum_app.html:222
+#: internal/web/templates/manager/joomla_app.html:280
+#: internal/web/templates/manager/matomo_app.html:272
+#: internal/web/templates/manager/mediawiki_app.html:272
+#: internal/web/templates/manager/moodle_app.html:232
+#: internal/web/templates/manager/n8n_app.html:296
+#: internal/web/templates/manager/nextcloud_app.html:281
+#: internal/web/templates/manager/ojs_app.html:271
+#: internal/web/templates/manager/opencart_app.html:281
+#: internal/web/templates/manager/phpbb_app.html:213
+#: internal/web/templates/manager/prestashop_app.html:281
+#: internal/web/templates/manager/python_node_apps.html:345
+#: internal/web/templates/manager/sofawiki_app.html:205
+#: internal/web/templates/manager/tinyfilemanager_app.html:187
+#: internal/web/templates/manager/tinyphotogallery_app.html:187
+#: internal/web/templates/manager/websitebuilder.html:117
+#: internal/web/templates/manager/wp/single.html:366
+msgid "Disk Usage"
+msgstr "Lemezhasználat"
+
+#: internal/modules/dashboard/sections.go:162
+#: internal/modules/inodes/render.go:97 internal/web/sidebar.go:341
+#: internal/web/templates/files/inodes.html:12
+msgid "Inode Usage"
+msgstr "Inode-használat"
+
+#: internal/modules/dashboard/sections.go:163
+#: internal/modules/goaccess/render.go:37 internal/web/sidebar.go:342
+#: internal/web/templates/domains/goaccess.html:11
+msgid "Visitor Statistics"
+msgstr "Látogatói statisztika"
+
+#: internal/modules/dashboard/sections.go:164
+#: internal/modules/domains/render.go:242 internal/web/sidebar.go:343
+msgid "Access Logs"
+msgstr "Hozzáférési naplók"
+
+#: internal/modules/dashboard/sections.go:165 internal/web/sidebar.go:369
+msgid "Server Info"
+msgstr "Szerverinformációk"
+
+#: internal/modules/dashboard/sections.go:167 internal/web/sidebar.go:347
 msgid "Processes & Services"
 msgstr "Folyamatok és szolgáltatások"
 
-#: internal/modules/dashboard/sections.go:171
+#: internal/modules/dashboard/sections.go:168
+#: internal/modules/dashboard/sections.go:283 internal/web/sidebar.go:350
+#: internal/web/templates/partials/_header.html:81
+msgid "Services"
+msgstr "Szolgáltatások"
+
+#: internal/modules/dashboard/sections.go:169 internal/web/sidebar.go:351
+msgid "Processes"
+msgstr "Folyamatok"
+
+#: internal/modules/dashboard/sections.go:171 internal/web/sidebar.go:355
 #: internal/web/templates/dashboard/onboarding.html:593
 #: internal/web/templates/manager/dokuwiki_app.html:75
 #: internal/web/templates/manager/drupal_app.html:142
@@ -682,6 +1456,145 @@ msgstr "Folyamatok és szolgáltatások"
 msgid "Security"
 msgstr "Biztonság"
 
+#: internal/modules/dashboard/sections.go:172
+#: internal/modules/waf/render.go:43 internal/web/sidebar.go:358
+#: internal/web/templates/system/waf.html:19
+msgid "Web Firewall"
+msgstr "Webes tűzfal"
+
+#: internal/modules/dashboard/sections.go:173
+#: internal/modules/waf/render.go:129
+msgid "Web Firewall Logs"
+msgstr "Webes tűzfal naplói"
+
+#: internal/modules/dashboard/sections.go:174
+#: internal/modules/dashboard/sections.go:285
+#: internal/modules/ipblocker/render.go:36 internal/web/sidebar.go:359
+#: internal/web/templates/dashboard/onboarding.html:255
+#: internal/web/templates/dashboard/onboarding.html:313
+#: internal/web/templates/system/ip_blocker.html:15
+msgid "IP Blocker"
+msgstr "IP-blokkoló"
+
+#: internal/modules/dashboard/sections.go:175
+#: internal/modules/malwarescan/render.go:45 internal/web/sidebar.go:360
+#: internal/web/templates/files/clamav/scanner.html:14
+msgid "Malware Scanner"
+msgstr "Kártevőkereső"
+
+#: internal/modules/dashboard/sections.go:176 internal/web/sidebar.go:361
+msgid "Two-Factor Auth"
+msgstr "Kétfaktoros hitelesítés"
+
+#: internal/modules/dashboard/sections.go:190
+#: internal/web/templates/files/upload_file.html:11
+msgid "File Upload"
+msgstr "Fájl feltöltése"
+
+#: internal/modules/dashboard/sections.go:191
+msgid "Download Files"
+msgstr "Fájlok letöltése"
+
+#: internal/modules/dashboard/sections.go:197
+#: internal/web/templates/manager/dokuwiki_app.html:235
+#: internal/web/templates/manager/drupal_app.html:302
+#: internal/web/templates/manager/flarum_app.html:243
+#: internal/web/templates/manager/joomla_app.html:301
+#: internal/web/templates/manager/matomo_app.html:293
+#: internal/web/templates/manager/mediawiki_app.html:293
+#: internal/web/templates/manager/moodle_app.html:253
+#: internal/web/templates/manager/n8n_app.html:306
+#: internal/web/templates/manager/nextcloud_app.html:302
+#: internal/web/templates/manager/ojs_app.html:292
+#: internal/web/templates/manager/opencart_app.html:302
+#: internal/web/templates/manager/phpbb_app.html:234
+#: internal/web/templates/manager/prestashop_app.html:302
+#: internal/web/templates/manager/python_node_apps.html:355
+#: internal/web/templates/manager/sofawiki_app.html:226
+#: internal/web/templates/manager/tinyfilemanager_app.html:208
+#: internal/web/templates/manager/tinyphotogallery_app.html:208
+#: internal/web/templates/manager/websitebuilder.html:127
+#: internal/web/templates/manager/wp/single.html:387
+msgid "Inodes Explorer"
+msgstr "Inodes Explorer"
+
+#: internal/modules/dashboard/sections.go:198
+msgid "ClamAV Scanner"
+msgstr "ClamAV szkenner"
+
+#: internal/modules/dashboard/sections.go:207
+#: internal/web/templates/domains/domains.html:128
+msgid "SSL"
+msgstr "SSL"
+
+#: internal/modules/dashboard/sections.go:208
+msgid "Suspend Domain"
+msgstr "Domain felfüggesztése"
+
+#: internal/modules/dashboard/sections.go:209
+msgid "Unsuspend Domain"
+msgstr "Domain felfüggesztésének feloldása"
+
+#: internal/modules/dashboard/sections.go:210
+msgid "Change Docroot"
+msgstr "Docroot módosítása"
+
+#: internal/modules/dashboard/sections.go:211
+msgid "Edit Virtual Hosts"
+msgstr "Virtuális hostok szerkesztése"
+
+#: internal/modules/dashboard/sections.go:212
+msgid "GoAccess"
+msgstr "GoAccess"
+
+#: internal/modules/dashboard/sections.go:213
+msgid "Raw Access Logs"
+msgstr "Nyers hozzáférési naplók"
+
+#: internal/modules/dashboard/sections.go:219
+#: internal/modules/dashboard/sections.go:231
+#: internal/modules/dashboard/sections.go:240
+msgid "Import Database"
+msgstr "Adatbázis importálása"
+
+#: internal/modules/dashboard/sections.go:220
+msgid "Open phpMyAdmin"
+msgstr "phpMyAdmin megnyitása"
+
+#: internal/modules/dashboard/sections.go:222
+#: internal/modules/dashboard/sections.go:232
+#: internal/modules/dashboard/sections.go:241
+msgid "Process List"
+msgstr "Folyamatlista"
+
+#: internal/modules/dashboard/sections.go:224
+#: internal/web/templates/mysql/configuration.html:14
+msgid "MySQL Configuration"
+msgstr "MySQL konfiguráció"
+
+#: internal/modules/dashboard/sections.go:225
+msgid "Change root password"
+msgstr "Root jelszó módosítása"
+
+#: internal/modules/dashboard/sections.go:234
+#: internal/web/templates/psql/configuration.html:13
+msgid "PostgreSQL Configuration"
+msgstr "PostgreSQL konfiguráció"
+
+#: internal/modules/dashboard/sections.go:245
+#: internal/web/sidebar_classic.go:49
+#: internal/web/templates/manager/sites.html:8
+msgid "Site Manager"
+msgstr "Site Manager"
+
+#: internal/modules/dashboard/sections.go:246
+msgid "Auto Installer"
+msgstr "Automatikus telepítő"
+
+#: internal/modules/dashboard/sections.go:247
+msgid "WP Manager"
+msgstr "WP-kezelő"
+
 #: internal/modules/dashboard/sections.go:249
 #: internal/web/templates/manager/drupal_app.html:1204
 #: internal/web/templates/manager/flarum_app.html:1067
@@ -698,6 +1611,7 @@ msgid "Cache"
 msgstr "Gyorsítótár"
 
 #: internal/modules/dashboard/sections.go:257
+#: internal/modules/emails/render.go:105
 #: internal/web/templates/dashboard/onboarding.html:202
 #: internal/web/templates/emails/accounts.html:9
 #: internal/web/templates/files/backup_settings.html:84
@@ -705,27 +1619,161 @@ msgstr "Gyorsítótár"
 msgid "Emails"
 msgstr "E-mailek"
 
+#: internal/modules/dashboard/sections.go:261
+#: internal/modules/emails/render.go:334
+#: internal/web/templates/emails/deliverability.html:10
+#: internal/web/templates/emails/deliverability_domain.html:9
+msgid "Email Deliverability"
+msgstr "E-mail kézbesíthetőség"
+
+#: internal/modules/dashboard/sections.go:262
+msgid "Default Address"
+msgstr "Alapértelmezett cím"
+
+#: internal/modules/dashboard/sections.go:263
+msgid "Address Importer"
+msgstr "Címimportáló"
+
+#: internal/modules/dashboard/sections.go:264
+msgid "Address Exporter"
+msgstr "Címexportáló"
+
+#: internal/modules/dashboard/sections.go:268
+#: internal/web/sidebar_classic.go:229
+msgid "Select PHP version"
+msgstr "PHP-verzió kiválasztása"
+
+#: internal/modules/dashboard/sections.go:270
+msgid "PHP Options"
+msgstr "PHP-beállítások"
+
+#: internal/modules/dashboard/sections.go:271
+#: internal/modules/php/render.go:259
+#: internal/web/templates/php/extensions.html:229
+msgid "PHP Extensions"
+msgstr "PHP kiterjesztések"
+
+#: internal/modules/dashboard/sections.go:272
+#: internal/web/templates/php/ini_editor.html:57
+msgid "PHP.INI Editor"
+msgstr "PHP.INI szerkesztő"
+
+#: internal/modules/dashboard/sections.go:278
+msgid "Change Image tag"
+msgstr "Image címke módosítása"
+
+#: internal/modules/dashboard/sections.go:279
+msgid "Change webserver"
+msgstr "Webszerver módosítása"
+
+#: internal/modules/dashboard/sections.go:280
+msgid "Change MySQL Type"
+msgstr "MySQL típus módosítása"
+
 #: internal/modules/dashboard/sections.go:282
 #: internal/web/templates/partials/_header.html:126
 msgid "Advanced"
 msgstr "Fejlett"
+
+#: internal/modules/dashboard/sections.go:288
+#: internal/modules/processmanager/render.go:36
+#: internal/web/templates/system/process_manager.html:12
+msgid "Process Manager"
+msgstr "Folyamatkezelő"
+
+#: internal/modules/dashboard/sections.go:290
+msgid "Webserver Configuration"
+msgstr "Webszerver-konfiguráció"
+
+#: internal/modules/dashboard/sections.go:291
+msgid "WAF Settings"
+msgstr "WAF-beállítások"
+
+#: internal/modules/dashboard/sections.go:292
+#: internal/web/templates/system/waf_logs.html:267
+msgid "WAF Logs"
+msgstr "WAF naplók"
+
+#: internal/modules/dashboard/sections.go:293
+#: internal/modules/serverinfo/render.go:40
+#: internal/web/templates/system/server_info.html:8
+msgid "Server Information"
+msgstr "Szerver információ"
+
+#: internal/modules/dashboard/sections.go:296
+#: internal/web/templates/user/account.html:10
+msgid "Email & Password"
+msgstr "E-mail és jelszó"
+
+#: internal/modules/dashboard/sections.go:298
+#: internal/web/templates/user/notifications.html:40
+msgid "Email Notifications"
+msgstr "E-mail értesítések"
+
+#: internal/modules/dashboard/sections.go:301
+msgid "Favorite Pages"
+msgstr "Kedvenc oldalak"
+
+#: internal/modules/dashboard/sections.go:302
+msgid "Account Activity"
+msgstr "Fióktevékenység"
+
+#: internal/modules/dashboard/upgrade.go:45 internal/web/sidebar.go:578
+#: internal/web/templates/dashboard/upgrade.html:6
+#: internal/web/templates/dashboard/usage.html:16
+msgid "Upgrade now"
+msgstr "Frissítés most"
+
+#: internal/modules/dns/render.go:62
+#: internal/web/templates/domains/domains.html:284
+msgid "Edit DNS Zone"
+msgstr "DNS-zóna szerkesztése"
+
+#: internal/modules/dns/render.go:77
+#: internal/web/templates/domains/dns.html:81
+#: internal/web/templates/domains/dns.html:93
+msgid "Edit DNS File"
+msgstr "DNS-fájl szerkesztése"
 
 #: internal/modules/docker/containers.go:171
 #: internal/modules/docker/containers.go:187
 msgid "Add service"
 msgstr "Szolgáltatás hozzáadása"
 
+#: internal/modules/docker/render.go:392
+#: internal/web/templates/dashboard/onboarding.html:498
+msgid "Can be better fine-tuned for any type of application."
+msgstr "Bármilyen típusú alkalmazáshoz jobban finomhangolható."
+
 #: internal/modules/docker/render.go:393
 #: internal/web/templates/dashboard/onboarding.html:502
 msgid "MariaDB"
 msgstr "MariaDB"
+
+#: internal/modules/docker/render.go:393
+#: internal/web/templates/dashboard/onboarding.html:503
+msgid ""
+"Recommended for WordPress sites - smaller image, lower resource usage, and "
+"faster default query execution."
+msgstr ""
+"Ajánlott WordPress oldalakhoz - kisebb image méret, alacsonyabb erőforrás-"
+"használat és gyorsabb alapértelmezett lekérdezés-végrehajtás."
 
 #: internal/modules/docker/render.go:394
 #: internal/web/templates/dashboard/onboarding.html:507
 msgid "Percona"
 msgstr "Percona"
 
-#: internal/modules/docker/render.go:413
+#: internal/modules/docker/render.go:394
+#: internal/web/templates/dashboard/onboarding.html:508
+msgid ""
+"MySQL drop-in with extra performance and monitoring features, geared toward "
+"high-traffic sites."
+msgstr ""
+"MySQL-kompatibilis helyettesítő extra teljesítmény- és megfigyelési "
+"funkciókkal, nagy forgalmú oldalakhoz."
+
+#: internal/modules/docker/render.go:407 internal/modules/docker/render.go:413
 #: internal/web/templates/docker/change_mysql.html:10
 msgid "Database Server"
 msgstr "Adatbázisszerver"
@@ -735,30 +1783,588 @@ msgstr "Adatbázisszerver"
 msgid "Apache"
 msgstr "Apache"
 
+#: internal/modules/docker/render.go:445
+#: internal/web/templates/dashboard/onboarding.html:443
+msgid "Recommended for websites that use .htaccess for rewrite rules."
+msgstr ""
+"Ajánlott olyan weboldalakhoz, amelyek .htaccess fájlt használnak az "
+"átirányítási szabályokhoz."
+
 #: internal/modules/docker/render.go:446
 #: internal/web/templates/dashboard/onboarding.html:447
 msgid "Nginx"
 msgstr "Nginx"
+
+#: internal/modules/docker/render.go:446
+#: internal/web/templates/dashboard/onboarding.html:448
+msgid ""
+"Recommended for NodeJS and Python applications, and high-traffic sites."
+msgstr ""
+"Ajánlott NodeJS és Python alkalmazásokhoz, valamint magas forgalmú "
+"oldalakhoz."
 
 #: internal/modules/docker/render.go:447
 #: internal/web/templates/dashboard/onboarding.html:452
 msgid "OpenLiteSpeed"
 msgstr "OpenLiteSpeed"
 
+#: internal/modules/docker/render.go:447
+#: internal/web/templates/dashboard/onboarding.html:453
+msgid "Recommended for WordPress websites, but only one PHP version."
+msgstr "Ajánlott WordPress weboldalakhoz, de csak egy PHP verzió használható."
+
 #: internal/modules/docker/render.go:448
 #: internal/web/templates/dashboard/onboarding.html:487
 msgid "OpenResty"
 msgstr "OpenResty"
 
+#: internal/modules/docker/render.go:448
+#: internal/web/templates/dashboard/onboarding.html:488
+msgid "Nginx core bundled with Lua scripting for custom logic."
+msgstr "Nginx alapmag Lua szkriptelési lehetőséggel egyéni logikához."
+
 #: internal/modules/docker/render.go:449
 msgid "LiteSpeed"
 msgstr "LiteSpeed"
 
-#: internal/modules/docker/render.go:486
+#: internal/modules/docker/render.go:449
+msgid "LiteSpeed Enterprise, needs a license."
+msgstr "LiteSpeed Enterprise, licenc szükséges."
+
+#: internal/modules/docker/render.go:480 internal/modules/docker/render.go:486
 #: internal/web/templates/dashboard/onboarding.html:588
 #: internal/web/templates/docker/change_webserver.html:10
 msgid "Webserver"
 msgstr "Webkiszolgáló"
+
+#: internal/modules/docker/render.go:532
+#: internal/web/templates/docker/change_images.html:113
+msgid "Change docker image tag"
+msgstr "Docker képcímke módosítása"
+
+#: internal/modules/docker/terminal.go:36
+#: internal/web/templates/docker/terminal.html:20
+#: internal/web/templates/docker/terminal.html:224
+msgid "Container Terminal"
+msgstr "Konténer terminál"
+
+#: internal/modules/docker/terminal.go:59
+msgid "Select Container"
+msgstr "Konténer kiválasztása"
+
+#: internal/modules/dokuwiki/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:370
+#: internal/web/templates/manager/dokuwiki_install.html:9
+msgid "Install DokuWiki"
+msgstr "DokuWiki telepítése"
+
+#: internal/modules/domains/render.go:99
+#: internal/web/templates/domains/new.html:128
+#: internal/web/templates/domains/new.html:304
+msgid "Add Domain"
+msgstr "Domain hozzáadása"
+
+#: internal/modules/domains/render.go:299
+msgid "Edit VirtualHosts File"
+msgstr "VirtualHosts fájl szerkesztése"
+
+#: internal/modules/domains/render.go:331
+#: internal/web/templates/domains/redirect.html:65
+msgid "Redirect Domain to URL"
+msgstr "Tartomány átirányítása URL-re"
+
+#: internal/modules/drupal/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:111
+#: internal/web/templates/manager/drupal_install.html:9
+msgid "Install Drupal"
+msgstr "Drupal telepítése"
+
+#: internal/modules/emails/render.go:132
+#: internal/web/templates/files/ftp_new.html:172
+msgid "Create Account"
+msgstr "Fiók létrehozása"
+
+#: internal/modules/emails/render.go:183
+msgid "Delete address"
+msgstr "Cím törlése"
+
+#: internal/modules/emails/render.go:205
+#: internal/web/templates/emails/accounts.html:77
+#: internal/web/templates/emails/info.html:8
+msgid "Connect Devices"
+msgstr "Eszközök csatlakoztatása"
+
+#: internal/modules/emails/render.go:267
+#: internal/web/templates/emails/aliases.html:28
+msgid "New Alias"
+msgstr "Új alias"
+
+#: internal/modules/emails/render.go:314
+msgid "Default Email"
+msgstr "Alapértelmezett e-mail"
+
+#: internal/modules/emails/render.go:412
+#: internal/web/templates/emails/confirm_import.html:8
+#: internal/web/templates/emails/import.html:8
+msgid "Import Emails"
+msgstr "E-mailek importálása"
+
+#: internal/modules/filemanager/archive.go:302
+msgid "Failed to set archive ownership"
+msgstr "Nem sikerült beállítani az archívum tulajdonosát"
+
+#: internal/modules/filemanager/archive.go:304
+msgid "FILEMANAGER - Archive created successfully."
+msgstr "Archívum sikeresen létrehozva."
+
+#: internal/modules/filemanager/crud.go:57
+msgid "Failed to set ownership for the new file."
+msgstr "Nem sikerült beállítani az új fájl tulajdonosát."
+
+#: internal/modules/filemanager/crud.go:60
+msgid "File created successfully."
+msgstr "Fájl sikeresen létrehozva."
+
+#: internal/modules/filemanager/crud.go:105
+msgid "Failed to set ownership for the new folder."
+msgstr "Nem sikerült beállítani az új mappa tulajdonosát."
+
+#: internal/modules/filemanager/crud.go:107
+msgid "Folder created successfully."
+msgstr "Mappa sikeresen létrehozva."
+
+#: internal/modules/filemanager/crud.go:273
+msgid "Permissions changed."
+msgstr "Jogosultságok módosítva."
+
+#: internal/modules/filemanager/editor.go:138
+msgid "Error saving file."
+msgstr "Hiba a fájl mentésekor."
+
+#: internal/modules/filemanager/editor.go:141
+msgid "File saved successfully"
+msgstr "Fájl sikeresen mentve"
+
+#: internal/modules/filemanager/render.go:236
+msgid "Upload Files"
+msgstr "Fájlok feltöltése"
+
+#: internal/modules/flarum/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:300
+#: internal/web/templates/manager/flarum_install.html:9
+msgid "Install Flarum"
+msgstr "Flarum telepítése"
+
+#: internal/modules/ftp/render.go:76
+#: internal/web/templates/files/ftp_new.html:9
+msgid "New FTP Account"
+msgstr "Új FTP-számla"
+
+#: internal/modules/ftp/render.go:94
+msgid "Change FTP Password"
+msgstr "FTP jelszó módosítása"
+
+#: internal/modules/ftp/render.go:106
+msgid "Change FTP Path"
+msgstr "FTP útvonal módosítása"
+
+#: internal/modules/ipblocker/handlers.go:54
+msgid "Failed to block IP addresses - please try again"
+msgstr "Nem sikerült letiltani az IP-címeket - kérjük, próbálja újra"
+
+#: internal/modules/joomla/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:79
+#: internal/web/templates/manager/joomla_install.html:9
+msgid "Install Joomla"
+msgstr "Joomla telepítése"
+
+#: internal/modules/malwarescan/render.go:63
+msgid "Malware Quarantine"
+msgstr "Kártevő-karantén"
+
+#: internal/modules/matomo/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:440
+#: internal/web/templates/manager/matomo_install.html:9
+msgid "Install Matomo"
+msgstr "Matomo telepítése"
+
+#: internal/modules/mediawiki/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:338
+#: internal/web/templates/manager/mediawiki_install.html:9
+msgid "Install MediaWiki"
+msgstr "MediaWiki telepítése"
+
+#: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:233
+#: internal/modules/postgresql/postgresql.go:65
+msgid "Service installation is underway and may take up to one minute."
+msgstr ""
+"A szolgáltatás telepítése folyamatban van, ez akár egy percig is tarthat."
+
+#: internal/modules/mongodb/mongodb.go:50 internal/modules/mysql/mysql.go:235
+#: internal/modules/postgresql/postgresql.go:67
+msgid ""
+"Service has been created but not yet started. Start it from the Services "
+"page."
+msgstr ""
+"A szolgáltatás létrejött, de még nem indult el. Indítsa el a Szolgáltatások "
+"oldalon."
+
+#: internal/modules/mongodb/mongodb.go:52 internal/modules/mysql/mysql.go:237
+#: internal/modules/postgresql/postgresql.go:69
+msgid ""
+"Service is restarting. This may indicate a configuration error or a crash — "
+"check the logs on the Services page."
+msgstr ""
+"A szolgáltatás újraindul. Ez konfigurációs hibára vagy összeomlásra utalhat "
+"— nézze meg a naplókat a Szolgáltatások oldalon."
+
+#: internal/modules/mongodb/mongodb.go:54 internal/modules/mysql/mysql.go:239
+#: internal/modules/postgresql/postgresql.go:71
+msgid "Service is paused. Resume it from the Services page."
+msgstr "A szolgáltatás szüneteltetve van. Folytassa a Szolgáltatások oldalon."
+
+#: internal/modules/mongodb/mongodb.go:56 internal/modules/mysql/mysql.go:241
+#: internal/modules/postgresql/postgresql.go:73
+msgid ""
+"Service has stopped. This is usually caused by resource exhaustion — "
+"increase resource limits for this service and then restart it from the "
+"Services page."
+msgstr ""
+"A szolgáltatás leállt. Ennek oka általában az erőforrások kimerülése — "
+"növelje a szolgáltatás erőforráskorlátait, majd indítsa újra a "
+"Szolgáltatások oldalon."
+
+#: internal/modules/mongodb/mongodb.go:58 internal/modules/mysql/mysql.go:243
+#: internal/modules/postgresql/postgresql.go:75
+msgid "Service is being deleted. Please wait for the process to complete."
+msgstr ""
+"A szolgáltatás törlése folyamatban. Kérjük, várja meg a folyamat végét."
+
+#: internal/modules/mongodb/mongodb.go:60 internal/modules/mysql/mysql.go:245
+#: internal/modules/postgresql/postgresql.go:77
+msgid ""
+"Service has crashed and cannot recover. This is usually caused by resource "
+"exhaustion — check the logs on the Services page."
+msgstr ""
+"A szolgáltatás összeomlott és nem tud helyreállni. Ennek oka általában az "
+"erőforrások kimerülése — nézze meg a naplókat a Szolgáltatások oldalon."
+
+#: internal/modules/mongodb/mongodb.go:66 internal/modules/mysql/mysql.go:251
+#: internal/modules/postgresql/postgresql.go:83
+msgid ""
+"Service is unhealthy. Try restarting it from Services, or contact your "
+"administrator."
+msgstr ""
+"A szolgáltatás nem egészséges. Próbálja újraindítani a Szolgáltatások "
+"oldalon, vagy forduljon a rendszergazdához."
+
+#: internal/modules/mongodb/mongodb.go:68 internal/modules/mysql/mysql.go:253
+#: internal/modules/postgresql/postgresql.go:85
+msgid "Service is active, but the databases are still initializing."
+msgstr ""
+"A szolgáltatás aktív, de az adatbázisok inicializálása még folyamatban van."
+
+#: internal/modules/mongodb/mongodb.go:70
+#: internal/modules/mongodb/mongodb.go:73 internal/modules/mysql/mysql.go:255
+#: internal/modules/mysql/mysql.go:258
+#: internal/modules/postgresql/postgresql.go:87
+#: internal/modules/postgresql/postgresql.go:90
+msgid "Unable to retrieve service status. Please contact your administrator."
+msgstr ""
+"Nem sikerült lekérdezni a szolgáltatás állapotát. Kérjük, forduljon a "
+"rendszergazdához."
+
+#: internal/modules/mongodb/render.go:56
+#: internal/web/templates/mongodb/databases.html:9
+msgid "MongoDB Databases"
+msgstr "MongoDB-adatbázisok"
+
+#: internal/modules/mongodb/render.go:74 internal/modules/mysql/render.go:96
+#: internal/modules/postgresql/render.go:78 internal/web/sidebar_classic.go:94
+#: internal/web/sidebar_classic.go:116 internal/web/sidebar_classic.go:139
+#: internal/web/templates/mongodb/new.html:42
+#: internal/web/templates/mysql/new.html:44
+#: internal/web/templates/psql/new.html:42
+msgid "Create Database"
+msgstr "Adatbázis létrehozása"
+
+#: internal/modules/mongodb/render.go:100
+#: internal/web/templates/mongodb/users.html:9
+msgid "MongoDB Users"
+msgstr "MongoDB-felhasználók"
+
+#: internal/modules/mongodb/render.go:117 internal/modules/mysql/render.go:138
+#: internal/modules/postgresql/render.go:121
+#: internal/web/sidebar_classic.go:95 internal/web/sidebar_classic.go:117
+#: internal/web/sidebar_classic.go:140
+#: internal/web/templates/mongodb/mongodb_user.html:83
+#: internal/web/templates/mongodb/users.html:26
+#: internal/web/templates/mongodb/users.html:30
+#: internal/web/templates/mysql/mysql_user.html:112
+#: internal/web/templates/mysql/users.html:52
+#: internal/web/templates/mysql/users.html:58
+#: internal/web/templates/psql/psql_user.html:83
+#: internal/web/templates/psql/users.html:42
+#: internal/web/templates/psql/users.html:46
+msgid "Create User"
+msgstr "Felhasználó létrehozása"
+
+#: internal/modules/mongodb/render.go:135 internal/modules/mysql/render.go:156
+#: internal/modules/postgresql/render.go:139
+#: internal/web/templates/files/ftp.html:106
+#: internal/web/templates/mongodb/password.html:81
+#: internal/web/templates/mongodb/users.html:59
+#: internal/web/templates/mysql/password.html:116
+#: internal/web/templates/mysql/root_password.html:103
+#: internal/web/templates/mysql/users.html:96
+#: internal/web/templates/psql/password.html:81
+#: internal/web/templates/psql/users.html:73
+#: internal/web/templates/user/reset_password/set_new_password.html:57
+msgid "Change Password"
+msgstr "Jelszó módosítása"
+
+#: internal/modules/mongodb/render.go:173 internal/modules/mysql/render.go:247
+#: internal/modules/postgresql/render.go:164
+#: internal/web/templates/mongodb/assign.html:8
+#: internal/web/templates/mongodb/assign.html:55
+#: internal/web/templates/psql/assign.html:8
+#: internal/web/templates/psql/assign.html:46
+msgid "Assign User to Database"
+msgstr "Felhasználó hozzárendelése az adatbázishoz"
+
+#: internal/modules/mongodb/render.go:186 internal/modules/mysql/render.go:259
+#: internal/modules/postgresql/render.go:176
+#: internal/web/templates/mongodb/remove.html:55
+#: internal/web/templates/mysql/remove.html:51
+#: internal/web/templates/psql/remove.html:46
+msgid "Remove User from Database"
+msgstr "Felhasználó eltávolítása az adatbázisból"
+
+#: internal/modules/moodle/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:580
+#: internal/web/templates/manager/moodle_install.html:9
+msgid "Install Moodle"
+msgstr "Moodle telepítése"
+
+#: internal/modules/mysql/render.go:117
+msgid "Database Users"
+msgstr "Adatbázis-felhasználók"
+
+#: internal/modules/mysql/render.go:183 internal/modules/mysql/render.go:195
+msgid "Wizard"
+msgstr "Varázsló"
+
+#: internal/modules/mysql/render.go:314
+msgid "Change Root Password"
+msgstr "Root jelszó módosítása"
+
+#: internal/modules/mysql/render.go:337
+msgid "Remote MySQL"
+msgstr "Távoli MySQL"
+
+#: internal/modules/nextcloud/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:478
+#: internal/web/templates/manager/nextcloud_install.html:9
+msgid "Install Nextcloud"
+msgstr "Nextcloud telepítése"
+
+#: internal/modules/ojs/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:612
+#: internal/web/templates/manager/ojs_install.html:9
+msgid "Install OJS"
+msgstr "OJS telepítése"
+
+#: internal/modules/opencart/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:215
+#: internal/web/templates/manager/opencart_install.html:9
+msgid "Install OpenCart"
+msgstr "OpenCart telepítése"
+
+#: internal/modules/php/render.go:128
+#: internal/web/templates/php/default.html:7
+msgid "Default PHP version"
+msgstr "Alapértelmezett PHP verzió"
+
+#: internal/modules/phpapp/render.go:31
+#: internal/web/templates/manager/php_install.html:9
+msgid "Install PHP Application"
+msgstr "PHP alkalmazás telepítése"
+
+#: internal/modules/phpbb/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:253
+#: internal/web/templates/manager/phpbb_install.html:9
+msgid "Install phpBB"
+msgstr "phpBB telepítése"
+
+#: internal/modules/postgresql/render.go:60
+#: internal/web/templates/dashboard/onboarding.html:205
+#: internal/web/templates/files/backup_settings.html:87
+#: internal/web/templates/psql/databases.html:9
+msgid "PostgreSQL Databases"
+msgstr "PostgreSQL adatbázisok"
+
+#: internal/modules/postgresql/render.go:104
+#: internal/web/templates/psql/users.html:9
+msgid "PostgreSQL Users"
+msgstr "PostgreSQL felhasználók"
+
+#: internal/modules/postgresql/render.go:235
+msgid "Remote PostgreSQL"
+msgstr "Távoli PostgreSQL"
+
+#: internal/modules/postgresql/render.go:258
+msgid "Edit PostgreSQL configuration"
+msgstr "PostgreSQL konfiguráció szerkesztése"
+
+#: internal/modules/prestashop/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:183
+#: internal/web/templates/manager/prestashop_install.html:9
+msgid "Install PrestaShop"
+msgstr "PrestaShop telepítése"
+
+#: internal/modules/serverinfo/handlers.go:35
+msgid "An error occurred while fetching resource usage."
+msgstr "Hiba történt az erőforrás-használat lekérése közben."
+
+#: internal/modules/serverinfo/handlers.go:37
+msgid "No resource usage data available yet. Please try again later"
+msgstr ""
+"Még nincsenek erőforrás-használati adatok. Kérjük, próbálja újra később"
+
+#: internal/modules/services/render.go:51
+#: internal/modules/services/render.go:52
+msgid "Running"
+msgstr "Fut"
+
+#: internal/modules/services/render.go:53
+msgid "Unhealthy"
+msgstr "Nem egészséges"
+
+#: internal/modules/services/render.go:54
+msgid "Starting"
+msgstr "Indul"
+
+#: internal/modules/services/render.go:55
+#: internal/web/templates/dashboard/onboarding.html:525
+#: internal/web/templates/dashboard/onboarding.html:556
+#: internal/web/templates/docker/containers.html:459
+#: internal/web/templates/manager/drupal_app.html:570
+#: internal/web/templates/manager/joomla_app.html:573
+#: internal/web/templates/manager/moodle_app.html:525
+#: internal/web/templates/manager/nextcloud_app.html:574
+#: internal/web/templates/manager/opencart_app.html:574
+#: internal/web/templates/manager/prestashop_app.html:574
+#: internal/web/templates/manager/wp/single.html:1095
+#: internal/web/templates/mysql/remote_mysql.html:58
+#: internal/web/templates/php/extensions.html:62
+#: internal/web/templates/psql/remote_psql.html:69
+msgid "Disabled"
+msgstr "Letiltva"
+
+#: internal/modules/services/render.go:56
+#: internal/web/templates/files/backup_wizard.html:128
+#: internal/web/templates/manager/n8n_app.html:675
+#: internal/web/templates/manager/python_node_apps.html:1309
+#: internal/web/templates/manager/sites.html:209
+#: internal/web/templates/manager/websitebuilder.html:319
+#: internal/web/templates/user/activity.html:7
+#: internal/web/templates/user/mcp.html:42
+msgid "Created"
+msgstr "Létrehozva"
+
+#: internal/modules/services/render.go:57
+msgid "Restarting"
+msgstr "Újraindul"
+
+#: internal/modules/services/render.go:58
+msgid "Paused"
+msgstr "Szüneteltetve"
+
+#: internal/modules/services/render.go:59
+msgid "Stopped"
+msgstr "Leállítva"
+
+#: internal/modules/services/render.go:60
+msgid "Removing"
+msgstr "Eltávolítás"
+
+#: internal/modules/services/render.go:61
+msgid "Stopping"
+msgstr "Leáll"
+
+#: internal/modules/services/render.go:62
+msgid "Dead"
+msgstr "Halott"
+
+#: internal/modules/services/render.go:65
+#: internal/web/templates/domains/ssl.html:66
+#: internal/web/templates/files/clamav/quarantine.html:76
+#: internal/web/templates/manager/dokuwiki_app.html:114
+#: internal/web/templates/manager/dokuwiki_app.html:307
+#: internal/web/templates/manager/drupal_app.html:182
+#: internal/web/templates/manager/drupal_app.html:575
+#: internal/web/templates/manager/drupal_app.html:621
+#: internal/web/templates/manager/drupal_app.html:674
+#: internal/web/templates/manager/drupal_app.html:686
+#: internal/web/templates/manager/flarum_app.html:123
+#: internal/web/templates/manager/flarum_app.html:482
+#: internal/web/templates/manager/flarum_app.html:537
+#: internal/web/templates/manager/flarum_app.html:549
+#: internal/web/templates/manager/joomla_app.html:181
+#: internal/web/templates/manager/joomla_app.html:578
+#: internal/web/templates/manager/joomla_app.html:624
+#: internal/web/templates/manager/joomla_app.html:676
+#: internal/web/templates/manager/joomla_app.html:687
+#: internal/web/templates/manager/matomo_app.html:173
+#: internal/web/templates/manager/matomo_app.html:536
+#: internal/web/templates/manager/matomo_app.html:574
+#: internal/web/templates/manager/matomo_app.html:586
+#: internal/web/templates/manager/mediawiki_app.html:173
+#: internal/web/templates/manager/mediawiki_app.html:536
+#: internal/web/templates/manager/mediawiki_app.html:574
+#: internal/web/templates/manager/mediawiki_app.html:586
+#: internal/web/templates/manager/moodle_app.html:133
+#: internal/web/templates/manager/moodle_app.html:530
+#: internal/web/templates/manager/moodle_app.html:576
+#: internal/web/templates/manager/moodle_app.html:630
+#: internal/web/templates/manager/moodle_app.html:642
+#: internal/web/templates/manager/n8n_app.html:113
+#: internal/web/templates/manager/nextcloud_app.html:182
+#: internal/web/templates/manager/nextcloud_app.html:579
+#: internal/web/templates/manager/nextcloud_app.html:625
+#: internal/web/templates/manager/nextcloud_app.html:663
+#: internal/web/templates/manager/nextcloud_app.html:675
+#: internal/web/templates/manager/ojs_app.html:172
+#: internal/web/templates/manager/ojs_app.html:531
+#: internal/web/templates/manager/ojs_app.html:595
+#: internal/web/templates/manager/opencart_app.html:182
+#: internal/web/templates/manager/opencart_app.html:579
+#: internal/web/templates/manager/opencart_app.html:625
+#: internal/web/templates/manager/opencart_app.html:677
+#: internal/web/templates/manager/opencart_app.html:688
+#: internal/web/templates/manager/phpbb_app.html:114
+#: internal/web/templates/manager/phpbb_app.html:406
+#: internal/web/templates/manager/prestashop_app.html:182
+#: internal/web/templates/manager/prestashop_app.html:579
+#: internal/web/templates/manager/prestashop_app.html:625
+#: internal/web/templates/manager/prestashop_app.html:661
+#: internal/web/templates/manager/prestashop_app.html:672
+#: internal/web/templates/manager/python_node_apps.html:157
+#: internal/web/templates/manager/wp/single.html:1087
+#: internal/web/templates/manager/wp/single.html:1099
+#: internal/web/templates/manager/wp/single.html:1106
+#: internal/web/templates/manager/wp/single.html:1160
+#: internal/web/templates/manager/wp/single.html:2196
+#: internal/web/templates/mysql/remote_mysql.html:71
+#: internal/web/templates/partials/_service_js.html:35
+#: internal/web/templates/psql/remote_psql.html:81
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+#: internal/modules/services/render.go:101
+#: internal/web/templates/system/services.html:11
+msgid "Choose Service"
+msgstr "Válassza a Szolgáltatás lehetőséget"
 
 #: internal/modules/services/render.go:122
 #: internal/web/templates/cache/service.html:17
@@ -776,6 +2382,49 @@ msgstr "Kattintson a letiltáshoz"
 #: internal/web/templates/psql/remote_psql.html:73
 msgid "Click to Enable"
 msgstr "Kattintson az engedélyezéshez"
+
+#: internal/modules/sofawiki/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:402
+#: internal/web/templates/manager/sofawiki_install.html:9
+msgid "Install SofaWiki"
+msgstr "SofaWiki telepítése"
+
+#: internal/modules/tinyfilemanager/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:542
+#: internal/web/templates/manager/tinyfilemanager_install.html:9
+msgid "Install TinyFileManager"
+msgstr "TinyFileManager telepítése"
+
+#: internal/modules/tinyphotogallery/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:510
+#: internal/web/templates/manager/tinyphotogallery_install.html:9
+msgid "Install TinyPhotoGallery"
+msgstr "TinyPhotoGallery telepítése"
+
+#: internal/modules/waf/handlers_list.go:93
+#: internal/modules/waf/handlers_list.go:97
+msgid "Error changing WAF status."
+msgstr "Hiba a WAF állapotának módosításakor."
+
+#: internal/modules/webserverconf/webserverconf.go:29
+msgid "Nginx Configuration Editor"
+msgstr "Nginx konfigurációszerkesztő"
+
+#: internal/modules/webserverconf/webserverconf.go:30
+msgid "Apache Configuration Editor"
+msgstr "Apache konfigurációszerkesztő"
+
+#: internal/modules/webserverconf/webserverconf.go:31
+msgid "OpenResty Configuration Editor"
+msgstr "OpenResty konfigurációszerkesztő"
+
+#: internal/modules/webserverconf/webserverconf.go:32
+msgid "OpenLitespeed Configuration Editor"
+msgstr "OpenLitespeed konfigurációszerkesztő"
+
+#: internal/modules/webserverconf/webserverconf.go:33
+msgid "Litespeed Configuration Editor"
+msgstr "Litespeed konfigurációszerkesztő"
 
 #: internal/modules/webserverconf/webserverconf.go:41
 msgid "Web Server Configuration Editor"
@@ -908,78 +2557,85 @@ msgstr ""
 "User-Agent szűrővel blokkolja az agresszív scrapereket és biztonsági "
 "szkennereket, például az AhrefsBot, SemrushBot, MJ12bot és Nikto eszközöket."
 
-#: internal/web/sidebar.go:224
-#: internal/web/templates/partials/_header.html:141
-msgid "Sites"
-msgstr "Oldalak"
+#: internal/modules/websites/websitebuilder_render.go:38
+#: internal/web/templates/manager/autoinstaller.html:145
+msgid "Create Website"
+msgstr "Webhely létrehozása"
 
-#: internal/web/sidebar.go:578 internal/web/templates/dashboard/upgrade.html:6
-#: internal/web/templates/dashboard/usage.html:16
-msgid "Upgrade now"
-msgstr "Frissítés most"
+#: internal/modules/websites/websitebuilder_render.go:51
+msgid "GrapesJS Website Editor"
+msgstr "GrapesJS weboldal-szerkesztő"
 
-#: internal/web/sidebar_classic.go:49
-#: internal/web/templates/manager/sites.html:8
-msgid "Site Manager"
-msgstr "Site Manager"
+#: internal/modules/wordpress/render.go:41
+msgid "WordPress Manager"
+msgstr "WordPress-kezelő"
 
-#: internal/web/sidebar_classic.go:61 internal/web/sidebar_classic.go:67
-#: internal/web/templates/files/disk_usage.html:90
-#: internal/web/templates/files/filemanager.html:59
-#: internal/web/templates/files/inodes.html:88
-msgid "File Manager"
-msgstr "Fájlkezelő"
+#: internal/modules/wordpress/render.go:59
+#: internal/web/templates/manager/autoinstaller.html:47
+#: internal/web/templates/manager/wp/install.html:9
+msgid "Install WordPress"
+msgstr "Telepítse a WordPress-t"
+
+#: internal/web/sidebar.go:233
+msgid "Accounts"
+msgstr "Fiókok"
+
+#: internal/web/sidebar.go:239
+msgid "Delete Accounts"
+msgstr "Fiókok törlése"
+
+#: internal/web/sidebar.go:259
+#: internal/web/templates/manager/dokuwiki_app.html:38
+#: internal/web/templates/manager/drupal_app.html:87
+#: internal/web/templates/manager/flarum_app.html:38
+#: internal/web/templates/manager/joomla_app.html:87
+#: internal/web/templates/manager/matomo_app.html:87
+#: internal/web/templates/manager/mediawiki_app.html:87
+#: internal/web/templates/manager/moodle_app.html:38
+#: internal/web/templates/manager/n8n_app.html:45
+#: internal/web/templates/manager/nextcloud_app.html:87
+#: internal/web/templates/manager/ojs_app.html:87
+#: internal/web/templates/manager/opencart_app.html:87
+#: internal/web/templates/manager/php_app.html:44
+#: internal/web/templates/manager/php_app.html:82
+#: internal/web/templates/manager/phpbb_app.html:38
+#: internal/web/templates/manager/prestashop_app.html:87
+#: internal/web/templates/manager/python_node_apps.html:45
+#: internal/web/templates/manager/sofawiki_app.html:38
+#: internal/web/templates/manager/tinyfilemanager_app.html:38
+#: internal/web/templates/manager/tinyphotogallery_app.html:38
+#: internal/web/templates/manager/websitebuilder.html:46
+#: internal/web/templates/manager/wp/single.html:154
+msgid "Overview"
+msgstr "Áttekintés"
+
+#: internal/web/sidebar.go:278
+msgid "Configure"
+msgstr "Beállítás"
+
+#: internal/web/sidebar.go:292
+msgid "File Editor"
+msgstr "Fájlszerkesztő"
+
+#: internal/web/sidebar.go:336
+msgid "Monitor & Secure"
+msgstr "Felügyelet és védelem"
+
+#: internal/web/sidebar.go:372 internal/web/templates/mysql/wizard.html:74
+msgid "Server"
+msgstr "Szerver"
+
+#: internal/web/sidebar.go:373
+msgid "Hosting Plan"
+msgstr "Tárhelycsomag"
+
+#: internal/web/sidebar.go:374
+msgid "Panel"
+msgstr "Panel"
 
 #: internal/web/sidebar_classic.go:62 internal/web/sidebar_classic.go:68
 msgid "Upload from device"
 msgstr "Feltöltés eszközről"
-
-#: internal/web/sidebar_classic.go:63 internal/web/sidebar_classic.go:69
-#: internal/web/templates/files/upload_file.html:11
-msgid "Download from URL"
-msgstr "Letöltés URL-ből"
-
-#: internal/web/sidebar_classic.go:89 internal/web/sidebar_classic.go:112
-#: internal/web/sidebar_classic.go:135
-#: internal/web/templates/mysql/users.html:9
-msgid "Users"
-msgstr "Felhasználók"
-
-#: internal/web/sidebar_classic.go:93 internal/web/sidebar_classic.go:115
-#: internal/web/sidebar_classic.go:138
-#: internal/web/templates/mongodb/databases.html:38
-#: internal/web/templates/mongodb/databases.html:41
-#: internal/web/templates/mongodb/wizard.html:8
-#: internal/web/templates/mysql/databases.html:196
-#: internal/web/templates/mysql/databases.html:199
-#: internal/web/templates/mysql/wizard.html:8
-#: internal/web/templates/psql/databases.html:102
-#: internal/web/templates/psql/databases.html:105
-#: internal/web/templates/psql/wizard.html:8
-msgid "Database Wizard"
-msgstr "Adatbázis varázsló"
-
-#: internal/web/sidebar_classic.go:94 internal/web/sidebar_classic.go:116
-#: internal/web/sidebar_classic.go:139
-#: internal/web/templates/mongodb/new.html:42
-#: internal/web/templates/mysql/new.html:44
-#: internal/web/templates/psql/new.html:42
-msgid "Create Database"
-msgstr "Adatbázis létrehozása"
-
-#: internal/web/sidebar_classic.go:95 internal/web/sidebar_classic.go:117
-#: internal/web/sidebar_classic.go:140
-#: internal/web/templates/mongodb/mongodb_user.html:83
-#: internal/web/templates/mongodb/users.html:26
-#: internal/web/templates/mongodb/users.html:30
-#: internal/web/templates/mysql/mysql_user.html:112
-#: internal/web/templates/mysql/users.html:52
-#: internal/web/templates/mysql/users.html:58
-#: internal/web/templates/psql/psql_user.html:83
-#: internal/web/templates/psql/users.html:42
-#: internal/web/templates/psql/users.html:46
-msgid "Create User"
-msgstr "Felhasználó létrehozása"
 
 #: internal/web/sidebar_classic.go:96 internal/web/sidebar_classic.go:118
 #: internal/web/sidebar_classic.go:141
@@ -990,11 +2646,6 @@ msgstr "Felhasználó hozzárendelése az adatbázishoz"
 #: internal/web/sidebar_classic.go:142
 msgid "Remove User from DB"
 msgstr "Felhasználó eltávolítása az adatbázisból"
-
-#: internal/web/sidebar_classic.go:100 internal/web/sidebar_classic.go:123
-#: internal/web/templates/mysql/remote_mysql.html:10
-msgid "Remote Access"
-msgstr "Távoli hozzáférés"
 
 #: internal/web/sidebar_classic.go:124 internal/web/sidebar_classic.go:145
 msgid "Show Processes"
@@ -1016,17 +2667,9 @@ msgstr "Domain felfüggesztése"
 msgid "Unsuspend a Domain"
 msgstr "Domain felfüggesztésének feloldása"
 
-#: internal/web/sidebar_classic.go:193 internal/web/sidebar_classic.go:198
-msgid "Email Accounts"
-msgstr "E-mail-fiókok"
-
 #: internal/web/sidebar_classic.go:194 internal/web/sidebar_classic.go:199
 msgid "Create New Account"
 msgstr "Új fiók létrehozása"
-
-#: internal/web/sidebar_classic.go:229
-msgid "Select PHP version"
-msgstr "PHP-verzió kiválasztása"
 
 #: internal/web/sidebar_classic.go:230
 msgid "Default version"
@@ -1240,11 +2883,6 @@ msgstr "Az érték legfeljebb {max} lehet."
 msgid "Looks good."
 msgstr "Rendben van."
 
-#: internal/web/templates/base.html:410
-#: internal/web/templates/user/favorites.html:10
-msgid "Favorites"
-msgstr "Kedvencek"
-
 #: internal/web/templates/base.html:478 internal/web/templates/base.html:523
 #: internal/web/templates/base.html:629
 #: internal/web/templates/dashboard/dashboard.html:46
@@ -1418,27 +3056,6 @@ msgstr "A szolgáltatás jelenlegi valós idejű erőforrás-használata."
 #: internal/web/templates/system/services.html:91
 msgid "Edit limits"
 msgstr "Korlátok szerkesztése"
-
-#: internal/web/templates/cache/service.html:267
-#: internal/web/templates/docker/logs.html:11
-#: internal/web/templates/docker/logs.html:87
-#: internal/web/templates/manager/drupal_app.html:96
-#: internal/web/templates/manager/flarum_app.html:47
-#: internal/web/templates/manager/joomla_app.html:96
-#: internal/web/templates/manager/matomo_app.html:96
-#: internal/web/templates/manager/mediawiki_app.html:96
-#: internal/web/templates/manager/moodle_app.html:47
-#: internal/web/templates/manager/n8n_app.html:63
-#: internal/web/templates/manager/nextcloud_app.html:96
-#: internal/web/templates/manager/ojs_app.html:96
-#: internal/web/templates/manager/opencart_app.html:96
-#: internal/web/templates/manager/php_app.html:62
-#: internal/web/templates/manager/prestashop_app.html:96
-#: internal/web/templates/manager/python_node_apps.html:90
-#: internal/web/templates/system/cronjobs.html:241
-#: internal/web/templates/system/services.html:160
-msgid "Logs"
-msgstr "Naplók"
 
 #: internal/web/templates/cache/service.html:268
 #: internal/web/templates/system/services.html:161
@@ -1751,18 +3368,6 @@ msgstr "VirtualHosts"
 msgid "MySQL Databases"
 msgstr "MySQL adatbázisok"
 
-#: internal/web/templates/dashboard/onboarding.html:205
-#: internal/web/templates/files/backup_settings.html:87
-#: internal/web/templates/psql/databases.html:9
-msgid "PostgreSQL Databases"
-msgstr "PostgreSQL adatbázisok"
-
-#: internal/web/templates/dashboard/onboarding.html:206
-#: internal/web/templates/files/backup_settings.html:89
-#: internal/web/templates/system/cronjobs.html:24
-msgid "Cron Jobs"
-msgstr "Cron Jobs"
-
 #: internal/web/templates/dashboard/onboarding.html:222
 msgid "Connection successful."
 msgstr "A kapcsolat sikeres."
@@ -1795,24 +3400,11 @@ msgstr ""
 "Kiszűri a weboldalaira érkező kártékony kéréseket, mielőtt azok elérnék az "
 "alkalmazásait."
 
-#: internal/web/templates/dashboard/onboarding.html:255
-#: internal/web/templates/dashboard/onboarding.html:313
-#: internal/web/templates/system/ip_blocker.html:15
-msgid "IP Blocker"
-msgstr "IP-blokkoló"
-
 #: internal/web/templates/dashboard/onboarding.html:258
 msgid "Deny specific IPs or CIDR ranges access to your websites."
 msgstr ""
 "Megtagadja a hozzáférést weboldalaihoz megadott IP-címek vagy CIDR-"
 "tartományok számára."
-
-#: internal/web/templates/dashboard/onboarding.html:265
-#: internal/web/templates/dashboard/onboarding.html:325
-#: internal/web/templates/dashboard/twofa.html:6
-#: internal/web/templates/user/twofa_settings.html:14
-msgid "Two-Factor Authentication"
-msgstr "Kéttényezős hitelesítés"
 
 #: internal/web/templates/dashboard/onboarding.html:268
 msgid ""
@@ -1940,47 +3532,6 @@ msgstr "Folytatás"
 msgid "Please wait…"
 msgstr "Kérjük, várjon…"
 
-#: internal/web/templates/dashboard/onboarding.html:443
-msgid "Recommended for websites that use .htaccess for rewrite rules."
-msgstr ""
-"Ajánlott olyan weboldalakhoz, amelyek .htaccess fájlt használnak az "
-"átirányítási szabályokhoz."
-
-#: internal/web/templates/dashboard/onboarding.html:448
-msgid ""
-"Recommended for NodeJS and Python applications, and high-traffic sites."
-msgstr ""
-"Ajánlott NodeJS és Python alkalmazásokhoz, valamint magas forgalmú "
-"oldalakhoz."
-
-#: internal/web/templates/dashboard/onboarding.html:453
-msgid "Recommended for WordPress websites, but only one PHP version."
-msgstr "Ajánlott WordPress weboldalakhoz, de csak egy PHP verzió használható."
-
-#: internal/web/templates/dashboard/onboarding.html:488
-msgid "Nginx core bundled with Lua scripting for custom logic."
-msgstr "Nginx alapmag Lua szkriptelési lehetőséggel egyéni logikához."
-
-#: internal/web/templates/dashboard/onboarding.html:498
-msgid "Can be better fine-tuned for any type of application."
-msgstr "Bármilyen típusú alkalmazáshoz jobban finomhangolható."
-
-#: internal/web/templates/dashboard/onboarding.html:503
-msgid ""
-"Recommended for WordPress sites - smaller image, lower resource usage, and "
-"faster default query execution."
-msgstr ""
-"Ajánlott WordPress oldalakhoz - kisebb image méret, alacsonyabb erőforrás-"
-"használat és gyorsabb alapértelmezett lekérdezés-végrehajtás."
-
-#: internal/web/templates/dashboard/onboarding.html:508
-msgid ""
-"MySQL drop-in with extra performance and monitoring features, geared toward "
-"high-traffic sites."
-msgstr ""
-"MySQL-kompatibilis helyettesítő extra teljesítmény- és megfigyelési "
-"funkciókkal, nagy forgalmú oldalakhoz."
-
 #: internal/web/templates/dashboard/onboarding.html:524
 #: internal/web/templates/dashboard/onboarding.html:555
 #: internal/web/templates/docker/containers.html:133
@@ -2003,21 +3554,6 @@ msgid ""
 msgstr ""
 "Oldalak gyorsítótárazása a weboldalak felgyorsításához és a webkiszolgáló "
 "terhelésének csökkentéséhez."
-
-#: internal/web/templates/dashboard/onboarding.html:525
-#: internal/web/templates/dashboard/onboarding.html:556
-#: internal/web/templates/manager/drupal_app.html:570
-#: internal/web/templates/manager/joomla_app.html:573
-#: internal/web/templates/manager/moodle_app.html:525
-#: internal/web/templates/manager/nextcloud_app.html:574
-#: internal/web/templates/manager/opencart_app.html:574
-#: internal/web/templates/manager/prestashop_app.html:574
-#: internal/web/templates/manager/wp/single.html:1095
-#: internal/web/templates/mysql/remote_mysql.html:58
-#: internal/web/templates/php/extensions.html:62
-#: internal/web/templates/psql/remote_psql.html:69
-msgid "Disabled"
-msgstr "Letiltva"
 
 #: internal/web/templates/dashboard/onboarding.html:525
 msgid ""
@@ -2095,10 +3631,6 @@ msgstr "Az új domainek nem kapnak kérésszűrést."
 #: internal/web/templates/psql/users.html:48
 msgid "Database"
 msgstr "Adatbázis"
-
-#: internal/web/templates/dashboard/onboarding.html:591
-msgid "Varnish"
-msgstr "Lakk"
 
 #: internal/web/templates/dashboard/onboarding.html:643
 #: internal/web/templates/dashboard/onboarding.html:654
@@ -2255,30 +3787,6 @@ msgstr "A csomag frissítéséhez forduljon tárhelyszolgáltatójához."
 msgid "Email accounts"
 msgstr "E-mail fiókok"
 
-#: internal/web/templates/dashboard/usage.html:124
-#: internal/web/templates/files/ftp.html:9
-#: internal/web/templates/manager/dokuwiki_app.html:256
-#: internal/web/templates/manager/drupal_app.html:323
-#: internal/web/templates/manager/flarum_app.html:264
-#: internal/web/templates/manager/joomla_app.html:322
-#: internal/web/templates/manager/matomo_app.html:314
-#: internal/web/templates/manager/mediawiki_app.html:314
-#: internal/web/templates/manager/moodle_app.html:274
-#: internal/web/templates/manager/n8n_app.html:316
-#: internal/web/templates/manager/nextcloud_app.html:323
-#: internal/web/templates/manager/ojs_app.html:313
-#: internal/web/templates/manager/opencart_app.html:323
-#: internal/web/templates/manager/phpbb_app.html:255
-#: internal/web/templates/manager/prestashop_app.html:323
-#: internal/web/templates/manager/python_node_apps.html:365
-#: internal/web/templates/manager/sofawiki_app.html:247
-#: internal/web/templates/manager/tinyfilemanager_app.html:229
-#: internal/web/templates/manager/tinyphotogallery_app.html:229
-#: internal/web/templates/manager/websitebuilder.html:137
-#: internal/web/templates/manager/wp/single.html:408
-msgid "FTP Accounts"
-msgstr "FTP-fiókok"
-
 #: internal/web/templates/dashboard/usage.html:146
 #: internal/web/templates/docker/container_form.html:161
 msgid "Storage"
@@ -2415,10 +3923,6 @@ msgstr "Vissza a Képekhez"
 #: internal/web/templates/docker/change_images.html:90
 msgid "Change tag"
 msgstr "Címke módosítása"
-
-#: internal/web/templates/docker/change_images.html:113
-msgid "Change docker image tag"
-msgstr "Docker képcímke módosítása"
 
 #: internal/web/templates/docker/change_images.html:114
 msgid "Change docker images tag in order to use specific service versions."
@@ -2807,6 +4311,7 @@ msgid "Total CPU:"
 msgstr "Teljes CPU:"
 
 #: internal/web/templates/docker/containers.html:18
+#: internal/web/templates/docker/containers.html:377
 msgid "cores"
 msgstr "mag"
 
@@ -2938,6 +4443,127 @@ msgstr "Hiba történt a tárolók dockerstatisztikáinak lekérésekor."
 msgid "Image"
 msgstr "Image"
 
+#: internal/web/templates/docker/containers.html:371
+#: internal/web/templates/docker/containers.html:415
+msgid "Usage:"
+msgstr "Használat:"
+
+#: internal/web/templates/docker/containers.html:376
+#: internal/web/templates/docker/containers.html:419
+msgid "Allocated:"
+msgstr "Kiosztva:"
+
+#: internal/web/templates/docker/containers.html:380
+msgid "Max CPUs that this service can use. 0 = unlimited"
+msgstr "A szolgáltatás által használható CPU-k maximális száma. 0 = korlátlan"
+
+#: internal/web/templates/docker/containers.html:381
+#: internal/web/templates/docker/containers.html:427
+#: internal/web/templates/docker/containers.html:454
+#: internal/web/templates/domains/capitalize.html:100
+#: internal/web/templates/domains/dns.html:187
+#: internal/web/templates/domains/dns.html:493
+#: internal/web/templates/domains/domains.html:192
+#: internal/web/templates/domains/domains.html:222
+#: internal/web/templates/domains/dynamic_dns.html:101
+#: internal/web/templates/emails/default_address.html:128
+#: internal/web/templates/files/edit_file.html:140
+#: internal/web/templates/mysql/remote_mysql.html:197
+#: internal/web/templates/system/cronjobs.html:224
+#: internal/web/templates/system/waf_domain.html:13
+msgid "Save"
+msgstr "Megtakarítás"
+
+#: internal/web/templates/docker/containers.html:425
+msgid "Max Memory that this service can use. 0 = unlimited"
+msgstr "A szolgáltatás által használható maximális memória. 0 = korlátlan"
+
+#: internal/web/templates/docker/containers.html:453
+msgid "Max processes that this service can run. 0 = unlimited"
+msgstr ""
+"A szolgáltatás által futtatható folyamatok maximális száma. 0 = korlátlan"
+
+#: internal/web/templates/docker/containers.html:473
+#: internal/web/templates/manager/n8n_app.html:165
+#: internal/web/templates/manager/python_node_apps.html:214
+#: internal/web/templates/partials/_footer.html:45
+msgid "Start"
+msgstr "Kezdés"
+
+#: internal/web/templates/docker/containers.html:479
+#: internal/web/templates/manager/n8n_app.html:195
+#: internal/web/templates/manager/python_node_apps.html:244
+msgid "Stop"
+msgstr "Állj!"
+
+#: internal/web/templates/docker/containers.html:484
+#: internal/web/templates/domains/dynamic_dns.html:202
+#: internal/web/templates/domains/vhost.html:22
+#: internal/web/templates/domains/vhost.html:23
+#: internal/web/templates/domains/vhost.html:180
+#: internal/web/templates/files/filemanager_partials.html:277
+#: internal/web/templates/files/filemanager_partials.html:344
+#: internal/web/templates/mysql/remote_mysql.html:201
+#: internal/web/templates/system/cronjobs.html:222
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: internal/web/templates/docker/containers.html:495
+#: internal/web/templates/domains/domains.html:327
+#: internal/web/templates/domains/dynamic_dns.html:130
+#: internal/web/templates/domains/dynamic_dns.html:135
+#: internal/web/templates/domains/dynamic_dns.html:205
+#: internal/web/templates/emails/alias_delete.html:10
+#: internal/web/templates/emails/delete.html:10
+#: internal/web/templates/emails/single_account.html:13
+#: internal/web/templates/files/clamav/quarantine.html:84
+#: internal/web/templates/files/filemanager_partials.html:262
+#: internal/web/templates/files/filemanager_partials.html:332
+#: internal/web/templates/files/filemanager_partials.html:851
+#: internal/web/templates/files/ftp.html:113
+#: internal/web/templates/files/ftp.html:131
+#: internal/web/templates/files/trash.html:57
+#: internal/web/templates/files/trash_partials.html:257
+#: internal/web/templates/manager/dokuwiki_app.html:650
+#: internal/web/templates/manager/drupal_app.html:1079
+#: internal/web/templates/manager/flarum_app.html:942
+#: internal/web/templates/manager/joomla_app.html:1054
+#: internal/web/templates/manager/matomo_app.html:979
+#: internal/web/templates/manager/mediawiki_app.html:979
+#: internal/web/templates/manager/moodle_app.html:1034
+#: internal/web/templates/manager/n8n_app.html:610
+#: internal/web/templates/manager/nextcloud_app.html:1068
+#: internal/web/templates/manager/ojs_app.html:995
+#: internal/web/templates/manager/opencart_app.html:1055
+#: internal/web/templates/manager/php_app.html:142
+#: internal/web/templates/manager/phpbb_app.html:737
+#: internal/web/templates/manager/prestashop_app.html:1039
+#: internal/web/templates/manager/python_node_apps.html:1241
+#: internal/web/templates/manager/sites.html:456
+#: internal/web/templates/manager/sites.html:493
+#: internal/web/templates/manager/sofawiki_app.html:553
+#: internal/web/templates/manager/tinyfilemanager_app.html:446
+#: internal/web/templates/manager/tinyphotogallery_app.html:448
+#: internal/web/templates/manager/websitebuilder.html:238
+#: internal/web/templates/mongodb/databases.html:157
+#: internal/web/templates/mongodb/databases.html:238
+#: internal/web/templates/mongodb/users.html:63
+#: internal/web/templates/mongodb/users.html:107
+#: internal/web/templates/mysql/databases.html:441
+#: internal/web/templates/mysql/databases.html:443
+#: internal/web/templates/mysql/remote_mysql.html:207
+#: internal/web/templates/mysql/users.html:101
+#: internal/web/templates/mysql/users.html:142
+#: internal/web/templates/psql/databases.html:223
+#: internal/web/templates/psql/databases.html:304
+#: internal/web/templates/psql/users.html:77
+#: internal/web/templates/psql/users.html:121
+#: internal/web/templates/system/cronjobs.html:236
+#: internal/web/templates/system/cronjobs.html:369
+#: internal/web/templates/user/favorites.html:83
+msgid "Delete"
+msgstr "Töröl"
+
 #: internal/web/templates/docker/delete_confirm.html:11
 msgid "Delete container"
 msgstr "Tároló törlése"
@@ -3067,11 +4693,6 @@ msgstr "A naplók lemásolták a vágólapra."
 #: internal/web/templates/manager/python_node_apps.html:1225
 msgid "Failed to copy logs."
 msgstr "Nem sikerült lemásolni a naplót."
-
-#: internal/web/templates/docker/terminal.html:20
-#: internal/web/templates/docker/terminal.html:224
-msgid "Container Terminal"
-msgstr "Konténer terminál"
 
 #: internal/web/templates/docker/terminal.html:34
 msgid ""
@@ -3217,20 +4838,6 @@ msgstr ""
 "A domain betűméretét kattintással testre szabhatja (pl. "
 "SuperDomainName.com)."
 
-#: internal/web/templates/domains/capitalize.html:100
-#: internal/web/templates/domains/dns.html:187
-#: internal/web/templates/domains/dns.html:493
-#: internal/web/templates/domains/domains.html:192
-#: internal/web/templates/domains/domains.html:222
-#: internal/web/templates/domains/dynamic_dns.html:101
-#: internal/web/templates/emails/default_address.html:128
-#: internal/web/templates/files/edit_file.html:140
-#: internal/web/templates/mysql/remote_mysql.html:197
-#: internal/web/templates/system/cronjobs.html:224
-#: internal/web/templates/system/waf_domain.html:13
-msgid "Save"
-msgstr "Megtakarítás"
-
 #: internal/web/templates/domains/capitalize.html:108
 #: internal/web/templates/domains/delete.html:79
 #: internal/web/templates/domains/docroot.html:58
@@ -3357,11 +4964,6 @@ msgstr "Összes DNS rekord:"
 #: internal/web/templates/domains/dns.html:73
 msgid "New Record"
 msgstr "Új rekord"
-
-#: internal/web/templates/domains/dns.html:81
-#: internal/web/templates/domains/dns.html:93
-msgid "Edit DNS File"
-msgstr "DNS-fájl szerkesztése"
 
 #: internal/web/templates/domains/dns.html:84
 #: internal/web/templates/domains/dns.html:94
@@ -3698,10 +5300,6 @@ msgstr "A zónafájl sikeresen elmentve"
 msgid "An error occurred while saving the zone file."
 msgstr "Hiba történt a zónafájl mentése közben."
 
-#: internal/web/templates/domains/dns.html:740
-msgid "DNS Zone Editor"
-msgstr "DNS-zónaszerkesztő"
-
 #: internal/web/templates/domains/dns.html:741
 msgid ""
 "Manage and edit Domain Name System (DNS) zone files, which contain critical "
@@ -3790,10 +5388,6 @@ msgstr "SSL állapot"
 msgid "New Domain"
 msgstr "Új domain"
 
-#: internal/web/templates/domains/domains.html:128
-msgid "SSL"
-msgstr "SSL"
-
 #: internal/web/templates/domains/domains.html:137
 #: internal/web/templates/emails/deliverability.html:42
 #: internal/web/templates/php/settings.html:81
@@ -3849,10 +5443,6 @@ msgstr "Nincs szükség SSL-re a Tor hálózaton."
 msgid "Check"
 msgstr "Ellenőrzés"
 
-#: internal/web/templates/domains/domains.html:284
-msgid "Edit DNS Zone"
-msgstr "DNS-zóna szerkesztése"
-
 #: internal/web/templates/domains/domains.html:291
 msgid "Manage WAF"
 msgstr "WAF kezelése"
@@ -3870,61 +5460,6 @@ msgstr "Felfüggesztés visszavonása"
 #: internal/web/templates/emails/single_account.html:166
 msgid "Suspend"
 msgstr "Felfüggeszteni"
-
-#: internal/web/templates/domains/domains.html:327
-#: internal/web/templates/domains/dynamic_dns.html:130
-#: internal/web/templates/domains/dynamic_dns.html:135
-#: internal/web/templates/domains/dynamic_dns.html:205
-#: internal/web/templates/emails/alias_delete.html:10
-#: internal/web/templates/emails/delete.html:10
-#: internal/web/templates/emails/single_account.html:13
-#: internal/web/templates/files/clamav/quarantine.html:84
-#: internal/web/templates/files/filemanager_partials.html:262
-#: internal/web/templates/files/filemanager_partials.html:332
-#: internal/web/templates/files/filemanager_partials.html:851
-#: internal/web/templates/files/ftp.html:113
-#: internal/web/templates/files/ftp.html:131
-#: internal/web/templates/files/trash.html:57
-#: internal/web/templates/files/trash_partials.html:257
-#: internal/web/templates/manager/dokuwiki_app.html:650
-#: internal/web/templates/manager/drupal_app.html:1079
-#: internal/web/templates/manager/flarum_app.html:942
-#: internal/web/templates/manager/joomla_app.html:1054
-#: internal/web/templates/manager/matomo_app.html:979
-#: internal/web/templates/manager/mediawiki_app.html:979
-#: internal/web/templates/manager/moodle_app.html:1034
-#: internal/web/templates/manager/n8n_app.html:610
-#: internal/web/templates/manager/nextcloud_app.html:1068
-#: internal/web/templates/manager/ojs_app.html:995
-#: internal/web/templates/manager/opencart_app.html:1055
-#: internal/web/templates/manager/php_app.html:142
-#: internal/web/templates/manager/phpbb_app.html:737
-#: internal/web/templates/manager/prestashop_app.html:1039
-#: internal/web/templates/manager/python_node_apps.html:1241
-#: internal/web/templates/manager/sites.html:456
-#: internal/web/templates/manager/sites.html:493
-#: internal/web/templates/manager/sofawiki_app.html:553
-#: internal/web/templates/manager/tinyfilemanager_app.html:446
-#: internal/web/templates/manager/tinyphotogallery_app.html:448
-#: internal/web/templates/manager/websitebuilder.html:238
-#: internal/web/templates/mongodb/databases.html:157
-#: internal/web/templates/mongodb/databases.html:238
-#: internal/web/templates/mongodb/users.html:63
-#: internal/web/templates/mongodb/users.html:107
-#: internal/web/templates/mysql/databases.html:441
-#: internal/web/templates/mysql/databases.html:443
-#: internal/web/templates/mysql/remote_mysql.html:207
-#: internal/web/templates/mysql/users.html:101
-#: internal/web/templates/mysql/users.html:142
-#: internal/web/templates/psql/databases.html:223
-#: internal/web/templates/psql/databases.html:304
-#: internal/web/templates/psql/users.html:77
-#: internal/web/templates/psql/users.html:121
-#: internal/web/templates/system/cronjobs.html:236
-#: internal/web/templates/system/cronjobs.html:369
-#: internal/web/templates/user/favorites.html:83
-msgid "Delete"
-msgstr "Töröl"
 
 #: internal/web/templates/domains/domains.html:344
 msgid "0 of"
@@ -3994,10 +5529,6 @@ msgstr "Következő"
 #: internal/web/templates/domains/domains.html:463
 msgid "Add new domain"
 msgstr "Új domain hozzáadása"
-
-#: internal/web/templates/domains/dynamic_dns.html:10
-msgid "Dynamic DNS"
-msgstr "Dinamikus DNS"
 
 #: internal/web/templates/domains/dynamic_dns.html:12
 msgid "Keep DNS records in sync with changing IP addresses via a token URL."
@@ -4095,21 +5626,6 @@ msgstr "Másolva!"
 #: internal/web/templates/domains/dynamic_dns.html:194
 msgid "Copy URL"
 msgstr "URL másolása"
-
-#: internal/web/templates/domains/dynamic_dns.html:202
-#: internal/web/templates/domains/vhost.html:22
-#: internal/web/templates/domains/vhost.html:23
-#: internal/web/templates/domains/vhost.html:180
-#: internal/web/templates/files/filemanager_partials.html:277
-#: internal/web/templates/files/filemanager_partials.html:344
-#: internal/web/templates/mysql/remote_mysql.html:201
-#: internal/web/templates/system/cronjobs.html:222
-msgid "Edit"
-msgstr "Szerkesztés"
-
-#: internal/web/templates/domains/goaccess.html:11
-msgid "Visitor Statistics"
-msgstr "Látogatói statisztika"
 
 #: internal/web/templates/domains/goaccess.html:12
 msgid "View html reports generated from domain access logs."
@@ -4280,11 +5796,6 @@ msgstr "Nyilvános kulcs"
 msgid "Secret Key"
 msgstr "Titkos kulcs"
 
-#: internal/web/templates/domains/new.html:128
-#: internal/web/templates/domains/new.html:304
-msgid "Add Domain"
-msgstr "Domain hozzáadása"
-
 #: internal/web/templates/domains/new.html:217
 msgid ""
 "Paths for both public and secret files must be set for importing .onion "
@@ -4363,10 +5874,6 @@ msgstr "Az átirányítás mentése"
 msgid "Delete Redirect"
 msgstr "Az átirányítás törlése"
 
-#: internal/web/templates/domains/redirect.html:65
-msgid "Redirect Domain to URL"
-msgstr "Tartomány átirányítása URL-re"
-
 #: internal/web/templates/domains/redirect.html:66
 msgid ""
 "Redirecting a domain will immediately redirect all traffic to the new URL, "
@@ -4403,70 +5910,6 @@ msgstr "Egyedi SSL"
 #: internal/web/templates/domains/ssl.html:58
 msgid "Switch to Let's Encrypt and generate"
 msgstr "Váltás Let's Encryptre és generálás"
-
-#: internal/web/templates/domains/ssl.html:66
-#: internal/web/templates/files/clamav/quarantine.html:76
-#: internal/web/templates/manager/dokuwiki_app.html:114
-#: internal/web/templates/manager/dokuwiki_app.html:307
-#: internal/web/templates/manager/drupal_app.html:182
-#: internal/web/templates/manager/drupal_app.html:575
-#: internal/web/templates/manager/drupal_app.html:621
-#: internal/web/templates/manager/drupal_app.html:674
-#: internal/web/templates/manager/drupal_app.html:686
-#: internal/web/templates/manager/flarum_app.html:123
-#: internal/web/templates/manager/flarum_app.html:482
-#: internal/web/templates/manager/flarum_app.html:537
-#: internal/web/templates/manager/flarum_app.html:549
-#: internal/web/templates/manager/joomla_app.html:181
-#: internal/web/templates/manager/joomla_app.html:578
-#: internal/web/templates/manager/joomla_app.html:624
-#: internal/web/templates/manager/joomla_app.html:676
-#: internal/web/templates/manager/joomla_app.html:687
-#: internal/web/templates/manager/matomo_app.html:173
-#: internal/web/templates/manager/matomo_app.html:536
-#: internal/web/templates/manager/matomo_app.html:574
-#: internal/web/templates/manager/matomo_app.html:586
-#: internal/web/templates/manager/mediawiki_app.html:173
-#: internal/web/templates/manager/mediawiki_app.html:536
-#: internal/web/templates/manager/mediawiki_app.html:574
-#: internal/web/templates/manager/mediawiki_app.html:586
-#: internal/web/templates/manager/moodle_app.html:133
-#: internal/web/templates/manager/moodle_app.html:530
-#: internal/web/templates/manager/moodle_app.html:576
-#: internal/web/templates/manager/moodle_app.html:630
-#: internal/web/templates/manager/moodle_app.html:642
-#: internal/web/templates/manager/n8n_app.html:113
-#: internal/web/templates/manager/nextcloud_app.html:182
-#: internal/web/templates/manager/nextcloud_app.html:579
-#: internal/web/templates/manager/nextcloud_app.html:625
-#: internal/web/templates/manager/nextcloud_app.html:663
-#: internal/web/templates/manager/nextcloud_app.html:675
-#: internal/web/templates/manager/ojs_app.html:172
-#: internal/web/templates/manager/ojs_app.html:531
-#: internal/web/templates/manager/ojs_app.html:595
-#: internal/web/templates/manager/opencart_app.html:182
-#: internal/web/templates/manager/opencart_app.html:579
-#: internal/web/templates/manager/opencart_app.html:625
-#: internal/web/templates/manager/opencart_app.html:677
-#: internal/web/templates/manager/opencart_app.html:688
-#: internal/web/templates/manager/phpbb_app.html:114
-#: internal/web/templates/manager/phpbb_app.html:406
-#: internal/web/templates/manager/prestashop_app.html:182
-#: internal/web/templates/manager/prestashop_app.html:579
-#: internal/web/templates/manager/prestashop_app.html:625
-#: internal/web/templates/manager/prestashop_app.html:661
-#: internal/web/templates/manager/prestashop_app.html:672
-#: internal/web/templates/manager/python_node_apps.html:157
-#: internal/web/templates/manager/wp/single.html:1087
-#: internal/web/templates/manager/wp/single.html:1099
-#: internal/web/templates/manager/wp/single.html:1106
-#: internal/web/templates/manager/wp/single.html:1160
-#: internal/web/templates/manager/wp/single.html:2196
-#: internal/web/templates/mysql/remote_mysql.html:71
-#: internal/web/templates/partials/_service_js.html:35
-#: internal/web/templates/psql/remote_psql.html:81
-msgid "Unknown"
-msgstr "Ismeretlen"
 
 #: internal/web/templates/domains/ssl.html:72
 msgid "Try enabling AutoSSL"
@@ -4699,19 +6142,6 @@ msgstr "Összes e-mail:"
 msgid "New Email"
 msgstr "Új e-mail"
 
-#: internal/web/templates/emails/accounts.html:27
-#: internal/web/templates/mongodb/databases.html:85
-#: internal/web/templates/mongodb/databases.html:91
-#: internal/web/templates/mongodb/databases.html:149
-#: internal/web/templates/mysql/databases.html:326
-#: internal/web/templates/mysql/databases.html:332
-#: internal/web/templates/mysql/databases.html:390
-#: internal/web/templates/psql/databases.html:151
-#: internal/web/templates/psql/databases.html:157
-#: internal/web/templates/psql/databases.html:215
-msgid "Export"
-msgstr "Exportálás"
-
 #: internal/web/templates/emails/accounts.html:37
 msgid "Account @ Domain"
 msgstr "Számla @ Domain"
@@ -4720,13 +6150,6 @@ msgstr "Számla @ Domain"
 msgid "Storage Used"
 msgstr "Tárolás"
 
-#: internal/web/templates/emails/accounts.html:39
-#: internal/web/templates/emails/aliases.html:40
-#: internal/web/templates/emails/deliverability.html:35
-#: internal/web/templates/manager/wp/single.html:164
-msgid "Options"
-msgstr "Opciók"
-
 #: internal/web/templates/emails/accounts.html:46
 msgid "No emails yet."
 msgstr "Még nincs e-mail cím."
@@ -4734,10 +6157,6 @@ msgstr "Még nincs e-mail cím."
 #: internal/web/templates/emails/accounts.html:46
 msgid "Add your first email"
 msgstr "Adja hozzá első e-mail címét"
-
-#: internal/web/templates/emails/accounts.html:74
-msgid "Webmail"
-msgstr "Webmail"
 
 #: internal/web/templates/emails/accounts.html:76
 #: internal/web/templates/emails/aliases.html:76
@@ -4749,11 +6168,6 @@ msgstr "Webmail"
 #: internal/web/templates/partials/_service.html:52
 msgid "Manage"
 msgstr "Kezelés"
-
-#: internal/web/templates/emails/accounts.html:77
-#: internal/web/templates/emails/info.html:8
-msgid "Connect Devices"
-msgstr "Eszközök csatlakoztatása"
 
 #: internal/web/templates/emails/accounts.html:109
 msgid "Webmail for "
@@ -4929,17 +6343,9 @@ msgstr "Bármely e-mail cím lehet (ezen a szerveren vagy külső)."
 msgid "Create Alias"
 msgstr "Alias létrehozása"
 
-#: internal/web/templates/emails/aliases.html:10
-msgid "Aliases"
-msgstr "Aliasok"
-
 #: internal/web/templates/emails/aliases.html:13
 msgid "Total aliases:"
 msgstr "Aliasok összesen:"
-
-#: internal/web/templates/emails/aliases.html:28
-msgid "New Alias"
-msgstr "Új alias"
 
 #: internal/web/templates/emails/aliases.html:38
 msgid "From (alias)"
@@ -4952,11 +6358,6 @@ msgstr "Még nincs alias."
 #: internal/web/templates/emails/aliases.html:50
 msgid "Add your first alias"
 msgstr "Adja hozzá első aliasát"
-
-#: internal/web/templates/emails/confirm_import.html:8
-#: internal/web/templates/emails/import.html:8
-msgid "Import Emails"
-msgstr "E-mailek importálása"
 
 #: internal/web/templates/emails/confirm_import.html:9
 #: internal/web/templates/emails/import.html:9
@@ -5191,11 +6592,6 @@ msgstr "Válassza ki a törlendő e-mail címet."
 #: internal/web/templates/emails/filter.html:29
 msgid "Select address"
 msgstr "Cím kiválasztása"
-
-#: internal/web/templates/emails/deliverability.html:10
-#: internal/web/templates/emails/deliverability_domain.html:9
-msgid "Email Deliverability"
-msgstr "E-mail kézbesíthetőség"
 
 #: internal/web/templates/emails/deliverability.html:12
 msgid "Check SPF, DKIM and DMARC DNS records for your domains."
@@ -5512,12 +6908,6 @@ msgstr "Fájl feltöltése"
 msgid "CSV, XLSX or XLS files only."
 msgstr "CSV, XLSX vagy XLS fájlok."
 
-#: internal/web/templates/emails/import.html:40
-#: internal/web/templates/files/filemanager.html:105
-#: internal/web/templates/files/upload_file.html:106
-msgid "Upload"
-msgstr "Feltöltés"
-
 #: internal/web/templates/emails/info.html:9
 msgid "View email server information for account"
 msgstr "Az e-mail kiszolgáló adatainak megjelenítése"
@@ -5668,37 +7058,6 @@ msgstr "Közepes erősségű jelszó"
 msgid "Strong password"
 msgstr "Erős jelszó"
 
-#: internal/web/templates/emails/new.html:68
-#: internal/web/templates/emails/single_account.html:180
-#: internal/web/templates/files/ftp_new.html:50
-#: internal/web/templates/files/ftp_password.html:36
-#: internal/web/templates/manager/drupal_install.html:151
-#: internal/web/templates/manager/flarum_install.html:151
-#: internal/web/templates/manager/joomla_install.html:158
-#: internal/web/templates/manager/matomo_install.html:143
-#: internal/web/templates/manager/mediawiki_install.html:150
-#: internal/web/templates/manager/moodle_install.html:134
-#: internal/web/templates/manager/nextcloud_install.html:143
-#: internal/web/templates/manager/ojs_install.html:143
-#: internal/web/templates/manager/opencart_install.html:143
-#: internal/web/templates/manager/phpbb_install.html:159
-#: internal/web/templates/manager/prestashop_install.html:151
-#: internal/web/templates/manager/wp/install.html:124
-#: internal/web/templates/mongodb/mongodb_user.html:35
-#: internal/web/templates/mongodb/password.html:33
-#: internal/web/templates/mongodb/wizard.html:60
-#: internal/web/templates/mysql/mysql_user.html:35
-#: internal/web/templates/mysql/password.html:33
-#: internal/web/templates/mysql/root_password.html:26
-#: internal/web/templates/mysql/wizard.html:236
-#: internal/web/templates/psql/password.html:33
-#: internal/web/templates/psql/psql_user.html:35
-#: internal/web/templates/psql/wizard.html:60
-#: internal/web/templates/user/account.html:80
-#: internal/web/templates/user/reset_password/set_new_password.html:84
-msgid "Password does not meet the required strength."
-msgstr "A jelszó nem felel meg a szükséges erősségi követelménynek."
-
 #: internal/web/templates/emails/new.html:85
 #: internal/web/templates/emails/single_account.html:197
 #: internal/web/templates/manager/drupal_app.html:828
@@ -5831,14 +7190,6 @@ msgstr "Mentésfájl"
 #: internal/web/templates/files/backup_restore.html:170
 msgid "Contents"
 msgstr "Tartalom"
-
-#: internal/web/templates/files/backup_restore.html:241
-#: internal/web/templates/files/clamav/quarantine.html:82
-#: internal/web/templates/files/clamav/quarantine.html:113
-#: internal/web/templates/files/trash.html:51
-#: internal/web/templates/files/trash_partials.html:222
-msgid "Restore"
-msgstr "Visszaállítás"
 
 #: internal/web/templates/files/backup_restore.html:253
 #: internal/web/templates/files/backup_restore.html:510
@@ -6053,10 +7404,6 @@ msgstr ""
 "a pozitív egész számot, hogy lehetővé tegye a régi mentések automatikus "
 "váltását."
 
-#: internal/web/templates/files/backup_wizard.html:10
-msgid "Backup Wizard"
-msgstr "Biztonsági mentés varázsló"
-
 #: internal/web/templates/files/backup_wizard.html:12
 msgid "Create and download backups of your account."
 msgstr "Hozzon létre és töltsön le biztonsági mentéseket a fiókjáról."
@@ -6135,16 +7482,6 @@ msgstr "Nem találhatók mentések. Hozza létre az első mentést fent."
 #: internal/web/templates/files/backup_wizard.html:122
 msgid "Filename"
 msgstr "Fájlnév"
-
-#: internal/web/templates/files/backup_wizard.html:128
-#: internal/web/templates/manager/n8n_app.html:675
-#: internal/web/templates/manager/python_node_apps.html:1309
-#: internal/web/templates/manager/sites.html:209
-#: internal/web/templates/manager/websitebuilder.html:319
-#: internal/web/templates/user/activity.html:7
-#: internal/web/templates/user/mcp.html:42
-msgid "Created"
-msgstr "Létrehozva"
 
 #: internal/web/templates/files/backup_wizard.html:158
 msgid "In progress…"
@@ -6355,10 +7692,6 @@ msgstr "Megjelölve biztonságosként és visszaállítva."
 msgid "Failed"
 msgstr "Sikertelen"
 
-#: internal/web/templates/files/clamav/scanner.html:14
-msgid "Malware Scanner"
-msgstr "Kártevőkereső"
-
 #: internal/web/templates/files/clamav/scanner.html:15
 msgid ""
 "Scan files for malicious programs with the Clam AntiVirus Scanner (ClamAV) "
@@ -6421,29 +7754,6 @@ msgstr "Nem található kártevő."
 #: internal/web/templates/files/fix_permissions.html:91
 msgid "Network response was not ok"
 msgstr "A hálózati válasz nem volt rendben."
-
-#: internal/web/templates/files/disk_usage.html:15
-#: internal/web/templates/manager/dokuwiki_app.html:214
-#: internal/web/templates/manager/drupal_app.html:281
-#: internal/web/templates/manager/flarum_app.html:222
-#: internal/web/templates/manager/joomla_app.html:280
-#: internal/web/templates/manager/matomo_app.html:272
-#: internal/web/templates/manager/mediawiki_app.html:272
-#: internal/web/templates/manager/moodle_app.html:232
-#: internal/web/templates/manager/n8n_app.html:296
-#: internal/web/templates/manager/nextcloud_app.html:281
-#: internal/web/templates/manager/ojs_app.html:271
-#: internal/web/templates/manager/opencart_app.html:281
-#: internal/web/templates/manager/phpbb_app.html:213
-#: internal/web/templates/manager/prestashop_app.html:281
-#: internal/web/templates/manager/python_node_apps.html:345
-#: internal/web/templates/manager/sofawiki_app.html:205
-#: internal/web/templates/manager/tinyfilemanager_app.html:187
-#: internal/web/templates/manager/tinyphotogallery_app.html:187
-#: internal/web/templates/manager/websitebuilder.html:117
-#: internal/web/templates/manager/wp/single.html:366
-msgid "Disk Usage"
-msgstr "Lemezhasználat"
 
 #: internal/web/templates/files/disk_usage.html:17
 msgid ""
@@ -6872,11 +8182,6 @@ msgstr "A mappa neve"
 msgid "New folder will be created in:"
 msgstr "Új mappa jön létre:"
 
-#: internal/web/templates/files/fix_permissions.html:11
-#: internal/web/templates/files/fix_permissions.html:45
-msgid "Fix Permissions"
-msgstr "Engedélyek javítása"
-
 #: internal/web/templates/files/fix_permissions.html:12
 msgid "Fix and reset permissions for files and folders under"
 msgstr "A fájlok és mappák engedélyeinek javítása és újraindítása"
@@ -6944,10 +8249,6 @@ msgstr "UID"
 msgid "GID"
 msgstr "GID"
 
-#: internal/web/templates/files/ftp.html:63
-msgid "Configuration"
-msgstr "Beállítás"
-
 #: internal/web/templates/files/ftp.html:74
 msgid "No accounts yet."
 msgstr "Még nincs fiók."
@@ -6956,18 +8257,6 @@ msgstr "Még nincs fiók."
 msgid "Add your first account"
 msgstr "Adja hozzá első fiókját"
 
-#: internal/web/templates/files/ftp.html:106
-#: internal/web/templates/mongodb/password.html:81
-#: internal/web/templates/mongodb/users.html:59
-#: internal/web/templates/mysql/password.html:116
-#: internal/web/templates/mysql/root_password.html:103
-#: internal/web/templates/mysql/users.html:96
-#: internal/web/templates/psql/password.html:81
-#: internal/web/templates/psql/users.html:73
-#: internal/web/templates/user/reset_password/set_new_password.html:57
-msgid "Change Password"
-msgstr "Jelszó módosítása"
-
 #: internal/web/templates/files/ftp.html:108
 msgid "Change Path"
 msgstr "Útvonal módosítása"
@@ -6975,10 +8264,6 @@ msgstr "Útvonal módosítása"
 #: internal/web/templates/files/ftp.html:179
 msgid "Add new FTP account"
 msgstr "Új FTP fiók hozzáadása"
-
-#: internal/web/templates/files/ftp_connections.html:9
-msgid "FTP Connections"
-msgstr "FTP kapcsolatok"
 
 #: internal/web/templates/files/ftp_connections.html:10
 msgid "Current FTP sessions of all sub-accounts."
@@ -6995,10 +8280,6 @@ msgstr "Nincs aktív kapcsolat"
 #: internal/web/templates/files/ftp_connections.html:28
 msgid "There are no active FTP sessions at this time."
 msgstr "Jelenleg nincs aktív FTP munkamenet."
-
-#: internal/web/templates/files/ftp_new.html:9
-msgid "New FTP Account"
-msgstr "Új FTP-számla"
 
 #: internal/web/templates/files/ftp_new.html:10
 msgid "Create a new FTP account."
@@ -7023,10 +8304,6 @@ msgstr "Útvonal (mappa)"
 #: internal/web/templates/files/ftp_new.html:170
 msgid "Back to FTP Accounts"
 msgstr "Vissza az FTP számlákra"
-
-#: internal/web/templates/files/ftp_new.html:172
-msgid "Create Account"
-msgstr "Fiók létrehozása"
 
 #: internal/web/templates/files/ftp_password.html:10
 msgid "FTP Password"
@@ -7110,10 +8387,6 @@ msgstr "Elérésiút-bejárás (../) nem engedélyezett"
 msgid "Path must be under"
 msgstr "Az útvonalnak a következő szinten kell lennie:"
 
-#: internal/web/templates/files/inodes.html:12
-msgid "Inode Usage"
-msgstr "Inode-használat"
-
 #: internal/web/templates/files/inodes.html:14
 msgid ""
 "An inode is a data structure that keeps the information about a file on your"
@@ -7142,10 +8415,6 @@ msgstr "Az inódák számítása a szülőkönyvtár számára.."
 #: internal/web/templates/files/inodes.html:168
 msgid "Failed to fetch"
 msgstr "Nem sikerült elhozni"
-
-#: internal/web/templates/files/trash.html:32
-msgid "Trash"
-msgstr "Szemét"
 
 #: internal/web/templates/files/trash.html:48
 #: internal/web/templates/files/trash_partials.html:128
@@ -7180,10 +8449,6 @@ msgstr "Törölt"
 #: internal/web/templates/files/trash_partials.html:202
 msgid "Restore items"
 msgstr "A tételek visszaállítása"
-
-#: internal/web/templates/files/upload_file.html:11
-msgid "File Upload"
-msgstr "Fájl feltöltése"
 
 #: internal/web/templates/files/upload_file.html:103
 msgid "Download from URL instead"
@@ -7835,10 +9100,6 @@ msgstr "A kapcsolat megszakadt a telepítés közben."
 msgid "Fetch error. Please try again."
 msgstr "Hiba történt. Kérem, próbálja újra."
 
-#: internal/web/templates/manager/autoinstaller.html:8
-msgid "Install App"
-msgstr "Alkalmazás telepítése"
-
 #: internal/web/templates/manager/autoinstaller.html:9
 msgid "Quickly install a variety of applications such as"
 msgstr "Gyorsan telepítse a különböző alkalmazások, mint például"
@@ -7907,11 +9168,6 @@ msgid ""
 msgstr ""
 "Ez az alkalmazás le van tiltva a csomagjában. Az engedélyezéshez forduljon a"
 " rendszergazdához."
-
-#: internal/web/templates/manager/autoinstaller.html:32
-#: internal/web/templates/manager/wp/list.html:194
-msgid "WordPress"
-msgstr "WordPress"
 
 #: internal/web/templates/manager/autoinstaller.html:36
 msgid "WordPress content management system (CMS)."
@@ -7996,11 +9252,6 @@ msgstr "meglévő létesítmény"
 msgid "s"
 msgstr "sz"
 
-#: internal/web/templates/manager/autoinstaller.html:47
-#: internal/web/templates/manager/wp/install.html:9
-msgid "Install WordPress"
-msgstr "Telepítse a WordPress-t"
-
 #: internal/web/templates/manager/autoinstaller.html:64
 msgid "Joomla"
 msgstr "Joomla"
@@ -8009,11 +9260,6 @@ msgstr "Joomla"
 msgid "Joomla content management system (CMS)."
 msgstr "Joomla tartalomkezelő rendszer (CMS)."
 
-#: internal/web/templates/manager/autoinstaller.html:79
-#: internal/web/templates/manager/joomla_install.html:9
-msgid "Install Joomla"
-msgstr "Joomla telepítése"
-
 #: internal/web/templates/manager/autoinstaller.html:96
 msgid "Drupal"
 msgstr "Drupal"
@@ -8021,11 +9267,6 @@ msgstr "Drupal"
 #: internal/web/templates/manager/autoinstaller.html:100
 msgid "Drupal content management system (CMS)."
 msgstr "Drupal tartalomkezelő rendszer (CMS)."
-
-#: internal/web/templates/manager/autoinstaller.html:111
-#: internal/web/templates/manager/drupal_install.html:9
-msgid "Install Drupal"
-msgstr "Drupal telepítése"
 
 #: internal/web/templates/manager/autoinstaller.html:130
 #: internal/web/templates/manager/sites.html:243
@@ -8036,10 +9277,6 @@ msgstr "Weboldal Builder"
 #: internal/web/templates/manager/autoinstaller.html:134
 msgid "Drag-and-drop HTML website builder."
 msgstr "Húzd-és-ejtsd HTML weboldalépítő."
-
-#: internal/web/templates/manager/autoinstaller.html:145
-msgid "Create Website"
-msgstr "Webhely létrehozása"
 
 #: internal/web/templates/manager/autoinstaller.html:152
 msgid "E-commerce"
@@ -8053,11 +9290,6 @@ msgstr "PrestaShop"
 msgid "PrestaShop e-commerce platform."
 msgstr "PrestaShop e-kereskedelmi platform."
 
-#: internal/web/templates/manager/autoinstaller.html:183
-#: internal/web/templates/manager/prestashop_install.html:9
-msgid "Install PrestaShop"
-msgstr "PrestaShop telepítése"
-
 #: internal/web/templates/manager/autoinstaller.html:200
 msgid "OpenCart"
 msgstr "OpenCart"
@@ -8065,11 +9297,6 @@ msgstr "OpenCart"
 #: internal/web/templates/manager/autoinstaller.html:204
 msgid "OpenCart e-commerce platform."
 msgstr "OpenCart e-kereskedelmi platform."
-
-#: internal/web/templates/manager/autoinstaller.html:215
-#: internal/web/templates/manager/opencart_install.html:9
-msgid "Install OpenCart"
-msgstr "OpenCart telepítése"
 
 #: internal/web/templates/manager/autoinstaller.html:222
 msgid "Forums"
@@ -8083,11 +9310,6 @@ msgstr "phpBB"
 msgid "phpBB forum software."
 msgstr "phpBB fórumszoftver."
 
-#: internal/web/templates/manager/autoinstaller.html:253
-#: internal/web/templates/manager/phpbb_install.html:9
-msgid "Install phpBB"
-msgstr "phpBB telepítése"
-
 #: internal/web/templates/manager/autoinstaller.html:285
 #: internal/web/templates/manager/flarum_install.html:39
 msgid "Flarum"
@@ -8096,11 +9318,6 @@ msgstr "Flarum"
 #: internal/web/templates/manager/autoinstaller.html:289
 msgid "Flarum forum software."
 msgstr "Flarum fórumszoftver."
-
-#: internal/web/templates/manager/autoinstaller.html:300
-#: internal/web/templates/manager/flarum_install.html:9
-msgid "Install Flarum"
-msgstr "Flarum telepítése"
 
 #: internal/web/templates/manager/autoinstaller.html:307
 msgid "Wikis"
@@ -8114,11 +9331,6 @@ msgstr "MediaWiki"
 msgid "MediaWiki wiki platform."
 msgstr "MediaWiki wiki platform."
 
-#: internal/web/templates/manager/autoinstaller.html:338
-#: internal/web/templates/manager/mediawiki_install.html:9
-msgid "Install MediaWiki"
-msgstr "MediaWiki telepítése"
-
 #: internal/web/templates/manager/autoinstaller.html:355
 msgid "DokuWiki"
 msgstr "DokuWiki"
@@ -8128,11 +9340,6 @@ msgid ""
 "File-based wiki software with versioned releases and no database required."
 msgstr "Fájlalapú wiki szoftver verziózott kiadásokkal, adatbázis nélkül."
 
-#: internal/web/templates/manager/autoinstaller.html:370
-#: internal/web/templates/manager/dokuwiki_install.html:9
-msgid "Install DokuWiki"
-msgstr "DokuWiki telepítése"
-
 #: internal/web/templates/manager/autoinstaller.html:387
 msgid "SofaWiki"
 msgstr "SofaWiki"
@@ -8140,11 +9347,6 @@ msgstr "SofaWiki"
 #: internal/web/templates/manager/autoinstaller.html:391
 msgid "File-based wiki software, no database required."
 msgstr "Fájlalapú wiki szoftver, adatbázis nélkül."
-
-#: internal/web/templates/manager/autoinstaller.html:402
-#: internal/web/templates/manager/sofawiki_install.html:9
-msgid "Install SofaWiki"
-msgstr "SofaWiki telepítése"
 
 #: internal/web/templates/manager/autoinstaller.html:409
 msgid "Marketing & Analytics"
@@ -8158,11 +9360,6 @@ msgstr "Matomo"
 msgid "Matomo web analytics platform."
 msgstr "Matomo webanalitikai platform."
 
-#: internal/web/templates/manager/autoinstaller.html:440
-#: internal/web/templates/manager/matomo_install.html:9
-msgid "Install Matomo"
-msgstr "Matomo telepítése"
-
 #: internal/web/templates/manager/autoinstaller.html:447
 msgid "File Management"
 msgstr "Fájlkezelés"
@@ -8175,11 +9372,6 @@ msgstr "Nextcloud"
 msgid "Nextcloud file sync and collaboration platform."
 msgstr "Nextcloud fájlszinkronizáló és együttműködési platform."
 
-#: internal/web/templates/manager/autoinstaller.html:478
-#: internal/web/templates/manager/nextcloud_install.html:9
-msgid "Install Nextcloud"
-msgstr "Nextcloud telepítése"
-
 #: internal/web/templates/manager/autoinstaller.html:495
 msgid "TinyPhotoGallery"
 msgstr "TinyPhotoGallery"
@@ -8187,11 +9379,6 @@ msgstr "TinyPhotoGallery"
 #: internal/web/templates/manager/autoinstaller.html:499
 msgid "Single-file photo gallery, no database required."
 msgstr "Egyfájlos fotógaléria, adatbázis nélkül."
-
-#: internal/web/templates/manager/autoinstaller.html:510
-#: internal/web/templates/manager/tinyphotogallery_install.html:9
-msgid "Install TinyPhotoGallery"
-msgstr "TinyPhotoGallery telepítése"
 
 #: internal/web/templates/manager/autoinstaller.html:527
 msgid "TinyFileManager"
@@ -8203,11 +9390,6 @@ msgid ""
 "required."
 msgstr ""
 "Egyfájlos webalapú fájlkezelő bejelentkezési védelemmel, adatbázis nélkül."
-
-#: internal/web/templates/manager/autoinstaller.html:542
-#: internal/web/templates/manager/tinyfilemanager_install.html:9
-msgid "Install TinyFileManager"
-msgstr "TinyFileManager telepítése"
 
 #: internal/web/templates/manager/autoinstaller.html:549
 msgid "Education"
@@ -8221,11 +9403,6 @@ msgstr "Moodle"
 msgid "Moodle learning management system (LMS)."
 msgstr "Moodle tanulásirányítási rendszer (LMS)."
 
-#: internal/web/templates/manager/autoinstaller.html:580
-#: internal/web/templates/manager/moodle_install.html:9
-msgid "Install Moodle"
-msgstr "Moodle telepítése"
-
 #: internal/web/templates/manager/autoinstaller.html:597
 msgid "Open Journal Systems (OJS)"
 msgstr "Open Journal Systems (OJS)"
@@ -8235,11 +9412,6 @@ msgid "Open source software for managing and publishing scholarly journals."
 msgstr ""
 "Nyílt forráskódú szoftver tudományos folyóiratok kezeléséhez és "
 "publikálásához."
-
-#: internal/web/templates/manager/autoinstaller.html:612
-#: internal/web/templates/manager/ojs_install.html:9
-msgid "Install OJS"
-msgstr "OJS telepítése"
 
 #: internal/web/templates/manager/autoinstaller.html:619
 msgid "Developer Runtimes"
@@ -8312,30 +9484,6 @@ msgstr "Futó konténerek megtekintése"
 #: internal/web/templates/manager/autoinstaller.html:842
 msgid "Run Container"
 msgstr "Konténer futtatása"
-
-#: internal/web/templates/manager/dokuwiki_app.html:38
-#: internal/web/templates/manager/drupal_app.html:87
-#: internal/web/templates/manager/flarum_app.html:38
-#: internal/web/templates/manager/joomla_app.html:87
-#: internal/web/templates/manager/matomo_app.html:87
-#: internal/web/templates/manager/mediawiki_app.html:87
-#: internal/web/templates/manager/moodle_app.html:38
-#: internal/web/templates/manager/n8n_app.html:45
-#: internal/web/templates/manager/nextcloud_app.html:87
-#: internal/web/templates/manager/ojs_app.html:87
-#: internal/web/templates/manager/opencart_app.html:87
-#: internal/web/templates/manager/php_app.html:44
-#: internal/web/templates/manager/php_app.html:82
-#: internal/web/templates/manager/phpbb_app.html:38
-#: internal/web/templates/manager/prestashop_app.html:87
-#: internal/web/templates/manager/python_node_apps.html:45
-#: internal/web/templates/manager/sofawiki_app.html:38
-#: internal/web/templates/manager/tinyfilemanager_app.html:38
-#: internal/web/templates/manager/tinyphotogallery_app.html:38
-#: internal/web/templates/manager/websitebuilder.html:46
-#: internal/web/templates/manager/wp/single.html:154
-msgid "Overview"
-msgstr "Áttekintés"
 
 #: internal/web/templates/manager/dokuwiki_app.html:56
 #: internal/web/templates/manager/drupal_app.html:123
@@ -8558,28 +9706,6 @@ msgstr "A mappa mérete:"
 #: internal/web/templates/manager/wp/single.html:380
 msgid "Open folder in Disk Usage Explorer"
 msgstr "Mappa megnyitása a Lemezhasználat-böngészőben"
-
-#: internal/web/templates/manager/dokuwiki_app.html:235
-#: internal/web/templates/manager/drupal_app.html:302
-#: internal/web/templates/manager/flarum_app.html:243
-#: internal/web/templates/manager/joomla_app.html:301
-#: internal/web/templates/manager/matomo_app.html:293
-#: internal/web/templates/manager/mediawiki_app.html:293
-#: internal/web/templates/manager/moodle_app.html:253
-#: internal/web/templates/manager/n8n_app.html:306
-#: internal/web/templates/manager/nextcloud_app.html:302
-#: internal/web/templates/manager/ojs_app.html:292
-#: internal/web/templates/manager/opencart_app.html:302
-#: internal/web/templates/manager/phpbb_app.html:234
-#: internal/web/templates/manager/prestashop_app.html:302
-#: internal/web/templates/manager/python_node_apps.html:355
-#: internal/web/templates/manager/sofawiki_app.html:226
-#: internal/web/templates/manager/tinyfilemanager_app.html:208
-#: internal/web/templates/manager/tinyphotogallery_app.html:208
-#: internal/web/templates/manager/websitebuilder.html:127
-#: internal/web/templates/manager/wp/single.html:387
-msgid "Inodes Explorer"
-msgstr "Inodes Explorer"
 
 #: internal/web/templates/manager/dokuwiki_app.html:249
 #: internal/web/templates/manager/drupal_app.html:316
@@ -11015,12 +12141,6 @@ msgstr "Memóriahatárérték:"
 msgid "Manage Containers"
 msgstr "Kezelhető konténerek"
 
-#: internal/web/templates/manager/n8n_app.html:165
-#: internal/web/templates/manager/python_node_apps.html:214
-#: internal/web/templates/partials/_footer.html:45
-msgid "Start"
-msgstr "Kezdés"
-
 #: internal/web/templates/manager/n8n_app.html:170
 #: internal/web/templates/manager/python_node_apps.html:219
 msgid "Starting application. Please wait."
@@ -11037,11 +12157,6 @@ msgstr "Az alkalmazás sikeresen megkezdődött."
 #: internal/web/templates/manager/python_node_apps.html:236
 msgid "Error starting application."
 msgstr "Hiba történt az alkalmazás elindítása közben."
-
-#: internal/web/templates/manager/n8n_app.html:195
-#: internal/web/templates/manager/python_node_apps.html:244
-msgid "Stop"
-msgstr "Állj!"
 
 #: internal/web/templates/manager/n8n_app.html:200
 #: internal/web/templates/manager/python_node_apps.html:249
@@ -11559,10 +12674,6 @@ msgstr "A kérés sikertelen."
 #: internal/web/templates/manager/php_app.html:234
 msgid "Failed to load logs."
 msgstr "Nem sikerült betölteni a naplókat."
-
-#: internal/web/templates/manager/php_install.html:9
-msgid "Install PHP Application"
-msgstr "PHP alkalmazás telepítése"
 
 #: internal/web/templates/manager/php_install.html:10
 #: internal/web/templates/manager/php_install.html:217
@@ -13778,13 +14889,6 @@ msgstr "WordPress frissítve sikeresen."
 msgid "Update failed."
 msgstr "A frissítés sikertelen."
 
-#: internal/web/templates/mongodb/assign.html:8
-#: internal/web/templates/mongodb/assign.html:55
-#: internal/web/templates/psql/assign.html:8
-#: internal/web/templates/psql/assign.html:46
-msgid "Assign User to Database"
-msgstr "Felhasználó hozzárendelése az adatbázishoz"
-
 #: internal/web/templates/mongodb/assign.html:9
 msgid ""
 "Grant a MongoDB user a role scoped to a database, enabling access for "
@@ -13842,10 +14946,6 @@ msgstr "Szerepkör kiválasztása:"
 #: internal/web/templates/psql/wizard.html:114
 msgid "Back to Databases"
 msgstr "Vissza az adatbázisokhoz"
-
-#: internal/web/templates/mongodb/databases.html:9
-msgid "MongoDB Databases"
-msgstr "MongoDB-adatbázisok"
 
 #: internal/web/templates/mongodb/databases.html:14
 #: internal/web/templates/mysql/databases.html:14
@@ -13906,12 +15006,6 @@ msgstr "Nem elérhető, amíg a szolgáltatás nem fut."
 #: internal/web/templates/psql/databases.html:134
 msgid "System Database"
 msgstr "Rendszeradatbázis"
-
-#: internal/web/templates/mongodb/databases.html:79
-#: internal/web/templates/mysql/databases.html:318
-#: internal/web/templates/psql/databases.html:145
-msgid "Import"
-msgstr "Importálás"
 
 #: internal/web/templates/mongodb/databases.html:103
 #: internal/web/templates/mysql/databases.html:344
@@ -14137,16 +15231,6 @@ msgstr "Válasszon felhasználónevet"
 msgid "Select a Database"
 msgstr "Válasszon adatbázist"
 
-#: internal/web/templates/mongodb/remove.html:55
-#: internal/web/templates/mysql/remove.html:51
-#: internal/web/templates/psql/remove.html:46
-msgid "Remove User from Database"
-msgstr "Felhasználó eltávolítása az adatbázisból"
-
-#: internal/web/templates/mongodb/users.html:9
-msgid "MongoDB Users"
-msgstr "MongoDB-felhasználók"
-
 #: internal/web/templates/mongodb/users.html:10
 #: internal/web/templates/mysql/users.html:10
 #: internal/web/templates/psql/users.html:10
@@ -14268,10 +15352,6 @@ msgstr "Válasszon jogosultságokat:"
 msgid "Make Changes"
 msgstr "Változtatások elvégzése"
 
-#: internal/web/templates/mysql/configuration.html:14
-msgid "MySQL Configuration"
-msgstr "MySQL konfiguráció"
-
 #: internal/web/templates/mysql/configuration.html:15
 msgid ""
 "View and modify the MySQL service configuration. Any changes will restart "
@@ -14287,6 +15367,25 @@ msgstr "További információk"
 #: internal/web/templates/mysql/configuration.html:15
 msgid "read the documentation"
 msgstr "olvasd el a dokumentációt"
+
+#: internal/web/templates/mysql/configuration.html:30
+#: internal/web/templates/psql/configuration.html:30
+msgid "Optimize Database"
+msgstr "Adatbázis optimalizálása"
+
+#: internal/web/templates/mysql/configuration.html:30
+#: internal/web/templates/psql/configuration.html:30
+msgid ""
+"Want to improve your database's performance? Click the optimize icon next to"
+" a setting to see a custom recommendation."
+msgstr ""
+"Szeretné javítani az adatbázis teljesítményét? Kattintson a beállítás "
+"melletti optimalizálás ikonra egyéni javaslatért."
+
+#: internal/web/templates/mysql/configuration.html:30
+#: internal/web/templates/psql/configuration.html:30
+msgid "Checking your database for possible optimizations..."
+msgstr "Az adatbázis lehetséges optimalizálásainak ellenőrzése..."
 
 #: internal/web/templates/mysql/configuration.html:37
 #: internal/web/templates/psql/configuration.html:37
@@ -14331,11 +15430,6 @@ msgstr "Optimalizálás"
 #: internal/web/templates/mysql/databases.html:591
 msgid "Repair"
 msgstr "Javítás"
-
-#: internal/web/templates/mysql/databases.html:431
-#: internal/web/templates/mysql/phpmyadmin_unavailable.html:6
-msgid "phpMyAdmin"
-msgstr "phpMyAdmin"
 
 #: internal/web/templates/mysql/databases.html:582
 msgid "Loading tables..."
@@ -14665,10 +15759,6 @@ msgstr ""
 msgid "Credentials"
 msgstr "Hitelesítő adatok"
 
-#: internal/web/templates/mysql/wizard.html:74
-msgid "Server"
-msgstr "Szerver"
-
 #: internal/web/templates/mysql/wizard.html:128
 msgid "Configuration Code"
 msgstr "Konfigurációs kód"
@@ -14799,10 +15889,6 @@ msgstr "Kijelentkezés"
 #: internal/web/templates/partials/_header.html:12
 msgid "Toggle Sidebar"
 msgstr "Oldalsáv be/ki"
-
-#: internal/web/templates/partials/_header.html:81
-msgid "Services"
-msgstr "Szolgáltatások"
 
 #: internal/web/templates/partials/_header.html:86
 msgid "Caching"
@@ -15117,10 +16203,6 @@ msgstr ""
 msgid "Theme"
 msgstr "Téma"
 
-#: internal/web/templates/php/default.html:7
-msgid "Default PHP version"
-msgstr "Alapértelmezett PHP verzió"
-
 #: internal/web/templates/php/default.html:17
 msgid ""
 "OpenLiteSpeed uses one PHP version for all domains. Changing it restarts the"
@@ -15232,10 +16314,6 @@ msgstr "Nem sikerült elindítani a telepítést."
 msgid "An extension install is in progress for this PHP version..."
 msgstr "Egy kiterjesztés telepítése van folyamatban ehhez a PHP verzióhoz..."
 
-#: internal/web/templates/php/extensions.html:229
-msgid "PHP Extensions"
-msgstr "PHP kiterjesztések"
-
 #: internal/web/templates/php/extensions.html:230
 msgid "Enable, disable, or install PHP extensions per PHP version."
 msgstr ""
@@ -15265,10 +16343,6 @@ msgstr "PHP-konfiguráció"
 msgid "No PHP information available."
 msgstr "Nem érhető el PHP-információ."
 
-#: internal/web/templates/php/ini_editor.html:57
-msgid "PHP.INI Editor"
-msgstr "PHP.INI szerkesztő"
-
 #: internal/web/templates/php/ini_editor.html:58
 msgid "Select a PHP version to edit its php.ini file directly."
 msgstr ""
@@ -15284,6 +16358,22 @@ msgid ""
 msgstr ""
 "Opciók szerkesztése ehhez a PHP verzióhoz. Minden változás újraindítja a "
 "szolgáltatást."
+
+#: internal/web/templates/php/options.html:31
+msgid "Optimize PHP"
+msgstr "PHP optimalizálása"
+
+#: internal/web/templates/php/options.html:31
+msgid ""
+"Want to improve how your sites run on this PHP version? Click the optimize "
+"icon next to an option to see a custom recommendation."
+msgstr ""
+"Szeretné javítani, hogyan futnak az oldalai ezen a PHP-verzión? Kattintson "
+"az opció melletti optimalizálás ikonra egyéni javaslatért."
+
+#: internal/web/templates/php/options.html:31
+msgid "Checking this PHP version for possible optimizations..."
+msgstr "A PHP-verzió lehetséges optimalizálásainak ellenőrzése..."
 
 #: internal/web/templates/php/options.html:39
 msgid "Option"
@@ -15355,10 +16445,6 @@ msgstr ""
 "kezelje az adatbázis jogosultságait, és hozzáférést biztosítson a "
 "végrehajtási lekérdezésekhez, a táblázatok módosításához vagy az adatok "
 "kezeléséhez a megadott adatbázison belül."
-
-#: internal/web/templates/psql/configuration.html:13
-msgid "PostgreSQL Configuration"
-msgstr "PostgreSQL konfiguráció"
 
 #: internal/web/templates/psql/configuration.html:14
 msgid ""
@@ -15492,10 +16578,6 @@ msgstr ""
 "visszavonja jogosultságait, és megakadályozza a hozzáférést a végrehajtó "
 "lekérdezésekhez, a módosító táblázatokhoz vagy a megadott adatbázison belüli"
 " adatok kezeléséhez."
-
-#: internal/web/templates/psql/users.html:9
-msgid "PostgreSQL Users"
-msgstr "PostgreSQL felhasználók"
 
 #: internal/web/templates/psql/wizard.html:9
 msgid ""
@@ -15866,10 +16948,6 @@ msgstr "Az OpenPanel Enterprise licenckulcs érvénytelen!"
 msgid "Verify License"
 msgstr "Licenc ellenőrzése"
 
-#: internal/web/templates/system/process_manager.html:12
-msgid "Process Manager"
-msgstr "Folyamatkezelő"
-
 #: internal/web/templates/system/process_manager.html:13
 msgid "View and manage currently running processes on the server."
 msgstr "A szerveren jelenleg futó folyamatok megtekintése és kezelése."
@@ -15992,10 +17070,6 @@ msgstr "PID kilövése:"
 msgid "failed"
 msgstr "sikertelen"
 
-#: internal/web/templates/system/server_info.html:8
-msgid "Server Information"
-msgstr "Szerver információ"
-
 #: internal/web/templates/system/server_info.html:9
 msgid "View current server specification and system usage."
 msgstr ""
@@ -16115,10 +17189,6 @@ msgid "Enabled Features"
 msgstr "Engedélyezett jellemzők"
 
 #: internal/web/templates/system/services.html:11
-msgid "Choose Service"
-msgstr "Válassza a Szolgáltatás lehetőséget"
-
-#: internal/web/templates/system/services.html:11
 msgid "Manage Service"
 msgstr "Kezelés"
 
@@ -16133,10 +17203,6 @@ msgstr "Kezelése szolgáltatás és megtekintheti real-time erőforrás haszná
 #: internal/web/templates/system/services.html:74
 msgid "Name for accessing the service from other containers."
 msgstr "A szolgáltatás más konténerekből történő igénybevételének neve."
-
-#: internal/web/templates/system/waf.html:19
-msgid "Web Firewall"
-msgstr "Webes tűzfal"
 
 #: internal/web/templates/system/waf.html:20
 msgid ""
@@ -16192,22 +17258,9 @@ msgstr "Adja meg a címkéket, szóközzel elválasztva"
 msgid "WAF Logs for"
 msgstr "WAF naplók"
 
-#: internal/web/templates/system/waf_logs.html:267
-msgid "WAF Logs"
-msgstr "WAF naplók"
-
 #: internal/web/templates/system/waf_logs.html:268
 msgid "View Coraza WAF logs for domains."
 msgstr "Tekintse Coraza WAF naplók domainek."
-
-#: internal/web/templates/user/_login.html:102
-#: internal/web/templates/user/locale.html:10
-msgid "Change Language"
-msgstr "Nyelv módosítása"
-
-#: internal/web/templates/user/account.html:10
-msgid "Email & Password"
-msgstr "E-mail és jelszó"
 
 #: internal/web/templates/user/account.html:11
 msgid ""
@@ -16225,10 +17278,6 @@ msgid ""
 msgstr ""
 "A felhasználónévnek 3 és 20 karakter között kell lennie, és csak betűket és "
 "számokat tartalmazhat (szóközök, kötőjelek vagy aláhúzások nélkül)."
-
-#: internal/web/templates/user/active_sessions.html:10
-msgid "Active Sessions"
-msgstr "Aktív munkamenetek"
 
 #: internal/web/templates/user/active_sessions.html:11
 msgid "View all currently active sessions for your account."
@@ -16253,10 +17302,6 @@ msgstr "Romboló"
 #: internal/web/templates/user/activity.html:9
 msgid "Changed"
 msgstr "Módosított"
-
-#: internal/web/templates/user/activity.html:27
-msgid "Activity Log"
-msgstr "Tevékenységi napló"
 
 #: internal/web/templates/user/activity.html:31
 msgid "Search results for:"
@@ -16477,10 +17522,6 @@ msgstr ""
 "A jelszókulcsok használatához ezt a panelt HTTPS-en keresztül, domainnévvel "
 "kell elérni."
 
-#: internal/web/templates/user/loginlog.html:10
-msgid "Login History"
-msgstr "Bejelentkezési előzmények"
-
 #: internal/web/templates/user/loginlog.html:11
 msgid "Overview of successful logins on your account."
 msgstr "A sikeres bejelentkezések áttekintése az Ön számláján."
@@ -16639,10 +17680,6 @@ msgstr "Claude Code CLI"
 msgid "Claude Desktop (claude_desktop_config.json)"
 msgstr "Claude Desktop (claude_desktop_config.json)"
 
-#: internal/web/templates/user/notifications.html:40
-msgid "Email Notifications"
-msgstr "E-mail értesítések"
-
 #: internal/web/templates/user/notifications.html:42
 msgid ""
 "Security alerts help you spot unwanted changes early, usage alerts warn you "
@@ -16667,10 +17704,6 @@ msgstr "A beállítások mentése"
 #: internal/web/templates/user/notifications.html:69
 msgid "Email me"
 msgstr "Küldjön e-mailt"
-
-#: internal/web/templates/user/passkeys.html:10
-msgid "Passkeys"
-msgstr "Jelszókulcsok"
 
 #: internal/web/templates/user/passkeys.html:11
 msgid ""
@@ -16738,10 +17771,6 @@ msgstr "A link újraindítása"
 #: internal/web/templates/user/reset_password/set_new_password.html:7
 msgid "Reset Your Password"
 msgstr "A jelszó újraindítása"
-
-#: internal/web/templates/user/stats.html:16
-msgid "Resource Usage"
-msgstr "Erőforrás-használat"
 
 #: internal/web/templates/user/stats.html:18
 msgid "View current resource usage for all websites and services."

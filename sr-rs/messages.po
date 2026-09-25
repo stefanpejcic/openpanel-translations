@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.10\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-09-25 22:34+0200\n"
+"POT-Creation-Date: 2026-09-25 22:48+0200\n"
 "PO-Revision-Date: 2026-06-24 19:00+0200\n"
 "Last-Translator: Stefan Pejčić <stefan@pejcic.rs>\n"
 "Language-Team: Serbian (Latin) <LL@li.org>\n"
@@ -95,6 +95,14 @@ msgstr "Passkey je uklonjen."
 msgid "Passkey not found."
 msgstr "Passkey nije pronađen."
 
+#: internal/modules/account/locale.go:48
+msgid "Language changed from %(old_locale)s to %(locale)s"
+msgstr "Jezik je promenjen sa %(old_locale)s na %(locale)s"
+
+#: internal/modules/account/locale.go:50
+msgid "Language changed to %(locale)s"
+msgstr "Jezik je promenjen na %(locale)s"
+
 #: internal/modules/account/login.go:133
 #: internal/web/templates/manager/dokuwiki_app.html:283
 msgid "Login"
@@ -124,16 +132,21 @@ msgstr "Automatska prijava nije uspela: Nevažeći ili istekao token."
 msgid "Autologin failed: User does not exist."
 msgstr "Automatska prijava nije uspela: Korisnik ne postoji."
 
-#: internal/modules/account/mcp.go:61
+#: internal/modules/account/mcp.go:62
 msgid "Could not create token: database is unavailable. Please try again."
 msgstr ""
 "Nije moguće kreirati token: baza podataka nije dostupna. Pokušajte ponovo."
 
-#: internal/modules/account/mcp.go:111
+#: internal/modules/account/mcp.go:84
+msgid "Token \"%(name)s\" created. Copy it below - it will not be shown again."
+msgstr ""
+"Token \"%(name)s\" je kreiran. Kopirajte ga ispod - više neće biti prikazan."
+
+#: internal/modules/account/mcp.go:112
 msgid "Token revoked."
 msgstr "Token je opozvan."
 
-#: internal/modules/account/mcp.go:113
+#: internal/modules/account/mcp.go:114
 msgid "Token not found."
 msgstr "Token nije pronađen."
 
@@ -427,7 +440,13 @@ msgstr "Sesija je uspešno prekinuta."
 msgid "Failed to terminate session or session already expired."
 msgstr "Prekidanje sesije nije uspelo ili je sesija već istekla."
 
-#: internal/modules/account/settings.go:115
+#: internal/modules/account/settings.go:116
+#: internal/modules/emails/emails.go:368 internal/modules/mongodb/users.go:85
+#: internal/modules/mongodb/users.go:179 internal/modules/mongodb/wizard.go:67
+#: internal/modules/mysql/users.go:94 internal/modules/mysql/users.go:202
+#: internal/modules/postgresql/users.go:96
+#: internal/modules/postgresql/users.go:202
+#: internal/modules/postgresql/wizard.go:65
 #: internal/web/templates/emails/new.html:68
 #: internal/web/templates/emails/single_account.html:180
 #: internal/web/templates/files/ftp_new.html:50
@@ -459,11 +478,19 @@ msgstr "Prekidanje sesije nije uspelo ili je sesija već istekla."
 msgid "Password does not meet the required strength."
 msgstr "Lozinka ne ispunjava zahtevanu jačinu."
 
-#: internal/modules/account/settings.go:148
+#: internal/modules/account/settings.go:149
 msgid "Username must be 3-20 characters, letters and numbers only."
 msgstr "Korisničko ime mora imati 3-20 karaktera, samo slova i brojevi."
 
-#: internal/modules/account/settings.go:172
+#: internal/modules/account/settings.go:157
+msgid ""
+"Username has been changed successfully from %(current_username)s to "
+"%(new_username)s."
+msgstr ""
+"Korisničko ime je uspešno promenjeno sa %(current_username)s na "
+"%(new_username)s."
+
+#: internal/modules/account/settings.go:173
 msgid "Failed to change username."
 msgstr "Promena korisničkog imena nije uspela."
 
@@ -486,6 +513,24 @@ msgid ""
 msgstr ""
 "Passkey zahteva da se panelu pristupa preko imena domena, a ne IP adrese. "
 "Zamolite administratora da podesi domen za ovaj panel."
+
+#: internal/modules/appinstall/install.go:129
+#: internal/modules/dokuwiki/install.go:47
+#: internal/modules/drupal/install.go:46 internal/modules/flarum/install.go:49
+#: internal/modules/joomla/install.go:47 internal/modules/matomo/install.go:47
+#: internal/modules/mediawiki/install.go:48
+#: internal/modules/moodle/install.go:47
+#: internal/modules/nextcloud/install.go:47 internal/modules/ojs/install.go:48
+#: internal/modules/opencart/install.go:47
+#: internal/modules/phpapp/install.go:62 internal/modules/phpbb/install.go:61
+#: internal/modules/prestashop/install.go:47
+#: internal/modules/sofawiki/install.go:48
+#: internal/modules/tinyfilemanager/install.go:55
+#: internal/modules/tinyphotogallery/install.go:50
+#: internal/modules/wordpress/install.go:48
+msgid ""
+"You have reached the maximum number of sites allowed.%(upgrade_message)s"
+msgstr "Dostigli ste maksimalan broj dozvoljenih sajtova.%(upgrade_message)s"
 
 #: internal/modules/appinstall/java.go:10
 #: internal/web/templates/manager/autoinstaller.html:731
@@ -543,6 +588,126 @@ msgstr ""
 msgid "Install NodeJS Application"
 msgstr "Instaliraj NodeJS aplikaciju"
 
+#: internal/modules/appinstall/pm2.go:119
+msgid ""
+"Invalid action '%(action)s'. Allowed actions: start, stop, update, restart."
+msgstr ""
+"Neispravna akcija '%(action)s'. Dozvoljene akcije: start, stop, update, "
+"restart."
+
+#: internal/modules/appinstall/pm2.go:123
+msgid "Hacker! Service '%(site_name)s' cannot be deleted."
+msgstr "Haker! Servis '%(site_name)s' ne može biti obrisan."
+
+#: internal/modules/appinstall/pm2.go:153
+msgid "Failed to stop container '%(site_name)s': %(error)s"
+msgstr "Zaustavljanje kontejnera '%(site_name)s' nije uspelo: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:156
+msgid "Stopped container for application: '%(site_name)s'."
+msgstr "Kontejner za aplikaciju '%(site_name)s' je zaustavljen."
+
+#: internal/modules/appinstall/pm2.go:163
+msgid "Failed to start container '%(site_name)s': %(error)s"
+msgstr "Pokretanje kontejnera '%(site_name)s' nije uspelo: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:166
+msgid "Started container for application '%(site_name)s'."
+msgstr "Kontejner za aplikaciju '%(site_name)s' je pokrenut."
+
+#: internal/modules/appinstall/pm2.go:173
+#: internal/modules/appinstall/pm2.go:178
+#: internal/modules/appinstall/pm2.go:183
+msgid "Failed to restart container '%(site_name)s': %(error)s"
+msgstr "Ponovno pokretanje kontejnera '%(site_name)s' nije uspelo: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:187
+msgid ""
+"Re-downloaded image and started container for application '%(site_name)s'."
+msgstr ""
+"Slika je ponovo preuzeta i kontejner za aplikaciju '%(site_name)s' je "
+"pokrenut."
+
+#: internal/modules/appinstall/pm2.go:214
+msgid "Error saving: invalid line \"%(line)s\" - each line must be KEY=VALUE."
+msgstr ""
+"Greška pri čuvanju: neispravan red \"%(line)s\" - svaki red mora biti "
+"KEY=VALUE."
+
+#: internal/modules/appinstall/pm2.go:222
+msgid "Error saving: could not read docker-compose.yml."
+msgstr "Greška pri čuvanju: nije moguće pročitati docker-compose.yml."
+
+#: internal/modules/appinstall/pm2.go:227
+msgid "Error saving: docker-compose.yml has no services."
+msgstr "Greška pri čuvanju: docker-compose.yml nema servise."
+
+#: internal/modules/appinstall/pm2.go:232
+msgid ""
+"Error saving: service '%(container_name)s' not found in docker-compose.yml."
+msgstr ""
+"Greška pri čuvanju: servis '%(container_name)s' nije pronađen u docker-"
+"compose.yml."
+
+#: internal/modules/appinstall/pm2.go:246
+#: internal/modules/appinstall/pm2.go:427
+#: internal/modules/appinstall/pm2.go:457
+msgid "Error saving: %(error)s"
+msgstr "Greška pri čuvanju: %(error)s"
+
+#: internal/modules/appinstall/pm2.go:251
+msgid ""
+"Environment variables saved, make sure to restart the application for "
+"changes to take effect."
+msgstr ""
+"Promenljive okruženja su sačuvane, ponovo pokrenite aplikaciju da bi izmene "
+"stupile na snagu."
+
+#: internal/modules/appinstall/pm2.go:419
+#: internal/modules/appinstall/pm2.go:448
+msgid "Error saving: %(errs)s"
+msgstr "Greška pri čuvanju: %(errs)s"
+
+#: internal/modules/appinstall/pm2.go:423
+#: internal/modules/appinstall/pm2.go:452
+msgid "Environment file not found."
+msgstr "Fajl okruženja nije pronađen."
+
+#: internal/modules/appinstall/pm2.go:430
+#: internal/modules/appinstall/pm2.go:461
+msgid ""
+"Changes saved, make sure to restart the application for changes to take "
+"effect."
+msgstr ""
+"Izmene su sačuvane, ponovo pokrenite aplikaciju da bi izmene stupile na "
+"snagu."
+
+#: internal/modules/appinstall/pm2.go:528
+msgid "Application '%(site_name)s' removed successfully"
+msgstr "Aplikacija '%(site_name)s' je uspešno uklonjena"
+
+#: internal/modules/appinstall/pm2.go:530
+msgid "Service '%(service_key)s' not found in compose file"
+msgstr "Servis '%(service_key)s' nije pronađen u compose fajlu"
+
+#: internal/modules/appinstall/pm2.go:551
+msgid "Environment variables for '%(service_name)s' removed from .env"
+msgstr "Promenljive okruženja za '%(service_name)s' su uklonjene iz .env"
+
+#: internal/modules/appinstall/pm2.go:553
+msgid ".env file not found at %(env_file)s"
+msgstr ".env fajl nije pronađen na %(env_file)s"
+
+#: internal/modules/appinstall/pm2.go:558
+msgid "Application '%(site_name)s' deleted from the database"
+msgstr "Aplikacija '%(site_name)s' je obrisana iz baze podataka"
+
+#: internal/modules/appinstall/pm2.go:560
+msgid ""
+"Failed to delete application '%(site_name)s' from the database: %(error)s"
+msgstr ""
+"Brisanje aplikacije '%(site_name)s' iz baze podataka nije uspelo: %(error)s"
+
 #: internal/modules/appinstall/python.go:11
 #: internal/web/templates/manager/autoinstaller.html:667
 #: internal/web/templates/manager/python_node_apps.html:166
@@ -596,6 +761,28 @@ msgstr "Instaliraj Ruby aplikaciju"
 #: internal/web/templates/manager/autoinstaller.html:8
 msgid "Install App"
 msgstr "Instaliraj aplikaciju"
+
+#: internal/modules/backups/backups.go:74
+msgid ""
+"A backup is currently in progress. Please wait until it finishes before "
+"saving settings. Or if you want to interrupt the backup process: stop and "
+"start the backup service."
+msgstr ""
+"Pravljenje rezervne kopije je u toku. Sačekajte da se završi pre čuvanja "
+"podešavanja. Ako želite da prekinete proces, zaustavite i ponovo pokrenite "
+"servis za rezervne kopije."
+
+#: internal/modules/backups/backups.go:79
+msgid "Error updating settings."
+msgstr "Greška pri ažuriranju podešavanja."
+
+#: internal/modules/backups/backups.go:81
+msgid "Settings updated successfully."
+msgstr "Podešavanja su uspešno ažurirana."
+
+#: internal/modules/backups/backups.go:285
+msgid "Backup target switched to '%(target)s' successfully."
+msgstr "Odredište rezervnih kopija je uspešno promenjeno na '%(target)s'."
 
 #: internal/modules/backups/render.go:40
 #: internal/modules/dashboard/sections.go:85
@@ -687,6 +874,41 @@ msgstr "Udaljene rezervne kopije na Dropbox cloud skladište."
 #: internal/web/templates/files/trash_partials.html:222
 msgid "Restore"
 msgstr "Vrati"
+
+#: internal/modules/backupwizard/backupwizard.go:244
+msgid "A backup is already in progress. Please wait for it to finish."
+msgstr "Pravljenje rezervne kopije je već u toku. Sačekajte da se završi."
+
+#: internal/modules/backupwizard/backupwizard.go:249
+#: internal/modules/backupwizard/backupwizard.go:256
+msgid "Failed to start backup."
+msgstr "Pokretanje rezervne kopije nije uspelo."
+
+#: internal/modules/backupwizard/backupwizard.go:262
+msgid "Backup started. It will appear in the list below once complete."
+msgstr ""
+"Pravljenje rezervne kopije je pokrenuto. Pojaviće se na listi ispod kada se "
+"završi."
+
+#: internal/modules/backupwizard/backupwizard.go:275
+msgid "Invalid filename."
+msgstr "Neispravan naziv fajla."
+
+#: internal/modules/backupwizard/backupwizard.go:285
+msgid "Invalid file path."
+msgstr "Neispravna putanja fajla."
+
+#: internal/modules/backupwizard/backupwizard.go:291
+#: internal/modules/backupwizard/backupwizard.go:307
+msgid "Backup file not found."
+msgstr "Fajl rezervne kopije nije pronađen."
+
+#: internal/modules/backupwizard/backupwizard.go:298
+msgid ""
+"This backup is still being created. Please wait until it completes before "
+"downloading."
+msgstr ""
+"Ova rezervna kopija se još pravi. Sačekajte da se završi pre preuzimanja."
 
 #: internal/modules/backupwizard/render.go:35
 #: internal/modules/dashboard/sections.go:90
@@ -849,6 +1071,99 @@ msgid ""
 msgstr ""
 "Varnish je reverse caching proxy koji se koristi kao HTTP akcelerator za "
 "dinamičke sajtove sa velikom količinom sadržaja, kao i za API-je."
+
+#: internal/modules/cache/varnish.go:153
+msgid ""
+"Failed to start %(webserver)s: could not bring it back up with the Varnish "
+"proxy port"
+msgstr ""
+"Pokretanje %(webserver)s nije uspelo: nije ga moguće vratiti sa Varnish "
+"proxy portom"
+
+#: internal/modules/cache/varnish.go:168
+msgid "Failed to start %(service)s: %(message)s"
+msgstr "Pokretanje %(service)s nije uspelo: %(message)s"
+
+#: internal/modules/cache/varnish.go:178
+msgid "Varnish caching is now enabled."
+msgstr "Varnish keširanje je sada uključeno."
+
+#: internal/modules/cache/varnish.go:193
+msgid "Failed to start %(webserver)s after disabling %(service)s: %(message)s"
+msgstr ""
+"Pokretanje %(webserver)s nakon isključivanja %(service)s nije uspelo: "
+"%(message)s"
+
+#: internal/modules/cache/varnish.go:201
+msgid "Varnish caching is now disabled."
+msgstr "Varnish keširanje je sada isključeno."
+
+#: internal/modules/cache/varnish.go:222
+msgid "Varnish cache is now %(new_status)s for domain %(domain_name)s"
+msgstr "Varnish keš je sada %(new_status)s za domen %(domain_name)s"
+
+#: internal/modules/crons/handlers.go:221
+msgid "Invalid cron file path"
+msgstr "Neispravna putanja cron fajla"
+
+#: internal/modules/crons/handlers.go:238
+#: internal/modules/crons/handlers.go:476
+msgid "Missing one or more required fields (schedule, command, container)."
+msgstr ""
+"Nedostaje jedno ili više obaveznih polja (raspored, komanda, kontejner)."
+
+#: internal/modules/crons/handlers.go:242
+#: internal/modules/crons/handlers.go:372
+msgid "Invalid characters in input."
+msgstr "Neispravni karakteri u unosu."
+
+#: internal/modules/crons/handlers.go:275
+#: internal/modules/crons/handlers.go:302
+#: internal/modules/crons/handlers.go:385
+#: internal/modules/crons/handlers.go:421
+msgid "Error saving cron job. Please try again."
+msgstr "Greška pri čuvanju cron posla. Pokušajte ponovo."
+
+#: internal/modules/crons/handlers.go:280
+msgid "Cron job created and saved successfully!"
+msgstr "Cron posao je uspešno kreiran i sačuvan!"
+
+#: internal/modules/crons/handlers.go:297
+msgid "Invalid crons file format: %(err_msg)s"
+msgstr "Neispravan format crons fajla: %(err_msg)s"
+
+#: internal/modules/crons/handlers.go:314
+msgid "Crons file saved successfully!"
+msgstr "Crons fajl je uspešno sačuvan!"
+
+#: internal/modules/crons/handlers.go:364
+msgid "Missing one or more required fields."
+msgstr "Nedostaje jedno ili više obaveznih polja."
+
+#: internal/modules/crons/handlers.go:368
+msgid "Missing original cron job fields."
+msgstr "Nedostaju polja originalnog cron posla."
+
+#: internal/modules/crons/handlers.go:379
+msgid "Invalid cron file path."
+msgstr "Neispravna putanja cron fajla."
+
+#: internal/modules/crons/handlers.go:416
+msgid "Cron job not found."
+msgstr "Cron posao nije pronađen."
+
+#: internal/modules/crons/handlers.go:429
+msgid "Cron job was successfully edited."
+msgstr "Cron posao je uspešno izmenjen."
+
+#: internal/modules/crons/handlers.go:483
+#: internal/modules/crons/handlers.go:530
+msgid "Error deleting cron job."
+msgstr "Greška pri brisanju cron posla."
+
+#: internal/modules/crons/handlers.go:543
+msgid "Cron job was successfully deleted."
+msgstr "Cron posao je uspešno obrisan."
 
 #: internal/modules/crons/render.go:45
 msgid "CronJobs File Editor"
@@ -1716,6 +2031,46 @@ msgstr "Aktivnost naloga"
 msgid "Upgrade now"
 msgstr "Nadogradite sada"
 
+#: internal/modules/dns/crud.go:53
+msgid "Error:Zone file not found for domain: %(domain)s"
+msgstr "Greška: zone fajl nije pronađen za domen: %(domain)s"
+
+#: internal/modules/dns/crud.go:193
+msgid "Please provide all required fields."
+msgstr "Popunite sva obavezna polja."
+
+#: internal/modules/dns/crud.go:199
+msgid "Invalid characters in submitted data."
+msgstr "Neispravni karakteri u poslatim podacima."
+
+#: internal/modules/dns/crud.go:212 internal/modules/dns/list.go:94
+msgid "Zone file not found."
+msgstr "Zone fajl nije pronađen."
+
+#: internal/modules/dns/crud.go:234
+msgid "CNAME record with this name already exists."
+msgstr "CNAME zapis sa ovim imenom već postoji."
+
+#: internal/modules/dns/crud.go:240 internal/modules/dns/crud.go:246
+msgid "Error adding DNS record: %(error)s"
+msgstr "Greška pri dodavanju DNS zapisa: %(error)s"
+
+#: internal/modules/dns/crud.go:253
+msgid "DNS record added successfully."
+msgstr "DNS zapis je uspešno dodat."
+
+#: internal/modules/dns/crud.go:332
+msgid "Please provide a domain name."
+msgstr "Unesite naziv domena."
+
+#: internal/modules/dns/crud.go:344
+msgid "Failed to restart DNS zone: %(error)s"
+msgstr "Ponovno pokretanje DNS zone nije uspelo: %(error)s"
+
+#: internal/modules/dns/crud.go:350
+msgid "DNS zone restarted successfully."
+msgstr "DNS zona je uspešno ponovo pokrenuta."
+
 #: internal/modules/dns/render.go:62
 #: internal/web/templates/domains/domains.html:284
 msgid "Edit DNS Zone"
@@ -1727,10 +2082,70 @@ msgstr "Izmeni DNS zonu"
 msgid "Edit DNS File"
 msgstr "Izmeni DNS fajl"
 
-#: internal/modules/docker/containers.go:171
-#: internal/modules/docker/containers.go:187
+#: internal/modules/docker/actions.go:276
+msgid "Image pulled and container %(container_name)s activated successfully."
+msgstr ""
+"Slika je preuzeta i kontejner %(container_name)s je uspešno aktiviran."
+
+#: internal/modules/docker/actions.go:277
+msgid ""
+"Image pulled and container %(container_name)s deactivated successfully."
+msgstr ""
+"Slika je preuzeta i kontejner %(container_name)s je uspešno deaktiviran."
+
+#: internal/modules/docker/actions.go:278
+msgid "Image pulled and container %(container_name)s restarted successfully."
+msgstr ""
+"Slika je preuzeta i kontejner %(container_name)s je uspešno ponovo pokrenut."
+
+#: internal/modules/docker/actions.go:282
+msgid "Container %(container_name)s restarted successfully."
+msgstr "Kontejner %(container_name)s je uspešno ponovo pokrenut."
+
+#: internal/modules/docker/actions.go:286
+msgid "Container %(container_name)s deactivated successfully."
+msgstr "Kontejner %(container_name)s je uspešno deaktiviran."
+
+#: internal/modules/docker/actions.go:288
+msgid "Container %(container_name)s activated successfully."
+msgstr "Kontejner %(container_name)s je uspešno aktiviran."
+
+#: internal/modules/docker/containers.go:91
+msgid ""
+"Missing environment variables. Please check the configuration or restore "
+"from backup."
+msgstr ""
+"Nedostaju promenljive okruženja. Proverite konfiguraciju ili vratite iz "
+"rezervne kopije."
+
+#: internal/modules/docker/containers.go:172
+#: internal/modules/docker/containers.go:188
 msgid "Add service"
 msgstr "Dodaj servis"
+
+#: internal/modules/docker/containers.go:291
+msgid "Container %(service_name)s created successfully!"
+msgstr "Kontejner %(service_name)s je uspešno kreiran!"
+
+#: internal/modules/docker/containers.go:434
+msgid "Container updated successfully."
+msgstr "Kontejner je uspešno ažuriran."
+
+#: internal/modules/docker/images.go:32
+msgid "The image of %(service)s can't be changed."
+msgstr "Slika za %(service)s ne može da se promeni."
+
+#: internal/modules/docker/images.go:39
+msgid "Invalid image tag."
+msgstr "Neispravan tag slike."
+
+#: internal/modules/docker/images.go:48
+msgid "Successfully changed image tag for %(service)s to %(value)s!"
+msgstr "Tag slike za %(service)s je uspešno promenjen na %(value)s!"
+
+#: internal/modules/docker/images.go:51
+msgid "Failed to stop the service in order to delete old image."
+msgstr "Zaustavljanje servisa radi brisanja stare slike nije uspelo."
 
 #: internal/modules/docker/render.go:392
 #: internal/web/templates/dashboard/onboarding.html:498
@@ -1832,6 +2247,54 @@ msgstr "Veb server"
 msgid "Change docker image tag"
 msgstr "Promeni tag docker slike"
 
+#: internal/modules/docker/switch.go:60
+msgid ""
+"Existing databases must first be deleted and %(mysql_type)s container "
+"stopped in order to change mysql type."
+msgstr ""
+"Postojeće baze podataka moraju prvo biti obrisane i %(mysql_type)s kontejner"
+" zaustavljen da bi se promenio tip MySQL-a."
+
+#: internal/modules/docker/switch.go:73
+msgid "Already using %(flavor)s."
+msgstr "Već se koristi %(flavor)s."
+
+#: internal/modules/docker/switch.go:107
+msgid "Failed to update mysql image: %(error)s"
+msgstr "Ažuriranje MySQL slike nije uspelo: %(error)s"
+
+#: internal/modules/docker/switch.go:127
+msgid "Failed to start %(target_service)s."
+msgstr "Pokretanje %(target_service)s nije uspelo."
+
+#: internal/modules/docker/switch.go:143
+msgid "Successfully switched to %(new_sql)s!"
+msgstr "Uspešno prebačeno na %(new_sql)s!"
+
+#: internal/modules/docker/switch.go:157
+msgid "Invalid mysql server selected"
+msgstr "Izabran je neispravan MySQL server"
+
+#: internal/modules/docker/switch.go:202
+msgid ""
+"Existing domains (%(count)s) must first be removed in order to change "
+"webserver."
+msgstr ""
+"Postojeći domeni (%(count)s) moraju prvo biti uklonjeni da bi se promenio "
+"web server."
+
+#: internal/modules/docker/switch.go:234
+msgid "Failed to start %(new_webserver)s."
+msgstr "Pokretanje %(new_webserver)s nije uspelo."
+
+#: internal/modules/docker/switch.go:253
+msgid "Successfully switched to %(new_webserver)s!"
+msgstr "Uspešno prebačeno na %(new_webserver)s!"
+
+#: internal/modules/docker/switch.go:266
+msgid "Invalid web server selected"
+msgstr "Izabran je neispravan web server"
+
 #: internal/modules/docker/terminal.go:36
 #: internal/web/templates/docker/terminal.html:20
 #: internal/web/templates/docker/terminal.html:224
@@ -1842,11 +2305,138 @@ msgstr "Terminal kontejnera"
 msgid "Select Container"
 msgstr "Izaberi kontejner"
 
+#: internal/modules/dokuwiki/install.go:261
+msgid "DokuWiki installed successfully on %(selected_domain)s"
+msgstr "DokuWiki je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/dokuwiki/manage.go:33 internal/modules/drupal/manage.go:54
+#: internal/modules/flarum/manage.go:42 internal/modules/joomla/manage.go:42
+#: internal/modules/matomo/manage.go:42
+#: internal/modules/mediawiki/manage.go:43
+#: internal/modules/moodle/manage.go:39
+#: internal/modules/nextcloud/manage.go:42 internal/modules/ojs/manage.go:33
+#: internal/modules/opencart/manage.go:42 internal/modules/phpbb/manage.go:37
+#: internal/modules/prestashop/manage.go:42
+#: internal/modules/sofawiki/manage.go:33
+#: internal/modules/tinyfilemanager/manage.go:33
+#: internal/modules/tinyphotogallery/manage.go:33
+#: internal/modules/websites/websitebuilder.go:64
+#: internal/modules/websites/websitebuilder.go:102
+#: internal/modules/wordpress/manage.go:265
+#: internal/modules/wordpress/manage.go:359
+msgid "No data found for the provided site ID"
+msgstr "Nisu pronađeni podaci za navedeni ID sajta"
+
+#: internal/modules/dokuwiki/manage.go:42
+msgid "DokuWiki installation not found in the database"
+msgstr "DokuWiki instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/dokuwiki/manage.go:68
+msgid "An error occurred during DokuWiki uninstall."
+msgstr "Došlo je do greške pri deinstalaciji DokuWiki-ja."
+
+#: internal/modules/dokuwiki/manage.go:79
+msgid "DokuWiki uninstalled successfully"
+msgstr "DokuWiki je uspešno deinstaliran"
+
 #: internal/modules/dokuwiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:370
 #: internal/web/templates/manager/dokuwiki_install.html:9
 msgid "Install DokuWiki"
 msgstr "Instaliraj DokuWiki"
+
+#: internal/modules/domains/capitalize.go:83
+msgid "Domain has been capitalized to %(capitalized_domain)s"
+msgstr "Domen je prikazan velikim slovima kao %(capitalized_domain)s"
+
+#: internal/modules/domains/delete.go:39
+#: internal/modules/domains/redirect.go:95
+msgid "Domain name not provided."
+msgstr "Naziv domena nije naveden."
+
+#: internal/modules/domains/delete.go:54
+msgid "Domain %(domain_url)s deleted successfully."
+msgstr "Domen %(domain_url)s je uspešno obrisan."
+
+#: internal/modules/domains/delete.go:56
+msgid "Failed to delete domain %(domain_url)s. Output: %(output)s"
+msgstr "Brisanje domena %(domain_url)s nije uspelo. Izlaz: %(output)s"
+
+#: internal/modules/domains/docroot.go:24 internal/modules/domains/ssl.go:50
+#: internal/modules/domains/suspend.go:26
+#: internal/modules/domains/suspend.go:73
+msgid "Invalid request. Domain name must be provided."
+msgstr "Neispravan zahtev. Naziv domena mora biti naveden."
+
+#: internal/modules/domains/docroot.go:51
+msgid "Docroot must be inside '/var/www/html/' directory."
+msgstr "Docroot mora biti unutar direktorijuma '/var/www/html/'."
+
+#: internal/modules/domains/logs.go:53 internal/modules/waf/handlers_log.go:51
+msgid "Log file not found for domain %(domain_name)s."
+msgstr "Log fajl nije pronađen za domen %(domain_name)s."
+
+#: internal/modules/domains/logs.go:57 internal/modules/waf/handlers_log.go:55
+msgid "Log file for domain %(domain_name)s is empty."
+msgstr "Log fajl za domen %(domain_name)s je prazan."
+
+#: internal/modules/domains/logs.go:63 internal/modules/waf/handlers_log.go:61
+msgid "Error reading log file: %(error)s"
+msgstr "Greška pri čitanju log fajla: %(error)s"
+
+#: internal/modules/domains/new.go:76
+msgid "Domain name is required"
+msgstr "Naziv domena je obavezan"
+
+#: internal/modules/domains/new.go:97
+msgid "Domain name contains invalid characters."
+msgstr "Naziv domena sadrži nedozvoljene karaktere."
+
+#: internal/modules/domains/new.go:107
+#: internal/web/templates/domains/new.html:217
+msgid ""
+"Paths for both public and secret files must be set for importing .onion "
+"domain."
+msgstr ""
+"Putanje za javni i tajni fajl moraju biti postavljene za uvoz .onion domena."
+
+#: internal/modules/domains/new.go:113
+msgid "Path for public file must start with /var/www/html/"
+msgstr "Putanja javnog fajla mora počinjati sa /var/www/html/"
+
+#: internal/modules/domains/new.go:118
+msgid "Public key file: %(onion_public_key)s does not exist!"
+msgstr "Fajl javnog ključa: %(onion_public_key)s ne postoji!"
+
+#: internal/modules/domains/new.go:124
+msgid "Path for secret file must start with /var/www/html/"
+msgstr "Putanja tajnog fajla mora počinjati sa /var/www/html/"
+
+#: internal/modules/domains/new.go:129
+msgid "Secret key file: %(onion_secret_key)s does not exist!"
+msgstr "Fajl tajnog ključa: %(onion_secret_key)s ne postoji!"
+
+#: internal/modules/domains/redirect.go:47
+msgid "Domain %(domain_url)s does not have a redirect URL configured."
+msgstr "Domen %(domain_url)s nema podešen URL za preusmeravanje."
+
+#: internal/modules/domains/redirect.go:76
+msgid ""
+"Successfully deleted the redirect link %(redirect_url)s for domain "
+"%(domain_url)s"
+msgstr ""
+"Uspešno obrisan link za preusmeravanje %(redirect_url)s za domen "
+"%(domain_url)s"
+
+#: internal/modules/domains/redirect.go:103
+msgid "Invalid URL. Please provide a URL with 'http://' or 'https://' prefix."
+msgstr "Neispravan URL. Unesite URL sa prefiksom 'http://' ili 'https://'."
+
+#: internal/modules/domains/redirect.go:122
+msgid ""
+"Successfully created redirect from domain %(domain_url)s to %(redirect_url)s"
+msgstr ""
+"Uspešno kreirano preusmeravanje sa domena %(domain_url)s na %(redirect_url)s"
 
 #: internal/modules/domains/render.go:99
 #: internal/web/templates/domains/new.html:128
@@ -1863,11 +2453,210 @@ msgstr "Uredi VirtualHosts fajl"
 msgid "Redirect Domain to URL"
 msgstr "Preusmeri domen na URL"
 
+#: internal/modules/domains/ssl.go:111
+msgid "Invalid action! Only AutoSSL or Custom are available."
+msgstr "Neispravna akcija! Dostupni su samo AutoSSL ili Custom."
+
+#: internal/modules/domains/ssl.go:135
+msgid "Certificate and private key are required."
+msgstr "Sertifikat i privatni ključ su obavezni."
+
+#: internal/modules/domains/ssl.go:139
+msgid "Invalid certificate."
+msgstr "Neispravan sertifikat."
+
+#: internal/modules/domains/ssl.go:143
+msgid "Invalid private key."
+msgstr "Neispravan privatni ključ."
+
+#: internal/modules/domains/vhost.go:35
+msgid "Invalid request. Domain name and Vhost content must be provided."
+msgstr ""
+"Neispravan zahtev. Naziv domena i sadržaj Vhost-a moraju biti navedeni."
+
+#: internal/modules/drupal/install.go:308
+msgid "Drupal installed successfully on %(selected_domain)s"
+msgstr "Drupal je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/drupal/manage.go:63
+msgid "Drupal installation not found in the database"
+msgstr "Drupal instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/drupal/manage.go:88
+msgid "Database name or user not found in settings.php"
+msgstr "Naziv baze podataka ili korisnik nije pronađen u settings.php"
+
+#: internal/modules/drupal/manage.go:109
+msgid "An error occurred during Drupal uninstall."
+msgstr "Došlo je do greške pri deinstalaciji Drupala."
+
+#: internal/modules/drupal/manage.go:120
+msgid "Drupal uninstalled successfully"
+msgstr "Drupal je uspešno deinstaliran"
+
 #: internal/modules/drupal/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:111
 #: internal/web/templates/manager/drupal_install.html:9
 msgid "Install Drupal"
 msgstr "Instaliraj Drupal"
+
+#: internal/modules/dynamicdns/handlers.go:63
+msgid "You do not own this domain."
+msgstr "Vi niste vlasnik ovog domena."
+
+#: internal/modules/dynamicdns/handlers.go:77
+#: internal/modules/dynamicdns/handlers.go:101
+msgid "Invalid subdomain."
+msgstr "Neispravan poddomen."
+
+#: internal/modules/dynamicdns/handlers.go:81
+#: internal/modules/dynamicdns/handlers.go:105
+msgid "Invalid IP address."
+msgstr "Neispravna IP adresa."
+
+#: internal/modules/dynamicdns/handlers.go:87
+msgid "Dynamic DNS entry created."
+msgstr "Dinamički DNS unos je kreiran."
+
+#: internal/modules/dynamicdns/handlers.go:93
+#: internal/modules/dynamicdns/handlers.go:125
+msgid "Invalid line number."
+msgstr "Neispravan broj reda."
+
+#: internal/modules/dynamicdns/handlers.go:109
+msgid "Invalid token."
+msgstr "Neispravan token."
+
+#: internal/modules/dynamicdns/handlers.go:116
+msgid "Dynamic DNS entry updated."
+msgstr "Dinamički DNS unos je ažuriran."
+
+#: internal/modules/dynamicdns/handlers.go:118
+msgid "Failed to update Dynamic DNS entry."
+msgstr "Ažuriranje dinamičkog DNS unosa nije uspelo."
+
+#: internal/modules/dynamicdns/handlers.go:130
+msgid "Dynamic DNS entry deleted."
+msgstr "Dinamički DNS unos je obrisan."
+
+#: internal/modules/dynamicdns/handlers.go:132
+msgid "Failed to delete Dynamic DNS entry."
+msgstr "Brisanje dinamičkog DNS unosa nije uspelo."
+
+#: internal/modules/emails/aliases.go:203
+msgid "Error: a valid target email address is required."
+msgstr "Greška: potrebna je ispravna ciljna e-mail adresa."
+
+#: internal/modules/emails/aliases.go:209
+msgid "Error adding alias: %(output)s"
+msgstr "Greška pri dodavanju aliasa: %(output)s"
+
+#: internal/modules/emails/aliases.go:216
+msgid "Alias %(email)s → %(target)s added successfully."
+msgstr "Alias %(email)s → %(target)s je uspešno dodat."
+
+#: internal/modules/emails/aliases.go:250
+msgid "Error deleting alias %(email)s -> %(target)s: %(output)s"
+msgstr "Greška pri brisanju aliasa %(email)s -> %(target)s: %(output)s"
+
+#: internal/modules/emails/aliases.go:258
+msgid "Alias %(email)s deleted successfully."
+msgstr "Alias %(email)s je uspešno obrisan."
+
+#: internal/modules/emails/aliases.go:306
+#: internal/modules/emails/emails.go:349
+msgid "Error: %(field)s not provided."
+msgstr "Greška: %(field)s nije naveden."
+
+#: internal/modules/emails/aliases.go:313
+#: internal/modules/emails/emails.go:362
+msgid "Username can only contain letters, numbers, and . _ % + - (no @)."
+msgstr "Korisničko ime može sadržati samo slova, brojeve i . _ % + - (bez @)."
+
+#: internal/modules/emails/aliases.go:318
+msgid "Error: target must be a valid email address."
+msgstr "Greška: cilj mora biti ispravna e-mail adresa."
+
+#: internal/modules/emails/aliases.go:331
+msgid "Error creating alias: %(output)s"
+msgstr "Greška pri kreiranju aliasa: %(output)s"
+
+#: internal/modules/emails/aliases.go:338
+msgid "Alias %(source)s → %(target)s created successfully."
+msgstr "Alias %(source)s → %(target)s je uspešno kreiran."
+
+#: internal/modules/emails/default.go:86
+msgid "Invalid destination email address."
+msgstr "Neispravna odredišna e-mail adresa."
+
+#: internal/modules/emails/default.go:91
+msgid "Failed to update default email: %(error)s"
+msgstr "Ažuriranje podrazumevanog e-maila nije uspelo: %(error)s"
+
+#: internal/modules/emails/emails.go:374
+msgid "Error: reached max number of email accounts on the hosting plan."
+msgstr "Greška: dostignut je maksimalan broj e-mail naloga za hosting paket."
+
+#: internal/modules/emails/emails.go:396
+msgid "Failed to add email %(email)s: %(msg)s"
+msgstr "Dodavanje e-maila %(email)s nije uspelo: %(msg)s"
+
+#: internal/modules/emails/emails.go:415
+msgid "Email %(email)s added successfully."
+msgstr "E-mail %(email)s je uspešno dodat."
+
+#: internal/modules/emails/emails.go:683
+msgid "Settings saved for email %(email)s"
+msgstr "Podešavanja su sačuvana za e-mail %(email)s"
+
+#: internal/modules/emails/emails.go:694
+msgid "Email %(email)s deleted successfully."
+msgstr "E-mail %(email)s je uspešno obrisan."
+
+#: internal/modules/emails/emails.go:697
+msgid "ERROR: Failed to delete email %(email)s: %(output)s"
+msgstr "GREŠKA: Brisanje e-maila %(email)s nije uspelo: %(output)s"
+
+#: internal/modules/emails/emails.go:762
+msgid "Error: Invalid configuration type."
+msgstr "Greška: neispravan tip konfiguracije."
+
+#: internal/modules/emails/filters.go:114
+msgid "No content provided."
+msgstr "Sadržaj nije naveden."
+
+#: internal/modules/emails/filters.go:118
+msgid "Error saving filter."
+msgstr "Greška pri čuvanju filtera."
+
+#: internal/modules/emails/filters.go:127
+msgid "Filter saved successfully."
+msgstr "Filter je uspešno sačuvan."
+
+#: internal/modules/emails/import.go:78
+msgid "Error: No file uploaded."
+msgstr "Greška: nijedan fajl nije otpremljen."
+
+#: internal/modules/emails/import.go:92
+msgid "Error reading file: %(error)s"
+msgstr "Greška pri čitanju fajla: %(error)s"
+
+#: internal/modules/emails/import.go:97
+msgid "Error: File must have at least 2 columns: email, password"
+msgstr "Greška: fajl mora imati najmanje 2 kolone: e-mail, lozinka"
+
+#: internal/modules/emails/import.go:103
+msgid ""
+"Error: File is invalid - the first column must contain valid email "
+"addresses."
+msgstr ""
+"Greška: fajl je neispravan - prva kolona mora sadržati ispravne e-mail "
+"adrese."
+
+#: internal/modules/emails/import.go:164 internal/modules/emails/import.go:172
+#: internal/modules/emails/import.go:177
+msgid "Error: No import data found, please try again."
+msgstr "Greška: nisu pronađeni podaci za uvoz, pokušajte ponovo."
 
 #: internal/modules/emails/render.go:132
 #: internal/web/templates/files/ftp_new.html:172
@@ -1899,51 +2688,326 @@ msgstr "Podrazumevani e-mail"
 msgid "Import Emails"
 msgstr "Uvezi email adrese"
 
-#: internal/modules/filemanager/archive.go:302
+#: internal/modules/emails/webmail.go:215
+msgid ""
+"Webmail service is not yet started, please contact Administrator to enable "
+"it."
+msgstr ""
+"Webmail servis još nije pokrenut, kontaktirajte administratora da ga "
+"omogući."
+
+#: internal/modules/filemanager/archive.go:59
+msgid "Error occurred before starting archive extraction: %(error)s"
+msgstr "Došlo je do greške pre početka raspakivanja arhive: %(error)s"
+
+#: internal/modules/filemanager/archive.go:92
+msgid "Unsupported file format!"
+msgstr "Nepodržan format fajla!"
+
+#: internal/modules/filemanager/archive.go:98
+msgid "Extraction timed out after %(minutes)s minutes!"
+msgstr "Raspakivanje je prekinuto nakon %(minutes)s minuta!"
+
+#: internal/modules/filemanager/archive.go:101
+msgid "Extraction failed."
+msgstr "Raspakivanje nije uspelo."
+
+#: internal/modules/filemanager/archive.go:107
+msgid "File extracted successfully"
+msgstr "Fajl je uspešno raspakovan"
+
+#: internal/modules/filemanager/archive.go:228
+msgid "Missing required form data for compression: %(missing)s"
+msgstr "Nedostaju obavezni podaci forme za kompresiju: %(missing)s"
+
+#: internal/modules/filemanager/archive.go:284
+msgid "Unsupported archive format."
+msgstr "Nepodržan format arhive."
+
+#: internal/modules/filemanager/archive.go:295
+msgid "Archive creation failed: %(err_msg)s"
+msgstr "Kreiranje arhive nije uspelo: %(err_msg)s"
+
+#: internal/modules/filemanager/archive.go:303
 msgid "Failed to set archive ownership"
 msgstr "Postavljanje vlasništva nad arhivom nije uspelo"
 
-#: internal/modules/filemanager/archive.go:304
+#: internal/modules/filemanager/archive.go:305
 msgid "FILEMANAGER - Archive created successfully."
 msgstr "Arhiva je uspešno kreirana."
 
-#: internal/modules/filemanager/crud.go:57
+#: internal/modules/filemanager/crud.go:34
+msgid "Filename is missing"
+msgstr "Nedostaje naziv fajla"
+
+#: internal/modules/filemanager/crud.go:45
+msgid "Error creating file: already exists."
+msgstr "Greška pri kreiranju fajla: već postoji."
+
+#: internal/modules/filemanager/crud.go:51
+msgid "Error creating file! Check permissions."
+msgstr "Greška pri kreiranju fajla! Proverite dozvole."
+
+#: internal/modules/filemanager/crud.go:58
 msgid "Failed to set ownership for the new file."
 msgstr "Postavljanje vlasništva nad novim fajlom nije uspelo."
 
-#: internal/modules/filemanager/crud.go:60
+#: internal/modules/filemanager/crud.go:61
 msgid "File created successfully."
 msgstr "Fajl je uspešno kreiran."
 
-#: internal/modules/filemanager/crud.go:105
+#: internal/modules/filemanager/crud.go:88
+msgid "Foldername is missing"
+msgstr "Nedostaje naziv foldera"
+
+#: internal/modules/filemanager/crud.go:100
+msgid "Error creating directory! Check permissions."
+msgstr "Greška pri kreiranju direktorijuma! Proverite dozvole."
+
+#: internal/modules/filemanager/crud.go:106
 msgid "Failed to set ownership for the new folder."
 msgstr "Postavljanje vlasništva nad novim folderom nije uspelo."
 
-#: internal/modules/filemanager/crud.go:107
+#: internal/modules/filemanager/crud.go:108
 msgid "Folder created successfully."
 msgstr "Folder je uspešno kreiran."
 
-#: internal/modules/filemanager/crud.go:273
+#: internal/modules/filemanager/crud.go:146
+msgid ""
+"Error renaming item! Check permissions or if the new name already exists."
+msgstr ""
+"Greška pri preimenovanju stavke! Proverite dozvole ili da li novi naziv već "
+"postoji."
+
+#: internal/modules/filemanager/crud.go:152
+msgid "File renamed successfully."
+msgstr "Fajl je uspešno preimenovan."
+
+#: internal/modules/filemanager/crud.go:233
+msgid "Invalid permissions format."
+msgstr "Neispravan format dozvola."
+
+#: internal/modules/filemanager/crud.go:274
 msgid "Permissions changed."
 msgstr "Dozvole su promenjene."
 
-#: internal/modules/filemanager/editor.go:138
+#: internal/modules/filemanager/crud.go:276
+msgid "%(changed)s items updated."
+msgstr "Ažurirano stavki: %(changed)s."
+
+#: internal/modules/filemanager/crud.go:279
+msgid "Error changing permissions for: %(errored)s. Check ownership."
+msgstr "Greška pri promeni dozvola za: %(errored)s. Proverite vlasništvo."
+
+#: internal/modules/filemanager/editor.go:115
+#: internal/modules/filemanager/editor.go:280
+msgid "Editing this file type is not allowed."
+msgstr "Uređivanje ovog tipa fajla nije dozvoljeno."
+
+#: internal/modules/filemanager/editor.go:139
 msgid "Error saving file."
 msgstr "Greška pri čuvanju fajla."
 
-#: internal/modules/filemanager/editor.go:141
+#: internal/modules/filemanager/editor.go:142
 msgid "File saved successfully"
 msgstr "Fajl je uspešno sačuvan"
+
+#: internal/modules/filemanager/editor.go:160
+#: internal/modules/filemanager/editor.go:298
+msgid "Error accessing file size."
+msgstr "Greška pri pristupu veličini fajla."
+
+#: internal/modules/filemanager/editor.go:165
+msgid ""
+"File is too large to open in the editor (limit is %(file_limit_mb)s MB)"
+msgstr ""
+"Fajl je prevelik za otvaranje u editoru (limit je %(file_limit_mb)s MB)"
+
+#: internal/modules/filemanager/editor.go:173
+msgid "Error reading file"
+msgstr "Greška pri čitanju fajla"
+
+#: internal/modules/filemanager/editor.go:215
+#: internal/modules/filemanager/editor.go:226
+msgid "Error retrieving file size."
+msgstr "Greška pri preuzimanju veličine fajla."
+
+#: internal/modules/filemanager/editor.go:220
+msgid "File size exceeds %(file_limit_mb)sMB limit. Download aborted."
+msgstr ""
+"Veličina fajla prelazi limit od %(file_limit_mb)s MB. Preuzimanje je "
+"prekinuto."
+
+#: internal/modules/filemanager/editor.go:302
+msgid ""
+"File is too large to view in the browser (limit is %(file_limit_mb)s MB)"
+msgstr ""
+"Fajl je prevelik za prikaz u pregledaču (limit je %(file_limit_mb)s MB)"
+
+#: internal/modules/filemanager/editor.go:324
+msgid "Error opening file."
+msgstr "Greška pri otvaranju fajla."
+
+#: internal/modules/filemanager/listing.go:86
+#: internal/modules/trash/trash.go:88
+msgid "Directory does not exist."
+msgstr "Direktorijum ne postoji."
+
+#: internal/modules/filemanager/listing.go:113
+msgid "Error accessing the specified directory."
+msgstr "Greška pri pristupu navedenom direktorijumu."
 
 #: internal/modules/filemanager/render.go:236
 msgid "Upload Files"
 msgstr "Otpremi fajlove"
+
+#: internal/modules/filemanager/upload.go:62
+msgid "No files were uploaded"
+msgstr "Nijedan fajl nije otpremljen"
+
+#: internal/modules/filemanager/upload.go:122
+msgid "Files uploaded successfully."
+msgstr "Fajlovi su uspešno otpremljeni."
+
+#: internal/modules/filemanager/upload.go:124
+msgid "Some files failed: %(errs)s"
+msgstr "Neki fajlovi nisu uspeli: %(errs)s"
+
+#: internal/modules/flarum/install.go:308
+msgid "Flarum installed successfully on %(selected_domain)s"
+msgstr "Flarum je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/flarum/manage.go:51
+msgid "Flarum installation not found in the database"
+msgstr "Flarum instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/flarum/manage.go:76 internal/modules/moodle/manage.go:77
+#: internal/modules/opencart/manage.go:75
+msgid "Database name or user not found in config.php"
+msgstr "Naziv baze podataka ili korisnik nije pronađen u config.php"
+
+#: internal/modules/flarum/manage.go:97
+msgid "An error occurred during Flarum uninstall."
+msgstr "Došlo je do greške pri deinstalaciji Flaruma."
+
+#: internal/modules/flarum/manage.go:108
+msgid "Flarum uninstalled successfully"
+msgstr "Flarum je uspešno deinstaliran"
 
 #: internal/modules/flarum/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:300
 #: internal/web/templates/manager/flarum_install.html:9
 msgid "Install Flarum"
 msgstr "Instaliraj Flarum"
+
+#: internal/modules/ftp/ftp.go:104
+msgid ""
+"FTP service is not yet started, please contact Administrator to enable it."
+msgstr ""
+"FTP servis još nije pokrenut, kontaktirajte administratora da ga omogući."
+
+#: internal/modules/ftp/ftp.go:182
+msgid "No currently active FTP connections"
+msgstr "Trenutno nema aktivnih FTP konekcija"
+
+#: internal/modules/ftp/ftp.go:213
+msgid "FTP username not provided."
+msgstr "FTP korisničko ime nije navedeno."
+
+#: internal/modules/ftp/ftp.go:217
+msgid "FTP domain not provided."
+msgstr "FTP domen nije naveden."
+
+#: internal/modules/ftp/ftp.go:225
+msgid "FTP path not provided."
+msgstr "FTP putanja nije navedena."
+
+#: internal/modules/ftp/ftp.go:229
+msgid "FTP password not provided."
+msgstr "FTP lozinka nije navedena."
+
+#: internal/modules/ftp/ftp.go:235
+msgid "The FTP path must start with %(real_path)s"
+msgstr "FTP putanja mora počinjati sa %(real_path)s"
+
+#: internal/modules/ftp/ftp.go:241
+msgid ""
+"Username %(ftp_username)s contains invalid characters, only allowed: "
+"BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
+msgstr ""
+"Korisničko ime %(ftp_username)s sadrži nedozvoljene karaktere, dozvoljeni su"
+" samo: BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
+
+#: internal/modules/ftp/ftp.go:247
+msgid "Error creating FTP user %(ftp_username)s: %(output)s"
+msgstr "Greška pri kreiranju FTP korisnika %(ftp_username)s: %(output)s"
+
+#: internal/modules/ftp/ftp.go:253
+msgid "FTP account %(ftp_username)s created successfully."
+msgstr "FTP nalog %(ftp_username)s je uspešno kreiran."
+
+#: internal/modules/ftp/ftp.go:256
+msgid "Failed to create FTP account %(ftp_username)s: %(output)s"
+msgstr "Kreiranje FTP naloga %(ftp_username)s nije uspelo: %(output)s"
+
+#: internal/modules/ftp/ftp.go:280 internal/modules/ftp/ftp.go:301
+#: internal/modules/ftp/ftp.go:357
+msgid "Invalid FTP username."
+msgstr "Neispravno FTP korisničko ime."
+
+#: internal/modules/ftp/ftp.go:292
+msgid "FTP account %(username_to_delete)s deleted successfully!"
+msgstr "FTP nalog %(username_to_delete)s je uspešno obrisan!"
+
+#: internal/modules/ftp/ftp.go:295
+msgid ""
+"Failed to delete FTP account %(username_to_delete)s. Output: %(output)s"
+msgstr ""
+"Brisanje FTP naloga %(username_to_delete)s nije uspelo. Izlaz: %(output)s"
+
+#: internal/modules/ftp/ftp.go:313
+msgid "Missing new password"
+msgstr "Nedostaje nova lozinka"
+
+#: internal/modules/ftp/ftp.go:325
+msgid "Error changing FTP password: %(output)s"
+msgstr "Greška pri promeni FTP lozinke: %(output)s"
+
+#: internal/modules/ftp/ftp.go:330
+msgid "FTP password changed successfully for user %(username)s"
+msgstr "FTP lozinka je uspešno promenjena za korisnika %(username)s"
+
+#: internal/modules/ftp/ftp.go:332
+msgid "Failed to change FTP password: %(output)s"
+msgstr "Promena FTP lozinke nije uspela: %(output)s"
+
+#: internal/modules/ftp/ftp.go:367
+msgid "Error changing FTP path for user %(username_to_modify)s: %(output)s"
+msgstr ""
+"Greška pri promeni FTP putanje za korisnika %(username_to_modify)s: "
+"%(output)s"
+
+#: internal/modules/ftp/ftp.go:372
+msgid "FTP path changed successfully for user %(username_to_modify)s"
+msgstr "FTP putanja je uspešno promenjena za korisnika %(username_to_modify)s"
+
+#: internal/modules/ftp/ftp.go:374
+msgid "Failed to change FTP path for user %(username_to_modify)s: %(output)s"
+msgstr ""
+"Promena FTP putanje za korisnika %(username_to_modify)s nije uspela: "
+"%(output)s"
+
+#: internal/modules/ftp/ftp.go:385
+msgid "Invalid configuration type, please use cyberduck or filezilla only!"
+msgstr "Neispravan tip konfiguracije, koristite samo cyberduck ili filezilla!"
+
+#: internal/modules/ftp/ftp.go:398
+msgid "User has no FTP accounts."
+msgstr "Korisnik nema FTP naloge."
+
+#: internal/modules/ftp/ftp.go:415
+msgid "FTP account not found."
+msgstr "FTP nalog nije pronađen."
 
 #: internal/modules/ftp/render.go:76
 #: internal/web/templates/files/ftp_new.html:9
@@ -1958,9 +3022,37 @@ msgstr "Promeni FTP lozinku"
 msgid "Change FTP Path"
 msgstr "Promeni FTP putanju"
 
+#: internal/modules/goaccess/goaccess.go:58
+msgid ""
+"Stats file for domain %(domain_name)s not found. Data is generated every "
+"24h."
+msgstr ""
+"Fajl statistike za domen %(domain_name)s nije pronađen. Podaci se generišu "
+"svaka 24h."
+
 #: internal/modules/ipblocker/handlers.go:54
 msgid "Failed to block IP addresses - please try again"
 msgstr "Blokiranje IP adresa nije uspelo - pokušajte ponovo"
+
+#: internal/modules/joomla/install.go:318
+msgid "Joomla installed successfully on %(selected_domain)s"
+msgstr "Joomla je uspešno instalirana na %(selected_domain)s"
+
+#: internal/modules/joomla/manage.go:51
+msgid "Joomla installation not found in the database"
+msgstr "Joomla instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/joomla/manage.go:75
+msgid "Database name or user not found in configuration.php"
+msgstr "Naziv baze podataka ili korisnik nije pronađen u configuration.php"
+
+#: internal/modules/joomla/manage.go:96
+msgid "An error occurred during Joomla uninstall."
+msgstr "Došlo je do greške pri deinstalaciji Joomle."
+
+#: internal/modules/joomla/manage.go:107
+msgid "Joomla uninstalled successfully"
+msgstr "Joomla je uspešno deinstalirana"
 
 #: internal/modules/joomla/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:79
@@ -1972,17 +3064,262 @@ msgstr "Instaliraj Joomla"
 msgid "Malware Quarantine"
 msgstr "Karantin malvera"
 
+#: internal/modules/matomo/install.go:368
+msgid "Matomo installed successfully on %(selected_domain)s"
+msgstr "Matomo je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/matomo/manage.go:51
+msgid "Matomo installation not found in the database"
+msgstr "Matomo instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/matomo/manage.go:75
+msgid "Database name or user not found in config/config.ini.php"
+msgstr ""
+"Naziv baze podataka ili korisnik nije pronađen u config/config.ini.php"
+
+#: internal/modules/matomo/manage.go:98
+msgid "An error occurred during Matomo uninstall."
+msgstr "Došlo je do greške pri deinstalaciji Matoma."
+
+#: internal/modules/matomo/manage.go:109
+msgid "Matomo uninstalled successfully"
+msgstr "Matomo je uspešno deinstaliran"
+
 #: internal/modules/matomo/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:440
 #: internal/web/templates/manager/matomo_install.html:9
 msgid "Install Matomo"
 msgstr "Instaliraj Matomo"
 
+#: internal/modules/mediawiki/install.go:340
+msgid "MediaWiki installed successfully on %(selected_domain)s"
+msgstr "MediaWiki je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/mediawiki/manage.go:52
+msgid "MediaWiki installation not found in the database"
+msgstr "MediaWiki instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/mediawiki/manage.go:76
+msgid "Database name or user not found in LocalSettings.php"
+msgstr "Naziv baze podataka ili korisnik nije pronađen u LocalSettings.php"
+
+#: internal/modules/mediawiki/manage.go:99
+msgid "An error occurred during MediaWiki uninstall."
+msgstr "Došlo je do greške pri deinstalaciji MediaWiki-ja."
+
+#: internal/modules/mediawiki/manage.go:110
+msgid "MediaWiki uninstalled successfully"
+msgstr "MediaWiki je uspešno deinstaliran"
+
 #: internal/modules/mediawiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:338
 #: internal/web/templates/manager/mediawiki_install.html:9
 msgid "Install MediaWiki"
 msgstr "Instaliraj MediaWiki"
+
+#: internal/modules/mongodb/assign.go:34 internal/modules/mongodb/assign.go:86
+#: internal/modules/postgresql/assign.go:30
+#: internal/modules/postgresql/assign.go:79
+msgid "Invalid or missing user name."
+msgstr "Neispravno ili nedostaje korisničko ime."
+
+#: internal/modules/mongodb/assign.go:37 internal/modules/mongodb/assign.go:89
+#: internal/modules/postgresql/assign.go:33
+#: internal/modules/postgresql/assign.go:82
+msgid "Invalid or missing database name."
+msgstr "Neispravan ili nedostaje naziv baze podataka."
+
+#: internal/modules/mongodb/assign.go:40
+#: internal/modules/postgresql/assign.go:36
+msgid "This is a system database that cannot be used."
+msgstr "Ovo je sistemska baza podataka koja ne može da se koristi."
+
+#: internal/modules/mongodb/assign.go:43 internal/modules/mongodb/wizard.go:70
+msgid "Invalid role."
+msgstr "Neispravna uloga."
+
+#: internal/modules/mongodb/assign.go:48
+msgid "Failed to assign user to database: %(error)s"
+msgstr "Dodela korisnika bazi podataka nije uspela: %(error)s"
+
+#: internal/modules/mongodb/assign.go:52
+msgid "Successfully added a user %(db_user)s to MongoDB database"
+msgstr "Korisnik %(db_user)s je uspešno dodat u MongoDB bazu podataka"
+
+#: internal/modules/mongodb/assign.go:92
+#: internal/modules/postgresql/assign.go:85
+msgid "This is a system username that cannot be edited."
+msgstr "Ovo je sistemsko korisničko ime koje ne može da se menja."
+
+#: internal/modules/mongodb/assign.go:95
+#: internal/modules/postgresql/assign.go:88
+msgid "This is a system database that cannot be edited."
+msgstr "Ovo je sistemska baza podataka koja ne može da se menja."
+
+#: internal/modules/mongodb/assign.go:100
+msgid ""
+"Failed to revoke role for user %(db_user)s from MongoDB database "
+"%(database_name)s: %(error)s"
+msgstr ""
+"Opoziv uloge za korisnika %(db_user)s iz MongoDB baze podataka "
+"%(database_name)s nije uspeo: %(error)s"
+
+#: internal/modules/mongodb/assign.go:104
+msgid ""
+"Successfully revoked access for user %(db_user)s from MongoDB database "
+"%(database_name)s"
+msgstr ""
+"Pristup korisnika %(db_user)s MongoDB bazi podataka %(database_name)s je "
+"uspešno opozvan"
+
+#: internal/modules/mongodb/databases.go:49
+#: internal/modules/mongodb/users.go:34
+msgid "MongoDB service is not yet installed. Starting it in the background.."
+msgstr "MongoDB servis još nije instaliran. Pokreće se u pozadini.."
+
+#: internal/modules/mongodb/databases.go:52
+#: internal/modules/mongodb/users.go:37
+msgid ""
+"MongoDB container is not running. Please allow a few moments for the "
+"initialization.."
+msgstr ""
+"MongoDB kontejner nije pokrenut. Sačekajte nekoliko trenutaka da se "
+"inicijalizuje.."
+
+#: internal/modules/mongodb/databases.go:56
+#: internal/modules/mysql/databases.go:100
+#: internal/modules/postgresql/databases.go:62
+msgid "Error fetching databases: %(error)s"
+msgstr "Greška pri preuzimanju baza podataka: %(error)s"
+
+#: internal/modules/mongodb/databases.go:87
+#: internal/modules/mongodb/wizard.go:28
+msgid ""
+"MongoDB service is not ready yet. Please wait for the installation to finish"
+" before creating a database."
+msgstr ""
+"MongoDB servis još nije spreman. Sačekajte da se instalacija završi pre "
+"kreiranja baze podataka."
+
+#: internal/modules/mongodb/databases.go:100
+#: internal/modules/mongodb/databases.go:163
+#: internal/modules/mongodb/export.go:36 internal/modules/mongodb/wizard.go:49
+#: internal/modules/mysql/assign.go:48 internal/modules/mysql/assign.go:180
+#: internal/modules/mysql/databases.go:173
+#: internal/modules/mysql/databases.go:230 internal/modules/mysql/export.go:39
+#: internal/modules/postgresql/databases.go:132
+#: internal/modules/postgresql/databases.go:191
+#: internal/modules/postgresql/export.go:33
+#: internal/modules/postgresql/wizard.go:47
+msgid "Database name is required."
+msgstr "Naziv baze podataka je obavezan."
+
+#: internal/modules/mongodb/databases.go:104
+#: internal/modules/mongodb/databases.go:166
+#: internal/modules/mongodb/wizard.go:52 internal/modules/mysql/assign.go:51
+#: internal/modules/mysql/assign.go:183
+#: internal/modules/mysql/databases.go:177
+#: internal/modules/mysql/databases.go:234
+#: internal/modules/postgresql/databases.go:136
+#: internal/modules/postgresql/databases.go:195
+#: internal/modules/postgresql/wizard.go:50
+msgid ""
+"Name %(database_name)s is not allowed. Please use alphanumeric characters "
+"and '_' - [a-zA-Z0-9_]+ "
+msgstr ""
+"Naziv %(database_name)s nije dozvoljen. Koristite alfanumeričke karaktere i "
+"'_' - [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/databases.go:108
+#: internal/modules/mongodb/wizard.go:55 internal/modules/mysql/assign.go:58
+#: internal/modules/postgresql/wizard.go:53
+msgid "This is a system database that can not be used."
+msgstr "Ovo je sistemska baza podataka koja ne može da se koristi."
+
+#: internal/modules/mongodb/databases.go:130
+#: internal/modules/mongodb/wizard.go:89
+#: internal/modules/postgresql/databases.go:159
+#: internal/modules/postgresql/wizard.go:85
+msgid ""
+"You have reached the maximum number of databases allowed.%(upgrade_message)s"
+msgstr ""
+"Dostigli ste maksimalan broj dozvoljenih baza podataka.%(upgrade_message)s"
+
+#: internal/modules/mongodb/databases.go:135
+#: internal/modules/mongodb/wizard.go:94
+#: internal/modules/postgresql/databases.go:164
+#: internal/modules/postgresql/wizard.go:90
+msgid "Failed to create database: %(error)s"
+msgstr "Kreiranje baze podataka nije uspelo: %(error)s"
+
+#: internal/modules/mongodb/databases.go:141
+msgid "Successfully created a MongoDB database %(database_name)s"
+msgstr "MongoDB baza podataka %(database_name)s je uspešno kreirana"
+
+#: internal/modules/mongodb/databases.go:169
+msgid "This is a system database that cannot be deleted."
+msgstr "Ovo je sistemska baza podataka koja ne može da se obriše."
+
+#: internal/modules/mongodb/databases.go:174
+#: internal/modules/postgresql/databases.go:202
+msgid "Error deleting database %(database_name)s: %(error)s"
+msgstr "Greška pri brisanju baze podataka %(database_name)s: %(error)s"
+
+#: internal/modules/mongodb/databases.go:180
+msgid "Successfully deleted a MongoDB database %(database_name)s"
+msgstr "MongoDB baza podataka %(database_name)s je uspešno obrisana"
+
+#: internal/modules/mongodb/export.go:39 internal/modules/mysql/export.go:42
+#: internal/modules/postgresql/export.go:36
+msgid ""
+"Name %(database_name)s is not allowed. Please use alphanumeric characters "
+"and '_' - [a-zA-Z0-9_]+"
+msgstr ""
+"Naziv %(database_name)s nije dozvoljen. Koristite alfanumeričke karaktere i "
+"'_' - [a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/export.go:42
+#: internal/modules/postgresql/export.go:39
+msgid ""
+"Database '%(database_name)s' is a system database and cannot be exported."
+msgstr ""
+"Baza podataka '%(database_name)s' je sistemska i ne može da se izveze."
+
+#: internal/modules/mongodb/export.go:45
+msgid "Invalid export format provided, select Archive or GZIP."
+msgstr "Naveden je neispravan format izvoza, izaberite Archive ili GZIP."
+
+#: internal/modules/mongodb/export.go:48 internal/modules/mysql/export.go:88
+#: internal/modules/postgresql/export.go:45
+msgid "Invalid export destination."
+msgstr "Neispravno odredište izvoza."
+
+#: internal/modules/mongodb/export.go:61 internal/modules/mysql/export.go:66
+#: internal/modules/postgresql/export.go:52
+msgid "Failed to export database %(database_name)s."
+msgstr "Izvoz baze podataka %(database_name)s nije uspeo."
+
+#: internal/modules/mongodb/export.go:78 internal/modules/mysql/export.go:84
+#: internal/modules/postgresql/export.go:69
+msgid "Database '%(database_name)s' exported to %(display_file)s"
+msgstr "Baza podataka '%(database_name)s' je izvezena u %(display_file)s"
+
+#: internal/modules/mongodb/importdb.go:80
+#: internal/modules/postgresql/importdb.go:80
+msgid "Successfully imported %(filename)s into database: %(db_name)s"
+msgstr "%(filename)s je uspešno uvezen u bazu podataka: %(db_name)s"
+
+#: internal/modules/mongodb/importdb.go:84
+#: internal/modules/postgresql/importdb.go:84
+msgid "Error importing %(filename)s into database %(db_name)s: %(import_err)s"
+msgstr ""
+"Greška pri uvozu %(filename)s u bazu podataka %(db_name)s: %(import_err)s"
+
+#: internal/modules/mongodb/importdb.go:89
+#: internal/modules/mysql/importdb.go:97
+#: internal/modules/postgresql/importdb.go:89
+msgid "No database file uploaded!"
+msgstr "Nije otpremljen fajl baze podataka!"
 
 #: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:233
 #: internal/modules/postgresql/postgresql.go:65
@@ -2058,6 +3395,20 @@ msgstr "Servis je aktivan, ali se baze podataka još inicijalizuju."
 msgid "Unable to retrieve service status. Please contact your administrator."
 msgstr "Nije moguće dobiti status servisa. Kontaktirajte administratora."
 
+#: internal/modules/mongodb/processlist.go:47
+#: internal/modules/mysql/processlist.go:40
+#: internal/modules/postgresql/processlist.go:62
+msgid "Error fetching process list: %(error)s"
+msgstr "Greška pri preuzimanju liste procesa: %(error)s"
+
+#: internal/modules/mongodb/processlist.go:106
+msgid "Error killing operation %(opid)s: %(error)s"
+msgstr "Greška pri prekidanju operacije %(opid)s: %(error)s"
+
+#: internal/modules/mongodb/processlist.go:110
+msgid "Operation %(opid)s killed."
+msgstr "Operacija %(opid)s je prekinuta."
+
 #: internal/modules/mongodb/render.go:56
 #: internal/web/templates/mongodb/databases.html:9
 msgid "MongoDB Databases"
@@ -2124,11 +3475,388 @@ msgstr "Dodeli korisnika bazi podataka"
 msgid "Remove User from Database"
 msgstr "Ukloni korisnika iz baze podataka"
 
+#: internal/modules/mongodb/users.go:41 internal/modules/mysql/users.go:40
+#: internal/modules/postgresql/users.go:48
+msgid "Error fetching users: %(error)s"
+msgstr "Greška pri preuzimanju korisnika: %(error)s"
+
+#: internal/modules/mongodb/users.go:76 internal/modules/mongodb/users.go:133
+#: internal/modules/mongodb/users.go:170 internal/modules/mongodb/wizard.go:58
+#: internal/modules/mysql/assign.go:42 internal/modules/mysql/assign.go:174
+#: internal/modules/mysql/users.go:82 internal/modules/mysql/users.go:146
+#: internal/modules/mysql/users.go:190 internal/modules/postgresql/users.go:87
+#: internal/modules/postgresql/users.go:144
+#: internal/modules/postgresql/users.go:193
+#: internal/modules/postgresql/wizard.go:56
+msgid "User name is required."
+msgstr "Korisničko ime je obavezno."
+
+#: internal/modules/mongodb/users.go:79 internal/modules/mongodb/users.go:173
+#: internal/modules/mongodb/wizard.go:61 internal/modules/mysql/assign.go:45
+#: internal/modules/mysql/assign.go:177 internal/modules/mysql/users.go:85
+#: internal/modules/mysql/users.go:149 internal/modules/mysql/users.go:193
+#: internal/modules/postgresql/users.go:90
+#: internal/modules/postgresql/users.go:196
+#: internal/modules/postgresql/wizard.go:59
+msgid ""
+"Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
+"- [a-zA-Z0-9_]+ "
+msgstr ""
+"Naziv %(db_user)s nije dozvoljen. Koristite alfanumeričke karaktere i '_' - "
+"[a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/users.go:82 internal/modules/mongodb/wizard.go:64
+#: internal/modules/mysql/remotemysql.go:158
+#: internal/modules/mysql/users.go:88 internal/modules/postgresql/users.go:93
+#: internal/modules/postgresql/wizard.go:62
+msgid "This username is not allowed."
+msgstr "Ovo korisničko ime nije dozvoljeno."
+
+#: internal/modules/mongodb/users.go:90 internal/modules/mongodb/wizard.go:99
+#: internal/modules/postgresql/users.go:101
+#: internal/modules/postgresql/wizard.go:95
+msgid "Failed to create user: %(error)s"
+msgstr "Kreiranje korisnika nije uspelo: %(error)s"
+
+#: internal/modules/mongodb/users.go:94
+msgid "Successfully created a MongoDB user %(db_user)s"
+msgstr "MongoDB korisnik %(db_user)s je uspešno kreiran"
+
+#: internal/modules/mongodb/users.go:108 internal/modules/mongodb/users.go:176
+#: internal/modules/mysql/assign.go:189
+#: internal/modules/mysql/remotemysql.go:222
+#: internal/modules/mysql/users.go:116 internal/modules/mysql/users.go:196
+#: internal/modules/postgresql/users.go:119
+#: internal/modules/postgresql/users.go:199
+msgid "This is a system username that can not be edited."
+msgstr "Ovo je sistemsko korisničko ime koje ne može da se menja."
+
+#: internal/modules/mongodb/users.go:136
+#: internal/modules/postgresql/users.go:147
+msgid ""
+"Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
+"- [a-zA-Z0-9_]+"
+msgstr ""
+"Naziv %(db_user)s nije dozvoljen. Koristite alfanumeričke karaktere i '_' - "
+"[a-zA-Z0-9_]+"
+
+#: internal/modules/mongodb/users.go:139
+#: internal/modules/postgresql/users.go:150
+msgid "This is a system username that cannot be deleted."
+msgstr "Ovo je sistemsko korisničko ime koje ne može da se obriše."
+
+#: internal/modules/mongodb/users.go:144
+#: internal/modules/postgresql/users.go:167
+msgid "Error deleting user %(db_user)s: %(error)s"
+msgstr "Greška pri brisanju korisnika %(db_user)s: %(error)s"
+
+#: internal/modules/mongodb/users.go:146 internal/modules/mysql/users.go:167
+#: internal/modules/postgresql/users.go:169
+msgid "Successfully deleted user %(db_user)s"
+msgstr "Korisnik %(db_user)s je uspešno obrisan"
+
+#: internal/modules/mongodb/users.go:184
+#: internal/modules/postgresql/users.go:207
+msgid "Error changing password for user %(db_user)s: %(error)s"
+msgstr "Greška pri promeni lozinke za korisnika %(db_user)s: %(error)s"
+
+#: internal/modules/mongodb/users.go:188 internal/modules/mysql/users.go:215
+#: internal/modules/postgresql/users.go:211
+msgid "Successfully changed password for user %(db_user)s"
+msgstr "Lozinka za korisnika %(db_user)s je uspešno promenjena"
+
+#: internal/modules/mongodb/wizard.go:104
+msgid "Database and user created, but failed to grant role: %(error)s"
+msgstr ""
+"Baza podataka i korisnik su kreirani, ali dodela uloge nije uspela: "
+"%(error)s"
+
+#: internal/modules/mongodb/wizard.go:111
+msgid ""
+"Successfully created database %(database_name)s, user %(db_user)s, and "
+"granted %(role)s."
+msgstr ""
+"Uspešno kreirana baza podataka %(database_name)s, korisnik %(db_user)s i "
+"dodeljena uloga %(role)s."
+
+#: internal/modules/moodle/install.go:390
+msgid "Moodle installed successfully on %(selected_domain)s"
+msgstr "Moodle je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/moodle/manage.go:47
+msgid "Moodle installation not found in the database"
+msgstr "Moodle instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/moodle/manage.go:87
+msgid "An error occurred during Moodle uninstall."
+msgstr "Došlo je do greške pri deinstalaciji Moodle-a."
+
+#: internal/modules/moodle/manage.go:98
+msgid "Moodle uninstalled successfully"
+msgstr "Moodle je uspešno deinstaliran"
+
 #: internal/modules/moodle/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:580
 #: internal/web/templates/manager/moodle_install.html:9
 msgid "Install Moodle"
 msgstr "Instaliraj Moodle"
+
+#: internal/modules/mysql/assign.go:55
+msgid "At least one privilege must be selected."
+msgstr "Mora biti izabrana najmanje jedna privilegija."
+
+#: internal/modules/mysql/assign.go:61 internal/modules/mysql/assign.go:192
+#: internal/modules/mysql/remotemysql.go:161
+#: internal/modules/mysql/remotemysql.go:225
+#: internal/modules/mysql/remotemysql.go:267
+#: internal/modules/mysql/users.go:91 internal/modules/mysql/users.go:155
+#: internal/modules/mysql/users.go:199
+msgid "Invalid host format."
+msgstr "Neispravan format hosta."
+
+#: internal/modules/mysql/assign.go:67
+msgid "Invalid privilege selected."
+msgstr "Izabrana je neispravna privilegija."
+
+#: internal/modules/mysql/assign.go:95
+msgid ""
+"Privileges granted successfully for user '%(db_user)s' on database "
+"'%(database_name)s'"
+msgstr ""
+"Privilegije su uspešno dodeljene korisniku '%(db_user)s' na bazi podataka "
+"'%(database_name)s'"
+
+#: internal/modules/mysql/assign.go:186
+msgid "This is a system database that can not be edited."
+msgstr "Ovo je sistemska baza podataka koja ne može da se menja."
+
+#: internal/modules/mysql/assign.go:197 internal/modules/mysql/assign.go:201
+msgid "Failed to revoke privileges: %(error)s"
+msgstr "Opoziv privilegija nije uspeo: %(error)s"
+
+#: internal/modules/mysql/assign.go:207
+msgid ""
+"Successfully revoked all privileges for user %(db_user)s from database "
+"%(database_name)s"
+msgstr ""
+"Uspešno opozvane sve privilegije korisnika %(db_user)s sa baze podataka "
+"%(database_name)s"
+
+#: internal/modules/mysql/conf.go:177
+msgid "Unknown database service, cannot restart"
+msgstr "Nepoznat servis baze podataka, ponovno pokretanje nije moguće"
+
+#: internal/modules/mysql/conf.go:181
+msgid "%(mysql_version)s configuration saved but service failed to restart."
+msgstr ""
+"%(mysql_version)s konfiguracija je sačuvana, ali ponovno pokretanje servisa "
+"nije uspelo."
+
+#: internal/modules/mysql/conf.go:183
+msgid "%(mysql_version)s configuration updated and service restarted."
+msgstr ""
+"%(mysql_version)s konfiguracija je ažurirana i servis je ponovo pokrenut."
+
+#: internal/modules/mysql/conf.go:189
+msgid ""
+"%(mysql_version)s container is not running. Please wait for initialization."
+msgstr "%(mysql_version)s kontejner nije pokrenut. Sačekajte inicijalizaciju."
+
+#: internal/modules/mysql/databases.go:165 internal/modules/mysql/wizard.go:30
+msgid ""
+"%(mysql_version)s service is not ready yet. Please wait for the installation"
+" to finish before creating a database."
+msgstr ""
+"%(mysql_version)s servis još nije spreman. Sačekajte da se instalacija "
+"završi pre kreiranja baze podataka."
+
+#: internal/modules/mysql/databases.go:181
+msgid ""
+"Database name is too long. MySQL identifiers are limited to 64 characters."
+msgstr ""
+"Naziv baze podataka je predugačak. MySQL identifikatori su ograničeni na 64 "
+"karaktera."
+
+#: internal/modules/mysql/databases.go:196
+msgid ""
+"Error creating database: '%(database_name)s' - You have reached the maximum "
+"number of databases allowed.%(upgrade_message)s"
+msgstr ""
+"Greška pri kreiranju baze podataka: '%(database_name)s' - dostigli ste "
+"maksimalan broj dozvoljenih baza podataka.%(upgrade_message)s"
+
+#: internal/modules/mysql/databases.go:201
+msgid "Error creating database: %(error)s"
+msgstr "Greška pri kreiranju baze podataka: %(error)s"
+
+#: internal/modules/mysql/databases.go:209
+msgid "Successfully created a database %(database_name)s"
+msgstr "Baza podataka %(database_name)s je uspešno kreirana"
+
+#: internal/modules/mysql/databases.go:239
+msgid "Error deleting database: %(error)s"
+msgstr "Greška pri brisanju baze podataka: %(error)s"
+
+#: internal/modules/mysql/databases.go:247
+msgid "Successfully deleted a database %(database_name)s"
+msgstr "Baza podataka %(database_name)s je uspešno obrisana"
+
+#: internal/modules/mysql/export.go:45
+msgid ""
+"Database '%(database_name)s' is restricted and cannot be exported. Contact "
+"Administrator"
+msgstr ""
+"Baza podataka '%(database_name)s' je ograničena i ne može da se izveze. "
+"Kontaktirajte administratora"
+
+#: internal/modules/mysql/export.go:48
+#: internal/modules/postgresql/export.go:42
+msgid "Invalid export format provided, select SQL or GZIP."
+msgstr "Naveden je neispravan format izvoza, izaberite SQL ili GZIP."
+
+#: internal/modules/mysql/export.go:59
+msgid "Unsupported database engine: %(mysql_version)s"
+msgstr "Nepodržan mehanizam baze podataka: %(mysql_version)s"
+
+#: internal/modules/mysql/importdb.go:48
+msgid ""
+"%(mysql_version)s container is not running. Please allow a few moments for "
+"the initialization.."
+msgstr ""
+"%(mysql_version)s kontejner nije pokrenut. Sačekajte nekoliko trenutaka da "
+"se inicijalizuje.."
+
+#: internal/modules/mysql/importdb.go:74
+msgid "Uploaded file exceeds %(mysql_import_max_size_gb)s GB limit."
+msgstr "Otpremljeni fajl prelazi limit od %(mysql_import_max_size_gb)s GB."
+
+#: internal/modules/mysql/importdb.go:90
+msgid "Successfully imported from %(filename)s file to database: %(db_name)s"
+msgstr "Uspešno uvezeno iz fajla %(filename)s u bazu podataka: %(db_name)s"
+
+#: internal/modules/mysql/importdb.go:94
+msgid "Import into '%(db_name)s' failed: %(err_detail)s"
+msgstr "Uvoz u '%(db_name)s' nije uspeo: %(err_detail)s"
+
+#: internal/modules/mysql/mysql.go:276
+msgid ""
+"%(service)s service is not yet installed. Starting it in the background.."
+msgstr "%(service)s servis još nije instaliran. Pokreće se u pozadini.."
+
+#: internal/modules/mysql/mysql.go:278
+msgid "%(service)s service is not accessible. Current status: %(state)s."
+msgstr "%(service)s servis nije dostupan. Trenutni status: %(state)s."
+
+#: internal/modules/mysql/mysql.go:280
+msgid ""
+"%(service)s is running but still initializing. If it stays in this state for"
+" more than 60s, check the logs."
+msgstr ""
+"%(service)s radi, ali se još inicijalizuje. Ako ostane u ovom stanju duže od"
+" 60s, proverite logove."
+
+#: internal/modules/mysql/mysql.go:282
+msgid "%(service)s is starting. It is not ready to handle queries yet."
+msgstr "%(service)s se pokreće. Još nije spreman za upite."
+
+#: internal/modules/mysql/mysql.go:284
+msgid ""
+"%(service)s is running, but health status is unknown. It may or may not be "
+"ready to handle queries."
+msgstr ""
+"%(service)s radi, ali status ispravnosti nije poznat. Možda jeste, a možda "
+"nije spreman za upite."
+
+#: internal/modules/mysql/processlist.go:102
+msgid "Error killing query %(id)s: %(error)s"
+msgstr "Greška pri prekidanju upita %(id)s: %(error)s"
+
+#: internal/modules/mysql/processlist.go:106
+msgid "Query %(id)s killed."
+msgstr "Upit %(id)s je prekinut."
+
+#: internal/modules/mysql/remotemysql.go:79
+msgid "Remote MySQL access is now enabled."
+msgstr "Udaljeni pristup MySQL-u je sada omogućen."
+
+#: internal/modules/mysql/remotemysql.go:83
+msgid "Remote MySQL access is already disabled."
+msgstr "Udaljeni pristup MySQL-u je već onemogućen."
+
+#: internal/modules/mysql/remotemysql.go:87
+msgid "Remote MySQL access is now disabled."
+msgstr "Udaljeni pristup MySQL-u je sada onemogućen."
+
+#: internal/modules/mysql/remotemysql.go:95
+msgid ""
+"Port changed but the MySQL service failed to restart. Try restarting it "
+"manually from Services."
+msgstr ""
+"Port je promenjen, ali ponovno pokretanje MySQL servisa nije uspelo. "
+"Pokušajte da ga ponovo pokrenete ručno sa stranice Servisi."
+
+#: internal/modules/mysql/remotemysql.go:112
+msgid ""
+"Could not load MySQL users yet - the database may still be starting. Please "
+"refresh in a moment."
+msgstr ""
+"MySQL korisnike još nije moguće učitati - baza podataka se možda još "
+"pokreće. Osvežite stranicu za trenutak."
+
+#: internal/modules/mysql/remotemysql.go:155
+msgid "A valid username is required - alphanumeric characters and '_' only."
+msgstr ""
+"Potrebno je ispravno korisničko ime - samo alfanumerički karakteri i '_'."
+
+#: internal/modules/mysql/remotemysql.go:164
+msgid "Password is required."
+msgstr "Lozinka je obavezna."
+
+#: internal/modules/mysql/remotemysql.go:172
+#: internal/modules/mysql/remotemysql.go:187
+#: internal/modules/mysql/remotemysql.go:194
+msgid "Error adding access: %(error)s"
+msgstr "Greška pri dodavanju pristupa: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:181
+msgid "User %(db_user)s already has access from host %(db_host)s."
+msgstr "Korisnik %(db_user)s već ima pristup sa hosta %(db_host)s."
+
+#: internal/modules/mysql/remotemysql.go:200
+msgid "Successfully granted access for %(db_user)s from %(db_host)s"
+msgstr "Uspešno dodeljen pristup za %(db_user)s sa %(db_host)s"
+
+#: internal/modules/mysql/remotemysql.go:219
+#: internal/modules/mysql/remotemysql.go:261
+msgid "A valid username is required."
+msgstr "Potrebno je ispravno korisničko ime."
+
+#: internal/modules/mysql/remotemysql.go:228
+msgid "No changes made."
+msgstr "Nema izmena."
+
+#: internal/modules/mysql/remotemysql.go:233
+#: internal/modules/mysql/remotemysql.go:237
+msgid "Error updating access: %(error)s"
+msgstr "Greška pri ažuriranju pristupa: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:243
+msgid "Successfully updated access for %(db_user)s"
+msgstr "Pristup za %(db_user)s je uspešno ažuriran"
+
+#: internal/modules/mysql/remotemysql.go:264
+#: internal/modules/mysql/users.go:152
+msgid "This is a system username that can not be deleted."
+msgstr "Ovo je sistemsko korisničko ime koje ne može da se obriše."
+
+#: internal/modules/mysql/remotemysql.go:272
+#: internal/modules/mysql/remotemysql.go:276
+msgid "Error removing access: %(error)s"
+msgstr "Greška pri uklanjanju pristupa: %(error)s"
+
+#: internal/modules/mysql/remotemysql.go:282
+msgid "Successfully removed access for %(db_user)s from %(db_host)s"
+msgstr "Uspešno uklonjen pristup za %(db_user)s sa %(db_host)s"
 
 #: internal/modules/mysql/render.go:117
 msgid "Database Users"
@@ -2146,11 +3874,78 @@ msgstr "Promeni root lozinku"
 msgid "Remote MySQL"
 msgstr "Udaljeni MySQL"
 
+#: internal/modules/mysql/rootpassword.go:37
+#: internal/modules/mysql/rootpassword.go:41
+#: internal/modules/mysql/rootpassword.go:45
+msgid "Error changing MySQL root password: %(error)s"
+msgstr "Greška pri promeni MySQL root lozinke: %(error)s"
+
+#: internal/modules/mysql/rootpassword.go:57
+#: internal/modules/mysql/rootpassword.go:63
+msgid "Password changed but failed to restart MySQL."
+msgstr "Lozinka je promenjena, ali ponovno pokretanje MySQL-a nije uspelo."
+
+#: internal/modules/mysql/rootpassword.go:67
+msgid "Successfully changed root password."
+msgstr "Root lozinka je uspešno promenjena."
+
+#: internal/modules/mysql/users.go:105
+msgid "Successfully created a database user %(db_user)s"
+msgstr "Korisnik baze podataka %(db_user)s je uspešno kreiran"
+
+#: internal/modules/mysql/users.go:160
+msgid "Error deleting user: %(error)s"
+msgstr "Greška pri brisanju korisnika: %(error)s"
+
+#: internal/modules/mysql/users.go:208
+msgid "Error changing password: %(error)s"
+msgstr "Greška pri promeni lozinke: %(error)s"
+
+#: internal/modules/nextcloud/install.go:352
+msgid "Nextcloud installed successfully on %(selected_domain)s"
+msgstr "Nextcloud je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/nextcloud/manage.go:51
+msgid "Nextcloud installation not found in the database"
+msgstr "Nextcloud instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/nextcloud/manage.go:75
+msgid "Database name or user not found in config/config.php"
+msgstr "Naziv baze podataka ili korisnik nije pronađen u config/config.php"
+
+#: internal/modules/nextcloud/manage.go:96
+msgid "An error occurred during Nextcloud uninstall."
+msgstr "Došlo je do greške pri deinstalaciji Nextcloud-a."
+
+#: internal/modules/nextcloud/manage.go:107
+msgid "Nextcloud uninstalled successfully"
+msgstr "Nextcloud je uspešno deinstaliran"
+
 #: internal/modules/nextcloud/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:478
 #: internal/web/templates/manager/nextcloud_install.html:9
 msgid "Install Nextcloud"
 msgstr "Instaliraj Nextcloud"
+
+#: internal/modules/ojs/install.go:418
+msgid "OJS installed successfully on %(selected_domain)s"
+msgstr "OJS je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/ojs/manage.go:41
+msgid "OJS installation not found in the database"
+msgstr "OJS instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/ojs/manage.go:69
+msgid "Database name or user not found in config.inc.php"
+msgstr "Naziv baze podataka ili korisnik nije pronađen u config.inc.php"
+
+#: internal/modules/ojs/manage.go:79
+msgid "An error occurred during OJS uninstall."
+msgstr "Došlo je do greške pri deinstalaciji OJS-a."
+
+#: internal/modules/ojs/manage.go:90
+msgid "OJS uninstalled successfully"
+msgstr "OJS je uspešno deinstaliran"
 
 #: internal/modules/ojs/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:612
@@ -2158,11 +3953,158 @@ msgstr "Instaliraj Nextcloud"
 msgid "Install OJS"
 msgstr "Instaliraj OJS"
 
+#: internal/modules/opencart/install.go:361
+msgid "OpenCart installed successfully on %(selected_domain)s"
+msgstr "OpenCart je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/opencart/manage.go:51
+msgid "OpenCart installation not found in the database"
+msgstr "OpenCart instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/opencart/manage.go:96
+msgid "An error occurred during OpenCart uninstall."
+msgstr "Došlo je do greške pri deinstalaciji OpenCart-a."
+
+#: internal/modules/opencart/manage.go:107
+msgid "OpenCart uninstalled successfully"
+msgstr "OpenCart je uspešno deinstaliran"
+
 #: internal/modules/opencart/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:215
 #: internal/web/templates/manager/opencart_install.html:9
 msgid "Install OpenCart"
 msgstr "Instaliraj OpenCart"
+
+#: internal/modules/php/default.go:55
+msgid "Invalid PHP version format"
+msgstr "Neispravan format PHP verzije"
+
+#: internal/modules/php/default.go:59
+msgid ""
+"Default PHP version for OpenLitespeed can not be set to %(new_phpversion)s -"
+" only available tags are: 8.5 8.4 8.3 8.2"
+msgstr ""
+"Podrazumevana PHP verzija za OpenLitespeed ne može biti %(new_phpversion)s -"
+" dostupni tagovi su samo: 8.5 8.4 8.3 8.2"
+
+#: internal/modules/php/default.go:67
+msgid "PHP version %(new_phpversion)s set as default for new domains"
+msgstr ""
+"PHP verzija %(new_phpversion)s je postavljena kao podrazumevana za nove "
+"domene"
+
+#: internal/modules/php/default.go:71
+msgid ""
+"PHP version %(new_phpversion)s saved, and Litespeed restarted to apply the "
+"version."
+msgstr ""
+"PHP verzija %(new_phpversion)s je sačuvana, a Litespeed je ponovo pokrenut "
+"da primeni verziju."
+
+#: internal/modules/php/default.go:75
+msgid ""
+"PHP version %(new_phpversion)s saved and will be used by Litespeed for new "
+"domains."
+msgstr ""
+"PHP verzija %(new_phpversion)s je sačuvana i Litespeed će je koristiti za "
+"nove domene."
+
+#: internal/modules/php/default.go:87
+msgid "Default PHP version could not be changed to %(new_phpversion)s"
+msgstr ""
+"Podrazumevana PHP verzija nije mogla biti promenjena na %(new_phpversion)s"
+
+#: internal/modules/php/domains.go:67
+msgid ""
+"Only one PHP version can be used on Litespeed, to change version for all "
+"domains use this page."
+msgstr ""
+"Na Litespeed-u može da se koristi samo jedna PHP verzija, za promenu verzije"
+" za sve domene koristite ovu stranicu."
+
+#: internal/modules/php/domains.go:95
+msgid "Invalid or unavailable PHP version selected."
+msgstr "Izabrana je neispravna ili nedostupna PHP verzija."
+
+#: internal/modules/php/domains.go:99
+msgid "Invalid current PHP version."
+msgstr "Neispravna trenutna PHP verzija."
+
+#: internal/modules/php/domains.go:107
+msgid "Failed to start PHP %(new_phpversion)s: %(message)s"
+msgstr "Pokretanje PHP %(new_phpversion)s nije uspelo: %(message)s"
+
+#: internal/modules/php/domains.go:115
+msgid "Failed to read vhost configuration for %(domain_url)s: %(error)s"
+msgstr "Čitanje vhost konfiguracije za %(domain_url)s nije uspelo: %(error)s"
+
+#: internal/modules/php/domains.go:123
+msgid "Error occurred while updating PHP version for domain %(domain_url)s"
+msgstr "Došlo je do greške pri ažuriranju PHP verzije za domen %(domain_url)s"
+
+#: internal/modules/php/domains.go:136
+msgid ""
+"PHP version for domain %(domain_url)s updated from %(old_phpversion)s to "
+"%(new_phpversion)s"
+msgstr ""
+"PHP verzija za domen %(domain_url)s je ažurirana sa %(old_phpversion)s na "
+"%(new_phpversion)s"
+
+#: internal/modules/php/extensions.go:587
+msgid "Failed to start PHP %(version)s: %(err_msg)s"
+msgstr "Pokretanje PHP %(version)s nije uspelo: %(err_msg)s"
+
+#: internal/modules/php/extensions.go:597
+msgid "Invalid extension name."
+msgstr "Neispravan naziv ekstenzije."
+
+#: internal/modules/php/extensions.go:620
+msgid ""
+"Extension %(extension)s %(action_word)s, PHP %(version)s restarted to apply "
+"changes."
+msgstr ""
+"Ekstenzija %(extension)s %(action_word)s, PHP %(version)s je ponovo pokrenut"
+" da primeni izmene."
+
+#: internal/modules/php/extensions.go:622
+msgid "Could not change extension %(extension)s: %(err_msg)s"
+msgstr "Nije moguće promeniti ekstenziju %(extension)s: %(err_msg)s"
+
+#: internal/modules/php/info.go:44
+msgid "Failed to start PHP %(service)s: %(message)s"
+msgstr "Pokretanje PHP %(service)s nije uspelo: %(message)s"
+
+#: internal/modules/php/ini.go:68
+msgid "Error saving %(text)s php.ini file!"
+msgstr "Greška pri čuvanju %(text)s php.ini fajla!"
+
+#: internal/modules/php/ini.go:74
+msgid ""
+"PHP.INI file for %(text)s version %(version)s edited successfully, and "
+"%(container_to_restart)s service restarted to apply."
+msgstr ""
+"PHP.INI fajl za %(text)s verziju %(version)s je uspešno izmenjen, a servis "
+"%(container_to_restart)s je ponovo pokrenut da primeni izmene."
+
+#: internal/modules/php/ini.go:78
+msgid "PHP.INI file for %(text)s version %(version)s edited successfully."
+msgstr "PHP.INI fajl za %(text)s verziju %(version)s je uspešno izmenjen."
+
+#: internal/modules/php/options.go:277
+msgid ""
+"Configuration edited successfully and %(text)s service restarted to apply "
+"new settings."
+msgstr ""
+"Konfiguracija je uspešno izmenjena i servis %(text)s je ponovo pokrenut da "
+"primeni nova podešavanja."
+
+#: internal/modules/php/options.go:279
+msgid ""
+"Configuration edited successfully, but %(text)s failed to restart. Try "
+"restarting it manually from Services."
+msgstr ""
+"Konfiguracija je uspešno izmenjena, ali ponovno pokretanje %(text)s nije "
+"uspelo. Pokušajte da ga ponovo pokrenete ručno sa stranice Servisi."
 
 #: internal/modules/php/render.go:128
 #: internal/web/templates/php/default.html:7
@@ -2174,11 +4116,118 @@ msgstr "Podrazumevana PHP verzija"
 msgid "Install PHP Application"
 msgstr "Instaliraj PHP aplikaciju"
 
+#: internal/modules/phpbb/install.go:306
+msgid "phpBB installed successfully on %(selected_domain)s"
+msgstr "phpBB je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/phpbb/manage.go:81
+msgid "An error occurred during phpBB uninstall."
+msgstr "Došlo je do greške pri deinstalaciji phpBB-a."
+
 #: internal/modules/phpbb/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:253
 #: internal/web/templates/manager/phpbb_install.html:9
 msgid "Install phpBB"
 msgstr "Instaliraj phpBB"
+
+#: internal/modules/postgresql/assign.go:45
+msgid "Failed to assign user to database."
+msgstr "Dodela korisnika bazi podataka nije uspela."
+
+#: internal/modules/postgresql/assign.go:49
+msgid "Successfully added a user %(db_user)s to PostgreSQL database"
+msgstr "Korisnik %(db_user)s je uspešno dodat u PostgreSQL bazu podataka"
+
+#: internal/modules/postgresql/assign.go:93
+msgid ""
+"Failed to revoke privileges for user %(db_user)s from PostgreSQL database "
+"%(database_name)s"
+msgstr ""
+"Opoziv privilegija za korisnika %(db_user)s sa PostgreSQL baze podataka "
+"%(database_name)s nije uspeo"
+
+#: internal/modules/postgresql/assign.go:97
+msgid ""
+"Successfully revoked all privileges for user %(db_user)s from PostgreSQL "
+"database %(database_name)s"
+msgstr ""
+"Uspešno opozvane sve privilegije korisnika %(db_user)s sa PostgreSQL baze "
+"podataka %(database_name)s"
+
+#: internal/modules/postgresql/conf.go:149
+msgid ""
+"PostgreSQL configuration was saved successfully but postgres service failed "
+"to start! Please revert the changes to restart postgres."
+msgstr ""
+"PostgreSQL konfiguracija je uspešno sačuvana, ali pokretanje postgres "
+"servisa nije uspelo! Vratite izmene da biste ponovo pokrenuli postgres."
+
+#: internal/modules/postgresql/conf.go:151
+msgid ""
+"PostgreSQL Configuration was edited successfully and service restarted to "
+"apply new settings."
+msgstr ""
+"PostgreSQL konfiguracija je uspešno izmenjena i servis je ponovo pokrenut da"
+" primeni nova podešavanja."
+
+#: internal/modules/postgresql/databases.go:46
+#: internal/modules/postgresql/users.go:37
+msgid "Postgres service is not yet installed. Starting it in the background.."
+msgstr "Postgres servis još nije instaliran. Pokreće se u pozadini.."
+
+#: internal/modules/postgresql/databases.go:49
+#: internal/modules/postgresql/users.go:40
+msgid ""
+"Postgres container is not running. Please allow a few moments for the "
+"initialization.."
+msgstr ""
+"Postgres kontejner nije pokrenut. Sačekajte nekoliko trenutaka da se "
+"inicijalizuje.."
+
+#: internal/modules/postgresql/databases.go:119
+#: internal/modules/postgresql/wizard.go:30
+msgid ""
+"Postgres service is not ready yet. Please wait for the installation to "
+"finish before creating a database."
+msgstr ""
+"Postgres servis još nije spreman. Sačekajte da se instalacija završi pre "
+"kreiranja baze podataka."
+
+#: internal/modules/postgresql/databases.go:170
+msgid "Successfully created a PostgreSQL database %(database_name)s"
+msgstr "PostgreSQL baza podataka %(database_name)s je uspešno kreirana"
+
+#: internal/modules/postgresql/databases.go:208
+msgid "Successfully deleted a PostgreSQL database %(database_name)s"
+msgstr "PostgreSQL baza podataka %(database_name)s je uspešno obrisana"
+
+#: internal/modules/postgresql/processlist.go:128
+msgid "Error killing query %(pid)s: %(error)s"
+msgstr "Greška pri prekidanju upita %(pid)s: %(error)s"
+
+#: internal/modules/postgresql/processlist.go:132
+msgid "Query %(pid)s killed."
+msgstr "Upit %(pid)s je prekinut."
+
+#: internal/modules/postgresql/remote.go:43
+msgid "Remote PostgreSQL access is now enabled."
+msgstr "Udaljeni pristup PostgreSQL-u je sada omogućen."
+
+#: internal/modules/postgresql/remote.go:47
+msgid "Remote PostgreSQL access is already disabled."
+msgstr "Udaljeni pristup PostgreSQL-u je već onemogućen."
+
+#: internal/modules/postgresql/remote.go:51
+msgid "Remote PostgreSQL access is now disabled."
+msgstr "Udaljeni pristup PostgreSQL-u je sada onemogućen."
+
+#: internal/modules/postgresql/remote.go:57
+msgid ""
+"Port changed but the PostgreSQL service failed to restart. Try restarting it"
+" manually from Services."
+msgstr ""
+"Port je promenjen, ali ponovno pokretanje PostgreSQL servisa nije uspelo. "
+"Pokušajte da ga ponovo pokrenete ručno sa stranice Servisi."
 
 #: internal/modules/postgresql/render.go:60
 #: internal/web/templates/dashboard/onboarding.html:205
@@ -2199,6 +4248,45 @@ msgstr "Udaljeni PostgreSQL"
 #: internal/modules/postgresql/render.go:258
 msgid "Edit PostgreSQL configuration"
 msgstr "Uredi PostgreSQL konfiguraciju"
+
+#: internal/modules/postgresql/users.go:105
+msgid "Successfully created a PostgreSQL user %(db_user)s"
+msgstr "PostgreSQL korisnik %(db_user)s je uspešno kreiran"
+
+#: internal/modules/postgresql/wizard.go:103
+msgid "Database and user created, but failed to grant privileges: %(error)s"
+msgstr ""
+"Baza podataka i korisnik su kreirani, ali dodela privilegija nije uspela: "
+"%(error)s"
+
+#: internal/modules/postgresql/wizard.go:110
+msgid ""
+"Successfully created database %(database_name)s, user %(db_user)s, and "
+"granted privileges."
+msgstr ""
+"Uspešno kreirana baza podataka %(database_name)s, korisnik %(db_user)s i "
+"dodeljene privilegije."
+
+#: internal/modules/prestashop/install.go:395
+msgid "PrestaShop installed successfully on %(selected_domain)s"
+msgstr "PrestaShop je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/prestashop/manage.go:51
+msgid "PrestaShop installation not found in the database"
+msgstr "PrestaShop instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/prestashop/manage.go:75
+msgid "Database name or user not found in app/config/parameters.php"
+msgstr ""
+"Naziv baze podataka ili korisnik nije pronađen u app/config/parameters.php"
+
+#: internal/modules/prestashop/manage.go:96
+msgid "An error occurred during PrestaShop uninstall."
+msgstr "Došlo je do greške pri deinstalaciji PrestaShop-a."
+
+#: internal/modules/prestashop/manage.go:107
+msgid "PrestaShop uninstalled successfully"
+msgstr "PrestaShop je uspešno deinstaliran"
 
 #: internal/modules/prestashop/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:183
@@ -2366,11 +4454,71 @@ msgstr "Kliknite da onemogućite"
 msgid "Click to Enable"
 msgstr "Kliknite da omogućite"
 
+#: internal/modules/services/services.go:120
+msgid "%(service)s service is now restarted."
+msgstr "Servis %(service)s je sada ponovo pokrenut."
+
+#: internal/modules/services/services.go:124
+msgid "Failed to restart the %(service)s service."
+msgstr "Ponovno pokretanje servisa %(service)s nije uspelo."
+
+#: internal/modules/services/services.go:130
+msgid "%(service)s service is now disabled."
+msgstr "Servis %(service)s je sada onemogućen."
+
+#: internal/modules/services/services.go:131
+msgid "Failed to stop the %(service)s service."
+msgstr "Zaustavljanje servisa %(service)s nije uspelo."
+
+#: internal/modules/services/services.go:134
+msgid "%(service)s service is now enabled."
+msgstr "Servis %(service)s je sada omogućen."
+
+#: internal/modules/services/services.go:135
+msgid "Failed to start the %(service)s service."
+msgstr "Pokretanje servisa %(service)s nije uspelo."
+
+#: internal/modules/services/services.go:142
+msgid "%(fail_msg)s Try restart."
+msgstr "%(fail_msg)s Pokušajte ponovno pokretanje."
+
+#: internal/modules/sofawiki/install.go:207
+msgid "SofaWiki installed successfully on %(selected_domain)s"
+msgstr "SofaWiki je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/sofawiki/manage.go:42
+msgid "SofaWiki installation not found in the database"
+msgstr "SofaWiki instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/sofawiki/manage.go:68
+msgid "An error occurred during SofaWiki uninstall."
+msgstr "Došlo je do greške pri deinstalaciji SofaWiki-ja."
+
+#: internal/modules/sofawiki/manage.go:79
+msgid "SofaWiki uninstalled successfully"
+msgstr "SofaWiki je uspešno deinstaliran"
+
 #: internal/modules/sofawiki/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:402
 #: internal/web/templates/manager/sofawiki_install.html:9
 msgid "Install SofaWiki"
 msgstr "Instaliraj SofaWiki"
+
+#: internal/modules/tinyfilemanager/install.go:212
+msgid "TinyFileManager installed successfully on %(selected_domain)s"
+msgstr "TinyFileManager je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/tinyfilemanager/manage.go:42
+msgid "TinyFileManager installation not found in the database"
+msgstr "TinyFileManager instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/tinyfilemanager/manage.go:68
+msgid "An error occurred during TinyFileManager uninstall."
+msgstr "Došlo je do greške pri deinstalaciji TinyFileManager-a."
+
+#: internal/modules/tinyfilemanager/manage.go:79
+msgid "TinyFileManager uninstalled successfully"
+msgstr "TinyFileManager je uspešno deinstaliran"
 
 #: internal/modules/tinyfilemanager/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:542
@@ -2378,16 +4526,139 @@ msgstr "Instaliraj SofaWiki"
 msgid "Install TinyFileManager"
 msgstr "Instaliraj TinyFileManager"
 
+#: internal/modules/tinyphotogallery/install.go:183
+msgid "TinyPhotoGallery installed successfully on %(selected_domain)s"
+msgstr "TinyPhotoGallery je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/tinyphotogallery/manage.go:42
+msgid "TinyPhotoGallery installation not found in the database"
+msgstr "TinyPhotoGallery instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/tinyphotogallery/manage.go:68
+msgid "An error occurred during TinyPhotoGallery uninstall."
+msgstr "Došlo je do greške pri deinstalaciji TinyPhotoGallery-ja."
+
+#: internal/modules/tinyphotogallery/manage.go:79
+msgid "TinyPhotoGallery uninstalled successfully"
+msgstr "TinyPhotoGallery je uspešno deinstaliran"
+
 #: internal/modules/tinyphotogallery/render.go:36
 #: internal/web/templates/manager/autoinstaller.html:510
 #: internal/web/templates/manager/tinyphotogallery_install.html:9
 msgid "Install TinyPhotoGallery"
 msgstr "Instaliraj TinyPhotoGallery"
 
-#: internal/modules/waf/handlers_list.go:93
-#: internal/modules/waf/handlers_list.go:97
+#: internal/modules/trash/crud.go:185 internal/modules/trash/crud.go:200
+#: internal/modules/trash/crud.go:205
+msgid "Unexpected error"
+msgstr "Neočekivana greška"
+
+#: internal/modules/trash/crud.go:210
+msgid "Trash emptied successfully"
+msgstr "Otpad je uspešno ispražnjen"
+
+#: internal/modules/trash/crud.go:227
+msgid "Nothing to restore"
+msgstr "Nema ničega za vraćanje"
+
+#: internal/modules/trash/crud.go:275
+msgid "Some items could not be restored."
+msgstr "Neke stavke nije bilo moguće vratiti."
+
+#: internal/modules/trash/crud.go:280
+msgid "All items restored successfully"
+msgstr "Sve stavke su uspešno vraćene"
+
+#: internal/modules/trash/trash.go:72
+msgid "Invalid directory."
+msgstr "Neispravan direktorijum."
+
+#: internal/modules/waf/handlers_domain.go:73
+msgid "Error: IDs should only contain numbers separated by spaces."
+msgstr "Greška: ID-jevi smeju sadržati samo brojeve odvojene razmacima."
+
+#: internal/modules/waf/handlers_domain.go:87
+msgid "WAF configuration updated."
+msgstr "WAF konfiguracija je ažurirana."
+
+#: internal/modules/waf/handlers_domain.go:90
+#: internal/modules/waf/handlers_domain.go:94
+msgid "Error updating WAF!"
+msgstr "Greška pri ažuriranju WAF-a!"
+
+#: internal/modules/waf/handlers_domain.go:98
+msgid "Configuration file not found."
+msgstr "Konfiguracioni fajl nije pronađen."
+
+#: internal/modules/waf/handlers_list.go:91
+msgid "WAF for domain: %(domain_name)s is now %(status_text)s"
+msgstr "WAF za domen %(domain_name)s je sada %(status_text)s"
+
+#: internal/modules/waf/handlers_list.go:94
+#: internal/modules/waf/handlers_list.go:98
 msgid "Error changing WAF status."
 msgstr "Greška pri promeni statusa WAF-a."
+
+#: internal/modules/waf/handlers_list.go:102
+msgid "Config file for %(domain_name)s not found"
+msgstr "Konfiguracioni fajl za %(domain_name)s nije pronađen"
+
+#: internal/modules/webserverconf/handlers.go:80
+msgid "No default configuration is available for %(service_name)s."
+msgstr "Za %(service_name)s nije dostupna podrazumevana konfiguracija."
+
+#: internal/modules/webserverconf/handlers.go:86
+#: internal/modules/webserverconf/handlers.go:90
+msgid "Error restoring %(conf_file)s: %(error)s"
+msgstr "Greška pri vraćanju %(conf_file)s: %(error)s"
+
+#: internal/modules/webserverconf/handlers.go:104
+msgid "Error writing to %(conf_file)s: %(error)s"
+msgstr "Greška pri upisu u %(conf_file)s: %(error)s"
+
+#: internal/modules/webserverconf/handlers.go:114
+msgid ""
+"Configuration was not saved - it failed the %(service_name)s syntax check: "
+"%(test_output)s"
+msgstr ""
+"Konfiguracija nije sačuvana - nije prošla proveru sintakse za "
+"%(service_name)s: %(test_output)s"
+
+#: internal/modules/webserverconf/handlers.go:126
+msgid "Error restarting %(service_name)s container."
+msgstr "Greška pri ponovnom pokretanju kontejnera %(service_name)s."
+
+#: internal/modules/webserverconf/handlers.go:130
+msgid ""
+"Restored %(conf_file)s to the default configuration and %(service_name)s "
+"container restarted successfully."
+msgstr ""
+"%(conf_file)s je vraćen na podrazumevanu konfiguraciju i kontejner "
+"%(service_name)s je uspešno ponovo pokrenut."
+
+#: internal/modules/webserverconf/handlers.go:132
+msgid ""
+"Changes saved to %(conf_file)s and %(service_name)s container restarted "
+"successfully."
+msgstr ""
+"Izmene su sačuvane u %(conf_file)s i kontejner %(service_name)s je uspešno "
+"ponovo pokrenut."
+
+#: internal/modules/webserverconf/handlers.go:140
+msgid ""
+"Restored %(conf_file)s to the default configuration - the %(service_name)s "
+"container is not running."
+msgstr ""
+"%(conf_file)s je vraćen na podrazumevanu konfiguraciju - kontejner "
+"%(service_name)s nije pokrenut."
+
+#: internal/modules/webserverconf/handlers.go:142
+msgid ""
+"Changes saved to %(conf_file)s - the %(service_name)s container is not "
+"running."
+msgstr ""
+"Izmene su sačuvane u %(conf_file)s - kontejner %(service_name)s nije "
+"pokrenut."
 
 #: internal/modules/webserverconf/webserverconf.go:29
 msgid "Nginx Configuration Editor"
@@ -2412,6 +4683,27 @@ msgstr "Litespeed editor konfiguracije"
 #: internal/modules/webserverconf/webserverconf.go:41
 msgid "Web Server Configuration Editor"
 msgstr "Editor konfiguracije web servera"
+
+#: internal/modules/websites/bulk.go:167
+msgid ""
+"%(action_title)s: completed successfully for all %(total)s selected site(s)."
+msgstr ""
+"%(action_title)s: uspešno završeno za svih %(total)s izabranih sajtova."
+
+#: internal/modules/websites/bulk.go:170
+msgid "%(action_title)s: %(failed)s of %(total)s selected site(s) failed."
+msgstr ""
+"%(action_title)s: %(failed)s od %(total)s izabranih sajtova nije uspelo."
+
+#: internal/modules/websites/dispatch.go:135
+msgid "Invalid domain name format."
+msgstr "Neispravan format naziva domena."
+
+#: internal/modules/websites/dispatch.go:142
+#: internal/modules/websites/websitebuilder.go:154
+#: internal/modules/websites/websites.go:1009
+msgid "Unable to detect docroot for the domain."
+msgstr "Nije moguće otkriti docroot za domen."
 
 #: internal/modules/websites/render_dispatch.go:512
 msgid "Block access to wp-config.php"
@@ -2536,6 +4828,10 @@ msgstr ""
 "Koristi User-Agent filter da blokira agresivne scrapere i bezbednosne "
 "skenere poput AhrefsBot, SemrushBot, MJ12bot i Nikto."
 
+#: internal/modules/websites/websitebuilder.go:68
+msgid "Website not found in the database"
+msgstr "Sajt nije pronađen u bazi podataka"
+
 #: internal/modules/websites/websitebuilder_render.go:38
 #: internal/web/templates/manager/autoinstaller.html:145
 msgid "Create Website"
@@ -2544,6 +4840,44 @@ msgstr "Kreiraj sajt"
 #: internal/modules/websites/websitebuilder_render.go:51
 msgid "GrapesJS Website Editor"
 msgstr "GrapesJS editor sajta"
+
+#: internal/modules/websites/websitebuilder_render.go:91
+msgid "You have reached the maximum number of sites allowed."
+msgstr "Dostigli ste maksimalan broj dozvoljenih sajtova."
+
+#: internal/modules/websites/websitebuilder_render.go:210
+msgid "Website created successfully on %(selected_domain)s"
+msgstr "Sajt je uspešno kreiran na %(selected_domain)s"
+
+#: internal/modules/wordpress/install.go:371
+msgid "WordPress installed successfully on %(selected_domain)s"
+msgstr "WordPress je uspešno instaliran na %(selected_domain)s"
+
+#: internal/modules/wordpress/manage.go:274
+msgid "WordPress installation not found in the database"
+msgstr "WordPress instalacija nije pronađena u bazi podataka"
+
+#: internal/modules/wordpress/manage.go:301
+msgid "Database name or user not found in wp-config.php"
+msgstr "Naziv baze podataka ili korisnik nije pronađen u wp-config.php"
+
+#: internal/modules/wordpress/manage.go:347
+msgid "Missing site ID."
+msgstr "Nedostaje ID sajta."
+
+#: internal/modules/wordpress/manage.go:378
+msgid "WordPress installation detached from Manager."
+msgstr "WordPress instalacija je odvojena od menadžera."
+
+#: internal/modules/wordpress/manage.go:659
+msgid "Hardening rules have been successfully applied to the website"
+msgstr "Pravila za ojačavanje bezbednosti su uspešno primenjena na sajt"
+
+#: internal/modules/wordpress/manage.go:661
+msgid "Failed to apply hardening rules to the website - please try again"
+msgstr ""
+"Primena pravila za ojačavanje bezbednosti na sajt nije uspela - pokušajte "
+"ponovo"
 
 #: internal/modules/wordpress/render.go:41
 msgid "WordPress Manager"
@@ -5767,13 +8101,6 @@ msgstr "Javni ključ"
 #: internal/web/templates/domains/new.html:92
 msgid "Secret Key"
 msgstr "Tajni ključ"
-
-#: internal/web/templates/domains/new.html:217
-msgid ""
-"Paths for both public and secret files must be set for importing .onion "
-"domain."
-msgstr ""
-"Putanje za javni i tajni fajl moraju biti postavljene za uvoz .onion domena."
 
 #: internal/web/templates/domains/new.html:224
 msgid "Paths for both public and secret files must start with /var/www/html/."

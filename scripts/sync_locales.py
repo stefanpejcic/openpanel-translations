@@ -72,10 +72,13 @@ SERVICES_RENDER_GO = "internal/modules/services/render.go"
 SERVICE_STATUS_RE = re.compile(r'\{"[a-z]+-\d+",\s*"((?:[^"\\]|\\.)*)"\}')
 
 # empty-state text returned by the *ContainerStatusDetail funcs, rendered via {{$.T.Get .StatusDetail}}
-STATUS_DETAIL_FUNC_RE = re.compile(r'func \w+ContainerStatusDetail\(.*?\n\}', re.S)
+STATUS_DETAIL_FUNC_RE = re.compile(r'func \w+(?:ContainerStatusDetail|WarningFlashMessage)\(.*?\n\}', re.S)
 
 # flash messages are translated at display time, so any whole-literal sentence argument to a flash helper counts
-FLASH_CALL_RE = re.compile(r'\b(?:flash\.Add|[a-z]\w*[Ff]lash\w*)\(')
+FLASH_CALL_RE = re.compile(r'\b(?:flash\.Add|(?!Test)\w*[Ff]lash\w*)\(')
+
+# request-locale translations built outside templates: web.Tr(a, r, "Deleted %(name)s", "name", n)
+WEB_TR_RE = re.compile(r'\bTr\(\s*\w+,\s*\w+,\s*"((?:[^"\\]|\\.)*)"')
 FLASH_ARG_RE = re.compile(r'(?:^|,)\s*"((?:[^"\\]|\\.)*)"\s*(?=,|$)')
 
 WEBSITES_RENDER_DISPATCH_GO = "internal/modules/websites/render_dispatch.go"
@@ -126,6 +129,8 @@ def extract(source_root):
                     for m in FIELD_RE.finditer(line):
                         add(results, m.group(1), None, rel, i)
                     for m in PAGE_TITLE_RE.finditer(line):
+                        add(results, m.group(1), None, rel, i)
+                    for m in WEB_TR_RE.finditer(line):
                         add(results, m.group(1), None, rel, i)
                 content = "".join(lines)
                 for m in STATUS_DETAIL_FUNC_RE.finditer(content):

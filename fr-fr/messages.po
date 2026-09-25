@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.10\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-25 22:15+0200\n"
+"POT-Creation-Date: 2026-09-25 22:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Sébastien Couturier <EMAIL@ADDRESS>\n"
 "Language-Team: fr-fr\n"
@@ -89,6 +89,14 @@ msgstr "Votre mot de passe a été réinitialisé. Veuillez vous connecter."
 msgid "Reset Password"
 msgstr "Réinitialiser le mot de passe"
 
+#: internal/modules/account/handlers_passkeys.go:204
+msgid "Passkey removed."
+msgstr "Passkey supprimée."
+
+#: internal/modules/account/handlers_passkeys.go:206
+msgid "Passkey not found."
+msgstr "Passkey introuvable."
+
 #: internal/modules/account/login.go:133
 #: internal/web/templates/manager/dokuwiki_app.html:283
 msgid "Login"
@@ -118,9 +126,31 @@ msgstr "Échec de la connexion automatique : jeton invalide ou expiré."
 msgid "Autologin failed: User does not exist."
 msgstr "Échec de la connexion automatique : l'utilisateur n'existe pas."
 
+#: internal/modules/account/mcp.go:61
+msgid "Could not create token: database is unavailable. Please try again."
+msgstr ""
+"Impossible de créer le jeton : la base de données est indisponible. Veuillez"
+" réessayer."
+
+#: internal/modules/account/mcp.go:111
+msgid "Token revoked."
+msgstr "Jeton révoqué."
+
+#: internal/modules/account/mcp.go:113
+msgid "Token not found."
+msgstr "Jeton introuvable."
+
 #: internal/modules/account/notifications.go:33
 msgid "New login"
 msgstr "Nouvelle connexion"
+
+#: internal/modules/account/notifications.go:33
+msgid ""
+"Get an email every time someone logs in to your account, with the IP "
+"address, country and browser."
+msgstr ""
+"Recevez un e-mail à chaque connexion à votre compte, avec l'adresse IP, le "
+"pays et le navigateur."
 
 #: internal/modules/account/notifications.go:34
 msgid "Also for IP addresses I logged in from before"
@@ -135,6 +165,11 @@ msgstr "M'envoyer un e-mail si les alertes de connexion sont désactivées"
 msgid "Password changed"
 msgstr "Mot de passe modifié"
 
+#: internal/modules/account/notifications.go:36
+msgid "Get an email when the password for your account is changed."
+msgstr ""
+"Recevez un e-mail lorsque le mot de passe de votre compte est modifié."
+
 #: internal/modules/account/notifications.go:37
 #: internal/modules/account/notifications.go:39
 #: internal/modules/account/notifications.go:41
@@ -147,41 +182,119 @@ msgstr "M'envoyer un e-mail si cette alerte est désactivée"
 msgid "Contact email changed"
 msgstr "E-mail de contact modifié"
 
+#: internal/modules/account/notifications.go:38
+msgid ""
+"Get an email when the contact email address for your account is changed."
+msgstr ""
+"Recevez un e-mail lorsque l'adresse e-mail de contact de votre compte est "
+"modifiée."
+
 #: internal/modules/account/notifications.go:40
 msgid "Two-factor authentication changed"
 msgstr "Authentification à deux facteurs modifiée"
+
+#: internal/modules/account/notifications.go:40
+msgid "Get an email when two-factor authentication is turned on or off."
+msgstr ""
+"Recevez un e-mail lorsque l'authentification à deux facteurs est activée ou "
+"désactivée."
 
 #: internal/modules/account/notifications.go:42
 msgid "Passkey added or removed"
 msgstr "Passkey ajoutée ou supprimée"
 
+#: internal/modules/account/notifications.go:42
+msgid ""
+"Get an email when a passkey is added to your account or removed from it."
+msgstr ""
+"Recevez un e-mail lorsqu'une passkey est ajoutée à votre compte ou en est "
+"supprimée."
+
 #: internal/modules/account/notifications.go:44
 msgid "API token created or revoked"
 msgstr "Jeton API créé ou révoqué"
+
+#: internal/modules/account/notifications.go:44
+msgid ""
+"Get an email when an AI Assistant (MCP) token is created or revoked for your"
+" account."
+msgstr ""
+"Recevez un e-mail lorsqu'un jeton de l'Assistant IA (MCP) est créé ou "
+"révoqué pour votre compte."
 
 #: internal/modules/account/notifications.go:46
 msgid "SSL certificate problem"
 msgstr "Problème de certificat SSL"
 
+#: internal/modules/account/notifications.go:46
+msgid ""
+"Get an email when an SSL certificate fails to renew or is about to expire, "
+"before visitors see a security warning."
+msgstr ""
+"Recevez un e-mail lorsqu'un certificat SSL ne parvient pas à se renouveler "
+"ou va bientôt expirer, avant que les visiteurs ne voient un avertissement de"
+" sécurité."
+
 #: internal/modules/account/notifications.go:47
 msgid "Malware found"
 msgstr "Malware détecté"
+
+#: internal/modules/account/notifications.go:47
+msgid ""
+"Get an email when the scheduled malware scan finds infected files and moves "
+"them to quarantine."
+msgstr ""
+"Recevez un e-mail lorsque l'analyse antimalware planifiée trouve des "
+"fichiers infectés et les place en quarantaine."
 
 #: internal/modules/account/notifications.go:48
 msgid "Disk space running out"
 msgstr "Espace disque bientôt épuisé"
 
+#: internal/modules/account/notifications.go:48
+msgid ""
+"Get an email when your account uses 85% of its disk space or 95% of its "
+"inodes."
+msgstr ""
+"Recevez un e-mail lorsque votre compte utilise 85 % de son espace disque ou "
+"95 % de ses inodes."
+
 #: internal/modules/account/notifications.go:49
 msgid "Mailbox almost full"
 msgstr "Boîte aux lettres presque pleine"
+
+#: internal/modules/account/notifications.go:49
+msgid "Get an email when one of your email accounts uses 90% of its quota."
+msgstr ""
+"Recevez un e-mail lorsqu'un de vos comptes e-mail utilise 90 % de son quota."
 
 #: internal/modules/account/notifications.go:50
 msgid "Hourly email limit reached"
 msgstr "Limite horaire d'e-mails atteinte"
 
+#: internal/modules/account/notifications.go:50
+msgid ""
+"Get an email when your account reaches its limit of emails sent per hour and"
+" new emails are rejected."
+msgstr ""
+"Recevez un e-mail lorsque votre compte atteint sa limite d'e-mails envoyés "
+"par heure et que les nouveaux e-mails sont rejetés."
+
 #: internal/modules/account/notifications.go:51
 msgid "Service stopped"
 msgstr "Service arrêté"
+
+#: internal/modules/account/notifications.go:51
+msgid ""
+"Get an email when a service like MySQL or PHP stopped or ran out of memory "
+"and had to be restarted."
+msgstr ""
+"Recevez un e-mail lorsqu'un service comme MySQL ou PHP s'est arrêté ou a "
+"manqué de mémoire et a dû être redémarré."
+
+#: internal/modules/account/notifications.go:170
+msgid "Notification preferences updated successfully!"
+msgstr "Préférences de notification mises à jour avec succès !"
 
 #: internal/modules/account/notify.go:47
 #: internal/web/templates/mongodb/processlist.html:36
@@ -225,6 +338,51 @@ msgid "Too many failed login attempts. Please try again later."
 msgstr ""
 "Trop de tentatives de connexion échouées. Veuillez réessayer plus tard."
 
+#: internal/modules/account/render.go:51 internal/modules/backups/render.go:61
+#: internal/modules/php/render.go:152
+msgid "Settings"
+msgstr "Paramètres"
+
+#: internal/modules/account/render.go:71
+#: internal/modules/dashboard/sections.go:297
+#: internal/web/templates/user/_login.html:102
+#: internal/web/templates/user/locale.html:10
+msgid "Change Language"
+msgstr "Changer de langue"
+
+#: internal/modules/account/render.go:94
+#: internal/modules/dashboard/sections.go:299
+#: internal/web/templates/dashboard/onboarding.html:265
+#: internal/web/templates/dashboard/onboarding.html:325
+#: internal/web/templates/dashboard/twofa.html:6
+#: internal/web/templates/user/twofa_settings.html:14
+msgid "Two-Factor Authentication"
+msgstr "Authentification à deux facteurs"
+
+#: internal/modules/account/render.go:113
+#: internal/modules/dashboard/sections.go:177 internal/web/sidebar.go:362
+#: internal/web/templates/user/passkeys.html:10
+msgid "Passkeys"
+msgstr "Clés d'accès"
+
+#: internal/modules/account/render.go:162
+msgid "Notification Preferences"
+msgstr "Préférences de notification"
+
+#: internal/modules/account/render.go:180
+#: internal/modules/dashboard/sections.go:153 internal/web/sidebar.go:330
+#: internal/web/templates/base.html:410
+#: internal/web/templates/user/favorites.html:10
+msgid "Favorites"
+msgstr "Favoris"
+
+#: internal/modules/account/render.go:198
+#: internal/modules/dashboard/sections.go:178
+#: internal/modules/dashboard/sections.go:300 internal/web/sidebar.go:363
+#: internal/web/templates/user/active_sessions.html:10
+msgid "Active Sessions"
+msgstr "Sessions actives"
+
 #: internal/modules/account/render.go:218
 #: internal/modules/account/render.go:219
 msgid "Today"
@@ -249,6 +407,83 @@ msgstr "6 derniers mois"
 #: internal/modules/account/render.go:224
 msgid "Year to date"
 msgstr "Depuis le début de l'année"
+
+#: internal/modules/account/render.go:229
+#: internal/modules/dashboard/sections.go:179 internal/web/sidebar.go:364
+#: internal/web/templates/user/activity.html:27
+msgid "Activity Log"
+msgstr "Journal d'activité"
+
+#: internal/modules/account/render.go:247
+#: internal/modules/dashboard/sections.go:180
+#: internal/modules/dashboard/sections.go:303 internal/web/sidebar.go:365
+#: internal/web/templates/user/loginlog.html:10
+msgid "Login History"
+msgstr "Historique de connexion"
+
+#: internal/modules/account/render.go:267
+#: internal/modules/dashboard/sections.go:155 internal/web/sidebar.go:332
+msgid "AI Assistant (MCP)"
+msgstr "Assistant IA (MCP)"
+
+#: internal/modules/account/render.go:285
+#: internal/modules/dashboard/sections.go:154 internal/web/sidebar.go:331
+msgid "API"
+msgstr "API"
+
+#: internal/modules/account/sessions.go:96
+msgid "Session terminated successfully."
+msgstr "Session terminée avec succès."
+
+#: internal/modules/account/sessions.go:114
+msgid "Failed to terminate session or session already expired."
+msgstr "Impossible de terminer la session ou la session a déjà expiré."
+
+#: internal/modules/account/settings.go:115
+#: internal/web/templates/emails/new.html:68
+#: internal/web/templates/emails/single_account.html:180
+#: internal/web/templates/files/ftp_new.html:50
+#: internal/web/templates/files/ftp_password.html:36
+#: internal/web/templates/manager/drupal_install.html:151
+#: internal/web/templates/manager/flarum_install.html:151
+#: internal/web/templates/manager/joomla_install.html:158
+#: internal/web/templates/manager/matomo_install.html:143
+#: internal/web/templates/manager/mediawiki_install.html:150
+#: internal/web/templates/manager/moodle_install.html:134
+#: internal/web/templates/manager/nextcloud_install.html:143
+#: internal/web/templates/manager/ojs_install.html:143
+#: internal/web/templates/manager/opencart_install.html:143
+#: internal/web/templates/manager/phpbb_install.html:159
+#: internal/web/templates/manager/prestashop_install.html:151
+#: internal/web/templates/manager/wp/install.html:124
+#: internal/web/templates/mongodb/mongodb_user.html:35
+#: internal/web/templates/mongodb/password.html:33
+#: internal/web/templates/mongodb/wizard.html:60
+#: internal/web/templates/mysql/mysql_user.html:35
+#: internal/web/templates/mysql/password.html:33
+#: internal/web/templates/mysql/root_password.html:26
+#: internal/web/templates/mysql/wizard.html:236
+#: internal/web/templates/psql/password.html:33
+#: internal/web/templates/psql/psql_user.html:35
+#: internal/web/templates/psql/wizard.html:60
+#: internal/web/templates/user/account.html:80
+#: internal/web/templates/user/reset_password/set_new_password.html:84
+msgid "Password does not meet the required strength."
+msgstr "Le mot de passe ne respecte pas le niveau de sécurité requis."
+
+#: internal/modules/account/settings.go:148
+msgid "Username must be 3-20 characters, letters and numbers only."
+msgstr ""
+"Le nom d'utilisateur doit contenir 3 à 20 caractères, lettres et chiffres "
+"uniquement."
+
+#: internal/modules/account/settings.go:172
+msgid "Failed to change username."
+msgstr "Impossible de changer le nom d'utilisateur."
+
+#: internal/modules/account/twofa.go:62
+msgid "Invalid verification code. Please try again."
+msgstr "Code de vérification invalide. Veuillez réessayer."
 
 #: internal/modules/account/webauthn.go:63
 msgid ""
@@ -372,6 +607,45 @@ msgstr ""
 msgid "Install Ruby Application"
 msgstr "Installer une application Ruby"
 
+#: internal/modules/autoinstaller/render.go:38
+#: internal/modules/dashboard/sections.go:64 internal/web/sidebar.go:226
+#: internal/web/templates/manager/autoinstaller.html:8
+msgid "Install App"
+msgstr "Installer l'application"
+
+#: internal/modules/backups/render.go:40
+#: internal/modules/dashboard/sections.go:85
+#: internal/modules/dashboard/sections.go:86
+#: internal/modules/dashboard/sections.go:195 internal/web/sidebar.go:256
+#: internal/web/templates/dashboard/onboarding.html:592
+#: internal/web/templates/files/backups.html:10
+#: internal/web/templates/manager/dokuwiki_app.html:65
+#: internal/web/templates/manager/drupal_app.html:132
+#: internal/web/templates/manager/flarum_app.html:74
+#: internal/web/templates/manager/joomla_app.html:132
+#: internal/web/templates/manager/matomo_app.html:123
+#: internal/web/templates/manager/mediawiki_app.html:123
+#: internal/web/templates/manager/moodle_app.html:83
+#: internal/web/templates/manager/nextcloud_app.html:132
+#: internal/web/templates/manager/ojs_app.html:123
+#: internal/web/templates/manager/opencart_app.html:132
+#: internal/web/templates/manager/phpbb_app.html:65
+#: internal/web/templates/manager/prestashop_app.html:132
+#: internal/web/templates/manager/sites.html:448
+#: internal/web/templates/manager/sofawiki_app.html:56
+#: internal/web/templates/manager/tinyfilemanager_app.html:47
+#: internal/web/templates/manager/tinyphotogallery_app.html:47
+#: internal/web/templates/manager/websitebuilder.html:55
+#: internal/web/templates/manager/wp/single.html:214
+#: internal/web/templates/partials/_header.html:136
+msgid "Backups"
+msgstr "Sauvegardes"
+
+#: internal/modules/backups/render.go:96
+#: internal/modules/dashboard/sections.go:89 internal/web/sidebar.go:263
+msgid "Destination"
+msgstr "Destination"
+
 #: internal/modules/backups/render.go:104
 #: internal/web/templates/dashboard/onboarding.html:530
 msgid "S3-compatible"
@@ -420,13 +694,34 @@ msgstr "Dropbox"
 msgid "Remote backups to Dropbox cloud storage."
 msgstr "Sauvegardes distantes vers le stockage cloud Dropbox."
 
-#: internal/modules/backupwizard/render.go:41
-msgid "The home directory"
-msgstr "Le répertoire personnel"
+#: internal/modules/backups/render.go:155
+#: internal/modules/dashboard/sections.go:87 internal/web/sidebar.go:260
+#: internal/web/templates/files/backup_restore.html:241
+#: internal/web/templates/files/clamav/quarantine.html:82
+#: internal/web/templates/files/clamav/quarantine.html:113
+#: internal/web/templates/files/trash.html:51
+#: internal/web/templates/files/trash_partials.html:222
+msgid "Restore"
+msgstr "Restaurer"
+
+#: internal/modules/backupwizard/render.go:35
+#: internal/modules/dashboard/sections.go:90
+#: internal/modules/dashboard/sections.go:196 internal/web/sidebar.go:265
+#: internal/web/templates/files/backup_wizard.html:10
+msgid "Backup Wizard"
+msgstr "Assistant de sauvegarde"
 
 #: internal/modules/backupwizard/render.go:41
-#: internal/web/sidebar_classic.go:88 internal/web/sidebar_classic.go:111
-#: internal/web/sidebar_classic.go:134
+#: internal/modules/dashboard/sections.go:93
+#: internal/modules/dashboard/sections.go:106
+#: internal/modules/dashboard/sections.go:115
+#: internal/modules/dashboard/sections.go:216
+#: internal/modules/dashboard/sections.go:228
+#: internal/modules/dashboard/sections.go:237
+#: internal/modules/mysql/render.go:74 internal/web/sidebar.go:172
+#: internal/web/sidebar.go:186 internal/web/sidebar.go:197
+#: internal/web/sidebar.go:269 internal/web/sidebar_classic.go:88
+#: internal/web/sidebar_classic.go:111 internal/web/sidebar_classic.go:134
 #: internal/web/templates/dashboard/usage.html:78
 #: internal/web/templates/files/backup_restore.html:173
 #: internal/web/templates/mysql/databases.html:9
@@ -434,8 +729,16 @@ msgid "Databases"
 msgstr "Bases de données"
 
 #: internal/modules/backupwizard/render.go:41
+msgid "The home directory"
+msgstr "Le répertoire personnel"
+
+#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:53
-#: internal/modules/dashboard/sections.go:202 internal/web/sidebar.go:212
+#: internal/modules/dashboard/sections.go:54
+#: internal/modules/dashboard/sections.go:202
+#: internal/modules/dashboard/sections.go:203
+#: internal/modules/domains/render.go:77 internal/web/sidebar.go:206
+#: internal/web/sidebar.go:210 internal/web/sidebar.go:212
 #: internal/web/templates/cache/service.html:145
 #: internal/web/templates/dashboard/usage.html:55
 #: internal/web/templates/domains/domains.html:14
@@ -447,6 +750,7 @@ msgstr "Domaines"
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/sections.go:61
 #: internal/modules/dashboard/sections.go:244
+#: internal/modules/websites/render.go:39 internal/web/sidebar.go:221
 #: internal/web/templates/dashboard/usage.html:32
 #: internal/web/templates/domains/domains.html:77
 #: internal/web/templates/domains/domains.html:120
@@ -478,24 +782,82 @@ msgid "Containers and images"
 msgstr "Conteneurs et images"
 
 #: internal/modules/cache/cache.go:23
+#: internal/modules/dashboard/sections.go:129
+#: internal/modules/dashboard/sections.go:250
 msgid "Redis"
 msgstr "Redis"
 
+#: internal/modules/cache/cache.go:24
+msgid ""
+"Redis (Remote Dictionary Server) is an in-memory, key/value store that is "
+"used primarily as an application cache or quick-response database."
+msgstr ""
+"Redis (Remote Dictionary Server) est un magasin clé/valeur en mémoire, "
+"utilisé principalement comme cache applicatif ou base de données à réponse "
+"rapide."
+
 #: internal/modules/cache/cache.go:27
+#: internal/modules/dashboard/sections.go:131
+#: internal/modules/dashboard/sections.go:252
 msgid "Memcached"
 msgstr "Memcached"
 
+#: internal/modules/cache/cache.go:28
+msgid ""
+"A high-performance, distributed in-memory key-value caching system designed "
+"to accelerate dynamic web applications."
+msgstr ""
+"Un système de cache clé-valeur en mémoire, distribué et hautes performances,"
+" conçu pour accélérer les applications web dynamiques."
+
 #: internal/modules/cache/cache.go:31
+#: internal/modules/dashboard/sections.go:255
 msgid "ElasticSearch"
 msgstr "ElasticSearch"
 
+#: internal/modules/cache/cache.go:32
+msgid ""
+"The leading distributed, RESTful, open source search and analytics engine "
+"designed for speed and reliability."
+msgstr ""
+"Le principal moteur de recherche et d'analyse distribué, RESTful et open "
+"source, conçu pour la rapidité et la fiabilité."
+
 #: internal/modules/cache/cache.go:35
+#: internal/modules/dashboard/sections.go:133
+#: internal/modules/dashboard/sections.go:254
 msgid "OpenSearch"
 msgstr "OpenSearch"
 
+#: internal/modules/cache/cache.go:36
+msgid ""
+"OpenSearch is an open-source, distributed search and analytics suite for "
+"large volumes of data."
+msgstr ""
+"OpenSearch est une suite de recherche et d'analyse distribuée et open source"
+" pour de grands volumes de données."
+
 #: internal/modules/cache/cache.go:39
+#: internal/modules/dashboard/sections.go:130
+#: internal/modules/dashboard/sections.go:251
 msgid "Valkey"
 msgstr "Valkey"
+
+#: internal/modules/cache/cache.go:40
+msgid ""
+"Valkey is an in-memory key/value store (a community-driven fork of Redis) "
+"used primarily as an application cache or fast, low-latency database."
+msgstr ""
+"Valkey est un magasin clé/valeur en mémoire (un fork de Redis porté par la "
+"communauté), utilisé principalement comme cache applicatif ou base de "
+"données rapide à faible latence."
+
+#: internal/modules/cache/render.go:74
+#: internal/modules/dashboard/sections.go:132
+#: internal/modules/dashboard/sections.go:253
+#: internal/web/templates/dashboard/onboarding.html:591
+msgid "Varnish"
+msgstr "Varnish"
 
 #: internal/modules/cache/render.go:90
 msgid ""
@@ -504,6 +866,22 @@ msgid ""
 msgstr ""
 "Varnish est un proxy de cache inverse utilisé comme accélérateur HTTP pour "
 "les sites web dynamiques à fort contenu ainsi que pour les API."
+
+#: internal/modules/crons/render.go:45
+msgid "CronJobs File Editor"
+msgstr "Éditeur du fichier des tâches cron"
+
+#: internal/modules/crons/render.go:58
+msgid "CronJobs Logs"
+msgstr "Journaux des tâches cron"
+
+#: internal/modules/crons/render.go:70
+msgid "CronJobs"
+msgstr "Tâches cron"
+
+#: internal/modules/crons/render.go:92
+msgid "New CronJob"
+msgstr "Nouvelle tâche cron"
 
 #: internal/modules/dashboard/dashboard.go:155
 #: internal/modules/dashboard/dashboard.go:161 internal/web/sidebar.go:577
@@ -526,7 +904,41 @@ msgid "2FA is <b>{status}</b> for your account."
 msgstr ""
 "L'authentification à deux facteurs est <b>{status}</b> pour votre compte."
 
-#: internal/modules/dashboard/sections.go:66
+#: internal/modules/dashboard/sections.go:55
+#: internal/modules/dashboard/sections.go:205
+#: internal/modules/dns/render.go:44 internal/web/sidebar.go:213
+#: internal/web/templates/domains/dns.html:740
+msgid "DNS Zone Editor"
+msgstr "Éditeur de zone DNS"
+
+#: internal/modules/dashboard/sections.go:56
+#: internal/modules/dashboard/sections.go:206
+#: internal/modules/dynamicdns/render.go:77 internal/web/sidebar.go:214
+#: internal/web/templates/domains/dynamic_dns.html:10
+msgid "Dynamic DNS"
+msgstr "DNS dynamique"
+
+#: internal/modules/dashboard/sections.go:57 internal/web/sidebar.go:215
+msgid "SSL Certificates"
+msgstr "Certificats SSL"
+
+#: internal/modules/dashboard/sections.go:58
+#: internal/modules/dashboard/sections.go:204 internal/web/sidebar.go:216
+msgid "Redirects"
+msgstr "Redirections"
+
+#: internal/modules/dashboard/sections.go:62 internal/web/sidebar.go:224
+#: internal/web/templates/partials/_header.html:141
+msgid "Sites"
+msgstr "Sites"
+
+#: internal/modules/dashboard/sections.go:63 internal/web/sidebar.go:225
+#: internal/web/templates/manager/autoinstaller.html:32
+#: internal/web/templates/manager/wp/list.html:194
+msgid "WordPress"
+msgstr "WordPress"
+
+#: internal/modules/dashboard/sections.go:66 internal/web/sidebar.go:230
 #: internal/web/templates/emails/confirm_import.html:45
 #: internal/web/templates/manager/app_install.html:400
 #: internal/web/templates/manager/dokuwiki_install.html:135
@@ -547,8 +959,70 @@ msgstr ""
 msgid "Email"
 msgstr "E-mail"
 
+#: internal/modules/dashboard/sections.go:67
+#: internal/modules/dashboard/sections.go:258
+#: internal/web/sidebar_classic.go:193 internal/web/sidebar_classic.go:198
+msgid "Email Accounts"
+msgstr "Comptes e-mail"
+
+#: internal/modules/dashboard/sections.go:68
+#: internal/modules/dashboard/sections.go:259
+#: internal/modules/emails/render.go:226 internal/web/sidebar.go:234
+#: internal/web/templates/emails/aliases.html:10
+msgid "Aliases"
+msgstr "Alias"
+
+#: internal/modules/dashboard/sections.go:69 internal/web/sidebar.go:235
+msgid "Catch-all Address"
+msgstr "Adresse catch-all"
+
+#: internal/modules/dashboard/sections.go:70
+#: internal/modules/dashboard/sections.go:260
+#: internal/modules/emails/render.go:377 internal/web/sidebar.go:236
+msgid "Filters"
+msgstr "Filtres"
+
+#: internal/modules/dashboard/sections.go:71 internal/web/sidebar.go:237
+msgid "Deliverability"
+msgstr "Délivrabilité"
+
+#: internal/modules/dashboard/sections.go:72
+#: internal/modules/dashboard/sections.go:96
+#: internal/modules/dashboard/sections.go:109
+#: internal/modules/dashboard/sections.go:118
+#: internal/modules/emails/render.go:394
+#: internal/modules/mongodb/render.go:205 internal/modules/mysql/render.go:278
+#: internal/modules/postgresql/render.go:194 internal/web/sidebar.go:174
+#: internal/web/sidebar.go:188 internal/web/sidebar.go:199
+#: internal/web/sidebar.go:238
+#: internal/web/templates/mongodb/databases.html:79
+#: internal/web/templates/mysql/databases.html:318
+#: internal/web/templates/psql/databases.html:145
+msgid "Import"
+msgstr "Importer"
+
+#: internal/modules/dashboard/sections.go:73
+#: internal/web/templates/emails/accounts.html:27
+#: internal/web/templates/mongodb/databases.html:85
+#: internal/web/templates/mongodb/databases.html:91
+#: internal/web/templates/mongodb/databases.html:149
+#: internal/web/templates/mysql/databases.html:326
+#: internal/web/templates/mysql/databases.html:332
+#: internal/web/templates/mysql/databases.html:390
+#: internal/web/templates/psql/databases.html:151
+#: internal/web/templates/psql/databases.html:157
+#: internal/web/templates/psql/databases.html:215
+msgid "Export"
+msgstr "Exporter"
+
+#: internal/modules/dashboard/sections.go:74
+#: internal/modules/dashboard/sections.go:265 internal/web/sidebar.go:240
+#: internal/web/templates/emails/accounts.html:74
+msgid "Webmail"
+msgstr "Webmail"
+
 #: internal/modules/dashboard/sections.go:76
-#: internal/modules/dashboard/sections.go:188
+#: internal/modules/dashboard/sections.go:188 internal/web/sidebar.go:244
 #: internal/web/templates/domains/ssl.html:226
 #: internal/web/templates/files/filemanager.html:147
 #: internal/web/templates/files/filemanager.html:405
@@ -578,90 +1052,398 @@ msgstr "E-mail"
 msgid "Files"
 msgstr "Fichiers"
 
-#: internal/modules/dashboard/sections.go:85
-#: internal/web/templates/dashboard/onboarding.html:592
-#: internal/web/templates/files/backups.html:10
-#: internal/web/templates/manager/dokuwiki_app.html:65
-#: internal/web/templates/manager/drupal_app.html:132
-#: internal/web/templates/manager/flarum_app.html:74
-#: internal/web/templates/manager/joomla_app.html:132
-#: internal/web/templates/manager/matomo_app.html:123
-#: internal/web/templates/manager/mediawiki_app.html:123
-#: internal/web/templates/manager/moodle_app.html:83
-#: internal/web/templates/manager/nextcloud_app.html:132
-#: internal/web/templates/manager/ojs_app.html:123
-#: internal/web/templates/manager/opencart_app.html:132
-#: internal/web/templates/manager/phpbb_app.html:65
-#: internal/web/templates/manager/prestashop_app.html:132
-#: internal/web/templates/manager/sites.html:448
-#: internal/web/templates/manager/sofawiki_app.html:56
-#: internal/web/templates/manager/tinyfilemanager_app.html:47
-#: internal/web/templates/manager/tinyphotogallery_app.html:47
-#: internal/web/templates/manager/websitebuilder.html:55
-#: internal/web/templates/manager/wp/single.html:214
-#: internal/web/templates/partials/_header.html:136
-msgid "Backups"
-msgstr "Sauvegardes"
+#: internal/modules/dashboard/sections.go:77
+#: internal/modules/dashboard/sections.go:189 internal/web/sidebar.go:247
+#: internal/web/sidebar_classic.go:61 internal/web/sidebar_classic.go:67
+#: internal/web/templates/files/disk_usage.html:90
+#: internal/web/templates/files/filemanager.html:59
+#: internal/web/templates/files/inodes.html:88
+msgid "File Manager"
+msgstr "Gestionnaire de fichiers"
+
+#: internal/modules/dashboard/sections.go:78 internal/web/sidebar.go:248
+#: internal/web/templates/emails/import.html:40
+#: internal/web/templates/files/filemanager.html:105
+#: internal/web/templates/files/upload_file.html:106
+msgid "Upload"
+msgstr "Télécharger"
+
+#: internal/modules/dashboard/sections.go:79 internal/web/sidebar.go:249
+#: internal/web/sidebar_classic.go:63 internal/web/sidebar_classic.go:69
+#: internal/web/templates/files/upload_file.html:11
+msgid "Download from URL"
+msgstr "Télécharger depuis une URL"
+
+#: internal/modules/dashboard/sections.go:80
+#: internal/modules/dashboard/sections.go:200 internal/web/sidebar.go:250
+#: internal/web/templates/files/trash.html:32
+msgid "Trash"
+msgstr "Corbeille"
+
+#: internal/modules/dashboard/sections.go:81
+#: internal/modules/dashboard/sections.go:192
+#: internal/modules/ftp/render.go:39 internal/web/sidebar.go:251
+#: internal/web/templates/dashboard/usage.html:124
+#: internal/web/templates/files/ftp.html:9
+#: internal/web/templates/manager/dokuwiki_app.html:256
+#: internal/web/templates/manager/drupal_app.html:323
+#: internal/web/templates/manager/flarum_app.html:264
+#: internal/web/templates/manager/joomla_app.html:322
+#: internal/web/templates/manager/matomo_app.html:314
+#: internal/web/templates/manager/mediawiki_app.html:314
+#: internal/web/templates/manager/moodle_app.html:274
+#: internal/web/templates/manager/n8n_app.html:316
+#: internal/web/templates/manager/nextcloud_app.html:323
+#: internal/web/templates/manager/ojs_app.html:313
+#: internal/web/templates/manager/opencart_app.html:323
+#: internal/web/templates/manager/phpbb_app.html:255
+#: internal/web/templates/manager/prestashop_app.html:323
+#: internal/web/templates/manager/python_node_apps.html:365
+#: internal/web/templates/manager/sofawiki_app.html:247
+#: internal/web/templates/manager/tinyfilemanager_app.html:229
+#: internal/web/templates/manager/tinyphotogallery_app.html:229
+#: internal/web/templates/manager/websitebuilder.html:137
+#: internal/web/templates/manager/wp/single.html:408
+msgid "FTP Accounts"
+msgstr "Comptes FTP"
+
+#: internal/modules/dashboard/sections.go:82
+#: internal/modules/dashboard/sections.go:193
+#: internal/modules/ftp/render.go:58
+#: internal/web/templates/files/ftp_connections.html:9
+msgid "FTP Connections"
+msgstr "Connexions FTP"
+
+#: internal/modules/dashboard/sections.go:83
+#: internal/modules/dashboard/sections.go:199
+#: internal/modules/fixpermissions/render.go:31 internal/web/sidebar.go:252
+#: internal/web/templates/files/fix_permissions.html:11
+#: internal/web/templates/files/fix_permissions.html:45
+msgid "Fix Permissions"
+msgstr "Corriger les permissions"
+
+#: internal/modules/dashboard/sections.go:88
+#: internal/modules/dashboard/sections.go:101
+#: internal/modules/dashboard/sections.go:112 internal/web/sidebar.go:178
+#: internal/web/sidebar.go:191 internal/web/sidebar.go:262
+#: internal/web/templates/files/ftp.html:63
+msgid "Configuration"
+msgstr "Configuration"
 
 #: internal/modules/dashboard/sections.go:92
 #: internal/modules/dashboard/sections.go:215
-#: internal/modules/docker/render.go:392
+#: internal/modules/docker/render.go:392 internal/web/sidebar.go:269
 #: internal/web/templates/dashboard/onboarding.html:497
 #: internal/web/templates/partials/_header.html:101
 msgid "MySQL"
 msgstr "MySQL"
 
+#: internal/modules/dashboard/sections.go:94
+#: internal/modules/dashboard/sections.go:107
+#: internal/modules/dashboard/sections.go:116
+#: internal/modules/dashboard/sections.go:217
+#: internal/modules/dashboard/sections.go:229
+#: internal/modules/dashboard/sections.go:238 internal/web/sidebar.go:173
+#: internal/web/sidebar.go:187 internal/web/sidebar.go:198
+#: internal/web/sidebar_classic.go:89 internal/web/sidebar_classic.go:112
+#: internal/web/sidebar_classic.go:135
+#: internal/web/templates/mysql/users.html:9
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: internal/modules/dashboard/sections.go:95
+#: internal/modules/dashboard/sections.go:108
+#: internal/modules/dashboard/sections.go:117
+#: internal/modules/dashboard/sections.go:218
+#: internal/modules/dashboard/sections.go:230
+#: internal/modules/dashboard/sections.go:239
+#: internal/modules/mongodb/render.go:154
+#: internal/modules/postgresql/render.go:152
+#: internal/web/sidebar_classic.go:93 internal/web/sidebar_classic.go:115
+#: internal/web/sidebar_classic.go:138
+#: internal/web/templates/mongodb/databases.html:38
+#: internal/web/templates/mongodb/databases.html:41
+#: internal/web/templates/mongodb/wizard.html:8
+#: internal/web/templates/mysql/databases.html:196
+#: internal/web/templates/mysql/databases.html:199
+#: internal/web/templates/mysql/wizard.html:8
+#: internal/web/templates/psql/databases.html:102
+#: internal/web/templates/psql/databases.html:105
+#: internal/web/templates/psql/wizard.html:8
+msgid "Database Wizard"
+msgstr "Assistant de base de données"
+
+#: internal/modules/dashboard/sections.go:97
+#: internal/modules/php/render.go:292 internal/web/sidebar.go:175
+#: internal/web/templates/mysql/databases.html:431
+#: internal/web/templates/mysql/phpmyadmin_unavailable.html:6
+msgid "phpMyAdmin"
+msgstr "phpMyAdmin"
+
+#: internal/modules/dashboard/sections.go:98
+#: internal/modules/dashboard/sections.go:221
+msgid "phpMyAdmin Login Form"
+msgstr "Formulaire de connexion phpMyAdmin"
+
+#: internal/modules/dashboard/sections.go:99
+#: internal/modules/dashboard/sections.go:110
+#: internal/modules/dashboard/sections.go:223
+#: internal/modules/dashboard/sections.go:233 internal/web/sidebar.go:176
+#: internal/web/sidebar.go:189 internal/web/sidebar_classic.go:100
+#: internal/web/sidebar_classic.go:123
+#: internal/web/templates/mysql/remote_mysql.html:10
+msgid "Remote Access"
+msgstr "Accès distant"
+
+#: internal/modules/dashboard/sections.go:100
+#: internal/modules/dashboard/sections.go:111
+#: internal/modules/dashboard/sections.go:119
+#: internal/modules/mongodb/render.go:224 internal/modules/mysql/render.go:296
+#: internal/modules/postgresql/render.go:213 internal/web/sidebar.go:177
+#: internal/web/sidebar.go:190 internal/web/sidebar.go:200
+msgid "Running Queries"
+msgstr "Requêtes en cours"
+
+#: internal/modules/dashboard/sections.go:102 internal/web/sidebar.go:179
+msgid "Root Password"
+msgstr "Mot de passe root"
+
+#: internal/modules/dashboard/sections.go:103 internal/web/sidebar.go:180
+msgid "Server Type"
+msgstr "Type de serveur"
+
 #: internal/modules/dashboard/sections.go:105
-#: internal/modules/dashboard/sections.go:227
+#: internal/modules/dashboard/sections.go:227 internal/web/sidebar.go:272
 #: internal/web/templates/partials/_header.html:106
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
 #: internal/modules/dashboard/sections.go:114
-#: internal/modules/dashboard/sections.go:236
+#: internal/modules/dashboard/sections.go:236 internal/web/sidebar.go:275
 #: internal/web/templates/partials/_header.html:111
 msgid "MongoDB"
 msgstr "MongoDB"
 
 #: internal/modules/dashboard/sections.go:121
-#: internal/modules/dashboard/sections.go:267
+#: internal/modules/dashboard/sections.go:267 internal/web/sidebar.go:278
 #: internal/web/templates/dashboard/onboarding.html:589
 #: internal/web/templates/manager/autoinstaller.html:795
 #: internal/web/templates/partials/_header.html:116
 msgid "PHP"
 msgstr "PHP"
 
-#: internal/modules/dashboard/sections.go:128
+#: internal/modules/dashboard/sections.go:122 internal/web/sidebar.go:281
+msgid "Version per Domain"
+msgstr "Version par domaine"
+
+#: internal/modules/dashboard/sections.go:123
+#: internal/modules/dashboard/sections.go:269 internal/web/sidebar.go:282
+msgid "Default Version"
+msgstr "Version par défaut"
+
+#: internal/modules/dashboard/sections.go:124 internal/web/sidebar.go:283
+#: internal/web/templates/emails/accounts.html:39
+#: internal/web/templates/emails/aliases.html:40
+#: internal/web/templates/emails/deliverability.html:35
+#: internal/web/templates/manager/wp/single.html:164
+msgid "Options"
+msgstr "Options"
+
+#: internal/modules/dashboard/sections.go:125 internal/web/sidebar.go:284
+msgid "Extensions"
+msgstr "Extensions"
+
+#: internal/modules/dashboard/sections.go:126 internal/web/sidebar.go:285
+msgid "php.ini Editor"
+msgstr "Éditeur php.ini"
+
+#: internal/modules/dashboard/sections.go:128 internal/web/sidebar.go:296
 msgid "Cache & Search"
 msgstr "Cache et recherche"
 
-#: internal/modules/dashboard/sections.go:136
+#: internal/modules/dashboard/sections.go:134
+msgid "Elasticsearch"
+msgstr "Elasticsearch"
+
+#: internal/modules/dashboard/sections.go:136 internal/web/sidebar.go:305
 msgid "Web Server Config"
 msgstr "Configuration du serveur web"
 
+#: internal/modules/dashboard/sections.go:137 internal/web/sidebar.go:308
+msgid "Server Settings"
+msgstr "Paramètres du serveur"
+
+#: internal/modules/dashboard/sections.go:138 internal/web/sidebar.go:309
+msgid "Domain VHosts"
+msgstr "VHosts des domaines"
+
+#: internal/modules/dashboard/sections.go:139 internal/web/sidebar.go:310
+msgid "Web Server Type"
+msgstr "Type de serveur web"
+
 #: internal/modules/dashboard/sections.go:141
+#: internal/modules/dashboard/sections.go:142
 #: internal/modules/dashboard/sections.go:274
+#: internal/modules/dashboard/sections.go:275
+#: internal/modules/docker/render.go:182 internal/web/sidebar.go:314
+#: internal/web/sidebar.go:317
 #: internal/web/templates/docker/containers.html:13
 #: internal/web/templates/docker/containers.html:268
 #: internal/web/templates/partials/_header.html:121
 msgid "Containers"
 msgstr "Conteneurs"
 
+#: internal/modules/dashboard/sections.go:143
+#: internal/modules/dashboard/sections.go:276 internal/web/sidebar.go:318
+#: internal/web/templates/docker/containers.html:488
+msgid "Terminal"
+msgstr "Terminal"
+
+#: internal/modules/dashboard/sections.go:144
+#: internal/modules/dashboard/sections.go:277
+#: internal/modules/docker/render.go:581 internal/web/sidebar.go:293
+#: internal/web/sidebar.go:319 internal/web/templates/cache/service.html:267
+#: internal/web/templates/docker/containers.html:491
+#: internal/web/templates/docker/logs.html:11
+#: internal/web/templates/docker/logs.html:87
+#: internal/web/templates/manager/drupal_app.html:96
+#: internal/web/templates/manager/flarum_app.html:47
+#: internal/web/templates/manager/joomla_app.html:96
+#: internal/web/templates/manager/matomo_app.html:96
+#: internal/web/templates/manager/mediawiki_app.html:96
+#: internal/web/templates/manager/moodle_app.html:47
+#: internal/web/templates/manager/n8n_app.html:63
+#: internal/web/templates/manager/nextcloud_app.html:96
+#: internal/web/templates/manager/ojs_app.html:96
+#: internal/web/templates/manager/opencart_app.html:96
+#: internal/web/templates/manager/php_app.html:62
+#: internal/web/templates/manager/prestashop_app.html:96
+#: internal/web/templates/manager/python_node_apps.html:90
+#: internal/web/templates/system/cronjobs.html:241
+#: internal/web/templates/system/services.html:160
+msgid "Logs"
+msgstr "Journaux"
+
+#: internal/modules/dashboard/sections.go:145 internal/web/sidebar.go:320
+msgid "Software Versions"
+msgstr "Versions des logiciels"
+
+#: internal/modules/dashboard/sections.go:146
+#: internal/modules/dashboard/sections.go:284 internal/web/sidebar.go:289
+#: internal/web/sidebar.go:291
+#: internal/web/templates/dashboard/onboarding.html:206
+#: internal/web/templates/files/backup_settings.html:89
+#: internal/web/templates/system/cronjobs.html:24
+msgid "Cron Jobs"
+msgstr "Tâches cron"
+
+#: internal/modules/dashboard/sections.go:147
+#: internal/modules/dashboard/sections.go:289
+msgid "Change TimeZone"
+msgstr "Changer le fuseau horaire"
+
 #: internal/modules/dashboard/sections.go:149
-#: internal/modules/dashboard/sections.go:295
+#: internal/modules/dashboard/sections.go:295 internal/web/sidebar.go:324
 #: internal/web/templates/partials/_header.html:131
 msgid "Account"
 msgstr "Compte"
 
-#: internal/modules/dashboard/sections.go:158
+#: internal/modules/dashboard/sections.go:150 internal/web/sidebar.go:327
+msgid "Login Details"
+msgstr "Identifiants de connexion"
+
+#: internal/modules/dashboard/sections.go:151 internal/web/sidebar.go:328
+msgid "Language"
+msgstr "Langue"
+
+#: internal/modules/dashboard/sections.go:152 internal/web/sidebar.go:329
+msgid "Notifications"
+msgstr "Notifications"
+
+#: internal/modules/dashboard/sections.go:156
+#: internal/modules/dashboard/sections.go:304
+msgid "Log out"
+msgstr "Se déconnecter"
+
+#: internal/modules/dashboard/sections.go:158 internal/web/sidebar.go:336
 msgid "Statistics"
 msgstr "Statistiques"
 
-#: internal/modules/dashboard/sections.go:167
+#: internal/modules/dashboard/sections.go:159
+#: internal/modules/dashboard/sections.go:286
+#: internal/modules/serverinfo/render.go:58 internal/web/sidebar.go:339
+#: internal/web/templates/user/stats.html:16
+msgid "Resource Usage"
+msgstr "Utilisation des ressources"
+
+#: internal/modules/dashboard/sections.go:160
+#: internal/modules/dashboard/sections.go:287
+#: internal/modules/serverinfo/render.go:114
+msgid "Resource Usage History"
+msgstr "Historique d'utilisation des ressources"
+
+#: internal/modules/dashboard/sections.go:161
+#: internal/modules/dashboard/sections.go:194
+#: internal/modules/diskusage/render.go:95 internal/web/sidebar.go:340
+#: internal/web/templates/files/disk_usage.html:15
+#: internal/web/templates/manager/dokuwiki_app.html:214
+#: internal/web/templates/manager/drupal_app.html:281
+#: internal/web/templates/manager/flarum_app.html:222
+#: internal/web/templates/manager/joomla_app.html:280
+#: internal/web/templates/manager/matomo_app.html:272
+#: internal/web/templates/manager/mediawiki_app.html:272
+#: internal/web/templates/manager/moodle_app.html:232
+#: internal/web/templates/manager/n8n_app.html:296
+#: internal/web/templates/manager/nextcloud_app.html:281
+#: internal/web/templates/manager/ojs_app.html:271
+#: internal/web/templates/manager/opencart_app.html:281
+#: internal/web/templates/manager/phpbb_app.html:213
+#: internal/web/templates/manager/prestashop_app.html:281
+#: internal/web/templates/manager/python_node_apps.html:345
+#: internal/web/templates/manager/sofawiki_app.html:205
+#: internal/web/templates/manager/tinyfilemanager_app.html:187
+#: internal/web/templates/manager/tinyphotogallery_app.html:187
+#: internal/web/templates/manager/websitebuilder.html:117
+#: internal/web/templates/manager/wp/single.html:366
+msgid "Disk Usage"
+msgstr "Utilisation du disque"
+
+#: internal/modules/dashboard/sections.go:162
+#: internal/modules/inodes/render.go:97 internal/web/sidebar.go:341
+#: internal/web/templates/files/inodes.html:12
+msgid "Inode Usage"
+msgstr "Utilisation des inodes"
+
+#: internal/modules/dashboard/sections.go:163
+#: internal/modules/goaccess/render.go:37 internal/web/sidebar.go:342
+#: internal/web/templates/domains/goaccess.html:11
+msgid "Visitor Statistics"
+msgstr "Statistiques des visiteurs"
+
+#: internal/modules/dashboard/sections.go:164
+#: internal/modules/domains/render.go:242 internal/web/sidebar.go:343
+msgid "Access Logs"
+msgstr "Journaux d'accès"
+
+#: internal/modules/dashboard/sections.go:165 internal/web/sidebar.go:369
+msgid "Server Info"
+msgstr "Infos serveur"
+
+#: internal/modules/dashboard/sections.go:167 internal/web/sidebar.go:347
 msgid "Processes & Services"
 msgstr "Processus et services"
 
-#: internal/modules/dashboard/sections.go:171
+#: internal/modules/dashboard/sections.go:168
+#: internal/modules/dashboard/sections.go:283 internal/web/sidebar.go:350
+#: internal/web/templates/partials/_header.html:81
+msgid "Services"
+msgstr "Services"
+
+#: internal/modules/dashboard/sections.go:169 internal/web/sidebar.go:351
+msgid "Processes"
+msgstr "Processus"
+
+#: internal/modules/dashboard/sections.go:171 internal/web/sidebar.go:355
 #: internal/web/templates/dashboard/onboarding.html:593
 #: internal/web/templates/manager/dokuwiki_app.html:75
 #: internal/web/templates/manager/drupal_app.html:142
@@ -684,6 +1466,145 @@ msgstr "Processus et services"
 msgid "Security"
 msgstr "Sécurité"
 
+#: internal/modules/dashboard/sections.go:172
+#: internal/modules/waf/render.go:43 internal/web/sidebar.go:358
+#: internal/web/templates/system/waf.html:19
+msgid "Web Firewall"
+msgstr "Pare-feu web"
+
+#: internal/modules/dashboard/sections.go:173
+#: internal/modules/waf/render.go:129
+msgid "Web Firewall Logs"
+msgstr "Journaux du pare-feu web"
+
+#: internal/modules/dashboard/sections.go:174
+#: internal/modules/dashboard/sections.go:285
+#: internal/modules/ipblocker/render.go:36 internal/web/sidebar.go:359
+#: internal/web/templates/dashboard/onboarding.html:255
+#: internal/web/templates/dashboard/onboarding.html:313
+#: internal/web/templates/system/ip_blocker.html:15
+msgid "IP Blocker"
+msgstr "Bloqueur d'IP"
+
+#: internal/modules/dashboard/sections.go:175
+#: internal/modules/malwarescan/render.go:45 internal/web/sidebar.go:360
+#: internal/web/templates/files/clamav/scanner.html:14
+msgid "Malware Scanner"
+msgstr "Analyseur de malwares"
+
+#: internal/modules/dashboard/sections.go:176 internal/web/sidebar.go:361
+msgid "Two-Factor Auth"
+msgstr "Authentification à deux facteurs"
+
+#: internal/modules/dashboard/sections.go:190
+#: internal/web/templates/files/upload_file.html:11
+msgid "File Upload"
+msgstr "Téléversement de fichiers"
+
+#: internal/modules/dashboard/sections.go:191
+msgid "Download Files"
+msgstr "Télécharger des fichiers"
+
+#: internal/modules/dashboard/sections.go:197
+#: internal/web/templates/manager/dokuwiki_app.html:235
+#: internal/web/templates/manager/drupal_app.html:302
+#: internal/web/templates/manager/flarum_app.html:243
+#: internal/web/templates/manager/joomla_app.html:301
+#: internal/web/templates/manager/matomo_app.html:293
+#: internal/web/templates/manager/mediawiki_app.html:293
+#: internal/web/templates/manager/moodle_app.html:253
+#: internal/web/templates/manager/n8n_app.html:306
+#: internal/web/templates/manager/nextcloud_app.html:302
+#: internal/web/templates/manager/ojs_app.html:292
+#: internal/web/templates/manager/opencart_app.html:302
+#: internal/web/templates/manager/phpbb_app.html:234
+#: internal/web/templates/manager/prestashop_app.html:302
+#: internal/web/templates/manager/python_node_apps.html:355
+#: internal/web/templates/manager/sofawiki_app.html:226
+#: internal/web/templates/manager/tinyfilemanager_app.html:208
+#: internal/web/templates/manager/tinyphotogallery_app.html:208
+#: internal/web/templates/manager/websitebuilder.html:127
+#: internal/web/templates/manager/wp/single.html:387
+msgid "Inodes Explorer"
+msgstr "Explorateur d'inodes"
+
+#: internal/modules/dashboard/sections.go:198
+msgid "ClamAV Scanner"
+msgstr "Analyseur ClamAV"
+
+#: internal/modules/dashboard/sections.go:207
+#: internal/web/templates/domains/domains.html:128
+msgid "SSL"
+msgstr "SSL"
+
+#: internal/modules/dashboard/sections.go:208
+msgid "Suspend Domain"
+msgstr "Suspendre le domaine"
+
+#: internal/modules/dashboard/sections.go:209
+msgid "Unsuspend Domain"
+msgstr "Réactiver le domaine"
+
+#: internal/modules/dashboard/sections.go:210
+msgid "Change Docroot"
+msgstr "Changer le docroot"
+
+#: internal/modules/dashboard/sections.go:211
+msgid "Edit Virtual Hosts"
+msgstr "Modifier les hôtes virtuels"
+
+#: internal/modules/dashboard/sections.go:212
+msgid "GoAccess"
+msgstr "GoAccess"
+
+#: internal/modules/dashboard/sections.go:213
+msgid "Raw Access Logs"
+msgstr "Journaux d'accès bruts"
+
+#: internal/modules/dashboard/sections.go:219
+#: internal/modules/dashboard/sections.go:231
+#: internal/modules/dashboard/sections.go:240
+msgid "Import Database"
+msgstr "Importer une base de données"
+
+#: internal/modules/dashboard/sections.go:220
+msgid "Open phpMyAdmin"
+msgstr "Ouvrir phpMyAdmin"
+
+#: internal/modules/dashboard/sections.go:222
+#: internal/modules/dashboard/sections.go:232
+#: internal/modules/dashboard/sections.go:241
+msgid "Process List"
+msgstr "Liste des processus"
+
+#: internal/modules/dashboard/sections.go:224
+#: internal/web/templates/mysql/configuration.html:14
+msgid "MySQL Configuration"
+msgstr "Configuration MySQL"
+
+#: internal/modules/dashboard/sections.go:225
+msgid "Change root password"
+msgstr "Changer le mot de passe root"
+
+#: internal/modules/dashboard/sections.go:234
+#: internal/web/templates/psql/configuration.html:13
+msgid "PostgreSQL Configuration"
+msgstr "Configuration PostgreSQL"
+
+#: internal/modules/dashboard/sections.go:245
+#: internal/web/sidebar_classic.go:49
+#: internal/web/templates/manager/sites.html:8
+msgid "Site Manager"
+msgstr "Gestionnaire de site"
+
+#: internal/modules/dashboard/sections.go:246
+msgid "Auto Installer"
+msgstr "Installateur automatique"
+
+#: internal/modules/dashboard/sections.go:247
+msgid "WP Manager"
+msgstr "Gestionnaire WP"
+
 #: internal/modules/dashboard/sections.go:249
 #: internal/web/templates/manager/drupal_app.html:1204
 #: internal/web/templates/manager/flarum_app.html:1067
@@ -700,6 +1621,7 @@ msgid "Cache"
 msgstr "Cache"
 
 #: internal/modules/dashboard/sections.go:257
+#: internal/modules/emails/render.go:105
 #: internal/web/templates/dashboard/onboarding.html:202
 #: internal/web/templates/emails/accounts.html:9
 #: internal/web/templates/files/backup_settings.html:84
@@ -707,27 +1629,161 @@ msgstr "Cache"
 msgid "Emails"
 msgstr "E-mails"
 
+#: internal/modules/dashboard/sections.go:261
+#: internal/modules/emails/render.go:334
+#: internal/web/templates/emails/deliverability.html:10
+#: internal/web/templates/emails/deliverability_domain.html:9
+msgid "Email Deliverability"
+msgstr "Délivrabilité des e-mails"
+
+#: internal/modules/dashboard/sections.go:262
+msgid "Default Address"
+msgstr "Adresse par défaut"
+
+#: internal/modules/dashboard/sections.go:263
+msgid "Address Importer"
+msgstr "Importateur d'adresses"
+
+#: internal/modules/dashboard/sections.go:264
+msgid "Address Exporter"
+msgstr "Exportateur d'adresses"
+
+#: internal/modules/dashboard/sections.go:268
+#: internal/web/sidebar_classic.go:229
+msgid "Select PHP version"
+msgstr "Sélectionner la version PHP"
+
+#: internal/modules/dashboard/sections.go:270
+msgid "PHP Options"
+msgstr "Options PHP"
+
+#: internal/modules/dashboard/sections.go:271
+#: internal/modules/php/render.go:259
+#: internal/web/templates/php/extensions.html:229
+msgid "PHP Extensions"
+msgstr "Extensions PHP"
+
+#: internal/modules/dashboard/sections.go:272
+#: internal/web/templates/php/ini_editor.html:57
+msgid "PHP.INI Editor"
+msgstr "Éditeur PHP.INI"
+
+#: internal/modules/dashboard/sections.go:278
+msgid "Change Image tag"
+msgstr "Changer le tag de l'image"
+
+#: internal/modules/dashboard/sections.go:279
+msgid "Change webserver"
+msgstr "Changer de serveur web"
+
+#: internal/modules/dashboard/sections.go:280
+msgid "Change MySQL Type"
+msgstr "Changer le type de MySQL"
+
 #: internal/modules/dashboard/sections.go:282
 #: internal/web/templates/partials/_header.html:126
 msgid "Advanced"
 msgstr "Avancé"
+
+#: internal/modules/dashboard/sections.go:288
+#: internal/modules/processmanager/render.go:36
+#: internal/web/templates/system/process_manager.html:12
+msgid "Process Manager"
+msgstr "Gestionnaire de processus"
+
+#: internal/modules/dashboard/sections.go:290
+msgid "Webserver Configuration"
+msgstr "Configuration du serveur web"
+
+#: internal/modules/dashboard/sections.go:291
+msgid "WAF Settings"
+msgstr "Paramètres WAF"
+
+#: internal/modules/dashboard/sections.go:292
+#: internal/web/templates/system/waf_logs.html:267
+msgid "WAF Logs"
+msgstr "Journaux WAF"
+
+#: internal/modules/dashboard/sections.go:293
+#: internal/modules/serverinfo/render.go:40
+#: internal/web/templates/system/server_info.html:8
+msgid "Server Information"
+msgstr "Informations sur le serveur"
+
+#: internal/modules/dashboard/sections.go:296
+#: internal/web/templates/user/account.html:10
+msgid "Email & Password"
+msgstr "E-mail et mot de passe"
+
+#: internal/modules/dashboard/sections.go:298
+#: internal/web/templates/user/notifications.html:40
+msgid "Email Notifications"
+msgstr "Notifications par e-mail"
+
+#: internal/modules/dashboard/sections.go:301
+msgid "Favorite Pages"
+msgstr "Pages favorites"
+
+#: internal/modules/dashboard/sections.go:302
+msgid "Account Activity"
+msgstr "Activité du compte"
+
+#: internal/modules/dashboard/upgrade.go:45 internal/web/sidebar.go:578
+#: internal/web/templates/dashboard/upgrade.html:6
+#: internal/web/templates/dashboard/usage.html:16
+msgid "Upgrade now"
+msgstr "Mettre à niveau maintenant"
+
+#: internal/modules/dns/render.go:62
+#: internal/web/templates/domains/domains.html:284
+msgid "Edit DNS Zone"
+msgstr "Modifier la zone DNS"
+
+#: internal/modules/dns/render.go:77
+#: internal/web/templates/domains/dns.html:81
+#: internal/web/templates/domains/dns.html:93
+msgid "Edit DNS File"
+msgstr "Modifier le fichier DNS"
 
 #: internal/modules/docker/containers.go:171
 #: internal/modules/docker/containers.go:187
 msgid "Add service"
 msgstr "Ajouter un service"
 
+#: internal/modules/docker/render.go:392
+#: internal/web/templates/dashboard/onboarding.html:498
+msgid "Can be better fine-tuned for any type of application."
+msgstr "Peut être mieux optimisé pour tout type d'application."
+
 #: internal/modules/docker/render.go:393
 #: internal/web/templates/dashboard/onboarding.html:502
 msgid "MariaDB"
 msgstr "MariaDB"
+
+#: internal/modules/docker/render.go:393
+#: internal/web/templates/dashboard/onboarding.html:503
+msgid ""
+"Recommended for WordPress sites - smaller image, lower resource usage, and "
+"faster default query execution."
+msgstr ""
+"Recommandé pour les sites WordPress - image plus légère, utilisation des "
+"ressources réduite et exécution des requêtes par défaut plus rapide."
 
 #: internal/modules/docker/render.go:394
 #: internal/web/templates/dashboard/onboarding.html:507
 msgid "Percona"
 msgstr "Percona"
 
-#: internal/modules/docker/render.go:413
+#: internal/modules/docker/render.go:394
+#: internal/web/templates/dashboard/onboarding.html:508
+msgid ""
+"MySQL drop-in with extra performance and monitoring features, geared toward "
+"high-traffic sites."
+msgstr ""
+"Remplaçant direct de MySQL avec des fonctionnalités supplémentaires de "
+"performance et de surveillance, conçu pour les sites à fort trafic."
+
+#: internal/modules/docker/render.go:407 internal/modules/docker/render.go:413
 #: internal/web/templates/docker/change_mysql.html:10
 msgid "Database Server"
 msgstr "Serveur de base de données"
@@ -737,30 +1793,593 @@ msgstr "Serveur de base de données"
 msgid "Apache"
 msgstr "Apache"
 
+#: internal/modules/docker/render.go:445
+#: internal/web/templates/dashboard/onboarding.html:443
+msgid "Recommended for websites that use .htaccess for rewrite rules."
+msgstr ""
+"Recommandé pour les sites qui utilisent .htaccess pour les règles de "
+"réécriture."
+
 #: internal/modules/docker/render.go:446
 #: internal/web/templates/dashboard/onboarding.html:447
 msgid "Nginx"
 msgstr "Nginx"
+
+#: internal/modules/docker/render.go:446
+#: internal/web/templates/dashboard/onboarding.html:448
+msgid ""
+"Recommended for NodeJS and Python applications, and high-traffic sites."
+msgstr ""
+"Recommandé pour les applications NodeJS et Python, ainsi que pour les sites "
+"à fort trafic."
 
 #: internal/modules/docker/render.go:447
 #: internal/web/templates/dashboard/onboarding.html:452
 msgid "OpenLiteSpeed"
 msgstr "OpenLiteSpeed"
 
+#: internal/modules/docker/render.go:447
+#: internal/web/templates/dashboard/onboarding.html:453
+msgid "Recommended for WordPress websites, but only one PHP version."
+msgstr "Recommandé pour les sites WordPress, mais une seule version PHP."
+
 #: internal/modules/docker/render.go:448
 #: internal/web/templates/dashboard/onboarding.html:487
 msgid "OpenResty"
 msgstr "OpenResty"
 
+#: internal/modules/docker/render.go:448
+#: internal/web/templates/dashboard/onboarding.html:488
+msgid "Nginx core bundled with Lua scripting for custom logic."
+msgstr "Noyau Nginx intégrant le script Lua pour une logique personnalisée."
+
 #: internal/modules/docker/render.go:449
 msgid "LiteSpeed"
 msgstr "LiteSpeed"
 
-#: internal/modules/docker/render.go:486
+#: internal/modules/docker/render.go:449
+msgid "LiteSpeed Enterprise, needs a license."
+msgstr "LiteSpeed Enterprise, nécessite une licence."
+
+#: internal/modules/docker/render.go:480 internal/modules/docker/render.go:486
 #: internal/web/templates/dashboard/onboarding.html:588
 #: internal/web/templates/docker/change_webserver.html:10
 msgid "Webserver"
 msgstr "Serveur web"
+
+#: internal/modules/docker/render.go:532
+#: internal/web/templates/docker/change_images.html:113
+msgid "Change docker image tag"
+msgstr "Modifier le tag de l'image docker"
+
+#: internal/modules/docker/terminal.go:36
+#: internal/web/templates/docker/terminal.html:20
+#: internal/web/templates/docker/terminal.html:224
+msgid "Container Terminal"
+msgstr "Terminal du conteneur"
+
+#: internal/modules/docker/terminal.go:59
+msgid "Select Container"
+msgstr "Sélectionner un conteneur"
+
+#: internal/modules/dokuwiki/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:370
+#: internal/web/templates/manager/dokuwiki_install.html:9
+msgid "Install DokuWiki"
+msgstr "Installer DokuWiki"
+
+#: internal/modules/domains/render.go:99
+#: internal/web/templates/domains/new.html:128
+#: internal/web/templates/domains/new.html:304
+msgid "Add Domain"
+msgstr "Ajouter un domaine"
+
+#: internal/modules/domains/render.go:299
+msgid "Edit VirtualHosts File"
+msgstr "Modifier le fichier VirtualHosts"
+
+#: internal/modules/domains/render.go:331
+#: internal/web/templates/domains/redirect.html:65
+msgid "Redirect Domain to URL"
+msgstr "Rediriger le domaine vers une URL"
+
+#: internal/modules/drupal/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:111
+#: internal/web/templates/manager/drupal_install.html:9
+msgid "Install Drupal"
+msgstr "Installer Drupal"
+
+#: internal/modules/emails/render.go:132
+#: internal/web/templates/files/ftp_new.html:172
+msgid "Create Account"
+msgstr "Créer le compte"
+
+#: internal/modules/emails/render.go:183
+msgid "Delete address"
+msgstr "Supprimer l'adresse"
+
+#: internal/modules/emails/render.go:205
+#: internal/web/templates/emails/accounts.html:77
+#: internal/web/templates/emails/info.html:8
+msgid "Connect Devices"
+msgstr "Connecter des appareils"
+
+#: internal/modules/emails/render.go:267
+#: internal/web/templates/emails/aliases.html:28
+msgid "New Alias"
+msgstr "Nouvel alias"
+
+#: internal/modules/emails/render.go:314
+msgid "Default Email"
+msgstr "E-mail par défaut"
+
+#: internal/modules/emails/render.go:412
+#: internal/web/templates/emails/confirm_import.html:8
+#: internal/web/templates/emails/import.html:8
+msgid "Import Emails"
+msgstr "Importer des e-mails"
+
+#: internal/modules/filemanager/archive.go:302
+msgid "Failed to set archive ownership"
+msgstr "Impossible de définir le propriétaire de l'archive"
+
+#: internal/modules/filemanager/archive.go:304
+msgid "FILEMANAGER - Archive created successfully."
+msgstr "Archive créée avec succès."
+
+#: internal/modules/filemanager/crud.go:57
+msgid "Failed to set ownership for the new file."
+msgstr "Impossible de définir le propriétaire du nouveau fichier."
+
+#: internal/modules/filemanager/crud.go:60
+msgid "File created successfully."
+msgstr "Fichier créé avec succès."
+
+#: internal/modules/filemanager/crud.go:105
+msgid "Failed to set ownership for the new folder."
+msgstr "Impossible de définir le propriétaire du nouveau dossier."
+
+#: internal/modules/filemanager/crud.go:107
+msgid "Folder created successfully."
+msgstr "Dossier créé avec succès."
+
+#: internal/modules/filemanager/crud.go:273
+msgid "Permissions changed."
+msgstr "Permissions modifiées."
+
+#: internal/modules/filemanager/editor.go:138
+msgid "Error saving file."
+msgstr "Erreur lors de l'enregistrement du fichier."
+
+#: internal/modules/filemanager/editor.go:141
+msgid "File saved successfully"
+msgstr "Fichier enregistré avec succès"
+
+#: internal/modules/filemanager/render.go:236
+msgid "Upload Files"
+msgstr "Envoyer des fichiers"
+
+#: internal/modules/flarum/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:300
+#: internal/web/templates/manager/flarum_install.html:9
+msgid "Install Flarum"
+msgstr "Installer Flarum"
+
+#: internal/modules/ftp/render.go:76
+#: internal/web/templates/files/ftp_new.html:9
+msgid "New FTP Account"
+msgstr "Nouveau compte FTP"
+
+#: internal/modules/ftp/render.go:94
+msgid "Change FTP Password"
+msgstr "Changer le mot de passe FTP"
+
+#: internal/modules/ftp/render.go:106
+msgid "Change FTP Path"
+msgstr "Changer le chemin FTP"
+
+#: internal/modules/ipblocker/handlers.go:54
+msgid "Failed to block IP addresses - please try again"
+msgstr "Impossible de bloquer les adresses IP, veuillez réessayer"
+
+#: internal/modules/joomla/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:79
+#: internal/web/templates/manager/joomla_install.html:9
+msgid "Install Joomla"
+msgstr "Installer Joomla"
+
+#: internal/modules/malwarescan/render.go:63
+msgid "Malware Quarantine"
+msgstr "Quarantaine des malwares"
+
+#: internal/modules/matomo/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:440
+#: internal/web/templates/manager/matomo_install.html:9
+msgid "Install Matomo"
+msgstr "Installer Matomo"
+
+#: internal/modules/mediawiki/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:338
+#: internal/web/templates/manager/mediawiki_install.html:9
+msgid "Install MediaWiki"
+msgstr "Installer MediaWiki"
+
+#: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:233
+#: internal/modules/postgresql/postgresql.go:65
+msgid "Service installation is underway and may take up to one minute."
+msgstr ""
+"L'installation du service est en cours et peut prendre jusqu'à une minute."
+
+#: internal/modules/mongodb/mongodb.go:50 internal/modules/mysql/mysql.go:235
+#: internal/modules/postgresql/postgresql.go:67
+msgid ""
+"Service has been created but not yet started. Start it from the Services "
+"page."
+msgstr ""
+"Le service a été créé mais n'est pas encore démarré. Démarrez-le depuis la "
+"page Services."
+
+#: internal/modules/mongodb/mongodb.go:52 internal/modules/mysql/mysql.go:237
+#: internal/modules/postgresql/postgresql.go:69
+msgid ""
+"Service is restarting. This may indicate a configuration error or a crash — "
+"check the logs on the Services page."
+msgstr ""
+"Le service redémarre. Cela peut indiquer une erreur de configuration ou un "
+"plantage : consultez les journaux sur la page Services."
+
+#: internal/modules/mongodb/mongodb.go:54 internal/modules/mysql/mysql.go:239
+#: internal/modules/postgresql/postgresql.go:71
+msgid "Service is paused. Resume it from the Services page."
+msgstr "Le service est en pause. Reprenez-le depuis la page Services."
+
+#: internal/modules/mongodb/mongodb.go:56 internal/modules/mysql/mysql.go:241
+#: internal/modules/postgresql/postgresql.go:73
+msgid ""
+"Service has stopped. This is usually caused by resource exhaustion — "
+"increase resource limits for this service and then restart it from the "
+"Services page."
+msgstr ""
+"Le service s'est arrêté. C'est généralement dû à un épuisement des "
+"ressources : augmentez les limites de ressources de ce service puis "
+"redémarrez-le depuis la page Services."
+
+#: internal/modules/mongodb/mongodb.go:58 internal/modules/mysql/mysql.go:243
+#: internal/modules/postgresql/postgresql.go:75
+msgid "Service is being deleted. Please wait for the process to complete."
+msgstr ""
+"Le service est en cours de suppression. Veuillez patienter jusqu'à la fin du"
+" processus."
+
+#: internal/modules/mongodb/mongodb.go:60 internal/modules/mysql/mysql.go:245
+#: internal/modules/postgresql/postgresql.go:77
+msgid ""
+"Service has crashed and cannot recover. This is usually caused by resource "
+"exhaustion — check the logs on the Services page."
+msgstr ""
+"Le service a planté et ne peut pas se rétablir. C'est généralement dû à un "
+"épuisement des ressources : consultez les journaux sur la page Services."
+
+#: internal/modules/mongodb/mongodb.go:66 internal/modules/mysql/mysql.go:251
+#: internal/modules/postgresql/postgresql.go:83
+msgid ""
+"Service is unhealthy. Try restarting it from Services, or contact your "
+"administrator."
+msgstr ""
+"Le service n'est pas sain. Essayez de le redémarrer depuis Services ou "
+"contactez votre administrateur."
+
+#: internal/modules/mongodb/mongodb.go:68 internal/modules/mysql/mysql.go:253
+#: internal/modules/postgresql/postgresql.go:85
+msgid "Service is active, but the databases are still initializing."
+msgstr ""
+"Le service est actif, mais les bases de données sont encore en cours "
+"d'initialisation."
+
+#: internal/modules/mongodb/mongodb.go:70
+#: internal/modules/mongodb/mongodb.go:73 internal/modules/mysql/mysql.go:255
+#: internal/modules/mysql/mysql.go:258
+#: internal/modules/postgresql/postgresql.go:87
+#: internal/modules/postgresql/postgresql.go:90
+msgid "Unable to retrieve service status. Please contact your administrator."
+msgstr ""
+"Impossible de récupérer l'état du service. Veuillez contacter votre "
+"administrateur."
+
+#: internal/modules/mongodb/render.go:56
+#: internal/web/templates/mongodb/databases.html:9
+msgid "MongoDB Databases"
+msgstr "Bases de données MongoDB"
+
+#: internal/modules/mongodb/render.go:74 internal/modules/mysql/render.go:96
+#: internal/modules/postgresql/render.go:78 internal/web/sidebar_classic.go:94
+#: internal/web/sidebar_classic.go:116 internal/web/sidebar_classic.go:139
+#: internal/web/templates/mongodb/new.html:42
+#: internal/web/templates/mysql/new.html:44
+#: internal/web/templates/psql/new.html:42
+msgid "Create Database"
+msgstr "Créer une base de données"
+
+#: internal/modules/mongodb/render.go:100
+#: internal/web/templates/mongodb/users.html:9
+msgid "MongoDB Users"
+msgstr "Utilisateurs MongoDB"
+
+#: internal/modules/mongodb/render.go:117 internal/modules/mysql/render.go:138
+#: internal/modules/postgresql/render.go:121
+#: internal/web/sidebar_classic.go:95 internal/web/sidebar_classic.go:117
+#: internal/web/sidebar_classic.go:140
+#: internal/web/templates/mongodb/mongodb_user.html:83
+#: internal/web/templates/mongodb/users.html:26
+#: internal/web/templates/mongodb/users.html:30
+#: internal/web/templates/mysql/mysql_user.html:112
+#: internal/web/templates/mysql/users.html:52
+#: internal/web/templates/mysql/users.html:58
+#: internal/web/templates/psql/psql_user.html:83
+#: internal/web/templates/psql/users.html:42
+#: internal/web/templates/psql/users.html:46
+msgid "Create User"
+msgstr "Créer l'utilisateur"
+
+#: internal/modules/mongodb/render.go:135 internal/modules/mysql/render.go:156
+#: internal/modules/postgresql/render.go:139
+#: internal/web/templates/files/ftp.html:106
+#: internal/web/templates/mongodb/password.html:81
+#: internal/web/templates/mongodb/users.html:59
+#: internal/web/templates/mysql/password.html:116
+#: internal/web/templates/mysql/root_password.html:103
+#: internal/web/templates/mysql/users.html:96
+#: internal/web/templates/psql/password.html:81
+#: internal/web/templates/psql/users.html:73
+#: internal/web/templates/user/reset_password/set_new_password.html:57
+msgid "Change Password"
+msgstr "Changer le mot de passe"
+
+#: internal/modules/mongodb/render.go:173 internal/modules/mysql/render.go:247
+#: internal/modules/postgresql/render.go:164
+#: internal/web/templates/mongodb/assign.html:8
+#: internal/web/templates/mongodb/assign.html:55
+#: internal/web/templates/psql/assign.html:8
+#: internal/web/templates/psql/assign.html:46
+msgid "Assign User to Database"
+msgstr "Attribuer un utilisateur à la base de données"
+
+#: internal/modules/mongodb/render.go:186 internal/modules/mysql/render.go:259
+#: internal/modules/postgresql/render.go:176
+#: internal/web/templates/mongodb/remove.html:55
+#: internal/web/templates/mysql/remove.html:51
+#: internal/web/templates/psql/remove.html:46
+msgid "Remove User from Database"
+msgstr "Supprimer l'utilisateur de la base de données"
+
+#: internal/modules/moodle/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:580
+#: internal/web/templates/manager/moodle_install.html:9
+msgid "Install Moodle"
+msgstr "Installer Moodle"
+
+#: internal/modules/mysql/render.go:117
+msgid "Database Users"
+msgstr "Utilisateurs de base de données"
+
+#: internal/modules/mysql/render.go:183 internal/modules/mysql/render.go:195
+msgid "Wizard"
+msgstr "Assistant"
+
+#: internal/modules/mysql/render.go:314
+msgid "Change Root Password"
+msgstr "Changer le mot de passe root"
+
+#: internal/modules/mysql/render.go:337
+msgid "Remote MySQL"
+msgstr "MySQL distant"
+
+#: internal/modules/nextcloud/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:478
+#: internal/web/templates/manager/nextcloud_install.html:9
+msgid "Install Nextcloud"
+msgstr "Installer Nextcloud"
+
+#: internal/modules/ojs/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:612
+#: internal/web/templates/manager/ojs_install.html:9
+msgid "Install OJS"
+msgstr "Installer OJS"
+
+#: internal/modules/opencart/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:215
+#: internal/web/templates/manager/opencart_install.html:9
+msgid "Install OpenCart"
+msgstr "Installer OpenCart"
+
+#: internal/modules/php/render.go:128
+#: internal/web/templates/php/default.html:7
+msgid "Default PHP version"
+msgstr "Version PHP par défaut"
+
+#: internal/modules/phpapp/render.go:31
+#: internal/web/templates/manager/php_install.html:9
+msgid "Install PHP Application"
+msgstr "Installer une application PHP"
+
+#: internal/modules/phpbb/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:253
+#: internal/web/templates/manager/phpbb_install.html:9
+msgid "Install phpBB"
+msgstr "Installer phpBB"
+
+#: internal/modules/postgresql/render.go:60
+#: internal/web/templates/dashboard/onboarding.html:205
+#: internal/web/templates/files/backup_settings.html:87
+#: internal/web/templates/psql/databases.html:9
+msgid "PostgreSQL Databases"
+msgstr "Bases de données PostgreSQL"
+
+#: internal/modules/postgresql/render.go:104
+#: internal/web/templates/psql/users.html:9
+msgid "PostgreSQL Users"
+msgstr "Utilisateurs PostgreSQL"
+
+#: internal/modules/postgresql/render.go:235
+msgid "Remote PostgreSQL"
+msgstr "PostgreSQL distant"
+
+#: internal/modules/postgresql/render.go:258
+msgid "Edit PostgreSQL configuration"
+msgstr "Modifier la configuration PostgreSQL"
+
+#: internal/modules/prestashop/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:183
+#: internal/web/templates/manager/prestashop_install.html:9
+msgid "Install PrestaShop"
+msgstr "Installer PrestaShop"
+
+#: internal/modules/serverinfo/handlers.go:35
+msgid "An error occurred while fetching resource usage."
+msgstr ""
+"Une erreur s'est produite lors de la récupération de l'utilisation des "
+"ressources."
+
+#: internal/modules/serverinfo/handlers.go:37
+msgid "No resource usage data available yet. Please try again later"
+msgstr ""
+"Aucune donnée d'utilisation des ressources pour le moment. Veuillez "
+"réessayer plus tard"
+
+#: internal/modules/services/render.go:51
+#: internal/modules/services/render.go:52
+msgid "Running"
+msgstr "En cours"
+
+#: internal/modules/services/render.go:53
+msgid "Unhealthy"
+msgstr "Non sain"
+
+#: internal/modules/services/render.go:54
+msgid "Starting"
+msgstr "Démarrage"
+
+#: internal/modules/services/render.go:55
+#: internal/web/templates/dashboard/onboarding.html:525
+#: internal/web/templates/dashboard/onboarding.html:556
+#: internal/web/templates/docker/containers.html:459
+#: internal/web/templates/manager/drupal_app.html:570
+#: internal/web/templates/manager/joomla_app.html:573
+#: internal/web/templates/manager/moodle_app.html:525
+#: internal/web/templates/manager/nextcloud_app.html:574
+#: internal/web/templates/manager/opencart_app.html:574
+#: internal/web/templates/manager/prestashop_app.html:574
+#: internal/web/templates/manager/wp/single.html:1095
+#: internal/web/templates/mysql/remote_mysql.html:58
+#: internal/web/templates/php/extensions.html:62
+#: internal/web/templates/psql/remote_psql.html:69
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: internal/modules/services/render.go:56
+#: internal/web/templates/files/backup_wizard.html:128
+#: internal/web/templates/manager/n8n_app.html:675
+#: internal/web/templates/manager/python_node_apps.html:1309
+#: internal/web/templates/manager/sites.html:209
+#: internal/web/templates/manager/websitebuilder.html:319
+#: internal/web/templates/user/activity.html:7
+#: internal/web/templates/user/mcp.html:42
+msgid "Created"
+msgstr "Créé"
+
+#: internal/modules/services/render.go:57
+msgid "Restarting"
+msgstr "Redémarrage"
+
+#: internal/modules/services/render.go:58
+msgid "Paused"
+msgstr "En pause"
+
+#: internal/modules/services/render.go:59
+msgid "Stopped"
+msgstr "Arrêté"
+
+#: internal/modules/services/render.go:60
+msgid "Removing"
+msgstr "Suppression"
+
+#: internal/modules/services/render.go:61
+msgid "Stopping"
+msgstr "Arrêt en cours"
+
+#: internal/modules/services/render.go:62
+msgid "Dead"
+msgstr "Mort"
+
+#: internal/modules/services/render.go:65
+#: internal/web/templates/domains/ssl.html:66
+#: internal/web/templates/files/clamav/quarantine.html:76
+#: internal/web/templates/manager/dokuwiki_app.html:114
+#: internal/web/templates/manager/dokuwiki_app.html:307
+#: internal/web/templates/manager/drupal_app.html:182
+#: internal/web/templates/manager/drupal_app.html:575
+#: internal/web/templates/manager/drupal_app.html:621
+#: internal/web/templates/manager/drupal_app.html:674
+#: internal/web/templates/manager/drupal_app.html:686
+#: internal/web/templates/manager/flarum_app.html:123
+#: internal/web/templates/manager/flarum_app.html:482
+#: internal/web/templates/manager/flarum_app.html:537
+#: internal/web/templates/manager/flarum_app.html:549
+#: internal/web/templates/manager/joomla_app.html:181
+#: internal/web/templates/manager/joomla_app.html:578
+#: internal/web/templates/manager/joomla_app.html:624
+#: internal/web/templates/manager/joomla_app.html:676
+#: internal/web/templates/manager/joomla_app.html:687
+#: internal/web/templates/manager/matomo_app.html:173
+#: internal/web/templates/manager/matomo_app.html:536
+#: internal/web/templates/manager/matomo_app.html:574
+#: internal/web/templates/manager/matomo_app.html:586
+#: internal/web/templates/manager/mediawiki_app.html:173
+#: internal/web/templates/manager/mediawiki_app.html:536
+#: internal/web/templates/manager/mediawiki_app.html:574
+#: internal/web/templates/manager/mediawiki_app.html:586
+#: internal/web/templates/manager/moodle_app.html:133
+#: internal/web/templates/manager/moodle_app.html:530
+#: internal/web/templates/manager/moodle_app.html:576
+#: internal/web/templates/manager/moodle_app.html:630
+#: internal/web/templates/manager/moodle_app.html:642
+#: internal/web/templates/manager/n8n_app.html:113
+#: internal/web/templates/manager/nextcloud_app.html:182
+#: internal/web/templates/manager/nextcloud_app.html:579
+#: internal/web/templates/manager/nextcloud_app.html:625
+#: internal/web/templates/manager/nextcloud_app.html:663
+#: internal/web/templates/manager/nextcloud_app.html:675
+#: internal/web/templates/manager/ojs_app.html:172
+#: internal/web/templates/manager/ojs_app.html:531
+#: internal/web/templates/manager/ojs_app.html:595
+#: internal/web/templates/manager/opencart_app.html:182
+#: internal/web/templates/manager/opencart_app.html:579
+#: internal/web/templates/manager/opencart_app.html:625
+#: internal/web/templates/manager/opencart_app.html:677
+#: internal/web/templates/manager/opencart_app.html:688
+#: internal/web/templates/manager/phpbb_app.html:114
+#: internal/web/templates/manager/phpbb_app.html:406
+#: internal/web/templates/manager/prestashop_app.html:182
+#: internal/web/templates/manager/prestashop_app.html:579
+#: internal/web/templates/manager/prestashop_app.html:625
+#: internal/web/templates/manager/prestashop_app.html:661
+#: internal/web/templates/manager/prestashop_app.html:672
+#: internal/web/templates/manager/python_node_apps.html:157
+#: internal/web/templates/manager/wp/single.html:1087
+#: internal/web/templates/manager/wp/single.html:1099
+#: internal/web/templates/manager/wp/single.html:1106
+#: internal/web/templates/manager/wp/single.html:1160
+#: internal/web/templates/manager/wp/single.html:2196
+#: internal/web/templates/mysql/remote_mysql.html:71
+#: internal/web/templates/partials/_service_js.html:35
+#: internal/web/templates/psql/remote_psql.html:81
+msgid "Unknown"
+msgstr "Inconnu"
+
+#: internal/modules/services/render.go:101
+#: internal/web/templates/system/services.html:11
+msgid "Choose Service"
+msgstr "Choisir un service"
 
 #: internal/modules/services/render.go:122
 #: internal/web/templates/cache/service.html:17
@@ -778,6 +2397,49 @@ msgstr "Cliquer pour désactiver"
 #: internal/web/templates/psql/remote_psql.html:73
 msgid "Click to Enable"
 msgstr "Cliquez pour activer"
+
+#: internal/modules/sofawiki/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:402
+#: internal/web/templates/manager/sofawiki_install.html:9
+msgid "Install SofaWiki"
+msgstr "Installer SofaWiki"
+
+#: internal/modules/tinyfilemanager/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:542
+#: internal/web/templates/manager/tinyfilemanager_install.html:9
+msgid "Install TinyFileManager"
+msgstr "Installer TinyFileManager"
+
+#: internal/modules/tinyphotogallery/render.go:36
+#: internal/web/templates/manager/autoinstaller.html:510
+#: internal/web/templates/manager/tinyphotogallery_install.html:9
+msgid "Install TinyPhotoGallery"
+msgstr "Installer TinyPhotoGallery"
+
+#: internal/modules/waf/handlers_list.go:93
+#: internal/modules/waf/handlers_list.go:97
+msgid "Error changing WAF status."
+msgstr "Erreur lors du changement d'état du WAF."
+
+#: internal/modules/webserverconf/webserverconf.go:29
+msgid "Nginx Configuration Editor"
+msgstr "Éditeur de configuration Nginx"
+
+#: internal/modules/webserverconf/webserverconf.go:30
+msgid "Apache Configuration Editor"
+msgstr "Éditeur de configuration Apache"
+
+#: internal/modules/webserverconf/webserverconf.go:31
+msgid "OpenResty Configuration Editor"
+msgstr "Éditeur de configuration OpenResty"
+
+#: internal/modules/webserverconf/webserverconf.go:32
+msgid "OpenLitespeed Configuration Editor"
+msgstr "Éditeur de configuration OpenLitespeed"
+
+#: internal/modules/webserverconf/webserverconf.go:33
+msgid "Litespeed Configuration Editor"
+msgstr "Éditeur de configuration Litespeed"
 
 #: internal/modules/webserverconf/webserverconf.go:41
 msgid "Web Server Configuration Editor"
@@ -911,78 +2573,85 @@ msgstr ""
 "Utilise un filtre User-Agent pour bloquer les scrapers agressifs et les "
 "scanners de sécurité comme AhrefsBot, SemrushBot, MJ12bot et Nikto."
 
-#: internal/web/sidebar.go:224
-#: internal/web/templates/partials/_header.html:141
-msgid "Sites"
-msgstr "Sites"
+#: internal/modules/websites/websitebuilder_render.go:38
+#: internal/web/templates/manager/autoinstaller.html:145
+msgid "Create Website"
+msgstr "Créer un site web"
 
-#: internal/web/sidebar.go:578 internal/web/templates/dashboard/upgrade.html:6
-#: internal/web/templates/dashboard/usage.html:16
-msgid "Upgrade now"
-msgstr "Mettre à niveau maintenant"
+#: internal/modules/websites/websitebuilder_render.go:51
+msgid "GrapesJS Website Editor"
+msgstr "Éditeur de site web GrapesJS"
 
-#: internal/web/sidebar_classic.go:49
-#: internal/web/templates/manager/sites.html:8
-msgid "Site Manager"
-msgstr "Gestionnaire de site"
+#: internal/modules/wordpress/render.go:41
+msgid "WordPress Manager"
+msgstr "Gestionnaire WordPress"
 
-#: internal/web/sidebar_classic.go:61 internal/web/sidebar_classic.go:67
-#: internal/web/templates/files/disk_usage.html:90
-#: internal/web/templates/files/filemanager.html:59
-#: internal/web/templates/files/inodes.html:88
-msgid "File Manager"
-msgstr "Gestionnaire de fichiers"
+#: internal/modules/wordpress/render.go:59
+#: internal/web/templates/manager/autoinstaller.html:47
+#: internal/web/templates/manager/wp/install.html:9
+msgid "Install WordPress"
+msgstr "Installer WordPress"
+
+#: internal/web/sidebar.go:233
+msgid "Accounts"
+msgstr "Comptes"
+
+#: internal/web/sidebar.go:239
+msgid "Delete Accounts"
+msgstr "Supprimer des comptes"
+
+#: internal/web/sidebar.go:259
+#: internal/web/templates/manager/dokuwiki_app.html:38
+#: internal/web/templates/manager/drupal_app.html:87
+#: internal/web/templates/manager/flarum_app.html:38
+#: internal/web/templates/manager/joomla_app.html:87
+#: internal/web/templates/manager/matomo_app.html:87
+#: internal/web/templates/manager/mediawiki_app.html:87
+#: internal/web/templates/manager/moodle_app.html:38
+#: internal/web/templates/manager/n8n_app.html:45
+#: internal/web/templates/manager/nextcloud_app.html:87
+#: internal/web/templates/manager/ojs_app.html:87
+#: internal/web/templates/manager/opencart_app.html:87
+#: internal/web/templates/manager/php_app.html:44
+#: internal/web/templates/manager/php_app.html:82
+#: internal/web/templates/manager/phpbb_app.html:38
+#: internal/web/templates/manager/prestashop_app.html:87
+#: internal/web/templates/manager/python_node_apps.html:45
+#: internal/web/templates/manager/sofawiki_app.html:38
+#: internal/web/templates/manager/tinyfilemanager_app.html:38
+#: internal/web/templates/manager/tinyphotogallery_app.html:38
+#: internal/web/templates/manager/websitebuilder.html:46
+#: internal/web/templates/manager/wp/single.html:154
+msgid "Overview"
+msgstr "Vue d'ensemble"
+
+#: internal/web/sidebar.go:278
+msgid "Configure"
+msgstr "Configurer"
+
+#: internal/web/sidebar.go:292
+msgid "File Editor"
+msgstr "Éditeur de fichiers"
+
+#: internal/web/sidebar.go:336
+msgid "Monitor & Secure"
+msgstr "Surveiller et sécuriser"
+
+#: internal/web/sidebar.go:372 internal/web/templates/mysql/wizard.html:74
+msgid "Server"
+msgstr "Serveur"
+
+#: internal/web/sidebar.go:373
+msgid "Hosting Plan"
+msgstr "Offre d'hébergement"
+
+#: internal/web/sidebar.go:374
+msgid "Panel"
+msgstr "Panneau"
 
 #: internal/web/sidebar_classic.go:62 internal/web/sidebar_classic.go:68
 msgid "Upload from device"
 msgstr "Envoyer depuis l'appareil"
-
-#: internal/web/sidebar_classic.go:63 internal/web/sidebar_classic.go:69
-#: internal/web/templates/files/upload_file.html:11
-msgid "Download from URL"
-msgstr "Télécharger depuis une URL"
-
-#: internal/web/sidebar_classic.go:89 internal/web/sidebar_classic.go:112
-#: internal/web/sidebar_classic.go:135
-#: internal/web/templates/mysql/users.html:9
-msgid "Users"
-msgstr "Utilisateurs"
-
-#: internal/web/sidebar_classic.go:93 internal/web/sidebar_classic.go:115
-#: internal/web/sidebar_classic.go:138
-#: internal/web/templates/mongodb/databases.html:38
-#: internal/web/templates/mongodb/databases.html:41
-#: internal/web/templates/mongodb/wizard.html:8
-#: internal/web/templates/mysql/databases.html:196
-#: internal/web/templates/mysql/databases.html:199
-#: internal/web/templates/mysql/wizard.html:8
-#: internal/web/templates/psql/databases.html:102
-#: internal/web/templates/psql/databases.html:105
-#: internal/web/templates/psql/wizard.html:8
-msgid "Database Wizard"
-msgstr "Assistant de base de données"
-
-#: internal/web/sidebar_classic.go:94 internal/web/sidebar_classic.go:116
-#: internal/web/sidebar_classic.go:139
-#: internal/web/templates/mongodb/new.html:42
-#: internal/web/templates/mysql/new.html:44
-#: internal/web/templates/psql/new.html:42
-msgid "Create Database"
-msgstr "Créer une base de données"
-
-#: internal/web/sidebar_classic.go:95 internal/web/sidebar_classic.go:117
-#: internal/web/sidebar_classic.go:140
-#: internal/web/templates/mongodb/mongodb_user.html:83
-#: internal/web/templates/mongodb/users.html:26
-#: internal/web/templates/mongodb/users.html:30
-#: internal/web/templates/mysql/mysql_user.html:112
-#: internal/web/templates/mysql/users.html:52
-#: internal/web/templates/mysql/users.html:58
-#: internal/web/templates/psql/psql_user.html:83
-#: internal/web/templates/psql/users.html:42
-#: internal/web/templates/psql/users.html:46
-msgid "Create User"
-msgstr "Créer l'utilisateur"
 
 #: internal/web/sidebar_classic.go:96 internal/web/sidebar_classic.go:118
 #: internal/web/sidebar_classic.go:141
@@ -993,11 +2662,6 @@ msgstr "Attribuer un utilisateur à la BD"
 #: internal/web/sidebar_classic.go:142
 msgid "Remove User from DB"
 msgstr "Retirer un utilisateur de la BD"
-
-#: internal/web/sidebar_classic.go:100 internal/web/sidebar_classic.go:123
-#: internal/web/templates/mysql/remote_mysql.html:10
-msgid "Remote Access"
-msgstr "Accès distant"
 
 #: internal/web/sidebar_classic.go:124 internal/web/sidebar_classic.go:145
 msgid "Show Processes"
@@ -1019,17 +2683,9 @@ msgstr "Suspendre un domaine"
 msgid "Unsuspend a Domain"
 msgstr "Réactiver un domaine"
 
-#: internal/web/sidebar_classic.go:193 internal/web/sidebar_classic.go:198
-msgid "Email Accounts"
-msgstr "Comptes e-mail"
-
 #: internal/web/sidebar_classic.go:194 internal/web/sidebar_classic.go:199
 msgid "Create New Account"
 msgstr "Créer un nouveau compte"
-
-#: internal/web/sidebar_classic.go:229
-msgid "Select PHP version"
-msgstr "Sélectionner la version PHP"
 
 #: internal/web/sidebar_classic.go:230
 msgid "Default version"
@@ -1243,11 +2899,6 @@ msgstr "La valeur doit être au plus {max}."
 msgid "Looks good."
 msgstr "Tout est bon."
 
-#: internal/web/templates/base.html:410
-#: internal/web/templates/user/favorites.html:10
-msgid "Favorites"
-msgstr "Favoris"
-
 #: internal/web/templates/base.html:478 internal/web/templates/base.html:523
 #: internal/web/templates/base.html:629
 #: internal/web/templates/dashboard/dashboard.html:46
@@ -1421,27 +3072,6 @@ msgstr "Utilisation actuelle des ressources en temps réel pour le service."
 #: internal/web/templates/system/services.html:91
 msgid "Edit limits"
 msgstr "Modifier les limites"
-
-#: internal/web/templates/cache/service.html:267
-#: internal/web/templates/docker/logs.html:11
-#: internal/web/templates/docker/logs.html:87
-#: internal/web/templates/manager/drupal_app.html:96
-#: internal/web/templates/manager/flarum_app.html:47
-#: internal/web/templates/manager/joomla_app.html:96
-#: internal/web/templates/manager/matomo_app.html:96
-#: internal/web/templates/manager/mediawiki_app.html:96
-#: internal/web/templates/manager/moodle_app.html:47
-#: internal/web/templates/manager/n8n_app.html:63
-#: internal/web/templates/manager/nextcloud_app.html:96
-#: internal/web/templates/manager/ojs_app.html:96
-#: internal/web/templates/manager/opencart_app.html:96
-#: internal/web/templates/manager/php_app.html:62
-#: internal/web/templates/manager/prestashop_app.html:96
-#: internal/web/templates/manager/python_node_apps.html:90
-#: internal/web/templates/system/cronjobs.html:241
-#: internal/web/templates/system/services.html:160
-msgid "Logs"
-msgstr "Journaux"
 
 #: internal/web/templates/cache/service.html:268
 #: internal/web/templates/system/services.html:161
@@ -1756,18 +3386,6 @@ msgstr "Hôtes virtuels"
 msgid "MySQL Databases"
 msgstr "Bases de données MySQL"
 
-#: internal/web/templates/dashboard/onboarding.html:205
-#: internal/web/templates/files/backup_settings.html:87
-#: internal/web/templates/psql/databases.html:9
-msgid "PostgreSQL Databases"
-msgstr "Bases de données PostgreSQL"
-
-#: internal/web/templates/dashboard/onboarding.html:206
-#: internal/web/templates/files/backup_settings.html:89
-#: internal/web/templates/system/cronjobs.html:24
-msgid "Cron Jobs"
-msgstr "Tâches cron"
-
 #: internal/web/templates/dashboard/onboarding.html:222
 msgid "Connection successful."
 msgstr "Connexion réussie."
@@ -1801,22 +3419,9 @@ msgstr ""
 "Filtre les requêtes malveillantes vers vos sites avant qu'elles n'atteignent"
 " vos applications."
 
-#: internal/web/templates/dashboard/onboarding.html:255
-#: internal/web/templates/dashboard/onboarding.html:313
-#: internal/web/templates/system/ip_blocker.html:15
-msgid "IP Blocker"
-msgstr "Bloqueur d'IP"
-
 #: internal/web/templates/dashboard/onboarding.html:258
 msgid "Deny specific IPs or CIDR ranges access to your websites."
 msgstr "Refuser l'accès à vos sites à des IP ou plages CIDR spécifiques."
-
-#: internal/web/templates/dashboard/onboarding.html:265
-#: internal/web/templates/dashboard/onboarding.html:325
-#: internal/web/templates/dashboard/twofa.html:6
-#: internal/web/templates/user/twofa_settings.html:14
-msgid "Two-Factor Authentication"
-msgstr "Authentification à deux facteurs"
 
 #: internal/web/templates/dashboard/onboarding.html:268
 msgid ""
@@ -1948,47 +3553,6 @@ msgstr "Continuer"
 msgid "Please wait…"
 msgstr "Veuillez patienter…"
 
-#: internal/web/templates/dashboard/onboarding.html:443
-msgid "Recommended for websites that use .htaccess for rewrite rules."
-msgstr ""
-"Recommandé pour les sites qui utilisent .htaccess pour les règles de "
-"réécriture."
-
-#: internal/web/templates/dashboard/onboarding.html:448
-msgid ""
-"Recommended for NodeJS and Python applications, and high-traffic sites."
-msgstr ""
-"Recommandé pour les applications NodeJS et Python, ainsi que pour les sites "
-"à fort trafic."
-
-#: internal/web/templates/dashboard/onboarding.html:453
-msgid "Recommended for WordPress websites, but only one PHP version."
-msgstr "Recommandé pour les sites WordPress, mais une seule version PHP."
-
-#: internal/web/templates/dashboard/onboarding.html:488
-msgid "Nginx core bundled with Lua scripting for custom logic."
-msgstr "Noyau Nginx intégrant le script Lua pour une logique personnalisée."
-
-#: internal/web/templates/dashboard/onboarding.html:498
-msgid "Can be better fine-tuned for any type of application."
-msgstr "Peut être mieux optimisé pour tout type d'application."
-
-#: internal/web/templates/dashboard/onboarding.html:503
-msgid ""
-"Recommended for WordPress sites - smaller image, lower resource usage, and "
-"faster default query execution."
-msgstr ""
-"Recommandé pour les sites WordPress - image plus légère, utilisation des "
-"ressources réduite et exécution des requêtes par défaut plus rapide."
-
-#: internal/web/templates/dashboard/onboarding.html:508
-msgid ""
-"MySQL drop-in with extra performance and monitoring features, geared toward "
-"high-traffic sites."
-msgstr ""
-"Remplaçant direct de MySQL avec des fonctionnalités supplémentaires de "
-"performance et de surveillance, conçu pour les sites à fort trafic."
-
 #: internal/web/templates/dashboard/onboarding.html:524
 #: internal/web/templates/dashboard/onboarding.html:555
 #: internal/web/templates/docker/containers.html:133
@@ -2011,21 +3575,6 @@ msgid ""
 msgstr ""
 "Mettez les pages en cache pour accélérer vos sites et réduire la charge sur "
 "votre serveur web."
-
-#: internal/web/templates/dashboard/onboarding.html:525
-#: internal/web/templates/dashboard/onboarding.html:556
-#: internal/web/templates/manager/drupal_app.html:570
-#: internal/web/templates/manager/joomla_app.html:573
-#: internal/web/templates/manager/moodle_app.html:525
-#: internal/web/templates/manager/nextcloud_app.html:574
-#: internal/web/templates/manager/opencart_app.html:574
-#: internal/web/templates/manager/prestashop_app.html:574
-#: internal/web/templates/manager/wp/single.html:1095
-#: internal/web/templates/mysql/remote_mysql.html:58
-#: internal/web/templates/php/extensions.html:62
-#: internal/web/templates/psql/remote_psql.html:69
-msgid "Disabled"
-msgstr "Désactivé"
 
 #: internal/web/templates/dashboard/onboarding.html:525
 msgid ""
@@ -2104,10 +3653,6 @@ msgstr "Les nouveaux domaines ne bénéficient d'aucun filtrage des requêtes."
 #: internal/web/templates/psql/users.html:48
 msgid "Database"
 msgstr "Base de données"
-
-#: internal/web/templates/dashboard/onboarding.html:591
-msgid "Varnish"
-msgstr "Varnish"
 
 #: internal/web/templates/dashboard/onboarding.html:643
 #: internal/web/templates/dashboard/onboarding.html:654
@@ -2266,30 +3811,6 @@ msgstr "Contactez votre hébergeur pour mettre à niveau votre forfait."
 msgid "Email accounts"
 msgstr "Comptes e-mail"
 
-#: internal/web/templates/dashboard/usage.html:124
-#: internal/web/templates/files/ftp.html:9
-#: internal/web/templates/manager/dokuwiki_app.html:256
-#: internal/web/templates/manager/drupal_app.html:323
-#: internal/web/templates/manager/flarum_app.html:264
-#: internal/web/templates/manager/joomla_app.html:322
-#: internal/web/templates/manager/matomo_app.html:314
-#: internal/web/templates/manager/mediawiki_app.html:314
-#: internal/web/templates/manager/moodle_app.html:274
-#: internal/web/templates/manager/n8n_app.html:316
-#: internal/web/templates/manager/nextcloud_app.html:323
-#: internal/web/templates/manager/ojs_app.html:313
-#: internal/web/templates/manager/opencart_app.html:323
-#: internal/web/templates/manager/phpbb_app.html:255
-#: internal/web/templates/manager/prestashop_app.html:323
-#: internal/web/templates/manager/python_node_apps.html:365
-#: internal/web/templates/manager/sofawiki_app.html:247
-#: internal/web/templates/manager/tinyfilemanager_app.html:229
-#: internal/web/templates/manager/tinyphotogallery_app.html:229
-#: internal/web/templates/manager/websitebuilder.html:137
-#: internal/web/templates/manager/wp/single.html:408
-msgid "FTP Accounts"
-msgstr "Comptes FTP"
-
 #: internal/web/templates/dashboard/usage.html:146
 #: internal/web/templates/docker/container_form.html:161
 msgid "Storage"
@@ -2426,10 +3947,6 @@ msgstr "Retour aux images"
 #: internal/web/templates/docker/change_images.html:90
 msgid "Change tag"
 msgstr "Modifier le tag"
-
-#: internal/web/templates/docker/change_images.html:113
-msgid "Change docker image tag"
-msgstr "Modifier le tag de l'image docker"
 
 #: internal/web/templates/docker/change_images.html:114
 msgid "Change docker images tag in order to use specific service versions."
@@ -2821,6 +4338,7 @@ msgid "Total CPU:"
 msgstr "CPU total :"
 
 #: internal/web/templates/docker/containers.html:18
+#: internal/web/templates/docker/containers.html:377
 msgid "cores"
 msgstr "cœurs"
 
@@ -2953,6 +4471,126 @@ msgstr ""
 msgid "Image"
 msgstr "Image"
 
+#: internal/web/templates/docker/containers.html:371
+#: internal/web/templates/docker/containers.html:415
+msgid "Usage:"
+msgstr "Utilisation :"
+
+#: internal/web/templates/docker/containers.html:376
+#: internal/web/templates/docker/containers.html:419
+msgid "Allocated:"
+msgstr "Alloué :"
+
+#: internal/web/templates/docker/containers.html:380
+msgid "Max CPUs that this service can use. 0 = unlimited"
+msgstr "Nombre max. de CPU que ce service peut utiliser. 0 = illimité"
+
+#: internal/web/templates/docker/containers.html:381
+#: internal/web/templates/docker/containers.html:427
+#: internal/web/templates/docker/containers.html:454
+#: internal/web/templates/domains/capitalize.html:100
+#: internal/web/templates/domains/dns.html:187
+#: internal/web/templates/domains/dns.html:493
+#: internal/web/templates/domains/domains.html:192
+#: internal/web/templates/domains/domains.html:222
+#: internal/web/templates/domains/dynamic_dns.html:101
+#: internal/web/templates/emails/default_address.html:128
+#: internal/web/templates/files/edit_file.html:140
+#: internal/web/templates/mysql/remote_mysql.html:197
+#: internal/web/templates/system/cronjobs.html:224
+#: internal/web/templates/system/waf_domain.html:13
+msgid "Save"
+msgstr "Enregistrer"
+
+#: internal/web/templates/docker/containers.html:425
+msgid "Max Memory that this service can use. 0 = unlimited"
+msgstr "Mémoire max. que ce service peut utiliser. 0 = illimité"
+
+#: internal/web/templates/docker/containers.html:453
+msgid "Max processes that this service can run. 0 = unlimited"
+msgstr "Nombre max. de processus que ce service peut exécuter. 0 = illimité"
+
+#: internal/web/templates/docker/containers.html:473
+#: internal/web/templates/manager/n8n_app.html:165
+#: internal/web/templates/manager/python_node_apps.html:214
+#: internal/web/templates/partials/_footer.html:45
+msgid "Start"
+msgstr "Démarrer"
+
+#: internal/web/templates/docker/containers.html:479
+#: internal/web/templates/manager/n8n_app.html:195
+#: internal/web/templates/manager/python_node_apps.html:244
+msgid "Stop"
+msgstr "Arrêter"
+
+#: internal/web/templates/docker/containers.html:484
+#: internal/web/templates/domains/dynamic_dns.html:202
+#: internal/web/templates/domains/vhost.html:22
+#: internal/web/templates/domains/vhost.html:23
+#: internal/web/templates/domains/vhost.html:180
+#: internal/web/templates/files/filemanager_partials.html:277
+#: internal/web/templates/files/filemanager_partials.html:344
+#: internal/web/templates/mysql/remote_mysql.html:201
+#: internal/web/templates/system/cronjobs.html:222
+msgid "Edit"
+msgstr "Modifier"
+
+#: internal/web/templates/docker/containers.html:495
+#: internal/web/templates/domains/domains.html:327
+#: internal/web/templates/domains/dynamic_dns.html:130
+#: internal/web/templates/domains/dynamic_dns.html:135
+#: internal/web/templates/domains/dynamic_dns.html:205
+#: internal/web/templates/emails/alias_delete.html:10
+#: internal/web/templates/emails/delete.html:10
+#: internal/web/templates/emails/single_account.html:13
+#: internal/web/templates/files/clamav/quarantine.html:84
+#: internal/web/templates/files/filemanager_partials.html:262
+#: internal/web/templates/files/filemanager_partials.html:332
+#: internal/web/templates/files/filemanager_partials.html:851
+#: internal/web/templates/files/ftp.html:113
+#: internal/web/templates/files/ftp.html:131
+#: internal/web/templates/files/trash.html:57
+#: internal/web/templates/files/trash_partials.html:257
+#: internal/web/templates/manager/dokuwiki_app.html:650
+#: internal/web/templates/manager/drupal_app.html:1079
+#: internal/web/templates/manager/flarum_app.html:942
+#: internal/web/templates/manager/joomla_app.html:1054
+#: internal/web/templates/manager/matomo_app.html:979
+#: internal/web/templates/manager/mediawiki_app.html:979
+#: internal/web/templates/manager/moodle_app.html:1034
+#: internal/web/templates/manager/n8n_app.html:610
+#: internal/web/templates/manager/nextcloud_app.html:1068
+#: internal/web/templates/manager/ojs_app.html:995
+#: internal/web/templates/manager/opencart_app.html:1055
+#: internal/web/templates/manager/php_app.html:142
+#: internal/web/templates/manager/phpbb_app.html:737
+#: internal/web/templates/manager/prestashop_app.html:1039
+#: internal/web/templates/manager/python_node_apps.html:1241
+#: internal/web/templates/manager/sites.html:456
+#: internal/web/templates/manager/sites.html:493
+#: internal/web/templates/manager/sofawiki_app.html:553
+#: internal/web/templates/manager/tinyfilemanager_app.html:446
+#: internal/web/templates/manager/tinyphotogallery_app.html:448
+#: internal/web/templates/manager/websitebuilder.html:238
+#: internal/web/templates/mongodb/databases.html:157
+#: internal/web/templates/mongodb/databases.html:238
+#: internal/web/templates/mongodb/users.html:63
+#: internal/web/templates/mongodb/users.html:107
+#: internal/web/templates/mysql/databases.html:441
+#: internal/web/templates/mysql/databases.html:443
+#: internal/web/templates/mysql/remote_mysql.html:207
+#: internal/web/templates/mysql/users.html:101
+#: internal/web/templates/mysql/users.html:142
+#: internal/web/templates/psql/databases.html:223
+#: internal/web/templates/psql/databases.html:304
+#: internal/web/templates/psql/users.html:77
+#: internal/web/templates/psql/users.html:121
+#: internal/web/templates/system/cronjobs.html:236
+#: internal/web/templates/system/cronjobs.html:369
+#: internal/web/templates/user/favorites.html:83
+msgid "Delete"
+msgstr "Supprimer"
+
 #: internal/web/templates/docker/delete_confirm.html:11
 msgid "Delete container"
 msgstr "Supprimer le conteneur"
@@ -3082,11 +4720,6 @@ msgstr "Journaux copiés dans le presse-papiers."
 #: internal/web/templates/manager/python_node_apps.html:1225
 msgid "Failed to copy logs."
 msgstr "Échec de la copie des journaux."
-
-#: internal/web/templates/docker/terminal.html:20
-#: internal/web/templates/docker/terminal.html:224
-msgid "Container Terminal"
-msgstr "Terminal du conteneur"
 
 #: internal/web/templates/docker/terminal.html:34
 msgid ""
@@ -3232,20 +4865,6 @@ msgstr ""
 "Vous pouvez personnaliser la casse de votre domaine en cliquant sur la "
 "lettre que vous souhaitez modifier (ex. SuperDomainName.com)."
 
-#: internal/web/templates/domains/capitalize.html:100
-#: internal/web/templates/domains/dns.html:187
-#: internal/web/templates/domains/dns.html:493
-#: internal/web/templates/domains/domains.html:192
-#: internal/web/templates/domains/domains.html:222
-#: internal/web/templates/domains/dynamic_dns.html:101
-#: internal/web/templates/emails/default_address.html:128
-#: internal/web/templates/files/edit_file.html:140
-#: internal/web/templates/mysql/remote_mysql.html:197
-#: internal/web/templates/system/cronjobs.html:224
-#: internal/web/templates/system/waf_domain.html:13
-msgid "Save"
-msgstr "Enregistrer"
-
 #: internal/web/templates/domains/capitalize.html:108
 #: internal/web/templates/domains/delete.html:79
 #: internal/web/templates/domains/docroot.html:58
@@ -3381,11 +5000,6 @@ msgstr "Total des enregistrements DNS :"
 #: internal/web/templates/domains/dns.html:73
 msgid "New Record"
 msgstr "Nouvel enregistrement"
-
-#: internal/web/templates/domains/dns.html:81
-#: internal/web/templates/domains/dns.html:93
-msgid "Edit DNS File"
-msgstr "Modifier le fichier DNS"
 
 #: internal/web/templates/domains/dns.html:84
 #: internal/web/templates/domains/dns.html:94
@@ -3723,10 +5337,6 @@ msgid "An error occurred while saving the zone file."
 msgstr ""
 "Une erreur s'est produite lors de l'enregistrement du fichier de zone."
 
-#: internal/web/templates/domains/dns.html:740
-msgid "DNS Zone Editor"
-msgstr "Éditeur de zone DNS"
-
 #: internal/web/templates/domains/dns.html:741
 msgid ""
 "Manage and edit Domain Name System (DNS) zone files, which contain critical "
@@ -3816,10 +5426,6 @@ msgstr "Statut SSL"
 msgid "New Domain"
 msgstr "Nouveau domaine"
 
-#: internal/web/templates/domains/domains.html:128
-msgid "SSL"
-msgstr "SSL"
-
 #: internal/web/templates/domains/domains.html:137
 #: internal/web/templates/emails/deliverability.html:42
 #: internal/web/templates/php/settings.html:81
@@ -3875,10 +5481,6 @@ msgstr "Aucun SSL n'est nécessaire sur le réseau Tor."
 msgid "Check"
 msgstr "Vérifier"
 
-#: internal/web/templates/domains/domains.html:284
-msgid "Edit DNS Zone"
-msgstr "Modifier la zone DNS"
-
 #: internal/web/templates/domains/domains.html:291
 msgid "Manage WAF"
 msgstr "Gérer le WAF"
@@ -3896,61 +5498,6 @@ msgstr "Réactiver"
 #: internal/web/templates/emails/single_account.html:166
 msgid "Suspend"
 msgstr "Suspendre"
-
-#: internal/web/templates/domains/domains.html:327
-#: internal/web/templates/domains/dynamic_dns.html:130
-#: internal/web/templates/domains/dynamic_dns.html:135
-#: internal/web/templates/domains/dynamic_dns.html:205
-#: internal/web/templates/emails/alias_delete.html:10
-#: internal/web/templates/emails/delete.html:10
-#: internal/web/templates/emails/single_account.html:13
-#: internal/web/templates/files/clamav/quarantine.html:84
-#: internal/web/templates/files/filemanager_partials.html:262
-#: internal/web/templates/files/filemanager_partials.html:332
-#: internal/web/templates/files/filemanager_partials.html:851
-#: internal/web/templates/files/ftp.html:113
-#: internal/web/templates/files/ftp.html:131
-#: internal/web/templates/files/trash.html:57
-#: internal/web/templates/files/trash_partials.html:257
-#: internal/web/templates/manager/dokuwiki_app.html:650
-#: internal/web/templates/manager/drupal_app.html:1079
-#: internal/web/templates/manager/flarum_app.html:942
-#: internal/web/templates/manager/joomla_app.html:1054
-#: internal/web/templates/manager/matomo_app.html:979
-#: internal/web/templates/manager/mediawiki_app.html:979
-#: internal/web/templates/manager/moodle_app.html:1034
-#: internal/web/templates/manager/n8n_app.html:610
-#: internal/web/templates/manager/nextcloud_app.html:1068
-#: internal/web/templates/manager/ojs_app.html:995
-#: internal/web/templates/manager/opencart_app.html:1055
-#: internal/web/templates/manager/php_app.html:142
-#: internal/web/templates/manager/phpbb_app.html:737
-#: internal/web/templates/manager/prestashop_app.html:1039
-#: internal/web/templates/manager/python_node_apps.html:1241
-#: internal/web/templates/manager/sites.html:456
-#: internal/web/templates/manager/sites.html:493
-#: internal/web/templates/manager/sofawiki_app.html:553
-#: internal/web/templates/manager/tinyfilemanager_app.html:446
-#: internal/web/templates/manager/tinyphotogallery_app.html:448
-#: internal/web/templates/manager/websitebuilder.html:238
-#: internal/web/templates/mongodb/databases.html:157
-#: internal/web/templates/mongodb/databases.html:238
-#: internal/web/templates/mongodb/users.html:63
-#: internal/web/templates/mongodb/users.html:107
-#: internal/web/templates/mysql/databases.html:441
-#: internal/web/templates/mysql/databases.html:443
-#: internal/web/templates/mysql/remote_mysql.html:207
-#: internal/web/templates/mysql/users.html:101
-#: internal/web/templates/mysql/users.html:142
-#: internal/web/templates/psql/databases.html:223
-#: internal/web/templates/psql/databases.html:304
-#: internal/web/templates/psql/users.html:77
-#: internal/web/templates/psql/users.html:121
-#: internal/web/templates/system/cronjobs.html:236
-#: internal/web/templates/system/cronjobs.html:369
-#: internal/web/templates/user/favorites.html:83
-msgid "Delete"
-msgstr "Supprimer"
 
 #: internal/web/templates/domains/domains.html:344
 msgid "0 of"
@@ -4020,10 +5567,6 @@ msgstr "Suivant"
 #: internal/web/templates/domains/domains.html:463
 msgid "Add new domain"
 msgstr "Ajouter un nouveau domaine"
-
-#: internal/web/templates/domains/dynamic_dns.html:10
-msgid "Dynamic DNS"
-msgstr "DNS dynamique"
 
 #: internal/web/templates/domains/dynamic_dns.html:12
 msgid "Keep DNS records in sync with changing IP addresses via a token URL."
@@ -4121,21 +5664,6 @@ msgstr "Copié !"
 #: internal/web/templates/domains/dynamic_dns.html:194
 msgid "Copy URL"
 msgstr "Copier l'URL"
-
-#: internal/web/templates/domains/dynamic_dns.html:202
-#: internal/web/templates/domains/vhost.html:22
-#: internal/web/templates/domains/vhost.html:23
-#: internal/web/templates/domains/vhost.html:180
-#: internal/web/templates/files/filemanager_partials.html:277
-#: internal/web/templates/files/filemanager_partials.html:344
-#: internal/web/templates/mysql/remote_mysql.html:201
-#: internal/web/templates/system/cronjobs.html:222
-msgid "Edit"
-msgstr "Modifier"
-
-#: internal/web/templates/domains/goaccess.html:11
-msgid "Visitor Statistics"
-msgstr "Statistiques des visiteurs"
 
 #: internal/web/templates/domains/goaccess.html:12
 msgid "View html reports generated from domain access logs."
@@ -4309,11 +5837,6 @@ msgstr "Clé publique"
 msgid "Secret Key"
 msgstr "Clé secrète"
 
-#: internal/web/templates/domains/new.html:128
-#: internal/web/templates/domains/new.html:304
-msgid "Add Domain"
-msgstr "Ajouter un domaine"
-
 #: internal/web/templates/domains/new.html:217
 msgid ""
 "Paths for both public and secret files must be set for importing .onion "
@@ -4391,10 +5914,6 @@ msgstr "Enregistrer la redirection"
 msgid "Delete Redirect"
 msgstr "Supprimer la redirection"
 
-#: internal/web/templates/domains/redirect.html:65
-msgid "Redirect Domain to URL"
-msgstr "Rediriger le domaine vers une URL"
-
 #: internal/web/templates/domains/redirect.html:66
 msgid ""
 "Redirecting a domain will immediately redirect all traffic to the new URL, "
@@ -4432,70 +5951,6 @@ msgstr "SSL personnalisé"
 #: internal/web/templates/domains/ssl.html:58
 msgid "Switch to Let's Encrypt and generate"
 msgstr "Basculer vers Let's Encrypt et générer"
-
-#: internal/web/templates/domains/ssl.html:66
-#: internal/web/templates/files/clamav/quarantine.html:76
-#: internal/web/templates/manager/dokuwiki_app.html:114
-#: internal/web/templates/manager/dokuwiki_app.html:307
-#: internal/web/templates/manager/drupal_app.html:182
-#: internal/web/templates/manager/drupal_app.html:575
-#: internal/web/templates/manager/drupal_app.html:621
-#: internal/web/templates/manager/drupal_app.html:674
-#: internal/web/templates/manager/drupal_app.html:686
-#: internal/web/templates/manager/flarum_app.html:123
-#: internal/web/templates/manager/flarum_app.html:482
-#: internal/web/templates/manager/flarum_app.html:537
-#: internal/web/templates/manager/flarum_app.html:549
-#: internal/web/templates/manager/joomla_app.html:181
-#: internal/web/templates/manager/joomla_app.html:578
-#: internal/web/templates/manager/joomla_app.html:624
-#: internal/web/templates/manager/joomla_app.html:676
-#: internal/web/templates/manager/joomla_app.html:687
-#: internal/web/templates/manager/matomo_app.html:173
-#: internal/web/templates/manager/matomo_app.html:536
-#: internal/web/templates/manager/matomo_app.html:574
-#: internal/web/templates/manager/matomo_app.html:586
-#: internal/web/templates/manager/mediawiki_app.html:173
-#: internal/web/templates/manager/mediawiki_app.html:536
-#: internal/web/templates/manager/mediawiki_app.html:574
-#: internal/web/templates/manager/mediawiki_app.html:586
-#: internal/web/templates/manager/moodle_app.html:133
-#: internal/web/templates/manager/moodle_app.html:530
-#: internal/web/templates/manager/moodle_app.html:576
-#: internal/web/templates/manager/moodle_app.html:630
-#: internal/web/templates/manager/moodle_app.html:642
-#: internal/web/templates/manager/n8n_app.html:113
-#: internal/web/templates/manager/nextcloud_app.html:182
-#: internal/web/templates/manager/nextcloud_app.html:579
-#: internal/web/templates/manager/nextcloud_app.html:625
-#: internal/web/templates/manager/nextcloud_app.html:663
-#: internal/web/templates/manager/nextcloud_app.html:675
-#: internal/web/templates/manager/ojs_app.html:172
-#: internal/web/templates/manager/ojs_app.html:531
-#: internal/web/templates/manager/ojs_app.html:595
-#: internal/web/templates/manager/opencart_app.html:182
-#: internal/web/templates/manager/opencart_app.html:579
-#: internal/web/templates/manager/opencart_app.html:625
-#: internal/web/templates/manager/opencart_app.html:677
-#: internal/web/templates/manager/opencart_app.html:688
-#: internal/web/templates/manager/phpbb_app.html:114
-#: internal/web/templates/manager/phpbb_app.html:406
-#: internal/web/templates/manager/prestashop_app.html:182
-#: internal/web/templates/manager/prestashop_app.html:579
-#: internal/web/templates/manager/prestashop_app.html:625
-#: internal/web/templates/manager/prestashop_app.html:661
-#: internal/web/templates/manager/prestashop_app.html:672
-#: internal/web/templates/manager/python_node_apps.html:157
-#: internal/web/templates/manager/wp/single.html:1087
-#: internal/web/templates/manager/wp/single.html:1099
-#: internal/web/templates/manager/wp/single.html:1106
-#: internal/web/templates/manager/wp/single.html:1160
-#: internal/web/templates/manager/wp/single.html:2196
-#: internal/web/templates/mysql/remote_mysql.html:71
-#: internal/web/templates/partials/_service_js.html:35
-#: internal/web/templates/psql/remote_psql.html:81
-msgid "Unknown"
-msgstr "Inconnu"
 
 #: internal/web/templates/domains/ssl.html:72
 msgid "Try enabling AutoSSL"
@@ -4729,19 +6184,6 @@ msgstr "Total des e-mails :"
 msgid "New Email"
 msgstr "Nouvel e-mail"
 
-#: internal/web/templates/emails/accounts.html:27
-#: internal/web/templates/mongodb/databases.html:85
-#: internal/web/templates/mongodb/databases.html:91
-#: internal/web/templates/mongodb/databases.html:149
-#: internal/web/templates/mysql/databases.html:326
-#: internal/web/templates/mysql/databases.html:332
-#: internal/web/templates/mysql/databases.html:390
-#: internal/web/templates/psql/databases.html:151
-#: internal/web/templates/psql/databases.html:157
-#: internal/web/templates/psql/databases.html:215
-msgid "Export"
-msgstr "Exporter"
-
 #: internal/web/templates/emails/accounts.html:37
 msgid "Account @ Domain"
 msgstr "Compte @ Domaine"
@@ -4750,13 +6192,6 @@ msgstr "Compte @ Domaine"
 msgid "Storage Used"
 msgstr "Stockage utilisé"
 
-#: internal/web/templates/emails/accounts.html:39
-#: internal/web/templates/emails/aliases.html:40
-#: internal/web/templates/emails/deliverability.html:35
-#: internal/web/templates/manager/wp/single.html:164
-msgid "Options"
-msgstr "Options"
-
 #: internal/web/templates/emails/accounts.html:46
 msgid "No emails yet."
 msgstr "Aucun e-mail pour l'instant."
@@ -4764,10 +6199,6 @@ msgstr "Aucun e-mail pour l'instant."
 #: internal/web/templates/emails/accounts.html:46
 msgid "Add your first email"
 msgstr "Ajouter votre premier e-mail"
-
-#: internal/web/templates/emails/accounts.html:74
-msgid "Webmail"
-msgstr "Webmail"
 
 #: internal/web/templates/emails/accounts.html:76
 #: internal/web/templates/emails/aliases.html:76
@@ -4779,11 +6210,6 @@ msgstr "Webmail"
 #: internal/web/templates/partials/_service.html:52
 msgid "Manage"
 msgstr "Gérer"
-
-#: internal/web/templates/emails/accounts.html:77
-#: internal/web/templates/emails/info.html:8
-msgid "Connect Devices"
-msgstr "Connecter des appareils"
 
 #: internal/web/templates/emails/accounts.html:109
 msgid "Webmail for "
@@ -4964,17 +6390,9 @@ msgstr ""
 msgid "Create Alias"
 msgstr "Créer l'alias"
 
-#: internal/web/templates/emails/aliases.html:10
-msgid "Aliases"
-msgstr "Alias"
-
 #: internal/web/templates/emails/aliases.html:13
 msgid "Total aliases:"
 msgstr "Total des alias :"
-
-#: internal/web/templates/emails/aliases.html:28
-msgid "New Alias"
-msgstr "Nouvel alias"
 
 #: internal/web/templates/emails/aliases.html:38
 msgid "From (alias)"
@@ -4987,11 +6405,6 @@ msgstr "Aucun alias pour l'instant."
 #: internal/web/templates/emails/aliases.html:50
 msgid "Add your first alias"
 msgstr "Ajouter votre premier alias"
-
-#: internal/web/templates/emails/confirm_import.html:8
-#: internal/web/templates/emails/import.html:8
-msgid "Import Emails"
-msgstr "Importer des e-mails"
 
 #: internal/web/templates/emails/confirm_import.html:9
 #: internal/web/templates/emails/import.html:9
@@ -5228,11 +6641,6 @@ msgstr "Sélectionnez l'adresse e-mail à supprimer."
 #: internal/web/templates/emails/filter.html:29
 msgid "Select address"
 msgstr "Sélectionner une adresse"
-
-#: internal/web/templates/emails/deliverability.html:10
-#: internal/web/templates/emails/deliverability_domain.html:9
-msgid "Email Deliverability"
-msgstr "Délivrabilité des e-mails"
 
 #: internal/web/templates/emails/deliverability.html:12
 msgid "Check SPF, DKIM and DMARC DNS records for your domains."
@@ -5549,12 +6957,6 @@ msgstr "Téléverser un fichier"
 msgid "CSV, XLSX or XLS files only."
 msgstr "Fichiers CSV, XLSX ou XLS uniquement."
 
-#: internal/web/templates/emails/import.html:40
-#: internal/web/templates/files/filemanager.html:105
-#: internal/web/templates/files/upload_file.html:106
-msgid "Upload"
-msgstr "Télécharger"
-
 #: internal/web/templates/emails/info.html:9
 msgid "View email server information for account"
 msgstr "Voir les informations du serveur e-mail pour le compte"
@@ -5706,37 +7108,6 @@ msgstr "Mot de passe de force moyenne"
 msgid "Strong password"
 msgstr "Mot de passe fort"
 
-#: internal/web/templates/emails/new.html:68
-#: internal/web/templates/emails/single_account.html:180
-#: internal/web/templates/files/ftp_new.html:50
-#: internal/web/templates/files/ftp_password.html:36
-#: internal/web/templates/manager/drupal_install.html:151
-#: internal/web/templates/manager/flarum_install.html:151
-#: internal/web/templates/manager/joomla_install.html:158
-#: internal/web/templates/manager/matomo_install.html:143
-#: internal/web/templates/manager/mediawiki_install.html:150
-#: internal/web/templates/manager/moodle_install.html:134
-#: internal/web/templates/manager/nextcloud_install.html:143
-#: internal/web/templates/manager/ojs_install.html:143
-#: internal/web/templates/manager/opencart_install.html:143
-#: internal/web/templates/manager/phpbb_install.html:159
-#: internal/web/templates/manager/prestashop_install.html:151
-#: internal/web/templates/manager/wp/install.html:124
-#: internal/web/templates/mongodb/mongodb_user.html:35
-#: internal/web/templates/mongodb/password.html:33
-#: internal/web/templates/mongodb/wizard.html:60
-#: internal/web/templates/mysql/mysql_user.html:35
-#: internal/web/templates/mysql/password.html:33
-#: internal/web/templates/mysql/root_password.html:26
-#: internal/web/templates/mysql/wizard.html:236
-#: internal/web/templates/psql/password.html:33
-#: internal/web/templates/psql/psql_user.html:35
-#: internal/web/templates/psql/wizard.html:60
-#: internal/web/templates/user/account.html:80
-#: internal/web/templates/user/reset_password/set_new_password.html:84
-msgid "Password does not meet the required strength."
-msgstr "Le mot de passe ne respecte pas le niveau de sécurité requis."
-
 #: internal/web/templates/emails/new.html:85
 #: internal/web/templates/emails/single_account.html:197
 #: internal/web/templates/manager/drupal_app.html:828
@@ -5869,14 +7240,6 @@ msgstr "Fichier de sauvegarde"
 #: internal/web/templates/files/backup_restore.html:170
 msgid "Contents"
 msgstr "Contenu"
-
-#: internal/web/templates/files/backup_restore.html:241
-#: internal/web/templates/files/clamav/quarantine.html:82
-#: internal/web/templates/files/clamav/quarantine.html:113
-#: internal/web/templates/files/trash.html:51
-#: internal/web/templates/files/trash_partials.html:222
-msgid "Restore"
-msgstr "Restaurer"
 
 #: internal/web/templates/files/backup_restore.html:253
 #: internal/web/templates/files/backup_restore.html:510
@@ -6095,10 +7458,6 @@ msgstr ""
 "zéro ou une valeur entière positive pour activer la rotation automatique des"
 " anciennes sauvegardes."
 
-#: internal/web/templates/files/backup_wizard.html:10
-msgid "Backup Wizard"
-msgstr "Assistant de sauvegarde"
-
 #: internal/web/templates/files/backup_wizard.html:12
 msgid "Create and download backups of your account."
 msgstr "Créez et téléchargez des sauvegardes de votre compte."
@@ -6179,16 +7538,6 @@ msgstr ""
 #: internal/web/templates/files/backup_wizard.html:122
 msgid "Filename"
 msgstr "Nom du fichier"
-
-#: internal/web/templates/files/backup_wizard.html:128
-#: internal/web/templates/manager/n8n_app.html:675
-#: internal/web/templates/manager/python_node_apps.html:1309
-#: internal/web/templates/manager/sites.html:209
-#: internal/web/templates/manager/websitebuilder.html:319
-#: internal/web/templates/user/activity.html:7
-#: internal/web/templates/user/mcp.html:42
-msgid "Created"
-msgstr "Créé"
 
 #: internal/web/templates/files/backup_wizard.html:158
 msgid "In progress…"
@@ -6402,10 +7751,6 @@ msgstr "Marqué comme sûr et restauré."
 msgid "Failed"
 msgstr "Échec"
 
-#: internal/web/templates/files/clamav/scanner.html:14
-msgid "Malware Scanner"
-msgstr "Analyseur de malwares"
-
 #: internal/web/templates/files/clamav/scanner.html:15
 msgid ""
 "Scan files for malicious programs with the Clam AntiVirus Scanner (ClamAV) "
@@ -6468,29 +7813,6 @@ msgstr "Aucun logiciel malveillant détecté."
 #: internal/web/templates/files/fix_permissions.html:91
 msgid "Network response was not ok"
 msgstr "La réponse du réseau n'était pas correcte"
-
-#: internal/web/templates/files/disk_usage.html:15
-#: internal/web/templates/manager/dokuwiki_app.html:214
-#: internal/web/templates/manager/drupal_app.html:281
-#: internal/web/templates/manager/flarum_app.html:222
-#: internal/web/templates/manager/joomla_app.html:280
-#: internal/web/templates/manager/matomo_app.html:272
-#: internal/web/templates/manager/mediawiki_app.html:272
-#: internal/web/templates/manager/moodle_app.html:232
-#: internal/web/templates/manager/n8n_app.html:296
-#: internal/web/templates/manager/nextcloud_app.html:281
-#: internal/web/templates/manager/ojs_app.html:271
-#: internal/web/templates/manager/opencart_app.html:281
-#: internal/web/templates/manager/phpbb_app.html:213
-#: internal/web/templates/manager/prestashop_app.html:281
-#: internal/web/templates/manager/python_node_apps.html:345
-#: internal/web/templates/manager/sofawiki_app.html:205
-#: internal/web/templates/manager/tinyfilemanager_app.html:187
-#: internal/web/templates/manager/tinyphotogallery_app.html:187
-#: internal/web/templates/manager/websitebuilder.html:117
-#: internal/web/templates/manager/wp/single.html:366
-msgid "Disk Usage"
-msgstr "Utilisation du disque"
 
 #: internal/web/templates/files/disk_usage.html:17
 msgid ""
@@ -6925,11 +8247,6 @@ msgstr "Nom du dossier"
 msgid "New folder will be created in:"
 msgstr "Le nouveau dossier sera créé dans :"
 
-#: internal/web/templates/files/fix_permissions.html:11
-#: internal/web/templates/files/fix_permissions.html:45
-msgid "Fix Permissions"
-msgstr "Corriger les permissions"
-
 #: internal/web/templates/files/fix_permissions.html:12
 msgid "Fix and reset permissions for files and folders under"
 msgstr ""
@@ -6998,10 +8315,6 @@ msgstr "UID"
 msgid "GID"
 msgstr "GID"
 
-#: internal/web/templates/files/ftp.html:63
-msgid "Configuration"
-msgstr "Configuration"
-
 #: internal/web/templates/files/ftp.html:74
 msgid "No accounts yet."
 msgstr "Aucun compte pour l'instant."
@@ -7010,18 +8323,6 @@ msgstr "Aucun compte pour l'instant."
 msgid "Add your first account"
 msgstr "Ajouter votre premier compte"
 
-#: internal/web/templates/files/ftp.html:106
-#: internal/web/templates/mongodb/password.html:81
-#: internal/web/templates/mongodb/users.html:59
-#: internal/web/templates/mysql/password.html:116
-#: internal/web/templates/mysql/root_password.html:103
-#: internal/web/templates/mysql/users.html:96
-#: internal/web/templates/psql/password.html:81
-#: internal/web/templates/psql/users.html:73
-#: internal/web/templates/user/reset_password/set_new_password.html:57
-msgid "Change Password"
-msgstr "Changer le mot de passe"
-
 #: internal/web/templates/files/ftp.html:108
 msgid "Change Path"
 msgstr "Modifier le chemin"
@@ -7029,10 +8330,6 @@ msgstr "Modifier le chemin"
 #: internal/web/templates/files/ftp.html:179
 msgid "Add new FTP account"
 msgstr "Ajouter un nouveau compte FTP"
-
-#: internal/web/templates/files/ftp_connections.html:9
-msgid "FTP Connections"
-msgstr "Connexions FTP"
 
 #: internal/web/templates/files/ftp_connections.html:10
 msgid "Current FTP sessions of all sub-accounts."
@@ -7049,10 +8346,6 @@ msgstr "Aucune connexion active"
 #: internal/web/templates/files/ftp_connections.html:28
 msgid "There are no active FTP sessions at this time."
 msgstr "Il n'y a actuellement aucune session FTP active."
-
-#: internal/web/templates/files/ftp_new.html:9
-msgid "New FTP Account"
-msgstr "Nouveau compte FTP"
 
 #: internal/web/templates/files/ftp_new.html:10
 msgid "Create a new FTP account."
@@ -7077,10 +8370,6 @@ msgstr "Chemin (dossier)"
 #: internal/web/templates/files/ftp_new.html:170
 msgid "Back to FTP Accounts"
 msgstr "Retour aux comptes FTP"
-
-#: internal/web/templates/files/ftp_new.html:172
-msgid "Create Account"
-msgstr "Créer le compte"
 
 #: internal/web/templates/files/ftp_password.html:10
 msgid "FTP Password"
@@ -7164,10 +8453,6 @@ msgstr "La traversée de chemin (../) n'est pas autorisée"
 msgid "Path must be under"
 msgstr "Le chemin doit être sous"
 
-#: internal/web/templates/files/inodes.html:12
-msgid "Inode Usage"
-msgstr "Utilisation des inodes"
-
 #: internal/web/templates/files/inodes.html:14
 msgid ""
 "An inode is a data structure that keeps the information about a file on your"
@@ -7197,10 +8482,6 @@ msgstr "Calcul du nombre d'inodes pour le répertoire parent.."
 #: internal/web/templates/files/inodes.html:168
 msgid "Failed to fetch"
 msgstr "Échec de la récupération"
-
-#: internal/web/templates/files/trash.html:32
-msgid "Trash"
-msgstr "Corbeille"
 
 #: internal/web/templates/files/trash.html:48
 #: internal/web/templates/files/trash_partials.html:128
@@ -7235,10 +8516,6 @@ msgstr "Supprimé"
 #: internal/web/templates/files/trash_partials.html:202
 msgid "Restore items"
 msgstr "Restaurer les éléments"
-
-#: internal/web/templates/files/upload_file.html:11
-msgid "File Upload"
-msgstr "Téléversement de fichiers"
 
 #: internal/web/templates/files/upload_file.html:103
 msgid "Download from URL instead"
@@ -7901,10 +9178,6 @@ msgstr "Connexion perdue pendant l'installation."
 msgid "Fetch error. Please try again."
 msgstr "Erreur de récupération. Veuillez réessayer."
 
-#: internal/web/templates/manager/autoinstaller.html:8
-msgid "Install App"
-msgstr "Installer l'application"
-
 #: internal/web/templates/manager/autoinstaller.html:9
 msgid "Quickly install a variety of applications such as"
 msgstr "Installez rapidement diverses applications telles que"
@@ -7973,11 +9246,6 @@ msgid ""
 msgstr ""
 "Cette application est désactivée sur votre forfait. Contactez votre "
 "administrateur pour l'activer."
-
-#: internal/web/templates/manager/autoinstaller.html:32
-#: internal/web/templates/manager/wp/list.html:194
-msgid "WordPress"
-msgstr "WordPress"
 
 #: internal/web/templates/manager/autoinstaller.html:36
 msgid "WordPress content management system (CMS)."
@@ -8062,11 +9330,6 @@ msgstr "installation existante"
 msgid "s"
 msgstr "s"
 
-#: internal/web/templates/manager/autoinstaller.html:47
-#: internal/web/templates/manager/wp/install.html:9
-msgid "Install WordPress"
-msgstr "Installer WordPress"
-
 #: internal/web/templates/manager/autoinstaller.html:64
 msgid "Joomla"
 msgstr "Joomla"
@@ -8075,11 +9338,6 @@ msgstr "Joomla"
 msgid "Joomla content management system (CMS)."
 msgstr "Système de gestion de contenu (CMS) Joomla."
 
-#: internal/web/templates/manager/autoinstaller.html:79
-#: internal/web/templates/manager/joomla_install.html:9
-msgid "Install Joomla"
-msgstr "Installer Joomla"
-
 #: internal/web/templates/manager/autoinstaller.html:96
 msgid "Drupal"
 msgstr "Drupal"
@@ -8087,11 +9345,6 @@ msgstr "Drupal"
 #: internal/web/templates/manager/autoinstaller.html:100
 msgid "Drupal content management system (CMS)."
 msgstr "Système de gestion de contenu (CMS) Drupal."
-
-#: internal/web/templates/manager/autoinstaller.html:111
-#: internal/web/templates/manager/drupal_install.html:9
-msgid "Install Drupal"
-msgstr "Installer Drupal"
 
 #: internal/web/templates/manager/autoinstaller.html:130
 #: internal/web/templates/manager/sites.html:243
@@ -8102,10 +9355,6 @@ msgstr "Créateur de site web"
 #: internal/web/templates/manager/autoinstaller.html:134
 msgid "Drag-and-drop HTML website builder."
 msgstr "Créateur de site web HTML par glisser-déposer."
-
-#: internal/web/templates/manager/autoinstaller.html:145
-msgid "Create Website"
-msgstr "Créer un site web"
 
 #: internal/web/templates/manager/autoinstaller.html:152
 msgid "E-commerce"
@@ -8119,11 +9368,6 @@ msgstr "PrestaShop"
 msgid "PrestaShop e-commerce platform."
 msgstr "Plateforme e-commerce PrestaShop."
 
-#: internal/web/templates/manager/autoinstaller.html:183
-#: internal/web/templates/manager/prestashop_install.html:9
-msgid "Install PrestaShop"
-msgstr "Installer PrestaShop"
-
 #: internal/web/templates/manager/autoinstaller.html:200
 msgid "OpenCart"
 msgstr "OpenCart"
@@ -8131,11 +9375,6 @@ msgstr "OpenCart"
 #: internal/web/templates/manager/autoinstaller.html:204
 msgid "OpenCart e-commerce platform."
 msgstr "Plateforme e-commerce OpenCart."
-
-#: internal/web/templates/manager/autoinstaller.html:215
-#: internal/web/templates/manager/opencart_install.html:9
-msgid "Install OpenCart"
-msgstr "Installer OpenCart"
 
 #: internal/web/templates/manager/autoinstaller.html:222
 msgid "Forums"
@@ -8149,11 +9388,6 @@ msgstr "phpBB"
 msgid "phpBB forum software."
 msgstr "Logiciel de forum phpBB."
 
-#: internal/web/templates/manager/autoinstaller.html:253
-#: internal/web/templates/manager/phpbb_install.html:9
-msgid "Install phpBB"
-msgstr "Installer phpBB"
-
 #: internal/web/templates/manager/autoinstaller.html:285
 #: internal/web/templates/manager/flarum_install.html:39
 msgid "Flarum"
@@ -8162,11 +9396,6 @@ msgstr "Flarum"
 #: internal/web/templates/manager/autoinstaller.html:289
 msgid "Flarum forum software."
 msgstr "Logiciel de forum Flarum."
-
-#: internal/web/templates/manager/autoinstaller.html:300
-#: internal/web/templates/manager/flarum_install.html:9
-msgid "Install Flarum"
-msgstr "Installer Flarum"
 
 #: internal/web/templates/manager/autoinstaller.html:307
 msgid "Wikis"
@@ -8180,11 +9409,6 @@ msgstr "MediaWiki"
 msgid "MediaWiki wiki platform."
 msgstr "Plateforme wiki MediaWiki."
 
-#: internal/web/templates/manager/autoinstaller.html:338
-#: internal/web/templates/manager/mediawiki_install.html:9
-msgid "Install MediaWiki"
-msgstr "Installer MediaWiki"
-
 #: internal/web/templates/manager/autoinstaller.html:355
 msgid "DokuWiki"
 msgstr "DokuWiki"
@@ -8196,11 +9420,6 @@ msgstr ""
 "Logiciel wiki basé sur des fichiers, avec versions publiées, sans base de "
 "données requise."
 
-#: internal/web/templates/manager/autoinstaller.html:370
-#: internal/web/templates/manager/dokuwiki_install.html:9
-msgid "Install DokuWiki"
-msgstr "Installer DokuWiki"
-
 #: internal/web/templates/manager/autoinstaller.html:387
 msgid "SofaWiki"
 msgstr "SofaWiki"
@@ -8208,11 +9427,6 @@ msgstr "SofaWiki"
 #: internal/web/templates/manager/autoinstaller.html:391
 msgid "File-based wiki software, no database required."
 msgstr "Logiciel wiki basé sur des fichiers, sans base de données requise."
-
-#: internal/web/templates/manager/autoinstaller.html:402
-#: internal/web/templates/manager/sofawiki_install.html:9
-msgid "Install SofaWiki"
-msgstr "Installer SofaWiki"
 
 #: internal/web/templates/manager/autoinstaller.html:409
 msgid "Marketing & Analytics"
@@ -8225,11 +9439,6 @@ msgstr "Matomo"
 #: internal/web/templates/manager/autoinstaller.html:429
 msgid "Matomo web analytics platform."
 msgstr "Plateforme d'analyse web Matomo."
-
-#: internal/web/templates/manager/autoinstaller.html:440
-#: internal/web/templates/manager/matomo_install.html:9
-msgid "Install Matomo"
-msgstr "Installer Matomo"
 
 #: internal/web/templates/manager/autoinstaller.html:447
 msgid "File Management"
@@ -8244,11 +9453,6 @@ msgid "Nextcloud file sync and collaboration platform."
 msgstr ""
 "Plateforme de synchronisation de fichiers et de collaboration Nextcloud."
 
-#: internal/web/templates/manager/autoinstaller.html:478
-#: internal/web/templates/manager/nextcloud_install.html:9
-msgid "Install Nextcloud"
-msgstr "Installer Nextcloud"
-
 #: internal/web/templates/manager/autoinstaller.html:495
 msgid "TinyPhotoGallery"
 msgstr "TinyPhotoGallery"
@@ -8256,11 +9460,6 @@ msgstr "TinyPhotoGallery"
 #: internal/web/templates/manager/autoinstaller.html:499
 msgid "Single-file photo gallery, no database required."
 msgstr "Galerie photo à fichier unique, sans base de données requise."
-
-#: internal/web/templates/manager/autoinstaller.html:510
-#: internal/web/templates/manager/tinyphotogallery_install.html:9
-msgid "Install TinyPhotoGallery"
-msgstr "Installer TinyPhotoGallery"
 
 #: internal/web/templates/manager/autoinstaller.html:527
 msgid "TinyFileManager"
@@ -8274,11 +9473,6 @@ msgstr ""
 "Gestionnaire de fichiers web à fichier unique avec protection par connexion,"
 " sans base de données requise."
 
-#: internal/web/templates/manager/autoinstaller.html:542
-#: internal/web/templates/manager/tinyfilemanager_install.html:9
-msgid "Install TinyFileManager"
-msgstr "Installer TinyFileManager"
-
 #: internal/web/templates/manager/autoinstaller.html:549
 msgid "Education"
 msgstr "Éducation"
@@ -8291,11 +9485,6 @@ msgstr "Moodle"
 msgid "Moodle learning management system (LMS)."
 msgstr "Système de gestion de l'apprentissage (LMS) Moodle."
 
-#: internal/web/templates/manager/autoinstaller.html:580
-#: internal/web/templates/manager/moodle_install.html:9
-msgid "Install Moodle"
-msgstr "Installer Moodle"
-
 #: internal/web/templates/manager/autoinstaller.html:597
 msgid "Open Journal Systems (OJS)"
 msgstr "Open Journal Systems (OJS)"
@@ -8305,11 +9494,6 @@ msgid "Open source software for managing and publishing scholarly journals."
 msgstr ""
 "Logiciel open source pour la gestion et la publication de revues "
 "scientifiques."
-
-#: internal/web/templates/manager/autoinstaller.html:612
-#: internal/web/templates/manager/ojs_install.html:9
-msgid "Install OJS"
-msgstr "Installer OJS"
 
 #: internal/web/templates/manager/autoinstaller.html:619
 msgid "Developer Runtimes"
@@ -8383,30 +9567,6 @@ msgstr "Voir vos conteneurs en cours d'exécution"
 #: internal/web/templates/manager/autoinstaller.html:842
 msgid "Run Container"
 msgstr "Exécuter le conteneur"
-
-#: internal/web/templates/manager/dokuwiki_app.html:38
-#: internal/web/templates/manager/drupal_app.html:87
-#: internal/web/templates/manager/flarum_app.html:38
-#: internal/web/templates/manager/joomla_app.html:87
-#: internal/web/templates/manager/matomo_app.html:87
-#: internal/web/templates/manager/mediawiki_app.html:87
-#: internal/web/templates/manager/moodle_app.html:38
-#: internal/web/templates/manager/n8n_app.html:45
-#: internal/web/templates/manager/nextcloud_app.html:87
-#: internal/web/templates/manager/ojs_app.html:87
-#: internal/web/templates/manager/opencart_app.html:87
-#: internal/web/templates/manager/php_app.html:44
-#: internal/web/templates/manager/php_app.html:82
-#: internal/web/templates/manager/phpbb_app.html:38
-#: internal/web/templates/manager/prestashop_app.html:87
-#: internal/web/templates/manager/python_node_apps.html:45
-#: internal/web/templates/manager/sofawiki_app.html:38
-#: internal/web/templates/manager/tinyfilemanager_app.html:38
-#: internal/web/templates/manager/tinyphotogallery_app.html:38
-#: internal/web/templates/manager/websitebuilder.html:46
-#: internal/web/templates/manager/wp/single.html:154
-msgid "Overview"
-msgstr "Vue d'ensemble"
 
 #: internal/web/templates/manager/dokuwiki_app.html:56
 #: internal/web/templates/manager/drupal_app.html:123
@@ -8629,28 +9789,6 @@ msgstr "Taille du dossier :"
 #: internal/web/templates/manager/wp/single.html:380
 msgid "Open folder in Disk Usage Explorer"
 msgstr "Ouvrir le dossier dans l'explorateur d'utilisation du disque"
-
-#: internal/web/templates/manager/dokuwiki_app.html:235
-#: internal/web/templates/manager/drupal_app.html:302
-#: internal/web/templates/manager/flarum_app.html:243
-#: internal/web/templates/manager/joomla_app.html:301
-#: internal/web/templates/manager/matomo_app.html:293
-#: internal/web/templates/manager/mediawiki_app.html:293
-#: internal/web/templates/manager/moodle_app.html:253
-#: internal/web/templates/manager/n8n_app.html:306
-#: internal/web/templates/manager/nextcloud_app.html:302
-#: internal/web/templates/manager/ojs_app.html:292
-#: internal/web/templates/manager/opencart_app.html:302
-#: internal/web/templates/manager/phpbb_app.html:234
-#: internal/web/templates/manager/prestashop_app.html:302
-#: internal/web/templates/manager/python_node_apps.html:355
-#: internal/web/templates/manager/sofawiki_app.html:226
-#: internal/web/templates/manager/tinyfilemanager_app.html:208
-#: internal/web/templates/manager/tinyphotogallery_app.html:208
-#: internal/web/templates/manager/websitebuilder.html:127
-#: internal/web/templates/manager/wp/single.html:387
-msgid "Inodes Explorer"
-msgstr "Explorateur d'inodes"
 
 #: internal/web/templates/manager/dokuwiki_app.html:249
 #: internal/web/templates/manager/drupal_app.html:316
@@ -11106,12 +12244,6 @@ msgstr "Limite de mémoire :"
 msgid "Manage Containers"
 msgstr "Gérer les conteneurs"
 
-#: internal/web/templates/manager/n8n_app.html:165
-#: internal/web/templates/manager/python_node_apps.html:214
-#: internal/web/templates/partials/_footer.html:45
-msgid "Start"
-msgstr "Démarrer"
-
 #: internal/web/templates/manager/n8n_app.html:170
 #: internal/web/templates/manager/python_node_apps.html:219
 msgid "Starting application. Please wait."
@@ -11128,11 +12260,6 @@ msgstr "Application démarrée avec succès."
 #: internal/web/templates/manager/python_node_apps.html:236
 msgid "Error starting application."
 msgstr "Erreur lors du démarrage de l'application."
-
-#: internal/web/templates/manager/n8n_app.html:195
-#: internal/web/templates/manager/python_node_apps.html:244
-msgid "Stop"
-msgstr "Arrêter"
 
 #: internal/web/templates/manager/n8n_app.html:200
 #: internal/web/templates/manager/python_node_apps.html:249
@@ -11667,10 +12794,6 @@ msgstr "Échec de la requête."
 #: internal/web/templates/manager/php_app.html:234
 msgid "Failed to load logs."
 msgstr "Échec du chargement des journaux."
-
-#: internal/web/templates/manager/php_install.html:9
-msgid "Install PHP Application"
-msgstr "Installer une application PHP"
 
 #: internal/web/templates/manager/php_install.html:10
 #: internal/web/templates/manager/php_install.html:217
@@ -13938,13 +15061,6 @@ msgstr "WordPress mis à jour avec succès."
 msgid "Update failed."
 msgstr "Échec de la mise à jour."
 
-#: internal/web/templates/mongodb/assign.html:8
-#: internal/web/templates/mongodb/assign.html:55
-#: internal/web/templates/psql/assign.html:8
-#: internal/web/templates/psql/assign.html:46
-msgid "Assign User to Database"
-msgstr "Attribuer un utilisateur à la base de données"
-
 #: internal/web/templates/mongodb/assign.html:9
 msgid ""
 "Grant a MongoDB user a role scoped to a database, enabling access for "
@@ -14002,10 +15118,6 @@ msgstr "Sélectionner un rôle :"
 #: internal/web/templates/psql/wizard.html:114
 msgid "Back to Databases"
 msgstr "Retour aux bases de données"
-
-#: internal/web/templates/mongodb/databases.html:9
-msgid "MongoDB Databases"
-msgstr "Bases de données MongoDB"
 
 #: internal/web/templates/mongodb/databases.html:14
 #: internal/web/templates/mysql/databases.html:14
@@ -14066,12 +15178,6 @@ msgstr "Indisponible tant que le service n'est pas en cours d'exécution."
 #: internal/web/templates/psql/databases.html:134
 msgid "System Database"
 msgstr "Base de données système"
-
-#: internal/web/templates/mongodb/databases.html:79
-#: internal/web/templates/mysql/databases.html:318
-#: internal/web/templates/psql/databases.html:145
-msgid "Import"
-msgstr "Importer"
 
 #: internal/web/templates/mongodb/databases.html:103
 #: internal/web/templates/mysql/databases.html:344
@@ -14301,16 +15407,6 @@ msgstr "Sélectionner un nom d'utilisateur"
 msgid "Select a Database"
 msgstr "Sélectionner une base de données"
 
-#: internal/web/templates/mongodb/remove.html:55
-#: internal/web/templates/mysql/remove.html:51
-#: internal/web/templates/psql/remove.html:46
-msgid "Remove User from Database"
-msgstr "Supprimer l'utilisateur de la base de données"
-
-#: internal/web/templates/mongodb/users.html:9
-msgid "MongoDB Users"
-msgstr "Utilisateurs MongoDB"
-
 #: internal/web/templates/mongodb/users.html:10
 #: internal/web/templates/mysql/users.html:10
 #: internal/web/templates/psql/users.html:10
@@ -14434,10 +15530,6 @@ msgstr "Sélectionner les privilèges :"
 msgid "Make Changes"
 msgstr "Effectuer les modifications"
 
-#: internal/web/templates/mysql/configuration.html:14
-msgid "MySQL Configuration"
-msgstr "Configuration MySQL"
-
 #: internal/web/templates/mysql/configuration.html:15
 msgid ""
 "View and modify the MySQL service configuration. Any changes will restart "
@@ -14453,6 +15545,26 @@ msgstr "Pour plus d'informations"
 #: internal/web/templates/mysql/configuration.html:15
 msgid "read the documentation"
 msgstr "consultez la documentation"
+
+#: internal/web/templates/mysql/configuration.html:30
+#: internal/web/templates/psql/configuration.html:30
+msgid "Optimize Database"
+msgstr "Optimiser la base de données"
+
+#: internal/web/templates/mysql/configuration.html:30
+#: internal/web/templates/psql/configuration.html:30
+msgid ""
+"Want to improve your database's performance? Click the optimize icon next to"
+" a setting to see a custom recommendation."
+msgstr ""
+"Vous voulez améliorer les performances de votre base de données ? Cliquez "
+"sur l'icône d'optimisation à côté d'un paramètre pour voir une "
+"recommandation personnalisée."
+
+#: internal/web/templates/mysql/configuration.html:30
+#: internal/web/templates/psql/configuration.html:30
+msgid "Checking your database for possible optimizations..."
+msgstr "Recherche d'optimisations possibles pour votre base de données..."
 
 #: internal/web/templates/mysql/configuration.html:37
 #: internal/web/templates/psql/configuration.html:37
@@ -14497,11 +15609,6 @@ msgstr "Optimiser"
 #: internal/web/templates/mysql/databases.html:591
 msgid "Repair"
 msgstr "Réparer"
-
-#: internal/web/templates/mysql/databases.html:431
-#: internal/web/templates/mysql/phpmyadmin_unavailable.html:6
-msgid "phpMyAdmin"
-msgstr "phpMyAdmin"
 
 #: internal/web/templates/mysql/databases.html:582
 msgid "Loading tables..."
@@ -14832,10 +15939,6 @@ msgstr ""
 msgid "Credentials"
 msgstr "Identifiants"
 
-#: internal/web/templates/mysql/wizard.html:74
-msgid "Server"
-msgstr "Serveur"
-
 #: internal/web/templates/mysql/wizard.html:128
 msgid "Configuration Code"
 msgstr "Code de configuration"
@@ -14967,10 +16070,6 @@ msgstr "Se déconnecter"
 #: internal/web/templates/partials/_header.html:12
 msgid "Toggle Sidebar"
 msgstr "Afficher/masquer la barre latérale"
-
-#: internal/web/templates/partials/_header.html:81
-msgid "Services"
-msgstr "Services"
 
 #: internal/web/templates/partials/_header.html:86
 msgid "Caching"
@@ -15287,10 +16386,6 @@ msgstr ""
 msgid "Theme"
 msgstr "Thème"
 
-#: internal/web/templates/php/default.html:7
-msgid "Default PHP version"
-msgstr "Version PHP par défaut"
-
 #: internal/web/templates/php/default.html:17
 msgid ""
 "OpenLiteSpeed uses one PHP version for all domains. Changing it restarts the"
@@ -15402,10 +16497,6 @@ msgstr "Échec du démarrage de l'installation."
 msgid "An extension install is in progress for this PHP version..."
 msgstr "Une installation d'extension est en cours pour cette version PHP..."
 
-#: internal/web/templates/php/extensions.html:229
-msgid "PHP Extensions"
-msgstr "Extensions PHP"
-
 #: internal/web/templates/php/extensions.html:230
 msgid "Enable, disable, or install PHP extensions per PHP version."
 msgstr "Activez, désactivez ou installez des extensions PHP par version PHP."
@@ -15434,10 +16525,6 @@ msgstr "Configuration PHP"
 msgid "No PHP information available."
 msgstr "Aucune information PHP disponible."
 
-#: internal/web/templates/php/ini_editor.html:57
-msgid "PHP.INI Editor"
-msgstr "Éditeur PHP.INI"
-
 #: internal/web/templates/php/ini_editor.html:58
 msgid "Select a PHP version to edit its php.ini file directly."
 msgstr ""
@@ -15453,6 +16540,23 @@ msgid ""
 msgstr ""
 "Modifiez les options de cette version PHP. Toute modification redémarrera le"
 " service."
+
+#: internal/web/templates/php/options.html:31
+msgid "Optimize PHP"
+msgstr "Optimiser PHP"
+
+#: internal/web/templates/php/options.html:31
+msgid ""
+"Want to improve how your sites run on this PHP version? Click the optimize "
+"icon next to an option to see a custom recommendation."
+msgstr ""
+"Vous voulez améliorer le fonctionnement de vos sites avec cette version de "
+"PHP ? Cliquez sur l'icône d'optimisation à côté d'une option pour voir une "
+"recommandation personnalisée."
+
+#: internal/web/templates/php/options.html:31
+msgid "Checking this PHP version for possible optimizations..."
+msgstr "Recherche d'optimisations possibles pour cette version de PHP..."
 
 #: internal/web/templates/php/options.html:39
 msgid "Option"
@@ -15525,10 +16629,6 @@ msgstr ""
 "gérer les permissions et permettre l'accès à l'exécution de requêtes, la "
 "modification de tables ou la gestion des données de la base de données "
 "spécifiée."
-
-#: internal/web/templates/psql/configuration.html:13
-msgid "PostgreSQL Configuration"
-msgstr "Configuration PostgreSQL"
 
 #: internal/web/templates/psql/configuration.html:14
 msgid ""
@@ -15663,10 +16763,6 @@ msgstr ""
 "révoquer ses permissions et empêcher l'accès à l'exécution de requêtes, la "
 "modification de tables ou la gestion des données de la base de données "
 "spécifiée."
-
-#: internal/web/templates/psql/users.html:9
-msgid "PostgreSQL Users"
-msgstr "Utilisateurs PostgreSQL"
 
 #: internal/web/templates/psql/wizard.html:9
 msgid ""
@@ -16040,10 +17136,6 @@ msgstr "La clé de licence OpenPanel Enterprise n'est pas valide !"
 msgid "Verify License"
 msgstr "Vérifier la licence"
 
-#: internal/web/templates/system/process_manager.html:12
-msgid "Process Manager"
-msgstr "Gestionnaire de processus"
-
 #: internal/web/templates/system/process_manager.html:13
 msgid "View and manage currently running processes on the server."
 msgstr "Consultez et gérez les processus en cours d'exécution sur le serveur."
@@ -16167,10 +17259,6 @@ msgstr "Tuage du PID :"
 msgid "failed"
 msgstr "échoué"
 
-#: internal/web/templates/system/server_info.html:8
-msgid "Server Information"
-msgstr "Informations sur le serveur"
-
 #: internal/web/templates/system/server_info.html:9
 msgid "View current server specification and system usage."
 msgstr ""
@@ -16289,10 +17377,6 @@ msgid "Enabled Features"
 msgstr "Fonctionnalités activées"
 
 #: internal/web/templates/system/services.html:11
-msgid "Choose Service"
-msgstr "Choisir un service"
-
-#: internal/web/templates/system/services.html:11
 msgid "Manage Service"
 msgstr "Gérer le service"
 
@@ -16308,10 +17392,6 @@ msgstr ""
 #: internal/web/templates/system/services.html:74
 msgid "Name for accessing the service from other containers."
 msgstr "Nom permettant d'accéder au service depuis d'autres conteneurs."
-
-#: internal/web/templates/system/waf.html:19
-msgid "Web Firewall"
-msgstr "Pare-feu web"
 
 #: internal/web/templates/system/waf.html:20
 msgid ""
@@ -16369,22 +17449,9 @@ msgstr "Saisissez les étiquettes, séparées par des espaces"
 msgid "WAF Logs for"
 msgstr "Journaux WAF pour"
 
-#: internal/web/templates/system/waf_logs.html:267
-msgid "WAF Logs"
-msgstr "Journaux WAF"
-
 #: internal/web/templates/system/waf_logs.html:268
 msgid "View Coraza WAF logs for domains."
 msgstr "Consultez les journaux WAF Coraza pour les domaines."
-
-#: internal/web/templates/user/_login.html:102
-#: internal/web/templates/user/locale.html:10
-msgid "Change Language"
-msgstr "Changer de langue"
-
-#: internal/web/templates/user/account.html:10
-msgid "Email & Password"
-msgstr "E-mail et mot de passe"
 
 #: internal/web/templates/user/account.html:11
 msgid ""
@@ -16402,10 +17469,6 @@ msgid ""
 msgstr ""
 "Le nom d'utilisateur doit contenir entre 3 et 20 caractères, et ne contenir "
 "que des lettres et des chiffres (pas d'espaces, de tirets ou d'underscores)."
-
-#: internal/web/templates/user/active_sessions.html:10
-msgid "Active Sessions"
-msgstr "Sessions actives"
 
 #: internal/web/templates/user/active_sessions.html:11
 msgid "View all currently active sessions for your account."
@@ -16430,10 +17493,6 @@ msgstr "Destructive"
 #: internal/web/templates/user/activity.html:9
 msgid "Changed"
 msgstr "Modifiée"
-
-#: internal/web/templates/user/activity.html:27
-msgid "Activity Log"
-msgstr "Journal d'activité"
 
 #: internal/web/templates/user/activity.html:31
 msgid "Search results for:"
@@ -16658,10 +17717,6 @@ msgstr ""
 "Les clés d'accès nécessitent que ce panneau soit accessible via HTTPS avec "
 "un nom de domaine."
 
-#: internal/web/templates/user/loginlog.html:10
-msgid "Login History"
-msgstr "Historique de connexion"
-
 #: internal/web/templates/user/loginlog.html:11
 msgid "Overview of successful logins on your account."
 msgstr "Aperçu des connexions réussies à votre compte."
@@ -16821,10 +17876,6 @@ msgstr "Claude Code CLI"
 msgid "Claude Desktop (claude_desktop_config.json)"
 msgstr "Claude Desktop (claude_desktop_config.json)"
 
-#: internal/web/templates/user/notifications.html:40
-msgid "Email Notifications"
-msgstr "Notifications par e-mail"
-
 #: internal/web/templates/user/notifications.html:42
 msgid ""
 "Security alerts help you spot unwanted changes early, usage alerts warn you "
@@ -16849,10 +17900,6 @@ msgstr "Enregistrer les préférences"
 #: internal/web/templates/user/notifications.html:69
 msgid "Email me"
 msgstr "M'envoyer un e-mail"
-
-#: internal/web/templates/user/passkeys.html:10
-msgid "Passkeys"
-msgstr "Clés d'accès"
 
 #: internal/web/templates/user/passkeys.html:11
 msgid ""
@@ -16923,10 +17970,6 @@ msgstr "Envoyer le lien de réinitialisation"
 #: internal/web/templates/user/reset_password/set_new_password.html:7
 msgid "Reset Your Password"
 msgstr "Réinitialisez votre mot de passe"
-
-#: internal/web/templates/user/stats.html:16
-msgid "Resource Usage"
-msgstr "Utilisation des ressources"
 
 #: internal/web/templates/user/stats.html:18
 msgid "View current resource usage for all websites and services."
