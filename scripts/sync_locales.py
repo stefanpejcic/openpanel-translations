@@ -44,14 +44,19 @@ TMPL_GET = re.compile(r'\.T\.Get\s+"((?:[^"\\]|\\.)*)"')
 TMPL_GETN = re.compile(r'\.T\.GetN\s+"((?:[^"\\]|\\.)*)"\s+"((?:[^"\\]|\\.)*)"')
 GO_GET = re.compile(r'(?:^|[^\w.])(?:t|T|layout\.T|[A-Za-z_][A-Za-z0-9_]*\.T)\.Get\(\s*"((?:[^"\\]|\\.)*)"')
 GO_GETN = re.compile(r'(?:^|[^\w.])(?:t|T|layout\.T|[A-Za-z_][A-Za-z0-9_]*\.T)\.GetN\(\s*"((?:[^"\\]|\\.)*)"\s*,\s*"((?:[^"\\]|\\.)*)"')
-FIELD_RE = re.compile(r'\b(?:Label|Title|PageTitle|TechDetails|RequirementsLabel|RequirementsTooltip):\s*"((?:[^"\\]|\\.)*)"')
+FIELD_RE = re.compile(r'\b(?:Label|Title|PageTitle|TechDetails|Description|RequirementsLabel|RequirementsTooltip):\s*"((?:[^"\\]|\\.)*)"')
 
 # Positional-literal struct definitions that indirectly feed .T.Get in a
 # template. These are hand-picked because Go struct literals with
 # unlabeled positional fields can't be found by a generic pattern - update
 # this list if those files' shapes change.
 SECTIONS_GO = "internal/modules/dashboard/sections.go"
-SECTIONS_ITEM_RE = re.compile(r'\{"[^"]*",\s*"[^"]*",\s*"[^"]*",\s*"((?:[^"\\]|\\.)*)",\s*"[^"]*"\}')
+SECTIONS_ITEM_RE = re.compile(r'\{"[^"]*",\s*"[^"]*",\s*"[^"]*",\s*"((?:[^"\\]|\\.)*)",\s*"[^"]*"(?:,\s*\w+)*\}')
+
+# sidebar.go nav labels: g.add(links, "key", "href", "Label", ...) and {label: "..."} menu entries
+SIDEBAR_GO = "internal/web/sidebar.go"
+SIDEBAR_ADD_RE = re.compile(r'\.add\(\w+,\s*"[^"]*",\s*"[^"]*",\s*"((?:[^"\\]|\\.)*)"')
+SIDEBAR_LABEL_RE = re.compile(r'\blabel:\s*"((?:[^"\\]|\\.)*)"')
 
 WEBSITES_RENDER_DISPATCH_GO = "internal/modules/websites/render_dispatch.go"
 SECURITY_TOGGLE_RE = re.compile(r'\{"([^"]*)",\s*"((?:[^"\\]|\\.)*)",\s*\n\s*"((?:[^"\\]|\\.)*)"\}')
@@ -106,6 +111,15 @@ def extract(source_root):
             for i, line in enumerate(f, 1):
                 for m in SECTIONS_ITEM_RE.finditer(line):
                     add(results, m.group(1), None, SECTIONS_GO, i)
+
+    sidebar_path = os.path.join(source_root, SIDEBAR_GO)
+    if os.path.isfile(sidebar_path):
+        with open(sidebar_path, encoding="utf-8") as f:
+            for i, line in enumerate(f, 1):
+                for m in SIDEBAR_ADD_RE.finditer(line):
+                    add(results, m.group(1), None, SIDEBAR_GO, i)
+                for m in SIDEBAR_LABEL_RE.finditer(line):
+                    add(results, m.group(1), None, SIDEBAR_GO, i)
 
     # Positional SecurityToggle literals: {"id", "Label", "TechDetails"}
     toggles_path = os.path.join(source_root, WEBSITES_RENDER_DISPATCH_GO)

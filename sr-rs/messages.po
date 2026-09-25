@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.10\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-09-25 22:15+0200\n"
+"POT-Creation-Date: 2026-09-25 22:23+0200\n"
 "PO-Revision-Date: 2026-06-24 19:00+0200\n"
 "Last-Translator: Stefan Pejčić <stefan@pejcic.rs>\n"
 "Language-Team: Serbian (Latin) <LL@li.org>\n"
@@ -120,6 +120,14 @@ msgstr "Automatska prijava nije uspela: Korisnik ne postoji."
 msgid "New login"
 msgstr "Nova prijava"
 
+#: internal/modules/account/notifications.go:33
+msgid ""
+"Get an email every time someone logs in to your account, with the IP "
+"address, country and browser."
+msgstr ""
+"Dobijte e-mail svaki put kada se neko prijavi na vaš nalog, sa IP adresom, "
+"zemljom i pregledačem."
+
 #: internal/modules/account/notifications.go:34
 msgid "Also for IP addresses I logged in from before"
 msgstr "Takođe i za IP adrese sa kojih sam se ranije prijavljivao"
@@ -131,6 +139,10 @@ msgstr "Pošalji mi e-mail ako se upozorenja o prijavi isključe"
 #: internal/modules/account/notifications.go:36
 msgid "Password changed"
 msgstr "Lozinka promenjena"
+
+#: internal/modules/account/notifications.go:36
+msgid "Get an email when the password for your account is changed."
+msgstr "Dobijte e-mail kada se promeni lozinka vašeg naloga."
 
 #: internal/modules/account/notifications.go:37
 #: internal/modules/account/notifications.go:39
@@ -144,41 +156,109 @@ msgstr "Pošalji mi e-mail ako se ovo upozorenje isključi"
 msgid "Contact email changed"
 msgstr "Kontakt e-mail promenjen"
 
+#: internal/modules/account/notifications.go:38
+msgid ""
+"Get an email when the contact email address for your account is changed."
+msgstr "Dobijte e-mail kada se promeni kontakt e-mail adresa vašeg naloga."
+
 #: internal/modules/account/notifications.go:40
 msgid "Two-factor authentication changed"
 msgstr "Dvofaktorska autentifikacija promenjena"
+
+#: internal/modules/account/notifications.go:40
+msgid "Get an email when two-factor authentication is turned on or off."
+msgstr ""
+"Dobijte e-mail kada se dvofaktorska autentifikacija uključi ili isključi."
 
 #: internal/modules/account/notifications.go:42
 msgid "Passkey added or removed"
 msgstr "Passkey dodat ili uklonjen"
 
+#: internal/modules/account/notifications.go:42
+msgid ""
+"Get an email when a passkey is added to your account or removed from it."
+msgstr "Dobijte e-mail kada se passkey doda na vaš nalog ili ukloni sa njega."
+
 #: internal/modules/account/notifications.go:44
 msgid "API token created or revoked"
 msgstr "API token kreiran ili opozvan"
+
+#: internal/modules/account/notifications.go:44
+msgid ""
+"Get an email when an AI Assistant (MCP) token is created or revoked for your"
+" account."
+msgstr ""
+"Dobijte e-mail kada se token za AI asistenta (MCP) kreira ili opozove za vaš"
+" nalog."
 
 #: internal/modules/account/notifications.go:46
 msgid "SSL certificate problem"
 msgstr "Problem sa SSL sertifikatom"
 
+#: internal/modules/account/notifications.go:46
+msgid ""
+"Get an email when an SSL certificate fails to renew or is about to expire, "
+"before visitors see a security warning."
+msgstr ""
+"Dobijte e-mail kada SSL sertifikat ne uspe da se obnovi ili uskoro ističe, "
+"pre nego što posetioci vide bezbednosno upozorenje."
+
 #: internal/modules/account/notifications.go:47
 msgid "Malware found"
 msgstr "Pronađen malver"
+
+#: internal/modules/account/notifications.go:47
+msgid ""
+"Get an email when the scheduled malware scan finds infected files and moves "
+"them to quarantine."
+msgstr ""
+"Dobijte e-mail kada zakazano skeniranje pronađe zaražene fajlove i premesti "
+"ih u karantin."
 
 #: internal/modules/account/notifications.go:48
 msgid "Disk space running out"
 msgstr "Prostor na disku se troši"
 
+#: internal/modules/account/notifications.go:48
+msgid ""
+"Get an email when your account uses 85% of its disk space or 95% of its "
+"inodes."
+msgstr ""
+"Dobijte e-mail kada vaš nalog iskoristi 85% prostora na disku ili 95% "
+"inode-a."
+
 #: internal/modules/account/notifications.go:49
 msgid "Mailbox almost full"
 msgstr "Poštansko sanduče je skoro puno"
+
+#: internal/modules/account/notifications.go:49
+msgid "Get an email when one of your email accounts uses 90% of its quota."
+msgstr ""
+"Dobijte e-mail kada neki od vaših e-mail naloga iskoristi 90% svoje kvote."
 
 #: internal/modules/account/notifications.go:50
 msgid "Hourly email limit reached"
 msgstr "Dostignut satni limit za e-mail"
 
+#: internal/modules/account/notifications.go:50
+msgid ""
+"Get an email when your account reaches its limit of emails sent per hour and"
+" new emails are rejected."
+msgstr ""
+"Dobijte e-mail kada vaš nalog dostigne limit poslatih e-mailova po satu i "
+"novi e-mailovi budu odbijeni."
+
 #: internal/modules/account/notifications.go:51
 msgid "Service stopped"
 msgstr "Servis zaustavljen"
+
+#: internal/modules/account/notifications.go:51
+msgid ""
+"Get an email when a service like MySQL or PHP stopped or ran out of memory "
+"and had to be restarted."
+msgstr ""
+"Dobijte e-mail kada se servis poput MySQL-a ili PHP-a zaustavi ili ostane "
+"bez memorije i mora da se ponovo pokrene."
 
 #: internal/modules/account/notify.go:47
 #: internal/web/templates/mongodb/processlist.html:36
@@ -419,6 +499,13 @@ msgid "The home directory"
 msgstr "Home direktorijum"
 
 #: internal/modules/backupwizard/render.go:41
+#: internal/modules/dashboard/sections.go:93
+#: internal/modules/dashboard/sections.go:106
+#: internal/modules/dashboard/sections.go:115
+#: internal/modules/dashboard/sections.go:216
+#: internal/modules/dashboard/sections.go:228
+#: internal/modules/dashboard/sections.go:237 internal/web/sidebar.go:172
+#: internal/web/sidebar.go:186 internal/web/sidebar.go:197
 #: internal/web/sidebar_classic.go:88 internal/web/sidebar_classic.go:111
 #: internal/web/sidebar_classic.go:134
 #: internal/web/templates/dashboard/usage.html:78
@@ -429,7 +516,10 @@ msgstr "Baze podataka"
 
 #: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:53
-#: internal/modules/dashboard/sections.go:202 internal/web/sidebar.go:212
+#: internal/modules/dashboard/sections.go:54
+#: internal/modules/dashboard/sections.go:202
+#: internal/modules/dashboard/sections.go:203 internal/web/sidebar.go:206
+#: internal/web/sidebar.go:210 internal/web/sidebar.go:212
 #: internal/web/templates/cache/service.html:145
 #: internal/web/templates/dashboard/usage.html:55
 #: internal/web/templates/domains/domains.html:14
@@ -440,7 +530,7 @@ msgstr "Domeni"
 
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/sections.go:61
-#: internal/modules/dashboard/sections.go:244
+#: internal/modules/dashboard/sections.go:244 internal/web/sidebar.go:221
 #: internal/web/templates/dashboard/usage.html:32
 #: internal/web/templates/domains/domains.html:77
 #: internal/web/templates/domains/domains.html:120
@@ -472,24 +562,74 @@ msgid "Containers and images"
 msgstr "Kontejneri i image-i"
 
 #: internal/modules/cache/cache.go:23
+#: internal/modules/dashboard/sections.go:129
+#: internal/modules/dashboard/sections.go:250
 msgid "Redis"
 msgstr "Redis"
 
+#: internal/modules/cache/cache.go:24
+msgid ""
+"Redis (Remote Dictionary Server) is an in-memory, key/value store that is "
+"used primarily as an application cache or quick-response database."
+msgstr ""
+"Redis (Remote Dictionary Server) je key/value skladište u memoriji koje se "
+"prvenstveno koristi kao keš aplikacije ili baza podataka sa brzim odzivom."
+
 #: internal/modules/cache/cache.go:27
+#: internal/modules/dashboard/sections.go:131
+#: internal/modules/dashboard/sections.go:252
 msgid "Memcached"
 msgstr "Memcached"
 
+#: internal/modules/cache/cache.go:28
+msgid ""
+"A high-performance, distributed in-memory key-value caching system designed "
+"to accelerate dynamic web applications."
+msgstr ""
+"Distribuirani sistem za keširanje key-value podataka u memoriji visokih "
+"performansi, namenjen ubrzavanju dinamičkih web aplikacija."
+
 #: internal/modules/cache/cache.go:31
+#: internal/modules/dashboard/sections.go:255
 msgid "ElasticSearch"
 msgstr "ElasticSearch"
 
+#: internal/modules/cache/cache.go:32
+msgid ""
+"The leading distributed, RESTful, open source search and analytics engine "
+"designed for speed and reliability."
+msgstr ""
+"Vodeći distribuirani, RESTful mehanizam otvorenog koda za pretragu i "
+"analitiku, napravljen za brzinu i pouzdanost."
+
 #: internal/modules/cache/cache.go:35
+#: internal/modules/dashboard/sections.go:133
+#: internal/modules/dashboard/sections.go:254
 msgid "OpenSearch"
 msgstr "OpenSearch"
 
+#: internal/modules/cache/cache.go:36
+msgid ""
+"OpenSearch is an open-source, distributed search and analytics suite for "
+"large volumes of data."
+msgstr ""
+"OpenSearch je distribuirani paket otvorenog koda za pretragu i analitiku "
+"velikih količina podataka."
+
 #: internal/modules/cache/cache.go:39
+#: internal/modules/dashboard/sections.go:130
+#: internal/modules/dashboard/sections.go:251
 msgid "Valkey"
 msgstr "Valkey"
+
+#: internal/modules/cache/cache.go:40
+msgid ""
+"Valkey is an in-memory key/value store (a community-driven fork of Redis) "
+"used primarily as an application cache or fast, low-latency database."
+msgstr ""
+"Valkey je key/value skladište u memoriji (fork Redis-a koji razvija "
+"zajednica) koje se prvenstveno koristi kao keš aplikacije ili brza baza "
+"podataka sa malim kašnjenjem."
 
 #: internal/modules/cache/render.go:90
 msgid ""
@@ -519,7 +659,44 @@ msgstr "omogućena"
 msgid "2FA is <b>{status}</b> for your account."
 msgstr "2FA je <b>{status}</b> za vaš nalog."
 
-#: internal/modules/dashboard/sections.go:66
+#: internal/modules/dashboard/sections.go:55
+#: internal/modules/dashboard/sections.go:205 internal/web/sidebar.go:213
+#: internal/web/templates/domains/dns.html:740
+msgid "DNS Zone Editor"
+msgstr "Editor DNS zone"
+
+#: internal/modules/dashboard/sections.go:56
+#: internal/modules/dashboard/sections.go:206 internal/web/sidebar.go:214
+#: internal/web/templates/domains/dynamic_dns.html:10
+msgid "Dynamic DNS"
+msgstr "Dinamički DNS"
+
+#: internal/modules/dashboard/sections.go:57 internal/web/sidebar.go:215
+msgid "SSL Certificates"
+msgstr "SSL sertifikati"
+
+#: internal/modules/dashboard/sections.go:58
+#: internal/modules/dashboard/sections.go:204 internal/web/sidebar.go:216
+msgid "Redirects"
+msgstr "Preusmerenja"
+
+#: internal/modules/dashboard/sections.go:62 internal/web/sidebar.go:224
+#: internal/web/templates/partials/_header.html:141
+msgid "Sites"
+msgstr "Sajtovi"
+
+#: internal/modules/dashboard/sections.go:63 internal/web/sidebar.go:225
+#: internal/web/templates/manager/autoinstaller.html:32
+#: internal/web/templates/manager/wp/list.html:194
+msgid "WordPress"
+msgstr "WordPress"
+
+#: internal/modules/dashboard/sections.go:64 internal/web/sidebar.go:226
+#: internal/web/templates/manager/autoinstaller.html:8
+msgid "Install App"
+msgstr "Instaliraj aplikaciju"
+
+#: internal/modules/dashboard/sections.go:66 internal/web/sidebar.go:230
 #: internal/web/templates/emails/confirm_import.html:45
 #: internal/web/templates/manager/app_install.html:400
 #: internal/web/templates/manager/dokuwiki_install.html:135
@@ -540,8 +717,65 @@ msgstr "2FA je <b>{status}</b> za vaš nalog."
 msgid "Email"
 msgstr "Email"
 
+#: internal/modules/dashboard/sections.go:67
+#: internal/modules/dashboard/sections.go:258
+#: internal/web/sidebar_classic.go:193 internal/web/sidebar_classic.go:198
+msgid "Email Accounts"
+msgstr "E-mail nalozi"
+
+#: internal/modules/dashboard/sections.go:68
+#: internal/modules/dashboard/sections.go:259 internal/web/sidebar.go:234
+#: internal/web/templates/emails/aliases.html:10
+msgid "Aliases"
+msgstr "Aliasi"
+
+#: internal/modules/dashboard/sections.go:69 internal/web/sidebar.go:235
+msgid "Catch-all Address"
+msgstr "Catch-all adresa"
+
+#: internal/modules/dashboard/sections.go:70
+#: internal/modules/dashboard/sections.go:260 internal/web/sidebar.go:236
+msgid "Filters"
+msgstr "Filteri"
+
+#: internal/modules/dashboard/sections.go:71 internal/web/sidebar.go:237
+msgid "Deliverability"
+msgstr "Isporučivost"
+
+#: internal/modules/dashboard/sections.go:72
+#: internal/modules/dashboard/sections.go:96
+#: internal/modules/dashboard/sections.go:109
+#: internal/modules/dashboard/sections.go:118 internal/web/sidebar.go:174
+#: internal/web/sidebar.go:188 internal/web/sidebar.go:199
+#: internal/web/sidebar.go:238
+#: internal/web/templates/mongodb/databases.html:79
+#: internal/web/templates/mysql/databases.html:318
+#: internal/web/templates/psql/databases.html:145
+msgid "Import"
+msgstr "Uvoz"
+
+#: internal/modules/dashboard/sections.go:73
+#: internal/web/templates/emails/accounts.html:27
+#: internal/web/templates/mongodb/databases.html:85
+#: internal/web/templates/mongodb/databases.html:91
+#: internal/web/templates/mongodb/databases.html:149
+#: internal/web/templates/mysql/databases.html:326
+#: internal/web/templates/mysql/databases.html:332
+#: internal/web/templates/mysql/databases.html:390
+#: internal/web/templates/psql/databases.html:151
+#: internal/web/templates/psql/databases.html:157
+#: internal/web/templates/psql/databases.html:215
+msgid "Export"
+msgstr "Izvezi"
+
+#: internal/modules/dashboard/sections.go:74
+#: internal/modules/dashboard/sections.go:265 internal/web/sidebar.go:240
+#: internal/web/templates/emails/accounts.html:74
+msgid "Webmail"
+msgstr "Webmail"
+
 #: internal/modules/dashboard/sections.go:76
-#: internal/modules/dashboard/sections.go:188
+#: internal/modules/dashboard/sections.go:188 internal/web/sidebar.go:244
 #: internal/web/templates/domains/ssl.html:226
 #: internal/web/templates/files/filemanager.html:147
 #: internal/web/templates/files/filemanager.html:405
@@ -571,7 +805,76 @@ msgstr "Email"
 msgid "Files"
 msgstr "Fajlovi"
 
+#: internal/modules/dashboard/sections.go:77
+#: internal/modules/dashboard/sections.go:189 internal/web/sidebar.go:247
+#: internal/web/sidebar_classic.go:61 internal/web/sidebar_classic.go:67
+#: internal/web/templates/files/disk_usage.html:90
+#: internal/web/templates/files/filemanager.html:59
+#: internal/web/templates/files/inodes.html:88
+msgid "File Manager"
+msgstr "Menadžer fajlova"
+
+#: internal/modules/dashboard/sections.go:78 internal/web/sidebar.go:248
+#: internal/web/templates/emails/import.html:40
+#: internal/web/templates/files/filemanager.html:105
+#: internal/web/templates/files/upload_file.html:106
+msgid "Upload"
+msgstr "Otpremi"
+
+#: internal/modules/dashboard/sections.go:79 internal/web/sidebar.go:249
+#: internal/web/sidebar_classic.go:63 internal/web/sidebar_classic.go:69
+#: internal/web/templates/files/upload_file.html:11
+msgid "Download from URL"
+msgstr "Preuzmi sa URL adrese"
+
+#: internal/modules/dashboard/sections.go:80
+#: internal/modules/dashboard/sections.go:200 internal/web/sidebar.go:250
+#: internal/web/templates/files/trash.html:32
+msgid "Trash"
+msgstr "Otpad"
+
+#: internal/modules/dashboard/sections.go:81
+#: internal/modules/dashboard/sections.go:192 internal/web/sidebar.go:251
+#: internal/web/templates/dashboard/usage.html:124
+#: internal/web/templates/files/ftp.html:9
+#: internal/web/templates/manager/dokuwiki_app.html:256
+#: internal/web/templates/manager/drupal_app.html:323
+#: internal/web/templates/manager/flarum_app.html:264
+#: internal/web/templates/manager/joomla_app.html:322
+#: internal/web/templates/manager/matomo_app.html:314
+#: internal/web/templates/manager/mediawiki_app.html:314
+#: internal/web/templates/manager/moodle_app.html:274
+#: internal/web/templates/manager/n8n_app.html:316
+#: internal/web/templates/manager/nextcloud_app.html:323
+#: internal/web/templates/manager/ojs_app.html:313
+#: internal/web/templates/manager/opencart_app.html:323
+#: internal/web/templates/manager/phpbb_app.html:255
+#: internal/web/templates/manager/prestashop_app.html:323
+#: internal/web/templates/manager/python_node_apps.html:365
+#: internal/web/templates/manager/sofawiki_app.html:247
+#: internal/web/templates/manager/tinyfilemanager_app.html:229
+#: internal/web/templates/manager/tinyphotogallery_app.html:229
+#: internal/web/templates/manager/websitebuilder.html:137
+#: internal/web/templates/manager/wp/single.html:408
+msgid "FTP Accounts"
+msgstr "FTP nalozi"
+
+#: internal/modules/dashboard/sections.go:82
+#: internal/modules/dashboard/sections.go:193
+#: internal/web/templates/files/ftp_connections.html:9
+msgid "FTP Connections"
+msgstr "FTP konekcije"
+
+#: internal/modules/dashboard/sections.go:83
+#: internal/modules/dashboard/sections.go:199 internal/web/sidebar.go:252
+#: internal/web/templates/files/fix_permissions.html:11
+#: internal/web/templates/files/fix_permissions.html:45
+msgid "Fix Permissions"
+msgstr "Ispravi dozvole"
+
 #: internal/modules/dashboard/sections.go:85
+#: internal/modules/dashboard/sections.go:86
+#: internal/modules/dashboard/sections.go:195 internal/web/sidebar.go:256
 #: internal/web/templates/dashboard/onboarding.html:592
 #: internal/web/templates/files/backups.html:10
 #: internal/web/templates/manager/dokuwiki_app.html:65
@@ -596,65 +899,352 @@ msgstr "Fajlovi"
 msgid "Backups"
 msgstr "Bekapi"
 
+#: internal/modules/dashboard/sections.go:87 internal/web/sidebar.go:260
+#: internal/web/templates/files/backup_restore.html:241
+#: internal/web/templates/files/clamav/quarantine.html:82
+#: internal/web/templates/files/clamav/quarantine.html:113
+#: internal/web/templates/files/trash.html:51
+#: internal/web/templates/files/trash_partials.html:222
+msgid "Restore"
+msgstr "Vrati"
+
+#: internal/modules/dashboard/sections.go:88
+#: internal/modules/dashboard/sections.go:101
+#: internal/modules/dashboard/sections.go:112 internal/web/sidebar.go:178
+#: internal/web/sidebar.go:191 internal/web/sidebar.go:262
+#: internal/web/templates/files/ftp.html:63
+msgid "Configuration"
+msgstr "Podešavanje"
+
+#: internal/modules/dashboard/sections.go:89 internal/web/sidebar.go:263
+msgid "Destination"
+msgstr "Odredište"
+
+#: internal/modules/dashboard/sections.go:90
+#: internal/modules/dashboard/sections.go:196 internal/web/sidebar.go:265
+#: internal/web/templates/files/backup_wizard.html:10
+msgid "Backup Wizard"
+msgstr "Čarobnjak za rezervne kopije"
+
 #: internal/modules/dashboard/sections.go:92
 #: internal/modules/dashboard/sections.go:215
-#: internal/modules/docker/render.go:392
+#: internal/modules/docker/render.go:392 internal/web/sidebar.go:269
 #: internal/web/templates/dashboard/onboarding.html:497
 #: internal/web/templates/partials/_header.html:101
 msgid "MySQL"
 msgstr "MySQL"
 
+#: internal/modules/dashboard/sections.go:94
+#: internal/modules/dashboard/sections.go:107
+#: internal/modules/dashboard/sections.go:116
+#: internal/modules/dashboard/sections.go:217
+#: internal/modules/dashboard/sections.go:229
+#: internal/modules/dashboard/sections.go:238 internal/web/sidebar.go:173
+#: internal/web/sidebar.go:187 internal/web/sidebar.go:198
+#: internal/web/sidebar_classic.go:89 internal/web/sidebar_classic.go:112
+#: internal/web/sidebar_classic.go:135
+#: internal/web/templates/mysql/users.html:9
+msgid "Users"
+msgstr "Korisnici"
+
+#: internal/modules/dashboard/sections.go:95
+#: internal/modules/dashboard/sections.go:108
+#: internal/modules/dashboard/sections.go:117
+#: internal/modules/dashboard/sections.go:218
+#: internal/modules/dashboard/sections.go:230
+#: internal/modules/dashboard/sections.go:239
+#: internal/web/sidebar_classic.go:93 internal/web/sidebar_classic.go:115
+#: internal/web/sidebar_classic.go:138
+#: internal/web/templates/mongodb/databases.html:38
+#: internal/web/templates/mongodb/databases.html:41
+#: internal/web/templates/mongodb/wizard.html:8
+#: internal/web/templates/mysql/databases.html:196
+#: internal/web/templates/mysql/databases.html:199
+#: internal/web/templates/mysql/wizard.html:8
+#: internal/web/templates/psql/databases.html:102
+#: internal/web/templates/psql/databases.html:105
+#: internal/web/templates/psql/wizard.html:8
+msgid "Database Wizard"
+msgstr "Čarobnjak za baze podataka"
+
+#: internal/modules/dashboard/sections.go:97 internal/web/sidebar.go:175
+#: internal/web/templates/mysql/databases.html:431
+#: internal/web/templates/mysql/phpmyadmin_unavailable.html:6
+msgid "phpMyAdmin"
+msgstr "phpMyAdmin"
+
+#: internal/modules/dashboard/sections.go:98
+#: internal/modules/dashboard/sections.go:221
+msgid "phpMyAdmin Login Form"
+msgstr "phpMyAdmin forma za prijavu"
+
+#: internal/modules/dashboard/sections.go:99
+#: internal/modules/dashboard/sections.go:110
+#: internal/modules/dashboard/sections.go:223
+#: internal/modules/dashboard/sections.go:233 internal/web/sidebar.go:176
+#: internal/web/sidebar.go:189 internal/web/sidebar_classic.go:100
+#: internal/web/sidebar_classic.go:123
+#: internal/web/templates/mysql/remote_mysql.html:10
+msgid "Remote Access"
+msgstr "Udaljeni pristup"
+
+#: internal/modules/dashboard/sections.go:100
+#: internal/modules/dashboard/sections.go:111
+#: internal/modules/dashboard/sections.go:119 internal/web/sidebar.go:177
+#: internal/web/sidebar.go:190 internal/web/sidebar.go:200
+msgid "Running Queries"
+msgstr "Aktivni upiti"
+
+#: internal/modules/dashboard/sections.go:102 internal/web/sidebar.go:179
+msgid "Root Password"
+msgstr "Root lozinka"
+
+#: internal/modules/dashboard/sections.go:103 internal/web/sidebar.go:180
+msgid "Server Type"
+msgstr "Tip servera"
+
 #: internal/modules/dashboard/sections.go:105
-#: internal/modules/dashboard/sections.go:227
+#: internal/modules/dashboard/sections.go:227 internal/web/sidebar.go:272
 #: internal/web/templates/partials/_header.html:106
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
 #: internal/modules/dashboard/sections.go:114
-#: internal/modules/dashboard/sections.go:236
+#: internal/modules/dashboard/sections.go:236 internal/web/sidebar.go:275
 #: internal/web/templates/partials/_header.html:111
 msgid "MongoDB"
 msgstr "MongoDB"
 
 #: internal/modules/dashboard/sections.go:121
-#: internal/modules/dashboard/sections.go:267
+#: internal/modules/dashboard/sections.go:267 internal/web/sidebar.go:278
 #: internal/web/templates/dashboard/onboarding.html:589
 #: internal/web/templates/manager/autoinstaller.html:795
 #: internal/web/templates/partials/_header.html:116
 msgid "PHP"
 msgstr "PHP"
 
-#: internal/modules/dashboard/sections.go:128
+#: internal/modules/dashboard/sections.go:122 internal/web/sidebar.go:281
+msgid "Version per Domain"
+msgstr "Verzija po domenu"
+
+#: internal/modules/dashboard/sections.go:123
+#: internal/modules/dashboard/sections.go:269 internal/web/sidebar.go:282
+msgid "Default Version"
+msgstr "Podrazumevana verzija"
+
+#: internal/modules/dashboard/sections.go:124 internal/web/sidebar.go:283
+#: internal/web/templates/emails/accounts.html:39
+#: internal/web/templates/emails/aliases.html:40
+#: internal/web/templates/emails/deliverability.html:35
+#: internal/web/templates/manager/wp/single.html:164
+msgid "Options"
+msgstr "Opcije"
+
+#: internal/modules/dashboard/sections.go:125 internal/web/sidebar.go:284
+msgid "Extensions"
+msgstr "Ekstenzije"
+
+#: internal/modules/dashboard/sections.go:126 internal/web/sidebar.go:285
+msgid "php.ini Editor"
+msgstr "php.ini editor"
+
+#: internal/modules/dashboard/sections.go:128 internal/web/sidebar.go:296
 msgid "Cache & Search"
 msgstr "Keš i pretraga"
 
-#: internal/modules/dashboard/sections.go:136
+#: internal/modules/dashboard/sections.go:132
+#: internal/modules/dashboard/sections.go:253
+#: internal/web/templates/dashboard/onboarding.html:591
+msgid "Varnish"
+msgstr "Varnish"
+
+#: internal/modules/dashboard/sections.go:134
+msgid "Elasticsearch"
+msgstr "Elasticsearch"
+
+#: internal/modules/dashboard/sections.go:136 internal/web/sidebar.go:305
 msgid "Web Server Config"
 msgstr "Konfiguracija web servera"
 
+#: internal/modules/dashboard/sections.go:137 internal/web/sidebar.go:308
+msgid "Server Settings"
+msgstr "Podešavanja servera"
+
+#: internal/modules/dashboard/sections.go:138 internal/web/sidebar.go:309
+msgid "Domain VHosts"
+msgstr "VHost-ovi domena"
+
+#: internal/modules/dashboard/sections.go:139 internal/web/sidebar.go:310
+msgid "Web Server Type"
+msgstr "Tip web servera"
+
 #: internal/modules/dashboard/sections.go:141
+#: internal/modules/dashboard/sections.go:142
 #: internal/modules/dashboard/sections.go:274
+#: internal/modules/dashboard/sections.go:275 internal/web/sidebar.go:314
+#: internal/web/sidebar.go:317
 #: internal/web/templates/docker/containers.html:13
 #: internal/web/templates/docker/containers.html:268
 #: internal/web/templates/partials/_header.html:121
 msgid "Containers"
 msgstr "Kontejneri"
 
+#: internal/modules/dashboard/sections.go:143
+#: internal/modules/dashboard/sections.go:276 internal/web/sidebar.go:318
+msgid "Terminal"
+msgstr "Terminal"
+
+#: internal/modules/dashboard/sections.go:144
+#: internal/modules/dashboard/sections.go:277 internal/web/sidebar.go:293
+#: internal/web/sidebar.go:319 internal/web/templates/cache/service.html:267
+#: internal/web/templates/docker/logs.html:11
+#: internal/web/templates/docker/logs.html:87
+#: internal/web/templates/manager/drupal_app.html:96
+#: internal/web/templates/manager/flarum_app.html:47
+#: internal/web/templates/manager/joomla_app.html:96
+#: internal/web/templates/manager/matomo_app.html:96
+#: internal/web/templates/manager/mediawiki_app.html:96
+#: internal/web/templates/manager/moodle_app.html:47
+#: internal/web/templates/manager/n8n_app.html:63
+#: internal/web/templates/manager/nextcloud_app.html:96
+#: internal/web/templates/manager/ojs_app.html:96
+#: internal/web/templates/manager/opencart_app.html:96
+#: internal/web/templates/manager/php_app.html:62
+#: internal/web/templates/manager/prestashop_app.html:96
+#: internal/web/templates/manager/python_node_apps.html:90
+#: internal/web/templates/system/cronjobs.html:241
+#: internal/web/templates/system/services.html:160
+msgid "Logs"
+msgstr "Logovi"
+
+#: internal/modules/dashboard/sections.go:145 internal/web/sidebar.go:320
+msgid "Software Versions"
+msgstr "Verzije softvera"
+
+#: internal/modules/dashboard/sections.go:146
+#: internal/modules/dashboard/sections.go:284 internal/web/sidebar.go:289
+#: internal/web/sidebar.go:291
+#: internal/web/templates/dashboard/onboarding.html:206
+#: internal/web/templates/files/backup_settings.html:89
+#: internal/web/templates/system/cronjobs.html:24
+msgid "Cron Jobs"
+msgstr "Cron zadaci"
+
+#: internal/modules/dashboard/sections.go:147
+#: internal/modules/dashboard/sections.go:289
+msgid "Change TimeZone"
+msgstr "Promeni vremensku zonu"
+
 #: internal/modules/dashboard/sections.go:149
-#: internal/modules/dashboard/sections.go:295
+#: internal/modules/dashboard/sections.go:295 internal/web/sidebar.go:324
 #: internal/web/templates/partials/_header.html:131
 msgid "Account"
 msgstr "Nalog"
 
-#: internal/modules/dashboard/sections.go:158
+#: internal/modules/dashboard/sections.go:150 internal/web/sidebar.go:327
+msgid "Login Details"
+msgstr "Podaci za prijavu"
+
+#: internal/modules/dashboard/sections.go:151 internal/web/sidebar.go:328
+msgid "Language"
+msgstr "Jezik"
+
+#: internal/modules/dashboard/sections.go:152 internal/web/sidebar.go:329
+msgid "Notifications"
+msgstr "Obaveštenja"
+
+#: internal/modules/dashboard/sections.go:153 internal/web/sidebar.go:330
+#: internal/web/templates/base.html:410
+#: internal/web/templates/user/favorites.html:10
+msgid "Favorites"
+msgstr "Omiljeno"
+
+#: internal/modules/dashboard/sections.go:154 internal/web/sidebar.go:331
+msgid "API"
+msgstr "API"
+
+#: internal/modules/dashboard/sections.go:155 internal/web/sidebar.go:332
+msgid "AI Assistant (MCP)"
+msgstr "AI asistent (MCP)"
+
+#: internal/modules/dashboard/sections.go:156
+#: internal/modules/dashboard/sections.go:304
+msgid "Log out"
+msgstr "Odjavi se"
+
+#: internal/modules/dashboard/sections.go:158 internal/web/sidebar.go:336
 msgid "Statistics"
 msgstr "Statistika"
 
-#: internal/modules/dashboard/sections.go:167
+#: internal/modules/dashboard/sections.go:159
+#: internal/modules/dashboard/sections.go:286 internal/web/sidebar.go:339
+#: internal/web/templates/user/stats.html:16
+msgid "Resource Usage"
+msgstr "Iskorišćenost resursa"
+
+#: internal/modules/dashboard/sections.go:160
+#: internal/modules/dashboard/sections.go:287
+msgid "Resource Usage History"
+msgstr "Istorija korišćenja resursa"
+
+#: internal/modules/dashboard/sections.go:161
+#: internal/modules/dashboard/sections.go:194 internal/web/sidebar.go:340
+#: internal/web/templates/files/disk_usage.html:15
+#: internal/web/templates/manager/dokuwiki_app.html:214
+#: internal/web/templates/manager/drupal_app.html:281
+#: internal/web/templates/manager/flarum_app.html:222
+#: internal/web/templates/manager/joomla_app.html:280
+#: internal/web/templates/manager/matomo_app.html:272
+#: internal/web/templates/manager/mediawiki_app.html:272
+#: internal/web/templates/manager/moodle_app.html:232
+#: internal/web/templates/manager/n8n_app.html:296
+#: internal/web/templates/manager/nextcloud_app.html:281
+#: internal/web/templates/manager/ojs_app.html:271
+#: internal/web/templates/manager/opencart_app.html:281
+#: internal/web/templates/manager/phpbb_app.html:213
+#: internal/web/templates/manager/prestashop_app.html:281
+#: internal/web/templates/manager/python_node_apps.html:345
+#: internal/web/templates/manager/sofawiki_app.html:205
+#: internal/web/templates/manager/tinyfilemanager_app.html:187
+#: internal/web/templates/manager/tinyphotogallery_app.html:187
+#: internal/web/templates/manager/websitebuilder.html:117
+#: internal/web/templates/manager/wp/single.html:366
+msgid "Disk Usage"
+msgstr "Iskorišćenost diska"
+
+#: internal/modules/dashboard/sections.go:162 internal/web/sidebar.go:341
+#: internal/web/templates/files/inodes.html:12
+msgid "Inode Usage"
+msgstr "Upotreba inode-a"
+
+#: internal/modules/dashboard/sections.go:163 internal/web/sidebar.go:342
+#: internal/web/templates/domains/goaccess.html:11
+msgid "Visitor Statistics"
+msgstr "Statistika posetilaca"
+
+#: internal/modules/dashboard/sections.go:164 internal/web/sidebar.go:343
+msgid "Access Logs"
+msgstr "Logovi pristupa"
+
+#: internal/modules/dashboard/sections.go:165 internal/web/sidebar.go:369
+msgid "Server Info"
+msgstr "Informacije o serveru"
+
+#: internal/modules/dashboard/sections.go:167 internal/web/sidebar.go:347
 msgid "Processes & Services"
 msgstr "Procesi i servisi"
 
-#: internal/modules/dashboard/sections.go:171
+#: internal/modules/dashboard/sections.go:168
+#: internal/modules/dashboard/sections.go:283 internal/web/sidebar.go:350
+#: internal/web/templates/partials/_header.html:81
+msgid "Services"
+msgstr "Servisi"
+
+#: internal/modules/dashboard/sections.go:169 internal/web/sidebar.go:351
+msgid "Processes"
+msgstr "Procesi"
+
+#: internal/modules/dashboard/sections.go:171 internal/web/sidebar.go:355
 #: internal/web/templates/dashboard/onboarding.html:593
 #: internal/web/templates/manager/dokuwiki_app.html:75
 #: internal/web/templates/manager/drupal_app.html:142
@@ -676,6 +1266,163 @@ msgstr "Procesi i servisi"
 #: internal/web/templates/user/activity.html:11
 msgid "Security"
 msgstr "Bezbednost"
+
+#: internal/modules/dashboard/sections.go:172 internal/web/sidebar.go:358
+#: internal/web/templates/system/waf.html:19
+msgid "Web Firewall"
+msgstr "Web firewall"
+
+#: internal/modules/dashboard/sections.go:173
+msgid "Web Firewall Logs"
+msgstr "Logovi web firewall-a"
+
+#: internal/modules/dashboard/sections.go:174
+#: internal/modules/dashboard/sections.go:285 internal/web/sidebar.go:359
+#: internal/web/templates/dashboard/onboarding.html:255
+#: internal/web/templates/dashboard/onboarding.html:313
+#: internal/web/templates/system/ip_blocker.html:15
+msgid "IP Blocker"
+msgstr "IP blokator"
+
+#: internal/modules/dashboard/sections.go:175 internal/web/sidebar.go:360
+#: internal/web/templates/files/clamav/scanner.html:14
+msgid "Malware Scanner"
+msgstr "Skener malvera"
+
+#: internal/modules/dashboard/sections.go:176 internal/web/sidebar.go:361
+msgid "Two-Factor Auth"
+msgstr "Dvofaktorska autentifikacija"
+
+#: internal/modules/dashboard/sections.go:177 internal/web/sidebar.go:362
+#: internal/web/templates/user/passkeys.html:10
+msgid "Passkeys"
+msgstr "Pristupni ključevi"
+
+#: internal/modules/dashboard/sections.go:178
+#: internal/modules/dashboard/sections.go:300 internal/web/sidebar.go:363
+#: internal/web/templates/user/active_sessions.html:10
+msgid "Active Sessions"
+msgstr "Aktivne sesije"
+
+#: internal/modules/dashboard/sections.go:179 internal/web/sidebar.go:364
+#: internal/web/templates/user/activity.html:27
+msgid "Activity Log"
+msgstr "Log aktivnosti"
+
+#: internal/modules/dashboard/sections.go:180
+#: internal/modules/dashboard/sections.go:303 internal/web/sidebar.go:365
+#: internal/web/templates/user/loginlog.html:10
+msgid "Login History"
+msgstr "Istorija prijava"
+
+#: internal/modules/dashboard/sections.go:190
+#: internal/web/templates/files/upload_file.html:11
+msgid "File Upload"
+msgstr "Otpremanje fajlova"
+
+#: internal/modules/dashboard/sections.go:191
+msgid "Download Files"
+msgstr "Preuzmi fajlove"
+
+#: internal/modules/dashboard/sections.go:197
+#: internal/web/templates/manager/dokuwiki_app.html:235
+#: internal/web/templates/manager/drupal_app.html:302
+#: internal/web/templates/manager/flarum_app.html:243
+#: internal/web/templates/manager/joomla_app.html:301
+#: internal/web/templates/manager/matomo_app.html:293
+#: internal/web/templates/manager/mediawiki_app.html:293
+#: internal/web/templates/manager/moodle_app.html:253
+#: internal/web/templates/manager/n8n_app.html:306
+#: internal/web/templates/manager/nextcloud_app.html:302
+#: internal/web/templates/manager/ojs_app.html:292
+#: internal/web/templates/manager/opencart_app.html:302
+#: internal/web/templates/manager/phpbb_app.html:234
+#: internal/web/templates/manager/prestashop_app.html:302
+#: internal/web/templates/manager/python_node_apps.html:355
+#: internal/web/templates/manager/sofawiki_app.html:226
+#: internal/web/templates/manager/tinyfilemanager_app.html:208
+#: internal/web/templates/manager/tinyphotogallery_app.html:208
+#: internal/web/templates/manager/websitebuilder.html:127
+#: internal/web/templates/manager/wp/single.html:387
+msgid "Inodes Explorer"
+msgstr "Pregledač Inode-ova"
+
+#: internal/modules/dashboard/sections.go:198
+msgid "ClamAV Scanner"
+msgstr "ClamAV skener"
+
+#: internal/modules/dashboard/sections.go:207
+#: internal/web/templates/domains/domains.html:128
+msgid "SSL"
+msgstr "SSL"
+
+#: internal/modules/dashboard/sections.go:208
+msgid "Suspend Domain"
+msgstr "Suspenduj domen"
+
+#: internal/modules/dashboard/sections.go:209
+msgid "Unsuspend Domain"
+msgstr "Ukini suspenziju domena"
+
+#: internal/modules/dashboard/sections.go:210
+msgid "Change Docroot"
+msgstr "Promeni docroot"
+
+#: internal/modules/dashboard/sections.go:211
+msgid "Edit Virtual Hosts"
+msgstr "Uredi virtuelne hostove"
+
+#: internal/modules/dashboard/sections.go:212
+msgid "GoAccess"
+msgstr "GoAccess"
+
+#: internal/modules/dashboard/sections.go:213
+msgid "Raw Access Logs"
+msgstr "Sirovi logovi pristupa"
+
+#: internal/modules/dashboard/sections.go:219
+#: internal/modules/dashboard/sections.go:231
+#: internal/modules/dashboard/sections.go:240
+msgid "Import Database"
+msgstr "Uvezi bazu podataka"
+
+#: internal/modules/dashboard/sections.go:220
+msgid "Open phpMyAdmin"
+msgstr "Otvori phpMyAdmin"
+
+#: internal/modules/dashboard/sections.go:222
+#: internal/modules/dashboard/sections.go:232
+#: internal/modules/dashboard/sections.go:241
+msgid "Process List"
+msgstr "Lista procesa"
+
+#: internal/modules/dashboard/sections.go:224
+#: internal/web/templates/mysql/configuration.html:14
+msgid "MySQL Configuration"
+msgstr "MySQL konfiguracija"
+
+#: internal/modules/dashboard/sections.go:225
+msgid "Change root password"
+msgstr "Promeni root lozinku"
+
+#: internal/modules/dashboard/sections.go:234
+#: internal/web/templates/psql/configuration.html:13
+msgid "PostgreSQL Configuration"
+msgstr "PostgreSQL konfiguracija"
+
+#: internal/modules/dashboard/sections.go:245
+#: internal/web/sidebar_classic.go:49
+#: internal/web/templates/manager/sites.html:8
+msgid "Site Manager"
+msgstr "Menadžer sajtova"
+
+#: internal/modules/dashboard/sections.go:246
+msgid "Auto Installer"
+msgstr "Automatski instaler"
+
+#: internal/modules/dashboard/sections.go:247
+msgid "WP Manager"
+msgstr "WP menadžer"
 
 #: internal/modules/dashboard/sections.go:249
 #: internal/web/templates/manager/drupal_app.html:1204
@@ -700,25 +1447,152 @@ msgstr "Keš"
 msgid "Emails"
 msgstr "Email-ovi"
 
+#: internal/modules/dashboard/sections.go:261
+#: internal/web/templates/emails/deliverability.html:10
+#: internal/web/templates/emails/deliverability_domain.html:9
+msgid "Email Deliverability"
+msgstr "Isporučivost email-a"
+
+#: internal/modules/dashboard/sections.go:262
+msgid "Default Address"
+msgstr "Podrazumevana adresa"
+
+#: internal/modules/dashboard/sections.go:263
+msgid "Address Importer"
+msgstr "Uvoz adresa"
+
+#: internal/modules/dashboard/sections.go:264
+msgid "Address Exporter"
+msgstr "Izvoz adresa"
+
+#: internal/modules/dashboard/sections.go:268
+#: internal/web/sidebar_classic.go:229
+msgid "Select PHP version"
+msgstr "Izaberi PHP verziju"
+
+#: internal/modules/dashboard/sections.go:270
+msgid "PHP Options"
+msgstr "PHP opcije"
+
+#: internal/modules/dashboard/sections.go:271
+#: internal/web/templates/php/extensions.html:229
+msgid "PHP Extensions"
+msgstr "PHP ekstenzije"
+
+#: internal/modules/dashboard/sections.go:272
+#: internal/web/templates/php/ini_editor.html:57
+msgid "PHP.INI Editor"
+msgstr "Editor PHP.INI fajla"
+
+#: internal/modules/dashboard/sections.go:278
+msgid "Change Image tag"
+msgstr "Promeni tag image-a"
+
+#: internal/modules/dashboard/sections.go:279
+msgid "Change webserver"
+msgstr "Promeni web server"
+
+#: internal/modules/dashboard/sections.go:280
+msgid "Change MySQL Type"
+msgstr "Promeni tip MySQL-a"
+
 #: internal/modules/dashboard/sections.go:282
 #: internal/web/templates/partials/_header.html:126
 msgid "Advanced"
 msgstr "Napredno"
+
+#: internal/modules/dashboard/sections.go:288
+#: internal/web/templates/system/process_manager.html:12
+msgid "Process Manager"
+msgstr "Upravljač procesima"
+
+#: internal/modules/dashboard/sections.go:290
+msgid "Webserver Configuration"
+msgstr "Konfiguracija web servera"
+
+#: internal/modules/dashboard/sections.go:291
+msgid "WAF Settings"
+msgstr "WAF podešavanja"
+
+#: internal/modules/dashboard/sections.go:292
+#: internal/web/templates/system/waf_logs.html:267
+msgid "WAF Logs"
+msgstr "WAF logovi"
+
+#: internal/modules/dashboard/sections.go:293
+#: internal/web/templates/system/server_info.html:8
+msgid "Server Information"
+msgstr "Informacije o serveru"
+
+#: internal/modules/dashboard/sections.go:296
+#: internal/web/templates/user/account.html:10
+msgid "Email & Password"
+msgstr "Email i lozinka"
+
+#: internal/modules/dashboard/sections.go:297
+#: internal/web/templates/user/_login.html:102
+#: internal/web/templates/user/locale.html:10
+msgid "Change Language"
+msgstr "Promeni jezik"
+
+#: internal/modules/dashboard/sections.go:298
+#: internal/web/templates/user/notifications.html:40
+msgid "Email Notifications"
+msgstr "Email obaveštenja"
+
+#: internal/modules/dashboard/sections.go:299
+#: internal/web/templates/dashboard/onboarding.html:265
+#: internal/web/templates/dashboard/onboarding.html:325
+#: internal/web/templates/dashboard/twofa.html:6
+#: internal/web/templates/user/twofa_settings.html:14
+msgid "Two-Factor Authentication"
+msgstr "Dvofaktorska autentifikacija"
+
+#: internal/modules/dashboard/sections.go:301
+msgid "Favorite Pages"
+msgstr "Omiljene stranice"
+
+#: internal/modules/dashboard/sections.go:302
+msgid "Account Activity"
+msgstr "Aktivnost naloga"
 
 #: internal/modules/docker/containers.go:171
 #: internal/modules/docker/containers.go:187
 msgid "Add service"
 msgstr "Dodaj servis"
 
+#: internal/modules/docker/render.go:392
+#: internal/web/templates/dashboard/onboarding.html:498
+msgid "Can be better fine-tuned for any type of application."
+msgstr "Može se preciznije podesiti za bilo koju vrstu aplikacije."
+
 #: internal/modules/docker/render.go:393
 #: internal/web/templates/dashboard/onboarding.html:502
 msgid "MariaDB"
 msgstr "MariaDB"
 
+#: internal/modules/docker/render.go:393
+#: internal/web/templates/dashboard/onboarding.html:503
+msgid ""
+"Recommended for WordPress sites - smaller image, lower resource usage, and "
+"faster default query execution."
+msgstr ""
+"Preporučeno za WordPress sajtove - manja slika, manje korišćenje resursa i "
+"brže izvršavanje upita po podrazumevanim podešavanjima."
+
 #: internal/modules/docker/render.go:394
 #: internal/web/templates/dashboard/onboarding.html:507
 msgid "Percona"
 msgstr "Percona"
+
+#: internal/modules/docker/render.go:394
+#: internal/web/templates/dashboard/onboarding.html:508
+msgid ""
+"MySQL drop-in with extra performance and monitoring features, geared toward "
+"high-traffic sites."
+msgstr ""
+"Zamena za MySQL sa dodatnim funkcijama za performanse i nadzor, namenjena "
+"sajtovima sa velikim saobraćajem."
 
 #: internal/modules/docker/render.go:413
 #: internal/web/templates/docker/change_mysql.html:10
@@ -730,24 +1604,51 @@ msgstr "Server baze podataka"
 msgid "Apache"
 msgstr "Apache"
 
+#: internal/modules/docker/render.go:445
+#: internal/web/templates/dashboard/onboarding.html:443
+msgid "Recommended for websites that use .htaccess for rewrite rules."
+msgstr "Preporučeno za sajtove koji koriste .htaccess za rewrite pravila."
+
 #: internal/modules/docker/render.go:446
 #: internal/web/templates/dashboard/onboarding.html:447
 msgid "Nginx"
 msgstr "Nginx"
+
+#: internal/modules/docker/render.go:446
+#: internal/web/templates/dashboard/onboarding.html:448
+msgid ""
+"Recommended for NodeJS and Python applications, and high-traffic sites."
+msgstr ""
+"Preporučeno za NodeJS i Python aplikacije, kao i sajtove sa velikim "
+"saobraćajem."
 
 #: internal/modules/docker/render.go:447
 #: internal/web/templates/dashboard/onboarding.html:452
 msgid "OpenLiteSpeed"
 msgstr "OpenLiteSpeed"
 
+#: internal/modules/docker/render.go:447
+#: internal/web/templates/dashboard/onboarding.html:453
+msgid "Recommended for WordPress websites, but only one PHP version."
+msgstr "Preporučeno za WordPress sajtove, ali samo jedna verzija PHP-a."
+
 #: internal/modules/docker/render.go:448
 #: internal/web/templates/dashboard/onboarding.html:487
 msgid "OpenResty"
 msgstr "OpenResty"
 
+#: internal/modules/docker/render.go:448
+#: internal/web/templates/dashboard/onboarding.html:488
+msgid "Nginx core bundled with Lua scripting for custom logic."
+msgstr "Nginx jezgro sa ugrađenim Lua skriptovanjem za prilagođenu logiku."
+
 #: internal/modules/docker/render.go:449
 msgid "LiteSpeed"
 msgstr "LiteSpeed"
+
+#: internal/modules/docker/render.go:449
+msgid "LiteSpeed Enterprise, needs a license."
+msgstr "LiteSpeed Enterprise, potrebna je licenca."
 
 #: internal/modules/docker/render.go:486
 #: internal/web/templates/dashboard/onboarding.html:588
@@ -899,56 +1800,63 @@ msgstr ""
 "Koristi User-Agent filter da blokira agresivne scrapere i bezbednosne "
 "skenere poput AhrefsBot, SemrushBot, MJ12bot i Nikto."
 
-#: internal/web/sidebar.go:224
-#: internal/web/templates/partials/_header.html:141
-msgid "Sites"
-msgstr "Sajtovi"
+#: internal/web/sidebar.go:233
+msgid "Accounts"
+msgstr "Nalozi"
+
+#: internal/web/sidebar.go:239
+msgid "Delete Accounts"
+msgstr "Obriši naloge"
+
+#: internal/web/sidebar.go:259
+#: internal/web/templates/manager/dokuwiki_app.html:38
+#: internal/web/templates/manager/drupal_app.html:87
+#: internal/web/templates/manager/flarum_app.html:38
+#: internal/web/templates/manager/joomla_app.html:87
+#: internal/web/templates/manager/matomo_app.html:87
+#: internal/web/templates/manager/mediawiki_app.html:87
+#: internal/web/templates/manager/moodle_app.html:38
+#: internal/web/templates/manager/n8n_app.html:45
+#: internal/web/templates/manager/nextcloud_app.html:87
+#: internal/web/templates/manager/ojs_app.html:87
+#: internal/web/templates/manager/opencart_app.html:87
+#: internal/web/templates/manager/php_app.html:44
+#: internal/web/templates/manager/php_app.html:82
+#: internal/web/templates/manager/phpbb_app.html:38
+#: internal/web/templates/manager/prestashop_app.html:87
+#: internal/web/templates/manager/python_node_apps.html:45
+#: internal/web/templates/manager/sofawiki_app.html:38
+#: internal/web/templates/manager/tinyfilemanager_app.html:38
+#: internal/web/templates/manager/tinyphotogallery_app.html:38
+#: internal/web/templates/manager/websitebuilder.html:46
+#: internal/web/templates/manager/wp/single.html:154
+msgid "Overview"
+msgstr "Pregled"
+
+#: internal/web/sidebar.go:292
+msgid "File Editor"
+msgstr "Editor fajlova"
+
+#: internal/web/sidebar.go:372 internal/web/templates/mysql/wizard.html:74
+msgid "Server"
+msgstr "Server"
+
+#: internal/web/sidebar.go:373
+msgid "Hosting Plan"
+msgstr "Hosting paket"
+
+#: internal/web/sidebar.go:374
+msgid "Panel"
+msgstr "Panel"
 
 #: internal/web/sidebar.go:578 internal/web/templates/dashboard/upgrade.html:6
 #: internal/web/templates/dashboard/usage.html:16
 msgid "Upgrade now"
 msgstr "Nadogradite sada"
 
-#: internal/web/sidebar_classic.go:49
-#: internal/web/templates/manager/sites.html:8
-msgid "Site Manager"
-msgstr "Menadžer sajtova"
-
-#: internal/web/sidebar_classic.go:61 internal/web/sidebar_classic.go:67
-#: internal/web/templates/files/disk_usage.html:90
-#: internal/web/templates/files/filemanager.html:59
-#: internal/web/templates/files/inodes.html:88
-msgid "File Manager"
-msgstr "Menadžer fajlova"
-
 #: internal/web/sidebar_classic.go:62 internal/web/sidebar_classic.go:68
 msgid "Upload from device"
 msgstr "Otpremi sa uređaja"
-
-#: internal/web/sidebar_classic.go:63 internal/web/sidebar_classic.go:69
-#: internal/web/templates/files/upload_file.html:11
-msgid "Download from URL"
-msgstr "Preuzmi sa URL adrese"
-
-#: internal/web/sidebar_classic.go:89 internal/web/sidebar_classic.go:112
-#: internal/web/sidebar_classic.go:135
-#: internal/web/templates/mysql/users.html:9
-msgid "Users"
-msgstr "Korisnici"
-
-#: internal/web/sidebar_classic.go:93 internal/web/sidebar_classic.go:115
-#: internal/web/sidebar_classic.go:138
-#: internal/web/templates/mongodb/databases.html:38
-#: internal/web/templates/mongodb/databases.html:41
-#: internal/web/templates/mongodb/wizard.html:8
-#: internal/web/templates/mysql/databases.html:196
-#: internal/web/templates/mysql/databases.html:199
-#: internal/web/templates/mysql/wizard.html:8
-#: internal/web/templates/psql/databases.html:102
-#: internal/web/templates/psql/databases.html:105
-#: internal/web/templates/psql/wizard.html:8
-msgid "Database Wizard"
-msgstr "Čarobnjak za baze podataka"
 
 #: internal/web/sidebar_classic.go:94 internal/web/sidebar_classic.go:116
 #: internal/web/sidebar_classic.go:139
@@ -982,11 +1890,6 @@ msgstr "Dodeli korisnika bazi"
 msgid "Remove User from DB"
 msgstr "Ukloni korisnika iz baze"
 
-#: internal/web/sidebar_classic.go:100 internal/web/sidebar_classic.go:123
-#: internal/web/templates/mysql/remote_mysql.html:10
-msgid "Remote Access"
-msgstr "Udaljeni pristup"
-
 #: internal/web/sidebar_classic.go:124 internal/web/sidebar_classic.go:145
 msgid "Show Processes"
 msgstr "Prikaži procese"
@@ -1007,17 +1910,9 @@ msgstr "Suspenduj domen"
 msgid "Unsuspend a Domain"
 msgstr "Ukini suspenziju domena"
 
-#: internal/web/sidebar_classic.go:193 internal/web/sidebar_classic.go:198
-msgid "Email Accounts"
-msgstr "E-mail nalozi"
-
 #: internal/web/sidebar_classic.go:194 internal/web/sidebar_classic.go:199
 msgid "Create New Account"
 msgstr "Kreiraj novi nalog"
-
-#: internal/web/sidebar_classic.go:229
-msgid "Select PHP version"
-msgstr "Izaberi PHP verziju"
 
 #: internal/web/sidebar_classic.go:230
 msgid "Default version"
@@ -1231,11 +2126,6 @@ msgstr "Vrednost mora biti najviše {max}."
 msgid "Looks good."
 msgstr "Izgleda dobro."
 
-#: internal/web/templates/base.html:410
-#: internal/web/templates/user/favorites.html:10
-msgid "Favorites"
-msgstr "Omiljeno"
-
 #: internal/web/templates/base.html:478 internal/web/templates/base.html:523
 #: internal/web/templates/base.html:629
 #: internal/web/templates/dashboard/dashboard.html:46
@@ -1409,27 +2299,6 @@ msgstr "Trenutna potrošnja resursa servisa u realnom vremenu."
 #: internal/web/templates/system/services.html:91
 msgid "Edit limits"
 msgstr "Izmeni ograničenja"
-
-#: internal/web/templates/cache/service.html:267
-#: internal/web/templates/docker/logs.html:11
-#: internal/web/templates/docker/logs.html:87
-#: internal/web/templates/manager/drupal_app.html:96
-#: internal/web/templates/manager/flarum_app.html:47
-#: internal/web/templates/manager/joomla_app.html:96
-#: internal/web/templates/manager/matomo_app.html:96
-#: internal/web/templates/manager/mediawiki_app.html:96
-#: internal/web/templates/manager/moodle_app.html:47
-#: internal/web/templates/manager/n8n_app.html:63
-#: internal/web/templates/manager/nextcloud_app.html:96
-#: internal/web/templates/manager/ojs_app.html:96
-#: internal/web/templates/manager/opencart_app.html:96
-#: internal/web/templates/manager/php_app.html:62
-#: internal/web/templates/manager/prestashop_app.html:96
-#: internal/web/templates/manager/python_node_apps.html:90
-#: internal/web/templates/system/cronjobs.html:241
-#: internal/web/templates/system/services.html:160
-msgid "Logs"
-msgstr "Logovi"
 
 #: internal/web/templates/cache/service.html:268
 #: internal/web/templates/system/services.html:161
@@ -1749,12 +2618,6 @@ msgstr "MySQL baze podataka"
 msgid "PostgreSQL Databases"
 msgstr "PostgreSQL baze podataka"
 
-#: internal/web/templates/dashboard/onboarding.html:206
-#: internal/web/templates/files/backup_settings.html:89
-#: internal/web/templates/system/cronjobs.html:24
-msgid "Cron Jobs"
-msgstr "Cron zadaci"
-
 #: internal/web/templates/dashboard/onboarding.html:222
 msgid "Connection successful."
 msgstr "Veza je uspešno uspostavljena."
@@ -1787,23 +2650,10 @@ msgstr ""
 "Filtrira zlonamerne zahteve ka vašim sajtovima pre nego što stignu do vaših "
 "aplikacija."
 
-#: internal/web/templates/dashboard/onboarding.html:255
-#: internal/web/templates/dashboard/onboarding.html:313
-#: internal/web/templates/system/ip_blocker.html:15
-msgid "IP Blocker"
-msgstr "IP blokator"
-
 #: internal/web/templates/dashboard/onboarding.html:258
 msgid "Deny specific IPs or CIDR ranges access to your websites."
 msgstr ""
 "Onemogućite pristup vašim sajtovima određenim IP adresama ili CIDR opsezima."
-
-#: internal/web/templates/dashboard/onboarding.html:265
-#: internal/web/templates/dashboard/onboarding.html:325
-#: internal/web/templates/dashboard/twofa.html:6
-#: internal/web/templates/user/twofa_settings.html:14
-msgid "Two-Factor Authentication"
-msgstr "Dvofaktorska autentifikacija"
 
 #: internal/web/templates/dashboard/onboarding.html:268
 msgid ""
@@ -1929,45 +2779,6 @@ msgstr "Nastavi"
 msgid "Please wait…"
 msgstr "Sačekajte…"
 
-#: internal/web/templates/dashboard/onboarding.html:443
-msgid "Recommended for websites that use .htaccess for rewrite rules."
-msgstr "Preporučeno za sajtove koji koriste .htaccess za rewrite pravila."
-
-#: internal/web/templates/dashboard/onboarding.html:448
-msgid ""
-"Recommended for NodeJS and Python applications, and high-traffic sites."
-msgstr ""
-"Preporučeno za NodeJS i Python aplikacije, kao i sajtove sa velikim "
-"saobraćajem."
-
-#: internal/web/templates/dashboard/onboarding.html:453
-msgid "Recommended for WordPress websites, but only one PHP version."
-msgstr "Preporučeno za WordPress sajtove, ali samo jedna verzija PHP-a."
-
-#: internal/web/templates/dashboard/onboarding.html:488
-msgid "Nginx core bundled with Lua scripting for custom logic."
-msgstr "Nginx jezgro sa ugrađenim Lua skriptovanjem za prilagođenu logiku."
-
-#: internal/web/templates/dashboard/onboarding.html:498
-msgid "Can be better fine-tuned for any type of application."
-msgstr "Može se preciznije podesiti za bilo koju vrstu aplikacije."
-
-#: internal/web/templates/dashboard/onboarding.html:503
-msgid ""
-"Recommended for WordPress sites - smaller image, lower resource usage, and "
-"faster default query execution."
-msgstr ""
-"Preporučeno za WordPress sajtove - manja slika, manje korišćenje resursa i "
-"brže izvršavanje upita po podrazumevanim podešavanjima."
-
-#: internal/web/templates/dashboard/onboarding.html:508
-msgid ""
-"MySQL drop-in with extra performance and monitoring features, geared toward "
-"high-traffic sites."
-msgstr ""
-"Zamena za MySQL sa dodatnim funkcijama za performanse i nadzor, namenjena "
-"sajtovima sa velikim saobraćajem."
-
 #: internal/web/templates/dashboard/onboarding.html:524
 #: internal/web/templates/dashboard/onboarding.html:555
 #: internal/web/templates/docker/containers.html:133
@@ -2081,10 +2892,6 @@ msgstr "Novi domeni neće imati filtriranje zahteva."
 #: internal/web/templates/psql/users.html:48
 msgid "Database"
 msgstr "Baza podataka"
-
-#: internal/web/templates/dashboard/onboarding.html:591
-msgid "Varnish"
-msgstr "Varnish"
 
 #: internal/web/templates/dashboard/onboarding.html:643
 #: internal/web/templates/dashboard/onboarding.html:654
@@ -2239,30 +3046,6 @@ msgstr "Kontaktirajte svog hosting provajdera za nadogradnju plana."
 #: internal/web/templates/dashboard/usage.html:101
 msgid "Email accounts"
 msgstr "Email nalozi"
-
-#: internal/web/templates/dashboard/usage.html:124
-#: internal/web/templates/files/ftp.html:9
-#: internal/web/templates/manager/dokuwiki_app.html:256
-#: internal/web/templates/manager/drupal_app.html:323
-#: internal/web/templates/manager/flarum_app.html:264
-#: internal/web/templates/manager/joomla_app.html:322
-#: internal/web/templates/manager/matomo_app.html:314
-#: internal/web/templates/manager/mediawiki_app.html:314
-#: internal/web/templates/manager/moodle_app.html:274
-#: internal/web/templates/manager/n8n_app.html:316
-#: internal/web/templates/manager/nextcloud_app.html:323
-#: internal/web/templates/manager/ojs_app.html:313
-#: internal/web/templates/manager/opencart_app.html:323
-#: internal/web/templates/manager/phpbb_app.html:255
-#: internal/web/templates/manager/prestashop_app.html:323
-#: internal/web/templates/manager/python_node_apps.html:365
-#: internal/web/templates/manager/sofawiki_app.html:247
-#: internal/web/templates/manager/tinyfilemanager_app.html:229
-#: internal/web/templates/manager/tinyphotogallery_app.html:229
-#: internal/web/templates/manager/websitebuilder.html:137
-#: internal/web/templates/manager/wp/single.html:408
-msgid "FTP Accounts"
-msgstr "FTP nalozi"
 
 #: internal/web/templates/dashboard/usage.html:146
 #: internal/web/templates/docker/container_form.html:161
@@ -3678,10 +4461,6 @@ msgstr "Fajl zone je uspešno sačuvan"
 msgid "An error occurred while saving the zone file."
 msgstr "Došlo je do greške prilikom čuvanja fajla zone."
 
-#: internal/web/templates/domains/dns.html:740
-msgid "DNS Zone Editor"
-msgstr "Editor DNS zone"
-
 #: internal/web/templates/domains/dns.html:741
 msgid ""
 "Manage and edit Domain Name System (DNS) zone files, which contain critical "
@@ -3768,10 +4547,6 @@ msgstr "SSL status"
 #: internal/web/templates/domains/new.html:9
 msgid "New Domain"
 msgstr "Novi domen"
-
-#: internal/web/templates/domains/domains.html:128
-msgid "SSL"
-msgstr "SSL"
 
 #: internal/web/templates/domains/domains.html:137
 #: internal/web/templates/emails/deliverability.html:42
@@ -3974,10 +4749,6 @@ msgstr "Sledeće"
 msgid "Add new domain"
 msgstr "Dodaj novi domen"
 
-#: internal/web/templates/domains/dynamic_dns.html:10
-msgid "Dynamic DNS"
-msgstr "Dinamički DNS"
-
 #: internal/web/templates/domains/dynamic_dns.html:12
 msgid "Keep DNS records in sync with changing IP addresses via a token URL."
 msgstr ""
@@ -4085,10 +4856,6 @@ msgstr "Kopiraj URL"
 #: internal/web/templates/system/cronjobs.html:222
 msgid "Edit"
 msgstr "Izmeni"
-
-#: internal/web/templates/domains/goaccess.html:11
-msgid "Visitor Statistics"
-msgstr "Statistika posetilaca"
 
 #: internal/web/templates/domains/goaccess.html:12
 msgid "View html reports generated from domain access logs."
@@ -4673,19 +5440,6 @@ msgstr "Ukupno email adresa:"
 msgid "New Email"
 msgstr "Novi email"
 
-#: internal/web/templates/emails/accounts.html:27
-#: internal/web/templates/mongodb/databases.html:85
-#: internal/web/templates/mongodb/databases.html:91
-#: internal/web/templates/mongodb/databases.html:149
-#: internal/web/templates/mysql/databases.html:326
-#: internal/web/templates/mysql/databases.html:332
-#: internal/web/templates/mysql/databases.html:390
-#: internal/web/templates/psql/databases.html:151
-#: internal/web/templates/psql/databases.html:157
-#: internal/web/templates/psql/databases.html:215
-msgid "Export"
-msgstr "Izvezi"
-
 #: internal/web/templates/emails/accounts.html:37
 msgid "Account @ Domain"
 msgstr "Nalog @ Domen"
@@ -4694,13 +5448,6 @@ msgstr "Nalog @ Domen"
 msgid "Storage Used"
 msgstr "Iskorišćen prostor"
 
-#: internal/web/templates/emails/accounts.html:39
-#: internal/web/templates/emails/aliases.html:40
-#: internal/web/templates/emails/deliverability.html:35
-#: internal/web/templates/manager/wp/single.html:164
-msgid "Options"
-msgstr "Opcije"
-
 #: internal/web/templates/emails/accounts.html:46
 msgid "No emails yet."
 msgstr "Još nema email adresa."
@@ -4708,10 +5455,6 @@ msgstr "Još nema email adresa."
 #: internal/web/templates/emails/accounts.html:46
 msgid "Add your first email"
 msgstr "Dodajte svoju prvu email adresu"
-
-#: internal/web/templates/emails/accounts.html:74
-msgid "Webmail"
-msgstr "Webmail"
 
 #: internal/web/templates/emails/accounts.html:76
 #: internal/web/templates/emails/aliases.html:76
@@ -4903,10 +5646,6 @@ msgstr "Može biti bilo koja email adresa (na ovom serveru ili eksterna)."
 #: internal/web/templates/emails/alias_new.html:59
 msgid "Create Alias"
 msgstr "Kreiraj alias"
-
-#: internal/web/templates/emails/aliases.html:10
-msgid "Aliases"
-msgstr "Aliasi"
 
 #: internal/web/templates/emails/aliases.html:13
 msgid "Total aliases:"
@@ -5164,11 +5903,6 @@ msgstr "Izaberite email adresu koju želite da obrišete."
 #: internal/web/templates/emails/filter.html:29
 msgid "Select address"
 msgstr "Izaberite adresu"
-
-#: internal/web/templates/emails/deliverability.html:10
-#: internal/web/templates/emails/deliverability_domain.html:9
-msgid "Email Deliverability"
-msgstr "Isporučivost email-a"
 
 #: internal/web/templates/emails/deliverability.html:12
 msgid "Check SPF, DKIM and DMARC DNS records for your domains."
@@ -5485,12 +6219,6 @@ msgstr "Otpremi fajl"
 msgid "CSV, XLSX or XLS files only."
 msgstr "Samo CSV, XLSX ili XLS fajlovi."
 
-#: internal/web/templates/emails/import.html:40
-#: internal/web/templates/files/filemanager.html:105
-#: internal/web/templates/files/upload_file.html:106
-msgid "Upload"
-msgstr "Otpremi"
-
 #: internal/web/templates/emails/info.html:9
 msgid "View email server information for account"
 msgstr "Prikaži informacije o email serveru za nalog"
@@ -5805,14 +6533,6 @@ msgstr "Fajl rezervne kopije"
 msgid "Contents"
 msgstr "Sadržaj"
 
-#: internal/web/templates/files/backup_restore.html:241
-#: internal/web/templates/files/clamav/quarantine.html:82
-#: internal/web/templates/files/clamav/quarantine.html:113
-#: internal/web/templates/files/trash.html:51
-#: internal/web/templates/files/trash_partials.html:222
-msgid "Restore"
-msgstr "Vrati"
-
 #: internal/web/templates/files/backup_restore.html:253
 #: internal/web/templates/files/backup_restore.html:510
 #: internal/web/templates/files/backup_wizard.html:168
@@ -6026,10 +6746,6 @@ msgstr ""
 "Broj dana za koje se rezervna kopija čuva. Unesite nulu ili pozitivnu "
 "celobrojnu vrednost da omogućite automatsku rotaciju starih rezervnih "
 "kopija."
-
-#: internal/web/templates/files/backup_wizard.html:10
-msgid "Backup Wizard"
-msgstr "Čarobnjak za rezervne kopije"
 
 #: internal/web/templates/files/backup_wizard.html:12
 msgid "Create and download backups of your account."
@@ -6328,10 +7044,6 @@ msgstr "Označeno kao bezbedno i vraćeno."
 msgid "Failed"
 msgstr "Nije uspelo"
 
-#: internal/web/templates/files/clamav/scanner.html:14
-msgid "Malware Scanner"
-msgstr "Skener malvera"
-
 #: internal/web/templates/files/clamav/scanner.html:15
 msgid ""
 "Scan files for malicious programs with the Clam AntiVirus Scanner (ClamAV) "
@@ -6394,29 +7106,6 @@ msgstr "Zlonamerni softver nije pronađen."
 #: internal/web/templates/files/fix_permissions.html:91
 msgid "Network response was not ok"
 msgstr "Odgovor mreže nije bio ispravan"
-
-#: internal/web/templates/files/disk_usage.html:15
-#: internal/web/templates/manager/dokuwiki_app.html:214
-#: internal/web/templates/manager/drupal_app.html:281
-#: internal/web/templates/manager/flarum_app.html:222
-#: internal/web/templates/manager/joomla_app.html:280
-#: internal/web/templates/manager/matomo_app.html:272
-#: internal/web/templates/manager/mediawiki_app.html:272
-#: internal/web/templates/manager/moodle_app.html:232
-#: internal/web/templates/manager/n8n_app.html:296
-#: internal/web/templates/manager/nextcloud_app.html:281
-#: internal/web/templates/manager/ojs_app.html:271
-#: internal/web/templates/manager/opencart_app.html:281
-#: internal/web/templates/manager/phpbb_app.html:213
-#: internal/web/templates/manager/prestashop_app.html:281
-#: internal/web/templates/manager/python_node_apps.html:345
-#: internal/web/templates/manager/sofawiki_app.html:205
-#: internal/web/templates/manager/tinyfilemanager_app.html:187
-#: internal/web/templates/manager/tinyphotogallery_app.html:187
-#: internal/web/templates/manager/websitebuilder.html:117
-#: internal/web/templates/manager/wp/single.html:366
-msgid "Disk Usage"
-msgstr "Iskorišćenost diska"
 
 #: internal/web/templates/files/disk_usage.html:17
 msgid ""
@@ -6847,11 +7536,6 @@ msgstr "Naziv foldera"
 msgid "New folder will be created in:"
 msgstr "Novi folder će biti kreiran u:"
 
-#: internal/web/templates/files/fix_permissions.html:11
-#: internal/web/templates/files/fix_permissions.html:45
-msgid "Fix Permissions"
-msgstr "Ispravi dozvole"
-
 #: internal/web/templates/files/fix_permissions.html:12
 msgid "Fix and reset permissions for files and folders under"
 msgstr "Popravi i resetuj dozvole za fajlove i foldere unutar"
@@ -6919,10 +7603,6 @@ msgstr "UID"
 msgid "GID"
 msgstr "GID"
 
-#: internal/web/templates/files/ftp.html:63
-msgid "Configuration"
-msgstr "Podešavanje"
-
 #: internal/web/templates/files/ftp.html:74
 msgid "No accounts yet."
 msgstr "Još nema naloga."
@@ -6950,10 +7630,6 @@ msgstr "Izmeni putanju"
 #: internal/web/templates/files/ftp.html:179
 msgid "Add new FTP account"
 msgstr "Dodaj novi FTP nalog"
-
-#: internal/web/templates/files/ftp_connections.html:9
-msgid "FTP Connections"
-msgstr "FTP konekcije"
 
 #: internal/web/templates/files/ftp_connections.html:10
 msgid "Current FTP sessions of all sub-accounts."
@@ -7085,10 +7761,6 @@ msgstr "Prelaz kroz putanje (../) nije dozvoljen"
 msgid "Path must be under"
 msgstr "Putanja mora biti unutar"
 
-#: internal/web/templates/files/inodes.html:12
-msgid "Inode Usage"
-msgstr "Upotreba inode-a"
-
 #: internal/web/templates/files/inodes.html:14
 msgid ""
 "An inode is a data structure that keeps the information about a file on your"
@@ -7117,10 +7789,6 @@ msgstr "Izračunavanje broja inode-ova za nadređeni direktorijum.."
 #: internal/web/templates/files/inodes.html:168
 msgid "Failed to fetch"
 msgstr "Preuzimanje nije uspelo"
-
-#: internal/web/templates/files/trash.html:32
-msgid "Trash"
-msgstr "Otpad"
 
 #: internal/web/templates/files/trash.html:48
 #: internal/web/templates/files/trash_partials.html:128
@@ -7155,10 +7823,6 @@ msgstr "Obrisano"
 #: internal/web/templates/files/trash_partials.html:202
 msgid "Restore items"
 msgstr "Vrati stavke"
-
-#: internal/web/templates/files/upload_file.html:11
-msgid "File Upload"
-msgstr "Otpremanje fajlova"
 
 #: internal/web/templates/files/upload_file.html:103
 msgid "Download from URL instead"
@@ -7807,10 +8471,6 @@ msgstr "Konekcija je prekinuta tokom instalacije."
 msgid "Fetch error. Please try again."
 msgstr "Greška u dobavljanju podataka. Pokušajte ponovo."
 
-#: internal/web/templates/manager/autoinstaller.html:8
-msgid "Install App"
-msgstr "Instaliraj aplikaciju"
-
 #: internal/web/templates/manager/autoinstaller.html:9
 msgid "Quickly install a variety of applications such as"
 msgstr "Brzo instalirajte razne aplikacije kao što su"
@@ -7879,11 +8539,6 @@ msgid ""
 msgstr ""
 "Ova aplikacija je onemogućena u vašem planu. Kontaktirajte administratora da"
 " je omogući."
-
-#: internal/web/templates/manager/autoinstaller.html:32
-#: internal/web/templates/manager/wp/list.html:194
-msgid "WordPress"
-msgstr "WordPress"
 
 #: internal/web/templates/manager/autoinstaller.html:36
 msgid "WordPress content management system (CMS)."
@@ -8287,30 +8942,6 @@ msgstr "Pregled vaših pokrenutih kontejnera"
 msgid "Run Container"
 msgstr "Pokreni kontejner"
 
-#: internal/web/templates/manager/dokuwiki_app.html:38
-#: internal/web/templates/manager/drupal_app.html:87
-#: internal/web/templates/manager/flarum_app.html:38
-#: internal/web/templates/manager/joomla_app.html:87
-#: internal/web/templates/manager/matomo_app.html:87
-#: internal/web/templates/manager/mediawiki_app.html:87
-#: internal/web/templates/manager/moodle_app.html:38
-#: internal/web/templates/manager/n8n_app.html:45
-#: internal/web/templates/manager/nextcloud_app.html:87
-#: internal/web/templates/manager/ojs_app.html:87
-#: internal/web/templates/manager/opencart_app.html:87
-#: internal/web/templates/manager/php_app.html:44
-#: internal/web/templates/manager/php_app.html:82
-#: internal/web/templates/manager/phpbb_app.html:38
-#: internal/web/templates/manager/prestashop_app.html:87
-#: internal/web/templates/manager/python_node_apps.html:45
-#: internal/web/templates/manager/sofawiki_app.html:38
-#: internal/web/templates/manager/tinyfilemanager_app.html:38
-#: internal/web/templates/manager/tinyphotogallery_app.html:38
-#: internal/web/templates/manager/websitebuilder.html:46
-#: internal/web/templates/manager/wp/single.html:154
-msgid "Overview"
-msgstr "Pregled"
-
 #: internal/web/templates/manager/dokuwiki_app.html:56
 #: internal/web/templates/manager/drupal_app.html:123
 #: internal/web/templates/manager/flarum_app.html:65
@@ -8532,28 +9163,6 @@ msgstr "Veličina foldera:"
 #: internal/web/templates/manager/wp/single.html:380
 msgid "Open folder in Disk Usage Explorer"
 msgstr "Otvori folder u pregledaču zauzeća diska"
-
-#: internal/web/templates/manager/dokuwiki_app.html:235
-#: internal/web/templates/manager/drupal_app.html:302
-#: internal/web/templates/manager/flarum_app.html:243
-#: internal/web/templates/manager/joomla_app.html:301
-#: internal/web/templates/manager/matomo_app.html:293
-#: internal/web/templates/manager/mediawiki_app.html:293
-#: internal/web/templates/manager/moodle_app.html:253
-#: internal/web/templates/manager/n8n_app.html:306
-#: internal/web/templates/manager/nextcloud_app.html:302
-#: internal/web/templates/manager/ojs_app.html:292
-#: internal/web/templates/manager/opencart_app.html:302
-#: internal/web/templates/manager/phpbb_app.html:234
-#: internal/web/templates/manager/prestashop_app.html:302
-#: internal/web/templates/manager/python_node_apps.html:355
-#: internal/web/templates/manager/sofawiki_app.html:226
-#: internal/web/templates/manager/tinyfilemanager_app.html:208
-#: internal/web/templates/manager/tinyphotogallery_app.html:208
-#: internal/web/templates/manager/websitebuilder.html:127
-#: internal/web/templates/manager/wp/single.html:387
-msgid "Inodes Explorer"
-msgstr "Pregledač Inode-ova"
 
 #: internal/web/templates/manager/dokuwiki_app.html:249
 #: internal/web/templates/manager/drupal_app.html:316
@@ -13833,12 +14442,6 @@ msgstr "Nedostupno dok servis ne radi."
 msgid "System Database"
 msgstr "Sistemska baza podataka"
 
-#: internal/web/templates/mongodb/databases.html:79
-#: internal/web/templates/mysql/databases.html:318
-#: internal/web/templates/psql/databases.html:145
-msgid "Import"
-msgstr "Uvoz"
-
 #: internal/web/templates/mongodb/databases.html:103
 #: internal/web/templates/mysql/databases.html:344
 #: internal/web/templates/psql/databases.html:169
@@ -14189,10 +14792,6 @@ msgstr "Izaberi privilegije:"
 msgid "Make Changes"
 msgstr "Primeni izmene"
 
-#: internal/web/templates/mysql/configuration.html:14
-msgid "MySQL Configuration"
-msgstr "MySQL konfiguracija"
-
 #: internal/web/templates/mysql/configuration.html:15
 msgid ""
 "View and modify the MySQL service configuration. Any changes will restart "
@@ -14252,11 +14851,6 @@ msgstr "Optimizuj"
 #: internal/web/templates/mysql/databases.html:591
 msgid "Repair"
 msgstr "Popravi"
-
-#: internal/web/templates/mysql/databases.html:431
-#: internal/web/templates/mysql/phpmyadmin_unavailable.html:6
-msgid "phpMyAdmin"
-msgstr "phpMyAdmin"
 
 #: internal/web/templates/mysql/databases.html:582
 msgid "Loading tables..."
@@ -14581,10 +15175,6 @@ msgstr ""
 msgid "Credentials"
 msgstr "Podaci za prijavu"
 
-#: internal/web/templates/mysql/wizard.html:74
-msgid "Server"
-msgstr "Server"
-
 #: internal/web/templates/mysql/wizard.html:128
 msgid "Configuration Code"
 msgstr "Konfiguracioni kod"
@@ -14714,10 +15304,6 @@ msgstr "Odjavi se"
 #: internal/web/templates/partials/_header.html:12
 msgid "Toggle Sidebar"
 msgstr "Prikaži/sakrij bočnu traku"
-
-#: internal/web/templates/partials/_header.html:81
-msgid "Services"
-msgstr "Servisi"
 
 #: internal/web/templates/partials/_header.html:86
 msgid "Caching"
@@ -15142,10 +15728,6 @@ msgstr "Pokretanje instalacije nije uspelo."
 msgid "An extension install is in progress for this PHP version..."
 msgstr "Instalacija ekstenzije je u toku za ovu verziju PHP-a..."
 
-#: internal/web/templates/php/extensions.html:229
-msgid "PHP Extensions"
-msgstr "PHP ekstenzije"
-
 #: internal/web/templates/php/extensions.html:230
 msgid "Enable, disable, or install PHP extensions per PHP version."
 msgstr ""
@@ -15174,10 +15756,6 @@ msgstr "PHP konfiguracija"
 #: internal/web/templates/php/info.html:86
 msgid "No PHP information available."
 msgstr "Nema dostupnih PHP informacija."
-
-#: internal/web/templates/php/ini_editor.html:57
-msgid "PHP.INI Editor"
-msgstr "Editor PHP.INI fajla"
 
 #: internal/web/templates/php/ini_editor.html:58
 msgid "Select a PHP version to edit its php.ini file directly."
@@ -15263,10 +15841,6 @@ msgstr ""
 "Dodelite korisnika postojećoj PostgreSQL bazi podataka da biste upravljali "
 "dozvolama baze podataka i omogućili pristup izvršavanju upita, izmeni tabela"
 " ili upravljanju podacima u navedenoj bazi podataka."
-
-#: internal/web/templates/psql/configuration.html:13
-msgid "PostgreSQL Configuration"
-msgstr "PostgreSQL konfiguracija"
 
 #: internal/web/templates/psql/configuration.html:14
 msgid ""
@@ -15770,10 +16344,6 @@ msgstr "OpenPanel Enterprise licencni ključ je nevažeći!"
 msgid "Verify License"
 msgstr "Provjeri licencu"
 
-#: internal/web/templates/system/process_manager.html:12
-msgid "Process Manager"
-msgstr "Upravljač procesima"
-
 #: internal/web/templates/system/process_manager.html:13
 msgid "View and manage currently running processes on the server."
 msgstr "Pregledajte i upravljajte trenutno aktivnim procesima na serveru."
@@ -15894,10 +16464,6 @@ msgstr "Ubijanje PID-a:"
 #: internal/web/templates/system/process_manager.html:259
 msgid "failed"
 msgstr "neuspešno"
-
-#: internal/web/templates/system/server_info.html:8
-msgid "Server Information"
-msgstr "Informacije o serveru"
 
 #: internal/web/templates/system/server_info.html:9
 msgid "View current server specification and system usage."
@@ -16036,10 +16602,6 @@ msgstr ""
 msgid "Name for accessing the service from other containers."
 msgstr "Naziv za pristup servisu iz drugih kontejnera."
 
-#: internal/web/templates/system/waf.html:19
-msgid "Web Firewall"
-msgstr "Web firewall"
-
 #: internal/web/templates/system/waf.html:20
 msgid ""
 "Enable or disable OWASP Coraza Web Application Firewall protection for "
@@ -16096,22 +16658,9 @@ msgstr "Unesite oznake, razdvojene razmakom"
 msgid "WAF Logs for"
 msgstr "WAF logovi za"
 
-#: internal/web/templates/system/waf_logs.html:267
-msgid "WAF Logs"
-msgstr "WAF logovi"
-
 #: internal/web/templates/system/waf_logs.html:268
 msgid "View Coraza WAF logs for domains."
 msgstr "Pregledajte Coraza WAF logove za domene."
-
-#: internal/web/templates/user/_login.html:102
-#: internal/web/templates/user/locale.html:10
-msgid "Change Language"
-msgstr "Promeni jezik"
-
-#: internal/web/templates/user/account.html:10
-msgid "Email & Password"
-msgstr "Email i lozinka"
 
 #: internal/web/templates/user/account.html:11
 msgid ""
@@ -16128,10 +16677,6 @@ msgid ""
 msgstr ""
 "Korisničko ime mora imati između 3 i 20 karaktera i sadržati samo slova i "
 "brojeve (bez razmaka, crtica ili donjih crta)."
-
-#: internal/web/templates/user/active_sessions.html:10
-msgid "Active Sessions"
-msgstr "Aktivne sesije"
 
 #: internal/web/templates/user/active_sessions.html:11
 msgid "View all currently active sessions for your account."
@@ -16156,10 +16701,6 @@ msgstr "Destruktivno"
 #: internal/web/templates/user/activity.html:9
 msgid "Changed"
 msgstr "Izmenjeno"
-
-#: internal/web/templates/user/activity.html:27
-msgid "Activity Log"
-msgstr "Log aktivnosti"
 
 #: internal/web/templates/user/activity.html:31
 msgid "Search results for:"
@@ -16379,10 +16920,6 @@ msgstr ""
 "Passkeys zahtevaju da se ovom panelu pristupa preko HTTPS-a sa nazivom "
 "domena."
 
-#: internal/web/templates/user/loginlog.html:10
-msgid "Login History"
-msgstr "Istorija prijava"
-
 #: internal/web/templates/user/loginlog.html:11
 msgid "Overview of successful logins on your account."
 msgstr "Pregled uspešnih prijava na vaš nalog."
@@ -16539,10 +17076,6 @@ msgstr "Claude Code CLI"
 msgid "Claude Desktop (claude_desktop_config.json)"
 msgstr "Claude Desktop (claude_desktop_config.json)"
 
-#: internal/web/templates/user/notifications.html:40
-msgid "Email Notifications"
-msgstr "Email obaveštenja"
-
 #: internal/web/templates/user/notifications.html:42
 msgid ""
 "Security alerts help you spot unwanted changes early, usage alerts warn you "
@@ -16566,10 +17099,6 @@ msgstr "Sačuvaj podešavanja"
 #: internal/web/templates/user/notifications.html:69
 msgid "Email me"
 msgstr "Pošalji mi e-mail"
-
-#: internal/web/templates/user/passkeys.html:10
-msgid "Passkeys"
-msgstr "Pristupni ključevi"
 
 #: internal/web/templates/user/passkeys.html:11
 msgid ""
@@ -16637,10 +17166,6 @@ msgstr "Pošalji link za resetovanje"
 #: internal/web/templates/user/reset_password/set_new_password.html:7
 msgid "Reset Your Password"
 msgstr "Resetujte vašu lozinku"
-
-#: internal/web/templates/user/stats.html:16
-msgid "Resource Usage"
-msgstr "Iskorišćenost resursa"
 
 #: internal/web/templates/user/stats.html:18
 msgid "View current resource usage for all websites and services."
