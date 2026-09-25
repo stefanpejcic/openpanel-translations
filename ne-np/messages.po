@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.10\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-25 21:59+0200\n"
+"POT-Creation-Date: 2026-09-25 22:15+0200\n"
 "PO-Revision-Date: 2025-11-15 12:00+0300\n"
 "Last-Translator: Anupam Bista <anupambista3@gmail.com>\n"
 "Language-Team: Nepali <anupambista3@gmail.com>\n"
@@ -1442,6 +1442,7 @@ msgstr "कन्टेनर लग हेर्नुहोस्"
 
 #: internal/web/templates/cache/service.html:311
 #: internal/web/templates/partials/_search.html:71
+#: internal/web/templates/php/info.html:75
 #: internal/web/templates/system/services.html:73
 #: internal/web/templates/system/services.html:211
 msgid "Service"
@@ -2115,6 +2116,7 @@ msgstr ""
 "छैनन् भने यो प्रयोग गर्नुहोस्।"
 
 #: internal/web/templates/dashboard/onboarding.html:753
+#: internal/web/templates/domains/domains.html:348
 #: internal/web/templates/user/activity.html:222
 #: internal/web/templates/user/history_usage.html:96
 msgid "of"
@@ -2910,6 +2912,10 @@ msgstr "कन्टेनरहरू आफ्नो CPU/RAM/PIDs सीमा
 msgid "Error fetching docker stats for containers."
 msgstr "कन्टेनरहरूको डोकर स्टाट्स ल्याउँदा त्रुटि।"
 
+#: internal/web/templates/docker/containers.html:332
+msgid "Image"
+msgstr "इमेज"
+
 #: internal/web/templates/docker/delete_confirm.html:11
 msgid "Delete container"
 msgstr "कन्टेनर मेटाउनुहोस्"
@@ -2949,6 +2955,12 @@ msgstr "-- कन्टेनर छान्नुहोस् --"
 #: internal/web/templates/docker/logs.html:31
 msgid "-- Lines --"
 msgstr "-- लाइनहरू --"
+
+#: internal/web/templates/docker/logs.html:37
+#: internal/web/templates/domains/delete.html:62
+#: internal/web/templates/user/activity.html:64
+msgid "All"
+msgstr "सबै"
 
 #: internal/web/templates/docker/logs.html:54
 msgid "Select a container to view its logs here."
@@ -3270,11 +3282,6 @@ msgstr "यस डोमेनको डक्युमेन्ट–रुट 
 #: internal/web/templates/domains/delete.html:60
 msgid "Websites that use this domain name will immediately stop working."
 msgstr "यो डोमेन नाम प्रयोग गर्ने वेबसाइटहरू तुरुन्तै काम गर्न बन्द गर्नेछन्।"
-
-#: internal/web/templates/domains/delete.html:62
-#: internal/web/templates/user/activity.html:64
-msgid "All"
-msgstr "सबै"
 
 #: internal/web/templates/domains/delete.html:62
 msgid "email accounts will be deleted, but the messages remain on disk."
@@ -4218,6 +4225,7 @@ msgstr "विवरण देखाउनुहोस्"
 #: internal/web/templates/manager/websitebuilder.html:234
 #: internal/web/templates/manager/wp/single.html:1690
 #: internal/web/templates/manager/wp/single.html:1757
+#: internal/web/templates/system/cronjobs_new.html:53
 msgid "or"
 msgstr "वा"
 
@@ -4234,6 +4242,14 @@ msgid ""
 msgstr ""
 "docroot मोड्युल वा सुविधा सक्षम छैन। docroot परिवर्तन गर्न प्रबन्धकलाई "
 "सम्पर्क गर्नुहोस्।"
+
+#: internal/web/templates/domains/new.html:78
+msgid "Public Key"
+msgstr "सार्वजनिक कुञ्जी"
+
+#: internal/web/templates/domains/new.html:92
+msgid "Secret Key"
+msgstr "गोप्य कुञ्जी"
 
 #: internal/web/templates/domains/new.html:128
 #: internal/web/templates/domains/new.html:304
@@ -4773,6 +4789,7 @@ msgstr "यसमा डेलिभर हुन्छ"
 
 #: internal/web/templates/emails/alias_detail.html:34
 #: internal/web/templates/emails/alias_detail.html:207
+#: internal/web/templates/manager/wp/_shared.html:103
 #: internal/web/templates/manager/wp/single.html:1036
 #: internal/web/templates/php/extensions.html:49
 #: internal/web/templates/user/activity.html:149
@@ -7141,6 +7158,10 @@ msgstr "URL बाट डाउनलोड गर्नुहोस्"
 msgid "Upload from device instead"
 msgstr "डिभाइसबाट अपलोड गर्नुहोस्"
 
+#: internal/web/templates/files/upload_file.html:149
+msgid "Download in progress..."
+msgstr "डाउनलोड हुँदैछ..."
+
 #: internal/web/templates/files/upload_file.html:349
 msgid "Please enter a valid URL."
 msgstr "कृपया मान्य URL प्रविष्ट गर्नुहोस्।"
@@ -7244,6 +7265,7 @@ msgstr "पोर्ट ऐच्छिक हो, खाली छोडिए�
 #: internal/web/templates/manager/sites.html:210
 #: internal/web/templates/manager/wp/list.html:105
 #: internal/web/templates/manager/wp/single.html:1153
+#: internal/web/templates/php/info.html:76
 #: internal/web/templates/system/server_info.html:98
 msgid "Version"
 msgstr "संस्करण"
@@ -7318,25 +7340,39 @@ msgid "Select a domain"
 msgstr "डोमेन चयन गर्नुहोस्"
 
 #: internal/web/templates/manager/app_install.html:226
+#: internal/web/templates/manager/dokuwiki_app.html:420
 #: internal/web/templates/manager/dokuwiki_install.html:47
+#: internal/web/templates/manager/drupal_app.html:794
 #: internal/web/templates/manager/drupal_install.html:72
+#: internal/web/templates/manager/flarum_app.html:657
 #: internal/web/templates/manager/flarum_install.html:72
+#: internal/web/templates/manager/joomla_app.html:769
 #: internal/web/templates/manager/joomla_install.html:72
+#: internal/web/templates/manager/matomo_app.html:694
 #: internal/web/templates/manager/matomo_install.html:64
+#: internal/web/templates/manager/mediawiki_app.html:694
 #: internal/web/templates/manager/mediawiki_install.html:72
+#: internal/web/templates/manager/moodle_app.html:749
 #: internal/web/templates/manager/moodle_install.html:64
+#: internal/web/templates/manager/nextcloud_app.html:783
 #: internal/web/templates/manager/nextcloud_install.html:64
+#: internal/web/templates/manager/ojs_app.html:710
 #: internal/web/templates/manager/ojs_install.html:64
+#: internal/web/templates/manager/opencart_app.html:770
 #: internal/web/templates/manager/opencart_install.html:64
 #: internal/web/templates/manager/php_install.html:51
+#: internal/web/templates/manager/phpbb_app.html:452
 #: internal/web/templates/manager/phpbb_install.html:80
+#: internal/web/templates/manager/prestashop_app.html:754
 #: internal/web/templates/manager/prestashop_install.html:64
 #: internal/web/templates/manager/python_node_apps.html:859
+#: internal/web/templates/manager/sofawiki_app.html:323
 #: internal/web/templates/manager/sofawiki_install.html:47
 #: internal/web/templates/manager/tinyfilemanager_install.html:47
 #: internal/web/templates/manager/tinyphotogallery_install.html:47
 #: internal/web/templates/manager/websitebuilder_install.html:46
 #: internal/web/templates/manager/wp/install.html:81
+#: internal/web/templates/manager/wp/single.html:1573
 msgid "subfolder"
 msgstr "सबफोल्डर"
 
@@ -7862,6 +7898,7 @@ msgstr "WordPress सामग्री व्यवस्थापन प्र
 #: internal/web/templates/manager/autoinstaller.html:741
 #: internal/web/templates/manager/autoinstaller.html:773
 #: internal/web/templates/manager/autoinstaller.html:805
+#: internal/web/templates/manager/python_node_apps.html:570
 msgid "No"
 msgstr "कुनै"
 
@@ -7949,6 +7986,7 @@ msgid "Install Drupal"
 msgstr "Drupal स्थापना गर्नुहोस्"
 
 #: internal/web/templates/manager/autoinstaller.html:130
+#: internal/web/templates/manager/sites.html:243
 #: internal/web/templates/manager/websitebuilder_install.html:9
 msgid "Website Builder"
 msgstr "वेबसाइट बिल्डर"
@@ -10414,6 +10452,10 @@ msgstr "Flarum सेटअप गर्दै यसका लागि:"
 msgid "Flarum installation started. Please wait for the process to finish."
 msgstr "Flarum इन्स्टलेसन सुरु भयो। प्रक्रिया समाप्त हुँदासम्म पर्खनुहोस्।"
 
+#: internal/web/templates/manager/grapejs_editor.html:9
+msgid "Website Editor"
+msgstr "वेबसाइट सम्पादक"
+
 #: internal/web/templates/manager/grapejs_editor.html:107
 msgid "Saved successfully!"
 msgstr "सफलतापूर्वक सुरक्षित गरियो!"
@@ -11840,6 +11882,10 @@ msgstr ""
 "यसलाई सक्षम गरिएमा, कस्टम स्टार्टअप कमाण्ड वा स्टार्टअप फाइल अघि यो कमाण्ड "
 "चलाइन्छ:"
 
+#: internal/web/templates/manager/python_node_apps.html:569
+msgid "Yes"
+msgstr "हो"
+
 #: internal/web/templates/manager/python_node_apps.html:584
 msgid ""
 "Change version, make sure to restart the application afterward by stopping "
@@ -12092,6 +12138,30 @@ msgstr "साइट नाम"
 #: internal/web/templates/partials/site_manager_shared.html:444
 msgid "Speed"
 msgstr "गति"
+
+#: internal/web/templates/manager/sites.html:234
+msgid "NodeJS Containers"
+msgstr "NodeJS कन्टेनरहरू"
+
+#: internal/web/templates/manager/sites.html:235
+msgid "Bun Applications"
+msgstr "Bun एप्लिकेसनहरू"
+
+#: internal/web/templates/manager/sites.html:236
+msgid "Python Containers"
+msgstr "Python कन्टेनरहरू"
+
+#: internal/web/templates/manager/sites.html:237
+msgid "Ruby Applications"
+msgstr "Ruby एप्लिकेसनहरू"
+
+#: internal/web/templates/manager/sites.html:238
+msgid "Java Applications"
+msgstr "Java एप्लिकेसनहरू"
+
+#: internal/web/templates/manager/sites.html:242
+msgid "PHP Applications"
+msgstr "PHP एप्लिकेसनहरू"
 
 #: internal/web/templates/manager/sites.html:266
 #: internal/web/templates/manager/sites.html:274
@@ -12984,6 +13054,11 @@ msgstr "सिर्जना गरिएको मिति"
 msgid "Uninstall"
 msgstr "अनइन्स्टल गर्नुहोस्"
 
+#: internal/web/templates/manager/wp/list.html:173
+#: internal/web/templates/partials/site_manager_shared.html:68
+msgid "Screenshot of"
+msgstr "स्क्रिनसट:"
+
 #: internal/web/templates/manager/wp/list.html:243
 msgid "An error occurred while removing WordPress. Please try again."
 msgstr "WordPress हटाउने क्रममा त्रुटि भयो। कृपया पुनः प्रयास गर्नुहोस्।"
@@ -13722,6 +13797,10 @@ msgstr "आयात"
 msgid "Format:"
 msgstr "ढाँचा:"
 
+#: internal/web/templates/mongodb/databases.html:109
+msgid "Archive"
+msgstr "अभिलेख"
+
 #: internal/web/templates/mongodb/databases.html:166
 #: internal/web/templates/mysql/databases.html:528
 #: internal/web/templates/psql/databases.html:232
@@ -13983,6 +14062,7 @@ msgid "Roles"
 msgstr "भूमिकाहरू"
 
 #: internal/web/templates/mongodb/users.html:57
+#: internal/web/templates/mysql/users.html:93
 #: internal/web/templates/psql/users.html:71
 msgid "System User"
 msgstr "प्रणाली प्रयोगकर्ता"
@@ -14583,6 +14663,10 @@ msgstr "सामुदायिक फोरमहरू"
 msgid "Sign out"
 msgstr "साइन आउट गर्नुहोस्"
 
+#: internal/web/templates/partials/_header.html:12
+msgid "Toggle Sidebar"
+msgstr "साइडबार टगल गर्नुहोस्"
+
 #: internal/web/templates/partials/_header.html:81
 msgid "Services"
 msgstr "सेवाहरू"
@@ -14889,6 +14973,10 @@ msgstr ""
 "ClamAV एन्टिभाइरस स्क्यानर प्रयोग गरी यो साइटका फाइलहरूमा मालवेयरका लागि "
 "स्क्यान गर्नुहोस्।"
 
+#: internal/web/templates/partials/theme_switcher.html:3
+msgid "Theme"
+msgstr "थिम"
+
 #: internal/web/templates/php/default.html:7
 msgid "Default PHP version"
 msgstr "पूर्वनिर्धारित PHP संस्करण"
@@ -15028,6 +15116,14 @@ msgstr "PHP संस्करण चयन गर्नुहोस्"
 #: internal/web/templates/php/extensions.html:255
 msgid "Manage Extensions"
 msgstr "एक्सटेन्सनहरू व्यवस्थापन गर्नुहोस्"
+
+#: internal/web/templates/php/info.html:80
+msgid "PHP Configuration"
+msgstr "PHP कन्फिगरेसन"
+
+#: internal/web/templates/php/info.html:86
+msgid "No PHP information available."
+msgstr "PHP जानकारी उपलब्ध छैन।"
 
 #: internal/web/templates/php/ini_editor.html:57
 msgid "PHP.INI Editor"
@@ -15705,6 +15801,10 @@ msgid ""
 msgstr ""
 "प्रक्रियासँग सम्बन्धित टर्मिनल। ? को अर्थ प्रक्रिया पृष्ठभूमिमा चलिरहेको छ।"
 
+#: internal/web/templates/system/process_manager.html:174
+msgid "The cumulative CPU time the process has consumed."
+msgstr "प्रक्रियाले प्रयोग गरेको कुल CPU समय।"
+
 #: internal/web/templates/system/process_manager.html:188
 msgid "The command that is running in the container."
 msgstr "कन्टेनरमा चलिरहेको कमाण्ड।"
@@ -15990,6 +16090,10 @@ msgstr "सिर्जना गरिएको मिति"
 #: internal/web/templates/user/active_sessions.html:81
 msgid "View activity logs"
 msgstr "गतिविधि लगहरू हेर्नुहोस्"
+
+#: internal/web/templates/user/active_sessions.html:94
+msgid "Online"
+msgstr "अनलाइन"
 
 #: internal/web/templates/user/activity.html:5
 msgid "Destructive"

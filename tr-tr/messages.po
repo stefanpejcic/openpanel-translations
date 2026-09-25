@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.10\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-25 21:59+0200\n"
+"POT-Creation-Date: 2026-09-25 22:15+0200\n"
 "PO-Revision-Date: 2025-01-27 12:00+0300\n"
 "Last-Translator: Slaweally  <slaweally@hotmail.com - sys@rootali.net>\n"
 "Language-Team: Turkish <sys@rootali.net>\n"
@@ -1447,6 +1447,7 @@ msgstr "Kapsayıcı günlüğünü görüntüle"
 
 #: internal/web/templates/cache/service.html:311
 #: internal/web/templates/partials/_search.html:71
+#: internal/web/templates/php/info.html:75
 #: internal/web/templates/system/services.html:73
 #: internal/web/templates/system/services.html:211
 msgid "Service"
@@ -2117,6 +2118,7 @@ msgstr ""
 "bunu kullanın."
 
 #: internal/web/templates/dashboard/onboarding.html:753
+#: internal/web/templates/domains/domains.html:348
 #: internal/web/templates/user/activity.html:222
 #: internal/web/templates/user/history_usage.html:96
 msgid "of"
@@ -2919,6 +2921,10 @@ msgstr "konteyner CPU/RAM/PID sınırlarına ulaşıyor."
 msgid "Error fetching docker stats for containers."
 msgstr "Konteynerler için docker istatistikleri alınırken hata oluştu."
 
+#: internal/web/templates/docker/containers.html:332
+msgid "Image"
+msgstr "İmaj"
+
 #: internal/web/templates/docker/delete_confirm.html:11
 msgid "Delete container"
 msgstr "Konteyneri sil"
@@ -2958,6 +2964,12 @@ msgstr "-- Konteyner seçin --"
 #: internal/web/templates/docker/logs.html:31
 msgid "-- Lines --"
 msgstr "-- Satırlar --"
+
+#: internal/web/templates/docker/logs.html:37
+#: internal/web/templates/domains/delete.html:62
+#: internal/web/templates/user/activity.html:64
+msgid "All"
+msgstr "Tümü"
 
 #: internal/web/templates/docker/logs.html:54
 msgid "Select a container to view its logs here."
@@ -3280,11 +3292,6 @@ msgstr ""
 #: internal/web/templates/domains/delete.html:60
 msgid "Websites that use this domain name will immediately stop working."
 msgstr "Bu alan adını kullanan web siteleri hemen çalışmayı durduracaktır."
-
-#: internal/web/templates/domains/delete.html:62
-#: internal/web/templates/user/activity.html:64
-msgid "All"
-msgstr "Tümü"
 
 #: internal/web/templates/domains/delete.html:62
 msgid "email accounts will be deleted, but the messages remain on disk."
@@ -4229,6 +4236,7 @@ msgstr "Detayları Göster"
 #: internal/web/templates/manager/websitebuilder.html:234
 #: internal/web/templates/manager/wp/single.html:1690
 #: internal/web/templates/manager/wp/single.html:1757
+#: internal/web/templates/system/cronjobs_new.html:53
 msgid "or"
 msgstr "veya"
 
@@ -4245,6 +4253,14 @@ msgid ""
 msgstr ""
 "docroot modülü veya özelliği etkinleştirilmemiş. Belge kökünü değiştirmek "
 "için Yönetici ile iletişime geçin."
+
+#: internal/web/templates/domains/new.html:78
+msgid "Public Key"
+msgstr "Açık Anahtar"
+
+#: internal/web/templates/domains/new.html:92
+msgid "Secret Key"
+msgstr "Gizli Anahtar"
 
 #: internal/web/templates/domains/new.html:128
 #: internal/web/templates/domains/new.html:304
@@ -4788,6 +4804,7 @@ msgstr "Teslim ediliyor"
 
 #: internal/web/templates/emails/alias_detail.html:34
 #: internal/web/templates/emails/alias_detail.html:207
+#: internal/web/templates/manager/wp/_shared.html:103
 #: internal/web/templates/manager/wp/single.html:1036
 #: internal/web/templates/php/extensions.html:49
 #: internal/web/templates/user/activity.html:149
@@ -7160,6 +7177,10 @@ msgstr "Bunun yerine URL'den indir"
 msgid "Upload from device instead"
 msgstr "Bunun yerine cihazdan yükle"
 
+#: internal/web/templates/files/upload_file.html:149
+msgid "Download in progress..."
+msgstr "İndirme devam ediyor..."
+
 #: internal/web/templates/files/upload_file.html:349
 msgid "Please enter a valid URL."
 msgstr "Lütfen geçerli bir URL girin."
@@ -7265,6 +7286,7 @@ msgstr "Port isteğe bağlıdır, boş bırakılırsa '80' portu kullanılır."
 #: internal/web/templates/manager/sites.html:210
 #: internal/web/templates/manager/wp/list.html:105
 #: internal/web/templates/manager/wp/single.html:1153
+#: internal/web/templates/php/info.html:76
 #: internal/web/templates/system/server_info.html:98
 msgid "Version"
 msgstr "Sürüm"
@@ -7340,25 +7362,39 @@ msgid "Select a domain"
 msgstr "Bir alan adı seç"
 
 #: internal/web/templates/manager/app_install.html:226
+#: internal/web/templates/manager/dokuwiki_app.html:420
 #: internal/web/templates/manager/dokuwiki_install.html:47
+#: internal/web/templates/manager/drupal_app.html:794
 #: internal/web/templates/manager/drupal_install.html:72
+#: internal/web/templates/manager/flarum_app.html:657
 #: internal/web/templates/manager/flarum_install.html:72
+#: internal/web/templates/manager/joomla_app.html:769
 #: internal/web/templates/manager/joomla_install.html:72
+#: internal/web/templates/manager/matomo_app.html:694
 #: internal/web/templates/manager/matomo_install.html:64
+#: internal/web/templates/manager/mediawiki_app.html:694
 #: internal/web/templates/manager/mediawiki_install.html:72
+#: internal/web/templates/manager/moodle_app.html:749
 #: internal/web/templates/manager/moodle_install.html:64
+#: internal/web/templates/manager/nextcloud_app.html:783
 #: internal/web/templates/manager/nextcloud_install.html:64
+#: internal/web/templates/manager/ojs_app.html:710
 #: internal/web/templates/manager/ojs_install.html:64
+#: internal/web/templates/manager/opencart_app.html:770
 #: internal/web/templates/manager/opencart_install.html:64
 #: internal/web/templates/manager/php_install.html:51
+#: internal/web/templates/manager/phpbb_app.html:452
 #: internal/web/templates/manager/phpbb_install.html:80
+#: internal/web/templates/manager/prestashop_app.html:754
 #: internal/web/templates/manager/prestashop_install.html:64
 #: internal/web/templates/manager/python_node_apps.html:859
+#: internal/web/templates/manager/sofawiki_app.html:323
 #: internal/web/templates/manager/sofawiki_install.html:47
 #: internal/web/templates/manager/tinyfilemanager_install.html:47
 #: internal/web/templates/manager/tinyphotogallery_install.html:47
 #: internal/web/templates/manager/websitebuilder_install.html:46
 #: internal/web/templates/manager/wp/install.html:81
+#: internal/web/templates/manager/wp/single.html:1573
 msgid "subfolder"
 msgstr "alt klasör"
 
@@ -7886,6 +7922,7 @@ msgstr "WordPress içerik yönetim sistemi (CMS)."
 #: internal/web/templates/manager/autoinstaller.html:741
 #: internal/web/templates/manager/autoinstaller.html:773
 #: internal/web/templates/manager/autoinstaller.html:805
+#: internal/web/templates/manager/python_node_apps.html:570
 msgid "No"
 msgstr "Hayır"
 
@@ -7973,6 +8010,7 @@ msgid "Install Drupal"
 msgstr "Drupal Kur"
 
 #: internal/web/templates/manager/autoinstaller.html:130
+#: internal/web/templates/manager/sites.html:243
 #: internal/web/templates/manager/websitebuilder_install.html:9
 msgid "Website Builder"
 msgstr "Web Sitesi Oluşturucu"
@@ -10450,6 +10488,10 @@ msgstr "Flarum kuruluyor:"
 msgid "Flarum installation started. Please wait for the process to finish."
 msgstr "Flarum kurulumu başlatıldı. İşlemin bitmesini bekleyin."
 
+#: internal/web/templates/manager/grapejs_editor.html:9
+msgid "Website Editor"
+msgstr "Web Sitesi Düzenleyici"
+
 #: internal/web/templates/manager/grapejs_editor.html:107
 msgid "Saved successfully!"
 msgstr "Başarıyla kaydedildi!"
@@ -11893,6 +11935,10 @@ msgstr ""
 "Etkinleştirilirse, bu komut özel başlangıç komutundan veya başlangıç "
 "dosyasından önce çalıştırılır:"
 
+#: internal/web/templates/manager/python_node_apps.html:569
+msgid "Yes"
+msgstr "Evet"
+
 #: internal/web/templates/manager/python_node_apps.html:584
 msgid ""
 "Change version, make sure to restart the application afterward by stopping "
@@ -12153,6 +12199,30 @@ msgstr "Site Adı"
 #: internal/web/templates/partials/site_manager_shared.html:444
 msgid "Speed"
 msgstr "Hız"
+
+#: internal/web/templates/manager/sites.html:234
+msgid "NodeJS Containers"
+msgstr "NodeJS Konteynerleri"
+
+#: internal/web/templates/manager/sites.html:235
+msgid "Bun Applications"
+msgstr "Bun Uygulamaları"
+
+#: internal/web/templates/manager/sites.html:236
+msgid "Python Containers"
+msgstr "Python Konteynerleri"
+
+#: internal/web/templates/manager/sites.html:237
+msgid "Ruby Applications"
+msgstr "Ruby Uygulamaları"
+
+#: internal/web/templates/manager/sites.html:238
+msgid "Java Applications"
+msgstr "Java Uygulamaları"
+
+#: internal/web/templates/manager/sites.html:242
+msgid "PHP Applications"
+msgstr "PHP Uygulamaları"
 
 #: internal/web/templates/manager/sites.html:266
 #: internal/web/templates/manager/sites.html:274
@@ -13057,6 +13127,11 @@ msgstr "Oluşturulma Tarihi"
 msgid "Uninstall"
 msgstr "Kaldır"
 
+#: internal/web/templates/manager/wp/list.html:173
+#: internal/web/templates/partials/site_manager_shared.html:68
+msgid "Screenshot of"
+msgstr "Ekran görüntüsü:"
+
 #: internal/web/templates/manager/wp/list.html:243
 msgid "An error occurred while removing WordPress. Please try again."
 msgstr "WordPress kaldırılırken bir hata oluştu. Lütfen tekrar deneyin."
@@ -13799,6 +13874,10 @@ msgstr "İçe Aktar"
 msgid "Format:"
 msgstr "Format:"
 
+#: internal/web/templates/mongodb/databases.html:109
+msgid "Archive"
+msgstr "Arşiv"
+
 #: internal/web/templates/mongodb/databases.html:166
 #: internal/web/templates/mysql/databases.html:528
 #: internal/web/templates/psql/databases.html:232
@@ -14062,6 +14141,7 @@ msgid "Roles"
 msgstr "Roller"
 
 #: internal/web/templates/mongodb/users.html:57
+#: internal/web/templates/mysql/users.html:93
 #: internal/web/templates/psql/users.html:71
 msgid "System User"
 msgstr "Sistem Kullanıcısı"
@@ -14666,6 +14746,10 @@ msgstr "Topluluk Forumları"
 msgid "Sign out"
 msgstr "Çıkış Yap"
 
+#: internal/web/templates/partials/_header.html:12
+msgid "Toggle Sidebar"
+msgstr "Kenar Çubuğunu Aç/Kapat"
+
 #: internal/web/templates/partials/_header.html:81
 msgid "Services"
 msgstr "Hizmetler"
@@ -14974,6 +15058,10 @@ msgstr ""
 "ClamAV antivirüs tarayıcısını kullanarak bu sitenin dosyalarını kötü amaçlı "
 "yazılım için tarayın."
 
+#: internal/web/templates/partials/theme_switcher.html:3
+msgid "Theme"
+msgstr "Tema"
+
 #: internal/web/templates/php/default.html:7
 msgid "Default PHP version"
 msgstr "Varsayılan PHP sürümü"
@@ -15114,6 +15202,14 @@ msgstr "PHP Sürümü Seç"
 #: internal/web/templates/php/extensions.html:255
 msgid "Manage Extensions"
 msgstr "Uzantıları Yönet"
+
+#: internal/web/templates/php/info.html:80
+msgid "PHP Configuration"
+msgstr "PHP Yapılandırması"
+
+#: internal/web/templates/php/info.html:86
+msgid "No PHP information available."
+msgstr "PHP bilgisi mevcut değil."
 
 #: internal/web/templates/php/ini_editor.html:57
 msgid "PHP.INI Editor"
@@ -15793,6 +15889,10 @@ msgid ""
 msgstr ""
 "İşlemle ilişkili terminal. ? işlemin arka planda çalıştığı anlamına gelir."
 
+#: internal/web/templates/system/process_manager.html:174
+msgid "The cumulative CPU time the process has consumed."
+msgstr "İşlemin tükettiği toplam CPU süresi."
+
 #: internal/web/templates/system/process_manager.html:188
 msgid "The command that is running in the container."
 msgstr "Konteynerde çalışan komut."
@@ -16078,6 +16178,10 @@ msgstr "Oluşturulma Tarihi"
 #: internal/web/templates/user/active_sessions.html:81
 msgid "View activity logs"
 msgstr "Etkinlik günlüklerini görüntüle"
+
+#: internal/web/templates/user/active_sessions.html:94
+msgid "Online"
+msgstr "Çevrimiçi"
 
 #: internal/web/templates/user/activity.html:5
 msgid "Destructive"

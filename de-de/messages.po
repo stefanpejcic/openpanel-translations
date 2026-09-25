@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.10\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-09-25 21:59+0200\n"
+"POT-Creation-Date: 2026-09-25 22:15+0200\n"
 "PO-Revision-Date: 2026-06-24 19:00+0200\n"
 "Last-Translator: Svetoslav Slavkov <contact@sslavkov.eu>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -1456,6 +1456,7 @@ msgstr "Containerprotokoll anzeigen"
 
 #: internal/web/templates/cache/service.html:311
 #: internal/web/templates/partials/_search.html:71
+#: internal/web/templates/php/info.html:75
 #: internal/web/templates/system/services.html:73
 #: internal/web/templates/system/services.html:211
 msgid "Service"
@@ -2138,6 +2139,7 @@ msgstr ""
 "nicht mit der neuesten Version getestet wurden."
 
 #: internal/web/templates/dashboard/onboarding.html:753
+#: internal/web/templates/domains/domains.html:348
 #: internal/web/templates/user/activity.html:222
 #: internal/web/templates/user/history_usage.html:96
 msgid "of"
@@ -2952,6 +2954,10 @@ msgstr "Container erreichen ihr CPU-/RAM-/PID-Limit."
 msgid "Error fetching docker stats for containers."
 msgstr "Fehler beim Abrufen der Docker-Statistiken für Container."
 
+#: internal/web/templates/docker/containers.html:332
+msgid "Image"
+msgstr "Image"
+
 #: internal/web/templates/docker/delete_confirm.html:11
 msgid "Delete container"
 msgstr "Container löschen"
@@ -2992,6 +2998,12 @@ msgstr "-- Container auswählen --"
 #: internal/web/templates/docker/logs.html:31
 msgid "-- Lines --"
 msgstr "-- Zeilen --"
+
+#: internal/web/templates/docker/logs.html:37
+#: internal/web/templates/domains/delete.html:62
+#: internal/web/templates/user/activity.html:64
+msgid "All"
+msgstr "Alle"
 
 #: internal/web/templates/docker/logs.html:54
 msgid "Select a container to view its logs here."
@@ -3321,11 +3333,6 @@ msgid "Websites that use this domain name will immediately stop working."
 msgstr ""
 "Webseiten, die diese Domäne verwenden, werden sofort nicht mehr "
 "funktionieren."
-
-#: internal/web/templates/domains/delete.html:62
-#: internal/web/templates/user/activity.html:64
-msgid "All"
-msgstr "Alle"
 
 #: internal/web/templates/domains/delete.html:62
 msgid "email accounts will be deleted, but the messages remain on disk."
@@ -4282,6 +4289,7 @@ msgstr "Details anzeigen"
 #: internal/web/templates/manager/websitebuilder.html:234
 #: internal/web/templates/manager/wp/single.html:1690
 #: internal/web/templates/manager/wp/single.html:1757
+#: internal/web/templates/system/cronjobs_new.html:53
 msgid "or"
 msgstr "oder"
 
@@ -4300,6 +4308,14 @@ msgid ""
 msgstr ""
 "Das Modul oder die Funktion docroot ist nicht aktiviert. Wenden Sie sich an "
 "den Administrator, um docroot zu ändern."
+
+#: internal/web/templates/domains/new.html:78
+msgid "Public Key"
+msgstr "Öffentlicher Schlüssel"
+
+#: internal/web/templates/domains/new.html:92
+msgid "Secret Key"
+msgstr "Geheimer Schlüssel"
 
 #: internal/web/templates/domains/new.html:128
 #: internal/web/templates/domains/new.html:304
@@ -4852,6 +4868,7 @@ msgstr "Liefert an"
 
 #: internal/web/templates/emails/alias_detail.html:34
 #: internal/web/templates/emails/alias_detail.html:207
+#: internal/web/templates/manager/wp/_shared.html:103
 #: internal/web/templates/manager/wp/single.html:1036
 #: internal/web/templates/php/extensions.html:49
 #: internal/web/templates/user/activity.html:149
@@ -7247,6 +7264,10 @@ msgstr "Stattdessen von URL herunterladen"
 msgid "Upload from device instead"
 msgstr "Stattdessen vom Gerät hochladen"
 
+#: internal/web/templates/files/upload_file.html:149
+msgid "Download in progress..."
+msgstr "Download läuft..."
+
 #: internal/web/templates/files/upload_file.html:349
 msgid "Please enter a valid URL."
 msgstr "Bitte geben Sie eine gültige URL ein."
@@ -7356,6 +7377,7 @@ msgstr ""
 #: internal/web/templates/manager/sites.html:210
 #: internal/web/templates/manager/wp/list.html:105
 #: internal/web/templates/manager/wp/single.html:1153
+#: internal/web/templates/php/info.html:76
 #: internal/web/templates/system/server_info.html:98
 msgid "Version"
 msgstr "Version"
@@ -7432,25 +7454,39 @@ msgid "Select a domain"
 msgstr "Wählen Sie eine Domäne aus"
 
 #: internal/web/templates/manager/app_install.html:226
+#: internal/web/templates/manager/dokuwiki_app.html:420
 #: internal/web/templates/manager/dokuwiki_install.html:47
+#: internal/web/templates/manager/drupal_app.html:794
 #: internal/web/templates/manager/drupal_install.html:72
+#: internal/web/templates/manager/flarum_app.html:657
 #: internal/web/templates/manager/flarum_install.html:72
+#: internal/web/templates/manager/joomla_app.html:769
 #: internal/web/templates/manager/joomla_install.html:72
+#: internal/web/templates/manager/matomo_app.html:694
 #: internal/web/templates/manager/matomo_install.html:64
+#: internal/web/templates/manager/mediawiki_app.html:694
 #: internal/web/templates/manager/mediawiki_install.html:72
+#: internal/web/templates/manager/moodle_app.html:749
 #: internal/web/templates/manager/moodle_install.html:64
+#: internal/web/templates/manager/nextcloud_app.html:783
 #: internal/web/templates/manager/nextcloud_install.html:64
+#: internal/web/templates/manager/ojs_app.html:710
 #: internal/web/templates/manager/ojs_install.html:64
+#: internal/web/templates/manager/opencart_app.html:770
 #: internal/web/templates/manager/opencart_install.html:64
 #: internal/web/templates/manager/php_install.html:51
+#: internal/web/templates/manager/phpbb_app.html:452
 #: internal/web/templates/manager/phpbb_install.html:80
+#: internal/web/templates/manager/prestashop_app.html:754
 #: internal/web/templates/manager/prestashop_install.html:64
 #: internal/web/templates/manager/python_node_apps.html:859
+#: internal/web/templates/manager/sofawiki_app.html:323
 #: internal/web/templates/manager/sofawiki_install.html:47
 #: internal/web/templates/manager/tinyfilemanager_install.html:47
 #: internal/web/templates/manager/tinyphotogallery_install.html:47
 #: internal/web/templates/manager/websitebuilder_install.html:46
 #: internal/web/templates/manager/wp/install.html:81
+#: internal/web/templates/manager/wp/single.html:1573
 msgid "subfolder"
 msgstr "Unterordner"
 
@@ -7984,6 +8020,7 @@ msgstr "WordPress-Content-Management-System (CMS)."
 #: internal/web/templates/manager/autoinstaller.html:741
 #: internal/web/templates/manager/autoinstaller.html:773
 #: internal/web/templates/manager/autoinstaller.html:805
+#: internal/web/templates/manager/python_node_apps.html:570
 msgid "No"
 msgstr "Nein"
 
@@ -8071,6 +8108,7 @@ msgid "Install Drupal"
 msgstr "Drupal installieren"
 
 #: internal/web/templates/manager/autoinstaller.html:130
+#: internal/web/templates/manager/sites.html:243
 #: internal/web/templates/manager/websitebuilder_install.html:9
 msgid "Website Builder"
 msgstr "Webseiten-Baumeister"
@@ -10567,6 +10605,10 @@ msgstr ""
 "Flarum-Installation gestartet. Bitte warten Sie, bis der Vorgang "
 "abgeschlossen ist."
 
+#: internal/web/templates/manager/grapejs_editor.html:9
+msgid "Website Editor"
+msgstr "Website-Editor"
+
 #: internal/web/templates/manager/grapejs_editor.html:107
 msgid "Saved successfully!"
 msgstr "Erfolgreich gespeichert!"
@@ -12069,6 +12111,10 @@ msgstr ""
 "Wenn diese Option aktiviert ist, wird dieser Befehl vor dem "
 "benutzerdefinierten Startbefehl oder der Startdatei ausgeführt:"
 
+#: internal/web/templates/manager/python_node_apps.html:569
+msgid "Yes"
+msgstr "Ja"
+
 #: internal/web/templates/manager/python_node_apps.html:584
 msgid ""
 "Change version, make sure to restart the application afterward by stopping "
@@ -12330,6 +12376,30 @@ msgstr "Seitenname"
 #: internal/web/templates/partials/site_manager_shared.html:444
 msgid "Speed"
 msgstr "Geschwindigkeit"
+
+#: internal/web/templates/manager/sites.html:234
+msgid "NodeJS Containers"
+msgstr "NodeJS-Container"
+
+#: internal/web/templates/manager/sites.html:235
+msgid "Bun Applications"
+msgstr "Bun-Anwendungen"
+
+#: internal/web/templates/manager/sites.html:236
+msgid "Python Containers"
+msgstr "Python-Container"
+
+#: internal/web/templates/manager/sites.html:237
+msgid "Ruby Applications"
+msgstr "Ruby-Anwendungen"
+
+#: internal/web/templates/manager/sites.html:238
+msgid "Java Applications"
+msgstr "Java-Anwendungen"
+
+#: internal/web/templates/manager/sites.html:242
+msgid "PHP Applications"
+msgstr "PHP-Anwendungen"
 
 #: internal/web/templates/manager/sites.html:266
 #: internal/web/templates/manager/sites.html:274
@@ -13262,6 +13332,11 @@ msgstr "Erstellt am"
 msgid "Uninstall"
 msgstr "Deinstallieren"
 
+#: internal/web/templates/manager/wp/list.html:173
+#: internal/web/templates/partials/site_manager_shared.html:68
+msgid "Screenshot of"
+msgstr "Screenshot von"
+
 #: internal/web/templates/manager/wp/list.html:243
 msgid "An error occurred while removing WordPress. Please try again."
 msgstr ""
@@ -14012,6 +14087,10 @@ msgstr "Importieren"
 msgid "Format:"
 msgstr "Format:"
 
+#: internal/web/templates/mongodb/databases.html:109
+msgid "Archive"
+msgstr "Archiv"
+
 #: internal/web/templates/mongodb/databases.html:166
 #: internal/web/templates/mysql/databases.html:528
 #: internal/web/templates/psql/databases.html:232
@@ -14274,6 +14353,7 @@ msgid "Roles"
 msgstr "Rollen"
 
 #: internal/web/templates/mongodb/users.html:57
+#: internal/web/templates/mysql/users.html:93
 #: internal/web/templates/psql/users.html:71
 msgid "System User"
 msgstr "Systembenutzer"
@@ -14888,6 +14968,10 @@ msgstr "Community-Foren"
 msgid "Sign out"
 msgstr "Abmelden"
 
+#: internal/web/templates/partials/_header.html:12
+msgid "Toggle Sidebar"
+msgstr "Seitenleiste umschalten"
+
 #: internal/web/templates/partials/_header.html:81
 msgid "Services"
 msgstr "Dienstleistungen"
@@ -15207,6 +15291,10 @@ msgstr ""
 "Durchsuchen Sie die Dateien dieser Website mit dem ClamAV-Virenscanner nach "
 "Malware."
 
+#: internal/web/templates/partials/theme_switcher.html:3
+msgid "Theme"
+msgstr "Design"
+
 #: internal/web/templates/php/default.html:7
 msgid "Default PHP version"
 msgstr "Standard-PHP-Version"
@@ -15347,6 +15435,14 @@ msgstr "PHP-Version auswählen"
 #: internal/web/templates/php/extensions.html:255
 msgid "Manage Extensions"
 msgstr "Erweiterungen verwalten"
+
+#: internal/web/templates/php/info.html:80
+msgid "PHP Configuration"
+msgstr "PHP-Konfiguration"
+
+#: internal/web/templates/php/info.html:86
+msgid "No PHP information available."
+msgstr "Keine PHP-Informationen verfügbar."
 
 #: internal/web/templates/php/ini_editor.html:57
 msgid "PHP.INI Editor"
@@ -16041,6 +16137,10 @@ msgstr ""
 "Das mit dem Prozess verknüpfte Terminal. ? bedeutet, dass der Prozess im "
 "Hintergrund läuft."
 
+#: internal/web/templates/system/process_manager.html:174
+msgid "The cumulative CPU time the process has consumed."
+msgstr "Die gesamte CPU-Zeit, die der Prozess verbraucht hat."
+
 #: internal/web/templates/system/process_manager.html:188
 msgid "The command that is running in the container."
 msgstr "Der im Container ausgeführte Befehl."
@@ -16330,6 +16430,10 @@ msgstr "Erstellt am"
 #: internal/web/templates/user/active_sessions.html:81
 msgid "View activity logs"
 msgstr "Aktivitätsprotokolle anzeigen"
+
+#: internal/web/templates/user/active_sessions.html:94
+msgid "Online"
+msgstr "Online"
 
 #: internal/web/templates/user/activity.html:5
 msgid "Destructive"
