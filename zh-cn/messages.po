@@ -6004,11 +6004,15 @@ msgstr ""
 msgid "Block Author Enumeration"
 msgstr "阻止作者枚举"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:522
+#: openpanel/internal/modules/websites/render_dispatch.go:526
 msgid ""
-"Identifies and blocks requests containing the \"author=\" query parameter, "
-"stopping bots from discovering valid administrative usernames."
-msgstr "识别并阻止包含 \"author=\" 查询参数的请求，防止机器人发现有效的管理员用户名。"
+"Blocks requests containing the \"author=\" query parameter and the REST API "
+"users list (/wp-json/wp/v2/users), stopping bots from discovering valid "
+"administrative usernames. Logged in users can still use the users endpoint, "
+"so the block editor keeps working."
+msgstr ""
+"阻止包含 \"author=\" 查询参数的请求以及 REST API 用户列表（/wp-"
+"json/wp/v2/users），防止机器人发现有效的管理员用户名。已登录用户仍可使用该接口，因此区块编辑器可以继续正常工作。"
 
 #: openpanel/internal/modules/websites/render_dispatch.go:524
 msgid "Protect Sensitive Files"
@@ -6035,11 +6039,14 @@ msgstr "阻止执行存储在缓存目录中的 PHP 脚本，防御 \"cache pois
 msgid "Protect Environment Files"
 msgstr "保护环境文件"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:528
+#: openpanel/internal/modules/websites/render_dispatch.go:522
 msgid ""
-"Blocks public access to .env, .htaccess, and .htpasswd files which often "
-"contain high-value secrets and server configurations."
-msgstr "阻止公开访问 .env、.htaccess 和 .htpasswd 文件，这些文件通常包含重要的密钥和服务器配置。"
+"Blocks public access to .env (including .env.local, .env.production and "
+"similar), .htaccess, and .htpasswd files in any folder, which often contain "
+"high-value secrets and server configurations."
+msgstr ""
+"阻止公开访问任意文件夹中的 .env 文件（包括 .env.local、.env.production 等）、.htaccess 和 .htpasswd"
+" 文件，这些文件通常包含重要的密钥和服务器配置。"
 
 #: openpanel/internal/modules/websites/render_dispatch.go:530
 msgid "Block Malicious Bots"
@@ -6051,6 +6058,33 @@ msgid ""
 "like AhrefsBot, SemrushBot, MJ12bot, and Nikto."
 msgstr ""
 "使用 User-Agent 过滤器阻止激进的爬虫和安全扫描器，如 AhrefsBot、SemrushBot、MJ12bot 和 Nikto。"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid "Disable wp-admin"
+msgstr "禁用 wp-admin"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid ""
+"Returns a 401 error for requests to /wp-admin, completely blocking access to"
+" the WordPress dashboard. admin-ajax.php and admin-post.php stay reachable "
+"so forms and plugins on the site keep working. Turn it off again to log in "
+"to wp-admin."
+msgstr ""
+"对 /wp-admin 的请求返回 401 错误，完全阻止访问 WordPress 仪表板。admin-ajax.php 和 admin-"
+"post.php 仍可访问，因此站点上的表单和插件可以继续正常工作。要登录 wp-admin，请重新关闭此选项。"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid "Mitigate Spam Logins and Comments"
+msgstr "缓解垃圾登录和评论"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid ""
+"Drops POST requests to wp-login.php and wp-comments-post.php that don't come"
+" with a Referer from the same site, stopping bots that submit logins and "
+"comments directly."
+msgstr ""
+"丢弃发往 wp-login.php 和 wp-comments-post.php 且不带同站 Referer 的 POST "
+"请求，阻止直接提交登录和评论的机器人。"
 
 #: openpanel/internal/modules/websites/websitebuilder.go:68
 msgid "Website not found in the database"
@@ -19610,6 +19644,20 @@ msgstr "扫描恶意软件"
 #: openpanel/internal/web/templates/partials/site_manager_shared.html:748
 msgid "Scan this site's files for malware using the ClamAV antivirus scanner."
 msgstr "使用 ClamAV 杀毒引擎扫描此站点的文件以查找恶意软件。"
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:751
+msgid "infected files from this site are in quarantine."
+msgstr "个来自此站点的感染文件已被隔离。"
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:752
+msgid ""
+"The site may have been compromised. Review the files, find how they got "
+"there and update or remove the vulnerable code."
+msgstr "该站点可能已被入侵。请检查这些文件，查明它们是如何出现的，并更新或删除存在漏洞的代码。"
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:786
+msgid "more"
+msgstr "更多"
 
 #: openpanel/internal/web/templates/partials/theme_switcher.html:3
 msgid "Theme"

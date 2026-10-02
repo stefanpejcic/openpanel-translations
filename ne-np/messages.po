@@ -6249,13 +6249,17 @@ msgstr ""
 msgid "Block Author Enumeration"
 msgstr "लेखक सूचीकरण ब्लक गर्नुहोस्"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:522
+#: openpanel/internal/modules/websites/render_dispatch.go:526
 msgid ""
-"Identifies and blocks requests containing the \"author=\" query parameter, "
-"stopping bots from discovering valid administrative usernames."
+"Blocks requests containing the \"author=\" query parameter and the REST API "
+"users list (/wp-json/wp/v2/users), stopping bots from discovering valid "
+"administrative usernames. Logged in users can still use the users endpoint, "
+"so the block editor keeps working."
 msgstr ""
-"\"author=\" क्वेरी प्यारामिटर भएका अनुरोधहरू पहिचान गरी ब्लक गर्छ, जसले "
-"बटहरूलाई मान्य प्रशासकीय प्रयोगकर्ता नामहरू पत्ता लगाउनबाट रोक्छ।"
+"\"author=\" क्वेरी प्यारामिटर भएका अनुरोधहरू र REST API को प्रयोगकर्ता सूची "
+"(/wp-json/wp/v2/users) ब्लक गर्छ, जसले बटहरूलाई मान्य प्रशासकीय प्रयोगकर्ता "
+"नामहरू पत्ता लगाउनबाट रोक्छ। लगइन भएका प्रयोगकर्ताहरूले अझै यो endpoint "
+"प्रयोग गर्न सक्छन्, त्यसैले ब्लक सम्पादक चलिरहन्छ।"
 
 #: openpanel/internal/modules/websites/render_dispatch.go:524
 msgid "Protect Sensitive Files"
@@ -6285,13 +6289,15 @@ msgstr ""
 msgid "Protect Environment Files"
 msgstr "इन्भाइरोनमेन्ट फाइलहरू सुरक्षित गर्नुहोस्"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:528
+#: openpanel/internal/modules/websites/render_dispatch.go:522
 msgid ""
-"Blocks public access to .env, .htaccess, and .htpasswd files which often "
-"contain high-value secrets and server configurations."
+"Blocks public access to .env (including .env.local, .env.production and "
+"similar), .htaccess, and .htpasswd files in any folder, which often contain "
+"high-value secrets and server configurations."
 msgstr ""
-".env, .htaccess र .htpasswd फाइलहरूमा सार्वजनिक पहुँच ब्लक गर्छ, जसमा प्रायः"
-" महत्त्वपूर्ण गोप्य जानकारी र सर्भर कन्फिगरेसनहरू हुन्छन्।"
+"कुनै पनि फोल्डरमा रहेका .env फाइलहरू (.env.local, .env.production र यस्तै "
+"समेत), .htaccess र .htpasswd मा सार्वजनिक पहुँच ब्लक गर्छ, जसमा प्रायः "
+"महत्त्वपूर्ण गोप्य जानकारी र सर्भर कन्फिगरेसनहरू हुन्छन्।"
 
 #: openpanel/internal/modules/websites/render_dispatch.go:530
 msgid "Block Malicious Bots"
@@ -6304,6 +6310,35 @@ msgid ""
 msgstr ""
 "AhrefsBot, SemrushBot, MJ12bot र Nikto जस्ता आक्रामक स्क्रेपरहरू र सुरक्षा "
 "स्क्यानरहरू ब्लक गर्न User-Agent फिल्टर प्रयोग गर्छ।"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid "Disable wp-admin"
+msgstr "wp-admin निष्क्रिय गर्नुहोस्"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid ""
+"Returns a 401 error for requests to /wp-admin, completely blocking access to"
+" the WordPress dashboard. admin-ajax.php and admin-post.php stay reachable "
+"so forms and plugins on the site keep working. Turn it off again to log in "
+"to wp-admin."
+msgstr ""
+"/wp-admin मा आउने अनुरोधहरूका लागि 401 त्रुटि फर्काउँछ, जसले WordPress "
+"ड्यासबोर्डमा पहुँच पूर्ण रूपमा ब्लक गर्छ। admin-ajax.php र admin-post.php "
+"पहुँचयोग्य रहन्छन्, त्यसैले साइटका फारम र प्लगइनहरू चलिरहन्छन्। wp-admin मा "
+"लगइन गर्न यसलाई फेरि बन्द गर्नुहोस्।"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid "Mitigate Spam Logins and Comments"
+msgstr "स्प्याम लगइन र टिप्पणीहरू कम गर्नुहोस्"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid ""
+"Drops POST requests to wp-login.php and wp-comments-post.php that don't come"
+" with a Referer from the same site, stopping bots that submit logins and "
+"comments directly."
+msgstr ""
+"उही साइटको Referer नभएका wp-login.php र wp-comments-post.php मा आउने POST "
+"अनुरोधहरू अस्वीकार गर्छ, जसले सिधै लगइन र टिप्पणी पठाउने बटहरूलाई रोक्छ।"
 
 #: openpanel/internal/modules/websites/websitebuilder.go:68
 msgid "Website not found in the database"
@@ -20306,6 +20341,22 @@ msgid "Scan this site's files for malware using the ClamAV antivirus scanner."
 msgstr ""
 "ClamAV एन्टिभाइरस स्क्यानर प्रयोग गरी यो साइटका फाइलहरूमा मालवेयरका लागि "
 "स्क्यान गर्नुहोस्।"
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:751
+msgid "infected files from this site are in quarantine."
+msgstr "यो साइटका संक्रमित फाइलहरू क्वारेन्टाइनमा छन्।"
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:752
+msgid ""
+"The site may have been compromised. Review the files, find how they got "
+"there and update or remove the vulnerable code."
+msgstr ""
+"साइटमा सम्झौता भएको हुन सक्छ। फाइलहरू समीक्षा गर्नुहोस्, तिनीहरू त्यहाँ कसरी"
+" पुगे पत्ता लगाउनुहोस् र कमजोर कोड अद्यावधिक गर्नुहोस् वा हटाउनुहोस्।"
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:786
+msgid "more"
+msgstr "थप"
 
 #: openpanel/internal/web/templates/partials/theme_switcher.html:3
 msgid "Theme"

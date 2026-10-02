@@ -6289,13 +6289,17 @@ msgstr ""
 msgid "Block Author Enumeration"
 msgstr "Blokuj wyliczanie autorów"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:522
+#: openpanel/internal/modules/websites/render_dispatch.go:526
 msgid ""
-"Identifies and blocks requests containing the \"author=\" query parameter, "
-"stopping bots from discovering valid administrative usernames."
+"Blocks requests containing the \"author=\" query parameter and the REST API "
+"users list (/wp-json/wp/v2/users), stopping bots from discovering valid "
+"administrative usernames. Logged in users can still use the users endpoint, "
+"so the block editor keeps working."
 msgstr ""
-"Wykrywa i blokuje żądania zawierające parametr \"author=\", uniemożliwiając "
-"botom odkrycie prawidłowych nazw użytkowników administratorów."
+"Blokuje żądania zawierające parametr \"author=\" oraz listę użytkowników "
+"REST API (/wp-json/wp/v2/users), uniemożliwiając botom odkrycie prawidłowych"
+" nazw użytkowników administratorów. Zalogowani użytkownicy nadal mogą "
+"korzystać z tego endpointu, więc edytor bloków działa dalej."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:524
 msgid "Protect Sensitive Files"
@@ -6327,13 +6331,15 @@ msgstr ""
 msgid "Protect Environment Files"
 msgstr "Chroń pliki środowiskowe"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:528
+#: openpanel/internal/modules/websites/render_dispatch.go:522
 msgid ""
-"Blocks public access to .env, .htaccess, and .htpasswd files which often "
-"contain high-value secrets and server configurations."
+"Blocks public access to .env (including .env.local, .env.production and "
+"similar), .htaccess, and .htpasswd files in any folder, which often contain "
+"high-value secrets and server configurations."
 msgstr ""
-"Blokuje publiczny dostęp do plików .env, .htaccess i .htpasswd, które często"
-" zawierają cenne sekrety i konfigurację serwera."
+"Blokuje publiczny dostęp do plików .env (w tym .env.local, .env.production i"
+" podobnych), .htaccess i .htpasswd w dowolnym folderze, które często "
+"zawierają cenne sekrety i konfigurację serwera."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:530
 msgid "Block Malicious Bots"
@@ -6346,6 +6352,36 @@ msgid ""
 msgstr ""
 "Używa filtra User-Agent do blokowania agresywnych scraperów i skanerów "
 "bezpieczeństwa, takich jak AhrefsBot, SemrushBot, MJ12bot i Nikto."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid "Disable wp-admin"
+msgstr "Wyłącz wp-admin"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid ""
+"Returns a 401 error for requests to /wp-admin, completely blocking access to"
+" the WordPress dashboard. admin-ajax.php and admin-post.php stay reachable "
+"so forms and plugins on the site keep working. Turn it off again to log in "
+"to wp-admin."
+msgstr ""
+"Zwraca błąd 401 dla żądań do /wp-admin, całkowicie blokując dostęp do "
+"kokpitu WordPress. admin-ajax.php i admin-post.php pozostają dostępne, więc "
+"formularze i wtyczki na stronie nadal działają. Wyłącz tę opcję ponownie, "
+"aby zalogować się do wp-admin."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid "Mitigate Spam Logins and Comments"
+msgstr "Ograniczaj spamowe logowania i komentarze"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid ""
+"Drops POST requests to wp-login.php and wp-comments-post.php that don't come"
+" with a Referer from the same site, stopping bots that submit logins and "
+"comments directly."
+msgstr ""
+"Odrzuca żądania POST do wp-login.php i wp-comments-post.php, które nie "
+"zawierają nagłówka Referer z tej samej strony, zatrzymując boty wysyłające "
+"logowania i komentarze bezpośrednio."
 
 #: openpanel/internal/modules/websites/websitebuilder.go:68
 msgid "Website not found in the database"
@@ -20442,6 +20478,22 @@ msgid "Scan this site's files for malware using the ClamAV antivirus scanner."
 msgstr ""
 "Przeskanuj pliki tej strony w poszukiwaniu złośliwego oprogramowania za "
 "pomocą skanera antywirusowego ClamAV."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:751
+msgid "infected files from this site are in quarantine."
+msgstr "zainfekowanych plików z tej strony znajduje się w kwarantannie."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:752
+msgid ""
+"The site may have been compromised. Review the files, find how they got "
+"there and update or remove the vulnerable code."
+msgstr ""
+"Strona mogła zostać przejęta. Przejrzyj pliki, ustal, jak się tam znalazły, "
+"i zaktualizuj lub usuń podatny kod."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:786
+msgid "more"
+msgstr "więcej"
 
 #: openpanel/internal/web/templates/partials/theme_switcher.html:3
 msgid "Theme"

@@ -6369,14 +6369,18 @@ msgstr ""
 msgid "Block Author Enumeration"
 msgstr "Szerzők felsorolásának tiltása"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:522
+#: openpanel/internal/modules/websites/render_dispatch.go:526
 msgid ""
-"Identifies and blocks requests containing the \"author=\" query parameter, "
-"stopping bots from discovering valid administrative usernames."
+"Blocks requests containing the \"author=\" query parameter and the REST API "
+"users list (/wp-json/wp/v2/users), stopping bots from discovering valid "
+"administrative usernames. Logged in users can still use the users endpoint, "
+"so the block editor keeps working."
 msgstr ""
-"Felismeri és blokkolja az \"author=\" lekérdezési paramétert tartalmazó "
-"kéréseket, így a botok nem tudják kideríteni az érvényes adminisztrátori "
-"felhasználóneveket."
+"Blokkolja az \"author=\" lekérdezési paramétert tartalmazó kéréseket és a "
+"REST API felhasználólistáját (/wp-json/wp/v2/users), így a botok nem tudják "
+"kideríteni az érvényes adminisztrátori felhasználóneveket. A bejelentkezett "
+"felhasználók továbbra is használhatják ezt a végpontot, így a "
+"blokkszerkesztő működik."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:524
 msgid "Protect Sensitive Files"
@@ -6407,13 +6411,16 @@ msgstr ""
 msgid "Protect Environment Files"
 msgstr "Környezeti fájlok védelme"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:528
+#: openpanel/internal/modules/websites/render_dispatch.go:522
 msgid ""
-"Blocks public access to .env, .htaccess, and .htpasswd files which often "
-"contain high-value secrets and server configurations."
+"Blocks public access to .env (including .env.local, .env.production and "
+"similar), .htaccess, and .htpasswd files in any folder, which often contain "
+"high-value secrets and server configurations."
 msgstr ""
-"Blokkolja a nyilvános hozzáférést a .env, .htaccess és .htpasswd fájlokhoz, "
-"amelyek gyakran értékes titkokat és szerverkonfigurációkat tartalmaznak."
+"Blokkolja a nyilvános hozzáférést a .env fájlokhoz (beleértve a .env.local, "
+".env.production és hasonló fájlokat), valamint a .htaccess és .htpasswd "
+"fájlokhoz bármely mappában, amelyek gyakran értékes titkokat és "
+"szerverkonfigurációkat tartalmaznak."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:530
 msgid "Block Malicious Bots"
@@ -6426,6 +6433,36 @@ msgid ""
 msgstr ""
 "User-Agent szűrővel blokkolja az agresszív adatgyűjtőket és biztonsági "
 "szkennereket, mint az AhrefsBot, SemrushBot, MJ12bot és Nikto."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid "Disable wp-admin"
+msgstr "wp-admin letiltása"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid ""
+"Returns a 401 error for requests to /wp-admin, completely blocking access to"
+" the WordPress dashboard. admin-ajax.php and admin-post.php stay reachable "
+"so forms and plugins on the site keep working. Turn it off again to log in "
+"to wp-admin."
+msgstr ""
+"401-es hibát ad vissza a /wp-admin kérésekre, így teljesen letiltja a "
+"WordPress vezérlőpult elérését. Az admin-ajax.php és az admin-post.php "
+"elérhető marad, így a webhely űrlapjai és bővítményei továbbra is működnek. "
+"Kapcsolja ki újra, ha be szeretne lépni a wp-adminba."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid "Mitigate Spam Logins and Comments"
+msgstr "Spam bejelentkezések és hozzászólások visszaszorítása"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid ""
+"Drops POST requests to wp-login.php and wp-comments-post.php that don't come"
+" with a Referer from the same site, stopping bots that submit logins and "
+"comments directly."
+msgstr ""
+"Eldobja a wp-login.php és a wp-comments-post.php felé küldött POST "
+"kéréseket, amelyekben nincs ugyanarról a webhelyről származó Referer, így "
+"megállítja a közvetlenül bejelentkezést és hozzászólást küldő botokat."
 
 #: openpanel/internal/modules/websites/websitebuilder.go:68
 msgid "Website not found in the database"
@@ -20575,6 +20612,22 @@ msgid "Scan this site's files for malware using the ClamAV antivirus scanner."
 msgstr ""
 "Vizsgálja meg a webhely fájljait kártevők után a ClamAV vírusirtó "
 "szkennerrel."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:751
+msgid "infected files from this site are in quarantine."
+msgstr "fertőzött fájl ebből a webhelyből karanténban van."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:752
+msgid ""
+"The site may have been compromised. Review the files, find how they got "
+"there and update or remove the vulnerable code."
+msgstr ""
+"Lehet, hogy a webhelyet feltörték. Nézze át a fájlokat, derítse ki, hogyan "
+"kerültek oda, és frissítse vagy távolítsa el a sebezhető kódot."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:786
+msgid "more"
+msgstr "további"
 
 #: openpanel/internal/web/templates/partials/theme_switcher.html:3
 msgid "Theme"

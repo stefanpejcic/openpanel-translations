@@ -6181,13 +6181,17 @@ msgstr ""
 msgid "Block Author Enumeration"
 msgstr "ບລັອກການລະບຸຜູ້ຂຽນ"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:522
+#: openpanel/internal/modules/websites/render_dispatch.go:526
 msgid ""
-"Identifies and blocks requests containing the \"author=\" query parameter, "
-"stopping bots from discovering valid administrative usernames."
+"Blocks requests containing the \"author=\" query parameter and the REST API "
+"users list (/wp-json/wp/v2/users), stopping bots from discovering valid "
+"administrative usernames. Logged in users can still use the users endpoint, "
+"so the block editor keeps working."
 msgstr ""
-"ກວດຫາ ແລະ ບລັອກຄຳຮ້ອງທີ່ມີພາຣາມິເຕີ \"author=\", "
-"ຢຸດບັອດບໍ່ໃຫ້ຄົ້ນພົບຊື່ຜູ້ໃຊ້ຜູ້ດູແລທີ່ຖືກຕ້ອງ."
+"ບລັອກຄຳຮ້ອງທີ່ມີພາຣາມິເຕີ \"author=\" ແລະ ລາຍຊື່ຜູ້ໃຊ້ຂອງ REST API (/wp-"
+"json/wp/v2/users), ຢຸດບັອດບໍ່ໃຫ້ຄົ້ນພົບຊື່ຜູ້ໃຊ້ຜູ້ດູແລທີ່ຖືກຕ້ອງ. "
+"ຜູ້ໃຊ້ທີ່ເຂົ້າສູ່ລະບົບແລ້ວຍັງໃຊ້ endpoint ນີ້ໄດ້ "
+"ເພື່ອໃຫ້ຕົວແກ້ໄຂບລັອກເຮັດວຽກຕໍ່ໄປ."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:524
 msgid "Protect Sensitive Files"
@@ -6217,12 +6221,14 @@ msgstr ""
 msgid "Protect Environment Files"
 msgstr "ປົກປ້ອງໄຟລ໌ Environment"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:528
+#: openpanel/internal/modules/websites/render_dispatch.go:522
 msgid ""
-"Blocks public access to .env, .htaccess, and .htpasswd files which often "
-"contain high-value secrets and server configurations."
+"Blocks public access to .env (including .env.local, .env.production and "
+"similar), .htaccess, and .htpasswd files in any folder, which often contain "
+"high-value secrets and server configurations."
 msgstr ""
-"ບລັອກການເຂົ້າເຖິງສາທາລະນະຕໍ່ໄຟລ໌ .env, .htaccess ແລະ .htpasswd "
+"ບລັອກການເຂົ້າເຖິງສາທາລະນະຕໍ່ໄຟລ໌ .env (ລວມທັງ .env.local, .env.production "
+"ແລະ ອື່ນໆທີ່ຄ້າຍກັນ), .htaccess ແລະ .htpasswd ໃນທຸກໂຟນເດີ "
 "ທີ່ມັກມີຂໍ້ມູນລັບສຳຄັນ ແລະ ການຕັ້ງຄ່າເຊີບເວີ."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:530
@@ -6236,6 +6242,35 @@ msgid ""
 msgstr ""
 "ໃຊ້ຕົວກອງ User-Agent ເພື່ອບລັອກ scraper ທີ່ຮຸນແຮງ ແລະ ຕົວສະແກນຄວາມປອດໄພເຊັ່ນ"
 " AhrefsBot, SemrushBot, MJ12bot ແລະ Nikto."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid "Disable wp-admin"
+msgstr "ປິດການໃຊ້ງານ wp-admin"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid ""
+"Returns a 401 error for requests to /wp-admin, completely blocking access to"
+" the WordPress dashboard. admin-ajax.php and admin-post.php stay reachable "
+"so forms and plugins on the site keep working. Turn it off again to log in "
+"to wp-admin."
+msgstr ""
+"ສົ່ງຄືນຂໍ້ຜິດພາດ 401 ສຳລັບຄຳຮ້ອງໄປຫາ /wp-admin, ບລັອກການເຂົ້າເຖິງໜ້າຄວບຄຸມ "
+"WordPress ທັງໝົດ. admin-ajax.php ແລະ admin-post.php ຍັງເຂົ້າເຖິງໄດ້ "
+"ເພື່ອໃຫ້ແບບຟອມ ແລະ ປລັກອິນໃນເວັບໄຊທ໌ເຮັດວຽກຕໍ່ໄປ. "
+"ປິດມັນອີກຄັ້ງເພື່ອເຂົ້າສູ່ລະບົບ wp-admin."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid "Mitigate Spam Logins and Comments"
+msgstr "ຫຼຸດຜ່ອນການເຂົ້າສູ່ລະບົບ ແລະ ຄຳເຫັນສະແປມ"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid ""
+"Drops POST requests to wp-login.php and wp-comments-post.php that don't come"
+" with a Referer from the same site, stopping bots that submit logins and "
+"comments directly."
+msgstr ""
+"ປະຕິເສດຄຳຮ້ອງ POST ໄປຫາ wp-login.php ແລະ wp-comments-post.php ທີ່ບໍ່ມີ "
+"Referer ຈາກເວັບໄຊທ໌ດຽວກັນ, ຢຸດບັອດທີ່ສົ່ງການເຂົ້າສູ່ລະບົບ ແລະ ຄຳເຫັນໂດຍກົງ."
 
 #: openpanel/internal/modules/websites/websitebuilder.go:68
 msgid "Website not found in the database"
@@ -20160,6 +20195,22 @@ msgstr "ສະແກນຫາມັນແວປະສົງຮ້າຍ"
 msgid "Scan this site's files for malware using the ClamAV antivirus scanner."
 msgstr ""
 "ສະແກນໄຟລ໌ຂອງເວັບໄຊທ໌ນີ້ເພື່ອຫາມັນແວປະສົງຮ້າຍໂດຍໃຊ້ໂປຣແກຣມສະແກນໄວຣັສ ClamAV."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:751
+msgid "infected files from this site are in quarantine."
+msgstr "ໄຟລ໌ທີ່ຕິດເຊື້ອຈາກເວັບໄຊທ໌ນີ້ຢູ່ໃນການກັກກັນ."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:752
+msgid ""
+"The site may have been compromised. Review the files, find how they got "
+"there and update or remove the vulnerable code."
+msgstr ""
+"ເວັບໄຊທ໌ອາດຖືກບຸກລຸກ. ກວດສອບໄຟລ໌, ຊອກຫາວ່າພວກມັນມາຢູ່ທີ່ນັ້ນໄດ້ແນວໃດ ແລະ "
+"ອັບເດດ ຫຼື ລຶບໂຄດທີ່ມີຊ່ອງໂຫວ່."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:786
+msgid "more"
+msgstr "ເພີ່ມເຕີມ"
 
 #: openpanel/internal/web/templates/partials/theme_switcher.html:3
 msgid "Theme"

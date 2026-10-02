@@ -6274,13 +6274,17 @@ msgstr ""
 msgid "Block Author Enumeration"
 msgstr "Заблокувати перелічення авторів"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:522
+#: openpanel/internal/modules/websites/render_dispatch.go:526
 msgid ""
-"Identifies and blocks requests containing the \"author=\" query parameter, "
-"stopping bots from discovering valid administrative usernames."
+"Blocks requests containing the \"author=\" query parameter and the REST API "
+"users list (/wp-json/wp/v2/users), stopping bots from discovering valid "
+"administrative usernames. Logged in users can still use the users endpoint, "
+"so the block editor keeps working."
 msgstr ""
-"Розпізнає та блокує запити з параметром \"author=\", не даючи ботам "
-"дізнаватися дійсні імена адміністраторів."
+"Блокує запити з параметром \"author=\" і список користувачів REST API (/wp-"
+"json/wp/v2/users), не даючи ботам дізнаватися дійсні імена адміністраторів. "
+"Користувачі, які увійшли в систему, і надалі можуть використовувати цю "
+"адресу, тому блоковий редактор продовжує працювати."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:524
 msgid "Protect Sensitive Files"
@@ -6310,13 +6314,15 @@ msgstr ""
 msgid "Protect Environment Files"
 msgstr "Захистити файли оточення"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:528
+#: openpanel/internal/modules/websites/render_dispatch.go:522
 msgid ""
-"Blocks public access to .env, .htaccess, and .htpasswd files which often "
-"contain high-value secrets and server configurations."
+"Blocks public access to .env (including .env.local, .env.production and "
+"similar), .htaccess, and .htpasswd files in any folder, which often contain "
+"high-value secrets and server configurations."
 msgstr ""
-"Блокує публічний доступ до файлів .env, .htaccess і .htpasswd, які часто "
-"містять цінні секрети та конфігурацію сервера."
+"Блокує публічний доступ до файлів .env (зокрема .env.local, .env.production "
+"і подібних), .htaccess і .htpasswd у будь-якій папці, які часто містять "
+"цінні секрети та конфігурацію сервера."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:530
 msgid "Block Malicious Bots"
@@ -6329,6 +6335,36 @@ msgid ""
 msgstr ""
 "Використовує фільтр User-Agent для блокування агресивних парсерів і сканерів"
 " безпеки, як-от AhrefsBot, SemrushBot, MJ12bot і Nikto."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid "Disable wp-admin"
+msgstr "Вимкнути wp-admin"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid ""
+"Returns a 401 error for requests to /wp-admin, completely blocking access to"
+" the WordPress dashboard. admin-ajax.php and admin-post.php stay reachable "
+"so forms and plugins on the site keep working. Turn it off again to log in "
+"to wp-admin."
+msgstr ""
+"Повертає помилку 401 на запити до /wp-admin, повністю блокуючи доступ до "
+"панелі керування WordPress. admin-ajax.php і admin-post.php залишаються "
+"доступними, тому форми та плагіни на сайті продовжують працювати. Вимкніть "
+"опцію знову, щоб увійти в wp-admin."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid "Mitigate Spam Logins and Comments"
+msgstr "Обмежити спам-входи та коментарі"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid ""
+"Drops POST requests to wp-login.php and wp-comments-post.php that don't come"
+" with a Referer from the same site, stopping bots that submit logins and "
+"comments directly."
+msgstr ""
+"Відхиляє POST-запити до wp-login.php і wp-comments-post.php без Referer з "
+"того самого сайту, зупиняючи ботів, які надсилають входи та коментарі "
+"напряму."
 
 #: openpanel/internal/modules/websites/websitebuilder.go:68
 msgid "Website not found in the database"
@@ -20400,6 +20436,22 @@ msgid "Scan this site's files for malware using the ClamAV antivirus scanner."
 msgstr ""
 "Скануйте файли цього сайту на шкідливе ПЗ за допомогою антивірусного сканера"
 " ClamAV."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:751
+msgid "infected files from this site are in quarantine."
+msgstr "заражених файлів цього сайту перебувають у карантині."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:752
+msgid ""
+"The site may have been compromised. Review the files, find how they got "
+"there and update or remove the vulnerable code."
+msgstr ""
+"Можливо, сайт було зламано. Перегляньте файли, з'ясуйте, як вони туди "
+"потрапили, і оновіть або видаліть вразливий код."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:786
+msgid "more"
+msgstr "ще"
 
 #: openpanel/internal/web/templates/partials/theme_switcher.html:3
 msgid "Theme"

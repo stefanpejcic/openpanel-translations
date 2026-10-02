@@ -6278,13 +6278,17 @@ msgstr ""
 msgid "Block Author Enumeration"
 msgstr "Blockera uppräkning av författare"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:522
+#: openpanel/internal/modules/websites/render_dispatch.go:526
 msgid ""
-"Identifies and blocks requests containing the \"author=\" query parameter, "
-"stopping bots from discovering valid administrative usernames."
+"Blocks requests containing the \"author=\" query parameter and the REST API "
+"users list (/wp-json/wp/v2/users), stopping bots from discovering valid "
+"administrative usernames. Logged in users can still use the users endpoint, "
+"so the block editor keeps working."
 msgstr ""
-"Identifierar och blockerar förfrågningar med frågeparametern \"author=\" och"
-" hindrar botar från att hitta giltiga administratörsanvändarnamn."
+"Blockerar förfrågningar med frågeparametern \"author=\" och REST API:ets "
+"användarlista (/wp-json/wp/v2/users) och hindrar botar från att hitta "
+"giltiga administratörsanvändarnamn. Inloggade användare kan fortfarande "
+"använda slutpunkten, så blockredigeraren fortsätter att fungera."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:524
 msgid "Protect Sensitive Files"
@@ -6314,12 +6318,14 @@ msgstr ""
 msgid "Protect Environment Files"
 msgstr "Skydda miljöfiler"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:528
+#: openpanel/internal/modules/websites/render_dispatch.go:522
 msgid ""
-"Blocks public access to .env, .htaccess, and .htpasswd files which often "
-"contain high-value secrets and server configurations."
+"Blocks public access to .env (including .env.local, .env.production and "
+"similar), .htaccess, and .htpasswd files in any folder, which often contain "
+"high-value secrets and server configurations."
 msgstr ""
-"Blockerar offentlig åtkomst till filerna .env, .htaccess och .htpasswd, som "
+"Blockerar offentlig åtkomst till .env-filer (inklusive .env.local, "
+".env.production och liknande), .htaccess och .htpasswd i alla mappar, som "
 "ofta innehåller värdefulla hemligheter och serverkonfiguration."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:530
@@ -6333,6 +6339,36 @@ msgid ""
 msgstr ""
 "Använder ett User-Agent-filter för att blockera aggressiva skrapare och "
 "säkerhetsskannrar som AhrefsBot, SemrushBot, MJ12bot och Nikto."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid "Disable wp-admin"
+msgstr "Inaktivera wp-admin"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid ""
+"Returns a 401 error for requests to /wp-admin, completely blocking access to"
+" the WordPress dashboard. admin-ajax.php and admin-post.php stay reachable "
+"so forms and plugins on the site keep working. Turn it off again to log in "
+"to wp-admin."
+msgstr ""
+"Returnerar ett 401-fel för förfrågningar till /wp-admin och blockerar helt "
+"åtkomsten till WordPress-panelen. admin-ajax.php och admin-post.php är "
+"fortfarande nåbara så att formulär och tillägg på webbplatsen fortsätter att"
+" fungera. Stäng av den igen för att logga in i wp-admin."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid "Mitigate Spam Logins and Comments"
+msgstr "Begränsa spaminloggningar och kommentarer"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid ""
+"Drops POST requests to wp-login.php and wp-comments-post.php that don't come"
+" with a Referer from the same site, stopping bots that submit logins and "
+"comments directly."
+msgstr ""
+"Avvisar POST-förfrågningar till wp-login.php och wp-comments-post.php som "
+"saknar en Referer från samma webbplats och stoppar botar som skickar "
+"inloggningar och kommentarer direkt."
 
 #: openpanel/internal/modules/websites/websitebuilder.go:68
 msgid "Website not found in the database"
@@ -20403,6 +20439,22 @@ msgid "Scan this site's files for malware using the ClamAV antivirus scanner."
 msgstr ""
 "Sök igenom webbplatsens filer efter skadlig kod med antivirusprogrammet "
 "ClamAV."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:751
+msgid "infected files from this site are in quarantine."
+msgstr "infekterade filer från den här webbplatsen ligger i karantän."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:752
+msgid ""
+"The site may have been compromised. Review the files, find how they got "
+"there and update or remove the vulnerable code."
+msgstr ""
+"Webbplatsen kan ha blivit komprometterad. Granska filerna, ta reda på hur de"
+" hamnade där och uppdatera eller ta bort den sårbara koden."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:786
+msgid "more"
+msgstr "till"
 
 #: openpanel/internal/web/templates/partials/theme_switcher.html:3
 msgid "Theme"

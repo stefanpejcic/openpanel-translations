@@ -6372,14 +6372,18 @@ msgstr ""
 msgid "Block Author Enumeration"
 msgstr "Bloquear enumeración de autores"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:522
+#: openpanel/internal/modules/websites/render_dispatch.go:526
 msgid ""
-"Identifies and blocks requests containing the \"author=\" query parameter, "
-"stopping bots from discovering valid administrative usernames."
+"Blocks requests containing the \"author=\" query parameter and the REST API "
+"users list (/wp-json/wp/v2/users), stopping bots from discovering valid "
+"administrative usernames. Logged in users can still use the users endpoint, "
+"so the block editor keeps working."
 msgstr ""
-"Identifica y bloquea las solicitudes que contienen el parámetro \"author=\","
-" impidiendo que los bots descubran nombres de usuario administrativos "
-"válidos."
+"Bloquea las solicitudes que contienen el parámetro \"author=\" y la lista de"
+" usuarios de la API REST (/wp-json/wp/v2/users), impidiendo que los bots "
+"descubran nombres de usuario administrativos válidos. Los usuarios que han "
+"iniciado sesión pueden seguir usando ese endpoint, por lo que el editor de "
+"bloques sigue funcionando."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:524
 msgid "Protect Sensitive Files"
@@ -6409,13 +6413,15 @@ msgstr ""
 msgid "Protect Environment Files"
 msgstr "Proteger archivos de entorno"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:528
+#: openpanel/internal/modules/websites/render_dispatch.go:522
 msgid ""
-"Blocks public access to .env, .htaccess, and .htpasswd files which often "
-"contain high-value secrets and server configurations."
+"Blocks public access to .env (including .env.local, .env.production and "
+"similar), .htaccess, and .htpasswd files in any folder, which often contain "
+"high-value secrets and server configurations."
 msgstr ""
-"Bloquea el acceso público a los archivos .env, .htaccess y .htpasswd, que "
-"suelen contener secretos valiosos y configuraciones del servidor."
+"Bloquea el acceso público a los archivos .env (incluidos .env.local, "
+".env.production y similares), .htaccess y .htpasswd en cualquier carpeta, "
+"que suelen contener secretos valiosos y configuraciones del servidor."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:530
 msgid "Block Malicious Bots"
@@ -6428,6 +6434,36 @@ msgid ""
 msgstr ""
 "Usa un filtro de User-Agent para bloquear scrapers agresivos y escáneres de "
 "seguridad como AhrefsBot, SemrushBot, MJ12bot y Nikto."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid "Disable wp-admin"
+msgstr "Desactivar wp-admin"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid ""
+"Returns a 401 error for requests to /wp-admin, completely blocking access to"
+" the WordPress dashboard. admin-ajax.php and admin-post.php stay reachable "
+"so forms and plugins on the site keep working. Turn it off again to log in "
+"to wp-admin."
+msgstr ""
+"Devuelve un error 401 para las solicitudes a /wp-admin y bloquea por "
+"completo el acceso al panel de WordPress. admin-ajax.php y admin-post.php "
+"siguen accesibles para que los formularios y plugins del sitio sigan "
+"funcionando. Desactívelo de nuevo para iniciar sesión en wp-admin."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid "Mitigate Spam Logins and Comments"
+msgstr "Mitigar inicios de sesión y comentarios de spam"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid ""
+"Drops POST requests to wp-login.php and wp-comments-post.php that don't come"
+" with a Referer from the same site, stopping bots that submit logins and "
+"comments directly."
+msgstr ""
+"Descarta las solicitudes POST a wp-login.php y wp-comments-post.php que no "
+"incluyen un Referer del mismo sitio, deteniendo a los bots que envían "
+"inicios de sesión y comentarios directamente."
 
 #: openpanel/internal/modules/websites/websitebuilder.go:68
 msgid "Website not found in the database"
@@ -20666,6 +20702,22 @@ msgid "Scan this site's files for malware using the ClamAV antivirus scanner."
 msgstr ""
 "Analice los archivos de este sitio en busca de malware usando el antivirus "
 "ClamAV."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:751
+msgid "infected files from this site are in quarantine."
+msgstr "archivos infectados de este sitio están en cuarentena."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:752
+msgid ""
+"The site may have been compromised. Review the files, find how they got "
+"there and update or remove the vulnerable code."
+msgstr ""
+"Es posible que el sitio haya sido comprometido. Revise los archivos, "
+"averigüe cómo llegaron allí y actualice o elimine el código vulnerable."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:786
+msgid "more"
+msgstr "más"
 
 #: openpanel/internal/web/templates/partials/theme_switcher.html:3
 msgid "Theme"

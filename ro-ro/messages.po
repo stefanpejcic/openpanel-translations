@@ -6357,14 +6357,18 @@ msgstr ""
 msgid "Block Author Enumeration"
 msgstr "Blochează enumerarea autorilor"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:522
+#: openpanel/internal/modules/websites/render_dispatch.go:526
 msgid ""
-"Identifies and blocks requests containing the \"author=\" query parameter, "
-"stopping bots from discovering valid administrative usernames."
+"Blocks requests containing the \"author=\" query parameter and the REST API "
+"users list (/wp-json/wp/v2/users), stopping bots from discovering valid "
+"administrative usernames. Logged in users can still use the users endpoint, "
+"so the block editor keeps working."
 msgstr ""
-"Identifică și blochează cererile care conțin parametrul \"author=\", "
-"împiedicând boții să descopere nume de utilizator valide ale "
-"administratorilor."
+"Blochează cererile care conțin parametrul \"author=\" și lista de "
+"utilizatori din API-ul REST (/wp-json/wp/v2/users), împiedicând boții să "
+"descopere nume de utilizator valide ale administratorilor. Utilizatorii "
+"autentificați pot folosi în continuare acest endpoint, astfel încât editorul"
+" de blocuri continuă să funcționeze."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:524
 msgid "Protect Sensitive Files"
@@ -6395,13 +6399,15 @@ msgstr ""
 msgid "Protect Environment Files"
 msgstr "Protejează fișierele de mediu"
 
-#: openpanel/internal/modules/websites/render_dispatch.go:528
+#: openpanel/internal/modules/websites/render_dispatch.go:522
 msgid ""
-"Blocks public access to .env, .htaccess, and .htpasswd files which often "
-"contain high-value secrets and server configurations."
+"Blocks public access to .env (including .env.local, .env.production and "
+"similar), .htaccess, and .htpasswd files in any folder, which often contain "
+"high-value secrets and server configurations."
 msgstr ""
-"Blochează accesul public la fișierele .env, .htaccess și .htpasswd, care "
-"conțin adesea secrete valoroase și configurații ale serverului."
+"Blochează accesul public la fișierele .env (inclusiv .env.local, "
+".env.production și altele similare), .htaccess și .htpasswd din orice "
+"folder, care conțin adesea secrete valoroase și configurații ale serverului."
 
 #: openpanel/internal/modules/websites/render_dispatch.go:530
 msgid "Block Malicious Bots"
@@ -6414,6 +6420,36 @@ msgid ""
 msgstr ""
 "Folosește un filtru User-Agent pentru a bloca scraperele agresive și "
 "scanerele de securitate precum AhrefsBot, SemrushBot, MJ12bot și Nikto."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid "Disable wp-admin"
+msgstr "Dezactivează wp-admin"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:512
+msgid ""
+"Returns a 401 error for requests to /wp-admin, completely blocking access to"
+" the WordPress dashboard. admin-ajax.php and admin-post.php stay reachable "
+"so forms and plugins on the site keep working. Turn it off again to log in "
+"to wp-admin."
+msgstr ""
+"Returnează o eroare 401 pentru cererile către /wp-admin, blocând complet "
+"accesul la panoul de control WordPress. admin-ajax.php și admin-post.php "
+"rămân accesibile, astfel încât formularele și modulele de pe site continuă "
+"să funcționeze. Dezactivează-l din nou pentru a te autentifica în wp-admin."
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid "Mitigate Spam Logins and Comments"
+msgstr "Limitează autentificările și comentariile spam"
+
+#: openpanel/internal/modules/websites/render_dispatch.go:514
+msgid ""
+"Drops POST requests to wp-login.php and wp-comments-post.php that don't come"
+" with a Referer from the same site, stopping bots that submit logins and "
+"comments directly."
+msgstr ""
+"Respinge cererile POST către wp-login.php și wp-comments-post.php care nu au"
+" un Referer de pe același site, oprind boții care trimit direct "
+"autentificări și comentarii."
 
 #: openpanel/internal/modules/websites/websitebuilder.go:68
 msgid "Website not found in the database"
@@ -20589,6 +20625,22 @@ msgid "Scan this site's files for malware using the ClamAV antivirus scanner."
 msgstr ""
 "Scanează fișierele acestui site după malware folosind scanerul antivirus "
 "ClamAV."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:751
+msgid "infected files from this site are in quarantine."
+msgstr "fișiere infectate de pe acest site sunt în carantină."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:752
+msgid ""
+"The site may have been compromised. Review the files, find how they got "
+"there and update or remove the vulnerable code."
+msgstr ""
+"Este posibil ca site-ul să fi fost compromis. Verifică fișierele, află cum "
+"au ajuns acolo și actualizează sau elimină codul vulnerabil."
+
+#: openpanel/internal/web/templates/partials/site_manager_shared.html:786
+msgid "more"
+msgstr "în plus"
 
 #: openpanel/internal/web/templates/partials/theme_switcher.html:3
 msgid "Theme"
