@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-10-02 11:41+0200\n"
+"POT-Creation-Date: 2026-10-02 11:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -26,8 +26,8 @@ msgstr ""
 #: openpanel/internal/modules/dns/bulk.go:31
 #: openpanel/internal/modules/docker/bulk.go:36
 #: openpanel/internal/modules/domains/bulk.go:29
-#: openpanel/internal/modules/emails/bulk.go:20
-#: openpanel/internal/modules/emails/bulk.go:27
+#: openpanel/internal/modules/emails/bulk.go:23
+#: openpanel/internal/modules/emails/bulk.go:30
 #: openpanel/internal/modules/ftp/ftp.go:491
 #: openpanel/internal/modules/malwarescan/bulk.go:17
 #: openpanel/internal/modules/mongodb/bulk.go:27
@@ -526,32 +526,97 @@ msgstr ""
 msgid "Terminate the selected sessions? Anyone using them will be logged out."
 msgstr ""
 
-#: openpanel/internal/modules/account/settings.go:134
+#: openpanel/internal/modules/account/settings.go:98
+#: openpanel/internal/modules/emails/emails.go:369
+#: openpanel/internal/modules/mongodb/users.go:85
+#: openpanel/internal/modules/mongodb/users.go:179
+#: openpanel/internal/modules/mongodb/wizard.go:67
+#: openpanel/internal/modules/mysql/users.go:94
+#: openpanel/internal/modules/mysql/users.go:202
+#: openpanel/internal/modules/postgresql/users.go:96
+#: openpanel/internal/modules/postgresql/users.go:202
+#: openpanel/internal/modules/postgresql/wizard.go:65
+#: openpanel/internal/web/templates/emails/new.html:68
+#: openpanel/internal/web/templates/emails/single_account.html:180
+#: openpanel/internal/web/templates/files/ftp_new.html:50
+#: openpanel/internal/web/templates/files/ftp_password.html:36
+#: openpanel/internal/web/templates/manager/drupal_install.html:151
+#: openpanel/internal/web/templates/manager/flarum_install.html:151
+#: openpanel/internal/web/templates/manager/joomla_install.html:158
+#: openpanel/internal/web/templates/manager/matomo_install.html:143
+#: openpanel/internal/web/templates/manager/mediawiki_install.html:150
+#: openpanel/internal/web/templates/manager/moodle_install.html:134
+#: openpanel/internal/web/templates/manager/nextcloud_install.html:143
+#: openpanel/internal/web/templates/manager/ojs_install.html:143
+#: openpanel/internal/web/templates/manager/opencart_install.html:143
+#: openpanel/internal/web/templates/manager/phpbb_install.html:159
+#: openpanel/internal/web/templates/manager/prestashop_install.html:151
+#: openpanel/internal/web/templates/manager/wp/install.html:124
+#: openpanel/internal/web/templates/mongodb/mongodb_user.html:35
+#: openpanel/internal/web/templates/mongodb/password.html:33
+#: openpanel/internal/web/templates/mongodb/wizard.html:60
+#: openpanel/internal/web/templates/mysql/mysql_user.html:35
+#: openpanel/internal/web/templates/mysql/password.html:33
+#: openpanel/internal/web/templates/mysql/root_password.html:26
+#: openpanel/internal/web/templates/mysql/wizard.html:236
+#: openpanel/internal/web/templates/psql/password.html:33
+#: openpanel/internal/web/templates/psql/psql_user.html:35
+#: openpanel/internal/web/templates/psql/wizard.html:60
+#: openpanel/internal/web/templates/user/account.html:80
+#: openpanel/internal/web/templates/user/reset_password/set_new_password.html:84
+msgid "Password does not meet the required strength."
+msgstr ""
+
+#: openpanel/internal/modules/account/settings.go:100
+msgid "Password is too common, please choose a different one."
+msgstr ""
+
+#: openpanel/internal/modules/account/settings.go:102
+msgid "Failed to update password."
+msgstr ""
+
+#: openpanel/internal/modules/account/settings.go:145
 msgid "Password has been changed successfully."
 msgstr ""
 
-#: openpanel/internal/modules/account/settings.go:148
+#: openpanel/internal/modules/account/settings.go:159
 msgid ""
 "Email address has been changed successfully from %(old_email)s to "
 "%(new_email)s."
 msgstr ""
 
-#: openpanel/internal/modules/account/settings.go:159
+#: openpanel/internal/modules/account/settings.go:170
 msgid "Username must be 3-20 characters, letters and numbers only."
 msgstr ""
 
-#: openpanel/internal/modules/account/settings.go:167
+#: openpanel/internal/modules/account/settings.go:178
 msgid ""
 "Username has been changed successfully from %(current_username)s to "
 "%(new_username)s."
 msgstr ""
 
-#: openpanel/internal/modules/account/settings.go:183
+#: openpanel/internal/modules/account/settings.go:194
 msgid "Failed to change username."
 msgstr ""
 
-#: openpanel/internal/modules/account/twofa.go:62
+#: openpanel/internal/modules/account/twofa.go:63
 msgid "Invalid verification code. Please try again."
+msgstr ""
+
+#: openpanel/internal/modules/account/twofa.go:69
+msgid ""
+"OTP code removed and Two-Factor Authentication is now required on new "
+"logins."
+msgstr ""
+
+#: openpanel/internal/modules/account/twofa.go:78
+msgid ""
+"Setup started: Set up the app or save the OTP code, then confirm to remove "
+"it and activate 2FA."
+msgstr ""
+
+#: openpanel/internal/modules/account/twofa.go:83
+msgid "Two-Factor Authentication is now disabled."
 msgstr ""
 
 #: openpanel/internal/modules/account/webauthn.go:63
@@ -2506,7 +2571,7 @@ msgstr ""
 #: openpanel/internal/modules/docker/bulk.go:31
 #: openpanel/internal/modules/docker/bulk.go:33
 #: openpanel/internal/modules/docker/bulk.go:35
-#: openpanel/internal/modules/emails/bulk.go:18
+#: openpanel/internal/modules/emails/bulk.go:21
 msgid "0 = unlimited"
 msgstr ""
 
@@ -3323,46 +3388,38 @@ msgid "Alias %(source)s → %(target)s created successfully."
 msgstr ""
 
 #: openpanel/internal/modules/emails/bulk.go:13
-msgid "Suspend incoming"
+msgid "Suspend / Unsuspend"
 msgstr ""
 
 #: openpanel/internal/modules/emails/bulk.go:13
-msgid "Stop the selected accounts from receiving emails?"
-msgstr ""
-
-#: openpanel/internal/modules/emails/bulk.go:14
-msgid "Unsuspend incoming"
-msgstr ""
-
-#: openpanel/internal/modules/emails/bulk.go:14
-msgid "Let the selected accounts receive emails again?"
+msgid "For the selected accounts:"
 msgstr ""
 
 #: openpanel/internal/modules/emails/bulk.go:15
+msgid "Suspend incoming"
+msgstr ""
+
+#: openpanel/internal/modules/emails/bulk.go:16
 msgid "Suspend outgoing"
 msgstr ""
 
-#: openpanel/internal/modules/emails/bulk.go:15
-msgid "Stop the selected accounts from sending emails?"
+#: openpanel/internal/modules/emails/bulk.go:17
+msgid "Unsuspend incoming"
 msgstr ""
 
-#: openpanel/internal/modules/emails/bulk.go:16
+#: openpanel/internal/modules/emails/bulk.go:18
 msgid "Unsuspend outgoing"
 msgstr ""
 
-#: openpanel/internal/modules/emails/bulk.go:16
-msgid "Let the selected accounts send emails again?"
-msgstr ""
-
-#: openpanel/internal/modules/emails/bulk.go:17
+#: openpanel/internal/modules/emails/bulk.go:20
 msgid "Change quota"
 msgstr ""
 
-#: openpanel/internal/modules/emails/bulk.go:17
+#: openpanel/internal/modules/emails/bulk.go:20
 msgid "New mailbox size (GB) for the selected accounts:"
 msgstr ""
 
-#: openpanel/internal/modules/emails/bulk.go:19
+#: openpanel/internal/modules/emails/bulk.go:22
 #: openpanel/internal/modules/ftp/ftp.go:489
 #: openpanel/internal/modules/mongodb/bulk.go:33
 #: openpanel/internal/modules/mysql/bulk.go:51
@@ -3371,7 +3428,7 @@ msgstr ""
 msgid "New password"
 msgstr ""
 
-#: openpanel/internal/modules/emails/bulk.go:19
+#: openpanel/internal/modules/emails/bulk.go:22
 #: openpanel/internal/modules/ftp/ftp.go:489
 #: openpanel/internal/modules/mongodb/bulk.go:33
 #: openpanel/internal/modules/mysql/bulk.go:51
@@ -3379,26 +3436,26 @@ msgstr ""
 msgid "Change password"
 msgstr ""
 
-#: openpanel/internal/modules/emails/bulk.go:19
+#: openpanel/internal/modules/emails/bulk.go:22
 msgid "Set this password for the selected accounts:"
 msgstr ""
 
-#: openpanel/internal/modules/emails/bulk.go:20
+#: openpanel/internal/modules/emails/bulk.go:23
 msgid ""
 "Permanently delete the selected email accounts and all their emails? This "
 "cannot be undone."
 msgstr ""
 
-#: openpanel/internal/modules/emails/bulk.go:26
+#: openpanel/internal/modules/emails/bulk.go:29
 #: openpanel/internal/web/templates/emails/alias_detail.html:61
 msgid "Add destination"
 msgstr ""
 
-#: openpanel/internal/modules/emails/bulk.go:26
+#: openpanel/internal/modules/emails/bulk.go:29
 msgid "Also deliver the selected aliases to:"
 msgstr ""
 
-#: openpanel/internal/modules/emails/bulk.go:27
+#: openpanel/internal/modules/emails/bulk.go:30
 msgid "Delete the selected aliases?"
 msgstr ""
 
@@ -3408,46 +3465,6 @@ msgstr ""
 
 #: openpanel/internal/modules/emails/default.go:91
 msgid "Failed to update default email: %(error)s"
-msgstr ""
-
-#: openpanel/internal/modules/emails/emails.go:369
-#: openpanel/internal/modules/mongodb/users.go:85
-#: openpanel/internal/modules/mongodb/users.go:179
-#: openpanel/internal/modules/mongodb/wizard.go:67
-#: openpanel/internal/modules/mysql/users.go:94
-#: openpanel/internal/modules/mysql/users.go:202
-#: openpanel/internal/modules/postgresql/users.go:96
-#: openpanel/internal/modules/postgresql/users.go:202
-#: openpanel/internal/modules/postgresql/wizard.go:65
-#: openpanel/internal/web/templates/emails/new.html:68
-#: openpanel/internal/web/templates/emails/single_account.html:180
-#: openpanel/internal/web/templates/files/ftp_new.html:50
-#: openpanel/internal/web/templates/files/ftp_password.html:36
-#: openpanel/internal/web/templates/manager/drupal_install.html:151
-#: openpanel/internal/web/templates/manager/flarum_install.html:151
-#: openpanel/internal/web/templates/manager/joomla_install.html:158
-#: openpanel/internal/web/templates/manager/matomo_install.html:143
-#: openpanel/internal/web/templates/manager/mediawiki_install.html:150
-#: openpanel/internal/web/templates/manager/moodle_install.html:134
-#: openpanel/internal/web/templates/manager/nextcloud_install.html:143
-#: openpanel/internal/web/templates/manager/ojs_install.html:143
-#: openpanel/internal/web/templates/manager/opencart_install.html:143
-#: openpanel/internal/web/templates/manager/phpbb_install.html:159
-#: openpanel/internal/web/templates/manager/prestashop_install.html:151
-#: openpanel/internal/web/templates/manager/wp/install.html:124
-#: openpanel/internal/web/templates/mongodb/mongodb_user.html:35
-#: openpanel/internal/web/templates/mongodb/password.html:33
-#: openpanel/internal/web/templates/mongodb/wizard.html:60
-#: openpanel/internal/web/templates/mysql/mysql_user.html:35
-#: openpanel/internal/web/templates/mysql/password.html:33
-#: openpanel/internal/web/templates/mysql/root_password.html:26
-#: openpanel/internal/web/templates/mysql/wizard.html:236
-#: openpanel/internal/web/templates/psql/password.html:33
-#: openpanel/internal/web/templates/psql/psql_user.html:35
-#: openpanel/internal/web/templates/psql/wizard.html:60
-#: openpanel/internal/web/templates/user/account.html:80
-#: openpanel/internal/web/templates/user/reset_password/set_new_password.html:84
-msgid "Password does not meet the required strength."
 msgstr ""
 
 #: openpanel/internal/modules/emails/emails.go:375
@@ -3891,7 +3908,19 @@ msgid ""
 "24h."
 msgstr ""
 
-#: openpanel/internal/modules/ipblocker/handlers.go:54
+#: openpanel/internal/modules/ipblocker/handlers.go:41
+msgid ""
+"IP addresses have been successfully added to blocklist and can no longer "
+"access websites"
+msgstr ""
+
+#: openpanel/internal/modules/ipblocker/handlers.go:45
+msgid ""
+"All IP addresses have been successfully removed from blocklist and can now "
+"access websites"
+msgstr ""
+
+#: openpanel/internal/modules/ipblocker/handlers.go:55
 msgid "Failed to block IP addresses - please try again"
 msgstr ""
 
@@ -6173,16 +6202,16 @@ msgstr ""
 msgid "Install WordPress"
 msgstr ""
 
-#: openpanel/internal/web/bulk.go:165
+#: openpanel/internal/web/bulk.go:164
 msgid ""
 "%(action_title)s: completed successfully for all %(total)s selected item(s)."
 msgstr ""
 
-#: openpanel/internal/web/bulk.go:167
+#: openpanel/internal/web/bulk.go:166
 msgid "%(action_title)s: %(failed)s of %(total)s selected item(s) failed."
 msgstr ""
 
-#: openpanel/internal/web/bulk.go:279
+#: openpanel/internal/web/bulk.go:278
 msgid "Not authenticated."
 msgstr ""
 
