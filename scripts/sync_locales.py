@@ -46,7 +46,7 @@ TMPL_DICT_RE = re.compile(r'"(?:Title|Intro|Checking)"\s+"((?:[^"\\]|\\.)*)"')
 TMPL_GETN = re.compile(r'\.T\.GetN\s+"((?:[^"\\]|\\.)*)"\s+"((?:[^"\\]|\\.)*)"')
 GO_GET = re.compile(r'(?:^|[^\w.])(?:t|T|layout\.T|[A-Za-z_][A-Za-z0-9_]*\.T)\.Get\(\s*"((?:[^"\\]|\\.)*)"')
 GO_GETN = re.compile(r'(?:^|[^\w.])(?:t|T|layout\.T|[A-Za-z_][A-Za-z0-9_]*\.T)\.GetN\(\s*"((?:[^"\\]|\\.)*)"\s*,\s*"((?:[^"\\]|\\.)*)"')
-FIELD_RE = re.compile(r'\b(?:Label|Title|PageTitle|TechDetails|Description|RequirementsLabel|RequirementsTooltip|Message):\s*"((?:[^"\\]|\\.)*)"(?=\s*(?:,|\}|$))')
+FIELD_RE = re.compile(r'\b(?:Label|Title|PageTitle|TechDetails|Description|RequirementsLabel|RequirementsTooltip|Message|NewIntro|ConfigTitle|ConfigIntro):\s*"((?:[^"\\]|\\.)*)"(?=\s*(?:,|\}|$))')
 # form/page errors set before render and translated in the template, e.g. formView.Error = "..."
 ASSIGN_RE = re.compile(r'\.(?:Error|Message)\s*=\s*"((?:[^"\\]|\\.)*)"\s*$')
 
