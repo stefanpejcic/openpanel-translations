@@ -87,6 +87,10 @@ WEBSITES_RENDER_DISPATCH_GO = "internal/modules/websites/render_dispatch.go"
 SECURITY_TOGGLE_RE = re.compile(r'\{"([^"]*)",\s*"((?:[^"\\]|\\.)*)",\s*\n\s*"((?:[^"\\]|\\.)*)"\}')
 
 WEBAUTHN_GO = "internal/modules/account/webauthn.go"
+
+# tour step text, translated at runtime by /dashboard/tour/i18n
+TOUR_STEPS_JS = "static/js/tour-steps.js"
+TOUR_STRING_RE = re.compile(r"^\s*(?:title|description):\s*'((?:[^'\\]|\\.)*)'")
 RETURN_STR_RE = re.compile(r'return\s+"((?:[^"\\]|\\.)*)"')
 
 
@@ -189,6 +193,14 @@ def extract(source_root):
                 for m in RETURN_STR_RE.finditer(line):
                     if m.group(1):
                         add(results, m.group(1), None, WEBAUTHN_GO, i)
+
+    tour_path = os.path.join(source_root, TOUR_STEPS_JS)
+    if os.path.isfile(tour_path):
+        with open(tour_path, encoding="utf-8") as f:
+            for i, line in enumerate(f, 1):
+                m = TOUR_STRING_RE.match(line)
+                if m:
+                    add(results, m.group(1).replace("\\'", "'"), None, TOUR_STEPS_JS, i)
 
     return results
 
@@ -331,6 +343,12 @@ def main():
 
     if not os.path.isdir(source_root):
         sys.exit(f"--source path does not exist: {source_root}")
+    # a monorepo checkout keeps the Go app in openpanel/, and the hardcoded paths above only resolve from there
+    if not os.path.isfile(os.path.join(source_root, SECTIONS_GO)) and os.path.isfile(os.path.join(source_root, "openpanel", SECTIONS_GO)):
+        source_root = os.path.join(source_root, "openpanel")
+    for rel in (SECTIONS_GO, SIDEBAR_GO):
+        if not os.path.isfile(os.path.join(source_root, rel)):
+            sys.exit(f"{rel} not found under {source_root}, refusing to sync (would drop its strings from every catalog)")
 
     project_version = args.project_version
     if not project_version:
