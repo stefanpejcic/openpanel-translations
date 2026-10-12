@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-10-11 11:28+0200\n"
+"POT-Creation-Date: 2026-10-12 12:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Csizmmár Norbert <inak1205@gmail.com>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -1043,6 +1043,22 @@ msgid "Backup Wizard"
 msgstr "Biztonsági mentés varázsló"
 
 #: internal/modules/backupwizard/render.go:41
+#: internal/modules/dashboard/sections.go:73
+#: internal/modules/dashboard/sections.go:74
+#: internal/modules/dashboard/sections.go:222
+#: internal/modules/dashboard/sections.go:223
+#: internal/modules/domains/render.go:107 internal/web/sidebar.go:209
+#: internal/web/sidebar.go:213 internal/web/sidebar.go:215
+#: internal/web/templates/cache/service.html:146
+#: internal/web/templates/dashboard/usage.html:55
+#: internal/web/templates/domains/domains.html:9
+#: internal/web/templates/domains/domains.html:14
+#: internal/web/templates/emails/deliverability.html:106
+#: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
+msgid "Domains"
+msgstr "Domains"
+
+#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:113
 #: internal/modules/dashboard/sections.go:126
 #: internal/modules/dashboard/sections.go:135
@@ -1063,22 +1079,6 @@ msgstr "Adatbázisok"
 #: internal/modules/backupwizard/render.go:41
 msgid "The home directory"
 msgstr "A saját (home) könyvtár"
-
-#: internal/modules/backupwizard/render.go:41
-#: internal/modules/dashboard/sections.go:73
-#: internal/modules/dashboard/sections.go:74
-#: internal/modules/dashboard/sections.go:222
-#: internal/modules/dashboard/sections.go:223
-#: internal/modules/domains/render.go:107 internal/web/sidebar.go:209
-#: internal/web/sidebar.go:213 internal/web/sidebar.go:215
-#: internal/web/templates/cache/service.html:146
-#: internal/web/templates/dashboard/usage.html:55
-#: internal/web/templates/domains/domains.html:9
-#: internal/web/templates/domains/domains.html:14
-#: internal/web/templates/emails/deliverability.html:106
-#: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
-msgid "Domains"
-msgstr "Domains"
 
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/sections.go:81
@@ -2515,16 +2515,16 @@ msgstr "CPU szerkesztése"
 msgid "Set the CPU limit for the selected containers:"
 msgstr "CPU-korlát beállítása a kiválasztott konténerekhez:"
 
+#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
+#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
+msgid "0 = unlimited"
+msgstr "0 = korlátlan"
+
 #: internal/modules/docker/bulk.go:31
 #: internal/web/templates/docker/containers.html:18
 #: internal/web/templates/docker/containers.html:384
 msgid "cores"
 msgstr "mag"
-
-#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
-#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
-msgid "0 = unlimited"
-msgstr "0 = korlátlan"
 
 #: internal/modules/docker/bulk.go:32
 msgid "Edit RAM"
@@ -6625,6 +6625,13 @@ msgid "Memory Usage"
 msgstr "Memóriahasználat"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/partials/_service_js.html:24
+#: internal/web/templates/system/services.html:113
+#: internal/web/templates/user/history_usage.html:133
+msgid "Memory %"
+msgstr "Memória %"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/docker/containers.html:64
 #: internal/web/templates/docker/containers.html:101
 #: internal/web/templates/partials/_service_js.html:26
@@ -6633,24 +6640,17 @@ msgid "Block I/O"
 msgstr "I/O blokkolása"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/partials/_service_js.html:25
+#: internal/web/templates/system/services.html:113
+msgid "Network I/O"
+msgstr "Hálózati I/O"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/mongodb/processlist.html:32
 #: internal/web/templates/mysql/processlist.html:32
 #: internal/web/templates/system/services.html:113
 msgid "ID"
 msgstr "Azonosító"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/partials/_service_js.html:24
-#: internal/web/templates/system/services.html:113
-#: internal/web/templates/user/history_usage.html:133
-msgid "Memory %"
-msgstr "Memória %"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/partials/_service_js.html:25
-#: internal/web/templates/system/services.html:113
-msgid "Network I/O"
-msgstr "Hálózati I/O"
 
 #: internal/web/templates/cache/service.html:270
 #: internal/web/templates/system/services.html:162
@@ -7257,16 +7257,16 @@ msgstr ""
 "legújabb verzióval."
 
 #: internal/web/templates/dashboard/onboarding.html:754
+msgid "Step"
+msgstr "Lépés"
+
+#: internal/web/templates/dashboard/onboarding.html:754
 #: internal/web/templates/domains/domains.html:429
 #: internal/web/templates/manager/wp/_caching.html:290
 #: internal/web/templates/user/activity.html:222
 #: internal/web/templates/user/history_usage.html:96
 msgid "of"
 msgstr "/"
-
-#: internal/web/templates/dashboard/onboarding.html:754
-msgid "Step"
-msgstr "Lépés"
 
 #: internal/web/templates/dashboard/onboarding.html:823
 msgid "Please choose a webserver, or click Skip."
@@ -8400,13 +8400,13 @@ msgstr ""
 "maradnak."
 
 #: internal/web/templates/domains/delete.html:31
-msgid "subdomains"
-msgstr "aldomainek"
-
-#: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/domains.html:195
 msgid "subdomain"
 msgstr "aldomain"
+
+#: internal/web/templates/domains/delete.html:31
+msgid "subdomains"
+msgstr "aldomainek"
 
 #: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/delete.html:38
