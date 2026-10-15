@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-10-15 00:02+0200\n"
+"POT-Creation-Date: 2026-10-15 14:08+0200\n"
 "PO-Revision-Date: 2025-05-17 03:48+0300\n"
 "Last-Translator: Vladyslav Samoilenko <admin@mig-studio.com>\n"
 "Language-Team: \n"
@@ -44,8 +44,8 @@ msgstr "Необходимо указать имя пользователя и �
 #: internal/web/templates/files/filemanager_partials.html:354
 #: internal/web/templates/files/filemanager_partials.html:417
 #: internal/web/templates/files/filemanager_partials.html:586
-#: internal/web/templates/files/ftp.html:137
-#: internal/web/templates/files/ftp.html:157
+#: internal/web/templates/files/ftp.html:186
+#: internal/web/templates/files/ftp.html:188
 #: internal/web/templates/files/trash.html:58
 #: internal/web/templates/manager/_cms_app_shared.html:1514
 #: internal/web/templates/manager/_cms_app_shared.html:1623
@@ -416,7 +416,7 @@ msgstr "Неверный пароль. Пожалуйста, попробуйт�
 msgid "Too many failed login attempts. Please try again later."
 msgstr "Слишком много неудачных попыток входа. Повторите попытку позже."
 
-#: internal/modules/account/render.go:34 internal/modules/backups/render.go:49
+#: internal/modules/account/render.go:34 internal/modules/backups/render.go:54
 #: internal/modules/php/render.go:139
 #: internal/web/templates/db/configuration.html:8
 #: internal/web/templates/partials/site_manager_shared.html:1045
@@ -441,7 +441,7 @@ msgid "Two-Factor Authentication"
 msgstr "Двухфакторная аутентификация"
 
 #: internal/modules/account/render.go:96
-#: internal/modules/dashboard/sections.go:198 internal/web/sidebar.go:370
+#: internal/modules/dashboard/sections.go:198 internal/web/sidebar.go:373
 #: internal/web/templates/user/passkeys.html:7
 #: internal/web/templates/user/passkeys.html:10
 msgid "Passkeys"
@@ -452,7 +452,7 @@ msgid "Notification Preferences"
 msgstr "Настройки уведомлений"
 
 #: internal/modules/account/render.go:163
-#: internal/modules/dashboard/sections.go:174 internal/web/sidebar.go:338
+#: internal/modules/dashboard/sections.go:174 internal/web/sidebar.go:341
 #: internal/web/templates/base.html:436
 #: internal/web/templates/user/favorites.html:7
 #: internal/web/templates/user/favorites.html:10 static/js/tour-steps.js:60
@@ -461,7 +461,7 @@ msgstr "Избранное"
 
 #: internal/modules/account/render.go:182
 #: internal/modules/dashboard/sections.go:199
-#: internal/modules/dashboard/sections.go:322 internal/web/sidebar.go:371
+#: internal/modules/dashboard/sections.go:322 internal/web/sidebar.go:374
 #: internal/web/templates/user/active_sessions.html:10
 #: static/js/tour-steps.js:646
 msgid "Active Sessions"
@@ -493,25 +493,25 @@ msgid "Year to date"
 msgstr "С начала года"
 
 #: internal/modules/account/render.go:214
-#: internal/modules/dashboard/sections.go:200 internal/web/sidebar.go:372
+#: internal/modules/dashboard/sections.go:200 internal/web/sidebar.go:375
 #: internal/web/templates/user/activity.html:27 static/js/tour-steps.js:664
 msgid "Activity Log"
 msgstr "Журнал активности"
 
 #: internal/modules/account/render.go:232
 #: internal/modules/dashboard/sections.go:201
-#: internal/modules/dashboard/sections.go:325 internal/web/sidebar.go:373
+#: internal/modules/dashboard/sections.go:325 internal/web/sidebar.go:376
 #: internal/web/templates/user/loginlog.html:10 static/js/tour-steps.js:673
 msgid "Login History"
 msgstr "История входов"
 
 #: internal/modules/account/render.go:252
-#: internal/modules/dashboard/sections.go:176 internal/web/sidebar.go:340
+#: internal/modules/dashboard/sections.go:176 internal/web/sidebar.go:343
 msgid "AI Assistant (MCP)"
 msgstr "AI-ассистент (MCP)"
 
 #: internal/modules/account/render.go:271
-#: internal/modules/dashboard/sections.go:175 internal/web/sidebar.go:339
+#: internal/modules/dashboard/sections.go:175 internal/web/sidebar.go:342
 msgid "API"
 msgstr "API"
 
@@ -642,6 +642,22 @@ msgid ""
 msgstr ""
 "Для ключей доступа (passkeys) панель должна открываться по доменному имени, "
 "а не по IP-адресу. Попросите администратора настроить домен для этой панели."
+
+#: internal/modules/aiassistant/agent.go:37
+msgid ""
+"Search the actions available in this user's hosting account, like listing "
+"domains or creating an email account. Returns the action name, method, path,"
+" params and an example body. Always call this before run_action to get the "
+"exact action name and parameters."
+msgstr ""
+
+#: internal/modules/aiassistant/agent.go:45
+msgid ""
+"Run one action returned by find_actions in the user's account. Read actions "
+"run right away. Actions that change something are shown to the user as a "
+"confirmation card and only run if they approve it, so don't ask for "
+"permission in text first."
+msgstr ""
 
 #: internal/modules/appinstall/install.go:108
 #: internal/modules/cmsapp/install.go:47 internal/modules/phpapp/install.go:39
@@ -884,7 +900,7 @@ msgstr "Установить приложение Ruby"
 msgid "Install App"
 msgstr "Установить приложение"
 
-#: internal/modules/backups/backups.go:65
+#: internal/modules/backups/backups.go:70
 msgid ""
 "A backup is currently in progress. Please wait until it finishes before "
 "saving settings. Or if you want to interrupt the backup process: stop and "
@@ -894,25 +910,27 @@ msgstr ""
 "сохранять настройки. Чтобы прервать его, остановите и запустите службу "
 "резервного копирования."
 
-#: internal/modules/backups/backups.go:70
+#: internal/modules/backups/backups.go:75
 msgid "Error updating settings."
 msgstr "Ошибка обновления настроек."
 
-#: internal/modules/backups/backups.go:72
+#: internal/modules/backups/backups.go:77
 msgid "Settings updated successfully."
 msgstr "Настройки успешно обновлены."
 
-#: internal/modules/backups/backups.go:263
+#: internal/modules/backups/backups.go:268
 msgid "Backup target switched to '%(target)s' successfully."
 msgstr "Место хранения резервных копий изменено на '%(target)s'."
 
-#: internal/modules/backups/reindex.go:125
+#: internal/modules/backups/reindex.go:129
 msgid ""
 "Archive is not in the backup/ layout this page can restore (for example a "
 "full account backup made by the administrator)."
 msgstr ""
+"Архив не в формате backup/, который эта страница может восстановить "
+"(например, полная резервная копия аккаунта, сделанная администратором)."
 
-#: internal/modules/backups/render.go:28
+#: internal/modules/backups/render.go:33
 #: internal/modules/dashboard/sections.go:106
 #: internal/modules/dashboard/sections.go:107
 #: internal/modules/dashboard/sections.go:216 internal/web/sidebar.go:264
@@ -927,72 +945,73 @@ msgstr ""
 msgid "Backups"
 msgstr "Резервное копирование"
 
-#: internal/modules/backups/render.go:56
+#: internal/modules/backups/render.go:61
 msgid "No backup target is configured."
 msgstr "Место хранения резервных копий не настроено."
 
-#: internal/modules/backups/render.go:57
+#: internal/modules/backups/render.go:62
 msgid "Multiple backup targets are configured."
 msgstr "Настроено несколько мест хранения резервных копий."
 
-#: internal/modules/backups/render.go:92
-#: internal/modules/dashboard/sections.go:110 internal/web/sidebar.go:271
+#: internal/modules/backups/render.go:97
+#: internal/modules/dashboard/sections.go:110 internal/web/sidebar.go:274
 #: internal/web/templates/files/filemanager_partials.html:658
 msgid "Destination"
 msgstr "Место назначения"
 
-#: internal/modules/backups/render.go:100
+#: internal/modules/backups/render.go:105
 #: internal/web/templates/dashboard/onboarding.html:531
 msgid "S3-compatible"
 msgstr "Совместимо с S3"
 
-#: internal/modules/backups/render.go:100
+#: internal/modules/backups/render.go:105
 #: internal/web/templates/dashboard/onboarding.html:531
 msgid "AWS S3, Filebase, Google Cloud Storage, MinIO, etc."
 msgstr "AWS S3, Filebase, Google Cloud Storage, MinIO и другие."
 
-#: internal/modules/backups/render.go:104
+#: internal/modules/backups/render.go:109
 #: internal/web/templates/dashboard/onboarding.html:533
 msgid "SSH"
 msgstr "SSH"
 
-#: internal/modules/backups/render.go:104
+#: internal/modules/backups/render.go:109
 msgid "Remote backups to another server using via SSH or SFTP."
 msgstr "Удалённое резервное копирование на другой сервер по SSH или SFTP."
 
-#: internal/modules/backups/render.go:108
+#: internal/modules/backups/render.go:113
 #: internal/web/templates/dashboard/onboarding.html:532
 msgid "WebDAV"
 msgstr "WebDAV"
 
-#: internal/modules/backups/render.go:108
+#: internal/modules/backups/render.go:113
 msgid "Remote backups using WebDAV protocol."
 msgstr "Удалённое резервное копирование по протоколу WebDAV."
 
-#: internal/modules/backups/render.go:112
+#: internal/modules/backups/render.go:117
 #: internal/web/templates/dashboard/onboarding.html:534
 msgid "Azure"
 msgstr "Azure"
 
-#: internal/modules/backups/render.go:112
+#: internal/modules/backups/render.go:117
 #: internal/web/templates/dashboard/onboarding.html:534
 msgid "Remote backups to Azure Blob Storage."
 msgstr "Удалённое резервное копирование в Azure Blob Storage."
 
-#: internal/modules/backups/render.go:116
+#: internal/modules/backups/render.go:121
 #: internal/web/templates/dashboard/onboarding.html:535
 msgid "Dropbox"
 msgstr "Dropbox"
 
-#: internal/modules/backups/render.go:116
+#: internal/modules/backups/render.go:121
 #: internal/web/templates/dashboard/onboarding.html:535
 msgid "Remote backups to Dropbox cloud storage."
 msgstr "Удалённое резервное копирование в облачное хранилище Dropbox."
 
-#: internal/modules/backups/render.go:151
+#: internal/modules/backups/render.go:249
 #: internal/modules/dashboard/sections.go:108
-#: internal/modules/malwarescan/bulk.go:15 internal/web/sidebar.go:268
-#: internal/web/templates/files/backup_restore.html:241
+#: internal/modules/malwarescan/bulk.go:15 internal/web/sidebar.go:271
+#: internal/web/templates/files/backup_restore.html:832
+#: internal/web/templates/files/backup_restore.html:833
 #: internal/web/templates/files/clamav/quarantine.html:86
 #: internal/web/templates/files/clamav/quarantine.html:122
 #: internal/web/templates/files/trash.html:52
@@ -1037,7 +1056,7 @@ msgstr ""
 
 #: internal/modules/backupwizard/render.go:35
 #: internal/modules/dashboard/sections.go:111
-#: internal/modules/dashboard/sections.go:217 internal/web/sidebar.go:273
+#: internal/modules/dashboard/sections.go:217 internal/web/sidebar.go:276
 #: internal/web/templates/files/backup_wizard.html:10
 msgid "Backup Wizard"
 msgstr "Мастер резервного копирования"
@@ -1051,10 +1070,12 @@ msgstr "Мастер резервного копирования"
 #: internal/modules/dashboard/sections.go:258
 #: internal/modules/mysql/render.go:58 internal/web/sidebar.go:176
 #: internal/web/sidebar.go:190 internal/web/sidebar.go:201
-#: internal/web/sidebar.go:277 internal/web/sidebar_classic.go:89
+#: internal/web/sidebar.go:280 internal/web/sidebar_classic.go:89
 #: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
 #: internal/web/templates/dashboard/usage.html:78
-#: internal/web/templates/files/backup_restore.html:173
+#: internal/web/templates/files/backup_restore.html:455
+#: internal/web/templates/files/backup_restore.html:558
+#: internal/web/templates/files/backup_restore.html:735
 #: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
 #: static/js/tour-steps.js:261
 msgid "Databases"
@@ -1076,6 +1097,11 @@ msgstr "Домашнюю директорию"
 #: internal/web/templates/domains/domains.html:9
 #: internal/web/templates/domains/domains.html:14
 #: internal/web/templates/emails/deliverability.html:106
+#: internal/web/templates/files/backup_restore.html:10
+#: internal/web/templates/files/backup_restore.html:473
+#: internal/web/templates/files/backup_restore.html:574
+#: internal/web/templates/files/backup_restore.html:737
+#: internal/web/templates/files/backup_restore.html:961
 #: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
 msgid "Domains"
 msgstr "Домены"
@@ -1099,6 +1125,8 @@ msgid "FTP accounts"
 msgstr "Учетные записи FTP"
 
 #: internal/modules/backupwizard/render.go:43
+#: internal/web/templates/files/backup_restore.html:11
+#: internal/web/templates/files/backup_restore.html:964
 msgid "DNS zones"
 msgstr "Зоны DNS"
 
@@ -1440,7 +1468,7 @@ msgid "Cron time zone set to %(tz)s."
 msgstr "Часовой пояс cron установлен на %(tz)s."
 
 #: internal/modules/dashboard/dashboard.go:162
-#: internal/modules/dashboard/dashboard.go:168 internal/web/sidebar.go:585
+#: internal/modules/dashboard/dashboard.go:168 internal/web/sidebar.go:588
 #: internal/web/templates/partials/_header.html:60
 msgid "Dashboard"
 msgstr "Панель управления"
@@ -1645,7 +1673,7 @@ msgstr "Корзина"
 #: internal/modules/dashboard/sections.go:213
 #: internal/modules/ftp/render.go:28 internal/web/sidebar.go:259
 #: internal/web/templates/dashboard/usage.html:124
-#: internal/web/templates/files/ftp.html:9
+#: internal/web/templates/files/ftp.html:13
 #: internal/web/templates/manager/_cms_app_shared.html:411
 #: internal/web/templates/manager/_cms_app_shared.html:584
 #: internal/web/templates/manager/n8n_app.html:316
@@ -1676,14 +1704,15 @@ msgstr "Исправить права доступа"
 #: internal/modules/dashboard/sections.go:109
 #: internal/modules/dashboard/sections.go:122
 #: internal/modules/dashboard/sections.go:133 internal/web/sidebar.go:182
-#: internal/web/sidebar.go:195 internal/web/sidebar.go:270
-#: internal/web/templates/files/ftp.html:69
+#: internal/web/sidebar.go:195 internal/web/sidebar.go:273
+#: internal/web/templates/files/ftp.html:61
+#: internal/web/templates/files/ftp.html:103
 msgid "Configuration"
 msgstr "Конфигурация"
 
 #: internal/modules/dashboard/sections.go:113
 #: internal/modules/dashboard/sections.go:236
-#: internal/modules/docker/render.go:404 internal/web/sidebar.go:277
+#: internal/modules/docker/render.go:404 internal/web/sidebar.go:280
 #: internal/web/templates/dashboard/onboarding.html:498
 #: internal/web/templates/partials/_header.html:101
 msgid "MySQL"
@@ -1768,36 +1797,36 @@ msgid "Server Type"
 msgstr "Тип сервера"
 
 #: internal/modules/dashboard/sections.go:126
-#: internal/modules/dashboard/sections.go:248 internal/web/sidebar.go:280
+#: internal/modules/dashboard/sections.go:248 internal/web/sidebar.go:283
 #: internal/web/templates/partials/_header.html:106
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
 #: internal/modules/dashboard/sections.go:135
-#: internal/modules/dashboard/sections.go:257 internal/web/sidebar.go:283
+#: internal/modules/dashboard/sections.go:257 internal/web/sidebar.go:286
 #: internal/web/templates/partials/_header.html:111
 msgid "MongoDB"
 msgstr "MongoDB"
 
 #: internal/modules/dashboard/sections.go:142
 #: internal/modules/dashboard/sections.go:289
-#: internal/modules/dashboard/sections.go:354 internal/web/sidebar.go:286
+#: internal/modules/dashboard/sections.go:354 internal/web/sidebar.go:289
 #: internal/web/templates/dashboard/onboarding.html:590
 #: internal/web/templates/manager/autoinstaller.html:811
 #: internal/web/templates/partials/_header.html:116
 msgid "PHP"
 msgstr "PHP"
 
-#: internal/modules/dashboard/sections.go:143 internal/web/sidebar.go:289
+#: internal/modules/dashboard/sections.go:143 internal/web/sidebar.go:292
 msgid "Version per Domain"
 msgstr "Версия для домена"
 
 #: internal/modules/dashboard/sections.go:144
-#: internal/modules/dashboard/sections.go:291 internal/web/sidebar.go:290
+#: internal/modules/dashboard/sections.go:291 internal/web/sidebar.go:293
 msgid "Default Version"
 msgstr "Версия по умолчанию"
 
-#: internal/modules/dashboard/sections.go:145 internal/web/sidebar.go:291
+#: internal/modules/dashboard/sections.go:145 internal/web/sidebar.go:294
 #: internal/web/templates/emails/accounts.html:78
 #: internal/web/templates/emails/aliases.html:42
 #: internal/web/templates/emails/deliverability.html:35
@@ -1805,15 +1834,15 @@ msgstr "Версия по умолчанию"
 msgid "Options"
 msgstr "Опции"
 
-#: internal/modules/dashboard/sections.go:146 internal/web/sidebar.go:292
+#: internal/modules/dashboard/sections.go:146 internal/web/sidebar.go:295
 msgid "Extensions"
 msgstr "Расширения"
 
-#: internal/modules/dashboard/sections.go:147 internal/web/sidebar.go:293
+#: internal/modules/dashboard/sections.go:147 internal/web/sidebar.go:296
 msgid "php.ini Editor"
 msgstr "Редактор php.ini"
 
-#: internal/modules/dashboard/sections.go:149 internal/web/sidebar.go:304
+#: internal/modules/dashboard/sections.go:149 internal/web/sidebar.go:307
 msgid "Cache & Search"
 msgstr "Кэш и поиск"
 
@@ -1821,19 +1850,19 @@ msgstr "Кэш и поиск"
 msgid "Elasticsearch"
 msgstr "Elasticsearch"
 
-#: internal/modules/dashboard/sections.go:157 internal/web/sidebar.go:313
+#: internal/modules/dashboard/sections.go:157 internal/web/sidebar.go:316
 msgid "Web Server Config"
 msgstr "Конфигурация веб-сервера"
 
-#: internal/modules/dashboard/sections.go:158 internal/web/sidebar.go:316
+#: internal/modules/dashboard/sections.go:158 internal/web/sidebar.go:319
 msgid "Server Settings"
 msgstr "Настройки сервера"
 
-#: internal/modules/dashboard/sections.go:159 internal/web/sidebar.go:317
+#: internal/modules/dashboard/sections.go:159 internal/web/sidebar.go:320
 msgid "Domain VHosts"
 msgstr "VHosts доменов"
 
-#: internal/modules/dashboard/sections.go:160 internal/web/sidebar.go:318
+#: internal/modules/dashboard/sections.go:160 internal/web/sidebar.go:321
 msgid "Web Server Type"
 msgstr "Тип веб-сервера"
 
@@ -1841,8 +1870,8 @@ msgstr "Тип веб-сервера"
 #: internal/modules/dashboard/sections.go:163
 #: internal/modules/dashboard/sections.go:296
 #: internal/modules/dashboard/sections.go:297
-#: internal/modules/docker/render.go:182 internal/web/sidebar.go:322
-#: internal/web/sidebar.go:325
+#: internal/modules/docker/render.go:182 internal/web/sidebar.go:325
+#: internal/web/sidebar.go:328
 #: internal/web/templates/docker/containers.html:13
 #: internal/web/templates/docker/containers.html:272
 #: internal/web/templates/partials/_header.html:121
@@ -1851,7 +1880,7 @@ msgid "Containers"
 msgstr "Контейнеры"
 
 #: internal/modules/dashboard/sections.go:164
-#: internal/modules/dashboard/sections.go:298 internal/web/sidebar.go:326
+#: internal/modules/dashboard/sections.go:298 internal/web/sidebar.go:329
 #: internal/web/templates/docker/containers.html:495
 #: static/js/tour-steps.js:1028
 msgid "Terminal"
@@ -1859,11 +1888,14 @@ msgstr "Терминал"
 
 #: internal/modules/dashboard/sections.go:165
 #: internal/modules/dashboard/sections.go:299
-#: internal/modules/docker/render.go:593 internal/web/sidebar.go:301
-#: internal/web/sidebar.go:327 internal/web/templates/cache/service.html:269
+#: internal/modules/docker/render.go:593 internal/web/sidebar.go:304
+#: internal/web/sidebar.go:330 internal/web/templates/cache/service.html:269
 #: internal/web/templates/docker/containers.html:498
 #: internal/web/templates/docker/logs.html:11
 #: internal/web/templates/docker/logs.html:87
+#: internal/web/templates/files/backup_restore.html:500
+#: internal/web/templates/files/backup_restore.html:603
+#: internal/web/templates/files/backup_restore.html:651
 #: internal/web/templates/manager/_cms_app_shared.html:161
 #: internal/web/templates/manager/n8n_app.html:63
 #: internal/web/templates/manager/php_app.html:62
@@ -1873,14 +1905,16 @@ msgstr "Терминал"
 msgid "Logs"
 msgstr "Журналы"
 
-#: internal/modules/dashboard/sections.go:166 internal/web/sidebar.go:328
+#: internal/modules/dashboard/sections.go:166 internal/web/sidebar.go:331
 msgid "Software Versions"
 msgstr "Версии ПО"
 
 #: internal/modules/dashboard/sections.go:167
-#: internal/modules/dashboard/sections.go:306 internal/web/sidebar.go:297
-#: internal/web/sidebar.go:299
+#: internal/modules/dashboard/sections.go:306 internal/web/sidebar.go:300
+#: internal/web/sidebar.go:302
 #: internal/web/templates/dashboard/onboarding.html:207
+#: internal/web/templates/files/backup_restore.html:482
+#: internal/web/templates/files/backup_restore.html:582
 #: internal/web/templates/files/backup_settings.html:89
 #: internal/web/templates/system/cronjobs.html:24 static/js/tour-steps.js:507
 msgid "Cron Jobs"
@@ -1892,21 +1926,21 @@ msgid "Change TimeZone"
 msgstr "Изменить часовой пояс"
 
 #: internal/modules/dashboard/sections.go:170
-#: internal/modules/dashboard/sections.go:317 internal/web/sidebar.go:332
+#: internal/modules/dashboard/sections.go:317 internal/web/sidebar.go:335
 #: internal/web/templates/partials/_header.html:131
 #: internal/web/templates/user/account.html:7
 msgid "Account"
 msgstr "Учетная запись"
 
-#: internal/modules/dashboard/sections.go:171 internal/web/sidebar.go:335
+#: internal/modules/dashboard/sections.go:171 internal/web/sidebar.go:338
 msgid "Login Details"
 msgstr "Данные для входа"
 
-#: internal/modules/dashboard/sections.go:172 internal/web/sidebar.go:336
+#: internal/modules/dashboard/sections.go:172 internal/web/sidebar.go:339
 msgid "Language"
 msgstr "Язык"
 
-#: internal/modules/dashboard/sections.go:173 internal/web/sidebar.go:337
+#: internal/modules/dashboard/sections.go:173 internal/web/sidebar.go:340
 msgid "Notifications"
 msgstr "Уведомления"
 
@@ -1915,13 +1949,13 @@ msgstr "Уведомления"
 msgid "Log out"
 msgstr "Выйти"
 
-#: internal/modules/dashboard/sections.go:179 internal/web/sidebar.go:344
+#: internal/modules/dashboard/sections.go:179 internal/web/sidebar.go:347
 msgid "Statistics"
 msgstr "Статистика"
 
 #: internal/modules/dashboard/sections.go:180
 #: internal/modules/dashboard/sections.go:308
-#: internal/modules/serverinfo/render.go:42 internal/web/sidebar.go:347
+#: internal/modules/serverinfo/render.go:42 internal/web/sidebar.go:350
 #: internal/web/templates/user/stats.html:16
 msgid "Resource Usage"
 msgstr "Использование ресурсов"
@@ -1934,7 +1968,7 @@ msgstr "История использования ресурсов"
 
 #: internal/modules/dashboard/sections.go:182
 #: internal/modules/dashboard/sections.go:215
-#: internal/modules/diskusage/render.go:95 internal/web/sidebar.go:348
+#: internal/modules/diskusage/render.go:95 internal/web/sidebar.go:351
 #: internal/web/templates/files/disk_usage.html:15
 #: internal/web/templates/manager/_cms_app_shared.html:369
 #: internal/web/templates/manager/_cms_app_shared.html:542
@@ -1948,42 +1982,42 @@ msgid "Disk Usage"
 msgstr "Использование диска"
 
 #: internal/modules/dashboard/sections.go:183
-#: internal/modules/inodes/render.go:97 internal/web/sidebar.go:349
+#: internal/modules/inodes/render.go:97 internal/web/sidebar.go:352
 #: internal/web/templates/files/inodes.html:12 static/js/tour-steps.js:725
 msgid "Inode Usage"
 msgstr "Использование inode"
 
 #: internal/modules/dashboard/sections.go:184
-#: internal/modules/goaccess/render.go:24 internal/web/sidebar.go:350
+#: internal/modules/goaccess/render.go:24 internal/web/sidebar.go:353
 #: internal/web/templates/domains/goaccess.html:11
 #: static/js/tour-steps.js:1153
 msgid "Visitor Statistics"
 msgstr "Статистика посетителей"
 
 #: internal/modules/dashboard/sections.go:185
-#: internal/modules/domains/render.go:275 internal/web/sidebar.go:351
+#: internal/modules/domains/render.go:275 internal/web/sidebar.go:354
 msgid "Access Logs"
 msgstr "Журналы доступа"
 
-#: internal/modules/dashboard/sections.go:186 internal/web/sidebar.go:377
+#: internal/modules/dashboard/sections.go:186 internal/web/sidebar.go:380
 msgid "Server Info"
 msgstr "Информация о сервере"
 
-#: internal/modules/dashboard/sections.go:188 internal/web/sidebar.go:355
+#: internal/modules/dashboard/sections.go:188 internal/web/sidebar.go:358
 msgid "Processes & Services"
 msgstr "Процессы и службы"
 
 #: internal/modules/dashboard/sections.go:189
-#: internal/modules/dashboard/sections.go:305 internal/web/sidebar.go:358
+#: internal/modules/dashboard/sections.go:305 internal/web/sidebar.go:361
 #: internal/web/templates/partials/_header.html:81 static/js/tour-steps.js:498
 msgid "Services"
 msgstr "Службы"
 
-#: internal/modules/dashboard/sections.go:190 internal/web/sidebar.go:359
+#: internal/modules/dashboard/sections.go:190 internal/web/sidebar.go:362
 msgid "Processes"
 msgstr "Процессы"
 
-#: internal/modules/dashboard/sections.go:192 internal/web/sidebar.go:363
+#: internal/modules/dashboard/sections.go:192 internal/web/sidebar.go:366
 #: internal/web/templates/dashboard/onboarding.html:594
 #: internal/web/templates/manager/_cms_app_shared.html:201
 #: internal/web/templates/manager/python_node_apps.html:100
@@ -1993,7 +2027,7 @@ msgid "Security"
 msgstr "Безопасность"
 
 #: internal/modules/dashboard/sections.go:193
-#: internal/modules/waf/render.go:61 internal/web/sidebar.go:366
+#: internal/modules/waf/render.go:61 internal/web/sidebar.go:369
 #: internal/web/templates/system/waf.html:29 static/js/tour-steps.js:575
 msgid "Web Firewall"
 msgstr "Веб-файрвол"
@@ -2005,7 +2039,7 @@ msgstr "Журналы веб-файрвола"
 
 #: internal/modules/dashboard/sections.go:195
 #: internal/modules/dashboard/sections.go:307
-#: internal/modules/ipblocker/render.go:20 internal/web/sidebar.go:367
+#: internal/modules/ipblocker/render.go:20 internal/web/sidebar.go:370
 #: internal/web/templates/dashboard/onboarding.html:256
 #: internal/web/templates/dashboard/onboarding.html:314
 #: internal/web/templates/system/ip_blocker.html:15
@@ -2014,13 +2048,13 @@ msgid "IP Blocker"
 msgstr "Блокировщик IP"
 
 #: internal/modules/dashboard/sections.go:196
-#: internal/modules/malwarescan/render.go:60 internal/web/sidebar.go:368
+#: internal/modules/malwarescan/render.go:60 internal/web/sidebar.go:371
 #: internal/web/templates/files/clamav/scanner.html:14
 #: static/js/tour-steps.js:742
 msgid "Malware Scanner"
 msgstr "Сканер вредоносного ПО"
 
-#: internal/modules/dashboard/sections.go:197 internal/web/sidebar.go:369
+#: internal/modules/dashboard/sections.go:197 internal/web/sidebar.go:372
 msgid "Two-Factor Auth"
 msgstr "Двухфакторная аутентификация"
 
@@ -2133,6 +2167,11 @@ msgstr "Кэш"
 #: internal/modules/emails/render.go:89
 #: internal/web/templates/dashboard/onboarding.html:203
 #: internal/web/templates/emails/accounts.html:8
+#: internal/web/templates/files/backup_restore.html:9
+#: internal/web/templates/files/backup_restore.html:464
+#: internal/web/templates/files/backup_restore.html:566
+#: internal/web/templates/files/backup_restore.html:736
+#: internal/web/templates/files/backup_restore.html:960
 #: internal/web/templates/files/backup_settings.html:84
 #: internal/web/templates/partials/_header.html:91
 msgid "Emails"
@@ -2359,7 +2398,7 @@ msgstr "шаги"
 msgid "pages"
 msgstr "страницы"
 
-#: internal/modules/dashboard/upgrade.go:45 internal/web/sidebar.go:586
+#: internal/modules/dashboard/upgrade.go:45 internal/web/sidebar.go:589
 #: internal/web/templates/dashboard/upgrade.html:6
 #: internal/web/templates/dashboard/usage.html:16
 msgid "Upgrade now"
@@ -3062,6 +3101,8 @@ msgstr "Все"
 #: internal/web/templates/domains/logs.html:132
 #: internal/web/templates/domains/ssl.html:26
 #: internal/web/templates/emails/accounts.html:29
+#: internal/web/templates/files/backup_restore.html:625
+#: internal/web/templates/files/backup_restore.html:661
 #: internal/web/templates/manager/wp/single.html:1038
 #: internal/web/templates/mysql/remote_mysql.html:32
 #: internal/web/templates/php/extensions.html:48
@@ -3089,6 +3130,7 @@ msgstr "Активно"
 #: internal/web/templates/domains/domains.html:199
 #: internal/web/templates/emails/accounts.html:29
 #: internal/web/templates/emails/accounts.html:43
+#: internal/web/templates/files/backup_restore.html:783
 msgid "Suspended"
 msgstr "Приостановлено"
 
@@ -3134,6 +3176,7 @@ msgstr "Тип"
 #: internal/web/templates/emails/deliverability.html:31
 #: internal/web/templates/emails/deliverability.html:104
 #: internal/web/templates/emails/new.html:23
+#: internal/web/templates/files/backup_restore.html:762
 #: internal/web/templates/files/ftp_new.html:34
 #: internal/web/templates/manager/_cms_install_shared.html:118
 #: internal/web/templates/manager/app_install.html:212
@@ -3896,6 +3939,7 @@ msgstr ""
 #: internal/web/templates/manager/python_node_apps.html:110
 #: internal/web/templates/manager/websitebuilder.html:64
 #: internal/web/templates/manager/wp/single.html:248
+#: internal/web/templates/partials/_ai_assistant.html:38
 #: internal/web/templates/user/passkeys.html:50
 msgid "Remove"
 msgstr "Удалить"
@@ -4387,7 +4431,8 @@ msgstr "Создать пользователя"
 
 #: internal/modules/mongodb/render.go:129 internal/modules/mysql/render.go:149
 #: internal/modules/postgresql/render.go:137
-#: internal/web/templates/files/ftp.html:128
+#: internal/web/templates/files/ftp.html:162
+#: internal/web/templates/files/ftp.html:164
 #: internal/web/templates/mongodb/password.html:81
 #: internal/web/templates/mongodb/users.html:62
 #: internal/web/templates/mysql/password.html:116
@@ -5275,6 +5320,8 @@ msgid "Disabled"
 msgstr "Отключено"
 
 #: internal/modules/services/render.go:56
+#: internal/web/templates/files/backup_restore.html:714
+#: internal/web/templates/files/backup_restore.html:764
 #: internal/web/templates/files/backup_wizard.html:128
 #: internal/web/templates/manager/n8n_app.html:675
 #: internal/web/templates/manager/python_node_apps.html:1311
@@ -6168,7 +6215,8 @@ msgstr ""
 msgid "Accounts"
 msgstr "Учётные записи"
 
-#: internal/web/sidebar.go:267
+#: internal/web/sidebar.go:269
+#: internal/web/templates/files/backup_restore.html:429
 #: internal/web/templates/manager/_cms_app_shared.html:151
 #: internal/web/templates/manager/n8n_app.html:45
 #: internal/web/templates/manager/php_app.html:44
@@ -6179,27 +6227,27 @@ msgstr "Учётные записи"
 msgid "Overview"
 msgstr "Обзор"
 
-#: internal/web/sidebar.go:286
+#: internal/web/sidebar.go:289
 msgid "Configure"
 msgstr "Настроить"
 
-#: internal/web/sidebar.go:300
+#: internal/web/sidebar.go:303
 msgid "File Editor"
 msgstr "Редактор файлов"
 
-#: internal/web/sidebar.go:344
+#: internal/web/sidebar.go:347
 msgid "Monitor & Secure"
 msgstr "Мониторинг и защита"
 
-#: internal/web/sidebar.go:380 internal/web/templates/mysql/wizard.html:74
+#: internal/web/sidebar.go:383 internal/web/templates/mysql/wizard.html:74
 msgid "Server"
 msgstr "Сервер"
 
-#: internal/web/sidebar.go:381
+#: internal/web/sidebar.go:384
 msgid "Hosting Plan"
 msgstr "Тарифный план"
 
-#: internal/web/sidebar.go:382
+#: internal/web/sidebar.go:385
 msgid "Panel"
 msgstr "Панель"
 
@@ -6282,12 +6330,13 @@ msgstr "Предупреждение"
 
 #: internal/web/templates/base.html:68 internal/web/templates/base.html:616
 #: internal/web/templates/base.html:687
-#: internal/web/templates/files/backup_restore.html:494
+#: internal/web/templates/files/backup_restore.html:989
+#: internal/web/templates/files/backup_restore.html:1020
 #: internal/web/templates/files/filemanager_partials.html:601
 #: internal/web/templates/files/filemanager_partials.html:633
 #: internal/web/templates/manager/git.html:38
 #: internal/web/templates/mysql/databases.html:576
-#: internal/web/templates/partials/_ai_assistant.html:33
+#: internal/web/templates/partials/_ai_assistant.html:52
 #: internal/web/templates/system/cronjobs.html:447
 msgid "Close"
 msgstr "Закрыть"
@@ -6304,7 +6353,8 @@ msgstr "Закрыть"
 #: internal/web/templates/domains/dynamic_dns.html:134
 #: internal/web/templates/emails/alias_delete.html:27
 #: internal/web/templates/emails/delete.html:30
-#: internal/web/templates/files/backup_restore.html:398
+#: internal/web/templates/files/backup_restore.html:925
+#: internal/web/templates/files/backup_restore.html:988
 #: internal/web/templates/files/clamav/quarantine.html:143
 #: internal/web/templates/files/filemanager_partials.html:26
 #: internal/web/templates/files/filemanager_partials.html:584
@@ -6753,6 +6803,7 @@ msgid "Click to refresh"
 msgstr "Нажмите, чтобы обновить"
 
 #: internal/web/templates/cache/service.html:331
+#: internal/web/templates/files/backup_restore.html:886
 #: internal/web/templates/manager/drupal_app.html:164
 #: internal/web/templates/manager/joomla_app.html:59
 #: internal/web/templates/manager/moodle_app.html:57
@@ -6861,7 +6912,8 @@ msgstr "Информация"
 #: internal/web/templates/dashboard/information.html:33
 #: internal/web/templates/emails/info.html:26
 #: internal/web/templates/emails/new.html:36
-#: internal/web/templates/files/ftp.html:50
+#: internal/web/templates/files/ftp.html:56
+#: internal/web/templates/files/ftp.html:84
 #: internal/web/templates/files/ftp_new.html:29
 #: internal/web/templates/manager/_cms_install_shared.html:379
 #: internal/web/templates/manager/git.html:42
@@ -7019,12 +7071,17 @@ msgid "What to back up"
 msgstr "Что резервировать"
 
 #: internal/web/templates/dashboard/onboarding.html:201
-#: internal/web/templates/files/backup_restore.html:338
+#: internal/web/templates/files/backup_restore.html:6
+#: internal/web/templates/files/backup_restore.html:437
+#: internal/web/templates/files/backup_restore.html:542
+#: internal/web/templates/files/backup_restore.html:958
 #: internal/web/templates/files/backup_settings.html:82
 msgid "Everything"
 msgstr "Всё"
 
 #: internal/web/templates/dashboard/onboarding.html:202
+#: internal/web/templates/files/backup_restore.html:446
+#: internal/web/templates/files/backup_restore.html:550
 #: internal/web/templates/files/backup_settings.html:83
 msgid "Website Files"
 msgstr "Файлы сайта"
@@ -7261,6 +7318,7 @@ msgid "New domains get no request filtering."
 msgstr "Для новых доменов фильтрация запросов не применяется."
 
 #: internal/web/templates/dashboard/onboarding.html:591
+#: internal/web/templates/files/backup_restore.html:13
 #: internal/web/templates/manager/_cms_app_shared.html:789
 #: internal/web/templates/manager/_cms_app_shared.html:969
 #: internal/web/templates/manager/drupal_app.html:33
@@ -7525,8 +7583,9 @@ msgstr "ознакомьтесь с документацией"
 #: internal/web/templates/emails/accounts.html:19
 #: internal/web/templates/emails/aliases.html:19
 #: internal/web/templates/emails/deliverability.html:16
+#: internal/web/templates/files/backup_restore.html:700
 #: internal/web/templates/files/clamav/quarantine.html:28
-#: internal/web/templates/files/ftp.html:24
+#: internal/web/templates/files/ftp.html:41
 #: internal/web/templates/manager/autoinstaller.html:19
 #: internal/web/templates/manager/git.html:159
 #: internal/web/templates/manager/git.html:424
@@ -7610,6 +7669,7 @@ msgid "Create a Database"
 msgstr "Создать базу данных"
 
 #: internal/web/templates/db/new.html:23 internal/web/templates/db/new.html:27
+#: internal/web/templates/files/backup_restore.html:760
 #: internal/web/templates/manager/_cms_app_shared.html:975
 #: internal/web/templates/manager/wp/single.html:1613
 #: internal/web/templates/mongodb/databases.html:53
@@ -8122,6 +8182,7 @@ msgstr "Всего памяти:"
 #: internal/web/templates/docker/containers.html:56
 #: internal/web/templates/domains/domains.html:70
 #: internal/web/templates/domains/logs.html:96
+#: internal/web/templates/files/ftp.html:52
 #: internal/web/templates/manager/git.html:163
 #: internal/web/templates/system/process_manager.html:51
 #: internal/web/templates/system/waf_logs.html:51 static/js/tour-steps.js:211
@@ -8139,12 +8200,12 @@ msgstr "Сетевой ввод/вывод"
 #: internal/web/templates/domains/dns.html:111
 #: internal/web/templates/domains/domains.html:93
 #: internal/web/templates/domains/domains.html:171
-#: internal/web/templates/files/backup_restore.html:176
 #: internal/web/templates/files/backup_wizard.html:131
 #: internal/web/templates/files/clamav/quarantine.html:65
 #: internal/web/templates/files/disk_usage.html:64
-#: internal/web/templates/files/ftp.html:73
-#: internal/web/templates/files/ftp.html:126
+#: internal/web/templates/files/ftp.html:62
+#: internal/web/templates/files/ftp.html:107
+#: internal/web/templates/files/ftp.html:160
 #: internal/web/templates/files/inodes.html:62
 #: internal/web/templates/manager/git.html:172
 #: internal/web/templates/manager/git.html:190
@@ -8605,7 +8666,7 @@ msgstr "Всего DNS-записей:"
 
 #: internal/web/templates/domains/dns.html:58
 #: internal/web/templates/domains/logs.html:52
-#: internal/web/templates/files/ftp.html:18
+#: internal/web/templates/files/ftp.html:23
 #: internal/web/templates/files/ftp_connections.html:17
 #: internal/web/templates/user/active_sessions.html:18
 msgid "Records Table"
@@ -8701,7 +8762,7 @@ msgid "Protocol"
 msgstr "Протокол"
 
 #: internal/web/templates/domains/dns.html:200
-#: internal/web/templates/files/ftp.html:156
+#: internal/web/templates/files/ftp.html:209
 #: internal/web/templates/manager/git.html:510
 #: internal/web/templates/manager/sites.html:521
 #: internal/web/templates/mongodb/databases.html:219
@@ -9004,6 +9065,7 @@ msgid "No SSL is needed on the Tor network."
 msgstr "SSL не требуется в сети Tor."
 
 #: internal/web/templates/domains/domains.html:305
+#: internal/web/templates/partials/_ai_assistant.html:32
 msgid "Expired"
 msgstr "Истёк"
 
@@ -9282,6 +9344,8 @@ msgstr "URI"
 
 #: internal/web/templates/domains/logs.html:113
 #: internal/web/templates/domains/logs.html:133
+#: internal/web/templates/files/backup_restore.html:716
+#: internal/web/templates/files/backup_restore.html:765
 #: internal/web/templates/files/backup_wizard.html:48
 #: internal/web/templates/files/backup_wizard.html:125
 #: internal/web/templates/files/disk_usage.html:61
@@ -10083,7 +10147,8 @@ msgid "Password"
 msgstr "Пароль"
 
 #: internal/web/templates/emails/confirm_import.html:47
-#: internal/web/templates/files/ftp.html:57
+#: internal/web/templates/files/ftp.html:58
+#: internal/web/templates/files/ftp.html:91
 msgid "Quota"
 msgstr "Квота"
 
@@ -10819,36 +10884,351 @@ msgstr "Выбрать"
 msgid "Learn more"
 msgstr "Узнать больше"
 
-#: internal/web/templates/files/backup_restore.html:104
+#: internal/web/templates/files/backup_restore.html:7
+msgid "Files only (no databases)"
+msgstr "Только файлы (без баз данных)"
+
+#: internal/web/templates/files/backup_restore.html:8
+#: internal/web/templates/files/backup_restore.html:734
+#: internal/web/templates/files/backup_restore.html:959
+msgid "Website files"
+msgstr "Файлы сайта"
+
+#: internal/web/templates/files/backup_restore.html:12
+#: internal/web/templates/files/backup_restore.html:738
+#: internal/web/templates/files/backup_restore.html:962
+msgid "Cron jobs"
+msgstr "Задания cron"
+
+#: internal/web/templates/files/backup_restore.html:14
+#: internal/web/templates/files/backup_restore.html:965
+msgid "Selected files"
+msgstr "Выбранные файлы"
+
+#: internal/web/templates/files/backup_restore.html:15
+#: internal/web/templates/files/backup_restore.html:966
+msgid "Selected mailboxes"
+msgstr "Выбранные почтовые ящики"
+
+#: internal/web/templates/files/backup_restore.html:16
+#: internal/web/templates/files/backup_restore.html:967
+msgid "Selected domains"
+msgstr "Выбранные домены"
+
+#: internal/web/templates/files/backup_restore.html:17
+#: internal/web/templates/files/backup_restore.html:968
+msgid "Selected DNS zones"
+msgstr "Выбранные DNS-зоны"
+
+#: internal/web/templates/files/backup_restore.html:370
+msgid "Added to the queue."
+msgstr "Добавлено в очередь."
+
+#: internal/web/templates/files/backup_restore.html:380
 msgid "Restore & Download"
 msgstr "Восстановление и скачивание"
 
-#: internal/web/templates/files/backup_restore.html:111
+#: internal/web/templates/files/backup_restore.html:387
 msgid "Indexing..."
 msgstr "Индексация..."
 
-#: internal/web/templates/files/backup_restore.html:115
+#: internal/web/templates/files/backup_restore.html:391
 msgid "Restore or download backups from destination."
 msgstr "Восстановление или скачивание резервных копий из места назначения."
 
-#: internal/web/templates/files/backup_restore.html:127
+#: internal/web/templates/files/backup_restore.html:403
 msgid "Reindex Destination"
 msgstr "Переиндексировать назначение"
 
-#: internal/web/templates/files/backup_restore.html:153
-msgid "Search backups..."
-msgstr "Поиск резервных копий..."
+#: internal/web/templates/files/backup_restore.html:422
+msgid "Backup types"
+msgstr "Типы резервных копий"
 
-#: internal/web/templates/files/backup_restore.html:167
-msgid "Backup File"
-msgstr "Файл резервной копии"
+#: internal/web/templates/files/backup_restore.html:491
+#: internal/web/templates/files/backup_restore.html:595
+#: internal/web/templates/files/backup_restore.html:614
+msgid "Queue"
+msgstr "Очередь"
 
-#: internal/web/templates/files/backup_restore.html:170
+#: internal/web/templates/files/backup_restore.html:512
+msgid "Total Backups"
+msgstr "Всего копий"
+
+#: internal/web/templates/files/backup_restore.html:516
+msgid "Latest Backup"
+msgstr "Последняя копия"
+
+#: internal/web/templates/files/backup_restore.html:520
+msgid "Total Size"
+msgstr "Общий размер"
+
+#: internal/web/templates/files/backup_restore.html:524
+msgid "Last Restore"
+msgstr "Последнее восстановление"
+
+#: internal/web/templates/files/backup_restore.html:525
+#: internal/web/templates/files/backup_restore.html:672
+msgid "Done"
+msgstr "Готово"
+
+#: internal/web/templates/files/backup_restore.html:526
+#: internal/web/templates/files/backup_restore.html:673
+#: internal/web/templates/files/clamav/quarantine.html:195
+#: internal/web/templates/files/clamav/scan_logs.html:66
+#: internal/web/templates/mysql/databases.html:597
+msgid "Failed"
+msgstr "Ошибка"
+
+#: internal/web/templates/files/backup_restore.html:529
+#: internal/web/templates/files/backup_restore.html:596
+msgid "in queue"
+msgstr "в очереди"
+
+#: internal/web/templates/files/backup_restore.html:535
+msgid "What do you want to restore?"
+msgstr "Что вы хотите восстановить?"
+
+#: internal/web/templates/files/backup_restore.html:536
+msgid "Pick a type to see its backups."
+msgstr "Выберите тип, чтобы увидеть его резервные копии."
+
+#: internal/web/templates/files/backup_restore.html:543
+#: internal/web/templates/files/backup_restore.html:551
+#: internal/web/templates/files/backup_restore.html:583
+msgid "backups"
+msgstr "копий"
+
+#: internal/web/templates/files/backup_restore.html:559
+msgid "databases"
+msgstr "баз данных"
+
+#: internal/web/templates/files/backup_restore.html:567
+msgid "email accounts"
+msgstr "почтовых аккаунтов"
+
+#: internal/web/templates/files/backup_restore.html:575
+#: internal/web/templates/php/settings.html:49
+msgid "domains"
+msgstr "домены"
+
+#: internal/web/templates/files/backup_restore.html:588
+msgid "Restore activity"
+msgstr "Восстановления"
+
+#: internal/web/templates/files/backup_restore.html:589
+msgid "Restores run one at a time, the rest wait in the queue."
+msgstr "Восстановления выполняются по одному, остальные ждут в очереди."
+
+#: internal/web/templates/files/backup_restore.html:604
+msgid "restores"
+msgstr "восстановлений"
+
+#: internal/web/templates/files/backup_restore.html:617
+msgid "Restores run one at a time, the rest wait here."
+msgstr "Восстановления выполняются по одному, остальные ждут здесь."
+
+#: internal/web/templates/files/backup_restore.html:622
+#: internal/web/templates/files/backup_restore.html:657
+msgid "What"
+msgstr "Что"
+
+#: internal/web/templates/files/backup_restore.html:623
+#: internal/web/templates/files/backup_restore.html:658
+msgid "From backup"
+msgstr "Из копии"
+
+#: internal/web/templates/files/backup_restore.html:624
+#: internal/web/templates/user/passkeys.html:36
+msgid "Added"
+msgstr "Добавлен"
+
+#: internal/web/templates/files/backup_restore.html:635
+#: internal/web/templates/files/backup_restore.html:995
+msgid "Restoring..."
+msgstr "Восстановление..."
+
+#: internal/web/templates/files/backup_restore.html:636
+msgid "Waiting"
+msgstr "Ожидает"
+
+#: internal/web/templates/files/backup_restore.html:641
+msgid "Nothing is being restored right now."
+msgstr "Сейчас ничего не восстанавливается."
+
+#: internal/web/templates/files/backup_restore.html:652
+msgid "Your latest restores, newest first."
+msgstr "Ваши последние восстановления, новые сверху."
+
+#: internal/web/templates/files/backup_restore.html:659
+msgid "Restored"
+msgstr "Восстановлено"
+
+#: internal/web/templates/files/backup_restore.html:660
+msgid "Took"
+msgstr "Заняло"
+
+#: internal/web/templates/files/backup_restore.html:679
+msgid "No restores yet."
+msgstr "Восстановлений пока нет."
+
+#: internal/web/templates/files/backup_restore.html:689
+msgid ""
+"Select a backup to restore everything in it: files, databases, emails, "
+"domains with their DNS zones and cron jobs."
+msgstr ""
+"Выберите резервную копию, чтобы восстановить из неё всё: файлы, базы данных,"
+" почту, домены с их DNS-зонами и задания cron."
+
+#: internal/web/templates/files/backup_restore.html:690
+msgid ""
+"Select a backup to restore all its website files, or pick single files and "
+"folders with Choose files."
+msgstr ""
+"Выберите резервную копию, чтобы восстановить все файлы сайта, или выберите "
+"отдельные файлы и папки кнопкой «Выбрать файлы»."
+
+#: internal/web/templates/files/backup_restore.html:691
+msgid ""
+"Select one or more databases. The newest backup is used unless you choose "
+"another one."
+msgstr ""
+"Выберите одну или несколько баз данных. Используется самая новая копия, если"
+" вы не выберете другую."
+
+#: internal/web/templates/files/backup_restore.html:692
+msgid ""
+"Select one or more email accounts. The newest backup is used unless you "
+"choose another one."
+msgstr ""
+"Выберите один или несколько почтовых аккаунтов. Используется самая новая "
+"копия, если вы не выберете другую."
+
+#: internal/web/templates/files/backup_restore.html:693
+msgid ""
+"Select one or more domains to restore their configuration, PHP version and "
+"DNS zone. Domains you deleted are added back to your account first, "
+"suspended domains can't be restored."
+msgstr ""
+"Выберите один или несколько доменов, чтобы восстановить их настройки, версию"
+" PHP и DNS-зону. Удалённые домены сначала снова добавляются в ваш аккаунт, "
+"приостановленные домены восстановить нельзя."
+
+#: internal/web/templates/files/backup_restore.html:694
+msgid "Select a backup to restore only the cron jobs from it."
+msgstr ""
+"Выберите резервную копию, чтобы восстановить из неё только задания cron."
+
+#: internal/web/templates/files/backup_restore.html:715
 msgid "Contents"
 msgstr "Содержимое"
 
-#: internal/web/templates/files/backup_restore.html:253
-#: internal/web/templates/files/backup_restore.html:510
+#: internal/web/templates/files/backup_restore.html:729
+#: internal/web/templates/manager/_cms_install_shared.html:84
+#: internal/web/templates/manager/_cms_install_shared.html:110
+#: internal/web/templates/manager/flarum_install.html:23
+#: internal/web/templates/manager/mediawiki_install.html:27
+#: internal/web/templates/manager/phpbb_install.html:31
+msgid "Latest"
+msgstr "Последняя"
+
+#: internal/web/templates/files/backup_restore.html:745
+msgid "No backups found."
+msgstr "Резервные копии не найдены."
+
+#: internal/web/templates/files/backup_restore.html:757
+#: internal/web/templates/files/filemanager_partials.html:303
+#: internal/web/templates/files/filemanager_partials.html:304
+#: internal/web/templates/files/filemanager_partials.html:377
+#: internal/web/templates/files/filemanager_partials.html:578
+#: internal/web/templates/files/trash.html:44
+#: internal/web/templates/files/trash_partials.html:421
+#: internal/web/templates/manager/sites.html:205
+#: internal/web/templates/manager/sites.html:222
+#: internal/web/templates/partials/_bulk.html:15
+msgid "Select all"
+msgstr "Выбрать все"
+
+#: internal/web/templates/files/backup_restore.html:761
+#: internal/web/templates/partials/_search.html:62
+msgid "Email Account"
+msgstr "Учётная запись email"
+
+#: internal/web/templates/files/backup_restore.html:780
+msgid "VirtualHost"
+msgstr "VirtualHost"
+
+#: internal/web/templates/files/backup_restore.html:781
+#: internal/web/templates/manager/php_app.html:94
+msgid "PHP version"
+msgstr "Версия PHP"
+
+#: internal/web/templates/files/backup_restore.html:782
+msgid "DNS zone"
+msgstr "DNS-зона"
+
+#: internal/web/templates/files/backup_restore.html:783
+msgid "Unsuspend the domain to restore its VirtualHost."
+msgstr "Возобновите домен, чтобы восстановить его VirtualHost."
+
+#: internal/web/templates/files/backup_restore.html:784
+msgid "Will be added"
+msgstr "Будет добавлен"
+
+#: internal/web/templates/files/backup_restore.html:785
+msgid "Restore the domain first"
+msgstr "Сначала восстановите домен"
+
+#: internal/web/templates/files/backup_restore.html:790
+msgid "backups found"
+msgstr "копий найдено"
+
+#: internal/web/templates/files/backup_restore.html:802
+msgid "messages"
+msgstr "писем"
+
+#: internal/web/templates/files/backup_restore.html:808
+msgid "No databases found in the backups."
+msgstr "В резервных копиях не найдено баз данных."
+
+#: internal/web/templates/files/backup_restore.html:809
+msgid ""
+"Nothing found in the backups. Backups made before this version don't list "
+"emails and domains, restore those from the Everything tab."
+msgstr ""
+"В резервных копиях ничего не найдено. Копии, сделанные до этой версии, не "
+"содержат списка почты и доменов, восстановите их на вкладке «Всё»."
+
+#: internal/web/templates/files/backup_restore.html:822
+#: internal/web/templates/files/backup_restore.html:922
+#: internal/web/templates/files/filemanager_partials.html:580
+#: internal/web/templates/manager/sites.html:484
+#: internal/web/templates/partials/_bulk.html:57
+#: internal/web/templates/partials/_bulk.html:74
+msgid "selected"
+msgstr "выбрано"
+
+#: internal/web/templates/files/backup_restore.html:824
+#: internal/web/templates/manager/sites.html:485
+#: internal/web/templates/partials/_bulk.html:58
+msgid "Clear"
+msgstr "Очистить"
+
+#: internal/web/templates/files/backup_restore.html:828
+msgid "This backup was made before single items could be restored."
+msgstr ""
+"Эта копия сделана до того, как стало можно восстанавливать отдельные "
+"элементы."
+
+#: internal/web/templates/files/backup_restore.html:828
+#: internal/web/templates/files/backup_restore.html:829
+#: internal/web/templates/files/backup_restore.html:862
+msgid "Choose files"
+msgstr "Выбрать файлы"
+
+#: internal/web/templates/files/backup_restore.html:830
+#: internal/web/templates/files/backup_restore.html:831
+#: internal/web/templates/files/backup_restore.html:911
+#: internal/web/templates/files/backup_restore.html:1024
 #: internal/web/templates/files/backup_wizard.html:168
 #: internal/web/templates/files/filemanager_partials.html:318
 #: internal/web/templates/files/filemanager_partials.html:319
@@ -10857,97 +11237,75 @@ msgstr "Содержимое"
 msgid "Download"
 msgstr "Скачать"
 
-#: internal/web/templates/files/backup_restore.html:267
+#: internal/web/templates/files/backup_restore.html:842
 msgid "Indexing destination, please wait..."
 msgstr "Индексация назначения, подождите..."
 
-#: internal/web/templates/files/backup_restore.html:270
+#: internal/web/templates/files/backup_restore.html:846
 msgid "No backups indexed yet"
 msgstr "Резервные копии ещё не проиндексированы"
 
-#: internal/web/templates/files/backup_restore.html:275
+#: internal/web/templates/files/backup_restore.html:847
 msgid "Click \"Reindex Destination\" to fetch available backups."
 msgstr ""
 "Нажмите «Переиндексировать назначение», чтобы получить доступные резервные "
 "копии."
 
-#: internal/web/templates/files/backup_restore.html:309
-msgid "Restore Backup"
-msgstr "Восстановить резервную копию"
+#: internal/web/templates/files/backup_restore.html:914
+msgid "This folder is empty."
+msgstr "Эта папка пуста."
 
-#: internal/web/templates/files/backup_restore.html:328
+#: internal/web/templates/files/backup_restore.html:927
+msgid "Restore selected"
+msgstr "Восстановить выбранное"
+
+#: internal/web/templates/files/backup_restore.html:939
+msgid "Restore Summary"
+msgstr "Сводка восстановления"
+
+#: internal/web/templates/files/backup_restore.html:948
 msgid "Restoring will overwrite existing data. This action cannot be undone."
 msgstr ""
 "Восстановление перезапишет существующие данные. Это действие нельзя "
 "отменить."
 
-#: internal/web/templates/files/backup_restore.html:334
-msgid "What to restore"
-msgstr "Что восстановить"
+#: internal/web/templates/files/backup_restore.html:948
+msgid "The items are added to the queue and restored one at a time."
+msgstr "Элементы добавляются в очередь и восстанавливаются по одному."
 
-#: internal/web/templates/files/backup_restore.html:342
-msgid "Specific database only"
-msgstr "Только определённую базу данных"
+#: internal/web/templates/files/backup_restore.html:952
+msgid "Items to restore"
+msgstr "Элементы для восстановления"
 
-#: internal/web/templates/files/backup_restore.html:346
-msgid "Files only (no databases)"
-msgstr "Только файлы (без баз данных)"
+#: internal/web/templates/files/backup_restore.html:994
+msgid "Restore Selected Items"
+msgstr "Восстановить выбранные элементы"
 
-#: internal/web/templates/files/backup_restore.html:353
-msgid "Select database"
-msgstr "Выберите базу данных"
-
-#: internal/web/templates/files/backup_restore.html:373
-msgid "Restore completed successfully."
-msgstr "Восстановление успешно завершено."
-
-#: internal/web/templates/files/backup_restore.html:384
-msgid "Restore failed."
-msgstr "Восстановление не удалось."
-
-#: internal/web/templates/files/backup_restore.html:411
-msgid "Restoring..."
-msgstr "Восстановление..."
-
-#: internal/web/templates/files/backup_restore.html:411
-#: internal/web/templates/manager/_cms_app_shared.html:646
-#: internal/web/templates/manager/_cms_app_shared.html:748
-#: internal/web/templates/manager/_cms_app_shared.html:1254
-#: internal/web/templates/manager/_cms_app_shared.html:1432
-#: internal/web/templates/manager/python_node_apps.html:1003
-#: internal/web/templates/manager/python_node_apps.html:1090
-#: internal/web/templates/manager/websitebuilder.html:193
-#: internal/web/templates/manager/websitebuilder.html:418
-#: internal/web/templates/manager/wp/single.html:1734
-#: internal/web/templates/manager/wp/single.html:2122
-msgid "Start Restore"
-msgstr "Начать восстановление"
-
-#: internal/web/templates/files/backup_restore.html:444
+#: internal/web/templates/files/backup_restore.html:1007
 msgid "Download Backup"
 msgstr "Скачать резервную копию"
 
-#: internal/web/templates/files/backup_restore.html:457
+#: internal/web/templates/files/backup_restore.html:1011
 msgid ""
 "The backup archive will be fetched from the destination and downloaded to "
 "your browser."
 msgstr ""
 "Архив резервной копии будет получен из места назначения и скачан в браузер."
 
-#: internal/web/templates/files/backup_restore.html:460
+#: internal/web/templates/files/backup_restore.html:1011
 msgid "Large files may take a moment to transfer."
 msgstr "Передача больших файлов может занять некоторое время."
 
-#: internal/web/templates/files/backup_restore.html:471
+#: internal/web/templates/files/backup_restore.html:1012
 msgid "Download started."
 msgstr "Загрузка началась."
 
-#: internal/web/templates/files/backup_restore.html:480
+#: internal/web/templates/files/backup_restore.html:1014
 #: internal/web/templates/files/upload_file.html:301
 msgid "Download failed."
 msgstr "Загрузка не удалась."
 
-#: internal/web/templates/files/backup_restore.html:510
+#: internal/web/templates/files/backup_restore.html:1025
 msgid "Downloading..."
 msgstr "Загрузка..."
 
@@ -11300,12 +11658,6 @@ msgstr "Файл удалён."
 #: internal/web/templates/files/clamav/quarantine.html:190
 msgid "Delete failed"
 msgstr "Удаление не удалось"
-
-#: internal/web/templates/files/clamav/quarantine.html:195
-#: internal/web/templates/files/clamav/scan_logs.html:66
-#: internal/web/templates/mysql/databases.html:597
-msgid "Failed"
-msgstr "Ошибка"
 
 #: internal/web/templates/files/clamav/quarantine.html:195
 msgid "Marked as safe and restored."
@@ -11714,18 +12066,6 @@ msgstr "Элементы не найдены."
 msgid "Start creating new folders or uploading a new file!"
 msgstr "Начните создавать новые папки или загружать новый файл!"
 
-#: internal/web/templates/files/filemanager_partials.html:303
-#: internal/web/templates/files/filemanager_partials.html:304
-#: internal/web/templates/files/filemanager_partials.html:377
-#: internal/web/templates/files/filemanager_partials.html:578
-#: internal/web/templates/files/trash.html:44
-#: internal/web/templates/files/trash_partials.html:421
-#: internal/web/templates/manager/sites.html:205
-#: internal/web/templates/manager/sites.html:222
-#: internal/web/templates/partials/_bulk.html:15
-msgid "Select all"
-msgstr "Выбрать все"
-
 #: internal/web/templates/files/filemanager_partials.html:308
 #: internal/web/templates/files/filemanager_partials.html:309
 #: internal/web/templates/files/filemanager_partials.html:381
@@ -11798,13 +12138,6 @@ msgstr "Вычислить"
 #: internal/web/templates/files/trash_partials.html:420
 msgid "Deselect"
 msgstr "Снять выделение"
-
-#: internal/web/templates/files/filemanager_partials.html:580
-#: internal/web/templates/manager/sites.html:484
-#: internal/web/templates/partials/_bulk.html:57
-#: internal/web/templates/partials/_bulk.html:74
-msgid "selected"
-msgstr "выбрано"
 
 #: internal/web/templates/files/filemanager_partials.html:581
 #: internal/web/templates/files/trash_partials.html:308
@@ -11940,73 +12273,78 @@ msgstr ""
 "Права доступа успешно исправлены для всех файлов и подкаталогов внутри "
 "каталога"
 
-#: internal/web/templates/files/ftp.html:6
+#: internal/web/templates/files/ftp.html:10
 msgid "FTP Accounts Header"
 msgstr "Заголовок FTP-аккаунтов"
 
-#: internal/web/templates/files/ftp.html:10
+#: internal/web/templates/files/ftp.html:14
 msgid "Total accounts:"
 msgstr "Всего учетных записей:"
 
-#: internal/web/templates/files/ftp.html:13
+#: internal/web/templates/files/ftp.html:17
 msgid "FTP Server:"
 msgstr "FTP-сервер:"
 
-#: internal/web/templates/files/ftp.html:13
+#: internal/web/templates/files/ftp.html:17
 msgid "FTP Port:"
 msgstr "FTP-порт:"
 
-#: internal/web/templates/files/ftp.html:14
+#: internal/web/templates/files/ftp.html:18
 msgid "View Connections"
 msgstr "Просмотр соединений"
 
-#: internal/web/templates/files/ftp.html:36 static/js/tour-steps.js:690
-msgid "New Account"
-msgstr "Новая учетная запись"
-
-#: internal/web/templates/files/ftp.html:53
+#: internal/web/templates/files/ftp.html:57
+#: internal/web/templates/files/ftp.html:87
 msgid "Path"
 msgstr "Путь"
 
-#: internal/web/templates/files/ftp.html:61
+#: internal/web/templates/files/ftp.html:59
+#: internal/web/templates/files/ftp.html:95
 #: internal/web/templates/system/process_manager.html:57
 #: internal/web/templates/system/process_manager.html:103
 msgid "UID"
 msgstr "UID"
 
-#: internal/web/templates/files/ftp.html:65
+#: internal/web/templates/files/ftp.html:60
+#: internal/web/templates/files/ftp.html:99
 msgid "GID"
 msgstr "GID"
 
-#: internal/web/templates/files/ftp.html:80
+#: internal/web/templates/files/ftp.html:70 static/js/tour-steps.js:690
+msgid "New Account"
+msgstr "Новая учетная запись"
+
+#: internal/web/templates/files/ftp.html:114
 msgid "No accounts yet."
 msgstr "Пока нет учётных записей."
 
-#: internal/web/templates/files/ftp.html:80
+#: internal/web/templates/files/ftp.html:114
 msgid "Add your first account"
 msgstr "Добавьте свою первую учётную запись"
 
-#: internal/web/templates/files/ftp.html:94
+#: internal/web/templates/files/ftp.html:128
 #: internal/web/templates/files/ftp_quota.html:28
 msgid "Over quota"
 msgstr "Квота превышена"
 
-#: internal/web/templates/files/ftp.html:101
+#: internal/web/templates/files/ftp.html:135
 #: internal/web/templates/files/ftp_new.html:165
 #: internal/web/templates/files/ftp_quota.html:28
 #: internal/web/templates/files/ftp_quota.html:34
 msgid "Unlimited"
 msgstr "Без ограничений"
 
-#: internal/web/templates/files/ftp.html:130
+#: internal/web/templates/files/ftp.html:169
+#: internal/web/templates/files/ftp.html:171
 msgid "Change Path"
 msgstr "Изменить путь"
 
-#: internal/web/templates/files/ftp.html:132
+#: internal/web/templates/files/ftp.html:176
+#: internal/web/templates/files/ftp.html:178
 msgid "Change Quota"
 msgstr "Изменить квоту"
 
-#: internal/web/templates/files/ftp.html:205
+#: internal/web/templates/files/ftp.html:257
 msgid "Add new FTP account"
 msgstr "Добавить новую учётную запись FTP"
 
@@ -12457,6 +12795,7 @@ msgstr "Наследует версию PHP от %(domain)s"
 #: internal/web/templates/manager/php_app.html:97
 #: internal/web/templates/manager/sofawiki_app.html:69
 #: internal/web/templates/manager/wp/single.html:312
+#: internal/web/templates/partials/_ai_assistant.html:22
 #: internal/web/templates/php/settings.html:135
 msgid "Change"
 msgstr "Изменить"
@@ -12592,6 +12931,19 @@ msgstr "Показать резервные копии"
 #: internal/web/templates/manager/wp/single.html:1728
 msgid "Select a backup date:"
 msgstr "Выберите дату резервной копии:"
+
+#: internal/web/templates/manager/_cms_app_shared.html:646
+#: internal/web/templates/manager/_cms_app_shared.html:748
+#: internal/web/templates/manager/_cms_app_shared.html:1254
+#: internal/web/templates/manager/_cms_app_shared.html:1432
+#: internal/web/templates/manager/python_node_apps.html:1003
+#: internal/web/templates/manager/python_node_apps.html:1090
+#: internal/web/templates/manager/websitebuilder.html:193
+#: internal/web/templates/manager/websitebuilder.html:418
+#: internal/web/templates/manager/wp/single.html:1734
+#: internal/web/templates/manager/wp/single.html:2122
+msgid "Start Restore"
+msgstr "Начать восстановление"
 
 #: internal/web/templates/manager/_cms_app_shared.html:658
 #: internal/web/templates/manager/python_node_apps.html:845
@@ -13318,14 +13670,6 @@ msgstr "Сведения о сайте"
 #: internal/web/templates/manager/_cms_install_shared.html:106
 msgid "%(name)s version"
 msgstr "Версия %(name)s"
-
-#: internal/web/templates/manager/_cms_install_shared.html:84
-#: internal/web/templates/manager/_cms_install_shared.html:110
-#: internal/web/templates/manager/flarum_install.html:23
-#: internal/web/templates/manager/mediawiki_install.html:27
-#: internal/web/templates/manager/phpbb_install.html:31
-msgid "Latest"
-msgstr "Последняя"
 
 #: internal/web/templates/manager/_cms_install_shared.html:92
 #: internal/web/templates/manager/_cms_install_shared.html:123
@@ -15449,10 +15793,6 @@ msgstr ""
 msgid "Docroot"
 msgstr "Корневая папка сайта"
 
-#: internal/web/templates/manager/php_app.html:94
-msgid "PHP version"
-msgstr "Версия PHP"
-
 #: internal/web/templates/manager/php_app.html:96
 msgid "Not set"
 msgstr "Не задано"
@@ -16151,11 +16491,6 @@ msgstr ""
 #: internal/web/templates/manager/websitebuilder_install.html:273
 msgid "Open Website Builder"
 msgstr "Открыть конструктор сайтов"
-
-#: internal/web/templates/manager/sites.html:485
-#: internal/web/templates/partials/_bulk.html:58
-msgid "Clear"
-msgstr "Очистить"
 
 #: internal/web/templates/manager/sites.html:508
 #: internal/web/templates/manager/sites.html:509
@@ -18672,7 +19007,7 @@ msgid "Assign user to database"
 msgstr "Назначить пользователя базе данных"
 
 #: internal/web/templates/partials/_ai_assistant.html:2
-#: internal/web/templates/partials/_ai_assistant.html:24
+#: internal/web/templates/partials/_ai_assistant.html:43
 msgid "AI Assistant"
 msgstr ""
 
@@ -18681,7 +19016,7 @@ msgid "Hi! Ask me anything about your hosting account and this panel."
 msgstr ""
 
 #: internal/web/templates/partials/_ai_assistant.html:10
-#: internal/web/templates/partials/_ai_assistant.html:48
+#: internal/web/templates/partials/_ai_assistant.html:68
 msgid "Ask a question..."
 msgstr ""
 
@@ -18723,30 +19058,99 @@ msgstr ""
 msgid "What can I do on this page?"
 msgstr ""
 
+#: internal/web/templates/partials/_ai_assistant.html:20
+msgid "Which domains do I have?"
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:21
+msgid "Create an email account for me"
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:23
+#: internal/web/templates/user/activity.html:5
+msgid "Destructive"
+msgstr "Разрушительное"
+
+#: internal/web/templates/partials/_ai_assistant.html:24
+msgid "Approve"
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:25
+msgid "Always allow"
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:26
+msgid "Decline"
+msgstr ""
+
 #: internal/web/templates/partials/_ai_assistant.html:27
-msgid "About"
+msgid ""
+"This can delete or overwrite data. Check the details before you approve."
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:28
+msgid "Asking again because the assistant read files or logs in this chat."
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:29
+msgid "Approved"
 msgstr ""
 
 #: internal/web/templates/partials/_ai_assistant.html:30
+msgid "Declined"
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:31
+msgid "Not answered"
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:33
+msgid ""
+"It answers questions using the panel documentation. It can't see your data "
+"or make changes for you."
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:34
+msgid ""
+"It answers questions using the panel documentation and can look up "
+"information in your account, but it can't make changes."
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:35
+msgid ""
+"It answers questions and can look up information or make changes in your "
+"account. Changes only run after you approve them, and everything it does is "
+"recorded in your Activity log."
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:36
+msgid "Always allowed actions"
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:37
+msgid ""
+"None yet. Click Always allow on an action to skip the approval next time. "
+"Actions that delete or overwrite data always ask."
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:46
+msgid "About"
+msgstr ""
+
+#: internal/web/templates/partials/_ai_assistant.html:49
 msgid "New chat"
 msgstr ""
 
-#: internal/web/templates/partials/_ai_assistant.html:40
-msgid ""
-"The assistant answers questions about your hosting account using the panel "
-"documentation. It can't see your data or make changes for you."
-msgstr ""
-
-#: internal/web/templates/partials/_ai_assistant.html:41
+#: internal/web/templates/partials/_ai_assistant.html:60
 msgid ""
 "AI can make mistakes, double-check important steps before you apply them."
 msgstr ""
 
-#: internal/web/templates/partials/_ai_assistant.html:49
+#: internal/web/templates/partials/_ai_assistant.html:69
 msgid "Send"
 msgstr ""
 
-#: internal/web/templates/partials/_ai_assistant.html:53
+#: internal/web/templates/partials/_ai_assistant.html:73
 msgid "AI can make mistakes."
 msgstr ""
 
@@ -18907,40 +19311,40 @@ msgstr "Показать/скрыть боковую панель"
 msgid "Caching"
 msgstr "Кэширование"
 
-#: internal/web/templates/partials/_header.html:189
-#: internal/web/templates/partials/_header.html:248
+#: internal/web/templates/partials/_header.html:192
+#: internal/web/templates/partials/_header.html:251
 msgid "Left-click to add to Favorites"
 msgstr "Щелкните левой кнопкой мыши, чтобы добавить в избранное"
 
-#: internal/web/templates/partials/_header.html:216
-#: internal/web/templates/partials/_header.html:292
+#: internal/web/templates/partials/_header.html:219
+#: internal/web/templates/partials/_header.html:295
 msgid "Right-click to remove from Favorites"
 msgstr "Нажмите правой кнопкой мыши, чтобы удалить из избранного"
 
-#: internal/web/templates/partials/_header.html:225
+#: internal/web/templates/partials/_header.html:228
 msgid "This page is not in your favorites! Left-click to add it."
 msgstr ""
 "Эта страница не в избранном! Щелкните левой кнопкой мыши, чтобы добавить ее."
 
-#: internal/web/templates/partials/_header.html:241
+#: internal/web/templates/partials/_header.html:244
 msgid "Successfully removed from favorites!"
 msgstr "Успешно удалено из избранного!"
 
-#: internal/web/templates/partials/_header.html:253
+#: internal/web/templates/partials/_header.html:256
 msgid "Failed to remove favorite."
 msgstr "Не удалось удалить из избранного."
 
-#: internal/web/templates/partials/_header.html:260
+#: internal/web/templates/partials/_header.html:263
 msgid "This page is already in your favorites! Right-click to remove it."
 msgstr ""
 "Эта страница уже в избранном! Щелкните правой кнопкой мыши, чтобы удалить "
 "ее."
 
-#: internal/web/templates/partials/_header.html:284
+#: internal/web/templates/partials/_header.html:287
 msgid "Successfully added to favorites!"
 msgstr "Успешно добавлено в избранное!"
 
-#: internal/web/templates/partials/_header.html:298
+#: internal/web/templates/partials/_header.html:301
 msgid "Failed to add favorite."
 msgstr "Не удалось добавить в избранное."
 
@@ -18987,10 +19391,6 @@ msgstr "База данных MongoDB"
 #: internal/web/templates/partials/_search.html:56
 msgid "MongoDB User"
 msgstr "Пользователь MongoDB"
-
-#: internal/web/templates/partials/_search.html:62
-msgid "Email Account"
-msgstr "Учётная запись email"
 
 #: internal/web/templates/partials/_search.html:65
 msgid "FTP Account"
@@ -19475,10 +19875,6 @@ msgid ""
 msgstr ""
 "Обязательно проверьте требования ваших скриптов и плагинов, чтобы знать, "
 "какая версия PHP лучше всего работает для вашего веб-сайта."
-
-#: internal/web/templates/php/settings.html:49
-msgid "domains"
-msgstr "домены"
 
 #: internal/web/templates/php/settings.html:76
 msgid "Current PHP Version"
@@ -20763,10 +21159,6 @@ msgstr "Просмотр журналов активности"
 msgid "Online"
 msgstr "В сети"
 
-#: internal/web/templates/user/activity.html:5
-msgid "Destructive"
-msgstr "Разрушительное"
-
 #: internal/web/templates/user/activity.html:9
 msgid "Changed"
 msgstr "Изменено"
@@ -21213,10 +21605,6 @@ msgstr ""
 #: internal/web/templates/user/passkeys.html:14
 msgid "Add a passkey"
 msgstr "Добавить ключ доступа"
-
-#: internal/web/templates/user/passkeys.html:36
-msgid "Added"
-msgstr "Добавлен"
 
 #: internal/web/templates/user/passkeys.html:48
 msgid "Remove this passkey?"
