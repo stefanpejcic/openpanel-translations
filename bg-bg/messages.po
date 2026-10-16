@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-10-15 14:08+0200\n"
+"POT-Creation-Date: 2026-10-16 11:31+0200\n"
 "PO-Revision-Date: 2026-02-08 21:25+0200\n"
 "Last-Translator: Svetoslav Slavkov <contact@sslavkov.eu>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -32,7 +32,7 @@ msgstr "Изискват се потребителско име и парола.
 #: internal/modules/mysql/bulk.go:55 internal/modules/postgresql/bulk.go:28
 #: internal/modules/postgresql/bulk.go:37
 #: internal/web/templates/docker/containers.html:502
-#: internal/web/templates/domains/domains.html:406
+#: internal/web/templates/domains/domains.html:410
 #: internal/web/templates/domains/dynamic_dns.html:130
 #: internal/web/templates/domains/dynamic_dns.html:135
 #: internal/web/templates/domains/dynamic_dns.html:205
@@ -175,6 +175,8 @@ msgstr "Проверката на captcha не бе успешна. Моля, о
 msgid ""
 "Your login session expired. Please enter your username and password again."
 msgstr ""
+"Сесията ви за вход изтече. Моля, въведете отново потребителското име и "
+"паролата."
 
 #: internal/modules/account/login.go:253 internal/modules/account/login.go:259
 msgid "Invalid 2FA code. Please try again."
@@ -227,11 +229,11 @@ msgstr ""
 "Да се отменят ли избраните токени? MCP клиентите, които ги използват, спират"
 " да работят веднага."
 
-#: internal/modules/account/notifications.go:33
+#: internal/modules/account/notifications.go:34
 msgid "New login"
 msgstr "Нов вход"
 
-#: internal/modules/account/notifications.go:33
+#: internal/modules/account/notifications.go:34
 msgid ""
 "Get an email every time someone logs in to your account, with the IP "
 "address, country and browser."
@@ -239,66 +241,66 @@ msgstr ""
 "Получавайте имейл всеки път, когато някой влезе в акаунта ви, с IP адреса, "
 "държавата и браузъра."
 
-#: internal/modules/account/notifications.go:34
+#: internal/modules/account/notifications.go:35
 msgid "Also for IP addresses I logged in from before"
 msgstr "Също и за IP адреси, от които съм влизал преди"
 
-#: internal/modules/account/notifications.go:35
+#: internal/modules/account/notifications.go:36
 msgid "Email me if login alerts get turned off"
 msgstr "Изпращай ми имейл, ако известията за вход бъдат изключени"
 
-#: internal/modules/account/notifications.go:36
+#: internal/modules/account/notifications.go:37
 msgid "Password changed"
 msgstr "Паролата е променена"
 
-#: internal/modules/account/notifications.go:36
+#: internal/modules/account/notifications.go:37
 msgid "Get an email when the password for your account is changed."
 msgstr "Получавайте имейл, когато паролата на акаунта ви бъде променена."
 
-#: internal/modules/account/notifications.go:37
-#: internal/modules/account/notifications.go:39
-#: internal/modules/account/notifications.go:41
-#: internal/modules/account/notifications.go:43
-#: internal/modules/account/notifications.go:45
+#: internal/modules/account/notifications.go:38
+#: internal/modules/account/notifications.go:40
+#: internal/modules/account/notifications.go:42
+#: internal/modules/account/notifications.go:44
+#: internal/modules/account/notifications.go:46
 msgid "Email me if this alert gets turned off"
 msgstr "Изпращай ми имейл, ако това известие бъде изключено"
 
-#: internal/modules/account/notifications.go:38
+#: internal/modules/account/notifications.go:39
 msgid "Contact email changed"
 msgstr "Имейлът за контакт е променен"
 
-#: internal/modules/account/notifications.go:38
+#: internal/modules/account/notifications.go:39
 msgid ""
 "Get an email when the contact email address for your account is changed."
 msgstr ""
 "Получавайте имейл, когато имейлът за контакт на акаунта ви бъде променен."
 
-#: internal/modules/account/notifications.go:40
+#: internal/modules/account/notifications.go:41
 msgid "Two-factor authentication changed"
 msgstr "Двуфакторното удостоверяване е променено"
 
-#: internal/modules/account/notifications.go:40
+#: internal/modules/account/notifications.go:41
 msgid "Get an email when two-factor authentication is turned on or off."
 msgstr ""
 "Получавайте имейл, когато двуфакторното удостоверяване бъде включено или "
 "изключено."
 
-#: internal/modules/account/notifications.go:42
+#: internal/modules/account/notifications.go:43
 msgid "Passkey added or removed"
 msgstr "Добавен или премахнат passkey"
 
-#: internal/modules/account/notifications.go:42
+#: internal/modules/account/notifications.go:43
 msgid ""
 "Get an email when a passkey is added to your account or removed from it."
 msgstr ""
 "Получавайте имейл, когато passkey бъде добавен към акаунта ви или премахнат "
 "от него."
 
-#: internal/modules/account/notifications.go:44
+#: internal/modules/account/notifications.go:45
 msgid "API token created or revoked"
 msgstr "Създаден или отменен API токен"
 
-#: internal/modules/account/notifications.go:44
+#: internal/modules/account/notifications.go:45
 msgid ""
 "Get an email when an AI Assistant (MCP) token is created or revoked for your"
 " account."
@@ -306,11 +308,11 @@ msgstr ""
 "Получавайте имейл, когато токен за AI асистент (MCP) бъде създаден или "
 "отменен за акаунта ви."
 
-#: internal/modules/account/notifications.go:46
+#: internal/modules/account/notifications.go:47
 msgid "SSL certificate problem"
 msgstr "Проблем със SSL сертификат"
 
-#: internal/modules/account/notifications.go:46
+#: internal/modules/account/notifications.go:47
 msgid ""
 "Get an email when an SSL certificate fails to renew or is about to expire, "
 "before visitors see a security warning."
@@ -318,23 +320,33 @@ msgstr ""
 "Получавайте имейл, когато SSL сертификат не успее да се поднови или скоро "
 "изтича, преди посетителите да видят предупреждение за сигурност."
 
-#: internal/modules/account/notifications.go:47
+#: internal/modules/account/notifications.go:48
 msgid "Malware found"
 msgstr "Открит зловреден софтуер"
 
-#: internal/modules/account/notifications.go:47
-msgid ""
-"Get an email when the scheduled malware scan finds infected files and moves "
-"them to quarantine."
-msgstr ""
-"Получавайте имейл, когато планираното сканиране за зловреден софтуер открие "
-"заразени файлове и ги премести под карантина."
-
 #: internal/modules/account/notifications.go:48
+msgid "Get an email when a malware scan finds infected files on your account."
+msgstr ""
+"Получавайте имейл, когато сканиране за зловреден софтуер открие заразени "
+"файлове в акаунта ви."
+
+#: internal/modules/account/notifications.go:49
+msgid "Vulnerable WordPress site"
+msgstr "Уязвим WordPress сайт"
+
+#: internal/modules/account/notifications.go:49
+msgid ""
+"Get an email when WordPress, a plugin or a theme on one of your websites has"
+" a known security vulnerability."
+msgstr ""
+"Получавайте имейл, когато WordPress, плъгин или тема на някой от сайтовете "
+"ви има известна уязвимост в сигурността."
+
+#: internal/modules/account/notifications.go:50
 msgid "Disk space running out"
 msgstr "Дисковото пространство се изчерпва"
 
-#: internal/modules/account/notifications.go:48
+#: internal/modules/account/notifications.go:50
 msgid ""
 "Get an email when your account uses 85% of its disk space or 95% of its "
 "inodes."
@@ -342,21 +354,21 @@ msgstr ""
 "Получавайте имейл, когато акаунтът ви използва 85% от дисковото пространство"
 " или 95% от inode-овете си."
 
-#: internal/modules/account/notifications.go:49
+#: internal/modules/account/notifications.go:51
 msgid "Mailbox almost full"
 msgstr "Пощенската кутия е почти пълна"
 
-#: internal/modules/account/notifications.go:49
+#: internal/modules/account/notifications.go:51
 msgid "Get an email when one of your email accounts uses 90% of its quota."
 msgstr ""
 "Получавайте имейл, когато някой от имейл акаунтите ви използва 90% от "
 "квотата си."
 
-#: internal/modules/account/notifications.go:50
+#: internal/modules/account/notifications.go:52
 msgid "Hourly email limit reached"
 msgstr "Достигнат часов лимит за имейли"
 
-#: internal/modules/account/notifications.go:50
+#: internal/modules/account/notifications.go:52
 msgid ""
 "Get an email when your account reaches its limit of emails sent per hour and"
 " new emails are rejected."
@@ -364,11 +376,11 @@ msgstr ""
 "Получавайте имейл, когато акаунтът ви достигне лимита за изпратени имейли на"
 " час и новите имейли бъдат отхвърлени."
 
-#: internal/modules/account/notifications.go:51
+#: internal/modules/account/notifications.go:53
 msgid "Service stopped"
 msgstr "Услугата е спряна"
 
-#: internal/modules/account/notifications.go:51
+#: internal/modules/account/notifications.go:53
 msgid ""
 "Get an email when a service like MySQL or PHP stopped or ran out of memory "
 "and had to be restarted."
@@ -376,13 +388,50 @@ msgstr ""
 "Получавайте имейл, когато услуга като MySQL или PHP спре или остане без "
 "памет и трябва да бъде рестартирана."
 
-#: internal/modules/account/notifications.go:170
+#: internal/modules/account/notifications.go:54
+msgid "Visitors blocked by rate limit"
+msgstr "Посетители, блокирани от ограничението на заявките"
+
+#: internal/modules/account/notifications.go:54
+msgid ""
+"Get an email when visitors to one of your domains were blocked for sending "
+"too many requests per minute."
+msgstr ""
+"Получавайте имейл, когато посетители на някой от домейните ви са блокирани, "
+"защото изпращат твърде много заявки в минута."
+
+#: internal/modules/account/notifications.go:55
+msgid "Daily summary"
+msgstr "Дневно обобщение"
+
+#: internal/modules/account/notifications.go:55
+msgid ""
+"Get one email each morning with what needs your attention on your account "
+"and websites, and the day's traffic, logins and changes."
+msgstr ""
+"Получавайте всяка сутрин имейл с това, което изисква вниманието ви в акаунта"
+" и сайтовете, както и трафика, входовете и промените за деня."
+
+#: internal/modules/account/notifications.go:56
+msgid "Daily error report"
+msgstr "Дневен отчет за грешки"
+
+#: internal/modules/account/notifications.go:56
+msgid ""
+"Get one email a day with the errors found in your websites' logs in the last"
+" 24 hours, the same ones shown on the Error Logs page."
+msgstr ""
+"Получавайте веднъж дневно имейл с грешките от регистрите на сайтовете ви за "
+"последните 24 часа, същите като на страницата Регистри на грешки."
+
+#: internal/modules/account/notifications.go:197
 msgid "Notification preferences updated successfully!"
 msgstr "Настройките за известия са обновени успешно!"
 
 #: internal/modules/account/notify.go:47
 #: internal/web/templates/mongodb/processlist.html:38
 #: internal/web/templates/mysql/processlist.html:37
+#: internal/web/templates/system/error_logs.html:69
 #: internal/web/templates/system/waf_domain.html:158
 msgid "Time"
 msgstr "Време"
@@ -425,19 +474,19 @@ msgstr "Твърде много неуспешни опити за вход. М�
 #: internal/modules/account/render.go:34 internal/modules/backups/render.go:54
 #: internal/modules/php/render.go:139
 #: internal/web/templates/db/configuration.html:8
-#: internal/web/templates/partials/site_manager_shared.html:1045
+#: internal/web/templates/partials/site_manager_shared.html:1050
 msgid "Settings"
 msgstr "Настройки"
 
 #: internal/modules/account/render.go:54
-#: internal/modules/dashboard/sections.go:319
+#: internal/modules/dashboard/sections.go:323
 #: internal/web/templates/user/_login.html:101
 #: internal/web/templates/user/locale.html:10 static/js/tour-steps.js:619
 msgid "Change Language"
 msgstr "Смени езика"
 
 #: internal/modules/account/render.go:77
-#: internal/modules/dashboard/sections.go:321
+#: internal/modules/dashboard/sections.go:325
 #: internal/web/templates/dashboard/onboarding.html:266
 #: internal/web/templates/dashboard/onboarding.html:326
 #: internal/web/templates/dashboard/twofa.html:6
@@ -447,77 +496,52 @@ msgid "Two-Factor Authentication"
 msgstr "Двуфакторна автентификация"
 
 #: internal/modules/account/render.go:96
-#: internal/modules/dashboard/sections.go:198 internal/web/sidebar.go:373
+#: internal/modules/dashboard/sections.go:200 internal/web/sidebar.go:378
 #: internal/web/templates/user/passkeys.html:7
 #: internal/web/templates/user/passkeys.html:10
 msgid "Passkeys"
 msgstr "Passkey ключове"
 
-#: internal/modules/account/render.go:145
+#: internal/modules/account/render.go:148
 msgid "Notification Preferences"
 msgstr "Настройки за известия"
 
-#: internal/modules/account/render.go:163
-#: internal/modules/dashboard/sections.go:174 internal/web/sidebar.go:341
+#: internal/modules/account/render.go:166
+#: internal/modules/dashboard/sections.go:174 internal/web/sidebar.go:344
 #: internal/web/templates/base.html:436
 #: internal/web/templates/user/favorites.html:7
 #: internal/web/templates/user/favorites.html:10 static/js/tour-steps.js:60
 msgid "Favorites"
 msgstr "Любими"
 
-#: internal/modules/account/render.go:182
-#: internal/modules/dashboard/sections.go:199
-#: internal/modules/dashboard/sections.go:322 internal/web/sidebar.go:374
+#: internal/modules/account/render.go:185
+#: internal/modules/dashboard/sections.go:201
+#: internal/modules/dashboard/sections.go:326 internal/web/sidebar.go:379
 #: internal/web/templates/user/active_sessions.html:10
 #: static/js/tour-steps.js:646
 msgid "Active Sessions"
 msgstr "Активни сесии"
 
-#: internal/modules/account/render.go:203
 #: internal/modules/account/render.go:204
-msgid "Today"
-msgstr "Днес"
-
-#: internal/modules/account/render.go:205
-msgid "Last 7 days"
-msgstr "Последните 7 дни"
-
-#: internal/modules/account/render.go:206
-msgid "Last 30 days"
-msgstr "Последните 30 дни"
-
-#: internal/modules/account/render.go:207
-msgid "Last 3 months"
-msgstr "Последните 3 месеца"
-
-#: internal/modules/account/render.go:208
-msgid "Last 6 months"
-msgstr "Последните 6 месеца"
-
-#: internal/modules/account/render.go:209
-msgid "Year to date"
-msgstr "От началото на годината"
-
-#: internal/modules/account/render.go:214
-#: internal/modules/dashboard/sections.go:200 internal/web/sidebar.go:375
+#: internal/modules/dashboard/sections.go:202 internal/web/sidebar.go:380
 #: internal/web/templates/user/activity.html:27 static/js/tour-steps.js:664
 msgid "Activity Log"
 msgstr "Регистър на дейностите"
 
-#: internal/modules/account/render.go:232
-#: internal/modules/dashboard/sections.go:201
-#: internal/modules/dashboard/sections.go:325 internal/web/sidebar.go:376
+#: internal/modules/account/render.go:222
+#: internal/modules/dashboard/sections.go:203
+#: internal/modules/dashboard/sections.go:329 internal/web/sidebar.go:381
 #: internal/web/templates/user/loginlog.html:10 static/js/tour-steps.js:673
 msgid "Login History"
 msgstr "История на влизанията"
 
-#: internal/modules/account/render.go:252
-#: internal/modules/dashboard/sections.go:176 internal/web/sidebar.go:343
+#: internal/modules/account/render.go:242
+#: internal/modules/dashboard/sections.go:176 internal/web/sidebar.go:346
 msgid "AI Assistant (MCP)"
 msgstr "AI асистент (MCP)"
 
-#: internal/modules/account/render.go:271
-#: internal/modules/dashboard/sections.go:175 internal/web/sidebar.go:342
+#: internal/modules/account/render.go:261
+#: internal/modules/dashboard/sections.go:175 internal/web/sidebar.go:345
 msgid "API"
 msgstr "API"
 
@@ -657,6 +681,11 @@ msgid ""
 " params and an example body. Always call this before run_action to get the "
 "exact action name and parameters."
 msgstr ""
+"Търси действията, достъпни в хостинг акаунта на този потребител, например "
+"изброяване на домейни или създаване на имейл акаунт. Връща името на "
+"действието, метода, пътя, параметрите и примерно тяло. Винаги извиквайте "
+"това преди run_action, за да получите точното име на действието и "
+"параметрите."
 
 #: internal/modules/aiassistant/agent.go:45
 msgid ""
@@ -665,6 +694,10 @@ msgid ""
 "confirmation card and only run if they approve it, so don't ask for "
 "permission in text first."
 msgstr ""
+"Изпълнява едно действие, върнато от find_actions, в акаунта на потребителя. "
+"Действията за четене се изпълняват веднага. Действията, които променят нещо,"
+" се показват на потребителя като карта за потвърждение и се изпълняват само "
+"ако той ги одобри, затова не искайте разрешение предварително в текста."
 
 #: internal/modules/appinstall/install.go:108
 #: internal/modules/cmsapp/install.go:47 internal/modules/phpapp/install.go:39
@@ -674,7 +707,7 @@ msgid ""
 msgstr "Достигнахте максималния брой разрешени сайтове.%(upgrade_message)s"
 
 #: internal/modules/appinstall/java.go:10
-#: internal/modules/dashboard/sections.go:352
+#: internal/modules/dashboard/sections.go:356
 #: internal/web/templates/manager/autoinstaller.html:747
 #: internal/web/templates/manager/python_node_apps.html:168
 msgid "Java"
@@ -699,7 +732,7 @@ msgid "Install Java Application"
 msgstr "Инсталиране на Java приложение"
 
 #: internal/modules/appinstall/n8n.go:21
-#: internal/modules/dashboard/sections.go:353
+#: internal/modules/dashboard/sections.go:357
 #: internal/web/templates/manager/autoinstaller.html:779
 msgid "n8n"
 msgstr "n8n"
@@ -852,7 +885,7 @@ msgstr ""
 "%(error)s"
 
 #: internal/modules/appinstall/python.go:11
-#: internal/modules/dashboard/sections.go:350
+#: internal/modules/dashboard/sections.go:354
 #: internal/web/templates/manager/autoinstaller.html:683
 #: internal/web/templates/manager/python_node_apps.html:166
 msgid "Python"
@@ -877,7 +910,7 @@ msgid "Install Python Application"
 msgstr "Инсталиране на Python приложение"
 
 #: internal/modules/appinstall/ruby.go:11
-#: internal/modules/dashboard/sections.go:351
+#: internal/modules/dashboard/sections.go:355
 #: internal/web/templates/manager/autoinstaller.html:715
 #: internal/web/templates/manager/python_node_apps.html:167
 msgid "Ruby"
@@ -902,7 +935,7 @@ msgid "Install Ruby Application"
 msgstr "Инсталиране на Ruby приложение"
 
 #: internal/modules/autoinstaller/render.go:29
-#: internal/modules/dashboard/sections.go:84 internal/web/sidebar.go:233
+#: internal/modules/dashboard/sections.go:84 internal/web/sidebar.go:236
 #: internal/web/templates/manager/autoinstaller.html:6
 #: internal/web/templates/manager/autoinstaller.html:9
 #: static/js/tour-steps.js:961
@@ -943,7 +976,7 @@ msgstr ""
 #: internal/modules/backups/render.go:33
 #: internal/modules/dashboard/sections.go:106
 #: internal/modules/dashboard/sections.go:107
-#: internal/modules/dashboard/sections.go:216 internal/web/sidebar.go:264
+#: internal/modules/dashboard/sections.go:218 internal/web/sidebar.go:267
 #: internal/web/templates/dashboard/onboarding.html:593
 #: internal/web/templates/files/backups.html:10
 #: internal/web/templates/manager/_cms_app_shared.html:191
@@ -964,7 +997,7 @@ msgid "Multiple backup targets are configured."
 msgstr "Конфигурирани са няколко местоназначения за резервни копия."
 
 #: internal/modules/backups/render.go:97
-#: internal/modules/dashboard/sections.go:110 internal/web/sidebar.go:274
+#: internal/modules/dashboard/sections.go:110 internal/web/sidebar.go:277
 #: internal/web/templates/files/filemanager_partials.html:658
 msgid "Destination"
 msgstr "Местоназначение"
@@ -1019,7 +1052,7 @@ msgstr "Дистанционно архивиране в облачното хр
 
 #: internal/modules/backups/render.go:249
 #: internal/modules/dashboard/sections.go:108
-#: internal/modules/malwarescan/bulk.go:15 internal/web/sidebar.go:271
+#: internal/modules/malwarescan/bulk.go:15 internal/web/sidebar.go:274
 #: internal/web/templates/files/backup_restore.html:832
 #: internal/web/templates/files/backup_restore.html:833
 #: internal/web/templates/files/clamav/quarantine.html:86
@@ -1067,7 +1100,7 @@ msgstr ""
 
 #: internal/modules/backupwizard/render.go:35
 #: internal/modules/dashboard/sections.go:111
-#: internal/modules/dashboard/sections.go:217 internal/web/sidebar.go:276
+#: internal/modules/dashboard/sections.go:219 internal/web/sidebar.go:279
 #: internal/web/templates/files/backup_wizard.html:10
 msgid "Backup Wizard"
 msgstr "Помощник за резервни копия"
@@ -1076,12 +1109,12 @@ msgstr "Помощник за резервни копия"
 #: internal/modules/dashboard/sections.go:114
 #: internal/modules/dashboard/sections.go:127
 #: internal/modules/dashboard/sections.go:136
-#: internal/modules/dashboard/sections.go:237
-#: internal/modules/dashboard/sections.go:249
-#: internal/modules/dashboard/sections.go:258
-#: internal/modules/mysql/render.go:58 internal/web/sidebar.go:176
-#: internal/web/sidebar.go:190 internal/web/sidebar.go:201
-#: internal/web/sidebar.go:280 internal/web/sidebar_classic.go:89
+#: internal/modules/dashboard/sections.go:239
+#: internal/modules/dashboard/sections.go:251
+#: internal/modules/dashboard/sections.go:260
+#: internal/modules/mysql/render.go:58 internal/web/sidebar.go:179
+#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
+#: internal/web/sidebar.go:283 internal/web/sidebar_classic.go:89
 #: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
 #: internal/web/templates/dashboard/usage.html:78
 #: internal/web/templates/files/backup_restore.html:455
@@ -1099,10 +1132,10 @@ msgstr "Домашната директория"
 #: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:73
 #: internal/modules/dashboard/sections.go:74
-#: internal/modules/dashboard/sections.go:223
-#: internal/modules/dashboard/sections.go:224
-#: internal/modules/domains/render.go:107 internal/web/sidebar.go:213
-#: internal/web/sidebar.go:217 internal/web/sidebar.go:219
+#: internal/modules/dashboard/sections.go:225
+#: internal/modules/dashboard/sections.go:226
+#: internal/modules/domains/render.go:107 internal/web/sidebar.go:216
+#: internal/web/sidebar.go:220 internal/web/sidebar.go:222
 #: internal/web/templates/cache/service.html:146
 #: internal/web/templates/dashboard/usage.html:55
 #: internal/web/templates/domains/domains.html:9
@@ -1119,11 +1152,12 @@ msgstr "Домейни"
 
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/sections.go:81
-#: internal/modules/dashboard/sections.go:265
-#: internal/modules/websites/render.go:26 internal/web/sidebar.go:228
+#: internal/modules/dashboard/sections.go:267
+#: internal/modules/websites/render.go:26 internal/web/sidebar.go:231
 #: internal/web/templates/dashboard/usage.html:32
 #: internal/web/templates/domains/domains.html:83
 #: internal/web/templates/domains/domains.html:156
+#: internal/web/templates/system/summary.html:89
 msgid "Websites"
 msgstr "Сайтове"
 
@@ -1155,7 +1189,7 @@ msgstr "Контейнери и изображения"
 
 #: internal/modules/cache/cache.go:24
 #: internal/modules/dashboard/sections.go:150
-#: internal/modules/dashboard/sections.go:272
+#: internal/modules/dashboard/sections.go:274
 msgid "Redis"
 msgstr "Redis"
 
@@ -1169,7 +1203,7 @@ msgstr ""
 
 #: internal/modules/cache/cache.go:28
 #: internal/modules/dashboard/sections.go:152
-#: internal/modules/dashboard/sections.go:274
+#: internal/modules/dashboard/sections.go:276
 msgid "Memcached"
 msgstr "Memcached"
 
@@ -1182,7 +1216,7 @@ msgstr ""
 "паметта, създадена за ускоряване на динамични уеб приложения."
 
 #: internal/modules/cache/cache.go:32
-#: internal/modules/dashboard/sections.go:277
+#: internal/modules/dashboard/sections.go:279
 msgid "ElasticSearch"
 msgstr "ElasticSearch"
 
@@ -1196,7 +1230,7 @@ msgstr ""
 
 #: internal/modules/cache/cache.go:36
 #: internal/modules/dashboard/sections.go:154
-#: internal/modules/dashboard/sections.go:276
+#: internal/modules/dashboard/sections.go:278
 msgid "OpenSearch"
 msgstr "OpenSearch"
 
@@ -1210,7 +1244,7 @@ msgstr ""
 
 #: internal/modules/cache/cache.go:40
 #: internal/modules/dashboard/sections.go:151
-#: internal/modules/dashboard/sections.go:273
+#: internal/modules/dashboard/sections.go:275
 msgid "Valkey"
 msgstr "Valkey"
 
@@ -1225,7 +1259,7 @@ msgstr ""
 
 #: internal/modules/cache/render.go:74
 #: internal/modules/dashboard/sections.go:153
-#: internal/modules/dashboard/sections.go:275
+#: internal/modules/dashboard/sections.go:277
 #: internal/web/templates/dashboard/onboarding.html:592
 msgid "Varnish"
 msgstr "Varnish"
@@ -1479,73 +1513,73 @@ msgid "Cron time zone set to %(tz)s."
 msgstr "Часовата зона за cron е зададена на %(tz)s."
 
 #: internal/modules/dashboard/dashboard.go:162
-#: internal/modules/dashboard/dashboard.go:168 internal/web/sidebar.go:588
+#: internal/modules/dashboard/dashboard.go:168 internal/web/sidebar.go:593
 #: internal/web/templates/partials/_header.html:60
 msgid "Dashboard"
 msgstr "Табло"
 
-#: internal/modules/dashboard/page.go:73
+#: internal/modules/dashboard/page.go:74
 #: internal/web/templates/system/waf_logs.html:103
 #: internal/web/templates/user/twofa_settings.html:20
 msgid "disabled"
 msgstr "изключено"
 
-#: internal/modules/dashboard/page.go:75
+#: internal/modules/dashboard/page.go:76
 #: internal/web/templates/user/twofa_settings.html:18
 msgid "enabled"
 msgstr "разрешен"
 
-#: internal/modules/dashboard/page.go:77
+#: internal/modules/dashboard/page.go:78
 msgid "2FA is <b>{status}</b> for your account."
 msgstr "2FA е <b>{status}</b> за вашия акаунт."
 
 #: internal/modules/dashboard/sections.go:75
-#: internal/modules/dashboard/sections.go:226
-#: internal/modules/dns/render.go:31 internal/web/sidebar.go:220
+#: internal/modules/dashboard/sections.go:228
+#: internal/modules/dns/render.go:31 internal/web/sidebar.go:223
 #: internal/web/templates/domains/dns.html:752 static/js/tour-steps.js:1144
 msgid "DNS Zone Editor"
 msgstr "Редактор на DNS зона"
 
 #: internal/modules/dashboard/sections.go:76
-#: internal/modules/dashboard/sections.go:227
-#: internal/modules/dynamicdns/render.go:31 internal/web/sidebar.go:221
+#: internal/modules/dashboard/sections.go:229
+#: internal/modules/dynamicdns/render.go:31 internal/web/sidebar.go:224
 #: internal/web/templates/domains/dynamic_dns.html:10
 #: static/js/tour-steps.js:802
 msgid "Dynamic DNS"
 msgstr "Динамичен DNS"
 
-#: internal/modules/dashboard/sections.go:77 internal/web/sidebar.go:222
+#: internal/modules/dashboard/sections.go:77 internal/web/sidebar.go:225
 msgid "SSL Certificates"
 msgstr "SSL сертификати"
 
 #: internal/modules/dashboard/sections.go:78
-#: internal/modules/dashboard/sections.go:225 internal/web/sidebar.go:223
+#: internal/modules/dashboard/sections.go:227 internal/web/sidebar.go:226
 #: static/js/tour-steps.js:793
 msgid "Redirects"
 msgstr "Пренасочвания"
 
-#: internal/modules/dashboard/sections.go:82 internal/web/sidebar.go:231
+#: internal/modules/dashboard/sections.go:82 internal/web/sidebar.go:234
 #: internal/web/templates/partials/_header.html:141
 msgid "Sites"
 msgstr "Сайтове"
 
-#: internal/modules/dashboard/sections.go:83 internal/web/sidebar.go:232
+#: internal/modules/dashboard/sections.go:83 internal/web/sidebar.go:235
 #: internal/web/templates/manager/autoinstaller.html:48
 #: internal/web/templates/manager/wp/list.html:199
 msgid "WordPress"
 msgstr "WordPress"
 
 #: internal/modules/dashboard/sections.go:85
-#: internal/modules/dashboard/sections.go:269
-#: internal/modules/git/render.go:103 internal/web/sidebar.go:234
+#: internal/modules/dashboard/sections.go:271
+#: internal/modules/git/render.go:103 internal/web/sidebar.go:237
 #: internal/web/templates/manager/git.html:16
 #: internal/web/templates/manager/git.html:19
-#: internal/web/templates/partials/site_manager_shared.html:920
-#: internal/web/templates/partials/site_manager_shared.html:935
+#: internal/web/templates/partials/site_manager_shared.html:925
+#: internal/web/templates/partials/site_manager_shared.html:940
 msgid "Git"
-msgstr ""
+msgstr "Git"
 
-#: internal/modules/dashboard/sections.go:87 internal/web/sidebar.go:238
+#: internal/modules/dashboard/sections.go:87 internal/web/sidebar.go:241
 #: internal/web/templates/emails/confirm_import.html:45
 #: internal/web/templates/manager/_cms_install_shared.html:372
 #: internal/web/templates/manager/app_install.html:404
@@ -1563,32 +1597,32 @@ msgid "Email"
 msgstr "Email"
 
 #: internal/modules/dashboard/sections.go:88
-#: internal/modules/dashboard/sections.go:280
+#: internal/modules/dashboard/sections.go:282
 #: internal/web/sidebar_classic.go:194 internal/web/sidebar_classic.go:199
 #: static/js/tour-steps.js:347
 msgid "Email Accounts"
 msgstr "Имейл акаунти"
 
 #: internal/modules/dashboard/sections.go:89
-#: internal/modules/dashboard/sections.go:281
-#: internal/modules/emails/render.go:212 internal/web/sidebar.go:242
+#: internal/modules/dashboard/sections.go:283
+#: internal/modules/emails/render.go:212 internal/web/sidebar.go:245
 #: internal/web/templates/emails/aliases.html:10 static/js/tour-steps.js:987
 msgid "Aliases"
 msgstr "Псевдоними"
 
-#: internal/modules/dashboard/sections.go:90 internal/web/sidebar.go:243
+#: internal/modules/dashboard/sections.go:90 internal/web/sidebar.go:246
 msgid "Catch-all Address"
 msgstr "Адрес за всички писма (catch-all)"
 
 #: internal/modules/dashboard/sections.go:91
-#: internal/modules/dashboard/sections.go:282
-#: internal/modules/emails/render.go:364 internal/web/sidebar.go:244
+#: internal/modules/dashboard/sections.go:284
+#: internal/modules/emails/render.go:364 internal/web/sidebar.go:247
 #: internal/web/templates/domains/domains.html:103
 #: internal/web/templates/system/waf.html:159 static/js/tour-steps.js:995
 msgid "Filters"
 msgstr "Филтри"
 
-#: internal/modules/dashboard/sections.go:92 internal/web/sidebar.go:245
+#: internal/modules/dashboard/sections.go:92 internal/web/sidebar.go:248
 msgid "Deliverability"
 msgstr "Доставяемост"
 
@@ -1598,9 +1632,9 @@ msgstr "Доставяемост"
 #: internal/modules/dashboard/sections.go:139
 #: internal/modules/emails/render.go:381
 #: internal/modules/mongodb/render.go:199 internal/modules/mysql/render.go:271
-#: internal/modules/postgresql/render.go:192 internal/web/sidebar.go:178
-#: internal/web/sidebar.go:192 internal/web/sidebar.go:203
-#: internal/web/sidebar.go:246
+#: internal/modules/postgresql/render.go:192 internal/web/sidebar.go:181
+#: internal/web/sidebar.go:195 internal/web/sidebar.go:206
+#: internal/web/sidebar.go:249
 #: internal/web/templates/mongodb/databases.html:82
 #: internal/web/templates/mysql/databases.html:312
 #: internal/web/templates/psql/databases.html:148
@@ -1624,13 +1658,13 @@ msgid "Export"
 msgstr "Експортиране"
 
 #: internal/modules/dashboard/sections.go:95
-#: internal/modules/dashboard/sections.go:287 internal/web/sidebar.go:247
+#: internal/modules/dashboard/sections.go:289 internal/web/sidebar.go:250
 #: internal/web/templates/emails/accounts.html:114
 msgid "Webmail"
 msgstr "Е-Поща"
 
 #: internal/modules/dashboard/sections.go:97
-#: internal/modules/dashboard/sections.go:209 internal/web/sidebar.go:251
+#: internal/modules/dashboard/sections.go:211 internal/web/sidebar.go:254
 #: internal/web/templates/domains/ssl.html:226
 #: internal/web/templates/files/clamav/scan_logs.html:41
 #: internal/web/templates/files/filemanager.html:146
@@ -1650,7 +1684,7 @@ msgid "Files"
 msgstr "Файлове"
 
 #: internal/modules/dashboard/sections.go:98
-#: internal/modules/dashboard/sections.go:210 internal/web/sidebar.go:256
+#: internal/modules/dashboard/sections.go:212 internal/web/sidebar.go:259
 #: internal/web/sidebar_classic.go:62 internal/web/sidebar_classic.go:68
 #: internal/web/templates/files/disk_usage.html:90
 #: internal/web/templates/files/filemanager.html:59
@@ -1667,21 +1701,21 @@ msgstr "Файлов мениджър"
 msgid "Upload"
 msgstr "Качи"
 
-#: internal/modules/dashboard/sections.go:100 internal/web/sidebar.go:257
+#: internal/modules/dashboard/sections.go:100 internal/web/sidebar.go:260
 #: internal/web/sidebar_classic.go:64 internal/web/sidebar_classic.go:70
 #: internal/web/templates/files/upload_file.html:11
 msgid "Download from URL"
 msgstr "Изтегляне от URL"
 
 #: internal/modules/dashboard/sections.go:101
-#: internal/modules/dashboard/sections.go:221 internal/web/sidebar.go:258
+#: internal/modules/dashboard/sections.go:223 internal/web/sidebar.go:261
 #: internal/web/templates/files/trash.html:32 static/js/tour-steps.js:776
 msgid "Trash"
 msgstr "Кошче"
 
 #: internal/modules/dashboard/sections.go:102
-#: internal/modules/dashboard/sections.go:213
-#: internal/modules/ftp/render.go:28 internal/web/sidebar.go:259
+#: internal/modules/dashboard/sections.go:215
+#: internal/modules/ftp/render.go:28 internal/web/sidebar.go:262
 #: internal/web/templates/dashboard/usage.html:124
 #: internal/web/templates/files/ftp.html:13
 #: internal/web/templates/manager/_cms_app_shared.html:411
@@ -1696,15 +1730,15 @@ msgid "FTP Accounts"
 msgstr "FTP потребители"
 
 #: internal/modules/dashboard/sections.go:103
-#: internal/modules/dashboard/sections.go:214
+#: internal/modules/dashboard/sections.go:216
 #: internal/modules/ftp/render.go:48
 #: internal/web/templates/files/ftp_connections.html:9
 msgid "FTP Connections"
 msgstr "FTP връзки"
 
 #: internal/modules/dashboard/sections.go:104
-#: internal/modules/dashboard/sections.go:220
-#: internal/modules/fixpermissions/render.go:30 internal/web/sidebar.go:260
+#: internal/modules/dashboard/sections.go:222
+#: internal/modules/fixpermissions/render.go:30 internal/web/sidebar.go:263
 #: internal/web/templates/files/fix_permissions.html:11
 #: internal/web/templates/files/fix_permissions.html:40
 #: static/js/tour-steps.js:759 static/js/tour-steps.js:767
@@ -1713,16 +1747,16 @@ msgstr "Поправка на правата"
 
 #: internal/modules/dashboard/sections.go:109
 #: internal/modules/dashboard/sections.go:122
-#: internal/modules/dashboard/sections.go:133 internal/web/sidebar.go:182
-#: internal/web/sidebar.go:195 internal/web/sidebar.go:273
+#: internal/modules/dashboard/sections.go:133 internal/web/sidebar.go:185
+#: internal/web/sidebar.go:198 internal/web/sidebar.go:276
 #: internal/web/templates/files/ftp.html:61
 #: internal/web/templates/files/ftp.html:103
 msgid "Configuration"
 msgstr "Конфигурация"
 
 #: internal/modules/dashboard/sections.go:113
-#: internal/modules/dashboard/sections.go:236
-#: internal/modules/docker/render.go:404 internal/web/sidebar.go:280
+#: internal/modules/dashboard/sections.go:238
+#: internal/modules/docker/render.go:404 internal/web/sidebar.go:283
 #: internal/web/templates/dashboard/onboarding.html:498
 #: internal/web/templates/partials/_header.html:101
 msgid "MySQL"
@@ -1731,10 +1765,10 @@ msgstr "MySQL"
 #: internal/modules/dashboard/sections.go:115
 #: internal/modules/dashboard/sections.go:128
 #: internal/modules/dashboard/sections.go:137
-#: internal/modules/dashboard/sections.go:238
-#: internal/modules/dashboard/sections.go:250
-#: internal/modules/dashboard/sections.go:259 internal/web/sidebar.go:177
-#: internal/web/sidebar.go:191 internal/web/sidebar.go:202
+#: internal/modules/dashboard/sections.go:240
+#: internal/modules/dashboard/sections.go:252
+#: internal/modules/dashboard/sections.go:261 internal/web/sidebar.go:180
+#: internal/web/sidebar.go:194 internal/web/sidebar.go:205
 #: internal/web/sidebar_classic.go:90 internal/web/sidebar_classic.go:113
 #: internal/web/sidebar_classic.go:136
 #: internal/web/templates/mysql/users.html:9
@@ -1744,9 +1778,9 @@ msgstr "Потребители"
 #: internal/modules/dashboard/sections.go:116
 #: internal/modules/dashboard/sections.go:129
 #: internal/modules/dashboard/sections.go:138
-#: internal/modules/dashboard/sections.go:239
-#: internal/modules/dashboard/sections.go:251
-#: internal/modules/dashboard/sections.go:260
+#: internal/modules/dashboard/sections.go:241
+#: internal/modules/dashboard/sections.go:253
+#: internal/modules/dashboard/sections.go:262
 #: internal/modules/mongodb/render.go:148
 #: internal/modules/postgresql/render.go:150
 #: internal/web/sidebar_classic.go:94 internal/web/sidebar_classic.go:116
@@ -1765,22 +1799,22 @@ msgid "Database Wizard"
 msgstr "Съветник на база данни"
 
 #: internal/modules/dashboard/sections.go:118
-#: internal/modules/php/render.go:281 internal/web/sidebar.go:179
+#: internal/modules/php/render.go:281 internal/web/sidebar.go:182
 #: internal/web/templates/mysql/databases.html:425
 #: internal/web/templates/mysql/phpmyadmin_unavailable.html:6
 msgid "phpMyAdmin"
 msgstr "phpMyAdmin"
 
 #: internal/modules/dashboard/sections.go:119
-#: internal/modules/dashboard/sections.go:242
+#: internal/modules/dashboard/sections.go:244
 msgid "phpMyAdmin Login Form"
 msgstr "Форма за вход в phpMyAdmin"
 
 #: internal/modules/dashboard/sections.go:120
 #: internal/modules/dashboard/sections.go:131
-#: internal/modules/dashboard/sections.go:244
-#: internal/modules/dashboard/sections.go:254 internal/web/sidebar.go:180
-#: internal/web/sidebar.go:193 internal/web/sidebar_classic.go:101
+#: internal/modules/dashboard/sections.go:246
+#: internal/modules/dashboard/sections.go:256 internal/web/sidebar.go:183
+#: internal/web/sidebar.go:196 internal/web/sidebar_classic.go:101
 #: internal/web/sidebar_classic.go:124
 #: internal/web/templates/mysql/remote_mysql.html:10
 #: static/js/tour-steps.js:887 static/js/tour-steps.js:944
@@ -1791,52 +1825,52 @@ msgstr "Дистанционен достъп"
 #: internal/modules/dashboard/sections.go:132
 #: internal/modules/dashboard/sections.go:140
 #: internal/modules/mongodb/render.go:218 internal/modules/mysql/render.go:289
-#: internal/modules/postgresql/render.go:211 internal/web/sidebar.go:181
-#: internal/web/sidebar.go:194 internal/web/sidebar.go:204
+#: internal/modules/postgresql/render.go:211 internal/web/sidebar.go:184
+#: internal/web/sidebar.go:197 internal/web/sidebar.go:207
 #: static/js/tour-steps.js:879 static/js/tour-steps.js:928
 #: static/js/tour-steps.js:936
 msgid "Running Queries"
 msgstr "Изпълнявани заявки"
 
-#: internal/modules/dashboard/sections.go:123 internal/web/sidebar.go:183
+#: internal/modules/dashboard/sections.go:123 internal/web/sidebar.go:186
 msgid "Root Password"
 msgstr "Root парола"
 
-#: internal/modules/dashboard/sections.go:124 internal/web/sidebar.go:184
+#: internal/modules/dashboard/sections.go:124 internal/web/sidebar.go:187
 msgid "Server Type"
 msgstr "Тип сървър"
 
 #: internal/modules/dashboard/sections.go:126
-#: internal/modules/dashboard/sections.go:248 internal/web/sidebar.go:283
+#: internal/modules/dashboard/sections.go:250 internal/web/sidebar.go:286
 #: internal/web/templates/partials/_header.html:106
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
 #: internal/modules/dashboard/sections.go:135
-#: internal/modules/dashboard/sections.go:257 internal/web/sidebar.go:286
+#: internal/modules/dashboard/sections.go:259 internal/web/sidebar.go:289
 #: internal/web/templates/partials/_header.html:111
 msgid "MongoDB"
 msgstr "MongoDB"
 
 #: internal/modules/dashboard/sections.go:142
-#: internal/modules/dashboard/sections.go:289
-#: internal/modules/dashboard/sections.go:354 internal/web/sidebar.go:289
+#: internal/modules/dashboard/sections.go:291
+#: internal/modules/dashboard/sections.go:358 internal/web/sidebar.go:292
 #: internal/web/templates/dashboard/onboarding.html:590
 #: internal/web/templates/manager/autoinstaller.html:811
 #: internal/web/templates/partials/_header.html:116
 msgid "PHP"
 msgstr "PHP"
 
-#: internal/modules/dashboard/sections.go:143 internal/web/sidebar.go:292
+#: internal/modules/dashboard/sections.go:143 internal/web/sidebar.go:295
 msgid "Version per Domain"
 msgstr "Версия за всеки домейн"
 
 #: internal/modules/dashboard/sections.go:144
-#: internal/modules/dashboard/sections.go:291 internal/web/sidebar.go:293
+#: internal/modules/dashboard/sections.go:293 internal/web/sidebar.go:296
 msgid "Default Version"
 msgstr "Версия по подразбиране"
 
-#: internal/modules/dashboard/sections.go:145 internal/web/sidebar.go:294
+#: internal/modules/dashboard/sections.go:145 internal/web/sidebar.go:297
 #: internal/web/templates/emails/accounts.html:78
 #: internal/web/templates/emails/aliases.html:42
 #: internal/web/templates/emails/deliverability.html:35
@@ -1844,15 +1878,15 @@ msgstr "Версия по подразбиране"
 msgid "Options"
 msgstr "Опции"
 
-#: internal/modules/dashboard/sections.go:146 internal/web/sidebar.go:295
+#: internal/modules/dashboard/sections.go:146 internal/web/sidebar.go:298
 msgid "Extensions"
 msgstr "Разширения"
 
-#: internal/modules/dashboard/sections.go:147 internal/web/sidebar.go:296
+#: internal/modules/dashboard/sections.go:147 internal/web/sidebar.go:299
 msgid "php.ini Editor"
 msgstr "Редактор на php.ini"
 
-#: internal/modules/dashboard/sections.go:149 internal/web/sidebar.go:307
+#: internal/modules/dashboard/sections.go:149 internal/web/sidebar.go:310
 msgid "Cache & Search"
 msgstr "Кеш и търсене"
 
@@ -1860,28 +1894,28 @@ msgstr "Кеш и търсене"
 msgid "Elasticsearch"
 msgstr "Elasticsearch"
 
-#: internal/modules/dashboard/sections.go:157 internal/web/sidebar.go:316
+#: internal/modules/dashboard/sections.go:157 internal/web/sidebar.go:319
 msgid "Web Server Config"
 msgstr "Конфигурация на уеб сървъра"
 
-#: internal/modules/dashboard/sections.go:158 internal/web/sidebar.go:319
+#: internal/modules/dashboard/sections.go:158 internal/web/sidebar.go:322
 msgid "Server Settings"
 msgstr "Настройки на сървъра"
 
-#: internal/modules/dashboard/sections.go:159 internal/web/sidebar.go:320
+#: internal/modules/dashboard/sections.go:159 internal/web/sidebar.go:323
 msgid "Domain VHosts"
 msgstr "VHosts на домейни"
 
-#: internal/modules/dashboard/sections.go:160 internal/web/sidebar.go:321
+#: internal/modules/dashboard/sections.go:160 internal/web/sidebar.go:324
 msgid "Web Server Type"
 msgstr "Тип уеб сървър"
 
 #: internal/modules/dashboard/sections.go:162
 #: internal/modules/dashboard/sections.go:163
-#: internal/modules/dashboard/sections.go:296
-#: internal/modules/dashboard/sections.go:297
-#: internal/modules/docker/render.go:182 internal/web/sidebar.go:325
-#: internal/web/sidebar.go:328
+#: internal/modules/dashboard/sections.go:298
+#: internal/modules/dashboard/sections.go:299
+#: internal/modules/docker/render.go:182 internal/web/sidebar.go:328
+#: internal/web/sidebar.go:331
 #: internal/web/templates/docker/containers.html:13
 #: internal/web/templates/docker/containers.html:272
 #: internal/web/templates/partials/_header.html:121
@@ -1890,16 +1924,16 @@ msgid "Containers"
 msgstr "Контейнери"
 
 #: internal/modules/dashboard/sections.go:164
-#: internal/modules/dashboard/sections.go:298 internal/web/sidebar.go:329
+#: internal/modules/dashboard/sections.go:300 internal/web/sidebar.go:332
 #: internal/web/templates/docker/containers.html:495
 #: static/js/tour-steps.js:1028
 msgid "Terminal"
 msgstr "Терминал"
 
 #: internal/modules/dashboard/sections.go:165
-#: internal/modules/dashboard/sections.go:299
-#: internal/modules/docker/render.go:593 internal/web/sidebar.go:304
-#: internal/web/sidebar.go:330 internal/web/templates/cache/service.html:269
+#: internal/modules/dashboard/sections.go:301
+#: internal/modules/docker/render.go:593 internal/web/sidebar.go:307
+#: internal/web/sidebar.go:333 internal/web/templates/cache/service.html:269
 #: internal/web/templates/docker/containers.html:498
 #: internal/web/templates/docker/logs.html:11
 #: internal/web/templates/docker/logs.html:87
@@ -1915,13 +1949,13 @@ msgstr "Терминал"
 msgid "Logs"
 msgstr "Регистри"
 
-#: internal/modules/dashboard/sections.go:166 internal/web/sidebar.go:331
+#: internal/modules/dashboard/sections.go:166 internal/web/sidebar.go:334
 msgid "Software Versions"
 msgstr "Версии на софтуера"
 
 #: internal/modules/dashboard/sections.go:167
-#: internal/modules/dashboard/sections.go:306 internal/web/sidebar.go:300
-#: internal/web/sidebar.go:302
+#: internal/modules/dashboard/sections.go:308 internal/web/sidebar.go:303
+#: internal/web/sidebar.go:305
 #: internal/web/templates/dashboard/onboarding.html:207
 #: internal/web/templates/files/backup_restore.html:482
 #: internal/web/templates/files/backup_restore.html:582
@@ -1931,54 +1965,55 @@ msgid "Cron Jobs"
 msgstr "Cron Задачи"
 
 #: internal/modules/dashboard/sections.go:168
-#: internal/modules/dashboard/sections.go:311
+#: internal/modules/dashboard/sections.go:315
 msgid "Change TimeZone"
 msgstr "Смяна на часовата зона"
 
 #: internal/modules/dashboard/sections.go:170
-#: internal/modules/dashboard/sections.go:317 internal/web/sidebar.go:335
+#: internal/modules/dashboard/sections.go:321 internal/web/sidebar.go:338
 #: internal/web/templates/partials/_header.html:131
 #: internal/web/templates/user/account.html:7
 msgid "Account"
 msgstr "Профил"
 
-#: internal/modules/dashboard/sections.go:171 internal/web/sidebar.go:338
+#: internal/modules/dashboard/sections.go:171 internal/web/sidebar.go:341
 msgid "Login Details"
 msgstr "Данни за вход"
 
-#: internal/modules/dashboard/sections.go:172 internal/web/sidebar.go:339
+#: internal/modules/dashboard/sections.go:172 internal/web/sidebar.go:342
 msgid "Language"
 msgstr "Език"
 
-#: internal/modules/dashboard/sections.go:173 internal/web/sidebar.go:340
+#: internal/modules/dashboard/sections.go:173 internal/web/sidebar.go:343
 msgid "Notifications"
 msgstr "Известия"
 
 #: internal/modules/dashboard/sections.go:177
-#: internal/modules/dashboard/sections.go:326
+#: internal/modules/dashboard/sections.go:330
 msgid "Log out"
 msgstr "Изход"
 
-#: internal/modules/dashboard/sections.go:179 internal/web/sidebar.go:347
+#: internal/modules/dashboard/sections.go:179 internal/web/sidebar.go:350
 msgid "Statistics"
 msgstr "Статистика"
 
 #: internal/modules/dashboard/sections.go:180
-#: internal/modules/dashboard/sections.go:308
-#: internal/modules/serverinfo/render.go:42 internal/web/sidebar.go:350
+#: internal/modules/dashboard/sections.go:310
+#: internal/modules/serverinfo/render.go:42 internal/web/sidebar.go:353
+#: internal/web/templates/system/summary.html:120
 #: internal/web/templates/user/stats.html:16
 msgid "Resource Usage"
 msgstr "Използване на ресурсите"
 
 #: internal/modules/dashboard/sections.go:181
-#: internal/modules/dashboard/sections.go:309
+#: internal/modules/dashboard/sections.go:311
 #: internal/modules/serverinfo/render.go:98
 msgid "Resource Usage History"
 msgstr "История на използването на ресурси"
 
 #: internal/modules/dashboard/sections.go:182
-#: internal/modules/dashboard/sections.go:215
-#: internal/modules/diskusage/render.go:95 internal/web/sidebar.go:351
+#: internal/modules/dashboard/sections.go:217
+#: internal/modules/diskusage/render.go:95 internal/web/sidebar.go:354
 #: internal/web/templates/files/disk_usage.html:15
 #: internal/web/templates/manager/_cms_app_shared.html:369
 #: internal/web/templates/manager/_cms_app_shared.html:542
@@ -1992,42 +2027,59 @@ msgid "Disk Usage"
 msgstr "Използване на диска"
 
 #: internal/modules/dashboard/sections.go:183
-#: internal/modules/inodes/render.go:97 internal/web/sidebar.go:352
+#: internal/modules/inodes/render.go:97 internal/web/sidebar.go:355
 #: internal/web/templates/files/inodes.html:12 static/js/tour-steps.js:725
 msgid "Inode Usage"
 msgstr "Използване на inode-ове"
 
 #: internal/modules/dashboard/sections.go:184
-#: internal/modules/goaccess/render.go:24 internal/web/sidebar.go:353
+#: internal/modules/dashboard/sections.go:313
+#: internal/modules/summary/register.go:68 internal/web/sidebar.go:356
+#: internal/web/templates/system/summary.html:11
+#: internal/web/templates/system/summary.html:14
+msgid "Daily Summary"
+msgstr "Дневно обобщение"
+
+#: internal/modules/dashboard/sections.go:185
+#: internal/modules/goaccess/render.go:24 internal/web/sidebar.go:357
 #: internal/web/templates/domains/goaccess.html:11
 #: static/js/tour-steps.js:1153
 msgid "Visitor Statistics"
 msgstr "Статистика за посетителите"
 
-#: internal/modules/dashboard/sections.go:185
-#: internal/modules/domains/render.go:275 internal/web/sidebar.go:354
+#: internal/modules/dashboard/sections.go:186
+#: internal/modules/domains/render.go:275 internal/web/sidebar.go:358
 msgid "Access Logs"
 msgstr "Логове за достъп"
 
-#: internal/modules/dashboard/sections.go:186 internal/web/sidebar.go:380
+#: internal/modules/dashboard/sections.go:187
+#: internal/modules/dashboard/sections.go:312
+#: internal/modules/errorlogs/render.go:43 internal/web/sidebar.go:359
+#: internal/web/templates/manager/wp/single.html:1439
+#: internal/web/templates/system/error_logs.html:8
+#: internal/web/templates/system/error_logs.html:11
+msgid "Error Logs"
+msgstr "Регистри на грешки"
+
+#: internal/modules/dashboard/sections.go:188 internal/web/sidebar.go:385
 msgid "Server Info"
 msgstr "Информация за сървъра"
 
-#: internal/modules/dashboard/sections.go:188 internal/web/sidebar.go:358
+#: internal/modules/dashboard/sections.go:190 internal/web/sidebar.go:363
 msgid "Processes & Services"
 msgstr "Процеси и услуги"
 
-#: internal/modules/dashboard/sections.go:189
-#: internal/modules/dashboard/sections.go:305 internal/web/sidebar.go:361
+#: internal/modules/dashboard/sections.go:191
+#: internal/modules/dashboard/sections.go:307 internal/web/sidebar.go:366
 #: internal/web/templates/partials/_header.html:81 static/js/tour-steps.js:498
 msgid "Services"
 msgstr "Услуги"
 
-#: internal/modules/dashboard/sections.go:190 internal/web/sidebar.go:362
+#: internal/modules/dashboard/sections.go:192 internal/web/sidebar.go:367
 msgid "Processes"
 msgstr "Процеси"
 
-#: internal/modules/dashboard/sections.go:192 internal/web/sidebar.go:366
+#: internal/modules/dashboard/sections.go:194 internal/web/sidebar.go:371
 #: internal/web/templates/dashboard/onboarding.html:594
 #: internal/web/templates/manager/_cms_app_shared.html:201
 #: internal/web/templates/manager/python_node_apps.html:100
@@ -2036,20 +2088,20 @@ msgstr "Процеси"
 msgid "Security"
 msgstr "Сигурност"
 
-#: internal/modules/dashboard/sections.go:193
-#: internal/modules/waf/render.go:61 internal/web/sidebar.go:369
+#: internal/modules/dashboard/sections.go:195
+#: internal/modules/waf/render.go:61 internal/web/sidebar.go:374
 #: internal/web/templates/system/waf.html:29 static/js/tour-steps.js:575
 msgid "Web Firewall"
 msgstr "Уеб защитна стена"
 
-#: internal/modules/dashboard/sections.go:194
+#: internal/modules/dashboard/sections.go:196
 #: internal/modules/waf/render.go:219
 msgid "Web Firewall Logs"
 msgstr "Логове на уеб защитната стена"
 
-#: internal/modules/dashboard/sections.go:195
-#: internal/modules/dashboard/sections.go:307
-#: internal/modules/ipblocker/render.go:20 internal/web/sidebar.go:370
+#: internal/modules/dashboard/sections.go:197
+#: internal/modules/dashboard/sections.go:309
+#: internal/modules/ipblocker/render.go:20 internal/web/sidebar.go:375
 #: internal/web/templates/dashboard/onboarding.html:256
 #: internal/web/templates/dashboard/onboarding.html:314
 #: internal/web/templates/system/ip_blocker.html:15
@@ -2057,27 +2109,27 @@ msgstr "Логове на уеб защитната стена"
 msgid "IP Blocker"
 msgstr "Блокиране на IP адреси"
 
-#: internal/modules/dashboard/sections.go:196
-#: internal/modules/malwarescan/render.go:60 internal/web/sidebar.go:371
+#: internal/modules/dashboard/sections.go:198
+#: internal/modules/malwarescan/render.go:60 internal/web/sidebar.go:376
 #: internal/web/templates/files/clamav/scanner.html:14
 #: static/js/tour-steps.js:742
 msgid "Malware Scanner"
 msgstr "Скенер за зловреден софтуер"
 
-#: internal/modules/dashboard/sections.go:197 internal/web/sidebar.go:372
+#: internal/modules/dashboard/sections.go:199 internal/web/sidebar.go:377
 msgid "Two-Factor Auth"
 msgstr "Двуфакторна автентификация"
 
-#: internal/modules/dashboard/sections.go:211
+#: internal/modules/dashboard/sections.go:213
 #: internal/web/templates/files/upload_file.html:11
 msgid "File Upload"
 msgstr "Качване на файл"
 
-#: internal/modules/dashboard/sections.go:212
+#: internal/modules/dashboard/sections.go:214
 msgid "Download Files"
 msgstr "Изтегляне на файлове"
 
-#: internal/modules/dashboard/sections.go:218
+#: internal/modules/dashboard/sections.go:220
 #: internal/web/templates/manager/_cms_app_shared.html:390
 #: internal/web/templates/manager/_cms_app_shared.html:563
 #: internal/web/templates/manager/n8n_app.html:306
@@ -2088,92 +2140,92 @@ msgstr "Изтегляне на файлове"
 msgid "Inodes Explorer"
 msgstr "Инод Explorer"
 
-#: internal/modules/dashboard/sections.go:219
+#: internal/modules/dashboard/sections.go:221
 msgid "ClamAV Scanner"
 msgstr "ClamAV скенер"
 
-#: internal/modules/dashboard/sections.go:228
+#: internal/modules/dashboard/sections.go:230
 #: internal/modules/domains/render.go:75
 #: internal/web/templates/domains/domains.html:164 static/js/tour-steps.js:811
 msgid "SSL"
 msgstr "SSL"
 
-#: internal/modules/dashboard/sections.go:229
+#: internal/modules/dashboard/sections.go:231
 msgid "Suspend Domain"
 msgstr "Спиране на домейн"
 
-#: internal/modules/dashboard/sections.go:230
+#: internal/modules/dashboard/sections.go:232
 msgid "Unsuspend Domain"
 msgstr "Възобновяване на домейн"
 
-#: internal/modules/dashboard/sections.go:231 static/js/tour-steps.js:828
+#: internal/modules/dashboard/sections.go:233 static/js/tour-steps.js:828
 msgid "Change Docroot"
 msgstr "Смяна на основната директория"
 
-#: internal/modules/dashboard/sections.go:232 static/js/tour-steps.js:837
+#: internal/modules/dashboard/sections.go:234 static/js/tour-steps.js:837
 msgid "Edit Virtual Hosts"
 msgstr "Редактиране на виртуални хостове"
 
-#: internal/modules/dashboard/sections.go:233
+#: internal/modules/dashboard/sections.go:235
 msgid "GoAccess"
 msgstr "GoAccess"
 
-#: internal/modules/dashboard/sections.go:234 static/js/tour-steps.js:846
+#: internal/modules/dashboard/sections.go:236 static/js/tour-steps.js:846
 msgid "Raw Access Logs"
 msgstr "Необработени логове за достъп"
 
-#: internal/modules/dashboard/sections.go:240
-#: internal/modules/dashboard/sections.go:252
-#: internal/modules/dashboard/sections.go:261 static/js/tour-steps.js:1085
+#: internal/modules/dashboard/sections.go:242
+#: internal/modules/dashboard/sections.go:254
+#: internal/modules/dashboard/sections.go:263 static/js/tour-steps.js:1085
 #: static/js/tour-steps.js:1093
 msgid "Import Database"
 msgstr "Импортиране на база данни"
 
-#: internal/modules/dashboard/sections.go:241
+#: internal/modules/dashboard/sections.go:243
 msgid "Open phpMyAdmin"
 msgstr "Отвори phpMyAdmin"
 
-#: internal/modules/dashboard/sections.go:243
-#: internal/modules/dashboard/sections.go:253
-#: internal/modules/dashboard/sections.go:262
+#: internal/modules/dashboard/sections.go:245
+#: internal/modules/dashboard/sections.go:255
+#: internal/modules/dashboard/sections.go:264
 msgid "Process List"
 msgstr "Списък с процеси"
 
-#: internal/modules/dashboard/sections.go:245 internal/web/dbengine.go:15
+#: internal/modules/dashboard/sections.go:247 internal/web/dbengine.go:15
 #: static/js/tour-steps.js:895
 msgid "MySQL Configuration"
 msgstr "Конфигурация на MySQL"
 
-#: internal/modules/dashboard/sections.go:246
+#: internal/modules/dashboard/sections.go:248
 msgid "Change root password"
 msgstr "Смяна на root паролата"
 
-#: internal/modules/dashboard/sections.go:255 internal/web/dbengine.go:21
+#: internal/modules/dashboard/sections.go:257 internal/web/dbengine.go:21
 #: static/js/tour-steps.js:952
 msgid "PostgreSQL Configuration"
 msgstr "Конфигурация на PostgreSQL"
 
-#: internal/modules/dashboard/sections.go:266
+#: internal/modules/dashboard/sections.go:268
 #: internal/web/sidebar_classic.go:49
 #: internal/web/templates/manager/sites.html:8 static/js/tour-steps.js:278
 msgid "Site Manager"
 msgstr "Управител на сайтове"
 
-#: internal/modules/dashboard/sections.go:267
+#: internal/modules/dashboard/sections.go:269
 msgid "Auto Installer"
 msgstr "Автоматичен инсталатор"
 
-#: internal/modules/dashboard/sections.go:268
+#: internal/modules/dashboard/sections.go:270
 msgid "WP Manager"
 msgstr "WP мениджър"
 
-#: internal/modules/dashboard/sections.go:271
+#: internal/modules/dashboard/sections.go:273
 #: internal/web/templates/manager/_cms_app_shared.html:1732
 #: internal/web/templates/manager/wp/single.html:177
 msgid "Cache"
 msgstr "Кеш"
 
-#: internal/modules/dashboard/sections.go:279
+#: internal/modules/dashboard/sections.go:281
 #: internal/modules/emails/render.go:89
 #: internal/web/templates/dashboard/onboarding.html:203
 #: internal/web/templates/emails/accounts.html:8
@@ -2187,7 +2239,7 @@ msgstr "Кеш"
 msgid "Emails"
 msgstr "Е-писма"
 
-#: internal/modules/dashboard/sections.go:283
+#: internal/modules/dashboard/sections.go:285
 #: internal/modules/emails/render.go:321
 #: internal/web/templates/emails/deliverability.html:10
 #: internal/web/templates/emails/deliverability_domain.html:9
@@ -2195,201 +2247,201 @@ msgstr "Е-писма"
 msgid "Email Deliverability"
 msgstr "Доставимост на имейли"
 
-#: internal/modules/dashboard/sections.go:284 static/js/tour-steps.js:1011
+#: internal/modules/dashboard/sections.go:286 static/js/tour-steps.js:1011
 msgid "Default Address"
 msgstr "Адрес по подразбиране"
 
-#: internal/modules/dashboard/sections.go:285 static/js/tour-steps.js:1019
+#: internal/modules/dashboard/sections.go:287 static/js/tour-steps.js:1019
 msgid "Address Importer"
 msgstr "Импортиране на адреси"
 
-#: internal/modules/dashboard/sections.go:286
+#: internal/modules/dashboard/sections.go:288
 msgid "Address Exporter"
 msgstr "Експортиране на адреси"
 
-#: internal/modules/dashboard/sections.go:290
+#: internal/modules/dashboard/sections.go:292
 #: internal/web/sidebar_classic.go:229
 msgid "Select PHP version"
 msgstr "Изберете PHP версия"
 
-#: internal/modules/dashboard/sections.go:292
+#: internal/modules/dashboard/sections.go:294
 msgid "PHP Options"
 msgstr "PHP опции"
 
-#: internal/modules/dashboard/sections.go:293
+#: internal/modules/dashboard/sections.go:295
 #: internal/modules/php/render.go:248
 #: internal/web/templates/php/extensions.html:229
 msgid "PHP Extensions"
 msgstr "PHP Разширения"
 
-#: internal/modules/dashboard/sections.go:294
+#: internal/modules/dashboard/sections.go:296
 #: internal/web/templates/php/ini_editor.html:57
 msgid "PHP.INI Editor"
 msgstr "Редактор на PHP.INI"
 
-#: internal/modules/dashboard/sections.go:300
+#: internal/modules/dashboard/sections.go:302
 msgid "Change Image tag"
 msgstr "Смяна на таг на образа"
 
-#: internal/modules/dashboard/sections.go:301
+#: internal/modules/dashboard/sections.go:303
 msgid "Change webserver"
 msgstr "Смяна на уеб сървъра"
 
-#: internal/modules/dashboard/sections.go:302 static/js/tour-steps.js:1076
+#: internal/modules/dashboard/sections.go:304 static/js/tour-steps.js:1076
 msgid "Change MySQL Type"
 msgstr "Смяна на типа MySQL"
 
-#: internal/modules/dashboard/sections.go:304
+#: internal/modules/dashboard/sections.go:306
 #: internal/web/templates/partials/_header.html:126
 msgid "Advanced"
 msgstr "Разширени"
 
-#: internal/modules/dashboard/sections.go:310
+#: internal/modules/dashboard/sections.go:314
 #: internal/modules/processmanager/render.go:20
 #: internal/web/templates/system/process_manager.html:12
 #: static/js/tour-steps.js:566
 msgid "Process Manager"
 msgstr "Мениджър на процесите"
 
-#: internal/modules/dashboard/sections.go:312 static/js/tour-steps.js:593
+#: internal/modules/dashboard/sections.go:316 static/js/tour-steps.js:593
 msgid "Webserver Configuration"
 msgstr "Конфигурация на уеб сървъра"
 
-#: internal/modules/dashboard/sections.go:313
+#: internal/modules/dashboard/sections.go:317
 msgid "WAF Settings"
 msgstr "WAF настройки"
 
-#: internal/modules/dashboard/sections.go:314
+#: internal/modules/dashboard/sections.go:318
 #: internal/web/templates/system/waf_logs.html:318
 msgid "WAF Logs"
 msgstr "WAF логове"
 
-#: internal/modules/dashboard/sections.go:315
+#: internal/modules/dashboard/sections.go:319
 #: internal/modules/serverinfo/render.go:24
 #: internal/web/templates/system/server_info.html:8
 #: static/js/tour-steps.js:584
 msgid "Server Information"
 msgstr "Информация за сървъра"
 
-#: internal/modules/dashboard/sections.go:318
+#: internal/modules/dashboard/sections.go:322
 #: internal/web/templates/user/account.html:10 static/js/tour-steps.js:602
 msgid "Email & Password"
 msgstr "Е-поща и Парола"
 
-#: internal/modules/dashboard/sections.go:320
-#: internal/web/templates/user/notifications.html:40
+#: internal/modules/dashboard/sections.go:324
+#: internal/web/templates/user/notifications.html:48
 #: static/js/tour-steps.js:628
 msgid "Email Notifications"
 msgstr "Известия по имейл"
 
-#: internal/modules/dashboard/sections.go:323 static/js/tour-steps.js:655
+#: internal/modules/dashboard/sections.go:327 static/js/tour-steps.js:655
 msgid "Favorite Pages"
 msgstr "Любими страници"
 
-#: internal/modules/dashboard/sections.go:324
+#: internal/modules/dashboard/sections.go:328
 msgid "Account Activity"
 msgstr "Активност на профила"
 
-#: internal/modules/dashboard/sections.go:333
+#: internal/modules/dashboard/sections.go:337
 #: internal/web/templates/manager/autoinstaller.html:80
 msgid "Joomla"
 msgstr "Joomla"
 
-#: internal/modules/dashboard/sections.go:334
+#: internal/modules/dashboard/sections.go:338
 #: internal/web/templates/manager/autoinstaller.html:112
 msgid "Drupal"
 msgstr "Drupal"
 
-#: internal/modules/dashboard/sections.go:335
+#: internal/modules/dashboard/sections.go:339
 #: internal/web/templates/manager/autoinstaller.html:146
 #: internal/web/templates/manager/sites.html:244
 #: internal/web/templates/manager/websitebuilder_install.html:9
 msgid "Website Builder"
 msgstr "Създател на уеб-сайтове"
 
-#: internal/modules/dashboard/sections.go:336
+#: internal/modules/dashboard/sections.go:340
 #: internal/web/templates/manager/autoinstaller.html:184
 msgid "PrestaShop"
 msgstr "PrestaShop"
 
-#: internal/modules/dashboard/sections.go:337
+#: internal/modules/dashboard/sections.go:341
 #: internal/web/templates/manager/autoinstaller.html:216
 msgid "OpenCart"
 msgstr "OpenCart"
 
-#: internal/modules/dashboard/sections.go:338
+#: internal/modules/dashboard/sections.go:342
 #: internal/web/templates/manager/autoinstaller.html:254
 msgid "phpBB"
 msgstr "phpBB"
 
-#: internal/modules/dashboard/sections.go:339
+#: internal/modules/dashboard/sections.go:343
 #: internal/web/templates/manager/autoinstaller.html:301
 #: internal/web/templates/manager/flarum_install.html:13
 msgid "Flarum"
 msgstr "Flarum"
 
-#: internal/modules/dashboard/sections.go:340
+#: internal/modules/dashboard/sections.go:344
 #: internal/web/templates/manager/autoinstaller.html:339
 msgid "MediaWiki"
 msgstr "MediaWiki"
 
-#: internal/modules/dashboard/sections.go:341
+#: internal/modules/dashboard/sections.go:345
 #: internal/web/templates/manager/autoinstaller.html:371
 msgid "DokuWiki"
 msgstr "DokuWiki"
 
-#: internal/modules/dashboard/sections.go:342
+#: internal/modules/dashboard/sections.go:346
 #: internal/web/templates/manager/autoinstaller.html:403
 msgid "SofaWiki"
 msgstr "SofaWiki"
 
-#: internal/modules/dashboard/sections.go:343
+#: internal/modules/dashboard/sections.go:347
 #: internal/web/templates/manager/autoinstaller.html:441
 msgid "Matomo"
 msgstr "Matomo"
 
-#: internal/modules/dashboard/sections.go:344
+#: internal/modules/dashboard/sections.go:348
 #: internal/web/templates/manager/autoinstaller.html:479
 msgid "Nextcloud"
 msgstr "Nextcloud"
 
-#: internal/modules/dashboard/sections.go:345
+#: internal/modules/dashboard/sections.go:349
 #: internal/web/templates/manager/autoinstaller.html:511
 msgid "TinyPhotoGallery"
 msgstr "TinyPhotoGallery"
 
-#: internal/modules/dashboard/sections.go:346
+#: internal/modules/dashboard/sections.go:350
 #: internal/web/templates/manager/autoinstaller.html:543
 msgid "TinyFileManager"
 msgstr "TinyFileManager"
 
-#: internal/modules/dashboard/sections.go:347
+#: internal/modules/dashboard/sections.go:351
 #: internal/web/templates/manager/autoinstaller.html:581
 msgid "Moodle"
 msgstr "Moodle"
 
-#: internal/modules/dashboard/sections.go:348
+#: internal/modules/dashboard/sections.go:352
 msgid "OJS"
 msgstr "OJS"
 
-#: internal/modules/dashboard/sections.go:349
+#: internal/modules/dashboard/sections.go:353
 #: internal/web/templates/manager/autoinstaller.html:651
 msgid "Node.js"
 msgstr "Node.js"
 
-#: internal/modules/dashboard/sections.go:355
+#: internal/modules/dashboard/sections.go:359
 #: internal/web/templates/manager/autoinstaller.html:843
 msgid "Docker"
 msgstr "Docker"
 
 #: internal/modules/dashboard/tour.go:34
-#: internal/web/templates/domains/domains.html:521
-#: internal/web/templates/domains/domains.html:522
+#: internal/web/templates/domains/domains.html:526
+#: internal/web/templates/domains/domains.html:527
 #: internal/web/templates/domains/logs.html:222
 #: internal/web/templates/files/filemanager.html:379
 #: internal/web/templates/files/filemanager.html:380
 #: internal/web/templates/system/waf_logs.html:140
-#: internal/web/templates/user/activity.html:261
+#: internal/web/templates/user/activity.html:208
 #: internal/web/templates/user/history_usage.html:198
 msgid "Next"
 msgstr "Следващ"
@@ -2408,7 +2460,7 @@ msgstr "стъпки"
 msgid "pages"
 msgstr "страници"
 
-#: internal/modules/dashboard/upgrade.go:45 internal/web/sidebar.go:589
+#: internal/modules/dashboard/upgrade.go:45 internal/web/sidebar.go:594
 #: internal/web/templates/dashboard/upgrade.html:6
 #: internal/web/templates/dashboard/usage.html:16
 msgid "Upgrade now"
@@ -2485,7 +2537,7 @@ msgid "DNS zone restarted successfully."
 msgstr "DNS зоната е рестартирана успешно."
 
 #: internal/modules/dns/render.go:49
-#: internal/web/templates/domains/domains.html:355
+#: internal/web/templates/domains/domains.html:359
 msgid "Edit DNS Zone"
 msgstr "Редактиране на DNS зона"
 
@@ -2547,8 +2599,10 @@ msgstr "Да се стартират ли избраните контейнер�
 
 #: internal/modules/docker/bulk.go:28
 #: internal/web/templates/docker/containers.html:486
+#: internal/web/templates/files/clamav/scanner.html:56
 #: internal/web/templates/manager/n8n_app.html:195
 #: internal/web/templates/manager/python_node_apps.html:244
+#: internal/web/templates/partials/site_manager_shared.html:759
 msgid "Stop"
 msgstr "Спри"
 
@@ -2855,7 +2909,7 @@ msgstr "Успешно превключване към %(new_sql)s!"
 msgid "Invalid mysql server selected"
 msgstr "Избран е невалиден MySQL сървър"
 
-#: internal/modules/docker/switch.go:203
+#: internal/modules/docker/switch.go:201
 msgid ""
 "Existing domains (%(count)s) must first be removed in order to change "
 "webserver."
@@ -2863,15 +2917,15 @@ msgstr ""
 "За да смените уеб сървъра, първо премахнете съществуващите домейни "
 "(%(count)s)."
 
-#: internal/modules/docker/switch.go:235
+#: internal/modules/docker/switch.go:233
 msgid "Failed to start %(new_webserver)s."
 msgstr "%(new_webserver)s не можа да бъде стартиран."
 
-#: internal/modules/docker/switch.go:255
+#: internal/modules/docker/switch.go:253
 msgid "Successfully switched to %(new_webserver)s!"
 msgstr "Успешно превключване към %(new_webserver)s!"
 
-#: internal/modules/docker/switch.go:268
+#: internal/modules/docker/switch.go:266
 msgid "Invalid web server selected"
 msgstr "Избран е невалиден уеб сървър"
 
@@ -2892,7 +2946,7 @@ msgid "DokuWiki installed successfully on %(selected_domain)s"
 msgstr "DokuWiki е инсталиран успешно на %(selected_domain)s"
 
 #: internal/modules/domains/bulk.go:18
-#: internal/web/templates/domains/domains.html:400
+#: internal/web/templates/domains/domains.html:404
 #: internal/web/templates/emails/single_account.html:144
 #: internal/web/templates/emails/single_account.html:166
 msgid "Suspend"
@@ -2905,7 +2959,7 @@ msgstr ""
 "спиране."
 
 #: internal/modules/domains/bulk.go:19
-#: internal/web/templates/domains/domains.html:396
+#: internal/web/templates/domains/domains.html:400
 msgid "Unsuspend"
 msgstr "Отмяна на спирането"
 
@@ -2940,7 +2994,7 @@ msgstr "Да се премахне ли пренасочването от изб
 #: internal/modules/domains/bulk.go:25
 #: internal/web/templates/domains/domains.html:91
 #: internal/web/templates/domains/domains.html:168
-#: internal/web/templates/domains/domains.html:330
+#: internal/web/templates/domains/domains.html:331
 msgid "WAF"
 msgstr "WAF"
 
@@ -2949,7 +3003,7 @@ msgid "Set the firewall for the selected domains to:"
 msgstr "Задай защитната стена за избраните домейни на:"
 
 #: internal/modules/domains/bulk.go:26
-#: internal/web/templates/domains/domains.html:330
+#: internal/web/templates/domains/domains.html:331
 #: internal/web/templates/system/waf.html:69
 #: internal/web/templates/system/waf.html:83
 #: internal/web/templates/system/waf.html:172
@@ -2957,7 +3011,7 @@ msgid "On"
 msgstr "Включено"
 
 #: internal/modules/domains/bulk.go:26
-#: internal/web/templates/domains/domains.html:330
+#: internal/web/templates/domains/domains.html:331
 #: internal/web/templates/system/waf.html:69
 #: internal/web/templates/system/waf.html:95
 #: internal/web/templates/system/waf.html:180
@@ -2977,7 +3031,7 @@ msgstr ""
 "които не минават през Cloudflare, връщат 403 на посетителите:"
 
 #: internal/modules/domains/bulk.go:28
-#: internal/web/templates/domains/domains.html:370
+#: internal/web/templates/domains/domains.html:374
 msgid "Restrict to Cloudflare"
 msgstr "Ограничи до Cloudflare"
 
@@ -3092,6 +3146,7 @@ msgstr ""
 #: internal/web/templates/docker/logs.html:37
 #: internal/web/templates/domains/delete.html:62
 #: internal/web/templates/emails/accounts.html:37
+#: internal/web/templates/system/error_logs.html:31
 #: internal/web/templates/system/waf.html:77
 #: internal/web/templates/system/waf.html:111
 #: internal/web/templates/system/waf.html:135
@@ -3130,7 +3185,7 @@ msgid "Status"
 msgstr "Статус"
 
 #: internal/modules/domains/render.go:60
-#: internal/web/templates/domains/domains.html:202
+#: internal/web/templates/domains/domains.html:203
 #: internal/web/templates/manager/n8n_app.html:111
 #: internal/web/templates/manager/python_node_apps.html:155
 #: internal/web/templates/partials/_service_js.html:18
@@ -3153,12 +3208,12 @@ msgid "PHP Version"
 msgstr "PHP Версия"
 
 #: internal/modules/domains/render.go:75
-#: internal/web/templates/domains/domains.html:284
+#: internal/web/templates/domains/domains.html:285
 msgid "AutoSSL"
 msgstr "AutoSSL"
 
 #: internal/modules/domains/render.go:75
-#: internal/web/templates/domains/domains.html:284
+#: internal/web/templates/domains/domains.html:285
 #: internal/web/templates/domains/ssl.html:52
 msgid "Custom SSL"
 msgstr "Персонализиран SSL"
@@ -3537,6 +3592,38 @@ msgstr ""
 "Услугата за уеб поща все още не е стартирана, свържете се с администратора, "
 "за да я активира."
 
+#: internal/modules/errorlogs/collect.go:101
+msgid "HTTP 5xx responses"
+msgstr "HTTP 5xx отговори"
+
+#: internal/modules/errorlogs/render.go:17
+#: internal/web/templates/files/filemanager_partials.html:328
+#: internal/web/templates/files/filemanager_partials.html:329
+#: internal/web/templates/files/filemanager_partials.html:397
+#: internal/web/templates/files/filemanager_partials.html:590
+#: internal/web/templates/manager/git.html:92
+#: internal/web/templates/mysql/wizard.html:80
+#: internal/web/templates/mysql/wizard.html:139
+#: internal/web/templates/partials/site_manager_shared.html:984
+#: internal/web/templates/user/mcp.html:30
+#: internal/web/templates/user/mcp.html:118
+#: internal/web/templates/user/mcp.html:127
+msgid "Copy"
+msgstr "Копиране"
+
+#: internal/modules/errorlogs/render.go:18
+#: internal/web/templates/files/backup_restore.html:830
+#: internal/web/templates/files/backup_restore.html:831
+#: internal/web/templates/files/backup_restore.html:911
+#: internal/web/templates/files/backup_restore.html:1024
+#: internal/web/templates/files/backup_wizard.html:168
+#: internal/web/templates/files/filemanager_partials.html:318
+#: internal/web/templates/files/filemanager_partials.html:319
+#: internal/web/templates/files/filemanager_partials.html:389
+#: internal/web/templates/files/upload_file.html:140
+msgid "Download"
+msgstr "Изтегляне"
+
 #: internal/modules/filemanager/archive.go:58
 msgid "Error occurred before starting archive extraction: %(error)s"
 msgstr "Възникна грешка преди започване на разархивирането: %(error)s"
@@ -3897,51 +3984,53 @@ msgid "Change FTP Quota"
 msgstr "Промяна на FTP квота"
 
 #: internal/modules/git/bulk.go:15
-#: internal/web/templates/partials/site_manager_shared.html:1042
+#: internal/web/templates/partials/site_manager_shared.html:1047
 msgid "Pull Updates"
-msgstr ""
+msgstr "Изтегляне на обновления"
 
 #: internal/modules/git/bulk.go:15
 msgid ""
 "Pull updates for the selected repositories? Automatic ones are deployed too."
 msgstr ""
+"Да се изтеглят обновленията за избраните хранилища? Автоматичните също ще "
+"бъдат внедрени."
 
 #: internal/modules/git/bulk.go:16
-#: internal/web/templates/partials/site_manager_shared.html:1043
+#: internal/web/templates/partials/site_manager_shared.html:1048
 msgid "Deploy"
-msgstr ""
+msgstr "Внедряване"
 
 #: internal/modules/git/bulk.go:16
 msgid "Deploy the selected repositories now?"
-msgstr ""
+msgstr "Да се внедрят ли избраните хранилища сега?"
 
 #: internal/modules/git/bulk.go:17
 msgid "Change deployment mode"
-msgstr ""
+msgstr "Промяна на режима на внедряване"
 
 #: internal/modules/git/bulk.go:17
 msgid "Deployment mode for the selected repositories:"
-msgstr ""
+msgstr "Режим на внедряване за избраните хранилища:"
 
 #: internal/modules/git/bulk.go:19 internal/web/templates/manager/git.html:239
-#: internal/web/templates/partials/site_manager_shared.html:996
-#: internal/web/templates/partials/site_manager_shared.html:1064
+#: internal/web/templates/partials/site_manager_shared.html:1001
+#: internal/web/templates/partials/site_manager_shared.html:1069
 msgid "Automatic"
-msgstr ""
+msgstr "Автоматично"
 
 #: internal/modules/git/bulk.go:20
 #: internal/web/templates/files/clamav/scan_logs.html:59
 #: internal/web/templates/manager/git.html:244
-#: internal/web/templates/partials/site_manager_shared.html:997
-#: internal/web/templates/partials/site_manager_shared.html:1064
+#: internal/web/templates/partials/site_manager_shared.html:1002
+#: internal/web/templates/partials/site_manager_shared.html:1069
 msgid "Manual"
 msgstr "Ръчно"
 
 #: internal/modules/git/bulk.go:21 internal/web/templates/manager/git.html:249
-#: internal/web/templates/partials/site_manager_shared.html:998
-#: internal/web/templates/partials/site_manager_shared.html:1064
+#: internal/web/templates/partials/site_manager_shared.html:1003
+#: internal/web/templates/partials/site_manager_shared.html:1069
 msgid "No deployment"
-msgstr ""
+msgstr "Без внедряване"
 
 #: internal/modules/git/bulk.go:23
 #: internal/web/templates/docker/container_form.html:187
@@ -3967,6 +4056,8 @@ msgid ""
 "Remove the selected repositories? Files already deployed to the website stay"
 " in place."
 msgstr ""
+"Да се премахнат ли избраните хранилища? Файловете, вече внедрени в сайта, "
+"остават."
 
 #: internal/modules/goaccess/goaccess.go:39
 msgid ""
@@ -4997,8 +5088,8 @@ msgstr ""
 msgid "OpenCart installed successfully on %(selected_domain)s"
 msgstr "OpenCart е инсталиран успешно на %(selected_domain)s"
 
-#: internal/modules/php/api_extensions.go:225
-#: internal/modules/php/extensions.go:811
+#: internal/modules/php/api_extensions.go:229
+#: internal/modules/php/extensions.go:830
 msgid "Install queued..."
 msgstr "Инсталирането е в опашката..."
 
@@ -5092,29 +5183,29 @@ msgstr ""
 "PHP версията за домейна %(domain_url)s е обновена от %(old_phpversion)s на "
 "%(new_phpversion)s"
 
-#: internal/modules/php/extensions.go:485
+#: internal/modules/php/extensions.go:500
 msgid "Extensions installed, restarting PHP-FPM to apply changes..."
 msgstr ""
 "Разширенията са инсталирани, PHP-FPM се рестартира, за да приложи "
 "промените..."
 
-#: internal/modules/php/extensions.go:603
+#: internal/modules/php/extensions.go:618
 msgid "Failed to start PHP %(version)s: %(err_msg)s"
 msgstr "PHP %(version)s не можа да бъде стартиран: %(err_msg)s"
 
-#: internal/modules/php/extensions.go:613
+#: internal/modules/php/extensions.go:628
 msgid "Invalid extension name."
 msgstr "Невалидно име на разширение."
 
-#: internal/modules/php/extensions.go:636
+#: internal/modules/php/extensions.go:655
 msgid ""
-"Extension %(extension)s %(action_word)s, PHP %(version)s restarted to apply "
+"Extension %(extension)s %(action_word)s, PHP %(version)s reloaded to apply "
 "changes."
 msgstr ""
-"Разширението %(extension)s %(action_word)s, PHP %(version)s е рестартиран, "
-"за да приложи промените."
+"Разширението %(extension)s е %(action_word)s, PHP %(version)s е презаредено,"
+" за да се приложат промените."
 
-#: internal/modules/php/extensions.go:638
+#: internal/modules/php/extensions.go:657
 msgid "Could not change extension %(extension)s: %(err_msg)s"
 msgstr "Разширението %(extension)s не можа да бъде променено: %(err_msg)s"
 
@@ -5126,7 +5217,15 @@ msgstr "PHP %(service)s не можа да бъде стартиран: %(messag
 msgid "Error saving %(text)s php.ini file!"
 msgstr "Грешка при запазване на php.ini файла за %(text)s!"
 
-#: internal/modules/php/ini.go:75
+#: internal/modules/php/ini.go:76
+msgid ""
+"PHP.INI file for %(text)s version %(version)s edited successfully, and "
+"%(container_to_restart)s service reloaded to apply."
+msgstr ""
+"Файлът PHP.INI за %(text)s версия %(version)s е редактиран успешно и "
+"услугата %(container_to_restart)s е презаредена, за да се приложи."
+
+#: internal/modules/php/ini.go:78
 msgid ""
 "PHP.INI file for %(text)s version %(version)s edited successfully, and "
 "%(container_to_restart)s service restarted to apply."
@@ -5134,11 +5233,24 @@ msgstr ""
 "PHP.INI файлът за %(text)s версия %(version)s е редактиран успешно и "
 "услугата %(container_to_restart)s е рестартирана, за да го приложи."
 
-#: internal/modules/php/ini.go:79
+#: internal/modules/php/ini.go:82
 msgid "PHP.INI file for %(text)s version %(version)s edited successfully."
 msgstr "PHP.INI файлът за %(text)s версия %(version)s е редактиран успешно."
 
-#: internal/modules/php/options.go:278
+#: internal/modules/php/options.go:264
+msgid "Could not save PHP %(version)s configuration: %(err_msg)s"
+msgstr ""
+"Конфигурацията на PHP %(version)s не можа да бъде запазена: %(err_msg)s"
+
+#: internal/modules/php/options.go:279
+msgid ""
+"Configuration edited successfully and %(text)s reloaded to apply new "
+"settings."
+msgstr ""
+"Конфигурацията е редактирана успешно и %(text)s е презареден, за да се "
+"приложат новите настройки."
+
+#: internal/modules/php/options.go:281
 msgid ""
 "Configuration edited successfully and %(text)s service restarted to apply "
 "new settings."
@@ -5146,7 +5258,7 @@ msgstr ""
 "Конфигурацията е редактирана успешно и услугата %(text)s е рестартирана, за "
 "да приложи новите настройки."
 
-#: internal/modules/php/options.go:280
+#: internal/modules/php/options.go:283
 msgid ""
 "Configuration edited successfully, but %(text)s failed to restart. Try "
 "restarting it manually from Services."
@@ -5443,7 +5555,7 @@ msgstr "Мъртъв"
 #: internal/web/templates/manager/wp/single.html:1119
 #: internal/web/templates/manager/wp/single.html:1126
 #: internal/web/templates/manager/wp/single.html:1180
-#: internal/web/templates/manager/wp/single.html:2219
+#: internal/web/templates/manager/wp/single.html:2279
 #: internal/web/templates/mysql/remote_mysql.html:71
 #: internal/web/templates/partials/_service_js.html:35
 #: internal/web/templates/psql/remote_psql.html:81
@@ -5503,6 +5615,34 @@ msgstr "%(fail_msg)s Опитайте рестартиране."
 #: internal/modules/sofawiki/install.go:122
 msgid "SofaWiki installed successfully on %(selected_domain)s"
 msgstr "SofaWiki е инсталиран успешно на %(selected_domain)s"
+
+#: internal/modules/summary/checks.go:112
+msgid "Malware was found on your account"
+msgstr "В акаунта ви е открит зловреден софтуер"
+
+#: internal/modules/summary/checks.go:416
+msgid "Disk space"
+msgstr "Дисково пространство"
+
+#: internal/modules/summary/checks.go:442
+msgid "Files and folders (inodes)"
+msgstr "Файлове и папки (inodes)"
+
+#: internal/modules/summary/checks.go:495
+msgid "You don't have any backups yet"
+msgstr "Все още нямате резервни копия"
+
+#: internal/modules/summary/checks.go:739
+msgid "CPU at the busiest hour"
+msgstr "Процесор в най-натоварения час"
+
+#: internal/modules/summary/checks.go:741
+msgid "Your account hit its CPU limit"
+msgstr "Акаунтът ви достигна лимита си за процесор"
+
+#: internal/modules/summary/checks.go:751
+msgid "Memory at the busiest hour"
+msgstr "Памет в най-натоварения час"
 
 #: internal/modules/tinyfilemanager/install.go:166
 msgid "TinyFileManager installed successfully on %(selected_domain)s"
@@ -5843,7 +5983,7 @@ msgstr "Редактор за конфигуриране на уеб сървъ�
 
 #: internal/modules/websites/bulk.go:108
 msgid "Container for this site was not found."
-msgstr ""
+msgstr "Контейнерът за този сайт не е намерен."
 
 #: internal/modules/websites/bulk.go:116
 msgid ""
@@ -6131,7 +6271,7 @@ msgstr ""
 #: internal/web/templates/manager/websitebuilder.html:206
 #: internal/web/templates/manager/wp/list.html:142
 #: internal/web/templates/manager/wp/list.html:188
-#: internal/web/templates/manager/wp/single.html:1753
+#: internal/web/templates/manager/wp/single.html:1813
 msgid "Detach"
 msgstr "Отделяне"
 
@@ -6146,7 +6286,7 @@ msgstr ""
 #: internal/modules/wordpress/bulk.go:20
 #: internal/web/templates/manager/wp/list.html:145
 #: internal/web/templates/manager/wp/list.html:191
-#: internal/web/templates/manager/wp/single.html:1785
+#: internal/web/templates/manager/wp/single.html:1845
 msgid "Uninstall"
 msgstr "Деинсталиране"
 
@@ -6214,17 +6354,17 @@ msgstr "WordPress мениджър"
 msgid "Install WordPress"
 msgstr "Инсталиране на WordPress"
 
-#: internal/web/bulk.go:164
+#: internal/web/bulk.go:165
 msgid ""
 "%(action_title)s: completed successfully for all %(total)s selected item(s)."
 msgstr ""
 "%(action_title)s: завършено успешно за всички %(total)s избрани елемента."
 
-#: internal/web/bulk.go:166
+#: internal/web/bulk.go:167
 msgid "%(action_title)s: %(failed)s of %(total)s selected item(s) failed."
 msgstr "%(action_title)s: %(failed)s от %(total)s избрани елемента не успяха."
 
-#: internal/web/bulk.go:278
+#: internal/web/bulk.go:279
 msgid "Not authenticated."
 msgstr "Не сте удостоверени."
 
@@ -6263,11 +6403,11 @@ msgstr ""
 "Прегледайте и променете конфигурацията на услугата PostgreSQL. Всяка промяна"
 " ще доведе до рестартиране на услугата."
 
-#: internal/web/sidebar.go:241
+#: internal/web/sidebar.go:244
 msgid "Accounts"
 msgstr "Профили"
 
-#: internal/web/sidebar.go:269
+#: internal/web/sidebar.go:272
 #: internal/web/templates/files/backup_restore.html:429
 #: internal/web/templates/manager/_cms_app_shared.html:151
 #: internal/web/templates/manager/n8n_app.html:45
@@ -6279,27 +6419,27 @@ msgstr "Профили"
 msgid "Overview"
 msgstr "Преглед"
 
-#: internal/web/sidebar.go:289
+#: internal/web/sidebar.go:292
 msgid "Configure"
 msgstr "Конфигуриране"
 
-#: internal/web/sidebar.go:303
+#: internal/web/sidebar.go:306
 msgid "File Editor"
 msgstr "Файлов редактор"
 
-#: internal/web/sidebar.go:347
+#: internal/web/sidebar.go:350
 msgid "Monitor & Secure"
 msgstr "Наблюдение и защита"
 
-#: internal/web/sidebar.go:383 internal/web/templates/mysql/wizard.html:74
+#: internal/web/sidebar.go:388 internal/web/templates/mysql/wizard.html:74
 msgid "Server"
 msgstr "Сървър"
 
-#: internal/web/sidebar.go:384
+#: internal/web/sidebar.go:389
 msgid "Hosting Plan"
 msgstr "Хостинг план"
 
-#: internal/web/sidebar.go:385
+#: internal/web/sidebar.go:390
 msgid "Panel"
 msgstr "Панел"
 
@@ -6356,12 +6496,17 @@ msgstr "Успешно"
 #: internal/web/templates/manager/grapejs_editor.html:114
 #: internal/web/templates/manager/n8n_app.html:394
 #: internal/web/templates/manager/python_node_apps.html:613
+#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1448
 #: internal/web/templates/mysql/databases.html:130
+#: internal/web/templates/system/error_logs.html:144
 msgid "Error"
 msgstr "Грешка"
 
 #: internal/web/templates/base.html:64
+#: internal/web/templates/manager/wp/single.html:1423
 #: internal/web/templates/mysql/processlist.html:39
+#: internal/web/templates/system/error_logs.html:144
 #: internal/web/templates/user/activity.html:15
 msgid "Info"
 msgstr "Инфо"
@@ -6376,6 +6521,8 @@ msgid "Loading"
 msgstr "Зареждане"
 
 #: internal/web/templates/base.html:67
+#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/system/error_logs.html:144
 #: internal/web/templates/user/history_usage.html:139
 msgid "Warning"
 msgstr "Предупреждение"
@@ -6398,8 +6545,8 @@ msgstr "Затвори"
 #: internal/web/templates/docker/delete_confirm.html:46
 #: internal/web/templates/domains/dns.html:192
 #: internal/web/templates/domains/dns.html:506
-#: internal/web/templates/domains/domains.html:238
-#: internal/web/templates/domains/domains.html:268
+#: internal/web/templates/domains/domains.html:239
+#: internal/web/templates/domains/domains.html:269
 #: internal/web/templates/domains/dynamic_dns.html:22
 #: internal/web/templates/domains/dynamic_dns.html:63
 #: internal/web/templates/domains/dynamic_dns.html:134
@@ -6437,18 +6584,18 @@ msgstr "Затвори"
 #: internal/web/templates/manager/tinyphotogallery_app.html:201
 #: internal/web/templates/manager/websitebuilder.html:224
 #: internal/web/templates/manager/websitebuilder.html:256
-#: internal/web/templates/manager/wp/single.html:1771
-#: internal/web/templates/manager/wp/single.html:1803
+#: internal/web/templates/manager/wp/single.html:1831
+#: internal/web/templates/manager/wp/single.html:1863
 #: internal/web/templates/mysql/databases.html:577
 #: internal/web/templates/mysql/remote_mysql.html:145
 #: internal/web/templates/mysql/remote_mysql.html:203
 #: internal/web/templates/partials/_bulk.html:98
+#: internal/web/templates/partials/_date_range.html:53
 #: internal/web/templates/partials/_db_tuning.html:99
-#: internal/web/templates/partials/site_manager_shared.html:939
+#: internal/web/templates/partials/site_manager_shared.html:944
 #: internal/web/templates/php/extensions.html:100
 #: internal/web/templates/system/cronjobs.html:235
 #: internal/web/templates/system/cronjobs_new.html:96
-#: internal/web/templates/user/activity.html:120
 msgid "Cancel"
 msgstr "Отказ"
 
@@ -6702,6 +6849,8 @@ msgid "Pass"
 msgstr "Pass"
 
 #: internal/web/templates/cache/service.html:91
+#: internal/web/templates/system/summary.html:40
+#: internal/web/templates/system/summary.html:90
 msgid "Requests"
 msgstr "Заявки"
 
@@ -6825,6 +6974,8 @@ msgstr "Преглед на лога на контейнера"
 #: internal/web/templates/cache/service.html:313
 #: internal/web/templates/partials/_search.html:71
 #: internal/web/templates/php/info.html:75
+#: internal/web/templates/system/error_logs.html:23
+#: internal/web/templates/system/error_logs.html:71
 #: internal/web/templates/system/services.html:73
 #: internal/web/templates/system/services.html:212
 msgid "Service"
@@ -6863,6 +7014,7 @@ msgstr "Кликнете, за да обновите"
 #: internal/web/templates/manager/opencart_app.html:59
 #: internal/web/templates/manager/php_app.html:137
 #: internal/web/templates/manager/prestashop_app.html:59
+#: internal/web/templates/manager/wp/single.html:1447
 #: internal/web/templates/php/extensions.html:97
 #: internal/web/templates/php/extensions.html:125
 #: internal/web/templates/system/server_info.html:20
@@ -6952,6 +7104,24 @@ msgstr "Скриване на иконите"
 msgid "Show icons"
 msgstr "Показване на иконите"
 
+#: internal/web/templates/dashboard/dashboard.html:183
+#: internal/web/templates/system/summary.html:187
+msgid "Needs your attention"
+msgstr "Изисква вниманието ви"
+
+#: internal/web/templates/dashboard/dashboard.html:184
+#: internal/web/templates/system/summary.html:187
+msgid "Worth a look"
+msgstr "Заслужава поглед"
+
+#: internal/web/templates/dashboard/dashboard.html:185
+msgid "Yesterday's summary found something to check."
+msgstr "Обобщението за вчера откри нещо за проверка."
+
+#: internal/web/templates/dashboard/dashboard.html:186
+msgid "View summary"
+msgstr "Виж обобщението"
+
 #: internal/web/templates/dashboard/howto.html:6 static/js/tour-steps.js:145
 msgid "General How-to"
 msgstr "Общи указания"
@@ -6983,7 +7153,7 @@ msgstr "Информация"
 #: internal/web/templates/mysql/remote_mysql.html:177
 #: internal/web/templates/mysql/users.html:76
 #: internal/web/templates/mysql/wizard.html:72
-#: internal/web/templates/partials/site_manager_shared.html:949
+#: internal/web/templates/partials/site_manager_shared.html:954
 #: internal/web/templates/psql/password.html:21
 #: internal/web/templates/psql/psql_user.html:23
 #: internal/web/templates/psql/psql_user.html:25
@@ -7000,7 +7170,7 @@ msgstr "План"
 #: internal/web/templates/dashboard/information.html:55
 #: internal/web/templates/system/server_info.html:39
 #: internal/web/templates/user/active_sessions.html:49
-#: internal/web/templates/user/activity.html:158
+#: internal/web/templates/user/activity.html:105
 msgid "IP Address"
 msgstr "IP адрес"
 
@@ -7340,7 +7510,7 @@ msgstr ""
 "Заявките отиват директно към уеб сървъра ви, без слой за кеширане отпред."
 
 #: internal/web/templates/dashboard/onboarding.html:530
-#: internal/web/templates/domains/domains.html:288
+#: internal/web/templates/domains/domains.html:289
 #: internal/web/templates/manager/wp/_shared.html:197
 #: internal/web/templates/system/waf.html:141
 #: internal/web/templates/system/waf.html:208
@@ -7380,7 +7550,7 @@ msgstr "Новите домейни не получават филтриране
 #: internal/web/templates/manager/ojs_app.html:32
 #: internal/web/templates/manager/phpbb_app.html:29
 #: internal/web/templates/manager/wp/single.html:449
-#: internal/web/templates/manager/wp/single.html:1607
+#: internal/web/templates/manager/wp/single.html:1667
 #: internal/web/templates/mongodb/users.html:27
 #: internal/web/templates/mongodb/users.html:28
 #: internal/web/templates/mongodb/users.html:31
@@ -7425,95 +7595,95 @@ msgstr ""
 "Напълно поддържана - използвайте, ако приложенията ви все още не са тествани"
 " на най-новата версия."
 
-#: internal/web/templates/dashboard/onboarding.html:754
-#: internal/web/templates/domains/domains.html:429
+#: internal/web/templates/dashboard/onboarding.html:760
+#: internal/web/templates/domains/domains.html:434
 #: internal/web/templates/manager/wp/_caching.html:290
-#: internal/web/templates/user/activity.html:222
+#: internal/web/templates/user/activity.html:169
 #: internal/web/templates/user/history_usage.html:96
 msgid "of"
 msgstr "от"
 
-#: internal/web/templates/dashboard/onboarding.html:754
+#: internal/web/templates/dashboard/onboarding.html:760
 msgid "Step"
 msgstr "Стъпка"
 
-#: internal/web/templates/dashboard/onboarding.html:823
+#: internal/web/templates/dashboard/onboarding.html:829
 msgid "Please choose a webserver, or click Skip."
 msgstr "Моля, изберете уеб сървър или натиснете Пропусни."
 
-#: internal/web/templates/dashboard/onboarding.html:826
+#: internal/web/templates/dashboard/onboarding.html:832
 msgid "Failed to switch webserver."
 msgstr "Смяната на уеб сървъра неуспешна."
 
-#: internal/web/templates/dashboard/onboarding.html:831
+#: internal/web/templates/dashboard/onboarding.html:837
 msgid "Please choose a database server, or click Skip."
 msgstr "Моля, изберете сървър за бази данни или натиснете Пропусни."
 
-#: internal/web/templates/dashboard/onboarding.html:834
+#: internal/web/templates/dashboard/onboarding.html:840
 msgid "Failed to switch database server."
 msgstr "Смяната на сървъра за бази данни неуспешна."
 
-#: internal/web/templates/dashboard/onboarding.html:839
+#: internal/web/templates/dashboard/onboarding.html:845
 msgid "Please choose an option, or click Skip."
 msgstr "Моля, изберете опция или натиснете Пропусни."
 
-#: internal/web/templates/dashboard/onboarding.html:843
+#: internal/web/templates/dashboard/onboarding.html:849
 msgid "Failed to update Varnish."
 msgstr "Актуализирането на Varnish неуспешно."
 
-#: internal/web/templates/dashboard/onboarding.html:850
+#: internal/web/templates/dashboard/onboarding.html:856
 msgid "Please choose a PHP version, or click Skip."
 msgstr "Моля, изберете версия на PHP или натиснете Пропусни."
 
-#: internal/web/templates/dashboard/onboarding.html:853
+#: internal/web/templates/dashboard/onboarding.html:859
 msgid "Failed to set default PHP version."
 msgstr "Задаването на версия на PHP по подразбиране неуспешно."
 
-#: internal/web/templates/dashboard/onboarding.html:859
+#: internal/web/templates/dashboard/onboarding.html:865
 msgid "Please choose a destination, or click Skip."
 msgstr "Моля, изберете дестинация или натиснете Пропусни."
 
-#: internal/web/templates/dashboard/onboarding.html:862
+#: internal/web/templates/dashboard/onboarding.html:868
 msgid "Failed to set backup destination."
 msgstr "Задаването на дестинация за резервни копия неуспешно."
 
-#: internal/web/templates/dashboard/onboarding.html:873
+#: internal/web/templates/dashboard/onboarding.html:879
 msgid "Failed to save backup settings."
 msgstr "Запазването на настройките за резервни копия неуспешно."
 
-#: internal/web/templates/dashboard/onboarding.html:877
+#: internal/web/templates/dashboard/onboarding.html:883
 msgid "Failed to start connection test."
 msgstr "Стартирането на теста за връзка неуспешно."
 
-#: internal/web/templates/dashboard/onboarding.html:888
+#: internal/web/templates/dashboard/onboarding.html:894
 msgid "Connection test timed out."
 msgstr "Времето за теста на връзката изтече."
 
-#: internal/web/templates/dashboard/onboarding.html:893
+#: internal/web/templates/dashboard/onboarding.html:899
 msgid "Please choose Enabled or Disabled, or click Skip."
 msgstr "Моля, изберете Активирано или Деактивирано, или натиснете Пропусни."
 
-#: internal/web/templates/dashboard/onboarding.html:897
+#: internal/web/templates/dashboard/onboarding.html:903
 msgid "Failed to update WAF."
 msgstr "Актуализирането на WAF неуспешно."
 
-#: internal/web/templates/dashboard/onboarding.html:905
+#: internal/web/templates/dashboard/onboarding.html:911
 msgid "Failed to update IP Blocker."
 msgstr "Актуализирането на блокирането на IP адреси неуспешно."
 
-#: internal/web/templates/dashboard/onboarding.html:914
+#: internal/web/templates/dashboard/onboarding.html:920
 msgid "Failed to start 2FA setup."
 msgstr "Стартирането на настройката на 2FA неуспешно."
 
-#: internal/web/templates/dashboard/onboarding.html:924
+#: internal/web/templates/dashboard/onboarding.html:930
 msgid "Enter the 6-digit code from your app."
 msgstr "Въведете 6-цифрения код от приложението си."
 
-#: internal/web/templates/dashboard/onboarding.html:926
+#: internal/web/templates/dashboard/onboarding.html:932
 msgid "Invalid code, please try again."
 msgstr "Невалиден код, моля опитайте отново."
 
-#: internal/web/templates/dashboard/onboarding.html:938
+#: internal/web/templates/dashboard/onboarding.html:944
 msgid "Failed to register passkey."
 msgstr "Регистрирането на passkey неуспешно."
 
@@ -7660,6 +7830,7 @@ msgstr "прочетете документацията"
 #: internal/web/templates/psql/processlist.html:14
 #: internal/web/templates/psql/users.html:32
 #: internal/web/templates/system/cronjobs.html:247
+#: internal/web/templates/system/error_logs.html:36
 #: internal/web/templates/system/process_manager.html:39
 #: internal/web/templates/system/waf.html:56
 #: internal/web/templates/system/waf_logs.html:35
@@ -7726,7 +7897,7 @@ msgstr "Създаване на база данни"
 #: internal/web/templates/db/new.html:23 internal/web/templates/db/new.html:27
 #: internal/web/templates/files/backup_restore.html:760
 #: internal/web/templates/manager/_cms_app_shared.html:975
-#: internal/web/templates/manager/wp/single.html:1613
+#: internal/web/templates/manager/wp/single.html:1673
 #: internal/web/templates/mongodb/databases.html:53
 #: internal/web/templates/mongodb/new.html:21
 #: internal/web/templates/mongodb/new.html:23
@@ -8028,15 +8199,15 @@ msgstr "Добавяне на том"
 
 #: internal/web/templates/docker/container_form.html:175
 msgid "+ New volume"
-msgstr ""
+msgstr "+ Нов том"
 
 #: internal/web/templates/docker/container_form.html:179
 msgid "3 to 64 lowercase letters, digits or _, starting with a letter"
-msgstr ""
+msgstr "От 3 до 64 малки букви, цифри или _, започващо с буква"
 
 #: internal/web/templates/docker/container_form.html:180
 msgid "Use an existing volume"
-msgstr ""
+msgstr "Използване на съществуващ том"
 
 #: internal/web/templates/docker/container_form.html:185
 #: internal/web/templates/user/mcp.html:59
@@ -8054,6 +8225,8 @@ msgid ""
 "New volumes are created when you save, and keep their data if the container "
 "is deleted."
 msgstr ""
+"Новите томове се създават при запазване и запазват данните си, ако "
+"контейнерът бъде изтрит."
 
 #: internal/web/templates/docker/container_form.html:196
 msgid "Give access to the Docker socket"
@@ -8100,30 +8273,36 @@ msgstr "По една променлива на ред, като KEY: value ил
 msgid ""
 "{domain} is replaced with the domain chosen below, or localhost if none."
 msgstr ""
+"{domain} се заменя с избрания по-долу домейн или с localhost, ако няма "
+"такъв."
 
 #: internal/web/templates/docker/container_form.html:249
 msgid "Deleting the container removes the proxy from the domain."
-msgstr ""
+msgstr "Изтриването на контейнера премахва проксито от домейна."
 
 #: internal/web/templates/docker/container_form.html:251
 msgid ""
 "This container is not reachable from a domain. A domain can only be set when"
 " the container is created."
 msgstr ""
+"Този контейнер не е достъпен от домейн. Домейн може да се зададе само при "
+"създаване на контейнера."
 
 #: internal/web/templates/docker/container_form.html:258
 msgid "None, only reachable by other containers"
-msgstr ""
+msgstr "Няма, достъпен само за други контейнери"
 
 #: internal/web/templates/docker/container_form.html:263
 msgid "Container port"
-msgstr ""
+msgstr "Порт на контейнера"
 
 #: internal/web/templates/docker/container_form.html:267
 msgid ""
 "Pick a domain to make the app reachable from outside, the web server will "
 "proxy it to this container."
 msgstr ""
+"Изберете домейн, за да направите приложението достъпно отвън, уеб сървърът "
+"ще го пренасочва към този контейнер."
 
 #: internal/web/templates/docker/container_form.html:268
 msgid ""
@@ -8131,6 +8310,9 @@ msgid ""
 "on, any website files on the domain stop being served. The container joins "
 "the www network."
 msgstr ""
+"Всички заявки към този домейн отиват към контейнера на порта, на който слуша"
+" приложението, файловете на сайта в домейна вече няма да се обслужват. "
+"Контейнерът се присъединява към мрежата www."
 
 #: internal/web/templates/docker/container_form.html:277
 msgid "Health check"
@@ -8207,11 +8389,11 @@ msgstr "Изтегляне на образа"
 
 #: internal/web/templates/docker/container_form.html:419
 msgid "Starting container"
-msgstr ""
+msgstr "Стартиране на контейнера"
 
 #: internal/web/templates/docker/container_form.html:420
 msgid "Pointing the domain to the container"
-msgstr ""
+msgstr "Насочване на домейна към контейнера"
 
 #: internal/web/templates/docker/container_form.html:480
 msgid "The server stopped responding before the container was created."
@@ -8341,8 +8523,8 @@ msgstr ""
 #: internal/web/templates/domains/capitalize.html:100
 #: internal/web/templates/domains/dns.html:190
 #: internal/web/templates/domains/dns.html:505
-#: internal/web/templates/domains/domains.html:236
-#: internal/web/templates/domains/domains.html:266
+#: internal/web/templates/domains/domains.html:237
+#: internal/web/templates/domains/domains.html:267
 #: internal/web/templates/domains/dynamic_dns.html:101
 #: internal/web/templates/emails/default_address.html:128
 #: internal/web/templates/files/edit_file.html:140
@@ -8583,7 +8765,7 @@ msgid "Edit Domain Display"
 msgstr "Редактиране на показването на домейна"
 
 #: internal/web/templates/domains/capitalize.html:8
-#: internal/web/templates/domains/domains.html:388
+#: internal/web/templates/domains/domains.html:392
 msgid "Capitalize"
 msgstr "С главни букви"
 
@@ -8746,6 +8928,7 @@ msgstr "Зона за експортиране"
 
 #: internal/web/templates/domains/dns.html:87
 #: internal/web/templates/domains/dns.html:687
+#: internal/web/templates/system/error_logs.html:49
 msgid "Reset"
 msgstr "Нулиране"
 
@@ -9046,7 +9229,7 @@ msgstr ""
 "/var/www/html/"
 
 #: internal/web/templates/domains/docroot.html:61
-#: internal/web/templates/domains/domains.html:375
+#: internal/web/templates/domains/domains.html:379
 msgid "Change docroot"
 msgstr "Промяна на docroot"
 
@@ -9102,58 +9285,62 @@ msgstr "Ограничен само до IP адреси на Cloudflare"
 msgid "domain"
 msgstr "домейн"
 
-#: internal/web/templates/domains/domains.html:233
+#: internal/web/templates/domains/domains.html:199
+msgid "Suspended by Admin"
+msgstr "Спрян от администратора"
+
+#: internal/web/templates/domains/domains.html:234
 msgid "Must be a valid URL starting with https://."
 msgstr "Трябва да бъде валиден URL адрес, започващ с https://"
 
-#: internal/web/templates/domains/domains.html:262
+#: internal/web/templates/domains/domains.html:263
 #: internal/web/templates/domains/redirect.html:26
 msgid "Must be a valid URL starting with http:// or https://."
 msgstr "Трябва да бъде валиден URL адрес, започващ с http:// или https://"
 
-#: internal/web/templates/domains/domains.html:262
+#: internal/web/templates/domains/domains.html:263
 msgid "Enter redirect URL"
 msgstr "Въведете URL адреса за пренасочване"
 
-#: internal/web/templates/domains/domains.html:272
+#: internal/web/templates/domains/domains.html:273
 msgid "Create Redirect"
 msgstr "Създаване на пренасочване"
 
-#: internal/web/templates/domains/domains.html:284
+#: internal/web/templates/domains/domains.html:285
 msgid "issued by"
 msgstr "издаден от"
 
-#: internal/web/templates/domains/domains.html:303
+#: internal/web/templates/domains/domains.html:304
 msgid "No SSL is needed on the Tor network."
 msgstr "В мрежата Tor не е необходим SSL."
 
-#: internal/web/templates/domains/domains.html:305
+#: internal/web/templates/domains/domains.html:306
 #: internal/web/templates/partials/_ai_assistant.html:32
 msgid "Expired"
 msgstr "Изтекъл"
 
-#: internal/web/templates/domains/domains.html:307
+#: internal/web/templates/domains/domains.html:308
 #: internal/web/templates/user/mcp.html:45
 msgid "Expires"
 msgstr "Изтича"
 
-#: internal/web/templates/domains/domains.html:309
+#: internal/web/templates/domains/domains.html:310
 msgid "Not issued yet"
 msgstr "Все още не е издаден"
 
-#: internal/web/templates/domains/domains.html:311
+#: internal/web/templates/domains/domains.html:312
 msgid "Unreadable"
 msgstr "Нечетим"
 
-#: internal/web/templates/domains/domains.html:313
+#: internal/web/templates/domains/domains.html:314
 msgid "Valid until"
 msgstr "Валиден до"
 
-#: internal/web/templates/domains/domains.html:315
+#: internal/web/templates/domains/domains.html:316
 msgid "Check"
 msgstr "Проверка"
 
-#: internal/web/templates/domains/domains.html:330
+#: internal/web/templates/domains/domains.html:331
 #: internal/web/templates/system/waf.html:69
 #: internal/web/templates/system/waf.html:89
 #: internal/web/templates/system/waf.html:176
@@ -9164,37 +9351,44 @@ msgstr "Проверка"
 msgid "Monitor only"
 msgstr "Само наблюдение"
 
-#: internal/web/templates/domains/domains.html:362
+#: internal/web/templates/domains/domains.html:353
+msgid "Suspended by the administrator, contact support to make changes."
+msgstr ""
+"Спрян от администратора, свържете се с поддръжката, за да правите промени."
+
+#: internal/web/templates/domains/domains.html:366
 msgid "Manage WAF"
 msgstr "Управление на WAF"
 
-#: internal/web/templates/domains/domains.html:370
+#: internal/web/templates/domains/domains.html:374
 msgid "Remove Cloudflare restriction"
 msgstr "Премахни ограничението за Cloudflare"
 
-#: internal/web/templates/domains/domains.html:382
+#: internal/web/templates/domains/domains.html:386
 msgid "Edit VirtualHosts"
 msgstr "Редактиране на VirtualHosts"
 
-#: internal/web/templates/domains/domains.html:425
+#: internal/web/templates/domains/domains.html:430
 msgid "0 of"
 msgstr "0 от"
 
-#: internal/web/templates/domains/domains.html:425
+#: internal/web/templates/domains/domains.html:430
 msgid "row(s) selected."
 msgstr "избран(и) ред(ове)."
 
-#: internal/web/templates/domains/domains.html:428
+#: internal/web/templates/domains/domains.html:433
 #: internal/web/templates/domains/logs.html:14
+#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
-#: internal/web/templates/user/activity.html:222
-#: internal/web/templates/user/activity.html:224
+#: internal/web/templates/user/activity.html:169
+#: internal/web/templates/user/activity.html:171
 #: internal/web/templates/user/history_usage.html:96
 #: internal/web/templates/user/history_usage.html:98
 msgid "Showing"
 msgstr "Показване"
 
-#: internal/web/templates/domains/domains.html:490
+#: internal/web/templates/domains/domains.html:495
 #: internal/web/templates/files/filemanager.html:348
 #: internal/web/templates/mongodb/users.html:27
 #: internal/web/templates/mongodb/users.html:31
@@ -9205,32 +9399,32 @@ msgstr "Показване"
 msgid "to"
 msgstr "до"
 
-#: internal/web/templates/domains/domains.html:490
+#: internal/web/templates/domains/domains.html:495
 #: internal/web/templates/files/filemanager.html:348
 msgid "from a total of"
 msgstr "от общо"
 
-#: internal/web/templates/domains/domains.html:490
+#: internal/web/templates/domains/domains.html:495
 msgid "Showing domains"
 msgstr "Показване на домейни"
 
-#: internal/web/templates/domains/domains.html:495
+#: internal/web/templates/domains/domains.html:500
 #: internal/web/templates/files/filemanager.html:353
 msgid "Page navigation"
 msgstr "Навигация по страниците"
 
-#: internal/web/templates/domains/domains.html:499
-#: internal/web/templates/domains/domains.html:500
+#: internal/web/templates/domains/domains.html:504
+#: internal/web/templates/domains/domains.html:505
 #: internal/web/templates/domains/logs.html:206
 #: internal/web/templates/files/filemanager.html:357
 #: internal/web/templates/files/filemanager.html:358
 #: internal/web/templates/system/waf_logs.html:124
-#: internal/web/templates/user/activity.html:241
+#: internal/web/templates/user/activity.html:188
 #: internal/web/templates/user/history_usage.html:170
 msgid "Previous"
 msgstr "Предишен"
 
-#: internal/web/templates/domains/domains.html:544
+#: internal/web/templates/domains/domains.html:549
 msgid "Add new domain"
 msgstr "Добавяне на нов домейн"
 
@@ -9271,7 +9465,7 @@ msgstr "Ще се актуализира автоматично при първ�
 #: internal/web/templates/manager/git.html:140
 #: internal/web/templates/mysql/mysql_user.html:8
 #: internal/web/templates/mysql/wizard.html:305
-#: internal/web/templates/partials/site_manager_shared.html:1014
+#: internal/web/templates/partials/site_manager_shared.html:1019
 msgid "Create"
 msgstr "Създаване"
 
@@ -9320,14 +9514,14 @@ msgstr "никога"
 #: internal/web/templates/domains/dynamic_dns.html:194
 #: internal/web/templates/manager/git.html:472
 #: internal/web/templates/mysql/wizard.html:139
-#: internal/web/templates/partials/site_manager_shared.html:1052
+#: internal/web/templates/partials/site_manager_shared.html:1057
 #: internal/web/templates/user/mcp.html:138
 msgid "Copied!"
 msgstr "Копирано!"
 
 #: internal/web/templates/domains/dynamic_dns.html:194
 #: internal/web/templates/manager/git.html:472
-#: internal/web/templates/partials/site_manager_shared.html:1052
+#: internal/web/templates/partials/site_manager_shared.html:1057
 msgid "Copy URL"
 msgstr "Копиране на URL адреса"
 
@@ -9347,20 +9541,26 @@ msgid "Domain Logs for"
 msgstr "Домейн логове за"
 
 #: internal/web/templates/domains/logs.html:14
+#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
-#: internal/web/templates/user/activity.html:230
+#: internal/web/templates/user/activity.html:177
 #: internal/web/templates/user/history_usage.html:104
 msgid "out of"
 msgstr "няма"
 
 #: internal/web/templates/domains/logs.html:14
 #: internal/web/templates/domains/logs.html:21
+#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
 #: internal/web/templates/system/waf_logs.html:23
 msgid "rows"
 msgstr "редове"
 
 #: internal/web/templates/domains/logs.html:21
+#: internal/web/templates/system/summary.html:110
+#: internal/web/templates/system/summary.html:171
 #: internal/web/templates/system/waf_domain.html:143
 #: internal/web/templates/system/waf_logs.html:23
 msgid "Show all"
@@ -9368,7 +9568,7 @@ msgstr "Покажи всички"
 
 #: internal/web/templates/domains/logs.html:105
 #: internal/web/templates/domains/logs.html:125
-#: internal/web/templates/user/activity.html:167
+#: internal/web/templates/user/activity.html:114
 msgid "Timestamp"
 msgstr "Времеви отпечатъци"
 
@@ -9388,6 +9588,7 @@ msgstr "Logger"
 #: internal/web/templates/domains/logs.html:108
 #: internal/web/templates/domains/logs.html:128
 #: internal/web/templates/manager/git.html:435
+#: internal/web/templates/system/error_logs.html:73
 msgid "Message"
 msgstr "Съобщение"
 
@@ -9439,7 +9640,7 @@ msgstr "Невалиден времеви печат"
 
 #: internal/web/templates/domains/logs.html:202
 #: internal/web/templates/system/waf_logs.html:120
-#: internal/web/templates/user/activity.html:236
+#: internal/web/templates/user/activity.html:183
 msgid "Pagination"
 msgstr "Странициране"
 
@@ -10026,7 +10227,7 @@ msgstr "Доставя до"
 #: internal/web/templates/manager/wp/_shared.html:103
 #: internal/web/templates/manager/wp/single.html:1056
 #: internal/web/templates/php/extensions.html:49
-#: internal/web/templates/user/activity.html:149
+#: internal/web/templates/user/activity.html:96
 #: internal/web/templates/user/loginlog.html:64
 msgid "Action"
 msgstr "Действие"
@@ -10196,7 +10397,7 @@ msgstr "Следните потребители ще бъдат импортир
 #: internal/web/templates/mysql/root_password.html:41
 #: internal/web/templates/mysql/wizard.html:73
 #: internal/web/templates/mysql/wizard.html:245
-#: internal/web/templates/partials/site_manager_shared.html:950
+#: internal/web/templates/partials/site_manager_shared.html:955
 #: internal/web/templates/psql/password.html:38
 #: internal/web/templates/psql/password.html:47
 #: internal/web/templates/psql/psql_user.html:40
@@ -10841,7 +11042,7 @@ msgstr "Силна парола"
 #: internal/web/templates/emails/new.html:85
 #: internal/web/templates/emails/single_account.html:197
 #: internal/web/templates/manager/_cms_app_shared.html:991
-#: internal/web/templates/manager/wp/single.html:1629
+#: internal/web/templates/manager/wp/single.html:1689
 #: internal/web/templates/mysql/mysql_user.html:50
 #: internal/web/templates/mysql/password.html:47
 #: internal/web/templates/mysql/root_password.html:40
@@ -10940,7 +11141,7 @@ msgstr "Избери"
 
 #: internal/web/templates/files/backup_destinations.html:80
 #: internal/web/templates/files/backup_settings.html:106
-#: internal/web/templates/user/notifications.html:72
+#: internal/web/templates/user/notifications.html:80
 msgid "Learn more"
 msgstr "Научете още"
 
@@ -11285,18 +11486,6 @@ msgstr ""
 msgid "Choose files"
 msgstr "Избор на файлове"
 
-#: internal/web/templates/files/backup_restore.html:830
-#: internal/web/templates/files/backup_restore.html:831
-#: internal/web/templates/files/backup_restore.html:911
-#: internal/web/templates/files/backup_restore.html:1024
-#: internal/web/templates/files/backup_wizard.html:168
-#: internal/web/templates/files/filemanager_partials.html:318
-#: internal/web/templates/files/filemanager_partials.html:319
-#: internal/web/templates/files/filemanager_partials.html:389
-#: internal/web/templates/files/upload_file.html:140
-msgid "Download"
-msgstr "Изтегляне"
-
 #: internal/web/templates/files/backup_restore.html:842
 msgid "Indexing destination, please wait..."
 msgstr "Индексиране на дестинацията, моля изчакайте..."
@@ -11507,7 +11696,7 @@ msgstr "Резервно копиране в процес…"
 #: internal/web/templates/manager/python_node_apps.html:1034
 #: internal/web/templates/manager/python_node_apps.html:1039
 #: internal/web/templates/manager/websitebuilder.html:164
-#: internal/web/templates/manager/wp/single.html:1705
+#: internal/web/templates/manager/wp/single.html:1765
 #: static/js/tour-steps.js:1162
 msgid "Generate Backup"
 msgstr "Създаване на резервно копие"
@@ -11759,7 +11948,7 @@ msgstr "Завършените сканирания ще се показват �
 #: internal/web/templates/files/clamav/scan_logs.html:39
 #: internal/web/templates/manager/_cms_app_shared.html:664
 #: internal/web/templates/manager/git.html:68
-#: internal/web/templates/manager/wp/single.html:1577
+#: internal/web/templates/manager/wp/single.html:1637
 msgid "Source"
 msgstr "Източник"
 
@@ -11827,45 +12016,45 @@ msgstr "Започнете сканиране"
 
 #: internal/web/templates/files/clamav/scanner.html:53
 #: internal/web/templates/manager/sites.html:174
-#: internal/web/templates/partials/site_manager_shared.html:780
+#: internal/web/templates/partials/site_manager_shared.html:781
 msgid "Scanning..."
 msgstr "Сканиране..."
 
-#: internal/web/templates/files/clamav/scanner.html:102
-#: internal/web/templates/partials/site_manager_shared.html:763
+#: internal/web/templates/files/clamav/scanner.html:104
+#: internal/web/templates/partials/site_manager_shared.html:764
 msgid "files scanned"
 msgstr "сканирани файла"
 
-#: internal/web/templates/files/clamav/scanner.html:113
+#: internal/web/templates/files/clamav/scanner.html:115
 msgid "Scan Results"
 msgstr "Резултати от сканирането"
 
-#: internal/web/templates/files/clamav/scanner.html:123
-#: internal/web/templates/partials/site_manager_shared.html:782
+#: internal/web/templates/files/clamav/scanner.html:125
+#: internal/web/templates/partials/site_manager_shared.html:783
 msgid "Scan failed: "
 msgstr "Сканирането неуспешно: "
 
-#: internal/web/templates/files/clamav/scanner.html:124
-#: internal/web/templates/partials/site_manager_shared.html:783
+#: internal/web/templates/files/clamav/scanner.html:126
+#: internal/web/templates/partials/site_manager_shared.html:784
 msgid "Scan is complete!"
 msgstr "Сканирането е завършено!"
 
-#: internal/web/templates/files/clamav/scanner.html:125
-#: internal/web/templates/partials/site_manager_shared.html:784
+#: internal/web/templates/files/clamav/scanner.html:127
+#: internal/web/templates/partials/site_manager_shared.html:785
 msgid "files scanned."
 msgstr "сканирани файла."
 
-#: internal/web/templates/files/clamav/scanner.html:126
-#: internal/web/templates/partials/site_manager_shared.html:785
+#: internal/web/templates/files/clamav/scanner.html:128
+#: internal/web/templates/partials/site_manager_shared.html:786
 msgid "No malware found."
 msgstr "Не е открит зловреден софтуер."
 
-#: internal/web/templates/files/clamav/scanner.html:217
+#: internal/web/templates/files/clamav/scanner.html:216
 #: internal/web/templates/files/fix_permissions.html:86
 msgid "Network response was not ok"
 msgstr "Отговорът на мрежата не беше в ред"
 
-#: internal/web/templates/files/clamav/scanner.html:284
+#: internal/web/templates/files/clamav/scanner.html:291
 msgid "Review"
 msgstr "Преглед"
 
@@ -12001,7 +12190,8 @@ msgstr "Нова папка"
 #: internal/web/templates/files/trash.html:73
 #: internal/web/templates/files/trash_partials.html:26
 #: internal/web/templates/manager/git.html:437
-#: internal/web/templates/user/activity.html:82
+#: internal/web/templates/partials/_date_range.html:15
+#: internal/web/templates/system/summary.html:21
 #: internal/web/templates/user/history_usage.html:127
 msgid "Date"
 msgstr "Дата"
@@ -12147,20 +12337,6 @@ msgstr "Преглед"
 msgid "Rename"
 msgstr "Преименуване"
 
-#: internal/web/templates/files/filemanager_partials.html:328
-#: internal/web/templates/files/filemanager_partials.html:329
-#: internal/web/templates/files/filemanager_partials.html:397
-#: internal/web/templates/files/filemanager_partials.html:590
-#: internal/web/templates/manager/git.html:92
-#: internal/web/templates/mysql/wizard.html:80
-#: internal/web/templates/mysql/wizard.html:139
-#: internal/web/templates/partials/site_manager_shared.html:979
-#: internal/web/templates/user/mcp.html:30
-#: internal/web/templates/user/mcp.html:118
-#: internal/web/templates/user/mcp.html:127
-msgid "Copy"
-msgstr "Копиране"
-
 #: internal/web/templates/files/filemanager_partials.html:333
 #: internal/web/templates/files/filemanager_partials.html:334
 #: internal/web/templates/files/filemanager_partials.html:401
@@ -12238,8 +12414,8 @@ msgid "Extract here"
 msgstr "Разархивирай тук"
 
 #: internal/web/templates/files/filemanager_partials.html:597
-#: internal/web/templates/user/activity.html:222
-#: internal/web/templates/user/activity.html:230
+#: internal/web/templates/user/activity.html:169
+#: internal/web/templates/user/activity.html:177
 #: internal/web/templates/user/history_usage.html:96
 #: internal/web/templates/user/history_usage.html:104
 msgid "items"
@@ -12256,7 +12432,7 @@ msgstr "Папката не е намерена."
 #: internal/web/templates/files/filemanager_partials.html:600
 #: internal/web/templates/files/fix_permissions.html:49
 #: internal/web/templates/mysql/databases.html:585
-#: internal/web/templates/partials/site_manager_shared.html:1014
+#: internal/web/templates/partials/site_manager_shared.html:1019
 msgid "Working..."
 msgstr "Обработва се..."
 
@@ -12814,7 +12990,7 @@ msgstr "Неочакван отговор."
 #: internal/web/templates/manager/websitebuilder.html:39
 #: internal/web/templates/manager/wp/single.html:148
 msgid "More"
-msgstr ""
+msgstr "Още"
 
 #: internal/web/templates/manager/_cms_app_shared.html:181
 #: internal/web/templates/manager/python_node_apps.html:72
@@ -12937,7 +13113,7 @@ msgid "Open FTP Accounts"
 msgstr "Отвори FTP акаунти"
 
 #: internal/web/templates/manager/_cms_app_shared.html:489
-#: internal/web/templates/manager/wp/single.html:1944
+#: internal/web/templates/manager/wp/single.html:2004
 msgid "MariaDB:"
 msgstr "MariaDB:"
 
@@ -12945,7 +13121,7 @@ msgstr "MariaDB:"
 #: internal/web/templates/manager/_cms_app_shared.html:1197
 #: internal/web/templates/manager/python_node_apps.html:971
 #: internal/web/templates/manager/websitebuilder.html:153
-#: internal/web/templates/manager/wp/single.html:1690
+#: internal/web/templates/manager/wp/single.html:1750
 msgid "Create a Backup"
 msgstr "Създаване на резервно копие"
 
@@ -12966,8 +13142,8 @@ msgstr "Генериране на резервно копие на файлов�
 #: internal/web/templates/manager/tinyphotogallery_app.html:179
 #: internal/web/templates/manager/websitebuilder.html:171
 #: internal/web/templates/manager/websitebuilder.html:234
-#: internal/web/templates/manager/wp/single.html:1712
-#: internal/web/templates/manager/wp/single.html:1781
+#: internal/web/templates/manager/wp/single.html:1772
+#: internal/web/templates/manager/wp/single.html:1841
 #: internal/web/templates/system/cronjobs_new.html:68
 msgid "or"
 msgstr "или"
@@ -12976,7 +13152,7 @@ msgstr "или"
 #: internal/web/templates/manager/_cms_app_shared.html:1238
 #: internal/web/templates/manager/python_node_apps.html:987
 #: internal/web/templates/manager/websitebuilder.html:175
-#: internal/web/templates/manager/wp/single.html:1716
+#: internal/web/templates/manager/wp/single.html:1776
 msgid "Restore from Backups"
 msgstr "Възстановяване от архиви"
 
@@ -12988,7 +13164,7 @@ msgstr "Възстановяване на файловете на сайта о�
 #: internal/web/templates/manager/_cms_app_shared.html:1246
 #: internal/web/templates/manager/python_node_apps.html:995
 #: internal/web/templates/manager/websitebuilder.html:183
-#: internal/web/templates/manager/wp/single.html:1724
+#: internal/web/templates/manager/wp/single.html:1784
 msgid "Display Backups"
 msgstr "Показване на резервни копия"
 
@@ -12996,7 +13172,7 @@ msgstr "Показване на резервни копия"
 #: internal/web/templates/manager/_cms_app_shared.html:1250
 #: internal/web/templates/manager/python_node_apps.html:999
 #: internal/web/templates/manager/websitebuilder.html:187
-#: internal/web/templates/manager/wp/single.html:1728
+#: internal/web/templates/manager/wp/single.html:1788
 msgid "Select a backup date:"
 msgstr "Изберете дата за архивиране:"
 
@@ -13008,25 +13184,25 @@ msgstr "Изберете дата за архивиране:"
 #: internal/web/templates/manager/python_node_apps.html:1090
 #: internal/web/templates/manager/websitebuilder.html:193
 #: internal/web/templates/manager/websitebuilder.html:418
-#: internal/web/templates/manager/wp/single.html:1734
-#: internal/web/templates/manager/wp/single.html:2122
+#: internal/web/templates/manager/wp/single.html:1794
+#: internal/web/templates/manager/wp/single.html:2182
 msgid "Start Restore"
 msgstr "Стартиране на възстановяване"
 
 #: internal/web/templates/manager/_cms_app_shared.html:658
 #: internal/web/templates/manager/python_node_apps.html:845
-#: internal/web/templates/manager/wp/single.html:1571
+#: internal/web/templates/manager/wp/single.html:1631
 msgid "Location"
 msgstr "Местоположение"
 
 #: internal/web/templates/manager/_cms_app_shared.html:659
-#: internal/web/templates/manager/wp/single.html:1572
+#: internal/web/templates/manager/wp/single.html:1632
 msgid "Please choose the URL to install the software"
 msgstr "Моля, изберете URL адреса за инсталиране на софтуера"
 
 #: internal/web/templates/manager/_cms_app_shared.html:670
 #: internal/web/templates/manager/python_node_apps.html:851
-#: internal/web/templates/manager/wp/single.html:1583
+#: internal/web/templates/manager/wp/single.html:1643
 msgid "Target"
 msgstr "Цел"
 
@@ -13040,7 +13216,7 @@ msgstr "Цел"
 #: internal/web/templates/manager/python_node_apps.html:916
 #: internal/web/templates/manager/websitebuilder_install.html:41
 #: internal/web/templates/manager/wp/install.html:76
-#: internal/web/templates/manager/wp/single.html:1587
+#: internal/web/templates/manager/wp/single.html:1647
 msgid "Select a domain"
 msgstr "Изберете домейн"
 
@@ -13053,12 +13229,12 @@ msgstr "Изберете домейн"
 #: internal/web/templates/manager/python_node_apps.html:861
 #: internal/web/templates/manager/websitebuilder_install.html:46
 #: internal/web/templates/manager/wp/install.html:81
-#: internal/web/templates/manager/wp/single.html:1593
+#: internal/web/templates/manager/wp/single.html:1653
 msgid "subfolder"
 msgstr "подпапка"
 
 #: internal/web/templates/manager/_cms_app_shared.html:683
-#: internal/web/templates/manager/wp/single.html:1596
+#: internal/web/templates/manager/wp/single.html:1656
 msgid ""
 "Make sure that the domain or the subdomain selected as a target is not being"
 " used by an existing website. During cloning, website data that exists on "
@@ -13072,7 +13248,7 @@ msgstr ""
 #: internal/web/templates/manager/_cms_app_shared.html:1403
 #: internal/web/templates/manager/python_node_apps.html:1061
 #: internal/web/templates/manager/websitebuilder.html:376
-#: internal/web/templates/manager/wp/single.html:2079
+#: internal/web/templates/manager/wp/single.html:2139
 msgid "No backups available"
 msgstr "Няма налични резервни копия"
 
@@ -13080,7 +13256,7 @@ msgstr "Няма налични резервни копия"
 #: internal/web/templates/manager/_cms_app_shared.html:1415
 #: internal/web/templates/manager/python_node_apps.html:1073
 #: internal/web/templates/manager/websitebuilder.html:390
-#: internal/web/templates/manager/wp/single.html:2094
+#: internal/web/templates/manager/wp/single.html:2154
 msgid "Click again to confirm"
 msgstr "Кликнете отново, за да потвърдите"
 
@@ -13088,34 +13264,34 @@ msgstr "Кликнете отново, за да потвърдите"
 #: internal/web/templates/manager/_cms_app_shared.html:1422
 #: internal/web/templates/manager/python_node_apps.html:1080
 #: internal/web/templates/manager/websitebuilder.html:404
-#: internal/web/templates/manager/wp/single.html:2108
+#: internal/web/templates/manager/wp/single.html:2168
 msgid "Restoring backup... Please wait."
 msgstr "Възстановяване на резервно копие... Моля, изчакайте."
 
 #: internal/web/templates/manager/_cms_app_shared.html:742
 #: internal/web/templates/manager/_cms_app_shared.html:1426
 #: internal/web/templates/manager/websitebuilder.html:411
-#: internal/web/templates/manager/wp/single.html:2115
+#: internal/web/templates/manager/wp/single.html:2175
 msgid "Restore request failed."
 msgstr "Възстановяването на заявката се провали."
 
 #: internal/web/templates/manager/_cms_app_shared.html:765
 #: internal/web/templates/manager/_cms_app_shared.html:1458
-#: internal/web/templates/manager/wp/single.html:2170
+#: internal/web/templates/manager/wp/single.html:2230
 msgid "Generating Backup..."
 msgstr "Създаване на резервно копие..."
 
 #: internal/web/templates/manager/_cms_app_shared.html:766
 #: internal/web/templates/manager/_cms_app_shared.html:1459
 #: internal/web/templates/manager/websitebuilder.html:451
-#: internal/web/templates/manager/wp/single.html:2172
+#: internal/web/templates/manager/wp/single.html:2232
 msgid "Generating website backup.. Please wait."
 msgstr "Създаване на резервно копие на уеб-сайта... Моля, изчакайте."
 
 #: internal/web/templates/manager/_cms_app_shared.html:770
 #: internal/web/templates/manager/_cms_app_shared.html:1463
 #: internal/web/templates/manager/websitebuilder.html:458
-#: internal/web/templates/manager/wp/single.html:2179
+#: internal/web/templates/manager/wp/single.html:2239
 msgid "Backup request failed."
 msgstr "Заявката за архивиране се провали."
 
@@ -13207,51 +13383,52 @@ msgstr "Отвори формата за вход в phpMyAdmin"
 
 #: internal/web/templates/manager/_cms_app_shared.html:898
 #: internal/web/templates/manager/_cms_app_shared.html:1551
-#: internal/web/templates/manager/wp/single.html:1639
+#: internal/web/templates/manager/wp/single.html:1699
 msgid "Clone website"
 msgstr "Клониране на сайт"
 
 #: internal/web/templates/manager/_cms_app_shared.html:912
 #: internal/web/templates/manager/python_node_apps.html:933
-#: internal/web/templates/manager/wp/single.html:1647
+#: internal/web/templates/manager/wp/single.html:1707
 msgid "Cloning..."
 msgstr "Клониране..."
 
 #: internal/web/templates/manager/_cms_app_shared.html:914
 #: internal/web/templates/manager/python_node_apps.html:935
-#: internal/web/templates/manager/wp/single.html:1653
+#: internal/web/templates/manager/wp/single.html:1713
 msgid "Cloning process started... Please wait."
 msgstr "Процесът на клониране е стартиран... Моля, изчакайте."
 
 #: internal/web/templates/manager/_cms_app_shared.html:927
-#: internal/web/templates/manager/wp/single.html:1666
+#: internal/web/templates/manager/wp/single.html:1726
 msgid "Cloned to {target} successfully!"
 msgstr "Успешно клонирано в {target}!"
 
 #: internal/web/templates/manager/_cms_app_shared.html:928
 #: internal/web/templates/manager/python_node_apps.html:949
-#: internal/web/templates/manager/wp/single.html:1667
+#: internal/web/templates/manager/wp/single.html:1727
 msgid "Clone Complete"
 msgstr "Клонирането е завършено"
 
 #: internal/web/templates/manager/_cms_app_shared.html:930
-#: internal/web/templates/manager/wp/single.html:1669
+#: internal/web/templates/manager/wp/single.html:1729
 msgid "Error cloning site"
 msgstr "Грешка при клониране на сайта"
 
 #: internal/web/templates/manager/_cms_app_shared.html:932
 #: internal/web/templates/manager/python_node_apps.html:953
-#: internal/web/templates/manager/wp/single.html:1671
+#: internal/web/templates/manager/wp/single.html:1731
 msgid "Try Again"
 msgstr "Опитайте отново"
 
 #: internal/web/templates/manager/_cms_app_shared.html:938
 #: internal/web/templates/manager/python_node_apps.html:959
-#: internal/web/templates/manager/wp/single.html:1677
+#: internal/web/templates/manager/wp/single.html:1737
 msgid "Retry Clone"
 msgstr "Повторен опит за клониране"
 
 #: internal/web/templates/manager/_cms_app_shared.html:952
+#: internal/web/templates/manager/wp/single.html:1443
 #: internal/web/templates/system/cronjobs.html:67
 msgid "Refresh"
 msgstr "Обнови"
@@ -13262,27 +13439,27 @@ msgid "Loading error log.."
 msgstr "Зареждане на лога с грешки.."
 
 #: internal/web/templates/manager/_cms_app_shared.html:970
-#: internal/web/templates/manager/wp/single.html:1608
+#: internal/web/templates/manager/wp/single.html:1668
 msgid "Database name and user to use for the clone (optional)"
 msgstr "Име на базата данни и потребител за клона (по избор)"
 
 #: internal/web/templates/manager/_cms_app_shared.html:978
-#: internal/web/templates/manager/wp/single.html:1616
+#: internal/web/templates/manager/wp/single.html:1676
 msgid "Database name must be between 6 and 30 characters."
 msgstr "Името на базата данни трябва да бъде между 6 и 30 символа."
 
 #: internal/web/templates/manager/_cms_app_shared.html:982
-#: internal/web/templates/manager/wp/single.html:1620
+#: internal/web/templates/manager/wp/single.html:1680
 msgid "Database user"
 msgstr "Потребител на базата данни"
 
 #: internal/web/templates/manager/_cms_app_shared.html:985
-#: internal/web/templates/manager/wp/single.html:1623
+#: internal/web/templates/manager/wp/single.html:1683
 msgid "Username must be between 6 and 30 characters."
 msgstr "Потребителското име трябва да бъде между 6 и 30 символа."
 
 #: internal/web/templates/manager/_cms_app_shared.html:989
-#: internal/web/templates/manager/wp/single.html:1627
+#: internal/web/templates/manager/wp/single.html:1687
 msgid "User password"
 msgstr "Парола на потребителя"
 
@@ -13389,18 +13566,18 @@ msgstr ""
 "копия."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1198
-#: internal/web/templates/manager/wp/single.html:1691
+#: internal/web/templates/manager/wp/single.html:1751
 msgid "Generate a backup of files and/or database."
 msgstr "Генериране на резервно копие на файлове и/или база данни."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1206
-#: internal/web/templates/manager/wp/single.html:1699
+#: internal/web/templates/manager/wp/single.html:1759
 msgid "Backup Database"
 msgstr "Резервно копие на база данни"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1210
 #: internal/web/templates/manager/websitebuilder.html:162
-#: internal/web/templates/manager/wp/single.html:1703
+#: internal/web/templates/manager/wp/single.html:1763
 msgid "Backup Files"
 msgstr "Резервни файлове"
 
@@ -13410,7 +13587,7 @@ msgstr ""
 "Клониране на инстанция на %(name)s заедно с базата данни и файловете й."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1239
-#: internal/web/templates/manager/wp/single.html:1717
+#: internal/web/templates/manager/wp/single.html:1777
 msgid "Restore files and/or database from a backup."
 msgstr "Възстановяване на файлове и/или база данни от резервно копие."
 
@@ -13422,7 +13599,7 @@ msgstr "Възстановяване на файлове и/или база да
 #: internal/web/templates/manager/ojs_app.html:204
 #: internal/web/templates/manager/opencart_app.html:190
 #: internal/web/templates/manager/prestashop_app.html:174
-#: internal/web/templates/manager/wp/single.html:2246
+#: internal/web/templates/manager/wp/single.html:2306
 msgid "A newer version is available."
 msgstr "Налична е по-нова версия."
 
@@ -13435,7 +13612,7 @@ msgstr "Налична е по-нова версия."
 #: internal/web/templates/manager/ojs_app.html:209
 #: internal/web/templates/manager/opencart_app.html:194
 #: internal/web/templates/manager/prestashop_app.html:178
-#: internal/web/templates/manager/wp/single.html:2235
+#: internal/web/templates/manager/wp/single.html:2295
 msgid "You are running the latest version."
 msgstr "Използвате най-новата версия."
 
@@ -13507,28 +13684,28 @@ msgid "Fetch error. Please try again."
 msgstr "Грешка при извличането. Моля, опитайте отново."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1380
-#: internal/web/templates/manager/wp/single.html:2145
+#: internal/web/templates/manager/wp/single.html:2205
 msgid "Database and Files Backup"
 msgstr "Архивиране на бази данни и файлове"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1381
-#: internal/web/templates/manager/wp/single.html:2147
+#: internal/web/templates/manager/wp/single.html:2207
 msgid "Database Backup"
 msgstr "Архивиране на база данни"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1382
 #: internal/web/templates/manager/websitebuilder.html:371
-#: internal/web/templates/manager/wp/single.html:2149
+#: internal/web/templates/manager/wp/single.html:2209
 msgid "Files Backup"
 msgstr "Архивиране на файлове"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1383
-#: internal/web/templates/manager/wp/single.html:2151
+#: internal/web/templates/manager/wp/single.html:2211
 msgid "Unknown Backup Type"
 msgstr "Неизвестен тип резервно копие"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1453
-#: internal/web/templates/manager/wp/single.html:2164
+#: internal/web/templates/manager/wp/single.html:2224
 msgid ""
 "No options selected to backup. Please ensure that at least one of the "
 "Database or Files is selected."
@@ -13572,7 +13749,7 @@ msgstr ""
 #: internal/web/templates/manager/tinyfilemanager_app.html:66
 #: internal/web/templates/manager/tinyphotogallery_app.html:166
 #: internal/web/templates/manager/websitebuilder.html:221
-#: internal/web/templates/manager/wp/single.html:1768
+#: internal/web/templates/manager/wp/single.html:1828
 msgid "Confirm Detach"
 msgstr "Потвърди отделяне"
 
@@ -14666,11 +14843,11 @@ msgstr "Стартиране на контейнер"
 
 #: internal/web/templates/manager/autoinstaller.html:866
 msgid "Docker Applications"
-msgstr ""
+msgstr "Docker приложения"
 
 #: internal/web/templates/manager/autoinstaller.html:887
 msgid "Docs"
-msgstr ""
+msgstr "Документация"
 
 #: internal/web/templates/manager/autoinstaller.html:891
 #: internal/web/templates/php/extensions.html:23
@@ -15094,205 +15271,213 @@ msgstr ""
 
 #: internal/web/templates/manager/git.html:20
 msgid "Total repositories:"
-msgstr ""
+msgstr "Общо хранилища:"
 
 #: internal/web/templates/manager/git.html:24
-#: internal/web/templates/partials/site_manager_shared.html:939
+#: internal/web/templates/partials/site_manager_shared.html:944
 msgid "Add Repository"
-msgstr ""
+msgstr "Добавяне на хранилище"
 
 #: internal/web/templates/manager/git.html:35
 msgid "Push credentials"
-msgstr ""
+msgstr "Данни за push"
 
 #: internal/web/templates/manager/git.html:36
 msgid ""
 "Copy the password now, it is not shown again. You can generate a new one "
 "from the repository settings."
 msgstr ""
+"Копирайте паролата сега, тя няма да бъде показана отново. Можете да "
+"генерирате нова от настройките на хранилището."
 
 #: internal/web/templates/manager/git.html:51
-#: internal/web/templates/partials/site_manager_shared.html:1049
+#: internal/web/templates/partials/site_manager_shared.html:1054
 msgid "Clone URL"
-msgstr ""
+msgstr "URL за клониране"
 
 #: internal/web/templates/manager/git.html:72
-#: internal/web/templates/partials/site_manager_shared.html:962
+#: internal/web/templates/partials/site_manager_shared.html:967
 msgid "Remote Git hosting"
-msgstr ""
+msgstr "Външен Git хостинг"
 
 #: internal/web/templates/manager/git.html:72
-#: internal/web/templates/partials/site_manager_shared.html:962
+#: internal/web/templates/partials/site_manager_shared.html:967
 msgid "Clone from GitHub, GitLab, Bitbucket or any Git server."
-msgstr ""
+msgstr "Клониране от GitHub, GitLab, Bitbucket или всеки Git сървър."
 
 #: internal/web/templates/manager/git.html:76
-#: internal/web/templates/partials/site_manager_shared.html:966
+#: internal/web/templates/partials/site_manager_shared.html:971
 msgid "Local repository"
-msgstr ""
+msgstr "Локално хранилище"
 
 #: internal/web/templates/manager/git.html:76
-#: internal/web/templates/partials/site_manager_shared.html:966
+#: internal/web/templates/partials/site_manager_shared.html:971
 msgid "Create an empty repository here and push to it from your computer."
 msgstr ""
+"Създайте тук празно хранилище и правете push към него от компютъра си."
 
 #: internal/web/templates/manager/git.html:83
-#: internal/web/templates/partials/site_manager_shared.html:971
+#: internal/web/templates/partials/site_manager_shared.html:976
 msgid "Repository URL"
-msgstr ""
+msgstr "URL на хранилището"
 
 #: internal/web/templates/manager/git.html:88
 msgid "SSH public key"
-msgstr ""
+msgstr "Публичен SSH ключ"
 
 #: internal/web/templates/manager/git.html:89
-#: internal/web/templates/partials/site_manager_shared.html:976
+#: internal/web/templates/partials/site_manager_shared.html:981
 msgid ""
 "Add this key to the repository as a deploy key (read-only is enough) before "
 "clicking Create."
 msgstr ""
+"Добавете този ключ към хранилището като ключ за внедряване (достатъчно е "
+"само за четене), преди да натиснете Създаване."
 
 #: internal/web/templates/manager/git.html:99
-#: internal/web/templates/partials/site_manager_shared.html:985
+#: internal/web/templates/partials/site_manager_shared.html:990
 msgid "Username (private repositories only)"
-msgstr ""
+msgstr "Потребителско име (само за частни хранилища)"
 
 #: internal/web/templates/manager/git.html:103
-#: internal/web/templates/partials/site_manager_shared.html:986
+#: internal/web/templates/partials/site_manager_shared.html:991
 msgid "Password or access token"
-msgstr ""
+msgstr "Парола или токен за достъп"
 
 #: internal/web/templates/manager/git.html:112
-#: internal/web/templates/partials/site_manager_shared.html:991
+#: internal/web/templates/partials/site_manager_shared.html:996
 msgid "Repository name"
-msgstr ""
+msgstr "Име на хранилището"
 
 #: internal/web/templates/manager/git.html:113
-#: internal/web/templates/partials/site_manager_shared.html:991
+#: internal/web/templates/partials/site_manager_shared.html:996
 msgid "taken from the URL"
-msgstr ""
+msgstr "взето от URL адреса"
 
 #: internal/web/templates/manager/git.html:116
 #: internal/web/templates/manager/git.html:168
 #: internal/web/templates/manager/git.html:186
-#: internal/web/templates/partials/site_manager_shared.html:992
+#: internal/web/templates/partials/site_manager_shared.html:997
 msgid "Branch"
-msgstr ""
+msgstr "Клон"
 
 #: internal/web/templates/manager/git.html:117
-#: internal/web/templates/partials/site_manager_shared.html:992
+#: internal/web/templates/partials/site_manager_shared.html:997
 msgid "default branch"
-msgstr ""
+msgstr "клон по подразбиране"
 
 #: internal/web/templates/manager/git.html:120
 #: internal/web/templates/manager/git.html:167
 #: internal/web/templates/manager/git.html:185
+#: internal/web/templates/system/error_logs.html:17
+#: internal/web/templates/system/error_logs.html:72
 msgid "Website"
-msgstr ""
+msgstr "Сайт"
 
 #: internal/web/templates/manager/git.html:126
-#: internal/web/templates/partials/site_manager_shared.html:993
+#: internal/web/templates/partials/site_manager_shared.html:998
 msgid "Deploy to directory"
-msgstr ""
+msgstr "Внедряване в директория"
 
 #: internal/web/templates/manager/git.html:132
 #: internal/web/templates/manager/git.html:169
 #: internal/web/templates/manager/git.html:187
-#: internal/web/templates/partials/site_manager_shared.html:994
+#: internal/web/templates/partials/site_manager_shared.html:999
 msgid "Deployment mode"
-msgstr ""
+msgstr "Режим на внедряване"
 
 #: internal/web/templates/manager/git.html:149
 msgid "No repositories yet"
-msgstr ""
+msgstr "Все още няма хранилища"
 
 #: internal/web/templates/manager/git.html:150
 msgid "Add a repository to deploy a website from Git."
-msgstr ""
+msgstr "Добавете хранилище, за да внедрите сайт от Git."
 
 #: internal/web/templates/manager/git.html:155
 msgid "Repositories"
-msgstr ""
+msgstr "Хранилища"
 
 #: internal/web/templates/manager/git.html:166
 #: internal/web/templates/manager/git.html:184
 msgid "Repository"
-msgstr ""
+msgstr "Хранилище"
 
 #: internal/web/templates/manager/git.html:170
 #: internal/web/templates/manager/git.html:188
 msgid "Latest commit"
-msgstr ""
+msgstr "Последен commit"
 
 #: internal/web/templates/manager/git.html:171
 #: internal/web/templates/manager/git.html:189
 msgid "Last deployed"
-msgstr ""
+msgstr "Последно внедряване"
 
 #: internal/web/templates/manager/git.html:239
 msgid "Deploy on every push or pull."
-msgstr ""
+msgstr "Внедряване при всеки push или pull."
 
 #: internal/web/templates/manager/git.html:244
 msgid "Deploy only when you click Deploy."
-msgstr ""
+msgstr "Внедряване само когато натиснете Внедряване."
 
 #: internal/web/templates/manager/git.html:249
 msgid "Only host the repository."
-msgstr ""
+msgstr "Само хостване на хранилището."
 
 #: internal/web/templates/manager/git.html:259
-#: internal/web/templates/partials/site_manager_shared.html:1003
+#: internal/web/templates/partials/site_manager_shared.html:1008
 msgid "Enable additional deploy actions"
-msgstr ""
+msgstr "Включване на допълнителни действия при внедряване"
 
 #: internal/web/templates/manager/git.html:263
-#: internal/web/templates/partials/site_manager_shared.html:1005
+#: internal/web/templates/partials/site_manager_shared.html:1010
 msgid "Run in container"
-msgstr ""
+msgstr "Изпълнение в контейнер"
 
 #: internal/web/templates/manager/git.html:270
-#: internal/web/templates/partials/site_manager_shared.html:1008
+#: internal/web/templates/partials/site_manager_shared.html:1013
 msgid "Commands (run after each deployment, from the deploy directory)"
 msgstr ""
+"Команди (изпълняват се след всяко внедряване от директорията за внедряване)"
 
 #: internal/web/templates/manager/git.html:416
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: internal/web/templates/manager/git.html:417
-#: internal/web/templates/partials/site_manager_shared.html:1044
+#: internal/web/templates/partials/site_manager_shared.html:1049
 msgid "Commit log"
-msgstr ""
+msgstr "Журнал на commit-ите"
 
 #: internal/web/templates/manager/git.html:420
 msgid "commits"
-msgstr ""
+msgstr "commit-а"
 
 #: internal/web/templates/manager/git.html:420
 msgid "deploys to"
-msgstr ""
+msgstr "се внедрява в"
 
 #: internal/web/templates/manager/git.html:420
 msgid "last deployed"
-msgstr ""
+msgstr "последно внедряване"
 
 #: internal/web/templates/manager/git.html:434
 msgid "Commit"
-msgstr ""
+msgstr "Commit"
 
 #: internal/web/templates/manager/git.html:436
 msgid "Author"
-msgstr ""
+msgstr "Автор"
 
 #: internal/web/templates/manager/git.html:442
 msgid "No commits on this branch yet."
-msgstr ""
+msgstr "Все още няма commit-и в този клон."
 
 #: internal/web/templates/manager/git.html:449
-#: internal/web/templates/partials/site_manager_shared.html:1036
+#: internal/web/templates/partials/site_manager_shared.html:1041
 msgid "deployed"
-msgstr ""
+msgstr "внедрено"
 
 #: internal/web/templates/manager/grapejs_editor.html:9
 msgid "Website Editor"
@@ -15699,7 +15884,7 @@ msgstr "Започна премахването на приложението. �
 #: internal/web/templates/manager/n8n_app.html:698
 #: internal/web/templates/manager/python_node_apps.html:1334
 #: internal/web/templates/manager/websitebuilder.html:345
-#: internal/web/templates/manager/wp/single.html:2048
+#: internal/web/templates/manager/wp/single.html:2108
 msgid "An error occurred fetching folder size from the container."
 msgstr "Възникна грешка при извличането на размера на папката от контейнера."
 
@@ -16542,7 +16727,7 @@ msgstr "Java приложения"
 
 #: internal/web/templates/manager/sites.html:240
 msgid "Docker Containers"
-msgstr ""
+msgstr "Docker контейнери"
 
 #: internal/web/templates/manager/sites.html:243
 msgid "PHP Applications"
@@ -16575,7 +16760,7 @@ msgstr "Отворен мениджър на сайта"
 
 #: internal/web/templates/manager/sites.html:375
 msgid "Edit container"
-msgstr ""
+msgstr "Редактиране на контейнер"
 
 #: internal/web/templates/manager/sites.html:379
 #: internal/web/templates/manager/websitebuilder_install.html:65
@@ -17725,12 +17910,12 @@ msgid "An error occurred while removing WordPress. Please try again."
 msgstr "Възникна грешка при премахването на WordPress. Моля, опитайте отново."
 
 #: internal/web/templates/manager/wp/list.html:256
-#: internal/web/templates/manager/wp/single.html:1829
+#: internal/web/templates/manager/wp/single.html:1889
 msgid "WordPress detach process started. Please wait."
 msgstr "Процесът на отделяне на WordPress започна. Моля, изчакайте."
 
 #: internal/web/templates/manager/wp/list.html:267
-#: internal/web/templates/manager/wp/single.html:1840
+#: internal/web/templates/manager/wp/single.html:1900
 msgid "An error occurred while detaching WordPress. Please try again."
 msgstr "Възникна грешка при отделянето на WordPress. Моля, опитайте отново."
 
@@ -18146,7 +18331,32 @@ msgstr ""
 "Грешка при извличане на информация за отстраняване на грешки. Презаредите "
 "страницата."
 
-#: internal/web/templates/manager/wp/single.html:1419
+#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/system/error_logs.html:144
+msgid "Critical"
+msgstr "Критично"
+
+#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/system/error_logs.html:144
+msgid "Notice"
+msgstr "Известие"
+
+#: internal/web/templates/manager/wp/single.html:1440
+msgid "Latest PHP, web server and HTTP 5xx errors for this website."
+msgstr "Последни грешки от PHP, уеб сървъра и HTTP 5xx за този сайт."
+
+#: internal/web/templates/manager/wp/single.html:1442
+#: internal/web/templates/manager/wp/single.html:1472
+#: internal/web/templates/system/waf.html:349
+msgid "View Logs"
+msgstr "Преглед на логовете"
+
+#: internal/web/templates/manager/wp/single.html:1449
+#: internal/web/templates/system/error_logs.html:97
+msgid "No errors found for these filters."
+msgstr "Няма намерени грешки за тези филтри."
+
+#: internal/web/templates/manager/wp/single.html:1479
 msgid ""
 "The options below allow you to manage the native WordPress debugging tools, "
 "enabling and disabling these tools in the wp-config.php file. It is not "
@@ -18159,59 +18369,59 @@ msgstr ""
 "опции на производствени уеб-сайтове, тъй като те са предназначени за "
 "разработка и тестови инсталации. Вижте"
 
-#: internal/web/templates/manager/wp/single.html:1419
+#: internal/web/templates/manager/wp/single.html:1479
 msgid "Debugging in WordPress"
 msgstr "Отстраняване на грешки в WordPress"
 
-#: internal/web/templates/manager/wp/single.html:1419
+#: internal/web/templates/manager/wp/single.html:1479
 msgid "article for more information on these options."
 msgstr "статия за повече информация относно тези опции."
 
-#: internal/web/templates/manager/wp/single.html:1430
-#: internal/web/templates/manager/wp/single.html:1436
+#: internal/web/templates/manager/wp/single.html:1490
+#: internal/web/templates/manager/wp/single.html:1496
 msgid "WP_DEBUG"
 msgstr "WP_DEBUG"
 
-#: internal/web/templates/manager/wp/single.html:1431
+#: internal/web/templates/manager/wp/single.html:1491
 msgid "WordPress debug mode."
 msgstr "Режим на отстраняване на грешки в WordPress."
 
-#: internal/web/templates/manager/wp/single.html:1438
+#: internal/web/templates/manager/wp/single.html:1498
 msgid "Enable WP_DEBUG mode"
 msgstr "Активиране на режим WP_DEBUG"
 
-#: internal/web/templates/manager/wp/single.html:1449
-#: internal/web/templates/manager/wp/single.html:1455
+#: internal/web/templates/manager/wp/single.html:1509
+#: internal/web/templates/manager/wp/single.html:1515
 msgid "WP_DEBUG_LOG"
 msgstr "WP_DEBUG_LOG"
 
-#: internal/web/templates/manager/wp/single.html:1450
+#: internal/web/templates/manager/wp/single.html:1510
 msgid "Save all errors to the debug.log file inside the wp-content directory."
 msgstr "Запазете всички грешки във файла debug.log в директорията wp-content."
 
-#: internal/web/templates/manager/wp/single.html:1457
+#: internal/web/templates/manager/wp/single.html:1517
 msgid "Enable WP_DEBUG_LOG"
 msgstr "Активиране на WP_DEBUG_LOG"
 
-#: internal/web/templates/manager/wp/single.html:1468
-#: internal/web/templates/manager/wp/single.html:1474
+#: internal/web/templates/manager/wp/single.html:1528
+#: internal/web/templates/manager/wp/single.html:1534
 msgid "WP_DEBUG_DISPLAY"
 msgstr "WP_DEBUG_DISPLAY"
 
-#: internal/web/templates/manager/wp/single.html:1469
+#: internal/web/templates/manager/wp/single.html:1529
 msgid "Show debug messages inside the HTML pages"
 msgstr "Показване на съобщения за отстраняване на грешки в HTML страниците"
 
-#: internal/web/templates/manager/wp/single.html:1476
+#: internal/web/templates/manager/wp/single.html:1536
 msgid "Enable WP_DEBUG_DISPLAY"
 msgstr "Активиране на WP_DEBUG_DISPLAY"
 
-#: internal/web/templates/manager/wp/single.html:1487
-#: internal/web/templates/manager/wp/single.html:1493
+#: internal/web/templates/manager/wp/single.html:1547
+#: internal/web/templates/manager/wp/single.html:1553
 msgid "SCRIPT_DEBUG"
 msgstr "SCRIPT_DEBUG"
 
-#: internal/web/templates/manager/wp/single.html:1488
+#: internal/web/templates/manager/wp/single.html:1548
 msgid ""
 "Force WordPress to use the non-minified versions of core CSS and JavaScript "
 "files. This is useful when you are testing changes made to .js and .css "
@@ -18221,16 +18431,16 @@ msgstr ""
 "JavaScript файлове. Това е полезно, когато тествате промени, направени в .js"
 " и .css файлове."
 
-#: internal/web/templates/manager/wp/single.html:1495
+#: internal/web/templates/manager/wp/single.html:1555
 msgid "Enable SCRIPT_DEBUG"
 msgstr "Активиране на SCRIPT_DEBUG"
 
-#: internal/web/templates/manager/wp/single.html:1506
-#: internal/web/templates/manager/wp/single.html:1512
+#: internal/web/templates/manager/wp/single.html:1566
+#: internal/web/templates/manager/wp/single.html:1572
 msgid "SAVEQUERIES"
 msgstr "SAVEQUERIES"
 
-#: internal/web/templates/manager/wp/single.html:1507
+#: internal/web/templates/manager/wp/single.html:1567
 msgid ""
 "Save database queries to an array that can be displayed to help analyze "
 "them."
@@ -18238,61 +18448,61 @@ msgstr ""
 "Запазете заявките към базата данни в масив, който може да бъде показан, за "
 "да ви помогне да ги анализирате."
 
-#: internal/web/templates/manager/wp/single.html:1514
+#: internal/web/templates/manager/wp/single.html:1574
 msgid "Enable SAVEQUERIES"
 msgstr "Активиране на SAVEQUERIES"
 
-#: internal/web/templates/manager/wp/single.html:1524
+#: internal/web/templates/manager/wp/single.html:1584
 msgid "Save Debugging"
 msgstr "Запазване на отстраняването на грешки"
 
-#: internal/web/templates/manager/wp/single.html:1532
+#: internal/web/templates/manager/wp/single.html:1592
 msgid "Saving debugging options... Please wait."
 msgstr "Записване на опциите за отстраняване на грешки... Моля, изчакайте."
 
-#: internal/web/templates/manager/wp/single.html:1558
+#: internal/web/templates/manager/wp/single.html:1618
 msgid "Clone a WordPress instance with configured themes and plugins."
 msgstr "Клониране на WordPress инстанция с конфигурираните теми и плъгини."
 
-#: internal/web/templates/manager/wp/single.html:1754
-#: internal/web/templates/manager/wp/single.html:1764
+#: internal/web/templates/manager/wp/single.html:1814
+#: internal/web/templates/manager/wp/single.html:1824
 msgid "Remove the"
 msgstr "Премахнете"
 
-#: internal/web/templates/manager/wp/single.html:1754
+#: internal/web/templates/manager/wp/single.html:1814
 msgid "website from WP Manager."
 msgstr "сайт от WP Manager."
 
-#: internal/web/templates/manager/wp/single.html:1761
+#: internal/web/templates/manager/wp/single.html:1821
 msgid "Detach WordPress"
 msgstr "Отделете WordPress"
 
-#: internal/web/templates/manager/wp/single.html:1764
+#: internal/web/templates/manager/wp/single.html:1824
 msgid "website from this manager without actually deleting any files."
 msgstr "уеб-сайт от този мениджър, без да изтривате никакви файлове."
 
-#: internal/web/templates/manager/wp/single.html:1765
+#: internal/web/templates/manager/wp/single.html:1825
 msgid "All website data such as files, crons and database remains."
 msgstr ""
 "Всички данни на сайта, като файлове, cron задачи и база данни, се запазват."
 
-#: internal/web/templates/manager/wp/single.html:1786
+#: internal/web/templates/manager/wp/single.html:1846
 msgid "Permanently delete WordPress files & database."
 msgstr "Окончателно изтриване на файловете и базата данни на WordPress."
 
-#: internal/web/templates/manager/wp/single.html:1793
+#: internal/web/templates/manager/wp/single.html:1853
 msgid "Uninstall WordPress"
 msgstr "Деинсталиране на WordPress"
 
-#: internal/web/templates/manager/wp/single.html:1796
+#: internal/web/templates/manager/wp/single.html:1856
 msgid "Delete the"
 msgstr "Изтриване на"
 
-#: internal/web/templates/manager/wp/single.html:1796
+#: internal/web/templates/manager/wp/single.html:1856
 msgid "website and all its files and database."
 msgstr "сайта и всичките му файлове и база данни."
 
-#: internal/web/templates/manager/wp/single.html:1797
+#: internal/web/templates/manager/wp/single.html:1857
 msgid ""
 "All WordPress data will be permanently deleted. There is no coming back "
 "after you press delete."
@@ -18300,31 +18510,31 @@ msgstr ""
 "Всички данни от WordPress ще бъдат трайно изтрити. След като натиснете "
 "бутона Изтрий, няма връщане назад."
 
-#: internal/web/templates/manager/wp/single.html:1800
+#: internal/web/templates/manager/wp/single.html:1860
 msgid "Confirm Uninstall"
 msgstr "Потвърди деинсталиране"
 
-#: internal/web/templates/manager/wp/single.html:1815
+#: internal/web/templates/manager/wp/single.html:1875
 msgid "WordPress uninstall process started. Please wait."
 msgstr "Процесът на деинсталиране на WordPress започна. Моля, изчакайте."
 
-#: internal/web/templates/manager/wp/single.html:1902
+#: internal/web/templates/manager/wp/single.html:1962
 msgid "An error occurred fetching DB size."
 msgstr "Възникна грешка при извличането на размера на базата данни."
 
-#: internal/web/templates/manager/wp/single.html:1997
+#: internal/web/templates/manager/wp/single.html:2057
 msgid "Update in progress..."
 msgstr "Актуализация в процес..."
 
-#: internal/web/templates/manager/wp/single.html:2003
+#: internal/web/templates/manager/wp/single.html:2063
 msgid "WordPress updated successfully"
 msgstr "WordPress е актуализиран успешно"
 
-#: internal/web/templates/manager/wp/single.html:2004
+#: internal/web/templates/manager/wp/single.html:2064
 msgid "WordPress updated successfully."
 msgstr "WordPress е актуализиран успешно."
 
-#: internal/web/templates/manager/wp/single.html:2013
+#: internal/web/templates/manager/wp/single.html:2073
 msgid "Update failed."
 msgstr "Актуализацията е неуспешна."
 
@@ -18573,7 +18783,7 @@ msgstr "Опресняване на процесите"
 #: internal/web/templates/mongodb/processlist.html:33
 #: internal/web/templates/mysql/mysql_user.html:8
 #: internal/web/templates/mysql/processlist.html:33
-#: internal/web/templates/user/activity.html:140
+#: internal/web/templates/user/activity.html:87
 msgid "User"
 msgstr "Потребител"
 
@@ -18958,7 +19168,7 @@ msgid "Click to Restart"
 msgstr "Кликнете, за да рестартирате"
 
 #: internal/web/templates/mysql/remote_mysql.html:88
-#: internal/web/templates/partials/site_manager_shared.html:1029
+#: internal/web/templates/partials/site_manager_shared.html:1034
 #: internal/web/templates/psql/remote_psql.html:96
 msgid "Remote"
 msgstr "Отдалечено"
@@ -18976,7 +19186,7 @@ msgid "from a remote server"
 msgstr "от отдалечен сървър"
 
 #: internal/web/templates/mysql/remote_mysql.html:111
-#: internal/web/templates/partials/site_manager_shared.html:1029
+#: internal/web/templates/partials/site_manager_shared.html:1034
 #: internal/web/templates/psql/remote_psql.html:117
 msgid "Local"
 msgstr "Местен"
@@ -19124,62 +19334,65 @@ msgstr "Присвояване на потребител към база дан�
 #: internal/web/templates/partials/_ai_assistant.html:2
 #: internal/web/templates/partials/_ai_assistant.html:43
 msgid "AI Assistant"
-msgstr ""
+msgstr "AI асистент"
 
 #: internal/web/templates/partials/_ai_assistant.html:9
 msgid "Hi! Ask me anything about your hosting account and this panel."
 msgstr ""
+"Здравейте! Питайте ме каквото искате за хостинг акаунта ви и този панел."
 
 #: internal/web/templates/partials/_ai_assistant.html:10
 #: internal/web/templates/partials/_ai_assistant.html:68
 msgid "Ask a question..."
-msgstr ""
+msgstr "Задайте въпрос..."
 
 #: internal/web/templates/partials/_ai_assistant.html:11
 msgid "Thinking..."
-msgstr ""
+msgstr "Мисля..."
 
 #: internal/web/templates/partials/_ai_assistant.html:12
 msgid "Something went wrong, please try again."
-msgstr ""
+msgstr "Нещо се обърка, моля, опитайте отново."
 
 #: internal/web/templates/partials/_ai_assistant.html:13
 msgid ""
 "The AI Assistant is not configured yet, please contact your hosting "
 "provider."
 msgstr ""
+"AI асистентът все още не е настроен, моля, свържете се с хостинг доставчика "
+"си."
 
 #: internal/web/templates/partials/_ai_assistant.html:14
 msgid "Requests this month"
-msgstr ""
+msgstr "Заявки този месец"
 
 #: internal/web/templates/partials/_ai_assistant.html:15
 msgid "unlimited"
-msgstr ""
+msgstr "неограничено"
 
 #: internal/web/templates/partials/_ai_assistant.html:16
 msgid "How do I add a new domain?"
-msgstr ""
+msgstr "Как да добавя нов домейн?"
 
 #: internal/web/templates/partials/_ai_assistant.html:17
 msgid "How do I create an email account?"
-msgstr ""
+msgstr "Как да създам имейл акаунт?"
 
 #: internal/web/templates/partials/_ai_assistant.html:18
 msgid "How do I install WordPress?"
-msgstr ""
+msgstr "Как да инсталирам WordPress?"
 
 #: internal/web/templates/partials/_ai_assistant.html:19
 msgid "What can I do on this page?"
-msgstr ""
+msgstr "Какво мога да правя на тази страница?"
 
 #: internal/web/templates/partials/_ai_assistant.html:20
 msgid "Which domains do I have?"
-msgstr ""
+msgstr "Какви домейни имам?"
 
 #: internal/web/templates/partials/_ai_assistant.html:21
 msgid "Create an email account for me"
-msgstr ""
+msgstr "Създай имейл акаунт за мен"
 
 #: internal/web/templates/partials/_ai_assistant.html:23
 #: internal/web/templates/user/activity.html:5
@@ -19188,48 +19401,55 @@ msgstr "Разрушително"
 
 #: internal/web/templates/partials/_ai_assistant.html:24
 msgid "Approve"
-msgstr ""
+msgstr "Одобряване"
 
 #: internal/web/templates/partials/_ai_assistant.html:25
 msgid "Always allow"
-msgstr ""
+msgstr "Винаги разрешавай"
 
 #: internal/web/templates/partials/_ai_assistant.html:26
 msgid "Decline"
-msgstr ""
+msgstr "Отказ"
 
 #: internal/web/templates/partials/_ai_assistant.html:27
 msgid ""
 "This can delete or overwrite data. Check the details before you approve."
 msgstr ""
+"Това може да изтрие или презапише данни. Проверете подробностите, преди да "
+"одобрите."
 
 #: internal/web/templates/partials/_ai_assistant.html:28
 msgid "Asking again because the assistant read files or logs in this chat."
 msgstr ""
+"Пита отново, защото асистентът е прочел файлове или регистри в този чат."
 
 #: internal/web/templates/partials/_ai_assistant.html:29
 msgid "Approved"
-msgstr ""
+msgstr "Одобрено"
 
 #: internal/web/templates/partials/_ai_assistant.html:30
 msgid "Declined"
-msgstr ""
+msgstr "Отказано"
 
 #: internal/web/templates/partials/_ai_assistant.html:31
 msgid "Not answered"
-msgstr ""
+msgstr "Без отговор"
 
 #: internal/web/templates/partials/_ai_assistant.html:33
 msgid ""
 "It answers questions using the panel documentation. It can't see your data "
 "or make changes for you."
 msgstr ""
+"Отговаря на въпроси с помощта на документацията на панела. Не вижда данните "
+"ви и не може да прави промени вместо вас."
 
 #: internal/web/templates/partials/_ai_assistant.html:34
 msgid ""
 "It answers questions using the panel documentation and can look up "
 "information in your account, but it can't make changes."
 msgstr ""
+"Отговаря на въпроси с помощта на документацията на панела и може да търси "
+"информация в акаунта ви, но не може да прави промени."
 
 #: internal/web/templates/partials/_ai_assistant.html:35
 msgid ""
@@ -19237,37 +19457,43 @@ msgid ""
 "account. Changes only run after you approve them, and everything it does is "
 "recorded in your Activity log."
 msgstr ""
+"Отговаря на въпроси и може да търси информация или да прави промени в "
+"акаунта ви. Промените се изпълняват само след като ги одобрите и всичко, "
+"което прави, се записва в журнала ви с активност."
 
 #: internal/web/templates/partials/_ai_assistant.html:36
 msgid "Always allowed actions"
-msgstr ""
+msgstr "Винаги разрешени действия"
 
 #: internal/web/templates/partials/_ai_assistant.html:37
 msgid ""
 "None yet. Click Always allow on an action to skip the approval next time. "
 "Actions that delete or overwrite data always ask."
 msgstr ""
+"Все още няма. Натиснете Винаги разрешавай при действие, за да пропуснете "
+"одобрението следващия път. Действията, които изтриват или презаписват данни,"
+" винаги питат."
 
 #: internal/web/templates/partials/_ai_assistant.html:46
 msgid "About"
-msgstr ""
+msgstr "Относно"
 
 #: internal/web/templates/partials/_ai_assistant.html:49
 msgid "New chat"
-msgstr ""
+msgstr "Нов чат"
 
 #: internal/web/templates/partials/_ai_assistant.html:60
 msgid ""
 "AI can make mistakes, double-check important steps before you apply them."
-msgstr ""
+msgstr "AI може да греши, проверете важните стъпки, преди да ги приложите."
 
 #: internal/web/templates/partials/_ai_assistant.html:69
 msgid "Send"
-msgstr ""
+msgstr "Изпращане"
 
 #: internal/web/templates/partials/_ai_assistant.html:73
 msgid "AI can make mistakes."
-msgstr ""
+msgstr "AI може да греши."
 
 #: internal/web/templates/partials/_bulk.html:5
 msgid "None of the selected items support this action."
@@ -19280,6 +19506,59 @@ msgstr "избрани елемента не поддържат това дей�
 #: internal/web/templates/partials/_bulk.html:105
 msgid "Running..."
 msgstr "Изпълнява се..."
+
+#: internal/web/templates/partials/_date_range.html:6
+msgid "Quick date range"
+msgstr "Бърз период от дати"
+
+#: internal/web/templates/partials/_date_range.html:19
+msgid "Clear date range"
+msgstr "Изчистване на периода"
+
+#: internal/web/templates/partials/_date_range.html:21
+msgid "Select date range"
+msgstr "Избор на период от дати"
+
+#: internal/web/templates/partials/_date_range.html:30
+msgid "Previous month"
+msgstr "Предишен месец"
+
+#: internal/web/templates/partials/_date_range.html:31
+msgid "Next month"
+msgstr "Следващ месец"
+
+#: internal/web/templates/partials/_date_range.html:51
+msgid "Any time"
+msgstr "По всяко време"
+
+#: internal/web/templates/partials/_date_range.html:54
+#: internal/web/templates/system/error_logs.html:48
+msgid "Apply"
+msgstr "Приложи"
+
+#: internal/web/templates/partials/_date_range.html:62
+msgid "Today"
+msgstr "Днес"
+
+#: internal/web/templates/partials/_date_range.html:62
+msgid "Last 7 days"
+msgstr "Последните 7 дни"
+
+#: internal/web/templates/partials/_date_range.html:62
+msgid "Last 30 days"
+msgstr "Последните 30 дни"
+
+#: internal/web/templates/partials/_date_range.html:62
+msgid "Last 3 months"
+msgstr "Последните 3 месеца"
+
+#: internal/web/templates/partials/_date_range.html:62
+msgid "Last 6 months"
+msgstr "Последните 6 месеца"
+
+#: internal/web/templates/partials/_date_range.html:62
+msgid "Year to date"
+msgstr "От началото на годината"
 
 #: internal/web/templates/partials/_db_tuning.html:11
 msgid "Optimization suggestions are not available right now:"
@@ -19704,7 +19983,7 @@ msgstr "Данните за Google PageSpeed на сайта са успешно
 
 #: internal/web/templates/partials/site_manager_shared.html:743
 #: internal/web/templates/partials/site_manager_shared.html:758
-#: internal/web/templates/partials/site_manager_shared.html:781
+#: internal/web/templates/partials/site_manager_shared.html:782
 msgid "Scan for Malware"
 msgstr "Сканиране за зловреден софтуер"
 
@@ -19726,33 +20005,34 @@ msgstr ""
 "Сайтът може да е компрометиран. Прегледайте файловете, открийте как са "
 "попаднали там и обновете или премахнете уязвимия код."
 
-#: internal/web/templates/partials/site_manager_shared.html:786
+#: internal/web/templates/partials/site_manager_shared.html:787
 msgid "more"
 msgstr "още"
 
-#: internal/web/templates/partials/site_manager_shared.html:936
+#: internal/web/templates/partials/site_manager_shared.html:941
 msgid "Deploy this website from a Git repository."
-msgstr ""
+msgstr "Внедрете този сайт от Git хранилище."
 
-#: internal/web/templates/partials/site_manager_shared.html:948
+#: internal/web/templates/partials/site_manager_shared.html:953
 msgid "Push credentials, copy the password now, it is not shown again."
 msgstr ""
+"Данни за push, копирайте паролата сега, тя няма да бъде показана отново."
 
-#: internal/web/templates/partials/site_manager_shared.html:1020
+#: internal/web/templates/partials/site_manager_shared.html:1025
 msgid "No repositories deploy to this website yet."
-msgstr ""
+msgstr "Все още няма хранилища, които се внедряват в този сайт."
 
-#: internal/web/templates/partials/site_manager_shared.html:1036
+#: internal/web/templates/partials/site_manager_shared.html:1041
 msgid "not deployed"
-msgstr ""
+msgstr "не е внедрено"
 
-#: internal/web/templates/partials/site_manager_shared.html:1037
+#: internal/web/templates/partials/site_manager_shared.html:1042
 msgid "No commits yet."
-msgstr ""
+msgstr "Все още няма commit-и."
 
-#: internal/web/templates/partials/site_manager_shared.html:1049
+#: internal/web/templates/partials/site_manager_shared.html:1054
 msgid "Webhook URL"
-msgstr ""
+msgstr "URL на webhook"
 
 #: internal/web/templates/partials/theme_switcher.html:3
 msgid "Theme"
@@ -20511,6 +20791,47 @@ msgid "Please fill in all required fields before submitting."
 msgstr ""
 "Моля, попълнете всички задължителни полета, преди да изпратите формуляра."
 
+#: internal/web/templates/system/error_logs.html:12
+msgid ""
+"PHP, web server, database and HTTP 5xx errors for all your websites in one "
+"place."
+msgstr ""
+"Грешки от PHP, уеб сървъра, базата данни и HTTP 5xx за всичките ви сайтове "
+"на едно място."
+
+#: internal/web/templates/system/error_logs.html:19
+msgid "All websites"
+msgstr "Всички сайтове"
+
+#: internal/web/templates/system/error_logs.html:25
+msgid "All services"
+msgstr "Всички услуги"
+
+#: internal/web/templates/system/error_logs.html:29
+#: internal/web/templates/system/error_logs.html:70
+msgid "Severity"
+msgstr "Сериозност"
+
+#: internal/web/templates/system/error_logs.html:32
+msgid "Warnings and errors"
+msgstr "Предупреждения и грешки"
+
+#: internal/web/templates/system/error_logs.html:33
+msgid "Errors only"
+msgstr "Само грешки"
+
+#: internal/web/templates/system/error_logs.html:37
+msgid "e.g. Fatal error, wp-content, 502"
+msgstr "напр. Fatal error, wp-content, 502"
+
+#: internal/web/templates/system/error_logs.html:124
+msgid "Copied to clipboard."
+msgstr "Копирано в клипборда."
+
+#: internal/web/templates/system/error_logs.html:125
+msgid "Could not copy, your browser blocked clipboard access."
+msgstr "Не може да се копира, браузърът ви блокира достъпа до клипборда."
+
 #: internal/web/templates/system/ip_blocker.html:18
 msgid ""
 "This feature allows you to block a range of IP addresses to prevent them "
@@ -20791,6 +21112,89 @@ msgstr "Име за достъп до услугата от други конт�
 msgid "Name:"
 msgstr "Име:"
 
+#: internal/web/templates/system/summary.html:16
+msgid ""
+"What happened on your account and websites each day, with what needs fixing "
+"first."
+msgstr ""
+"Какво се е случило в акаунта и сайтовете ви всеки ден, с това, което трябва "
+"да се поправи първо."
+
+#: internal/web/templates/system/summary.html:20
+msgid "Previous day"
+msgstr "Предишен ден"
+
+#: internal/web/templates/system/summary.html:24
+msgid "Next day"
+msgstr "Следващ ден"
+
+#: internal/web/templates/system/summary.html:32
+msgid "There is no summary for this day."
+msgstr "Няма обобщение за този ден."
+
+#: internal/web/templates/system/summary.html:32
+msgid "Your first summary will be ready tomorrow morning."
+msgstr "Първото ви обобщение ще бъде готово утре сутринта."
+
+#: internal/web/templates/system/summary.html:42
+msgid "Compared with the day before"
+msgstr "Спрямо предишния ден"
+
+#: internal/web/templates/system/summary.html:46
+#: internal/web/templates/system/summary.html:106
+msgid "Unique IPs"
+msgstr "Уникални IP адреси"
+
+#: internal/web/templates/system/summary.html:50
+#: internal/web/templates/system/summary.html:106
+msgid "Bandwidth"
+msgstr "Трафик"
+
+#: internal/web/templates/system/summary.html:54
+msgid "Error pages"
+msgstr "Страници с грешки"
+
+#: internal/web/templates/system/summary.html:58
+#: internal/web/templates/system/summary.html:106
+msgid "Firewall blocks"
+msgstr "Блокирани от защитната стена"
+
+#: internal/web/templates/system/summary.html:74
+msgid "All good"
+msgstr "Всичко е наред"
+
+#: internal/web/templates/system/summary.html:74
+msgid "Nothing needs your attention on this day."
+msgstr "В този ден нищо не изисква вниманието ви."
+
+#: internal/web/templates/system/summary.html:101
+msgid "5xx"
+msgstr "5xx"
+
+#: internal/web/templates/system/summary.html:106
+msgid "404s"
+msgstr "404"
+
+#: internal/web/templates/system/summary.html:106
+msgid "Rate limited"
+msgstr "Ограничени"
+
+#: internal/web/templates/system/summary.html:112
+msgid "No website traffic on this day."
+msgstr "В този ден няма трафик към сайтовете."
+
+#: internal/web/templates/system/summary.html:143
+msgid "Panel logins"
+msgstr "Входове в панела"
+
+#: internal/web/templates/system/summary.html:152
+msgid "New IP"
+msgstr "Нов IP"
+
+#: internal/web/templates/system/summary.html:162
+msgid "Changes to your account"
+msgstr "Промени в акаунта ви"
+
 #: internal/web/templates/system/waf.html:30
 msgid ""
 "Protect your websites from attacks like SQL injection, cross-site scripting "
@@ -20853,10 +21257,6 @@ msgstr "Заявките се проверяват и записват, но н�
 #: internal/web/templates/system/waf.html:348
 msgid "Manage Rules"
 msgstr "Управление на правила"
-
-#: internal/web/templates/system/waf.html:349
-msgid "View Logs"
-msgstr "Преглед на логовете"
 
 #: internal/web/templates/system/waf_domain.html:9
 msgid ""
@@ -21305,59 +21705,31 @@ msgstr "Преглед на последните действия на потр�
 msgid "Filter by type"
 msgstr "Филтриране по тип"
 
-#: internal/web/templates/user/activity.html:73
-msgid "Quick date range"
-msgstr "Бърз период от дати"
-
-#: internal/web/templates/user/activity.html:86
-msgid "Clear date range"
-msgstr "Изчистване на периода"
-
-#: internal/web/templates/user/activity.html:88
-msgid "Select date range"
-msgstr "Избор на период от дати"
-
-#: internal/web/templates/user/activity.html:97
-msgid "Previous month"
-msgstr "Предишен месец"
-
-#: internal/web/templates/user/activity.html:98
-msgid "Next month"
-msgstr "Следващ месец"
-
-#: internal/web/templates/user/activity.html:118
-msgid "Any time"
-msgstr "По всяко време"
-
-#: internal/web/templates/user/activity.html:121
-msgid "Apply"
-msgstr "Приложи"
-
-#: internal/web/templates/user/activity.html:128
+#: internal/web/templates/user/activity.html:75
 msgid "Clear filters"
 msgstr "Изчистване на филтрите"
 
-#: internal/web/templates/user/activity.html:180
+#: internal/web/templates/user/activity.html:127
 msgid "No actions match these filters."
 msgstr "Няма действия, отговарящи на тези филтри."
 
-#: internal/web/templates/user/activity.html:180
+#: internal/web/templates/user/activity.html:127
 msgid "No logs yet."
 msgstr "Все още няма логове."
 
-#: internal/web/templates/user/activity.html:201
+#: internal/web/templates/user/activity.html:148
 msgid "Gravatar profile image"
 msgstr "Профилна снимка от Gravatar"
 
-#: internal/web/templates/user/activity.html:294
+#: internal/web/templates/user/activity.html:241
 msgid "Suspicious activity detected from IP"
 msgstr "Открита е подозрителна активност от IP"
 
-#: internal/web/templates/user/activity.html:294
+#: internal/web/templates/user/activity.html:241
 msgid "(100+ actions in one minute)."
 msgstr "(100+ действия за една минута)."
 
-#: internal/web/templates/user/activity.html:296
+#: internal/web/templates/user/activity.html:243
 msgid "IPs show bot-like activity (100+ actions in one minute)."
 msgstr ""
 "IP адреси, показващи активност, подобна на бот (100+ действия за една "
@@ -21691,11 +22063,11 @@ msgstr "Claude Code CLI"
 msgid "Claude Desktop (claude_desktop_config.json)"
 msgstr "Claude Desktop (claude_desktop_config.json)"
 
-#: internal/web/templates/user/notifications.html:37
+#: internal/web/templates/user/notifications.html:45
 msgid "Notifications Settings"
 msgstr "Настройки на известията"
 
-#: internal/web/templates/user/notifications.html:42
+#: internal/web/templates/user/notifications.html:50
 msgid ""
 "Security alerts help you spot unwanted changes early, usage alerts warn you "
 "before you run out of space."
@@ -21703,19 +22075,19 @@ msgstr ""
 "Известията за сигурност ви помагат да забележите нежелани промени навреме, а"
 " известията за използване ви предупреждават, преди да ви свърши мястото."
 
-#: internal/web/templates/user/notifications.html:43
+#: internal/web/templates/user/notifications.html:51
 msgid "Emails are sent to"
 msgstr "Имейлите се изпращат до"
 
-#: internal/web/templates/user/notifications.html:43
+#: internal/web/templates/user/notifications.html:51
 msgid "change"
 msgstr "промяна"
 
-#: internal/web/templates/user/notifications.html:47
+#: internal/web/templates/user/notifications.html:55
 msgid "Save Preferences"
 msgstr "Запазване на настройките"
 
-#: internal/web/templates/user/notifications.html:69
+#: internal/web/templates/user/notifications.html:77
 msgid "Email me"
 msgstr "Изпращай ми имейл"
 
