@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-10-16 11:31+0200\n"
+"POT-Creation-Date: 2026-10-19 10:57+0200\n"
 "PO-Revision-Date: ROK-MIESIĄC-DZIEŃ GODZ:MIN+STREFA\n"
 "Last-Translator: Michal Boruta <borutowicz@gmail.com>\n"
 "Language-Team: Polish <info@openpanel.com>\n"
@@ -1098,6 +1098,27 @@ msgid "Backup Wizard"
 msgstr "Kreator Kopii Zapasowej"
 
 #: internal/modules/backupwizard/render.go:41
+#: internal/modules/dashboard/sections.go:73
+#: internal/modules/dashboard/sections.go:74
+#: internal/modules/dashboard/sections.go:225
+#: internal/modules/dashboard/sections.go:226
+#: internal/modules/domains/render.go:107 internal/web/sidebar.go:216
+#: internal/web/sidebar.go:220 internal/web/sidebar.go:222
+#: internal/web/templates/cache/service.html:146
+#: internal/web/templates/dashboard/usage.html:55
+#: internal/web/templates/domains/domains.html:9
+#: internal/web/templates/domains/domains.html:14
+#: internal/web/templates/emails/deliverability.html:106
+#: internal/web/templates/files/backup_restore.html:10
+#: internal/web/templates/files/backup_restore.html:473
+#: internal/web/templates/files/backup_restore.html:574
+#: internal/web/templates/files/backup_restore.html:737
+#: internal/web/templates/files/backup_restore.html:961
+#: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
+msgid "Domains"
+msgstr "Domeny"
+
+#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:114
 #: internal/modules/dashboard/sections.go:127
 #: internal/modules/dashboard/sections.go:136
@@ -1120,27 +1141,6 @@ msgstr "Bazy Danych"
 #: internal/modules/backupwizard/render.go:41
 msgid "The home directory"
 msgstr "Katalog domowy"
-
-#: internal/modules/backupwizard/render.go:41
-#: internal/modules/dashboard/sections.go:73
-#: internal/modules/dashboard/sections.go:74
-#: internal/modules/dashboard/sections.go:225
-#: internal/modules/dashboard/sections.go:226
-#: internal/modules/domains/render.go:107 internal/web/sidebar.go:216
-#: internal/web/sidebar.go:220 internal/web/sidebar.go:222
-#: internal/web/templates/cache/service.html:146
-#: internal/web/templates/dashboard/usage.html:55
-#: internal/web/templates/domains/domains.html:9
-#: internal/web/templates/domains/domains.html:14
-#: internal/web/templates/emails/deliverability.html:106
-#: internal/web/templates/files/backup_restore.html:10
-#: internal/web/templates/files/backup_restore.html:473
-#: internal/web/templates/files/backup_restore.html:574
-#: internal/web/templates/files/backup_restore.html:737
-#: internal/web/templates/files/backup_restore.html:961
-#: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
-msgid "Domains"
-msgstr "Domeny"
 
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/sections.go:81
@@ -2615,16 +2615,16 @@ msgstr "Edytuj CPU"
 msgid "Set the CPU limit for the selected containers:"
 msgstr "Ustaw limit CPU dla wybranych kontenerów:"
 
+#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
+#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
+msgid "0 = unlimited"
+msgstr "0 = bez limitu"
+
 #: internal/modules/docker/bulk.go:31
 #: internal/web/templates/docker/containers.html:18
 #: internal/web/templates/docker/containers.html:384
 msgid "cores"
 msgstr "rdzeni"
-
-#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
-#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
-msgid "0 = unlimited"
-msgstr "0 = bez limitu"
 
 #: internal/modules/docker/bulk.go:32
 msgid "Edit RAM"
@@ -6778,6 +6778,12 @@ msgstr ""
 "Metryki wydajności i efektywności pamięci podręcznej w czasie rzeczywistym."
 
 #: internal/web/templates/cache/service.html:91
+#: internal/web/templates/system/summary.html:40
+#: internal/web/templates/system/summary.html:90
+msgid "Requests"
+msgstr "Żądania"
+
+#: internal/web/templates/cache/service.html:91
 msgid "Hit Ratio"
 msgstr "Współczynnik trafień"
 
@@ -6792,12 +6798,6 @@ msgstr "Chybienia"
 #: internal/web/templates/cache/service.html:91
 msgid "Pass"
 msgstr "Pass"
-
-#: internal/web/templates/cache/service.html:91
-#: internal/web/templates/system/summary.html:40
-#: internal/web/templates/system/summary.html:90
-msgid "Requests"
-msgstr "Żądania"
 
 #: internal/web/templates/cache/service.html:91
 msgid "Backend Requests"
@@ -6879,6 +6879,13 @@ msgid "Memory Usage"
 msgstr "Użycie Pamięci"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/partials/_service_js.html:24
+#: internal/web/templates/system/services.html:113
+#: internal/web/templates/user/history_usage.html:133
+msgid "Memory %"
+msgstr "Pamięć %"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/docker/containers.html:64
 #: internal/web/templates/docker/containers.html:101
 #: internal/web/templates/partials/_service_js.html:26
@@ -6887,24 +6894,17 @@ msgid "Block I/O"
 msgstr "We/Wy Bloków"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/partials/_service_js.html:25
+#: internal/web/templates/system/services.html:113
+msgid "Network I/O"
+msgstr "We/Wy Sieci"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/mongodb/processlist.html:32
 #: internal/web/templates/mysql/processlist.html:32
 #: internal/web/templates/system/services.html:113
 msgid "ID"
 msgstr "ID"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/partials/_service_js.html:24
-#: internal/web/templates/system/services.html:113
-#: internal/web/templates/user/history_usage.html:133
-msgid "Memory %"
-msgstr "Pamięć %"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/partials/_service_js.html:25
-#: internal/web/templates/system/services.html:113
-msgid "Network I/O"
-msgstr "We/Wy Sieci"
 
 #: internal/web/templates/cache/service.html:270
 #: internal/web/templates/system/services.html:162
@@ -7539,16 +7539,16 @@ msgstr ""
 "jeszcze przetestowane z najnowszą wersją."
 
 #: internal/web/templates/dashboard/onboarding.html:760
+msgid "Step"
+msgstr "Krok"
+
+#: internal/web/templates/dashboard/onboarding.html:760
 #: internal/web/templates/domains/domains.html:434
 #: internal/web/templates/manager/wp/_caching.html:290
 #: internal/web/templates/user/activity.html:169
 #: internal/web/templates/user/history_usage.html:96
 msgid "of"
 msgstr "z"
-
-#: internal/web/templates/dashboard/onboarding.html:760
-msgid "Step"
-msgstr "Krok"
 
 #: internal/web/templates/dashboard/onboarding.html:829
 msgid "Please choose a webserver, or click Skip."
@@ -8742,13 +8742,13 @@ msgstr ""
 "i pliki, pozostaną na dysku."
 
 #: internal/web/templates/domains/delete.html:31
-msgid "subdomains"
-msgstr "subdomeny"
-
-#: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/domains.html:195
 msgid "subdomain"
 msgstr "subdomena"
+
+#: internal/web/templates/domains/delete.html:31
+msgid "subdomains"
+msgstr "subdomeny"
 
 #: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/delete.html:38
