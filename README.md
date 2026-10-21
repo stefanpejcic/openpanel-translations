@@ -17,6 +17,7 @@
 - 🇱🇦 Lao (LO)
 - 🇵🇱 Polish (PO)
 - 🇸🇪 Swedish (SV)
+- 🇳🇱 Dutch (NL)
 
 ## OpenPanel Translations
 OpenPanel needs you! If you would like to support OpenPanel, help us with the translation. 💖 
