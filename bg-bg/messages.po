@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-10-22 20:21+0200\n"
+"POT-Creation-Date: 2026-10-22 22:53+0200\n"
 "PO-Revision-Date: 2026-02-08 21:25+0200\n"
 "Last-Translator: Svetoslav Slavkov <contact@sslavkov.eu>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -857,27 +857,27 @@ msgid ""
 msgstr ""
 "Промените са запазени, рестартирайте приложението, за да влязат в сила."
 
-#: internal/modules/appinstall/pm2.go:537
+#: internal/modules/appinstall/pm2.go:536
 msgid "Application '%(site_name)s' removed successfully"
 msgstr "Приложението '%(site_name)s' е премахнато успешно"
 
-#: internal/modules/appinstall/pm2.go:539
+#: internal/modules/appinstall/pm2.go:538
 msgid "Service '%(service_key)s' not found in compose file"
 msgstr "Услугата '%(service_key)s' не е намерена в compose файла"
 
-#: internal/modules/appinstall/pm2.go:560
+#: internal/modules/appinstall/pm2.go:559
 msgid "Environment variables for '%(service_name)s' removed from .env"
 msgstr "Променливите на средата за '%(service_name)s' са премахнати от .env"
 
-#: internal/modules/appinstall/pm2.go:562
+#: internal/modules/appinstall/pm2.go:561
 msgid ".env file not found at %(env_file)s"
 msgstr "Файлът .env не е намерен в %(env_file)s"
 
-#: internal/modules/appinstall/pm2.go:567
+#: internal/modules/appinstall/pm2.go:566
 msgid "Application '%(site_name)s' deleted from the database"
 msgstr "Приложението '%(site_name)s' е изтрито от базата данни"
 
-#: internal/modules/appinstall/pm2.go:569
+#: internal/modules/appinstall/pm2.go:568
 msgid ""
 "Failed to delete application '%(site_name)s' from the database: %(error)s"
 msgstr ""
@@ -1309,8 +1309,8 @@ msgstr "Кешът на Varnish вече е %(new_status)s за домейна %
 #: internal/modules/cmsapp/remove.go:49 internal/modules/websites/bulk.go:272
 #: internal/modules/websites/websitebuilder.go:63
 #: internal/modules/websites/websitebuilder.go:101
-#: internal/modules/wordpress/manage.go:266
-#: internal/modules/wordpress/manage.go:365
+#: internal/modules/wordpress/manage.go:263
+#: internal/modules/wordpress/manage.go:362
 msgid "No data found for the provided site ID"
 msgstr "Няма намерени данни за посочения ID на сайт"
 
@@ -1422,73 +1422,73 @@ msgstr "Код на изход %(code)s: %(output)s"
 msgid "Unknown container."
 msgstr "Непознат контейнер."
 
-#: internal/modules/crons/handlers.go:228
+#: internal/modules/crons/handlers.go:233
 msgid "Invalid cron file path"
 msgstr "Невалиден път на cron файла"
 
-#: internal/modules/crons/handlers.go:245
-#: internal/modules/crons/handlers.go:420
+#: internal/modules/crons/handlers.go:250
+#: internal/modules/crons/handlers.go:425
 msgid "Missing one or more required fields (schedule, command, container)."
 msgstr ""
 "Липсва едно или повече задължителни полета (график, команда, контейнер)."
 
-#: internal/modules/crons/handlers.go:249
-#: internal/modules/crons/handlers.go:357
+#: internal/modules/crons/handlers.go:254
+#: internal/modules/crons/handlers.go:362
 msgid "Invalid characters in input."
 msgstr "Невалидни знаци във въведеното."
 
-#: internal/modules/crons/handlers.go:253
+#: internal/modules/crons/handlers.go:258
 msgid "Invalid schedule: %(error)s"
 msgstr "Невалиден график: %(error)s"
 
-#: internal/modules/crons/handlers.go:286
-#: internal/modules/crons/handlers.go:313
-#: internal/modules/crons/handlers.go:370
-#: internal/modules/crons/handlers.go:393
+#: internal/modules/crons/handlers.go:291
+#: internal/modules/crons/handlers.go:318
+#: internal/modules/crons/handlers.go:375
+#: internal/modules/crons/handlers.go:398
 #: internal/modules/crons/schedule.go:94
 #: internal/modules/crons/schedule.go:110
 msgid "Error saving cron job. Please try again."
 msgstr "Грешка при запазване на cron задачата. Моля, опитайте отново."
 
-#: internal/modules/crons/handlers.go:291
+#: internal/modules/crons/handlers.go:296
 msgid "Cron job created and saved successfully!"
 msgstr "Cron задачата е създадена и запазена успешно!"
 
-#: internal/modules/crons/handlers.go:308
+#: internal/modules/crons/handlers.go:313
 msgid "Invalid crons file format: %(err_msg)s"
 msgstr "Невалиден формат на crons файла: %(err_msg)s"
 
-#: internal/modules/crons/handlers.go:325
+#: internal/modules/crons/handlers.go:330
 msgid "Crons file saved successfully!"
 msgstr "Crons файлът е запазен успешно!"
 
-#: internal/modules/crons/handlers.go:349
+#: internal/modules/crons/handlers.go:354
 msgid "Missing one or more required fields."
 msgstr "Липсва едно или повече задължителни полета."
 
-#: internal/modules/crons/handlers.go:353
+#: internal/modules/crons/handlers.go:358
 msgid "Missing original cron job fields."
 msgstr "Липсват полета на оригиналната cron задача."
 
-#: internal/modules/crons/handlers.go:364
+#: internal/modules/crons/handlers.go:369
 msgid "Invalid cron file path."
 msgstr "Невалиден път на cron файла."
 
-#: internal/modules/crons/handlers.go:388
+#: internal/modules/crons/handlers.go:393
 #: internal/modules/crons/schedule.go:106
 msgid "Cron job not found."
 msgstr "Cron задачата не е намерена."
 
-#: internal/modules/crons/handlers.go:401
+#: internal/modules/crons/handlers.go:406
 msgid "Cron job was successfully edited."
 msgstr "Cron задачата е редактирана успешно."
 
-#: internal/modules/crons/handlers.go:427
-#: internal/modules/crons/handlers.go:436
+#: internal/modules/crons/handlers.go:432
+#: internal/modules/crons/handlers.go:441
 msgid "Error deleting cron job."
 msgstr "Грешка при изтриване на cron задачата."
 
-#: internal/modules/crons/handlers.go:449
+#: internal/modules/crons/handlers.go:454
 msgid "Cron job was successfully deleted."
 msgstr "Cron задачата е изтрита успешно."
 
@@ -3322,7 +3322,7 @@ msgstr "Невалиден сертификат."
 msgid "Invalid private key."
 msgstr "Невалиден частен ключ."
 
-#: internal/modules/domains/vhost.go:36
+#: internal/modules/domains/vhost.go:34
 msgid "Invalid request. Domain name and Vhost content must be provided."
 msgstr ""
 "Невалидна заявка. Трябва да бъдат посочени име на домейн и съдържание на "
@@ -4800,16 +4800,21 @@ msgid "Remove remote access for the selected user and host pairs?"
 msgstr ""
 "Да се премахне ли отдалеченият достъп за избраните двойки потребител/хост?"
 
-#: internal/modules/mysql/conf.go:241
+#: internal/modules/mysql/conf.go:318
 msgid "Unknown database service, cannot restart"
 msgstr "Неизвестна услуга за бази данни, рестартирането не е възможно"
 
-#: internal/modules/mysql/conf.go:243
+#: internal/modules/mysql/conf.go:320
+msgid "%(mysql_version)s configuration updated and applied without a restart."
+msgstr ""
+"Конфигурацията на %(mysql_version)s е обновена и приложена без рестартиране."
+
+#: internal/modules/mysql/conf.go:322
 msgid "%(mysql_version)s configuration updated and service restarted."
 msgstr ""
 "Конфигурацията на %(mysql_version)s е обновена и услугата е рестартирана."
 
-#: internal/modules/mysql/conf.go:246
+#: internal/modules/mysql/conf.go:325
 msgid ""
 "%(mysql_version)s did not start with the new settings, so the previous "
 "configuration was restored."
@@ -4817,7 +4822,11 @@ msgstr ""
 "%(mysql_version)s не стартира с новите настройки, затова предишната "
 "конфигурация беше възстановена."
 
-#: internal/modules/mysql/conf.go:248
+#: internal/modules/mysql/conf.go:327
+msgid "%(mysql_version)s rejected the new settings, nothing was changed."
+msgstr "%(mysql_version)s отхвърли новите настройки, нищо не е променено."
+
+#: internal/modules/mysql/conf.go:329
 msgid ""
 "%(mysql_version)s did not start with the new settings. The previous "
 "configuration was restored but the service is still not running."
@@ -4825,7 +4834,7 @@ msgstr ""
 "%(mysql_version)s не стартира с новите настройки. Предишната конфигурация "
 "беше възстановена, но услугата все още не работи."
 
-#: internal/modules/mysql/conf.go:258
+#: internal/modules/mysql/conf.go:339
 msgid ""
 "%(mysql_version)s container is not running. Please wait for initialization."
 msgstr ""
@@ -5062,12 +5071,12 @@ msgstr "Отдалечен MySQL"
 msgid "Error changing MySQL root password: %(error)s"
 msgstr "Грешка при смяна на root паролата на MySQL: %(error)s"
 
-#: internal/modules/mysql/rootpassword.go:58
-#: internal/modules/mysql/rootpassword.go:64
-msgid "Password changed but failed to restart MySQL."
-msgstr "Паролата е сменена, но MySQL не можа да бъде рестартиран."
+#: internal/modules/mysql/rootpassword.go:56
+msgid "Password changed but failed to update stored configuration."
+msgstr ""
+"Паролата е променена, но запазената конфигурация не можа да бъде обновена."
 
-#: internal/modules/mysql/rootpassword.go:68
+#: internal/modules/mysql/rootpassword.go:61
 msgid "Successfully changed root password."
 msgstr "Root паролата е сменена успешно."
 
@@ -5172,7 +5181,7 @@ msgid "Default PHP version could not be changed to %(new_phpversion)s"
 msgstr ""
 "PHP версията по подразбиране не можа да бъде сменена на %(new_phpversion)s"
 
-#: internal/modules/php/domains.go:67
+#: internal/modules/php/domains.go:66
 msgid ""
 "Only one PHP version can be used on Litespeed, to change version for all "
 "domains use this page."
@@ -5180,15 +5189,15 @@ msgstr ""
 "В Litespeed може да се използва само една PHP версия, за смяна на версията "
 "за всички домейни използвайте тази страница."
 
-#: internal/modules/php/domains.go:95
+#: internal/modules/php/domains.go:94
 msgid "Invalid or unavailable PHP version selected."
 msgstr "Избрана е невалидна или недостъпна PHP версия."
 
-#: internal/modules/php/domains.go:99
+#: internal/modules/php/domains.go:98
 msgid "Invalid current PHP version."
 msgstr "Невалидна текуща PHP версия."
 
-#: internal/modules/php/domains.go:107
+#: internal/modules/php/domains.go:106
 msgid "Failed to start PHP %(new_phpversion)s: %(message)s"
 msgstr "PHP %(new_phpversion)s не можа да бъде стартиран: %(message)s"
 
@@ -5203,7 +5212,15 @@ msgid "Error occurred while updating PHP version for domain %(domain_url)s"
 msgstr ""
 "Възникна грешка при обновяване на PHP версията за домейна %(domain_url)s"
 
-#: internal/modules/php/domains.go:136
+#: internal/modules/php/domains.go:138
+msgid ""
+"PHP version for domain %(domain_url)s was saved, but %(web_server)s could "
+"not apply it and still uses PHP %(old_phpversion)s: %(error)s"
+msgstr ""
+"PHP версията за домейна %(domain_url)s е запазена, но %(web_server)s не можа"
+" да я приложи и все още използва PHP %(old_phpversion)s: %(error)s"
+
+#: internal/modules/php/domains.go:140
 msgid ""
 "PHP version for domain %(domain_url)s updated from %(old_phpversion)s to "
 "%(new_phpversion)s"
@@ -5343,15 +5360,7 @@ msgstr ""
 "Всички привилегии на потребителя %(db_user)s за PostgreSQL базата данни "
 "%(database_name)s са отнети успешно"
 
-#: internal/modules/postgresql/conf.go:151
-msgid ""
-"PostgreSQL configuration was saved successfully but postgres service failed "
-"to start! Please revert the changes to restart postgres."
-msgstr ""
-"PostgreSQL конфигурацията е запазена, но услугата postgres не можа да "
-"стартира! Моля, върнете промените, за да рестартирате postgres."
-
-#: internal/modules/postgresql/conf.go:153
+#: internal/modules/postgresql/conf.go:231
 msgid ""
 "PostgreSQL Configuration was edited successfully and service restarted to "
 "apply new settings."
@@ -5359,7 +5368,15 @@ msgstr ""
 "PostgreSQL конфигурацията е редактирана успешно и услугата е рестартирана, "
 "за да приложи новите настройки."
 
-#: internal/modules/postgresql/conf.go:159
+#: internal/modules/postgresql/conf.go:233
+msgid ""
+"PostgreSQL Configuration was edited successfully and applied without a "
+"restart."
+msgstr ""
+"Конфигурацията на PostgreSQL е редактирана успешно и приложена без "
+"рестартиране."
+
+#: internal/modules/postgresql/conf.go:240
 #: internal/modules/postgresql/databases.go:49
 #: internal/modules/postgresql/importdb.go:44
 #: internal/modules/postgresql/users.go:41
@@ -5929,20 +5946,20 @@ msgstr "Да се изключи ли защитната стена за изб�
 msgid "Custom"
 msgstr "Персонализиране"
 
-#: internal/modules/webserverconf/handlers.go:81
+#: internal/modules/webserverconf/handlers.go:80
 msgid "No default configuration is available for %(service_name)s."
 msgstr "Няма налична конфигурация по подразбиране за %(service_name)s."
 
-#: internal/modules/webserverconf/handlers.go:87
-#: internal/modules/webserverconf/handlers.go:91
+#: internal/modules/webserverconf/handlers.go:86
+#: internal/modules/webserverconf/handlers.go:90
 msgid "Error restoring %(conf_file)s: %(error)s"
 msgstr "Грешка при възстановяване на %(conf_file)s: %(error)s"
 
-#: internal/modules/webserverconf/handlers.go:105
+#: internal/modules/webserverconf/handlers.go:104
 msgid "Error writing to %(conf_file)s: %(error)s"
 msgstr "Грешка при запис в %(conf_file)s: %(error)s"
 
-#: internal/modules/webserverconf/handlers.go:115
+#: internal/modules/webserverconf/handlers.go:114
 msgid ""
 "Configuration was not saved - it failed the %(service_name)s syntax check: "
 "%(test_output)s"
@@ -5950,27 +5967,27 @@ msgstr ""
 "Конфигурацията не е запазена - не премина синтактичната проверка на "
 "%(service_name)s: %(test_output)s"
 
-#: internal/modules/webserverconf/handlers.go:127
-msgid "Error restarting %(service_name)s container."
-msgstr "Грешка при рестартиране на контейнера %(service_name)s."
+#: internal/modules/webserverconf/handlers.go:125
+msgid "Error reloading %(service_name)s container."
+msgstr "Грешка при презареждане на контейнера %(service_name)s."
+
+#: internal/modules/webserverconf/handlers.go:129
+msgid ""
+"Restored %(conf_file)s to the default configuration and %(service_name)s "
+"container reloaded successfully."
+msgstr ""
+"%(conf_file)s е възстановен до конфигурацията по подразбиране и контейнерът "
+"%(service_name)s е презареден успешно."
 
 #: internal/modules/webserverconf/handlers.go:131
 msgid ""
-"Restored %(conf_file)s to the default configuration and %(service_name)s "
-"container restarted successfully."
-msgstr ""
-"%(conf_file)s е възстановен към конфигурацията по подразбиране и контейнерът"
-" %(service_name)s е рестартиран успешно."
-
-#: internal/modules/webserverconf/handlers.go:133
-msgid ""
-"Changes saved to %(conf_file)s and %(service_name)s container restarted "
+"Changes saved to %(conf_file)s and %(service_name)s container reloaded "
 "successfully."
 msgstr ""
 "Промените са запазени в %(conf_file)s и контейнерът %(service_name)s е "
-"рестартиран успешно."
+"презареден успешно."
 
-#: internal/modules/webserverconf/handlers.go:141
+#: internal/modules/webserverconf/handlers.go:139
 msgid ""
 "Restored %(conf_file)s to the default configuration - the %(service_name)s "
 "container is not running."
@@ -5978,7 +5995,7 @@ msgstr ""
 "%(conf_file)s е възстановен към конфигурацията по подразбиране - контейнерът"
 " %(service_name)s не работи."
 
-#: internal/modules/webserverconf/handlers.go:143
+#: internal/modules/webserverconf/handlers.go:141
 msgid ""
 "Changes saved to %(conf_file)s - the %(service_name)s container is not "
 "running."
@@ -6346,28 +6363,28 @@ msgstr ""
 msgid "WordPress installed successfully on %(selected_domain)s"
 msgstr "WordPress е инсталиран успешно на %(selected_domain)s"
 
-#: internal/modules/wordpress/manage.go:275
+#: internal/modules/wordpress/manage.go:272
 msgid "WordPress installation not found in the database"
 msgstr "Инсталацията на WordPress не е намерена в базата данни"
 
-#: internal/modules/wordpress/manage.go:307
+#: internal/modules/wordpress/manage.go:304
 msgid "Database name or user not found in wp-config.php"
 msgstr "Името на базата данни или потребителят не са намерени в wp-config.php"
 
-#: internal/modules/wordpress/manage.go:353
+#: internal/modules/wordpress/manage.go:350
 msgid "Missing site ID."
 msgstr "Липсва ID на сайта."
 
-#: internal/modules/wordpress/manage.go:384
+#: internal/modules/wordpress/manage.go:381
 msgid "WordPress installation detached from Manager."
 msgstr "Инсталацията на WordPress е отделена от мениджъра."
 
-#: internal/modules/wordpress/manage.go:665
+#: internal/modules/wordpress/manage.go:662
 msgid "Hardening rules have been successfully applied to the website"
 msgstr ""
 "Правилата за подсилване на сигурността са приложени успешно към уебсайта"
 
-#: internal/modules/wordpress/manage.go:667
+#: internal/modules/wordpress/manage.go:664
 msgid "Failed to apply hardening rules to the website - please try again"
 msgstr ""
 "Правилата за подсилване на сигурността не можаха да бъдат приложени към "
