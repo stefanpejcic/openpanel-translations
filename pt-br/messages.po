@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-22 22:53+0200\n"
+"POT-Creation-Date: 2026-10-26 11:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: pt_BR <LL@li.org>\n"
@@ -26,8 +26,8 @@ msgstr "Nome de usuário e senha são obrigatórios."
 #: internal/modules/account/favorites.go:253 internal/modules/crons/bulk.go:42
 #: internal/modules/dns/bulk.go:31 internal/modules/docker/bulk.go:36
 #: internal/modules/domains/bulk.go:29 internal/modules/emails/bulk.go:23
-#: internal/modules/emails/bulk.go:30 internal/modules/ftp/ftp.go:529
-#: internal/modules/malwarescan/bulk.go:17 internal/modules/mongodb/bulk.go:28
+#: internal/modules/emails/bulk.go:30 internal/modules/ftp/ftp.go:530
+#: internal/modules/malwarescan/bulk.go:16 internal/modules/mongodb/bulk.go:28
 #: internal/modules/mongodb/bulk.go:37 internal/modules/mysql/bulk.go:46
 #: internal/modules/mysql/bulk.go:55 internal/modules/postgresql/bulk.go:28
 #: internal/modules/postgresql/bulk.go:37
@@ -40,10 +40,10 @@ msgstr "Nome de usuário e senha são obrigatórios."
 #: internal/web/templates/emails/delete.html:10
 #: internal/web/templates/emails/single_account.html:13
 #: internal/web/templates/files/clamav/quarantine.html:88
-#: internal/web/templates/files/filemanager_partials.html:353
-#: internal/web/templates/files/filemanager_partials.html:354
-#: internal/web/templates/files/filemanager_partials.html:417
-#: internal/web/templates/files/filemanager_partials.html:586
+#: internal/web/templates/files/filemanager_partials.html:371
+#: internal/web/templates/files/filemanager_partials.html:372
+#: internal/web/templates/files/filemanager_partials.html:435
+#: internal/web/templates/files/filemanager_partials.html:604
 #: internal/web/templates/files/ftp.html:186
 #: internal/web/templates/files/ftp.html:188
 #: internal/web/templates/files/trash.html:58
@@ -146,11 +146,11 @@ msgstr "Sua senha foi redefinida. Faça login."
 msgid "Reset Password"
 msgstr "Redefinir senha"
 
-#: internal/modules/account/handlers_passkeys.go:204
+#: internal/modules/account/handlers_passkeys.go:205
 msgid "Passkey removed."
 msgstr "Passkey removida."
 
-#: internal/modules/account/handlers_passkeys.go:206
+#: internal/modules/account/handlers_passkeys.go:207
 msgid "Passkey not found."
 msgstr "Passkey não encontrada."
 
@@ -181,19 +181,19 @@ msgstr ""
 msgid "Invalid 2FA code. Please try again."
 msgstr "Código 2FA inválido. "
 
-#: internal/modules/account/login.go:415
+#: internal/modules/account/login.go:416
 msgid "Autologin failed: Invalid username."
 msgstr "Login automático falhou: nome de usuário inválido."
 
-#: internal/modules/account/login.go:423
+#: internal/modules/account/login.go:424
 msgid "Error reading token from user files."
 msgstr "Erro ao ler o token dos arquivos do usuário."
 
-#: internal/modules/account/login.go:430
+#: internal/modules/account/login.go:431
 msgid "Autologin failed: Invalid or expired token."
 msgstr "Login automático falhou: token inválido ou expirado."
 
-#: internal/modules/account/login.go:438
+#: internal/modules/account/login.go:439
 msgid "Autologin failed: User does not exist."
 msgstr "Login automático falhou: o usuário não existe."
 
@@ -463,12 +463,12 @@ msgstr "Não foi possível conectar ao banco de dados."
 msgid "Invalid password. Please try again."
 msgstr "Senha inválida. "
 
-#: internal/modules/account/ratelimit.go:93
+#: internal/modules/account/ratelimit.go:94
 msgid "Too many failed login attempts. Please try again later."
 msgstr "Muitas tentativas de login malsucedidas. Tente novamente mais tarde."
 
 #: internal/modules/account/render.go:34 internal/modules/backups/render.go:54
-#: internal/modules/php/render.go:139
+#: internal/modules/php/render.go:137
 #: internal/web/templates/db/configuration.html:8
 #: internal/web/templates/partials/site_manager_shared.html:1050
 msgid "Settings"
@@ -561,7 +561,7 @@ msgstr ""
 "Encerrar as sessões selecionadas? Quem estiver usando será desconectado."
 
 #: internal/modules/account/settings.go:98
-#: internal/modules/emails/emails.go:339 internal/modules/mongodb/users.go:87
+#: internal/modules/emails/emails.go:351 internal/modules/mongodb/users.go:87
 #: internal/modules/mongodb/users.go:181 internal/modules/mongodb/wizard.go:68
 #: internal/modules/mysql/users.go:103 internal/modules/mysql/users.go:211
 #: internal/modules/postgresql/users.go:97
@@ -655,7 +655,7 @@ msgstr ""
 msgid "Two-Factor Authentication is now disabled."
 msgstr "A autenticação de dois fatores agora está desativada."
 
-#: internal/modules/account/webauthn.go:63
+#: internal/modules/account/webauthn.go:79
 msgid ""
 "Passkeys require the panel to be accessed over HTTPS. Ask your administrator"
 " to configure a domain and SSL certificate for this panel."
@@ -664,7 +664,7 @@ msgstr ""
 "administrador para configurar um domínio e um certificado SSL para este "
 "painel."
 
-#: internal/modules/account/webauthn.go:65
+#: internal/modules/account/webauthn.go:81
 msgid ""
 "Passkeys require the panel to be accessed via a domain name, not an IP "
 "address. Ask your administrator to configure a domain for this panel."
@@ -699,7 +699,7 @@ msgstr ""
 
 #: internal/modules/appinstall/install.go:109
 #: internal/modules/cmsapp/install.go:47 internal/modules/phpapp/install.go:39
-#: internal/modules/wordpress/install.go:50
+#: internal/modules/wordpress/install.go:51
 msgid ""
 "You have reached the maximum number of sites allowed.%(upgrade_message)s"
 msgstr "Você atingiu o número máximo de sites permitidos.%(upgrade_message)s"
@@ -936,28 +936,11 @@ msgstr "Instalar aplicativo Ruby"
 msgid "Install App"
 msgstr "Instalar app"
 
-#: internal/modules/backups/backups.go:70
-msgid ""
-"A backup is currently in progress. Please wait until it finishes before "
-"saving settings. Or if you want to interrupt the backup process: stop and "
-"start the backup service."
-msgstr ""
-"Um backup está em andamento. Aguarde a conclusão antes de salvar as "
-"configurações. Para interromper o backup, pare e inicie o serviço de backup."
-
-#: internal/modules/backups/backups.go:75
-msgid "Error updating settings."
-msgstr "Erro ao atualizar as configurações."
-
-#: internal/modules/backups/backups.go:77
-msgid "Settings updated successfully."
-msgstr "Configurações atualizadas com sucesso."
-
-#: internal/modules/backups/backups.go:268
+#: internal/modules/backups/backups.go:313
 msgid "Backup target switched to '%(target)s' successfully."
 msgstr "Destino do backup alterado para '%(target)s' com sucesso."
 
-#: internal/modules/backups/reindex.go:131
+#: internal/modules/backups/reindex.go:134
 msgid ""
 "Archive is not in the backup/ layout this page can restore (for example a "
 "full account backup made by the administrator)."
@@ -990,7 +973,7 @@ msgstr "Vários destinos de backup estão configurados."
 
 #: internal/modules/backups/render.go:97
 #: internal/modules/dashboard/sections.go:111 internal/web/sidebar.go:278
-#: internal/web/templates/files/filemanager_partials.html:658
+#: internal/web/templates/files/filemanager_partials.html:676
 msgid "Destination"
 msgstr "Destino"
 
@@ -1044,11 +1027,11 @@ msgstr "Backups remotos para o armazenamento em nuvem do Dropbox."
 
 #: internal/modules/backups/render.go:249
 #: internal/modules/dashboard/sections.go:109
-#: internal/modules/malwarescan/bulk.go:15 internal/web/sidebar.go:275
-#: internal/web/templates/files/backup_restore.html:832
-#: internal/web/templates/files/backup_restore.html:833
+#: internal/modules/malwarescan/bulk.go:14 internal/web/sidebar.go:275
+#: internal/web/templates/files/backup_restore.html:834
+#: internal/web/templates/files/backup_restore.html:835
 #: internal/web/templates/files/clamav/quarantine.html:86
-#: internal/web/templates/files/clamav/quarantine.html:122
+#: internal/web/templates/files/clamav/quarantine.html:113
 #: internal/web/templates/files/trash.html:52
 #: internal/web/templates/files/trash_partials.html:170
 msgid "Restore"
@@ -1095,30 +1078,6 @@ msgid "Backup Wizard"
 msgstr "Assistente de backup"
 
 #: internal/modules/backupwizard/render.go:41
-#: internal/modules/dashboard/sections.go:115
-#: internal/modules/dashboard/sections.go:128
-#: internal/modules/dashboard/sections.go:137
-#: internal/modules/dashboard/sections.go:240
-#: internal/modules/dashboard/sections.go:252
-#: internal/modules/dashboard/sections.go:261
-#: internal/modules/mysql/render.go:58 internal/web/sidebar.go:179
-#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
-#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
-#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
-#: internal/web/templates/dashboard/usage.html:78
-#: internal/web/templates/files/backup_restore.html:455
-#: internal/web/templates/files/backup_restore.html:558
-#: internal/web/templates/files/backup_restore.html:735
-#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
-#: static/js/tour-steps.js:261
-msgid "Databases"
-msgstr "Bancos de dados"
-
-#: internal/modules/backupwizard/render.go:41
-msgid "The home directory"
-msgstr "O diretório home"
-
-#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:73
 #: internal/modules/dashboard/sections.go:74
 #: internal/modules/dashboard/sections.go:226
@@ -1131,13 +1090,37 @@ msgstr "O diretório home"
 #: internal/web/templates/domains/domains.html:14
 #: internal/web/templates/emails/deliverability.html:106
 #: internal/web/templates/files/backup_restore.html:10
-#: internal/web/templates/files/backup_restore.html:473
-#: internal/web/templates/files/backup_restore.html:574
-#: internal/web/templates/files/backup_restore.html:737
-#: internal/web/templates/files/backup_restore.html:961
+#: internal/web/templates/files/backup_restore.html:475
+#: internal/web/templates/files/backup_restore.html:576
+#: internal/web/templates/files/backup_restore.html:739
+#: internal/web/templates/files/backup_restore.html:963
 #: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
 msgid "Domains"
 msgstr "Domínios"
+
+#: internal/modules/backupwizard/render.go:41
+#: internal/modules/dashboard/sections.go:115
+#: internal/modules/dashboard/sections.go:128
+#: internal/modules/dashboard/sections.go:137
+#: internal/modules/dashboard/sections.go:240
+#: internal/modules/dashboard/sections.go:252
+#: internal/modules/dashboard/sections.go:261
+#: internal/modules/mysql/render.go:59 internal/web/sidebar.go:179
+#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
+#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
+#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
+#: internal/web/templates/dashboard/usage.html:78
+#: internal/web/templates/files/backup_restore.html:457
+#: internal/web/templates/files/backup_restore.html:560
+#: internal/web/templates/files/backup_restore.html:737
+#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
+#: static/js/tour-steps.js:261
+msgid "Databases"
+msgstr "Bancos de dados"
+
+#: internal/modules/backupwizard/render.go:41
+msgid "The home directory"
+msgstr "O diretório home"
 
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/sections.go:81
@@ -1160,7 +1143,7 @@ msgstr "Contas FTP"
 
 #: internal/modules/backupwizard/render.go:43
 #: internal/web/templates/files/backup_restore.html:11
-#: internal/web/templates/files/backup_restore.html:964
+#: internal/web/templates/files/backup_restore.html:966
 msgid "DNS zones"
 msgstr "Zonas DNS"
 
@@ -1300,8 +1283,8 @@ msgstr ""
 #: internal/modules/cmsapp/remove.go:49 internal/modules/websites/bulk.go:272
 #: internal/modules/websites/websitebuilder.go:63
 #: internal/modules/websites/websitebuilder.go:101
-#: internal/modules/wordpress/manage.go:263
-#: internal/modules/wordpress/manage.go:362
+#: internal/modules/wordpress/manage.go:247
+#: internal/modules/wordpress/manage.go:346
 msgid "No data found for the provided site ID"
 msgstr "Nenhum dado encontrado para o ID de site informado"
 
@@ -1622,7 +1605,7 @@ msgstr "Entregabilidade"
 #: internal/modules/dashboard/sections.go:131
 #: internal/modules/dashboard/sections.go:140
 #: internal/modules/emails/render.go:382
-#: internal/modules/mongodb/render.go:199 internal/modules/mysql/render.go:271
+#: internal/modules/mongodb/render.go:199 internal/modules/mysql/render.go:273
 #: internal/modules/postgresql/render.go:192 internal/web/sidebar.go:181
 #: internal/web/sidebar.go:195 internal/web/sidebar.go:206
 #: internal/web/sidebar.go:249
@@ -1794,7 +1777,7 @@ msgid "Database Wizard"
 msgstr "Assistente de banco de dados"
 
 #: internal/modules/dashboard/sections.go:119
-#: internal/modules/php/render.go:281 internal/web/sidebar.go:182
+#: internal/modules/php/render.go:279 internal/web/sidebar.go:182
 #: internal/web/templates/mysql/databases.html:425
 #: internal/web/templates/mysql/phpmyadmin_unavailable.html:6
 msgid "phpMyAdmin"
@@ -1819,7 +1802,7 @@ msgstr "Acesso remoto"
 #: internal/modules/dashboard/sections.go:122
 #: internal/modules/dashboard/sections.go:133
 #: internal/modules/dashboard/sections.go:141
-#: internal/modules/mongodb/render.go:218 internal/modules/mysql/render.go:289
+#: internal/modules/mongodb/render.go:218 internal/modules/mysql/render.go:291
 #: internal/modules/postgresql/render.go:211 internal/web/sidebar.go:184
 #: internal/web/sidebar.go:197 internal/web/sidebar.go:207
 #: static/js/tour-steps.js:879 static/js/tour-steps.js:928
@@ -1932,9 +1915,9 @@ msgstr "Terminal"
 #: internal/web/templates/docker/containers.html:498
 #: internal/web/templates/docker/logs.html:11
 #: internal/web/templates/docker/logs.html:87
-#: internal/web/templates/files/backup_restore.html:500
-#: internal/web/templates/files/backup_restore.html:603
-#: internal/web/templates/files/backup_restore.html:651
+#: internal/web/templates/files/backup_restore.html:502
+#: internal/web/templates/files/backup_restore.html:605
+#: internal/web/templates/files/backup_restore.html:653
 #: internal/web/templates/manager/_cms_app_shared.html:161
 #: internal/web/templates/manager/n8n_app.html:63
 #: internal/web/templates/manager/php_app.html:62
@@ -1952,9 +1935,9 @@ msgstr "Versões de software"
 #: internal/modules/dashboard/sections.go:310 internal/web/sidebar.go:304
 #: internal/web/sidebar.go:306
 #: internal/web/templates/dashboard/onboarding.html:207
-#: internal/web/templates/files/backup_restore.html:482
-#: internal/web/templates/files/backup_restore.html:582
-#: internal/web/templates/files/backup_settings.html:89
+#: internal/web/templates/files/backup_restore.html:484
+#: internal/web/templates/files/backup_restore.html:584
+#: internal/web/templates/files/backup_settings.html:90
 #: internal/web/templates/system/cronjobs.html:24 static/js/tour-steps.js:507
 msgid "Cron Jobs"
 msgstr "Jobs Cron"
@@ -2008,7 +1991,7 @@ msgstr "Histórico de uso de recursos"
 
 #: internal/modules/dashboard/sections.go:183
 #: internal/modules/dashboard/sections.go:218
-#: internal/modules/diskusage/render.go:95 internal/web/sidebar.go:355
+#: internal/modules/diskusage/render.go:128 internal/web/sidebar.go:355
 #: internal/web/templates/files/disk_usage.html:15
 #: internal/web/templates/manager/_cms_app_shared.html:369
 #: internal/web/templates/manager/_cms_app_shared.html:542
@@ -2022,7 +2005,7 @@ msgid "Disk Usage"
 msgstr "Uso do disco"
 
 #: internal/modules/dashboard/sections.go:184
-#: internal/modules/inodes/render.go:97 internal/web/sidebar.go:356
+#: internal/modules/inodes/render.go:116 internal/web/sidebar.go:356
 #: internal/web/templates/files/inodes.html:12 static/js/tour-steps.js:725
 msgid "Inode Usage"
 msgstr "Uso de inodes"
@@ -2050,7 +2033,7 @@ msgstr "Logs de acesso"
 #: internal/modules/dashboard/sections.go:188
 #: internal/modules/dashboard/sections.go:314
 #: internal/modules/errorlogs/render.go:51 internal/web/sidebar.go:360
-#: internal/web/templates/manager/wp/single.html:1439
+#: internal/web/templates/manager/wp/single.html:1440
 #: internal/web/templates/system/error_logs.html:8
 #: internal/web/templates/system/error_logs.html:11
 msgid "Error Logs"
@@ -2226,11 +2209,11 @@ msgstr "Cache"
 #: internal/web/templates/dashboard/onboarding.html:203
 #: internal/web/templates/emails/accounts.html:8
 #: internal/web/templates/files/backup_restore.html:9
-#: internal/web/templates/files/backup_restore.html:464
-#: internal/web/templates/files/backup_restore.html:566
-#: internal/web/templates/files/backup_restore.html:736
-#: internal/web/templates/files/backup_restore.html:960
-#: internal/web/templates/files/backup_settings.html:84
+#: internal/web/templates/files/backup_restore.html:466
+#: internal/web/templates/files/backup_restore.html:568
+#: internal/web/templates/files/backup_restore.html:738
+#: internal/web/templates/files/backup_restore.html:962
+#: internal/web/templates/files/backup_settings.html:85
 #: internal/web/templates/partials/_header.html:91
 msgid "Emails"
 msgstr "E -mails"
@@ -2271,7 +2254,7 @@ msgid "PHP Options"
 msgstr "Opções do PHP"
 
 #: internal/modules/dashboard/sections.go:297
-#: internal/modules/php/render.go:248
+#: internal/modules/php/render.go:246
 #: internal/web/templates/php/extensions.html:229
 msgid "PHP Extensions"
 msgstr "Extensões PHP"
@@ -2550,38 +2533,38 @@ msgstr "Editar zona DNS"
 msgid "Edit DNS File"
 msgstr "Editar o arquivo DNS"
 
-#: internal/modules/docker/actions.go:176
-#: internal/modules/docker/actions.go:183
-#: internal/modules/docker/status.go:125
+#: internal/modules/docker/actions.go:185
+#: internal/modules/docker/actions.go:192
+#: internal/modules/docker/status.go:126
 msgid "Command failed with error. Please try again."
 msgstr "O comando falhou. Tente novamente."
 
-#: internal/modules/docker/actions.go:278
+#: internal/modules/docker/actions.go:287
 msgid "Image pulled and container %(container_name)s activated successfully."
 msgstr "Imagem baixada e contêiner %(container_name)s ativado com sucesso."
 
-#: internal/modules/docker/actions.go:279
+#: internal/modules/docker/actions.go:288
 msgid ""
 "Image pulled and container %(container_name)s deactivated successfully."
 msgstr "Imagem baixada e contêiner %(container_name)s desativado com sucesso."
 
-#: internal/modules/docker/actions.go:280
+#: internal/modules/docker/actions.go:289
 msgid "Image pulled and container %(container_name)s restarted successfully."
 msgstr "Imagem baixada e contêiner %(container_name)s reiniciado com sucesso."
 
-#: internal/modules/docker/actions.go:284
+#: internal/modules/docker/actions.go:293
 msgid "Container %(container_name)s restarted successfully."
 msgstr "Contêiner %(container_name)s reiniciado com sucesso."
 
-#: internal/modules/docker/actions.go:288
+#: internal/modules/docker/actions.go:297
 msgid "Container %(container_name)s deactivated successfully."
 msgstr "Contêiner %(container_name)s desativado com sucesso."
 
-#: internal/modules/docker/actions.go:290
+#: internal/modules/docker/actions.go:299
 msgid "Container %(container_name)s activated successfully."
 msgstr "Contêiner %(container_name)s ativado com sucesso."
 
-#: internal/modules/docker/actions.go:298
+#: internal/modules/docker/actions.go:307
 msgid "Error occurred!"
 msgstr "Ocorreu um erro!"
 
@@ -2628,16 +2611,16 @@ msgstr "Editar CPU"
 msgid "Set the CPU limit for the selected containers:"
 msgstr "Definir o limite de CPU para os contêineres selecionados:"
 
+#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
+#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
+msgid "0 = unlimited"
+msgstr "0 = ilimitado"
+
 #: internal/modules/docker/bulk.go:31
 #: internal/web/templates/docker/containers.html:18
 #: internal/web/templates/docker/containers.html:384
 msgid "cores"
 msgstr "núcleos"
-
-#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
-#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
-msgid "0 = unlimited"
-msgstr "0 = ilimitado"
 
 #: internal/modules/docker/bulk.go:32
 msgid "Edit RAM"
@@ -2692,7 +2675,7 @@ msgid "Failed to update docker-compose.yml."
 msgstr "Não foi possível atualizar o docker-compose.yml."
 
 #: internal/modules/docker/bulk.go:140
-#: internal/web/templates/files/filemanager_partials.html:588
+#: internal/web/templates/files/filemanager_partials.html:606
 msgid "Deleted."
 msgstr "Excluído."
 
@@ -2876,7 +2859,7 @@ msgstr "Servidor web"
 msgid "Change docker image tag"
 msgstr "Alterar a tag de imagem do docker"
 
-#: internal/modules/docker/status.go:102 internal/modules/docker/status.go:127
+#: internal/modules/docker/status.go:103 internal/modules/docker/status.go:128
 msgid "Unexpected error. Contact Administrator."
 msgstr "Erro inesperado. Entre em contato com o administrador."
 
@@ -3070,7 +3053,7 @@ msgstr "Domínio %(domain_url)s excluído com sucesso."
 msgid "Failed to delete domain %(domain_url)s. Output: %(output)s"
 msgstr "Não foi possível excluir o domínio %(domain_url)s. Saída: %(output)s"
 
-#: internal/modules/domains/docroot.go:52
+#: internal/modules/domains/docroot.go:56
 msgid "Docroot must be inside '/var/www/html/' directory."
 msgstr "O docroot deve estar dentro do diretório '/var/www/html/'."
 
@@ -3086,15 +3069,15 @@ msgstr "O arquivo de log do domínio %(domain_name)s está vazio."
 msgid "Error reading log file: %(error)s"
 msgstr "Erro ao ler o arquivo de log: %(error)s"
 
-#: internal/modules/domains/new.go:60
+#: internal/modules/domains/new.go:69
 msgid "Domain name is required"
 msgstr "O nome de domínio é obrigatório"
 
-#: internal/modules/domains/new.go:81
+#: internal/modules/domains/new.go:90
 msgid "Domain name contains invalid characters."
 msgstr "O nome de domínio contém caracteres inválidos."
 
-#: internal/modules/domains/new.go:91
+#: internal/modules/domains/new.go:100
 #: internal/web/templates/domains/new.html:217
 msgid ""
 "Paths for both public and secret files must be set for importing .onion "
@@ -3103,19 +3086,19 @@ msgstr ""
 "Os caminhos para os arquivos públicos e secretos devem ser definidos para "
 "importar o domínio .onion."
 
-#: internal/modules/domains/new.go:97
+#: internal/modules/domains/new.go:106
 msgid "Path for public file must start with /var/www/html/"
 msgstr "O caminho do arquivo público deve começar com /var/www/html/"
 
-#: internal/modules/domains/new.go:102
+#: internal/modules/domains/new.go:111
 msgid "Public key file: %(onion_public_key)s does not exist!"
 msgstr "O arquivo de chave pública %(onion_public_key)s não existe!"
 
-#: internal/modules/domains/new.go:108
+#: internal/modules/domains/new.go:117
 msgid "Path for secret file must start with /var/www/html/"
 msgstr "O caminho do arquivo secreto deve começar com /var/www/html/"
 
-#: internal/modules/domains/new.go:113
+#: internal/modules/domains/new.go:122
 msgid "Secret key file: %(onion_secret_key)s does not exist!"
 msgstr "O arquivo de chave secreta %(onion_secret_key)s não existe!"
 
@@ -3169,8 +3152,8 @@ msgstr "Todos"
 #: internal/web/templates/domains/ssl.html:26
 #: internal/web/templates/emails/accounts.html:29
 #: internal/web/templates/emails/migrate.html:117
-#: internal/web/templates/files/backup_restore.html:625
-#: internal/web/templates/files/backup_restore.html:661
+#: internal/web/templates/files/backup_restore.html:627
+#: internal/web/templates/files/backup_restore.html:663
 #: internal/web/templates/manager/wp/single.html:1038
 #: internal/web/templates/mysql/remote_mysql.html:32
 #: internal/web/templates/php/extensions.html:48
@@ -3198,7 +3181,7 @@ msgstr "Ativo"
 #: internal/web/templates/domains/domains.html:199
 #: internal/web/templates/emails/accounts.html:29
 #: internal/web/templates/emails/accounts.html:43
-#: internal/web/templates/files/backup_restore.html:783
+#: internal/web/templates/files/backup_restore.html:785
 msgid "Suspended"
 msgstr "Suspenso"
 
@@ -3225,7 +3208,7 @@ msgstr "SSL personalizado"
 #: internal/web/templates/domains/domains.html:145
 #: internal/web/templates/domains/dynamic_dns.html:166
 #: internal/web/templates/files/filemanager.html:124
-#: internal/web/templates/files/filemanager_partials.html:460
+#: internal/web/templates/files/filemanager_partials.html:478
 #: internal/web/templates/files/trash.html:80
 #: internal/web/templates/files/trash_partials.html:54
 #: internal/web/templates/manager/sites.html:207
@@ -3244,7 +3227,7 @@ msgstr "Tipo"
 #: internal/web/templates/emails/deliverability.html:31
 #: internal/web/templates/emails/deliverability.html:104
 #: internal/web/templates/emails/new.html:23
-#: internal/web/templates/files/backup_restore.html:762
+#: internal/web/templates/files/backup_restore.html:764
 #: internal/web/templates/files/ftp_new.html:34
 #: internal/web/templates/manager/_cms_install_shared.html:118
 #: internal/web/templates/manager/app_install.html:212
@@ -3389,12 +3372,12 @@ msgid "Alias %(email)s deleted successfully."
 msgstr "Alias %(email)s excluído com sucesso."
 
 #: internal/modules/emails/aliases.go:310
-#: internal/modules/emails/emails.go:320
+#: internal/modules/emails/emails.go:332
 msgid "Error: %(field)s not provided."
 msgstr "Erro: %(field)s não informado."
 
 #: internal/modules/emails/aliases.go:317
-#: internal/modules/emails/emails.go:333
+#: internal/modules/emails/emails.go:345
 msgid "Username can only contain letters, numbers, and . _ % + - (no @)."
 msgstr "O nome de usuário só pode conter letras, números e . _ % + - (sem @)."
 
@@ -3434,7 +3417,7 @@ msgstr "Reativar entrada"
 msgid "Unsuspend outgoing"
 msgstr "Reativar saída"
 
-#: internal/modules/emails/bulk.go:20 internal/modules/ftp/ftp.go:527
+#: internal/modules/emails/bulk.go:20 internal/modules/ftp/ftp.go:528
 msgid "Change quota"
 msgstr "Alterar cota"
 
@@ -3442,13 +3425,13 @@ msgstr "Alterar cota"
 msgid "New mailbox size (GB) for the selected accounts:"
 msgstr "Novo tamanho da caixa de correio (GB) para as contas selecionadas:"
 
-#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:525
+#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:526
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
 msgid "Change password"
 msgstr "Alterar senha"
 
-#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:525
+#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:526
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
 #: internal/web/templates/files/ftp_password.html:55
@@ -3488,32 +3471,32 @@ msgstr "Endereço de e-mail de destino inválido."
 msgid "Failed to update default email: %(error)s"
 msgstr "Não foi possível atualizar o e-mail padrão: %(error)s"
 
-#: internal/modules/emails/emails.go:345
+#: internal/modules/emails/emails.go:357
 msgid "Error: reached max number of email accounts on the hosting plan."
 msgstr ""
 "Erro: número máximo de contas de e-mail do plano de hospedagem atingido."
 
-#: internal/modules/emails/emails.go:370
+#: internal/modules/emails/emails.go:382
 msgid "Failed to add email %(email)s: %(msg)s"
 msgstr "Não foi possível adicionar o e-mail %(email)s: %(msg)s"
 
-#: internal/modules/emails/emails.go:389
+#: internal/modules/emails/emails.go:401
 msgid "Email %(email)s added successfully."
 msgstr "E-mail %(email)s adicionado com sucesso."
 
-#: internal/modules/emails/emails.go:696
+#: internal/modules/emails/emails.go:708
 msgid "Settings saved for email %(email)s"
 msgstr "Configurações salvas para o e-mail %(email)s"
 
-#: internal/modules/emails/emails.go:707
+#: internal/modules/emails/emails.go:719
 msgid "Email %(email)s deleted successfully."
 msgstr "E-mail %(email)s excluído com sucesso."
 
-#: internal/modules/emails/emails.go:710
+#: internal/modules/emails/emails.go:722
 msgid "ERROR: Failed to delete email %(email)s: %(output)s"
 msgstr "ERRO: não foi possível excluir o e-mail %(email)s: %(output)s"
 
-#: internal/modules/emails/emails.go:775
+#: internal/modules/emails/emails.go:787
 msgid "Error: Invalid configuration type."
 msgstr "Erro: tipo de configuração inválido."
 
@@ -3559,7 +3542,7 @@ msgid "Error: Could not open the migrations folder."
 msgstr "Erro: não foi possível abrir a pasta de migrações."
 
 #: internal/modules/emails/render.go:119
-#: internal/web/templates/files/ftp_new.html:184
+#: internal/web/templates/files/ftp_new.html:189
 msgid "Create Account"
 msgstr "Criar uma conta"
 
@@ -3601,10 +3584,10 @@ msgid "HTTP 5xx responses"
 msgstr "Respostas HTTP 5xx"
 
 #: internal/modules/errorlogs/render.go:19
-#: internal/web/templates/files/filemanager_partials.html:328
-#: internal/web/templates/files/filemanager_partials.html:329
-#: internal/web/templates/files/filemanager_partials.html:397
-#: internal/web/templates/files/filemanager_partials.html:590
+#: internal/web/templates/files/filemanager_partials.html:346
+#: internal/web/templates/files/filemanager_partials.html:347
+#: internal/web/templates/files/filemanager_partials.html:415
+#: internal/web/templates/files/filemanager_partials.html:608
 #: internal/web/templates/manager/git.html:92
 #: internal/web/templates/mysql/wizard.html:80
 #: internal/web/templates/mysql/wizard.html:139
@@ -3616,14 +3599,14 @@ msgid "Copy"
 msgstr "Cópia"
 
 #: internal/modules/errorlogs/render.go:20
-#: internal/web/templates/files/backup_restore.html:830
-#: internal/web/templates/files/backup_restore.html:831
-#: internal/web/templates/files/backup_restore.html:911
-#: internal/web/templates/files/backup_restore.html:1024
+#: internal/web/templates/files/backup_restore.html:832
+#: internal/web/templates/files/backup_restore.html:833
+#: internal/web/templates/files/backup_restore.html:913
+#: internal/web/templates/files/backup_restore.html:1026
 #: internal/web/templates/files/backup_wizard.html:168
-#: internal/web/templates/files/filemanager_partials.html:318
-#: internal/web/templates/files/filemanager_partials.html:319
-#: internal/web/templates/files/filemanager_partials.html:389
+#: internal/web/templates/files/filemanager_partials.html:336
+#: internal/web/templates/files/filemanager_partials.html:337
+#: internal/web/templates/files/filemanager_partials.html:407
 #: internal/web/templates/files/upload_file.html:140
 msgid "Download"
 msgstr "Download"
@@ -3649,28 +3632,28 @@ msgstr "Falha na extração."
 msgid "File extracted successfully"
 msgstr "Arquivo extraído com sucesso"
 
-#: internal/modules/filemanager/archive.go:340
+#: internal/modules/filemanager/archive.go:350
 msgid "Missing required form data for compression: %(missing)s"
 msgstr ""
 "Dados obrigatórios do formulário ausentes para compactação: %(missing)s"
 
-#: internal/modules/filemanager/archive.go:378
+#: internal/modules/filemanager/archive.go:388
 msgid "Unsupported archive format."
 msgstr "Formato de arquivo compactado não suportado."
 
-#: internal/modules/filemanager/archive.go:383
+#: internal/modules/filemanager/archive.go:393
 msgid "Archive creation failed: %(err_msg)s"
 msgstr "Falha ao criar o arquivo compactado: %(err_msg)s"
 
-#: internal/modules/filemanager/archive.go:391
+#: internal/modules/filemanager/archive.go:401
 msgid "Failed to set archive ownership"
 msgstr "Não foi possível definir o proprietário do arquivo compactado"
 
-#: internal/modules/filemanager/archive.go:393
+#: internal/modules/filemanager/archive.go:403
 msgid "FILEMANAGER - Archive created successfully."
 msgstr "Arquivo compactado criado com sucesso."
 
-#: internal/modules/filemanager/archive.go:408
+#: internal/modules/filemanager/archive.go:418
 msgid "Invalid selection"
 msgstr "Seleção inválida"
 
@@ -3698,126 +3681,115 @@ msgstr "Arquivo criado com sucesso."
 msgid "Foldername is missing"
 msgstr "Nome da pasta ausente"
 
-#: internal/modules/filemanager/crud.go:105
-msgid "Error creating directory! Check permissions."
-msgstr "Erro ao criar o diretório! Verifique as permissões."
-
-#: internal/modules/filemanager/crud.go:111
+#: internal/modules/filemanager/crud.go:118
 msgid "Failed to set ownership for the new folder."
 msgstr "Não foi possível definir o proprietário da nova pasta."
 
-#: internal/modules/filemanager/crud.go:113
+#: internal/modules/filemanager/crud.go:120
 msgid "Folder created successfully."
 msgstr "Pasta criada com sucesso."
 
-#: internal/modules/filemanager/crud.go:152
+#: internal/modules/filemanager/crud.go:160
+msgid "Error renaming item: the new name already exists."
+msgstr ""
+
+#: internal/modules/filemanager/crud.go:163
 msgid ""
 "Error renaming item! Check permissions or if the new name already exists."
 msgstr ""
 "Erro ao renomear o item! Verifique as permissões ou se o novo nome já "
 "existe."
 
-#: internal/modules/filemanager/crud.go:158
+#: internal/modules/filemanager/crud.go:169
 msgid "File renamed successfully."
 msgstr "Arquivo renomeado com sucesso."
 
-#: internal/modules/filemanager/crud.go:256
-msgid "Invalid permissions format."
-msgstr "Formato de permissões inválido."
-
-#: internal/modules/filemanager/crud.go:305
+#: internal/modules/filemanager/crud.go:330
 msgid "Permissions changed."
 msgstr "Permissões alteradas."
 
-#: internal/modules/filemanager/crud.go:307
+#: internal/modules/filemanager/crud.go:332
 msgid "%(changed)s items updated."
 msgstr "%(changed)s itens atualizados."
 
-#: internal/modules/filemanager/crud.go:310
+#: internal/modules/filemanager/crud.go:335
 msgid "Error changing permissions for: %(errored)s. Check ownership."
 msgstr ""
 "Erro ao alterar as permissões de: %(errored)s. Verifique o proprietário."
 
-#: internal/modules/filemanager/editor.go:116
-#: internal/modules/filemanager/editor.go:290
-msgid "Editing this file type is not allowed."
-msgstr "A edição deste tipo de arquivo não é permitida."
-
-#: internal/modules/filemanager/editor.go:137
+#: internal/modules/filemanager/editor.go:177
 msgid "Error saving file."
 msgstr "Erro ao salvar o arquivo."
 
-#: internal/modules/filemanager/editor.go:140
+#: internal/modules/filemanager/editor.go:180
 msgid "File saved successfully"
 msgstr "Arquivo salvo com sucesso"
 
-#: internal/modules/filemanager/editor.go:158
-#: internal/modules/filemanager/editor.go:165
-#: internal/modules/filemanager/editor.go:305
-msgid "Error accessing file size."
-msgstr "Erro ao acessar o tamanho do arquivo."
-
-#: internal/modules/filemanager/editor.go:170
+#: internal/modules/filemanager/editor.go:211
 msgid ""
 "File is too large to open in the editor (limit is %(file_limit_mb)s MB)"
 msgstr ""
 "O arquivo é grande demais para abrir no editor (limite de %(file_limit_mb)s "
 "MB)"
 
-#: internal/modules/filemanager/editor.go:176
-msgid "Error reading file"
-msgstr "Erro ao ler o arquivo"
-
-#: internal/modules/filemanager/editor.go:220
-#: internal/modules/filemanager/editor.go:226
+#: internal/modules/filemanager/editor.go:261
+#: internal/modules/filemanager/editor.go:267
 msgid "Error retrieving file size."
 msgstr "Erro ao obter o tamanho do arquivo."
 
-#: internal/modules/filemanager/editor.go:231
+#: internal/modules/filemanager/editor.go:272
 msgid "File size exceeds %(file_limit_mb)sMB limit. Download aborted."
 msgstr ""
 "O tamanho do arquivo excede o limite de %(file_limit_mb)s MB. Download "
 "cancelado."
 
-#: internal/modules/filemanager/editor.go:299
-#: internal/modules/filemanager/editor.go:321
+#: internal/modules/filemanager/editor.go:347
+msgid "Editing this file type is not allowed."
+msgstr "A edição deste tipo de arquivo não é permitida."
+
+#: internal/modules/filemanager/editor.go:355
+#: internal/modules/filemanager/editor.go:377
 msgid "Error opening file."
 msgstr "Erro ao abrir o arquivo."
 
-#: internal/modules/filemanager/editor.go:309
+#: internal/modules/filemanager/editor.go:361
+msgid "Error accessing file size."
+msgstr "Erro ao acessar o tamanho do arquivo."
+
+#: internal/modules/filemanager/editor.go:365
 msgid ""
 "File is too large to view in the browser (limit is %(file_limit_mb)s MB)"
 msgstr ""
 "O arquivo é grande demais para visualizar no navegador (limite de "
 "%(file_limit_mb)s MB)"
 
-#: internal/modules/filemanager/listing.go:97
+#: internal/modules/filemanager/listing.go:118
 #: internal/modules/trash/trash.go:81
 msgid "Directory does not exist."
 msgstr "O diretório não existe."
 
-#: internal/modules/filemanager/listing.go:125
+#: internal/modules/filemanager/listing.go:146
 msgid "Error accessing the specified directory."
 msgstr "Erro ao acessar o diretório especificado."
 
-#: internal/modules/filemanager/render.go:236
+#: internal/modules/filemanager/render.go:238
 msgid "Upload Files"
 msgstr "Enviar arquivos"
 
-#: internal/modules/filemanager/upload.go:64
+#: internal/modules/filemanager/upload.go:118
 msgid "No files were uploaded"
 msgstr "Nenhum arquivo foi enviado"
 
-#: internal/modules/filemanager/upload.go:133
-#: internal/modules/filemanager/upload.go:145
+#: internal/modules/filemanager/upload.go:187
+#: internal/modules/filemanager/upload.go:202
 msgid "Files uploaded successfully."
 msgstr "Arquivos enviados com sucesso."
 
-#: internal/modules/filemanager/upload.go:147
+#: internal/modules/filemanager/upload.go:204
 msgid "Some files failed: %(errs)s"
 msgstr "Alguns arquivos falharam: %(errs)s"
 
-#: internal/modules/filemanager/wget.go:174
+#: internal/modules/filemanager/wget.go:216
 msgid "Download queued..."
 msgstr "Download na fila..."
 
@@ -3825,42 +3797,42 @@ msgstr "Download na fila..."
 msgid "Flarum installed successfully on %(selected_domain)s"
 msgstr "Flarum instalado com sucesso em %(selected_domain)s"
 
-#: internal/modules/ftp/ftp.go:133
+#: internal/modules/ftp/ftp.go:145
 msgid ""
 "FTP service is not yet started, please contact Administrator to enable it."
 msgstr ""
 "O serviço FTP ainda não foi iniciado, entre em contato com o administrador "
 "para ativá-lo."
 
-#: internal/modules/ftp/ftp.go:225
+#: internal/modules/ftp/ftp.go:237
 msgid "No currently active FTP connections"
 msgstr "Nenhuma conexão FTP ativa no momento"
 
-#: internal/modules/ftp/ftp.go:257
+#: internal/modules/ftp/ftp.go:269
 msgid "FTP username not provided."
 msgstr "Nome de usuário FTP não informado."
 
-#: internal/modules/ftp/ftp.go:261
+#: internal/modules/ftp/ftp.go:273
 msgid "FTP domain not provided."
 msgstr "Domínio FTP não informado."
 
-#: internal/modules/ftp/ftp.go:269
+#: internal/modules/ftp/ftp.go:281
 msgid "FTP path not provided."
 msgstr "Caminho FTP não informado."
 
-#: internal/modules/ftp/ftp.go:273
+#: internal/modules/ftp/ftp.go:285
 msgid "FTP password not provided."
 msgstr "Senha FTP não informada."
 
-#: internal/modules/ftp/ftp.go:277 internal/modules/ftp/quota.go:189
+#: internal/modules/ftp/ftp.go:289 internal/modules/ftp/quota.go:189
 msgid "Invalid quota, use a whole number of MB or GB."
 msgstr "Cota inválida, use um número inteiro de MB ou GB."
 
-#: internal/modules/ftp/ftp.go:283 internal/modules/ftp/ftp.go:411
+#: internal/modules/ftp/ftp.go:295 internal/modules/ftp/ftp.go:420
 msgid "The FTP path must start with %(real_path)s"
 msgstr "O caminho FTP deve começar com %(real_path)s"
 
-#: internal/modules/ftp/ftp.go:290
+#: internal/modules/ftp/ftp.go:302
 msgid ""
 "Username %(ftp_username)s contains invalid characters, only allowed: "
 "BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
@@ -3869,103 +3841,103 @@ msgstr ""
 " são permitidos: "
 "BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
 
-#: internal/modules/ftp/ftp.go:300
+#: internal/modules/ftp/ftp.go:312
 msgid "Error creating FTP user %(ftp_username)s: %(output)s"
 msgstr "Erro ao criar o usuário FTP %(ftp_username)s: %(output)s"
 
-#: internal/modules/ftp/ftp.go:306
+#: internal/modules/ftp/ftp.go:318
 msgid "FTP account %(ftp_username)s created successfully."
 msgstr "Conta FTP %(ftp_username)s criada com sucesso."
 
-#: internal/modules/ftp/ftp.go:309
+#: internal/modules/ftp/ftp.go:321
 msgid "Failed to create FTP account %(ftp_username)s: %(output)s"
 msgstr "Não foi possível criar a conta FTP %(ftp_username)s: %(output)s"
 
-#: internal/modules/ftp/ftp.go:326 internal/modules/ftp/ftp.go:347
-#: internal/modules/ftp/ftp.go:403 internal/modules/ftp/quota.go:168
+#: internal/modules/ftp/ftp.go:338 internal/modules/ftp/ftp.go:359
+#: internal/modules/ftp/ftp.go:415 internal/modules/ftp/quota.go:168
 msgid "Invalid FTP username."
 msgstr "Nome de usuário FTP inválido."
 
-#: internal/modules/ftp/ftp.go:338
+#: internal/modules/ftp/ftp.go:350
 msgid "FTP account %(username_to_delete)s deleted successfully!"
 msgstr "Conta FTP %(username_to_delete)s excluída com sucesso!"
 
-#: internal/modules/ftp/ftp.go:341
+#: internal/modules/ftp/ftp.go:353
 msgid ""
 "Failed to delete FTP account %(username_to_delete)s. Output: %(output)s"
 msgstr ""
 "Não foi possível excluir a conta FTP %(username_to_delete)s. Saída: "
 "%(output)s"
 
-#: internal/modules/ftp/ftp.go:359
+#: internal/modules/ftp/ftp.go:371
 msgid "Missing new password"
 msgstr "Nova senha ausente"
 
-#: internal/modules/ftp/ftp.go:371
+#: internal/modules/ftp/ftp.go:383
 msgid "Error changing FTP password: %(output)s"
 msgstr "Erro ao alterar a senha FTP: %(output)s"
 
-#: internal/modules/ftp/ftp.go:376
+#: internal/modules/ftp/ftp.go:388
 msgid "FTP password changed successfully for user %(username)s"
 msgstr "Senha FTP alterada com sucesso para o usuário %(username)s"
 
-#: internal/modules/ftp/ftp.go:378
+#: internal/modules/ftp/ftp.go:390
 msgid "Failed to change FTP password: %(output)s"
 msgstr "Não foi possível alterar a senha FTP: %(output)s"
 
-#: internal/modules/ftp/ftp.go:418
+#: internal/modules/ftp/ftp.go:427
 msgid "Error changing FTP path for user %(username_to_modify)s: %(output)s"
 msgstr ""
 "Erro ao alterar o caminho FTP do usuário %(username_to_modify)s: %(output)s"
 
-#: internal/modules/ftp/ftp.go:423
+#: internal/modules/ftp/ftp.go:432
 msgid "FTP path changed successfully for user %(username_to_modify)s"
 msgstr ""
 "Caminho FTP alterado com sucesso para o usuário %(username_to_modify)s"
 
-#: internal/modules/ftp/ftp.go:425
+#: internal/modules/ftp/ftp.go:434
 msgid "Failed to change FTP path for user %(username_to_modify)s: %(output)s"
 msgstr ""
 "Não foi possível alterar o caminho FTP do usuário %(username_to_modify)s: "
 "%(output)s"
 
-#: internal/modules/ftp/ftp.go:436
+#: internal/modules/ftp/ftp.go:445
 msgid "Invalid configuration type, please use cyberduck or filezilla only!"
 msgstr "Tipo de configuração inválido, use apenas cyberduck ou filezilla!"
 
-#: internal/modules/ftp/ftp.go:449
+#: internal/modules/ftp/ftp.go:458
 msgid "User has no FTP accounts."
 msgstr "O usuário não tem contas FTP."
 
-#: internal/modules/ftp/ftp.go:466 internal/modules/ftp/quota.go:181
+#: internal/modules/ftp/ftp.go:475 internal/modules/ftp/quota.go:181
 msgid "FTP account not found."
 msgstr "Conta FTP não encontrada."
 
-#: internal/modules/ftp/ftp.go:525
+#: internal/modules/ftp/ftp.go:526
 msgid "Set this password for the selected FTP accounts:"
 msgstr "Definir esta senha para as contas FTP selecionadas:"
 
-#: internal/modules/ftp/ftp.go:526
+#: internal/modules/ftp/ftp.go:527
 msgid "Change path"
 msgstr "Alterar caminho"
 
-#: internal/modules/ftp/ftp.go:526
+#: internal/modules/ftp/ftp.go:527
 msgid "New home folder for the selected FTP accounts:"
 msgstr "Nova pasta inicial para as contas FTP selecionadas:"
 
-#: internal/modules/ftp/ftp.go:527
+#: internal/modules/ftp/ftp.go:528
 msgid "Disk quota for the selected FTP accounts, e.g. 500M or 2G:"
 msgstr "Cota de disco para as contas FTP selecionadas, ex.: 500M ou 2G:"
 
-#: internal/modules/ftp/ftp.go:528
+#: internal/modules/ftp/ftp.go:529
 msgid "Remove quota"
 msgstr "Remover cota"
 
-#: internal/modules/ftp/ftp.go:528
+#: internal/modules/ftp/ftp.go:529
 msgid "Remove the disk quota from the selected FTP accounts?"
 msgstr "Remover a cota de disco das contas FTP selecionadas?"
 
-#: internal/modules/ftp/ftp.go:529
+#: internal/modules/ftp/ftp.go:530
 msgid "Delete the selected FTP accounts? Their files are kept."
 msgstr "Excluir as contas FTP selecionadas? Seus arquivos são mantidos."
 
@@ -4106,15 +4078,15 @@ msgstr "Não foi possível bloquear os endereços IP - tente novamente"
 msgid "Joomla installed successfully on %(selected_domain)s"
 msgstr "Joomla instalado com sucesso em %(selected_domain)s"
 
-#: internal/modules/malwarescan/bulk.go:15
+#: internal/modules/malwarescan/bulk.go:14
 msgid "Restore the selected files to their original location?"
 msgstr "Restaurar os arquivos selecionados para o local original?"
 
-#: internal/modules/malwarescan/bulk.go:16
+#: internal/modules/malwarescan/bulk.go:15
 msgid "Mark safe"
 msgstr "Marcar como seguro"
 
-#: internal/modules/malwarescan/bulk.go:16
+#: internal/modules/malwarescan/bulk.go:15
 msgid ""
 "Mark the selected files as safe and restore them? Future scans will skip "
 "them."
@@ -4122,7 +4094,7 @@ msgstr ""
 "Marcar os arquivos selecionados como seguros e restaurá-los? As próximas "
 "verificações vão ignorá-los."
 
-#: internal/modules/malwarescan/bulk.go:17
+#: internal/modules/malwarescan/bulk.go:16
 msgid "Permanently delete the selected files? This cannot be undone."
 msgstr ""
 "Excluir permanentemente os arquivos selecionados? Esta ação não pode ser "
@@ -4290,7 +4262,7 @@ msgstr ""
 " inicialização.."
 
 #: internal/modules/mongodb/databases.go:56
-#: internal/modules/mysql/databases.go:93
+#: internal/modules/mysql/databases.go:109
 #: internal/modules/postgresql/databases.go:62
 msgid "Error fetching databases: %(error)s"
 msgstr "Erro ao obter os bancos de dados: %(error)s"
@@ -4313,8 +4285,8 @@ msgstr "O MongoDB ainda está iniciando, tente novamente em instantes."
 #: internal/modules/mongodb/databases.go:168
 #: internal/modules/mongodb/export.go:38 internal/modules/mongodb/wizard.go:50
 #: internal/modules/mysql/assign.go:49 internal/modules/mysql/assign.go:181
-#: internal/modules/mysql/databases.go:166
-#: internal/modules/mysql/databases.go:224 internal/modules/mysql/export.go:41
+#: internal/modules/mysql/databases.go:222
+#: internal/modules/mysql/databases.go:280 internal/modules/mysql/export.go:41
 #: internal/modules/mysql/wizard.go:57
 #: internal/modules/postgresql/databases.go:136
 #: internal/modules/postgresql/databases.go:195
@@ -4327,8 +4299,8 @@ msgstr "O nome do banco de dados é obrigatório."
 #: internal/modules/mongodb/databases.go:171
 #: internal/modules/mongodb/wizard.go:53 internal/modules/mysql/assign.go:52
 #: internal/modules/mysql/assign.go:184
-#: internal/modules/mysql/databases.go:171
-#: internal/modules/mysql/databases.go:228
+#: internal/modules/mysql/databases.go:227
+#: internal/modules/mysql/databases.go:284
 #: internal/modules/postgresql/databases.go:140
 #: internal/modules/postgresql/databases.go:199
 #: internal/modules/postgresql/wizard.go:50
@@ -4434,12 +4406,12 @@ msgstr ""
 msgid "No database file uploaded!"
 msgstr "Nenhum arquivo de banco de dados enviado!"
 
-#: internal/modules/mongodb/mongodb.go:42 internal/modules/mysql/mysql.go:197
+#: internal/modules/mongodb/mongodb.go:42 internal/modules/mysql/mysql.go:198
 #: internal/modules/postgresql/postgresql.go:59
 msgid "Service installation is underway and may take up to one minute."
 msgstr "A instalação do serviço está em andamento e pode levar até um minuto."
 
-#: internal/modules/mongodb/mongodb.go:44 internal/modules/mysql/mysql.go:199
+#: internal/modules/mongodb/mongodb.go:44 internal/modules/mysql/mysql.go:200
 #: internal/modules/postgresql/postgresql.go:61
 msgid ""
 "Service has been created but not yet started. Start it from the Services "
@@ -4448,7 +4420,7 @@ msgstr ""
 "O serviço foi criado, mas ainda não foi iniciado. Inicie-o na página "
 "Serviços."
 
-#: internal/modules/mongodb/mongodb.go:46 internal/modules/mysql/mysql.go:201
+#: internal/modules/mongodb/mongodb.go:46 internal/modules/mysql/mysql.go:202
 #: internal/modules/postgresql/postgresql.go:63
 msgid ""
 "Service is restarting. This may indicate a configuration error or a crash — "
@@ -4457,12 +4429,12 @@ msgstr ""
 "O serviço está reiniciando. Isso pode indicar um erro de configuração ou uma"
 " falha — verifique os logs na página Serviços."
 
-#: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:203
+#: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:204
 #: internal/modules/postgresql/postgresql.go:65
 msgid "Service is paused. Resume it from the Services page."
 msgstr "O serviço está pausado. Retome-o na página Serviços."
 
-#: internal/modules/mongodb/mongodb.go:50 internal/modules/mysql/mysql.go:205
+#: internal/modules/mongodb/mongodb.go:50 internal/modules/mysql/mysql.go:206
 #: internal/modules/postgresql/postgresql.go:67
 msgid ""
 "Service has stopped. This is usually caused by resource exhaustion — "
@@ -4472,12 +4444,12 @@ msgstr ""
 "O serviço parou. Isso geralmente é causado por falta de recursos — aumente "
 "os limites de recursos deste serviço e reinicie-o na página Serviços."
 
-#: internal/modules/mongodb/mongodb.go:52 internal/modules/mysql/mysql.go:207
+#: internal/modules/mongodb/mongodb.go:52 internal/modules/mysql/mysql.go:208
 #: internal/modules/postgresql/postgresql.go:69
 msgid "Service is being deleted. Please wait for the process to complete."
 msgstr "O serviço está sendo excluído. Aguarde a conclusão do processo."
 
-#: internal/modules/mongodb/mongodb.go:54 internal/modules/mysql/mysql.go:209
+#: internal/modules/mongodb/mongodb.go:54 internal/modules/mysql/mysql.go:210
 #: internal/modules/postgresql/postgresql.go:71
 msgid ""
 "Service has crashed and cannot recover. This is usually caused by resource "
@@ -4486,7 +4458,7 @@ msgstr ""
 "O serviço travou e não consegue se recuperar. Isso geralmente é causado por "
 "falta de recursos — verifique os logs na página Serviços."
 
-#: internal/modules/mongodb/mongodb.go:60 internal/modules/mysql/mysql.go:215
+#: internal/modules/mongodb/mongodb.go:60 internal/modules/mysql/mysql.go:216
 #: internal/modules/postgresql/postgresql.go:77
 msgid ""
 "Service is unhealthy. Try restarting it from Services, or contact your "
@@ -4495,7 +4467,7 @@ msgstr ""
 "O serviço não está saudável. Tente reiniciá-lo em Serviços ou entre em "
 "contato com o administrador."
 
-#: internal/modules/mongodb/mongodb.go:62 internal/modules/mysql/mysql.go:217
+#: internal/modules/mongodb/mongodb.go:62 internal/modules/mysql/mysql.go:218
 #: internal/modules/postgresql/postgresql.go:79
 msgid "Service is active, but the databases are still initializing."
 msgstr ""
@@ -4503,8 +4475,8 @@ msgstr ""
 "inicializados."
 
 #: internal/modules/mongodb/mongodb.go:64
-#: internal/modules/mongodb/mongodb.go:67 internal/modules/mysql/mysql.go:219
-#: internal/modules/mysql/mysql.go:222
+#: internal/modules/mongodb/mongodb.go:67 internal/modules/mysql/mysql.go:220
+#: internal/modules/mysql/mysql.go:223
 #: internal/modules/postgresql/postgresql.go:81
 #: internal/modules/postgresql/postgresql.go:84
 msgid "Unable to retrieve service status. Please contact your administrator."
@@ -4545,7 +4517,7 @@ msgstr "Encerrar as operações selecionadas?"
 msgid "MongoDB Databases"
 msgstr "Bancos de dados MongoDB"
 
-#: internal/modules/mongodb/render.go:63 internal/modules/mysql/render.go:85
+#: internal/modules/mongodb/render.go:63 internal/modules/mysql/render.go:87
 #: internal/modules/postgresql/render.go:67 internal/web/sidebar_classic.go:95
 #: internal/web/sidebar_classic.go:117 internal/web/sidebar_classic.go:140
 #: internal/web/templates/db/new.html:46
@@ -4558,7 +4530,7 @@ msgstr "Crie banco de dados"
 msgid "MongoDB Users"
 msgstr "Usuários do MongoDB"
 
-#: internal/modules/mongodb/render.go:111 internal/modules/mysql/render.go:131
+#: internal/modules/mongodb/render.go:111 internal/modules/mysql/render.go:133
 #: internal/modules/postgresql/render.go:119
 #: internal/web/sidebar_classic.go:96 internal/web/sidebar_classic.go:118
 #: internal/web/sidebar_classic.go:141
@@ -4574,7 +4546,7 @@ msgstr "Usuários do MongoDB"
 msgid "Create User"
 msgstr "Criar usuário"
 
-#: internal/modules/mongodb/render.go:129 internal/modules/mysql/render.go:149
+#: internal/modules/mongodb/render.go:129 internal/modules/mysql/render.go:151
 #: internal/modules/postgresql/render.go:137
 #: internal/web/templates/files/ftp.html:162
 #: internal/web/templates/files/ftp.html:164
@@ -4589,7 +4561,7 @@ msgstr "Criar usuário"
 msgid "Change Password"
 msgstr "Alterar a senha"
 
-#: internal/modules/mongodb/render.go:167 internal/modules/mysql/render.go:240
+#: internal/modules/mongodb/render.go:167 internal/modules/mysql/render.go:242
 #: internal/modules/postgresql/render.go:162
 #: internal/web/templates/mongodb/assign.html:8
 #: internal/web/templates/mongodb/assign.html:55
@@ -4598,7 +4570,7 @@ msgstr "Alterar a senha"
 msgid "Assign User to Database"
 msgstr "Atribuir usuário ao banco de dados"
 
-#: internal/modules/mongodb/render.go:180 internal/modules/mysql/render.go:252
+#: internal/modules/mongodb/render.go:180 internal/modules/mysql/render.go:254
 #: internal/modules/postgresql/render.go:174
 #: internal/web/templates/mongodb/remove.html:55
 #: internal/web/templates/mysql/remove.html:51
@@ -4764,7 +4736,7 @@ msgstr ""
 
 #: internal/modules/mysql/bulk.go:42
 #: internal/web/templates/mysql/databases.html:398
-#: internal/web/templates/mysql/databases.html:586
+#: internal/web/templates/mysql/databases.html:605
 msgid "Optimize"
 msgstr "Otimizar"
 
@@ -4774,7 +4746,7 @@ msgstr "Otimizar todas as tabelas dos bancos de dados selecionados?"
 
 #: internal/modules/mysql/bulk.go:43
 #: internal/web/templates/mysql/databases.html:411
-#: internal/web/templates/mysql/databases.html:587
+#: internal/web/templates/mysql/databases.html:606
 msgid "Repair"
 msgstr "Reparar"
 
@@ -4799,20 +4771,24 @@ msgstr "Remover acesso"
 msgid "Remove remote access for the selected user and host pairs?"
 msgstr "Remover o acesso remoto dos pares usuário/host selecionados?"
 
-#: internal/modules/mysql/conf.go:318
+#: internal/modules/mysql/conf.go:321
+msgid "Could not save the configuration file."
+msgstr ""
+
+#: internal/modules/mysql/conf.go:323
 msgid "Unknown database service, cannot restart"
 msgstr "Serviço de banco de dados desconhecido, não é possível reiniciar"
 
-#: internal/modules/mysql/conf.go:320
+#: internal/modules/mysql/conf.go:326
 msgid "%(mysql_version)s configuration updated and applied without a restart."
 msgstr ""
 "Configuração do %(mysql_version)s atualizada e aplicada sem reiniciar."
 
-#: internal/modules/mysql/conf.go:322
+#: internal/modules/mysql/conf.go:328
 msgid "%(mysql_version)s configuration updated and service restarted."
 msgstr "Configuração do %(mysql_version)s atualizada e serviço reiniciado."
 
-#: internal/modules/mysql/conf.go:325
+#: internal/modules/mysql/conf.go:331
 msgid ""
 "%(mysql_version)s did not start with the new settings, so the previous "
 "configuration was restored."
@@ -4820,12 +4796,12 @@ msgstr ""
 "%(mysql_version)s não iniciou com as novas configurações, então a "
 "configuração anterior foi restaurada."
 
-#: internal/modules/mysql/conf.go:327
+#: internal/modules/mysql/conf.go:333
 msgid "%(mysql_version)s rejected the new settings, nothing was changed."
 msgstr ""
 "O %(mysql_version)s rejeitou as novas configurações, nada foi alterado."
 
-#: internal/modules/mysql/conf.go:329
+#: internal/modules/mysql/conf.go:335
 msgid ""
 "%(mysql_version)s did not start with the new settings. The previous "
 "configuration was restored but the service is still not running."
@@ -4833,14 +4809,14 @@ msgstr ""
 "%(mysql_version)s não iniciou com as novas configurações. A configuração "
 "anterior foi restaurada, mas o serviço ainda não está em execução."
 
-#: internal/modules/mysql/conf.go:339
+#: internal/modules/mysql/conf.go:345
 msgid ""
 "%(mysql_version)s container is not running. Please wait for initialization."
 msgstr ""
 "O contêiner do %(mysql_version)s não está em execução. Aguarde a "
 "inicialização."
 
-#: internal/modules/mysql/databases.go:158 internal/modules/mysql/wizard.go:30
+#: internal/modules/mysql/databases.go:214 internal/modules/mysql/wizard.go:30
 msgid ""
 "%(mysql_version)s service is not ready yet. Please wait for the installation"
 " to finish before creating a database."
@@ -4848,14 +4824,14 @@ msgstr ""
 "O serviço %(mysql_version)s ainda não está pronto. Aguarde a instalação "
 "terminar antes de criar um banco de dados."
 
-#: internal/modules/mysql/databases.go:175 internal/modules/mysql/wizard.go:66
+#: internal/modules/mysql/databases.go:231 internal/modules/mysql/wizard.go:66
 msgid ""
 "Database name is too long. MySQL identifiers are limited to 64 characters."
 msgstr ""
 "O nome do banco de dados é muito longo. Identificadores do MySQL são "
 "limitados a 64 caracteres."
 
-#: internal/modules/mysql/databases.go:190 internal/modules/mysql/wizard.go:97
+#: internal/modules/mysql/databases.go:246 internal/modules/mysql/wizard.go:97
 msgid ""
 "Error creating database: '%(database_name)s' - You have reached the maximum "
 "number of databases allowed.%(upgrade_message)s"
@@ -4863,19 +4839,19 @@ msgstr ""
 "Erro ao criar o banco de dados: '%(database_name)s' - Você atingiu o número "
 "máximo de bancos de dados permitidos.%(upgrade_message)s"
 
-#: internal/modules/mysql/databases.go:195
+#: internal/modules/mysql/databases.go:251
 msgid "Error creating database: %(error)s"
 msgstr "Erro ao criar o banco de dados: %(error)s"
 
-#: internal/modules/mysql/databases.go:203
+#: internal/modules/mysql/databases.go:259
 msgid "Successfully created a database %(database_name)s"
 msgstr "Banco de dados %(database_name)s criado com sucesso"
 
-#: internal/modules/mysql/databases.go:233
+#: internal/modules/mysql/databases.go:289
 msgid "Error deleting database: %(error)s"
 msgstr "Erro ao excluir o banco de dados: %(error)s"
 
-#: internal/modules/mysql/databases.go:241
+#: internal/modules/mysql/databases.go:297
 msgid "Successfully deleted a database %(database_name)s"
 msgstr "Banco de dados %(database_name)s excluído com sucesso"
 
@@ -4918,17 +4894,17 @@ msgstr ""
 msgid "Import into '%(db_name)s' failed: %(err_detail)s"
 msgstr "A importação para '%(db_name)s' falhou: %(err_detail)s"
 
-#: internal/modules/mysql/mysql.go:240
+#: internal/modules/mysql/mysql.go:241
 msgid ""
 "%(service)s service is not yet installed. Starting it in the background.."
 msgstr ""
 "O serviço %(service)s ainda não está instalado. Iniciando em segundo plano.."
 
-#: internal/modules/mysql/mysql.go:242
+#: internal/modules/mysql/mysql.go:243
 msgid "%(service)s service is not accessible. Current status: %(state)s."
 msgstr "O serviço %(service)s não está acessível. Status atual: %(state)s."
 
-#: internal/modules/mysql/mysql.go:244
+#: internal/modules/mysql/mysql.go:245
 msgid ""
 "%(service)s is running but still initializing. If it stays in this state for"
 " more than 60s, check the logs."
@@ -4936,12 +4912,12 @@ msgstr ""
 "%(service)s está em execução, mas ainda inicializando. Se continuar assim "
 "por mais de 60s, verifique os logs."
 
-#: internal/modules/mysql/mysql.go:246
+#: internal/modules/mysql/mysql.go:247
 msgid "%(service)s is starting. It is not ready to handle queries yet."
 msgstr ""
 "%(service)s está iniciando. Ainda não está pronto para atender consultas."
 
-#: internal/modules/mysql/mysql.go:248
+#: internal/modules/mysql/mysql.go:249
 msgid ""
 "%(service)s is running, but health status is unknown. It may or may not be "
 "ready to handle queries."
@@ -5053,19 +5029,19 @@ msgstr "Erro ao remover o acesso: %(error)s"
 msgid "Successfully removed access for %(db_user)s from %(db_host)s"
 msgstr "Acesso de %(db_user)s a partir de %(db_host)s removido com sucesso"
 
-#: internal/modules/mysql/render.go:106
+#: internal/modules/mysql/render.go:108
 msgid "Database Users"
 msgstr "Usuários do banco de dados"
 
-#: internal/modules/mysql/render.go:176 internal/modules/mysql/render.go:188
+#: internal/modules/mysql/render.go:178 internal/modules/mysql/render.go:190
 msgid "Wizard"
 msgstr "Assistente"
 
-#: internal/modules/mysql/render.go:308 static/js/tour-steps.js:903
+#: internal/modules/mysql/render.go:310 static/js/tour-steps.js:903
 msgid "Change Root Password"
 msgstr "Alterar senha root"
 
-#: internal/modules/mysql/render.go:331
+#: internal/modules/mysql/render.go:333
 msgid "Remote MySQL"
 msgstr "MySQL remoto"
 
@@ -5127,8 +5103,8 @@ msgstr "Nome do banco de dados ou usuário não encontrado em config.inc.php"
 msgid "OpenCart installed successfully on %(selected_domain)s"
 msgstr "OpenCart instalado com sucesso em %(selected_domain)s"
 
-#: internal/modules/php/api_extensions.go:229
-#: internal/modules/php/extensions.go:830
+#: internal/modules/php/api_extensions.go:249
+#: internal/modules/php/extensions.go:854
 msgid "Install queued..."
 msgstr "Instalação na fila..."
 
@@ -5144,30 +5120,18 @@ msgstr "Redefinir para o padrão"
 msgid "Switch the selected domains to the default PHP version?"
 msgstr "Alterar os domínios selecionados para a versão padrão do PHP?"
 
-#: internal/modules/php/default.go:49
-msgid "Invalid PHP version format"
-msgstr "Formato de versão do PHP inválido"
-
-#: internal/modules/php/default.go:53
-msgid ""
-"Default PHP version for OpenLitespeed can not be set to %(new_phpversion)s -"
-" only available tags are: 8.5 8.4 8.3 8.2"
-msgstr ""
-"A versão padrão do PHP para o OpenLitespeed não pode ser %(new_phpversion)s "
-"- as únicas tags disponíveis são: 8.5 8.4 8.3 8.2"
-
-#: internal/modules/php/default.go:61
+#: internal/modules/php/default.go:75
 msgid "PHP version %(new_phpversion)s set as default for new domains"
 msgstr "PHP %(new_phpversion)s definido como padrão para novos domínios"
 
-#: internal/modules/php/default.go:65
+#: internal/modules/php/default.go:79
 msgid ""
 "PHP version %(new_phpversion)s saved, and Litespeed restarted to apply the "
 "version."
 msgstr ""
 "PHP %(new_phpversion)s salvo e Litespeed reiniciado para aplicar a versão."
 
-#: internal/modules/php/default.go:69
+#: internal/modules/php/default.go:83
 msgid ""
 "PHP version %(new_phpversion)s saved and will be used by Litespeed for new "
 "domains."
@@ -5175,7 +5139,7 @@ msgstr ""
 "PHP %(new_phpversion)s salvo e será usado pelo Litespeed para novos "
 "domínios."
 
-#: internal/modules/php/default.go:81
+#: internal/modules/php/default.go:95
 msgid "Default PHP version could not be changed to %(new_phpversion)s"
 msgstr ""
 "Não foi possível alterar a versão padrão do PHP para %(new_phpversion)s"
@@ -5188,29 +5152,34 @@ msgstr ""
 "Apenas uma versão do PHP pode ser usada no Litespeed; para alterar a versão "
 "de todos os domínios, use esta página."
 
-#: internal/modules/php/domains.go:94
+#: internal/modules/php/domains.go:93
 msgid "Invalid or unavailable PHP version selected."
 msgstr "Versão do PHP selecionada inválida ou indisponível."
 
-#: internal/modules/php/domains.go:98
-msgid "Invalid current PHP version."
-msgstr "Versão atual do PHP inválida."
-
-#: internal/modules/php/domains.go:106
-msgid "Failed to start PHP %(new_phpversion)s: %(message)s"
-msgstr "Não foi possível iniciar o PHP %(new_phpversion)s: %(message)s"
-
-#: internal/modules/php/domains.go:115
+#: internal/modules/php/domains.go:99
 msgid "Failed to read vhost configuration for %(domain_url)s: %(error)s"
 msgstr ""
 "Não foi possível ler a configuração do vhost de %(domain_url)s: %(error)s"
 
-#: internal/modules/php/domains.go:123
+#: internal/modules/php/domains.go:105
+msgid "Could not determine the current PHP version for domain %(domain_url)s"
+msgstr ""
+
+#: internal/modules/php/domains.go:109
+msgid ""
+"Domain %(domain_url)s already uses PHP %(new_phpversion)s, nothing to change"
+msgstr ""
+
+#: internal/modules/php/domains.go:117
+msgid "Failed to start PHP %(new_phpversion)s: %(message)s"
+msgstr "Não foi possível iniciar o PHP %(new_phpversion)s: %(message)s"
+
+#: internal/modules/php/domains.go:124
 msgid "Error occurred while updating PHP version for domain %(domain_url)s"
 msgstr ""
 "Ocorreu um erro ao atualizar a versão do PHP do domínio %(domain_url)s"
 
-#: internal/modules/php/domains.go:138
+#: internal/modules/php/domains.go:152
 msgid ""
 "PHP version for domain %(domain_url)s was saved, but %(web_server)s could "
 "not apply it and still uses PHP %(old_phpversion)s: %(error)s"
@@ -5219,7 +5188,7 @@ msgstr ""
 "%(web_server)s não conseguiu aplicá-la e ainda usa o PHP %(old_phpversion)s:"
 " %(error)s"
 
-#: internal/modules/php/domains.go:140
+#: internal/modules/php/domains.go:154
 msgid ""
 "PHP version for domain %(domain_url)s updated from %(old_phpversion)s to "
 "%(new_phpversion)s"
@@ -5227,20 +5196,24 @@ msgstr ""
 "Versão do PHP do domínio %(domain_url)s atualizada de %(old_phpversion)s "
 "para %(new_phpversion)s"
 
-#: internal/modules/php/extensions.go:500
+#: internal/modules/php/extensions.go:507
 msgid "Extensions installed, restarting PHP-FPM to apply changes..."
 msgstr ""
 "Extensões instaladas, reiniciando o PHP-FPM para aplicar as alterações..."
 
-#: internal/modules/php/extensions.go:618
+#: internal/modules/php/extensions.go:624 internal/modules/php/info.go:36
+msgid "Invalid or unavailable PHP version."
+msgstr ""
+
+#: internal/modules/php/extensions.go:629
 msgid "Failed to start PHP %(version)s: %(err_msg)s"
 msgstr "Não foi possível iniciar o PHP %(version)s: %(err_msg)s"
 
-#: internal/modules/php/extensions.go:628
+#: internal/modules/php/extensions.go:639
 msgid "Invalid extension name."
 msgstr "Nome de extensão inválido."
 
-#: internal/modules/php/extensions.go:655
+#: internal/modules/php/extensions.go:666
 msgid ""
 "Extension %(extension)s %(action_word)s, PHP %(version)s reloaded to apply "
 "changes."
@@ -5248,13 +5221,17 @@ msgstr ""
 "Extensão %(extension)s %(action_word)s, PHP %(version)s recarregado para "
 "aplicar as alterações."
 
-#: internal/modules/php/extensions.go:657
+#: internal/modules/php/extensions.go:668
 msgid "Could not change extension %(extension)s: %(err_msg)s"
 msgstr "Não foi possível alterar a extensão %(extension)s: %(err_msg)s"
 
-#: internal/modules/php/info.go:45
+#: internal/modules/php/info.go:50
 msgid "Failed to start PHP %(service)s: %(message)s"
 msgstr "Não foi possível iniciar o PHP %(service)s: %(message)s"
+
+#: internal/modules/php/info.go:78
+msgid "Could not read PHP %(version)s info: %(message)s"
+msgstr ""
 
 #: internal/modules/php/ini.go:69
 msgid "Error saving %(text)s php.ini file!"
@@ -5318,7 +5295,7 @@ msgstr "Entre em contato com o suporte."
 msgid "Failed to generate autologin token."
 msgstr "Não foi possível gerar o token de login automático."
 
-#: internal/modules/php/render.go:115
+#: internal/modules/php/render.go:113
 #: internal/web/templates/php/default.html:4
 #: internal/web/templates/php/default.html:7
 msgid "Default PHP version"
@@ -5437,7 +5414,7 @@ msgstr ""
 
 #: internal/modules/postgresql/render.go:44
 #: internal/web/templates/dashboard/onboarding.html:206
-#: internal/web/templates/files/backup_settings.html:87
+#: internal/web/templates/files/backup_settings.html:88
 #: internal/web/templates/psql/databases.html:9
 msgid "PostgreSQL Databases"
 msgstr "Bancos de dados PostgreSQL"
@@ -5522,8 +5499,8 @@ msgid "Disabled"
 msgstr "Desabilitado"
 
 #: internal/modules/services/render.go:56
-#: internal/web/templates/files/backup_restore.html:714
-#: internal/web/templates/files/backup_restore.html:764
+#: internal/web/templates/files/backup_restore.html:716
+#: internal/web/templates/files/backup_restore.html:766
 #: internal/web/templates/files/backup_wizard.html:128
 #: internal/web/templates/manager/n8n_app.html:684
 #: internal/web/templates/manager/python_node_apps.html:1320
@@ -5596,7 +5573,7 @@ msgstr "Morto"
 #: internal/web/templates/manager/wp/single.html:1119
 #: internal/web/templates/manager/wp/single.html:1126
 #: internal/web/templates/manager/wp/single.html:1180
-#: internal/web/templates/manager/wp/single.html:2279
+#: internal/web/templates/manager/wp/single.html:2285
 #: internal/web/templates/mysql/remote_mysql.html:71
 #: internal/web/templates/partials/_service_js.html:35
 #: internal/web/templates/psql/remote_psql.html:81
@@ -5693,32 +5670,35 @@ msgstr "TinyFileManager instalado com sucesso em %(selected_domain)s"
 msgid "TinyPhotoGallery installed successfully on %(selected_domain)s"
 msgstr "TinyPhotoGallery instalado com sucesso em %(selected_domain)s"
 
-#: internal/modules/trash/api.go:76 internal/modules/trash/crud.go:207
+#: internal/modules/trash/api.go:61 internal/modules/trash/crud.go:185
 msgid "Trash emptied successfully"
 msgstr "Lixeira esvaziada com sucesso"
 
-#: internal/modules/trash/crud.go:101
+#: internal/modules/trash/crud.go:104
 msgid "Restored from Trash"
 msgstr "Restaurado da lixeira"
 
-#: internal/modules/trash/crud.go:167
+#: internal/modules/trash/crud.go:161
 msgid "Deleted permanently"
 msgstr "Excluído permanentemente"
 
-#: internal/modules/trash/crud.go:182 internal/modules/trash/crud.go:197
-#: internal/modules/trash/crud.go:202
+#: internal/modules/trash/crud.go:176
 msgid "Unexpected error"
 msgstr "Erro inesperado"
 
-#: internal/modules/trash/crud.go:224
+#: internal/modules/trash/crud.go:180
+msgid "Could not delete %(items)s from the trash."
+msgstr ""
+
+#: internal/modules/trash/crud.go:202
 msgid "Nothing to restore"
 msgstr "Nada para restaurar"
 
-#: internal/modules/trash/crud.go:272
+#: internal/modules/trash/crud.go:243
 msgid "Some items could not be restored."
 msgstr "Alguns itens não puderam ser restaurados."
 
-#: internal/modules/trash/crud.go:277
+#: internal/modules/trash/crud.go:248
 msgid "All items restored successfully"
 msgstr "Todos os itens foram restaurados com sucesso"
 
@@ -6071,7 +6051,7 @@ msgstr "Formato de nome de domínio inválido."
 
 #: internal/modules/websites/dispatch.go:153
 #: internal/modules/websites/websitebuilder.go:153
-#: internal/modules/websites/websites.go:993
+#: internal/modules/websites/websites.go:1024
 msgid "Unable to detect docroot for the domain."
 msgstr "Não foi possível detectar o docroot do domínio."
 
@@ -6257,7 +6237,7 @@ msgstr "Você atingiu o número máximo de sites permitidos."
 msgid "Website created successfully on %(selected_domain)s"
 msgstr "Site criado com sucesso em %(selected_domain)s"
 
-#: internal/modules/websites/wpcache.go:545
+#: internal/modules/websites/wpcache.go:577
 msgid ""
 "Per-site OPcache toggle is not available on OpenLiteSpeed, it does not read "
 ".user.ini files."
@@ -6265,7 +6245,7 @@ msgstr ""
 "A opção de OPcache por site não está disponível no OpenLiteSpeed, ele não lê"
 " arquivos .user.ini."
 
-#: internal/modules/websites/wpcache.go:570
+#: internal/modules/websites/wpcache.go:602
 msgid "Unexpected OPcache status output."
 msgstr "Saída inesperada do status do OPcache."
 
@@ -6311,7 +6291,7 @@ msgstr "Fazer backup dos arquivos e do banco de dados dos sites selecionados?"
 #: internal/web/templates/manager/websitebuilder.html:206
 #: internal/web/templates/manager/wp/list.html:142
 #: internal/web/templates/manager/wp/list.html:188
-#: internal/web/templates/manager/wp/single.html:1813
+#: internal/web/templates/manager/wp/single.html:1815
 msgid "Detach"
 msgstr "Detalhes"
 
@@ -6326,7 +6306,7 @@ msgstr ""
 #: internal/modules/wordpress/bulk.go:20
 #: internal/web/templates/manager/wp/list.html:145
 #: internal/web/templates/manager/wp/list.html:191
-#: internal/web/templates/manager/wp/single.html:1845
+#: internal/web/templates/manager/wp/single.html:1847
 msgid "Uninstall"
 msgstr "Desinstalar"
 
@@ -6353,23 +6333,25 @@ msgid "Could not add high-performance keys to %(table)s: %(error)s"
 msgstr ""
 "Não foi possível adicionar chaves de alto desempenho a %(table)s: %(error)s"
 
-#: internal/modules/wordpress/install.go:372
+#: internal/modules/wordpress/install.go:384
 msgid "WordPress installed successfully on %(selected_domain)s"
 msgstr "WordPress instalado com sucesso em %(selected_domain)s"
 
-#: internal/modules/wordpress/manage.go:272
+#: internal/modules/wordpress/manage.go:256
 msgid "WordPress installation not found in the database"
 msgstr "Instalação do WordPress não encontrada no banco de dados"
 
-#: internal/modules/wordpress/manage.go:304
-msgid "Database name or user not found in wp-config.php"
-msgstr "Nome do banco de dados ou usuário não encontrado em wp-config.php"
+#: internal/modules/wordpress/manage.go:288
+msgid ""
+"Database name or user in wp-config.php is missing or unsafe, so the database"
+" was kept"
+msgstr ""
 
-#: internal/modules/wordpress/manage.go:350
+#: internal/modules/wordpress/manage.go:334
 msgid "Missing site ID."
 msgstr "ID do site ausente."
 
-#: internal/modules/wordpress/manage.go:381
+#: internal/modules/wordpress/manage.go:365
 msgid "WordPress installation detached from Manager."
 msgstr "Instalação do WordPress desvinculada do gerenciador."
 
@@ -6448,7 +6430,7 @@ msgid "Accounts"
 msgstr "Contas"
 
 #: internal/web/sidebar.go:273
-#: internal/web/templates/files/backup_restore.html:429
+#: internal/web/templates/files/backup_restore.html:431
 #: internal/web/templates/manager/_cms_app_shared.html:151
 #: internal/web/templates/manager/n8n_app.html:45
 #: internal/web/templates/manager/php_app.html:44
@@ -6536,15 +6518,15 @@ msgstr "Sucesso"
 #: internal/web/templates/manager/grapejs_editor.html:114
 #: internal/web/templates/manager/n8n_app.html:403
 #: internal/web/templates/manager/python_node_apps.html:622
-#: internal/web/templates/manager/wp/single.html:1423
-#: internal/web/templates/manager/wp/single.html:1448
+#: internal/web/templates/manager/wp/single.html:1424
+#: internal/web/templates/manager/wp/single.html:1449
 #: internal/web/templates/mysql/databases.html:130
 #: internal/web/templates/system/error_logs.html:153
 msgid "Error"
 msgstr "Erro"
 
 #: internal/web/templates/base.html:66
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/mysql/processlist.html:39
 #: internal/web/templates/system/error_logs.html:153
 #: internal/web/templates/user/activity.html:15
@@ -6552,7 +6534,7 @@ msgid "Info"
 msgstr "Informações"
 
 #: internal/web/templates/base.html:67
-#: internal/web/templates/files/filemanager_partials.html:74
+#: internal/web/templates/files/filemanager_partials.html:78
 msgid "Uploading"
 msgstr "Enviando"
 
@@ -6561,7 +6543,7 @@ msgid "Loading"
 msgstr "Carregando"
 
 #: internal/web/templates/base.html:69
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/system/error_logs.html:153
 #: internal/web/templates/user/history_usage.html:139
 msgid "Warning"
@@ -6569,12 +6551,12 @@ msgstr "Aviso"
 
 #: internal/web/templates/base.html:70 internal/web/templates/base.html:618
 #: internal/web/templates/base.html:689
-#: internal/web/templates/files/backup_restore.html:989
-#: internal/web/templates/files/backup_restore.html:1020
-#: internal/web/templates/files/filemanager_partials.html:601
-#: internal/web/templates/files/filemanager_partials.html:633
+#: internal/web/templates/files/backup_restore.html:991
+#: internal/web/templates/files/backup_restore.html:1022
+#: internal/web/templates/files/filemanager_partials.html:619
+#: internal/web/templates/files/filemanager_partials.html:651
 #: internal/web/templates/manager/git.html:38
-#: internal/web/templates/mysql/databases.html:576
+#: internal/web/templates/mysql/databases.html:595
 #: internal/web/templates/partials/_ai_assistant.html:52
 #: internal/web/templates/system/cronjobs.html:447
 msgid "Close"
@@ -6593,14 +6575,14 @@ msgstr "Fechar"
 #: internal/web/templates/emails/alias_delete.html:27
 #: internal/web/templates/emails/delete.html:30
 #: internal/web/templates/emails/migrate.html:28
-#: internal/web/templates/files/backup_restore.html:925
-#: internal/web/templates/files/backup_restore.html:988
-#: internal/web/templates/files/clamav/quarantine.html:143
+#: internal/web/templates/files/backup_restore.html:927
+#: internal/web/templates/files/backup_restore.html:990
+#: internal/web/templates/files/clamav/quarantine.html:134
 #: internal/web/templates/files/filemanager_partials.html:26
-#: internal/web/templates/files/filemanager_partials.html:584
-#: internal/web/templates/files/filemanager_partials.html:671
-#: internal/web/templates/files/filemanager_partials.html:766
-#: internal/web/templates/files/filemanager_partials.html:780
+#: internal/web/templates/files/filemanager_partials.html:602
+#: internal/web/templates/files/filemanager_partials.html:689
+#: internal/web/templates/files/filemanager_partials.html:784
+#: internal/web/templates/files/filemanager_partials.html:798
 #: internal/web/templates/files/trash_partials.html:172
 #: internal/web/templates/manager/_cms_app_shared.html:1500
 #: internal/web/templates/manager/_cms_app_shared.html:1532
@@ -6625,9 +6607,9 @@ msgstr "Fechar"
 #: internal/web/templates/manager/tinyphotogallery_app.html:201
 #: internal/web/templates/manager/websitebuilder.html:224
 #: internal/web/templates/manager/websitebuilder.html:256
-#: internal/web/templates/manager/wp/single.html:1831
-#: internal/web/templates/manager/wp/single.html:1863
-#: internal/web/templates/mysql/databases.html:577
+#: internal/web/templates/manager/wp/single.html:1833
+#: internal/web/templates/manager/wp/single.html:1865
+#: internal/web/templates/mysql/databases.html:596
 #: internal/web/templates/mysql/remote_mysql.html:145
 #: internal/web/templates/mysql/remote_mysql.html:203
 #: internal/web/templates/partials/_bulk.html:98
@@ -6874,6 +6856,12 @@ msgid "Real-time cache performance and efficiency metrics."
 msgstr "Métricas de desempenho e eficiência do cache em tempo real."
 
 #: internal/web/templates/cache/service.html:91
+#: internal/web/templates/system/summary.html:40
+#: internal/web/templates/system/summary.html:90
+msgid "Requests"
+msgstr "Requisições"
+
+#: internal/web/templates/cache/service.html:91
 msgid "Hit Ratio"
 msgstr "Taxa de acertos"
 
@@ -6888,12 +6876,6 @@ msgstr "Falhas"
 #: internal/web/templates/cache/service.html:91
 msgid "Pass"
 msgstr "Pass"
-
-#: internal/web/templates/cache/service.html:91
-#: internal/web/templates/system/summary.html:40
-#: internal/web/templates/system/summary.html:90
-msgid "Requests"
-msgstr "Requisições"
 
 #: internal/web/templates/cache/service.html:91
 msgid "Backend Requests"
@@ -6947,7 +6929,7 @@ msgstr "Editar limites"
 #: internal/web/templates/docker/containers.html:90
 #: internal/web/templates/domains/dns.html:107
 #: internal/web/templates/domains/dns.html:122
-#: internal/web/templates/files/filemanager_partials.html:438
+#: internal/web/templates/files/filemanager_partials.html:456
 #: internal/web/templates/files/trash_partials.html:22
 #: internal/web/templates/manager/app_install.html:122
 #: internal/web/templates/manager/python_node_apps.html:394
@@ -6975,6 +6957,13 @@ msgid "Memory Usage"
 msgstr "Uso de memória"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/partials/_service_js.html:24
+#: internal/web/templates/system/services.html:113
+#: internal/web/templates/user/history_usage.html:133
+msgid "Memory %"
+msgstr "Memória %"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/docker/containers.html:64
 #: internal/web/templates/docker/containers.html:101
 #: internal/web/templates/partials/_service_js.html:26
@@ -6983,24 +6972,17 @@ msgid "Block I/O"
 msgstr "Block E/S."
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/partials/_service_js.html:25
+#: internal/web/templates/system/services.html:113
+msgid "Network I/O"
+msgstr "E/S de rede"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/mongodb/processlist.html:32
 #: internal/web/templates/mysql/processlist.html:32
 #: internal/web/templates/system/services.html:113
 msgid "ID"
 msgstr "EU IA"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/partials/_service_js.html:24
-#: internal/web/templates/system/services.html:113
-#: internal/web/templates/user/history_usage.html:133
-msgid "Memory %"
-msgstr "Memória %"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/partials/_service_js.html:25
-#: internal/web/templates/system/services.html:113
-msgid "Network I/O"
-msgstr "E/S de rede"
 
 #: internal/web/templates/cache/service.html:270
 #: internal/web/templates/system/services.html:162
@@ -7047,7 +7029,7 @@ msgid "Click to refresh"
 msgstr "Clique para atualizar"
 
 #: internal/web/templates/cache/service.html:331
-#: internal/web/templates/files/backup_restore.html:886
+#: internal/web/templates/files/backup_restore.html:888
 #: internal/web/templates/manager/drupal_app.html:164
 #: internal/web/templates/manager/joomla_app.html:59
 #: internal/web/templates/manager/moodle_app.html:57
@@ -7055,7 +7037,7 @@ msgstr "Clique para atualizar"
 #: internal/web/templates/manager/opencart_app.html:59
 #: internal/web/templates/manager/php_app.html:137
 #: internal/web/templates/manager/prestashop_app.html:59
-#: internal/web/templates/manager/wp/single.html:1447
+#: internal/web/templates/manager/wp/single.html:1448
 #: internal/web/templates/php/extensions.html:97
 #: internal/web/templates/php/extensions.html:125
 #: internal/web/templates/system/server_info.html:20
@@ -7338,27 +7320,27 @@ msgstr "O que fazer backup"
 
 #: internal/web/templates/dashboard/onboarding.html:201
 #: internal/web/templates/files/backup_restore.html:6
-#: internal/web/templates/files/backup_restore.html:437
-#: internal/web/templates/files/backup_restore.html:542
-#: internal/web/templates/files/backup_restore.html:958
-#: internal/web/templates/files/backup_settings.html:82
+#: internal/web/templates/files/backup_restore.html:439
+#: internal/web/templates/files/backup_restore.html:544
+#: internal/web/templates/files/backup_restore.html:960
+#: internal/web/templates/files/backup_settings.html:83
 msgid "Everything"
 msgstr "Tudo"
 
 #: internal/web/templates/dashboard/onboarding.html:202
-#: internal/web/templates/files/backup_restore.html:446
-#: internal/web/templates/files/backup_restore.html:550
-#: internal/web/templates/files/backup_settings.html:83
+#: internal/web/templates/files/backup_restore.html:448
+#: internal/web/templates/files/backup_restore.html:552
+#: internal/web/templates/files/backup_settings.html:84
 msgid "Website Files"
 msgstr "Arquivos do site"
 
 #: internal/web/templates/dashboard/onboarding.html:204
-#: internal/web/templates/files/backup_settings.html:85
+#: internal/web/templates/files/backup_settings.html:86
 msgid "VirtualHosts"
 msgstr "Hosts virtuais"
 
 #: internal/web/templates/dashboard/onboarding.html:205
-#: internal/web/templates/files/backup_settings.html:86
+#: internal/web/templates/files/backup_settings.html:87
 msgid "MySQL Databases"
 msgstr "Bancos de dados MySQL"
 
@@ -7554,7 +7536,7 @@ msgstr ""
 #: internal/web/templates/dashboard/onboarding.html:530
 #: internal/web/templates/domains/domains.html:289
 #: internal/web/templates/emails/migrate.html:51
-#: internal/web/templates/manager/wp/_shared.html:197
+#: internal/web/templates/manager/wp/_shared.html:205
 #: internal/web/templates/system/waf.html:141
 #: internal/web/templates/system/waf.html:208
 #: internal/web/templates/system/waf.html:343
@@ -7592,7 +7574,7 @@ msgstr "Novos domínios não têm filtragem de requisições."
 #: internal/web/templates/manager/ojs_app.html:32
 #: internal/web/templates/manager/phpbb_app.html:29
 #: internal/web/templates/manager/wp/single.html:449
-#: internal/web/templates/manager/wp/single.html:1667
+#: internal/web/templates/manager/wp/single.html:1669
 #: internal/web/templates/mongodb/users.html:27
 #: internal/web/templates/mongodb/users.html:28
 #: internal/web/templates/mongodb/users.html:31
@@ -7639,6 +7621,10 @@ msgstr ""
 " na versão mais recente."
 
 #: internal/web/templates/dashboard/onboarding.html:760
+msgid "Step"
+msgstr "Etapa"
+
+#: internal/web/templates/dashboard/onboarding.html:760
 #: internal/web/templates/domains/domains.html:434
 #: internal/web/templates/manager/wp/_caching.html:290
 #: internal/web/templates/system/error_logs.html:96
@@ -7646,10 +7632,6 @@ msgstr ""
 #: internal/web/templates/user/history_usage.html:96
 msgid "of"
 msgstr "de"
-
-#: internal/web/templates/dashboard/onboarding.html:760
-msgid "Step"
-msgstr "Etapa"
 
 #: internal/web/templates/dashboard/onboarding.html:829
 msgid "Please choose a webserver, or click Skip."
@@ -7854,7 +7836,7 @@ msgstr "leia a documentação"
 #: internal/web/templates/emails/accounts.html:19
 #: internal/web/templates/emails/aliases.html:19
 #: internal/web/templates/emails/deliverability.html:16
-#: internal/web/templates/files/backup_restore.html:700
+#: internal/web/templates/files/backup_restore.html:702
 #: internal/web/templates/files/clamav/quarantine.html:28
 #: internal/web/templates/files/ftp.html:41
 #: internal/web/templates/manager/autoinstaller.html:19
@@ -7941,9 +7923,9 @@ msgid "Create a Database"
 msgstr "Crie um banco de dados"
 
 #: internal/web/templates/db/new.html:23 internal/web/templates/db/new.html:27
-#: internal/web/templates/files/backup_restore.html:760
+#: internal/web/templates/files/backup_restore.html:762
 #: internal/web/templates/manager/_cms_app_shared.html:975
-#: internal/web/templates/manager/wp/single.html:1673
+#: internal/web/templates/manager/wp/single.html:1675
 #: internal/web/templates/mongodb/databases.html:53
 #: internal/web/templates/mongodb/new.html:21
 #: internal/web/templates/mongodb/new.html:23
@@ -8571,7 +8553,7 @@ msgstr "Máximo de CPUs que este serviço pode usar. 0 = ilimitado"
 #: internal/web/templates/domains/dynamic_dns.html:101
 #: internal/web/templates/emails/default_address.html:128
 #: internal/web/templates/files/edit_file.html:140
-#: internal/web/templates/files/filemanager_partials.html:583
+#: internal/web/templates/files/filemanager_partials.html:601
 #: internal/web/templates/mysql/remote_mysql.html:202
 #: internal/web/templates/system/cronjobs.html:234
 #: internal/web/templates/system/cronjobs.html:359 static/js/tour-steps.js:464
@@ -8592,9 +8574,9 @@ msgstr "Máximo de processos que este serviço pode executar. 0 = ilimitado"
 #: internal/web/templates/domains/vhost.html:22
 #: internal/web/templates/domains/vhost.html:23
 #: internal/web/templates/domains/vhost.html:191
-#: internal/web/templates/files/filemanager_partials.html:313
-#: internal/web/templates/files/filemanager_partials.html:314
-#: internal/web/templates/files/filemanager_partials.html:385
+#: internal/web/templates/files/filemanager_partials.html:331
+#: internal/web/templates/files/filemanager_partials.html:332
+#: internal/web/templates/files/filemanager_partials.html:403
 #: internal/web/templates/mysql/remote_mysql.html:206
 #: internal/web/templates/system/cronjobs.html:357
 msgid "Edit"
@@ -8721,7 +8703,7 @@ msgstr "Tempo limite de inatividade:"
 
 #: internal/web/templates/docker/terminal.html:35
 #: internal/web/templates/mongodb/databases.html:195
-#: internal/web/templates/mysql/databases.html:548
+#: internal/web/templates/mysql/databases.html:567
 #: internal/web/templates/mysql/users.html:179
 #: internal/web/templates/psql/databases.html:261
 msgid "seconds"
@@ -8764,7 +8746,7 @@ msgstr "Selecione um serviço ativo para abrir o terminal web."
 #: internal/web/templates/domains/_shared.html:6
 #: internal/web/templates/emails/alias_new.html:69
 #: internal/web/templates/emails/new.html:273
-#: internal/web/templates/files/ftp_new.html:289
+#: internal/web/templates/files/ftp_new.html:294
 #: internal/web/templates/manager/_cms_install_shared.html:401
 #: internal/web/templates/manager/app_install.html:841
 #: internal/web/templates/manager/php_install.html:423
@@ -8775,7 +8757,7 @@ msgstr "Ainda não há domínios"
 #: internal/web/templates/domains/_shared.html:7
 #: internal/web/templates/emails/alias_new.html:70
 #: internal/web/templates/emails/new.html:274
-#: internal/web/templates/files/ftp_new.html:290
+#: internal/web/templates/files/ftp_new.html:295
 #: internal/web/templates/manager/_cms_install_shared.html:402
 #: internal/web/templates/manager/app_install.html:842
 #: internal/web/templates/manager/php_install.html:424
@@ -8786,7 +8768,7 @@ msgstr "Adicione seu primeiro domínio para começar"
 #: internal/web/templates/domains/_shared.html:8
 #: internal/web/templates/emails/alias_new.html:71
 #: internal/web/templates/emails/new.html:275
-#: internal/web/templates/files/ftp_new.html:291
+#: internal/web/templates/files/ftp_new.html:296
 #: internal/web/templates/manager/_cms_install_shared.html:404
 #: internal/web/templates/manager/app_install.html:844
 #: internal/web/templates/manager/php_install.html:426
@@ -8846,13 +8828,13 @@ msgstr ""
 "arquivos, permanecerão no disco."
 
 #: internal/web/templates/domains/delete.html:31
-msgid "subdomains"
-msgstr "subdomínios"
-
-#: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/domains.html:195
 msgid "subdomain"
 msgstr "subdomínio"
+
+#: internal/web/templates/domains/delete.html:31
+msgid "subdomains"
+msgstr "subdomínios"
 
 #: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/delete.html:38
@@ -9417,7 +9399,7 @@ msgstr "linha(s) selecionada(s)."
 
 #: internal/web/templates/domains/domains.html:433
 #: internal/web/templates/domains/logs.html:14
-#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/manager/wp/single.html:1472
 #: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
 #: internal/web/templates/user/activity.html:169
@@ -9500,8 +9482,8 @@ msgid "Will be updated automatically on first webcall."
 msgstr "Será atualizado automaticamente na primeira chamada web."
 
 #: internal/web/templates/domains/dynamic_dns.html:64
-#: internal/web/templates/files/filemanager_partials.html:765
-#: internal/web/templates/files/filemanager_partials.html:779
+#: internal/web/templates/files/filemanager_partials.html:783
+#: internal/web/templates/files/filemanager_partials.html:797
 #: internal/web/templates/manager/git.html:140
 #: internal/web/templates/mysql/mysql_user.html:8
 #: internal/web/templates/mysql/wizard.html:305
@@ -9582,7 +9564,7 @@ msgid "Domain Logs for"
 msgstr "Domínio logs para"
 
 #: internal/web/templates/domains/logs.html:14
-#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/manager/wp/single.html:1472
 #: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
 #: internal/web/templates/user/activity.html:177
@@ -9592,7 +9574,7 @@ msgstr "fora de"
 
 #: internal/web/templates/domains/logs.html:14
 #: internal/web/templates/domains/logs.html:21
-#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/manager/wp/single.html:1472
 #: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
 #: internal/web/templates/system/waf_logs.html:23
@@ -9650,18 +9632,18 @@ msgstr "Uri"
 
 #: internal/web/templates/domains/logs.html:113
 #: internal/web/templates/domains/logs.html:133
-#: internal/web/templates/files/backup_restore.html:716
-#: internal/web/templates/files/backup_restore.html:765
+#: internal/web/templates/files/backup_restore.html:718
+#: internal/web/templates/files/backup_restore.html:767
 #: internal/web/templates/files/backup_wizard.html:48
 #: internal/web/templates/files/backup_wizard.html:125
 #: internal/web/templates/files/disk_usage.html:61
 #: internal/web/templates/files/filemanager.html:123
-#: internal/web/templates/files/filemanager_partials.html:439
+#: internal/web/templates/files/filemanager_partials.html:457
 #: internal/web/templates/files/trash.html:79
 #: internal/web/templates/files/trash_partials.html:23
 #: internal/web/templates/mongodb/databases.html:54
 #: internal/web/templates/mysql/databases.html:203
-#: internal/web/templates/mysql/databases.html:582
+#: internal/web/templates/mysql/databases.html:601
 #: internal/web/templates/psql/databases.html:118
 msgid "Size"
 msgstr "Tamanho"
@@ -11079,11 +11061,11 @@ msgid "Completed"
 msgstr "Concluída"
 
 #: internal/web/templates/emails/migrate.html:142
-#: internal/web/templates/files/backup_restore.html:526
-#: internal/web/templates/files/backup_restore.html:673
-#: internal/web/templates/files/clamav/quarantine.html:195
+#: internal/web/templates/files/backup_restore.html:528
+#: internal/web/templates/files/backup_restore.html:675
+#: internal/web/templates/files/clamav/quarantine.html:186
 #: internal/web/templates/files/clamav/scan_logs.html:66
-#: internal/web/templates/mysql/databases.html:597
+#: internal/web/templates/mysql/databases.html:616
 msgid "Failed"
 msgstr "Falhou"
 
@@ -11187,7 +11169,7 @@ msgid "Create a new Email account."
 msgstr "Crie uma nova conta de email."
 
 #: internal/web/templates/emails/new.html:38
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid "info"
 msgstr "informações"
 
@@ -11279,7 +11261,7 @@ msgstr "Senha forte"
 #: internal/web/templates/emails/new.html:85
 #: internal/web/templates/emails/single_account.html:197
 #: internal/web/templates/manager/_cms_app_shared.html:991
-#: internal/web/templates/manager/wp/single.html:1689
+#: internal/web/templates/manager/wp/single.html:1691
 #: internal/web/templates/mysql/mysql_user.html:50
 #: internal/web/templates/mysql/password.html:47
 #: internal/web/templates/mysql/root_password.html:40
@@ -11378,7 +11360,7 @@ msgid "Select"
 msgstr "Selecionar"
 
 #: internal/web/templates/files/backup_destinations.html:80
-#: internal/web/templates/files/backup_settings.html:106
+#: internal/web/templates/files/backup_settings.html:108
 #: internal/web/templates/user/notifications.html:80
 msgid "Learn more"
 msgstr "Saiba mais"
@@ -11388,181 +11370,181 @@ msgid "Files only (no databases)"
 msgstr "Apenas arquivos (sem bancos de dados)"
 
 #: internal/web/templates/files/backup_restore.html:8
-#: internal/web/templates/files/backup_restore.html:734
-#: internal/web/templates/files/backup_restore.html:959
+#: internal/web/templates/files/backup_restore.html:736
+#: internal/web/templates/files/backup_restore.html:961
 msgid "Website files"
 msgstr "Arquivos do site"
 
 #: internal/web/templates/files/backup_restore.html:12
-#: internal/web/templates/files/backup_restore.html:738
-#: internal/web/templates/files/backup_restore.html:962
+#: internal/web/templates/files/backup_restore.html:740
+#: internal/web/templates/files/backup_restore.html:964
 msgid "Cron jobs"
 msgstr "Jobs cron"
 
 #: internal/web/templates/files/backup_restore.html:14
-#: internal/web/templates/files/backup_restore.html:965
+#: internal/web/templates/files/backup_restore.html:967
 msgid "Selected files"
 msgstr "Arquivos selecionados"
 
 #: internal/web/templates/files/backup_restore.html:15
-#: internal/web/templates/files/backup_restore.html:966
+#: internal/web/templates/files/backup_restore.html:968
 msgid "Selected mailboxes"
 msgstr "Caixas de e-mail selecionadas"
 
 #: internal/web/templates/files/backup_restore.html:16
-#: internal/web/templates/files/backup_restore.html:967
+#: internal/web/templates/files/backup_restore.html:969
 msgid "Selected domains"
 msgstr "Domínios selecionados"
 
 #: internal/web/templates/files/backup_restore.html:17
-#: internal/web/templates/files/backup_restore.html:968
+#: internal/web/templates/files/backup_restore.html:970
 msgid "Selected DNS zones"
 msgstr "Zonas DNS selecionadas"
 
-#: internal/web/templates/files/backup_restore.html:370
+#: internal/web/templates/files/backup_restore.html:372
 msgid "Added to the queue."
 msgstr "Adicionado à fila."
 
-#: internal/web/templates/files/backup_restore.html:380
+#: internal/web/templates/files/backup_restore.html:382
 msgid "Restore & Download"
 msgstr "Restaurar e baixar"
 
-#: internal/web/templates/files/backup_restore.html:387
+#: internal/web/templates/files/backup_restore.html:389
 msgid "Indexing..."
 msgstr "Indexando..."
 
-#: internal/web/templates/files/backup_restore.html:391
+#: internal/web/templates/files/backup_restore.html:393
 msgid "Restore or download backups from destination."
 msgstr "Restaure ou baixe backups do destino."
 
-#: internal/web/templates/files/backup_restore.html:403
+#: internal/web/templates/files/backup_restore.html:405
 msgid "Reindex Destination"
 msgstr "Reindexar destino"
 
-#: internal/web/templates/files/backup_restore.html:422
+#: internal/web/templates/files/backup_restore.html:424
 msgid "Backup types"
 msgstr "Tipos de backup"
 
-#: internal/web/templates/files/backup_restore.html:491
-#: internal/web/templates/files/backup_restore.html:595
-#: internal/web/templates/files/backup_restore.html:614
+#: internal/web/templates/files/backup_restore.html:493
+#: internal/web/templates/files/backup_restore.html:597
+#: internal/web/templates/files/backup_restore.html:616
 msgid "Queue"
 msgstr "Fila"
 
-#: internal/web/templates/files/backup_restore.html:512
+#: internal/web/templates/files/backup_restore.html:514
 msgid "Total Backups"
 msgstr "Total de backups"
 
-#: internal/web/templates/files/backup_restore.html:516
+#: internal/web/templates/files/backup_restore.html:518
 msgid "Latest Backup"
 msgstr "Último backup"
 
-#: internal/web/templates/files/backup_restore.html:520
+#: internal/web/templates/files/backup_restore.html:522
 msgid "Total Size"
 msgstr "Tamanho total"
 
-#: internal/web/templates/files/backup_restore.html:524
+#: internal/web/templates/files/backup_restore.html:526
 msgid "Last Restore"
 msgstr "Última restauração"
 
-#: internal/web/templates/files/backup_restore.html:525
-#: internal/web/templates/files/backup_restore.html:672
+#: internal/web/templates/files/backup_restore.html:527
+#: internal/web/templates/files/backup_restore.html:674
 msgid "Done"
 msgstr "Concluído"
 
-#: internal/web/templates/files/backup_restore.html:529
-#: internal/web/templates/files/backup_restore.html:596
+#: internal/web/templates/files/backup_restore.html:531
+#: internal/web/templates/files/backup_restore.html:598
 msgid "in queue"
 msgstr "na fila"
 
-#: internal/web/templates/files/backup_restore.html:535
+#: internal/web/templates/files/backup_restore.html:537
 msgid "What do you want to restore?"
 msgstr "O que você quer restaurar?"
 
-#: internal/web/templates/files/backup_restore.html:536
+#: internal/web/templates/files/backup_restore.html:538
 msgid "Pick a type to see its backups."
 msgstr "Escolha um tipo para ver seus backups."
 
-#: internal/web/templates/files/backup_restore.html:543
-#: internal/web/templates/files/backup_restore.html:551
-#: internal/web/templates/files/backup_restore.html:583
+#: internal/web/templates/files/backup_restore.html:545
+#: internal/web/templates/files/backup_restore.html:553
+#: internal/web/templates/files/backup_restore.html:585
 msgid "backups"
 msgstr "backups"
 
-#: internal/web/templates/files/backup_restore.html:559
+#: internal/web/templates/files/backup_restore.html:561
 msgid "databases"
 msgstr "bancos de dados"
 
-#: internal/web/templates/files/backup_restore.html:567
+#: internal/web/templates/files/backup_restore.html:569
 msgid "email accounts"
 msgstr "contas de e-mail"
 
-#: internal/web/templates/files/backup_restore.html:575
+#: internal/web/templates/files/backup_restore.html:577
 #: internal/web/templates/php/settings.html:49
 msgid "domains"
 msgstr "domínios"
 
-#: internal/web/templates/files/backup_restore.html:588
+#: internal/web/templates/files/backup_restore.html:590
 msgid "Restore activity"
 msgstr "Atividade de restauração"
 
-#: internal/web/templates/files/backup_restore.html:589
+#: internal/web/templates/files/backup_restore.html:591
 msgid "Restores run one at a time, the rest wait in the queue."
 msgstr "As restaurações rodam uma de cada vez, as demais aguardam na fila."
 
-#: internal/web/templates/files/backup_restore.html:604
+#: internal/web/templates/files/backup_restore.html:606
 msgid "restores"
 msgstr "restaurações"
 
-#: internal/web/templates/files/backup_restore.html:617
+#: internal/web/templates/files/backup_restore.html:619
 msgid "Restores run one at a time, the rest wait here."
 msgstr "As restaurações rodam uma de cada vez, as demais aguardam aqui."
 
-#: internal/web/templates/files/backup_restore.html:622
-#: internal/web/templates/files/backup_restore.html:657
+#: internal/web/templates/files/backup_restore.html:624
+#: internal/web/templates/files/backup_restore.html:659
 msgid "What"
 msgstr "O quê"
 
-#: internal/web/templates/files/backup_restore.html:623
-#: internal/web/templates/files/backup_restore.html:658
+#: internal/web/templates/files/backup_restore.html:625
+#: internal/web/templates/files/backup_restore.html:660
 msgid "From backup"
 msgstr "Do backup"
 
-#: internal/web/templates/files/backup_restore.html:624
+#: internal/web/templates/files/backup_restore.html:626
 #: internal/web/templates/user/passkeys.html:36
 msgid "Added"
 msgstr "Adicionado"
 
-#: internal/web/templates/files/backup_restore.html:635
-#: internal/web/templates/files/backup_restore.html:995
+#: internal/web/templates/files/backup_restore.html:637
+#: internal/web/templates/files/backup_restore.html:997
 msgid "Restoring..."
 msgstr "Restaurando..."
 
-#: internal/web/templates/files/backup_restore.html:636
+#: internal/web/templates/files/backup_restore.html:638
 msgid "Waiting"
 msgstr "Aguardando"
 
-#: internal/web/templates/files/backup_restore.html:641
+#: internal/web/templates/files/backup_restore.html:643
 msgid "Nothing is being restored right now."
 msgstr "Nada está sendo restaurado agora."
 
-#: internal/web/templates/files/backup_restore.html:652
+#: internal/web/templates/files/backup_restore.html:654
 msgid "Your latest restores, newest first."
 msgstr "Suas últimas restaurações, as mais recentes primeiro."
 
-#: internal/web/templates/files/backup_restore.html:659
+#: internal/web/templates/files/backup_restore.html:661
 msgid "Restored"
 msgstr "Restaurado"
 
-#: internal/web/templates/files/backup_restore.html:660
+#: internal/web/templates/files/backup_restore.html:662
 msgid "Took"
 msgstr "Duração"
 
-#: internal/web/templates/files/backup_restore.html:679
+#: internal/web/templates/files/backup_restore.html:681
 msgid "No restores yet."
 msgstr "Nenhuma restauração ainda."
 
-#: internal/web/templates/files/backup_restore.html:689
+#: internal/web/templates/files/backup_restore.html:691
 msgid ""
 "Select a backup to restore everything in it: files, databases, emails, "
 "domains with their DNS zones and cron jobs."
@@ -11570,7 +11552,7 @@ msgstr ""
 "Selecione um backup para restaurar tudo o que ele contém: arquivos, bancos "
 "de dados, e-mails, domínios com suas zonas DNS e jobs cron."
 
-#: internal/web/templates/files/backup_restore.html:690
+#: internal/web/templates/files/backup_restore.html:692
 msgid ""
 "Select a backup to restore all its website files, or pick single files and "
 "folders with Choose files."
@@ -11578,7 +11560,7 @@ msgstr ""
 "Selecione um backup para restaurar todos os arquivos do site, ou escolha "
 "arquivos e pastas avulsos em Escolher arquivos."
 
-#: internal/web/templates/files/backup_restore.html:691
+#: internal/web/templates/files/backup_restore.html:693
 msgid ""
 "Select one or more databases. The newest backup is used unless you choose "
 "another one."
@@ -11586,7 +11568,7 @@ msgstr ""
 "Selecione um ou mais bancos de dados. O backup mais recente é usado, a menos"
 " que você escolha outro."
 
-#: internal/web/templates/files/backup_restore.html:692
+#: internal/web/templates/files/backup_restore.html:694
 msgid ""
 "Select one or more email accounts. The newest backup is used unless you "
 "choose another one."
@@ -11594,7 +11576,7 @@ msgstr ""
 "Selecione uma ou mais contas de e-mail. O backup mais recente é usado, a "
 "menos que você escolha outro."
 
-#: internal/web/templates/files/backup_restore.html:693
+#: internal/web/templates/files/backup_restore.html:695
 msgid ""
 "Select one or more domains to restore their configuration, PHP version and "
 "DNS zone. Domains you deleted are added back to your account first, "
@@ -11604,15 +11586,15 @@ msgstr ""
 " e a zona DNS deles. Domínios excluídos são adicionados de volta à sua conta"
 " primeiro, domínios suspensos não podem ser restaurados."
 
-#: internal/web/templates/files/backup_restore.html:694
+#: internal/web/templates/files/backup_restore.html:696
 msgid "Select a backup to restore only the cron jobs from it."
 msgstr "Selecione um backup para restaurar apenas os jobs cron dele."
 
-#: internal/web/templates/files/backup_restore.html:715
+#: internal/web/templates/files/backup_restore.html:717
 msgid "Contents"
 msgstr "Conteúdo"
 
-#: internal/web/templates/files/backup_restore.html:729
+#: internal/web/templates/files/backup_restore.html:731
 #: internal/web/templates/manager/_cms_install_shared.html:84
 #: internal/web/templates/manager/_cms_install_shared.html:110
 #: internal/web/templates/manager/flarum_install.html:23
@@ -11621,15 +11603,15 @@ msgstr "Conteúdo"
 msgid "Latest"
 msgstr "Mais recente"
 
-#: internal/web/templates/files/backup_restore.html:745
+#: internal/web/templates/files/backup_restore.html:747
 msgid "No backups found."
 msgstr "Nenhum backup encontrado."
 
-#: internal/web/templates/files/backup_restore.html:757
-#: internal/web/templates/files/filemanager_partials.html:303
-#: internal/web/templates/files/filemanager_partials.html:304
-#: internal/web/templates/files/filemanager_partials.html:377
-#: internal/web/templates/files/filemanager_partials.html:578
+#: internal/web/templates/files/backup_restore.html:759
+#: internal/web/templates/files/filemanager_partials.html:321
+#: internal/web/templates/files/filemanager_partials.html:322
+#: internal/web/templates/files/filemanager_partials.html:395
+#: internal/web/templates/files/filemanager_partials.html:596
 #: internal/web/templates/files/trash.html:44
 #: internal/web/templates/files/trash_partials.html:421
 #: internal/web/templates/manager/sites.html:205
@@ -11638,49 +11620,49 @@ msgstr "Nenhum backup encontrado."
 msgid "Select all"
 msgstr "Selecione tudo"
 
-#: internal/web/templates/files/backup_restore.html:761
+#: internal/web/templates/files/backup_restore.html:763
 #: internal/web/templates/partials/_search.html:62
 msgid "Email Account"
 msgstr "Conta de e-mail"
 
-#: internal/web/templates/files/backup_restore.html:780
+#: internal/web/templates/files/backup_restore.html:782
 msgid "VirtualHost"
 msgstr "VirtualHost"
 
-#: internal/web/templates/files/backup_restore.html:781
+#: internal/web/templates/files/backup_restore.html:783
 #: internal/web/templates/manager/php_app.html:94
 msgid "PHP version"
 msgstr "Versão do PHP"
 
-#: internal/web/templates/files/backup_restore.html:782
+#: internal/web/templates/files/backup_restore.html:784
 msgid "DNS zone"
 msgstr "Zona DNS"
 
-#: internal/web/templates/files/backup_restore.html:783
+#: internal/web/templates/files/backup_restore.html:785
 msgid "Unsuspend the domain to restore its VirtualHost."
 msgstr "Reative o domínio para restaurar o VirtualHost dele."
 
-#: internal/web/templates/files/backup_restore.html:784
+#: internal/web/templates/files/backup_restore.html:786
 msgid "Will be added"
 msgstr "Será adicionado"
 
-#: internal/web/templates/files/backup_restore.html:785
+#: internal/web/templates/files/backup_restore.html:787
 msgid "Restore the domain first"
 msgstr "Restaure o domínio primeiro"
 
-#: internal/web/templates/files/backup_restore.html:790
+#: internal/web/templates/files/backup_restore.html:792
 msgid "backups found"
 msgstr "backups encontrados"
 
-#: internal/web/templates/files/backup_restore.html:802
+#: internal/web/templates/files/backup_restore.html:804
 msgid "messages"
 msgstr "mensagens"
 
-#: internal/web/templates/files/backup_restore.html:808
+#: internal/web/templates/files/backup_restore.html:810
 msgid "No databases found in the backups."
 msgstr "Nenhum banco de dados encontrado nos backups."
 
-#: internal/web/templates/files/backup_restore.html:809
+#: internal/web/templates/files/backup_restore.html:811
 msgid ""
 "Nothing found in the backups. Backups made before this version don't list "
 "emails and domains, restore those from the Everything tab."
@@ -11688,98 +11670,98 @@ msgstr ""
 "Nada encontrado nos backups. Backups anteriores a esta versão não listam "
 "e-mails e domínios, restaure-os pela aba Tudo."
 
-#: internal/web/templates/files/backup_restore.html:822
-#: internal/web/templates/files/backup_restore.html:922
-#: internal/web/templates/files/filemanager_partials.html:580
+#: internal/web/templates/files/backup_restore.html:824
+#: internal/web/templates/files/backup_restore.html:924
+#: internal/web/templates/files/filemanager_partials.html:598
 #: internal/web/templates/manager/sites.html:484
 #: internal/web/templates/partials/_bulk.html:57
 #: internal/web/templates/partials/_bulk.html:74
 msgid "selected"
 msgstr "selecionado(s)"
 
-#: internal/web/templates/files/backup_restore.html:824
+#: internal/web/templates/files/backup_restore.html:826
 #: internal/web/templates/manager/sites.html:485
 #: internal/web/templates/partials/_bulk.html:58
 msgid "Clear"
 msgstr "Limpar"
 
-#: internal/web/templates/files/backup_restore.html:828
+#: internal/web/templates/files/backup_restore.html:830
 msgid "This backup was made before single items could be restored."
 msgstr "Este backup foi feito antes de ser possível restaurar itens avulsos."
 
-#: internal/web/templates/files/backup_restore.html:828
-#: internal/web/templates/files/backup_restore.html:829
-#: internal/web/templates/files/backup_restore.html:862
+#: internal/web/templates/files/backup_restore.html:830
+#: internal/web/templates/files/backup_restore.html:831
+#: internal/web/templates/files/backup_restore.html:864
 msgid "Choose files"
 msgstr "Escolher arquivos"
 
-#: internal/web/templates/files/backup_restore.html:842
+#: internal/web/templates/files/backup_restore.html:844
 msgid "Indexing destination, please wait..."
 msgstr "Indexando destino, aguarde..."
 
-#: internal/web/templates/files/backup_restore.html:846
+#: internal/web/templates/files/backup_restore.html:848
 msgid "No backups indexed yet"
 msgstr "Ainda não há backups indexados"
 
-#: internal/web/templates/files/backup_restore.html:847
+#: internal/web/templates/files/backup_restore.html:849
 msgid "Click \"Reindex Destination\" to fetch available backups."
 msgstr "Clique em \"Reindexar destino\" para buscar os backups disponíveis."
 
-#: internal/web/templates/files/backup_restore.html:914
+#: internal/web/templates/files/backup_restore.html:916
 msgid "This folder is empty."
 msgstr "Esta pasta está vazia."
 
-#: internal/web/templates/files/backup_restore.html:927
+#: internal/web/templates/files/backup_restore.html:929
 msgid "Restore selected"
 msgstr "Restaurar selecionados"
 
-#: internal/web/templates/files/backup_restore.html:939
+#: internal/web/templates/files/backup_restore.html:941
 msgid "Restore Summary"
 msgstr "Resumo da restauração"
 
-#: internal/web/templates/files/backup_restore.html:948
+#: internal/web/templates/files/backup_restore.html:950
 msgid "Restoring will overwrite existing data. This action cannot be undone."
 msgstr ""
 "A restauração substituirá os dados existentes. Esta ação não pode ser "
 "desfeita."
 
-#: internal/web/templates/files/backup_restore.html:948
+#: internal/web/templates/files/backup_restore.html:950
 msgid "The items are added to the queue and restored one at a time."
 msgstr "Os itens são adicionados à fila e restaurados um de cada vez."
 
-#: internal/web/templates/files/backup_restore.html:952
+#: internal/web/templates/files/backup_restore.html:954
 msgid "Items to restore"
 msgstr "Itens a restaurar"
 
-#: internal/web/templates/files/backup_restore.html:994
+#: internal/web/templates/files/backup_restore.html:996
 msgid "Restore Selected Items"
 msgstr "Restaurar itens selecionados"
 
-#: internal/web/templates/files/backup_restore.html:1007
+#: internal/web/templates/files/backup_restore.html:1009
 msgid "Download Backup"
 msgstr "Baixar backup"
 
-#: internal/web/templates/files/backup_restore.html:1011
+#: internal/web/templates/files/backup_restore.html:1013
 msgid ""
 "The backup archive will be fetched from the destination and downloaded to "
 "your browser."
 msgstr ""
 "O arquivo de backup será buscado no destino e baixado para o seu navegador."
 
-#: internal/web/templates/files/backup_restore.html:1011
+#: internal/web/templates/files/backup_restore.html:1013
 msgid "Large files may take a moment to transfer."
 msgstr "Arquivos grandes podem levar algum tempo para transferir."
 
-#: internal/web/templates/files/backup_restore.html:1012
+#: internal/web/templates/files/backup_restore.html:1014
 msgid "Download started."
 msgstr "Download iniciado."
 
-#: internal/web/templates/files/backup_restore.html:1014
+#: internal/web/templates/files/backup_restore.html:1016
 #: internal/web/templates/files/upload_file.html:301
 msgid "Download failed."
 msgstr "Falha no download."
 
-#: internal/web/templates/files/backup_restore.html:1025
+#: internal/web/templates/files/backup_restore.html:1027
 msgid "Downloading..."
 msgstr "Baixando..."
 
@@ -11796,7 +11778,7 @@ msgid "Save settings"
 msgstr "Salvar configurações"
 
 #: internal/web/templates/files/backup_settings.html:31
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid "error"
 msgstr "erro"
 
@@ -11816,15 +11798,20 @@ msgstr "Configurações de backup"
 msgid "Configure schedule, retention, etc."
 msgstr "Configure agendamento, retenção, etc."
 
-#: internal/web/templates/files/backup_settings.html:96
+#: internal/web/templates/files/backup_settings.html:82
+#: internal/web/templates/files/backup_settings.html:97
+msgid "(not set)"
+msgstr ""
+
+#: internal/web/templates/files/backup_settings.html:98
 msgid "INFO"
 msgstr "INFO"
 
-#: internal/web/templates/files/backup_settings.html:97
+#: internal/web/templates/files/backup_settings.html:99
 msgid "ERROR"
 msgstr "ERRO"
 
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid ""
 "By default, notifications would only be sent out when a backup run fails. To"
 " receive notifications for every run, set NOTIFICATION_LEVEL to"
@@ -11833,11 +11820,11 @@ msgstr ""
 "falha. Para receber notificações em toda execução, defina NOTIFICATION_LEVEL"
 " como"
 
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid "instead of the default"
 msgstr "em vez do padrão"
 
-#: internal/web/templates/files/backup_settings.html:106
+#: internal/web/templates/files/backup_settings.html:108
 msgid ""
 "Notifications (email, Slack, etc.) can be sent out when a backup run "
 "finishes. Configuration is provided as a comma-separated list of URLs."
@@ -11846,7 +11833,7 @@ msgstr ""
 " backup termina. A configuração é fornecida como uma lista de URLs separadas"
 " por vírgula."
 
-#: internal/web/templates/files/backup_settings.html:109
+#: internal/web/templates/files/backup_settings.html:111
 msgid ""
 "Parallelism level for \"gz\" (Gzip) compression defines how many blocks of "
 "data are concurrently processed. Higher values result in faster compression."
@@ -11857,11 +11844,11 @@ msgstr ""
 "compressão mais rápida. Padrão = 1. Definir como 0 usará todos os threads "
 "disponíveis."
 
-#: internal/web/templates/files/backup_settings.html:112
+#: internal/web/templates/files/backup_settings.html:114
 msgid "Full path to exclude, or regular expressions."
 msgstr "Caminho completo a excluir, ou expressões regulares."
 
-#: internal/web/templates/files/backup_settings.html:114
+#: internal/web/templates/files/backup_settings.html:116
 msgid ""
 "IThe number of days for which a backup is kept. Pass zero or a positive "
 "integer value to enable automatic rotation of old backups."
@@ -11914,7 +11901,7 @@ msgstr "Backup em andamento…"
 #: internal/web/templates/manager/python_node_apps.html:1043
 #: internal/web/templates/manager/python_node_apps.html:1048
 #: internal/web/templates/manager/websitebuilder.html:164
-#: internal/web/templates/manager/wp/single.html:1765
+#: internal/web/templates/manager/wp/single.html:1767
 #: static/js/tour-steps.js:1162
 msgid "Generate Backup"
 msgstr "Gerar backup"
@@ -12106,32 +12093,32 @@ msgid "Reason"
 msgstr "Motivo"
 
 #: internal/web/templates/files/clamav/quarantine.html:87
-#: internal/web/templates/files/clamav/quarantine.html:123
+#: internal/web/templates/files/clamav/quarantine.html:114
 msgid "Mark as safe"
 msgstr "Marcar como seguro"
 
-#: internal/web/templates/files/clamav/quarantine.html:124
+#: internal/web/templates/files/clamav/quarantine.html:115
 #: internal/web/templates/files/trash_partials.html:171
 msgid "Delete permanently"
 msgstr "Excluir permanentemente"
 
-#: internal/web/templates/files/clamav/quarantine.html:185
+#: internal/web/templates/files/clamav/quarantine.html:176
 msgid "File restored."
 msgstr "Arquivo restaurado."
 
-#: internal/web/templates/files/clamav/quarantine.html:185
+#: internal/web/templates/files/clamav/quarantine.html:176
 msgid "Restore failed"
 msgstr "Falha na restauração"
 
-#: internal/web/templates/files/clamav/quarantine.html:190
+#: internal/web/templates/files/clamav/quarantine.html:181
 msgid "File deleted."
 msgstr "Arquivo excluído."
 
-#: internal/web/templates/files/clamav/quarantine.html:190
+#: internal/web/templates/files/clamav/quarantine.html:181
 msgid "Delete failed"
 msgstr "Falha ao excluir"
 
-#: internal/web/templates/files/clamav/quarantine.html:195
+#: internal/web/templates/files/clamav/quarantine.html:186
 msgid "Marked as safe and restored."
 msgstr "Marcado como seguro e restaurado."
 
@@ -12164,7 +12151,7 @@ msgstr "As verificações concluídas aparecerão aqui."
 #: internal/web/templates/files/clamav/scan_logs.html:39
 #: internal/web/templates/manager/_cms_app_shared.html:664
 #: internal/web/templates/manager/git.html:68
-#: internal/web/templates/manager/wp/single.html:1637
+#: internal/web/templates/manager/wp/single.html:1639
 msgid "Source"
 msgstr "Origem"
 
@@ -12175,7 +12162,7 @@ msgid "Directory"
 msgstr "Diretório"
 
 #: internal/web/templates/files/clamav/scan_logs.html:42
-#: internal/web/templates/mysql/databases.html:584
+#: internal/web/templates/mysql/databases.html:603
 msgid "Result"
 msgstr "Resultado"
 
@@ -12266,7 +12253,7 @@ msgid "No malware found."
 msgstr "Nenhum malware encontrado."
 
 #: internal/web/templates/files/clamav/scanner.html:216
-#: internal/web/templates/files/fix_permissions.html:86
+#: internal/web/templates/files/fix_permissions.html:87
 msgid "Network response was not ok"
 msgstr "A resposta da rede não estava bem"
 
@@ -12310,7 +12297,7 @@ msgstr "Até um nível"
 msgid "Disk Usage (MB)"
 msgstr "Uso do disco (MB)"
 
-#: internal/web/templates/files/disk_usage.html:193
+#: internal/web/templates/files/disk_usage.html:195
 msgid "Calculating disk usage for parent directory.."
 msgstr "Cálculo de uso de disco para o diretório pai."
 
@@ -12395,12 +12382,12 @@ msgstr "Novo arquivo"
 
 #: internal/web/templates/files/filemanager.html:101
 #: internal/web/templates/files/filemanager.html:102
-#: internal/web/templates/files/filemanager_partials.html:652
+#: internal/web/templates/files/filemanager_partials.html:670
 msgid "New Folder"
 msgstr "Nova pasta"
 
 #: internal/web/templates/files/filemanager.html:117
-#: internal/web/templates/files/filemanager_partials.html:442
+#: internal/web/templates/files/filemanager_partials.html:460
 #: internal/web/templates/files/trash.html:73
 #: internal/web/templates/files/trash_partials.html:26
 #: internal/web/templates/manager/git.html:437
@@ -12411,21 +12398,21 @@ msgid "Date"
 msgstr "Data"
 
 #: internal/web/templates/files/filemanager.html:118
-#: internal/web/templates/files/filemanager_partials.html:445
+#: internal/web/templates/files/filemanager_partials.html:463
 #: internal/web/templates/files/trash.html:74
 #: internal/web/templates/files/trash_partials.html:39
 msgid "Owner"
 msgstr "Proprietário"
 
 #: internal/web/templates/files/filemanager.html:119
-#: internal/web/templates/files/filemanager_partials.html:448
+#: internal/web/templates/files/filemanager_partials.html:466
 #: internal/web/templates/files/trash.html:75
 #: internal/web/templates/files/trash_partials.html:42
 msgid "Group"
 msgstr "Grupo"
 
 #: internal/web/templates/files/filemanager.html:120
-#: internal/web/templates/files/filemanager_partials.html:452
+#: internal/web/templates/files/filemanager_partials.html:470
 #: internal/web/templates/files/trash.html:76
 #: internal/web/templates/files/trash_partials.html:46
 msgid "Links"
@@ -12437,10 +12424,10 @@ msgid "Link Target"
 msgstr "Destino do link"
 
 #: internal/web/templates/files/filemanager.html:122
-#: internal/web/templates/files/filemanager_partials.html:348
-#: internal/web/templates/files/filemanager_partials.html:349
-#: internal/web/templates/files/filemanager_partials.html:413
-#: internal/web/templates/files/filemanager_partials.html:465
+#: internal/web/templates/files/filemanager_partials.html:366
+#: internal/web/templates/files/filemanager_partials.html:367
+#: internal/web/templates/files/filemanager_partials.html:431
+#: internal/web/templates/files/filemanager_partials.html:483
 #: internal/web/templates/files/trash.html:78
 #: internal/web/templates/files/trash_partials.html:59
 msgid "Permissions"
@@ -12498,136 +12485,140 @@ msgstr "Qualquer tipo de arquivo (múltiplos arquivos permitidos)"
 msgid "Max size:"
 msgstr "Tamanho máximo:"
 
-#: internal/web/templates/files/filemanager_partials.html:73
+#: internal/web/templates/files/filemanager_partials.html:77
 msgid "Queued"
 msgstr "Na fila"
 
-#: internal/web/templates/files/filemanager_partials.html:81
+#: internal/web/templates/files/filemanager_partials.html:85
 msgid "file(s) selected"
 msgstr "arquivo(s) selecionado(s)"
 
 #: internal/web/templates/files/filemanager_partials.html:144
+msgid "%(file)s exceeds the upload limit of %(size)s MB."
+msgstr ""
+
+#: internal/web/templates/files/filemanager_partials.html:162
 msgid "Uploading..."
 msgstr "Enviando..."
 
-#: internal/web/templates/files/filemanager_partials.html:157
+#: internal/web/templates/files/filemanager_partials.html:175
 msgid "Uploading %%(count)s files"
 msgstr "Enviando %%(count)s arquivos"
 
-#: internal/web/templates/files/filemanager_partials.html:191
+#: internal/web/templates/files/filemanager_partials.html:209
 msgid "Upload error. Please try again."
 msgstr "Erro no envio. Tente novamente."
 
-#: internal/web/templates/files/filemanager_partials.html:200
+#: internal/web/templates/files/filemanager_partials.html:218
 msgid "Upload complete."
 msgstr "Envio concluído."
 
-#: internal/web/templates/files/filemanager_partials.html:201
+#: internal/web/templates/files/filemanager_partials.html:219
 msgid "Upload successful!"
 msgstr "Envio realizado com sucesso!"
 
-#: internal/web/templates/files/filemanager_partials.html:208
-#: internal/web/templates/files/filemanager_partials.html:211
+#: internal/web/templates/files/filemanager_partials.html:226
+#: internal/web/templates/files/filemanager_partials.html:229
 msgid "Upload failed:"
 msgstr "Falha no envio:"
 
-#: internal/web/templates/files/filemanager_partials.html:283
+#: internal/web/templates/files/filemanager_partials.html:301
 msgid "No items found."
 msgstr "Nenhum itens encontrado."
 
-#: internal/web/templates/files/filemanager_partials.html:284
+#: internal/web/templates/files/filemanager_partials.html:302
 msgid "Start creating new folders or uploading a new file!"
 msgstr "Comece a criar novas pastas ou fazer upload de um novo arquivo!"
 
-#: internal/web/templates/files/filemanager_partials.html:308
-#: internal/web/templates/files/filemanager_partials.html:309
-#: internal/web/templates/files/filemanager_partials.html:381
+#: internal/web/templates/files/filemanager_partials.html:326
+#: internal/web/templates/files/filemanager_partials.html:327
+#: internal/web/templates/files/filemanager_partials.html:399
 msgid "View"
 msgstr "Visualizar"
 
-#: internal/web/templates/files/filemanager_partials.html:323
-#: internal/web/templates/files/filemanager_partials.html:324
-#: internal/web/templates/files/filemanager_partials.html:393
+#: internal/web/templates/files/filemanager_partials.html:341
+#: internal/web/templates/files/filemanager_partials.html:342
+#: internal/web/templates/files/filemanager_partials.html:411
 msgid "Rename"
 msgstr "Renomear"
 
-#: internal/web/templates/files/filemanager_partials.html:333
-#: internal/web/templates/files/filemanager_partials.html:334
-#: internal/web/templates/files/filemanager_partials.html:401
-#: internal/web/templates/files/filemanager_partials.html:591
+#: internal/web/templates/files/filemanager_partials.html:351
+#: internal/web/templates/files/filemanager_partials.html:352
+#: internal/web/templates/files/filemanager_partials.html:419
+#: internal/web/templates/files/filemanager_partials.html:609
 msgid "Move"
 msgstr "Mover"
 
-#: internal/web/templates/files/filemanager_partials.html:338
-#: internal/web/templates/files/filemanager_partials.html:339
-#: internal/web/templates/files/filemanager_partials.html:405
-#: internal/web/templates/files/filemanager_partials.html:592
+#: internal/web/templates/files/filemanager_partials.html:356
+#: internal/web/templates/files/filemanager_partials.html:357
+#: internal/web/templates/files/filemanager_partials.html:423
+#: internal/web/templates/files/filemanager_partials.html:610
 msgid "Compress"
 msgstr "Compressa"
 
-#: internal/web/templates/files/filemanager_partials.html:343
-#: internal/web/templates/files/filemanager_partials.html:344
-#: internal/web/templates/files/filemanager_partials.html:409
-#: internal/web/templates/files/filemanager_partials.html:593
+#: internal/web/templates/files/filemanager_partials.html:361
+#: internal/web/templates/files/filemanager_partials.html:362
+#: internal/web/templates/files/filemanager_partials.html:427
+#: internal/web/templates/files/filemanager_partials.html:611
 msgid "Extract"
 msgstr "Extrair"
 
-#: internal/web/templates/files/filemanager_partials.html:441
+#: internal/web/templates/files/filemanager_partials.html:459
 #: internal/web/templates/files/trash_partials.html:25
 msgid "Last Modified"
 msgstr "Último modificado"
 
-#: internal/web/templates/files/filemanager_partials.html:456
+#: internal/web/templates/files/filemanager_partials.html:474
 #: internal/web/templates/files/trash_partials.html:50
 msgid "Link target"
 msgstr "Destino do link"
 
-#: internal/web/templates/files/filemanager_partials.html:479
+#: internal/web/templates/files/filemanager_partials.html:497
 msgid "Go Up"
 msgstr "Subir"
 
-#: internal/web/templates/files/filemanager_partials.html:520
-#: internal/web/templates/files/filemanager_partials.html:582
+#: internal/web/templates/files/filemanager_partials.html:538
+#: internal/web/templates/files/filemanager_partials.html:600
 #: internal/web/templates/files/trash_partials.html:97
 #: internal/web/templates/files/trash_partials.html:318
 msgid "Calculate"
 msgstr "Calcular"
 
-#: internal/web/templates/files/filemanager_partials.html:579
+#: internal/web/templates/files/filemanager_partials.html:597
 #: internal/web/templates/files/trash_partials.html:420
 msgid "Deselect"
 msgstr "Desmarcar"
 
-#: internal/web/templates/files/filemanager_partials.html:581
+#: internal/web/templates/files/filemanager_partials.html:599
 #: internal/web/templates/files/trash_partials.html:308
 msgid "Calculating..."
 msgstr "Calculando..."
 
-#: internal/web/templates/files/filemanager_partials.html:585
+#: internal/web/templates/files/filemanager_partials.html:603
 msgid "Recursive"
 msgstr "Recursivo"
 
-#: internal/web/templates/files/filemanager_partials.html:587
+#: internal/web/templates/files/filemanager_partials.html:605
 msgid "Skip the trash"
 msgstr "Ignorar a lixeira"
 
-#: internal/web/templates/files/filemanager_partials.html:589
+#: internal/web/templates/files/filemanager_partials.html:607
 msgid "Moved to trash."
 msgstr "Movido para a lixeira."
 
-#: internal/web/templates/files/filemanager_partials.html:594
+#: internal/web/templates/files/filemanager_partials.html:612
 msgid "Copy here"
 msgstr "Copiar aqui"
 
-#: internal/web/templates/files/filemanager_partials.html:595
+#: internal/web/templates/files/filemanager_partials.html:613
 msgid "Move here"
 msgstr "Mover aqui"
 
-#: internal/web/templates/files/filemanager_partials.html:596
+#: internal/web/templates/files/filemanager_partials.html:614
 msgid "Extract here"
 msgstr "Extrair aqui"
 
-#: internal/web/templates/files/filemanager_partials.html:597
+#: internal/web/templates/files/filemanager_partials.html:615
 #: internal/web/templates/user/activity.html:169
 #: internal/web/templates/user/activity.html:177
 #: internal/web/templates/user/history_usage.html:96
@@ -12635,72 +12626,72 @@ msgstr "Extrair aqui"
 msgid "items"
 msgstr "itens"
 
-#: internal/web/templates/files/filemanager_partials.html:598
+#: internal/web/templates/files/filemanager_partials.html:616
 msgid "No subfolders"
 msgstr "Sem subpastas"
 
-#: internal/web/templates/files/filemanager_partials.html:599
+#: internal/web/templates/files/filemanager_partials.html:617
 msgid "Folder not found."
 msgstr "Pasta não encontrada."
 
-#: internal/web/templates/files/filemanager_partials.html:600
+#: internal/web/templates/files/filemanager_partials.html:618
 #: internal/web/templates/files/fix_permissions.html:49
-#: internal/web/templates/mysql/databases.html:585
+#: internal/web/templates/mysql/databases.html:604
 #: internal/web/templates/partials/site_manager_shared.html:1019
 msgid "Working..."
 msgstr "Trabalhando..."
 
-#: internal/web/templates/files/filemanager_partials.html:602
+#: internal/web/templates/files/filemanager_partials.html:620
 msgid "Done! Reloading..."
 msgstr "Pronto! Recarregando..."
 
-#: internal/web/templates/files/filemanager_partials.html:603
+#: internal/web/templates/files/filemanager_partials.html:621
 msgid "Items could not be deleted."
 msgstr "Não foi possível excluir os itens."
 
-#: internal/web/templates/files/filemanager_partials.html:604
+#: internal/web/templates/files/filemanager_partials.html:622
 msgid "Some items could not be deleted."
 msgstr "Alguns itens não puderam ser excluídos."
 
-#: internal/web/templates/files/filemanager_partials.html:605
+#: internal/web/templates/files/filemanager_partials.html:623
 #: internal/web/templates/files/trash_partials.html:272
 #: internal/web/templates/files/trash_partials.html:312
 msgid "Unknown error"
 msgstr "Erro desconhecido"
 
-#: internal/web/templates/files/filemanager_partials.html:606
+#: internal/web/templates/files/filemanager_partials.html:624
 msgid "Path copied to clipboard!"
 msgstr "Caminho copiado para a área de transferência!"
 
-#: internal/web/templates/files/filemanager_partials.html:607
+#: internal/web/templates/files/filemanager_partials.html:625
 msgid "Error fetching folder size:"
 msgstr "Erro ao obter o tamanho da pasta:"
 
-#: internal/web/templates/files/filemanager_partials.html:608
+#: internal/web/templates/files/filemanager_partials.html:626
 msgid "Error deleting"
 msgstr "Erro ao excluir"
 
-#: internal/web/templates/files/filemanager_partials.html:609
+#: internal/web/templates/files/filemanager_partials.html:627
 msgid "Download for {file} started."
 msgstr "Download de {file} iniciado."
 
-#: internal/web/templates/files/filemanager_partials.html:638
+#: internal/web/templates/files/filemanager_partials.html:656
 msgid "Archive name"
 msgstr "Nome do arquivo compactado"
 
-#: internal/web/templates/files/filemanager_partials.html:664
+#: internal/web/templates/files/filemanager_partials.html:682
 msgid "Extract into a new folder"
 msgstr "Extrair em uma nova pasta"
 
-#: internal/web/templates/files/filemanager_partials.html:764
+#: internal/web/templates/files/filemanager_partials.html:782
 msgid "File Name"
 msgstr "Nome do arquivo"
 
-#: internal/web/templates/files/filemanager_partials.html:769
+#: internal/web/templates/files/filemanager_partials.html:787
 msgid "Open in File Editor after creation"
 msgstr "Abrir no editor de arquivos após a criação"
 
-#: internal/web/templates/files/filemanager_partials.html:778
+#: internal/web/templates/files/filemanager_partials.html:796
 msgid "Folder Name"
 msgstr "Nome da pasta"
 
@@ -12720,17 +12711,17 @@ msgstr ""
 "O processo foi iniciado. Isso pode levar alguns minutos dependendo do número"
 " de arquivos e pastas no caminho especificado. Aguarde."
 
-#: internal/web/templates/files/fix_permissions.html:96
-msgid "Fixing permissions failed"
-msgstr "As permissões de fixação falharam"
-
-#: internal/web/templates/files/fix_permissions.html:100
+#: internal/web/templates/files/fix_permissions.html:94
 msgid ""
 "Permissions successfully fixed for all files and subdirectories inside the "
 "directory"
 msgstr ""
 "Permissões corrigidas com sucesso para todos os arquivos e subdiretórios "
 "dentro do diretório"
+
+#: internal/web/templates/files/fix_permissions.html:99
+msgid "Fixing permissions failed"
+msgstr "As permissões de fixação falharam"
 
 #: internal/web/templates/files/ftp.html:10
 msgid "FTP Accounts Header"
@@ -12787,7 +12778,7 @@ msgid "Over quota"
 msgstr "Cota excedida"
 
 #: internal/web/templates/files/ftp.html:135
-#: internal/web/templates/files/ftp_new.html:165
+#: internal/web/templates/files/ftp_new.html:170
 #: internal/web/templates/files/ftp_quota.html:28
 #: internal/web/templates/files/ftp_quota.html:34
 msgid "Unlimited"
@@ -12847,21 +12838,21 @@ msgstr ""
 "A senha deve ter pelo menos 8 caracteres e incluir uma letra minúscula, uma "
 "letra maiúscula, um número e um caractere especial."
 
-#: internal/web/templates/files/ftp_new.html:154
+#: internal/web/templates/files/ftp_new.html:159
 msgid "Path (folder)"
 msgstr "Caminho (pasta)"
 
-#: internal/web/templates/files/ftp_new.html:163
+#: internal/web/templates/files/ftp_new.html:168
 #: internal/web/templates/files/ftp_quota.html:32
 msgid "Disk quota"
 msgstr "Cota de disco"
 
-#: internal/web/templates/files/ftp_new.html:166
+#: internal/web/templates/files/ftp_new.html:171
 #: internal/web/templates/files/ftp_quota.html:35
 msgid "Unit"
 msgstr "Unidade"
 
-#: internal/web/templates/files/ftp_new.html:171
+#: internal/web/templates/files/ftp_new.html:176
 #: internal/web/templates/files/ftp_quota.html:40
 msgid ""
 "Leave empty or set 0 for no limit. Uploads are blocked once the folder grows"
@@ -12870,7 +12861,7 @@ msgstr ""
 "Deixe vazio ou use 0 para sem limite. Os envios são bloqueados quando a "
 "pasta ultrapassa a cota, os arquivos ainda podem ser excluídos."
 
-#: internal/web/templates/files/ftp_new.html:182
+#: internal/web/templates/files/ftp_new.html:187
 #: internal/web/templates/files/ftp_quota.html:49
 msgid "Back to FTP Accounts"
 msgstr "Voltar às contas FTP"
@@ -12986,11 +12977,11 @@ msgstr ""
 msgid "Inodes Usage"
 msgstr "Uso de inodos"
 
-#: internal/web/templates/files/inodes.html:157
+#: internal/web/templates/files/inodes.html:159
 msgid "Calculating inodes count for parent directory.."
 msgstr "Calcular os inodos contam para o diretório pai."
 
-#: internal/web/templates/files/inodes.html:168
+#: internal/web/templates/files/inodes.html:167
 msgid "Failed to fetch"
 msgstr "Falhou em buscar"
 
@@ -13118,31 +13109,31 @@ msgstr "Erro de rede."
 msgid "Network error during file download. Please try again."
 msgstr "Erro de rede durante o download do arquivo. Tente novamente."
 
-#: internal/web/templates/files/upload_file.html:420
-msgid "Total file size exceeds {max}MB limit."
-msgstr "O tamanho total dos arquivos excede o limite de {max}MB."
-
-#: internal/web/templates/files/upload_file.html:437
+#: internal/web/templates/files/upload_file.html:440
 msgid "Please select files to upload."
 msgstr "Selecione os arquivos para enviar."
 
-#: internal/web/templates/files/upload_file.html:514
+#: internal/web/templates/files/upload_file.html:445
+msgid "Over the %(size)s MB upload limit:"
+msgstr ""
+
+#: internal/web/templates/files/upload_file.html:544
 msgid "Files uploaded successfully!"
 msgstr "Arquivos enviados com sucesso!"
 
-#: internal/web/templates/files/upload_file.html:524
+#: internal/web/templates/files/upload_file.html:553
 msgid "Error uploading file:"
 msgstr "Erro ao enviar o arquivo:"
 
-#: internal/web/templates/files/upload_file.html:534
+#: internal/web/templates/files/upload_file.html:562
 msgid "Network error during file upload. Please try again."
 msgstr "Erro de rede durante o envio do arquivo. Tente novamente."
 
-#: internal/web/templates/files/upload_file.html:555
+#: internal/web/templates/files/upload_file.html:579
 msgid "An upload is in progress. Are you sure you want to leave?"
 msgstr "Um envio está em andamento. Tem certeza de que deseja sair?"
 
-#: internal/web/templates/files/upload_file.html:560
+#: internal/web/templates/files/upload_file.html:584
 msgid "A download is in progress. Are you sure you want to leave?"
 msgstr "Um download está em andamento. Tem certeza de que deseja sair?"
 
@@ -13327,7 +13318,7 @@ msgid "Open FTP Accounts"
 msgstr "Abrir contas FTP"
 
 #: internal/web/templates/manager/_cms_app_shared.html:489
-#: internal/web/templates/manager/wp/single.html:2004
+#: internal/web/templates/manager/wp/single.html:2006
 msgid "MariaDB:"
 msgstr "MariaDB:"
 
@@ -13335,7 +13326,7 @@ msgstr "MariaDB:"
 #: internal/web/templates/manager/_cms_app_shared.html:1197
 #: internal/web/templates/manager/python_node_apps.html:980
 #: internal/web/templates/manager/websitebuilder.html:153
-#: internal/web/templates/manager/wp/single.html:1750
+#: internal/web/templates/manager/wp/single.html:1752
 msgid "Create a Backup"
 msgstr "Crie um backup"
 
@@ -13356,8 +13347,8 @@ msgstr "Gere um backup dos arquivos do site."
 #: internal/web/templates/manager/tinyphotogallery_app.html:179
 #: internal/web/templates/manager/websitebuilder.html:171
 #: internal/web/templates/manager/websitebuilder.html:234
-#: internal/web/templates/manager/wp/single.html:1772
-#: internal/web/templates/manager/wp/single.html:1841
+#: internal/web/templates/manager/wp/single.html:1774
+#: internal/web/templates/manager/wp/single.html:1843
 #: internal/web/templates/system/cronjobs_new.html:68
 msgid "or"
 msgstr "ou"
@@ -13366,7 +13357,7 @@ msgstr "ou"
 #: internal/web/templates/manager/_cms_app_shared.html:1238
 #: internal/web/templates/manager/python_node_apps.html:996
 #: internal/web/templates/manager/websitebuilder.html:175
-#: internal/web/templates/manager/wp/single.html:1776
+#: internal/web/templates/manager/wp/single.html:1778
 msgid "Restore from Backups"
 msgstr "Restaurar de backups"
 
@@ -13378,7 +13369,7 @@ msgstr "Restaure os arquivos do site a partir de um backup."
 #: internal/web/templates/manager/_cms_app_shared.html:1246
 #: internal/web/templates/manager/python_node_apps.html:1004
 #: internal/web/templates/manager/websitebuilder.html:183
-#: internal/web/templates/manager/wp/single.html:1784
+#: internal/web/templates/manager/wp/single.html:1786
 msgid "Display Backups"
 msgstr "Exibir backups"
 
@@ -13386,7 +13377,7 @@ msgstr "Exibir backups"
 #: internal/web/templates/manager/_cms_app_shared.html:1250
 #: internal/web/templates/manager/python_node_apps.html:1008
 #: internal/web/templates/manager/websitebuilder.html:187
-#: internal/web/templates/manager/wp/single.html:1788
+#: internal/web/templates/manager/wp/single.html:1790
 msgid "Select a backup date:"
 msgstr "Selecione uma data de backup:"
 
@@ -13398,25 +13389,25 @@ msgstr "Selecione uma data de backup:"
 #: internal/web/templates/manager/python_node_apps.html:1099
 #: internal/web/templates/manager/websitebuilder.html:193
 #: internal/web/templates/manager/websitebuilder.html:418
-#: internal/web/templates/manager/wp/single.html:1794
-#: internal/web/templates/manager/wp/single.html:2182
+#: internal/web/templates/manager/wp/single.html:1796
+#: internal/web/templates/manager/wp/single.html:2188
 msgid "Start Restore"
 msgstr "Comece a restaurar"
 
 #: internal/web/templates/manager/_cms_app_shared.html:658
 #: internal/web/templates/manager/python_node_apps.html:854
-#: internal/web/templates/manager/wp/single.html:1631
+#: internal/web/templates/manager/wp/single.html:1633
 msgid "Location"
 msgstr "Localização"
 
 #: internal/web/templates/manager/_cms_app_shared.html:659
-#: internal/web/templates/manager/wp/single.html:1632
+#: internal/web/templates/manager/wp/single.html:1634
 msgid "Please choose the URL to install the software"
 msgstr "Escolha a URL para instalar o software"
 
 #: internal/web/templates/manager/_cms_app_shared.html:670
 #: internal/web/templates/manager/python_node_apps.html:860
-#: internal/web/templates/manager/wp/single.html:1643
+#: internal/web/templates/manager/wp/single.html:1645
 msgid "Target"
 msgstr "Destino"
 
@@ -13430,7 +13421,7 @@ msgstr "Destino"
 #: internal/web/templates/manager/python_node_apps.html:925
 #: internal/web/templates/manager/websitebuilder_install.html:41
 #: internal/web/templates/manager/wp/install.html:76
-#: internal/web/templates/manager/wp/single.html:1647
+#: internal/web/templates/manager/wp/single.html:1649
 msgid "Select a domain"
 msgstr "Selecione um domínio"
 
@@ -13443,12 +13434,12 @@ msgstr "Selecione um domínio"
 #: internal/web/templates/manager/python_node_apps.html:870
 #: internal/web/templates/manager/websitebuilder_install.html:46
 #: internal/web/templates/manager/wp/install.html:81
-#: internal/web/templates/manager/wp/single.html:1653
+#: internal/web/templates/manager/wp/single.html:1655
 msgid "subfolder"
 msgstr "subpasta"
 
 #: internal/web/templates/manager/_cms_app_shared.html:683
-#: internal/web/templates/manager/wp/single.html:1656
+#: internal/web/templates/manager/wp/single.html:1658
 msgid ""
 "Make sure that the domain or the subdomain selected as a target is not being"
 " used by an existing website. During cloning, website data that exists on "
@@ -13463,7 +13454,7 @@ msgstr ""
 #: internal/web/templates/manager/_cms_app_shared.html:1403
 #: internal/web/templates/manager/python_node_apps.html:1070
 #: internal/web/templates/manager/websitebuilder.html:376
-#: internal/web/templates/manager/wp/single.html:2139
+#: internal/web/templates/manager/wp/single.html:2145
 msgid "No backups available"
 msgstr "Nenhum backup disponível"
 
@@ -13471,7 +13462,7 @@ msgstr "Nenhum backup disponível"
 #: internal/web/templates/manager/_cms_app_shared.html:1415
 #: internal/web/templates/manager/python_node_apps.html:1082
 #: internal/web/templates/manager/websitebuilder.html:390
-#: internal/web/templates/manager/wp/single.html:2154
+#: internal/web/templates/manager/wp/single.html:2160
 msgid "Click again to confirm"
 msgstr "Clique novamente para confirmar"
 
@@ -13479,34 +13470,34 @@ msgstr "Clique novamente para confirmar"
 #: internal/web/templates/manager/_cms_app_shared.html:1422
 #: internal/web/templates/manager/python_node_apps.html:1089
 #: internal/web/templates/manager/websitebuilder.html:404
-#: internal/web/templates/manager/wp/single.html:2168
+#: internal/web/templates/manager/wp/single.html:2174
 msgid "Restoring backup... Please wait."
 msgstr "Restaurando o backup ... por favor, espere."
 
 #: internal/web/templates/manager/_cms_app_shared.html:742
 #: internal/web/templates/manager/_cms_app_shared.html:1426
 #: internal/web/templates/manager/websitebuilder.html:411
-#: internal/web/templates/manager/wp/single.html:2175
+#: internal/web/templates/manager/wp/single.html:2181
 msgid "Restore request failed."
 msgstr "A solicitação de restauração falhou."
 
 #: internal/web/templates/manager/_cms_app_shared.html:765
 #: internal/web/templates/manager/_cms_app_shared.html:1458
-#: internal/web/templates/manager/wp/single.html:2230
+#: internal/web/templates/manager/wp/single.html:2236
 msgid "Generating Backup..."
 msgstr "Gerando backup..."
 
 #: internal/web/templates/manager/_cms_app_shared.html:766
 #: internal/web/templates/manager/_cms_app_shared.html:1459
 #: internal/web/templates/manager/websitebuilder.html:451
-#: internal/web/templates/manager/wp/single.html:2232
+#: internal/web/templates/manager/wp/single.html:2238
 msgid "Generating website backup.. Please wait."
 msgstr "Gerando backup de sites .. Por favor, espere."
 
 #: internal/web/templates/manager/_cms_app_shared.html:770
 #: internal/web/templates/manager/_cms_app_shared.html:1463
 #: internal/web/templates/manager/websitebuilder.html:458
-#: internal/web/templates/manager/wp/single.html:2239
+#: internal/web/templates/manager/wp/single.html:2245
 msgid "Backup request failed."
 msgstr "A solicitação de backup falhou."
 
@@ -13598,52 +13589,52 @@ msgstr "Abrir formulário de login do phpMyAdmin"
 
 #: internal/web/templates/manager/_cms_app_shared.html:898
 #: internal/web/templates/manager/_cms_app_shared.html:1551
-#: internal/web/templates/manager/wp/single.html:1699
+#: internal/web/templates/manager/wp/single.html:1701
 msgid "Clone website"
 msgstr "Clonar site"
 
 #: internal/web/templates/manager/_cms_app_shared.html:912
 #: internal/web/templates/manager/python_node_apps.html:942
-#: internal/web/templates/manager/wp/single.html:1707
+#: internal/web/templates/manager/wp/single.html:1709
 msgid "Cloning..."
 msgstr "Clonando..."
 
 #: internal/web/templates/manager/_cms_app_shared.html:914
 #: internal/web/templates/manager/python_node_apps.html:944
-#: internal/web/templates/manager/wp/single.html:1713
+#: internal/web/templates/manager/wp/single.html:1715
 msgid "Cloning process started... Please wait."
 msgstr "Processo de clonagem iniciado... Aguarde."
 
 #: internal/web/templates/manager/_cms_app_shared.html:927
-#: internal/web/templates/manager/wp/single.html:1726
+#: internal/web/templates/manager/wp/single.html:1728
 msgid "Cloned to {target} successfully!"
 msgstr "Clonado com sucesso para {target}!"
 
 #: internal/web/templates/manager/_cms_app_shared.html:928
 #: internal/web/templates/manager/python_node_apps.html:958
-#: internal/web/templates/manager/wp/single.html:1727
+#: internal/web/templates/manager/wp/single.html:1729
 msgid "Clone Complete"
 msgstr "Clonagem concluída"
 
 #: internal/web/templates/manager/_cms_app_shared.html:930
-#: internal/web/templates/manager/wp/single.html:1729
+#: internal/web/templates/manager/wp/single.html:1731
 msgid "Error cloning site"
 msgstr "Erro ao clonar o site"
 
 #: internal/web/templates/manager/_cms_app_shared.html:932
 #: internal/web/templates/manager/python_node_apps.html:962
-#: internal/web/templates/manager/wp/single.html:1731
+#: internal/web/templates/manager/wp/single.html:1733
 msgid "Try Again"
 msgstr "Tentar novamente"
 
 #: internal/web/templates/manager/_cms_app_shared.html:938
 #: internal/web/templates/manager/python_node_apps.html:968
-#: internal/web/templates/manager/wp/single.html:1737
+#: internal/web/templates/manager/wp/single.html:1739
 msgid "Retry Clone"
 msgstr "Tentar clonagem novamente"
 
 #: internal/web/templates/manager/_cms_app_shared.html:952
-#: internal/web/templates/manager/wp/single.html:1443
+#: internal/web/templates/manager/wp/single.html:1444
 #: internal/web/templates/system/cronjobs.html:67
 msgid "Refresh"
 msgstr "Atualizar"
@@ -13654,28 +13645,28 @@ msgid "Loading error log.."
 msgstr "Carregando log de erros.."
 
 #: internal/web/templates/manager/_cms_app_shared.html:970
-#: internal/web/templates/manager/wp/single.html:1668
+#: internal/web/templates/manager/wp/single.html:1670
 msgid "Database name and user to use for the clone (optional)"
 msgstr ""
 "Nome do banco de dados e usuário a serem usados para o clone (opcional)"
 
 #: internal/web/templates/manager/_cms_app_shared.html:978
-#: internal/web/templates/manager/wp/single.html:1676
+#: internal/web/templates/manager/wp/single.html:1678
 msgid "Database name must be between 6 and 30 characters."
 msgstr "O nome do banco de dados deve ter entre 6 e 30 caracteres."
 
 #: internal/web/templates/manager/_cms_app_shared.html:982
-#: internal/web/templates/manager/wp/single.html:1680
+#: internal/web/templates/manager/wp/single.html:1682
 msgid "Database user"
 msgstr "Usuário do banco de dados"
 
 #: internal/web/templates/manager/_cms_app_shared.html:985
-#: internal/web/templates/manager/wp/single.html:1683
+#: internal/web/templates/manager/wp/single.html:1685
 msgid "Username must be between 6 and 30 characters."
 msgstr "O nome de usuário deve ter entre 6 e 30 caracteres."
 
 #: internal/web/templates/manager/_cms_app_shared.html:989
-#: internal/web/templates/manager/wp/single.html:1687
+#: internal/web/templates/manager/wp/single.html:1689
 msgid "User password"
 msgstr "Senha do usuário"
 
@@ -13780,18 +13771,18 @@ msgid "A backup is recommended before updating - see the Backups tab."
 msgstr "Recomenda-se um backup antes de atualizar - veja a aba Backups."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1198
-#: internal/web/templates/manager/wp/single.html:1751
+#: internal/web/templates/manager/wp/single.html:1753
 msgid "Generate a backup of files and/or database."
 msgstr "Gere um backup dos arquivos e/ou do banco de dados."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1206
-#: internal/web/templates/manager/wp/single.html:1759
+#: internal/web/templates/manager/wp/single.html:1761
 msgid "Backup Database"
 msgstr "Banco de dados de backup"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1210
 #: internal/web/templates/manager/websitebuilder.html:162
-#: internal/web/templates/manager/wp/single.html:1763
+#: internal/web/templates/manager/wp/single.html:1765
 msgid "Backup Files"
 msgstr "Arquivos de backup"
 
@@ -13800,7 +13791,7 @@ msgid "Clone a %(name)s instance with its database and files."
 msgstr "Clona uma instância do %(name)s com seu banco de dados e arquivos."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1239
-#: internal/web/templates/manager/wp/single.html:1777
+#: internal/web/templates/manager/wp/single.html:1779
 msgid "Restore files and/or database from a backup."
 msgstr "Restaure arquivos e/ou banco de dados a partir de um backup."
 
@@ -13812,7 +13803,7 @@ msgstr "Restaure arquivos e/ou banco de dados a partir de um backup."
 #: internal/web/templates/manager/ojs_app.html:204
 #: internal/web/templates/manager/opencart_app.html:190
 #: internal/web/templates/manager/prestashop_app.html:174
-#: internal/web/templates/manager/wp/single.html:2306
+#: internal/web/templates/manager/wp/single.html:2312
 msgid "A newer version is available."
 msgstr "Uma versão mais recente está disponível."
 
@@ -13825,7 +13816,7 @@ msgstr "Uma versão mais recente está disponível."
 #: internal/web/templates/manager/ojs_app.html:209
 #: internal/web/templates/manager/opencart_app.html:194
 #: internal/web/templates/manager/prestashop_app.html:178
-#: internal/web/templates/manager/wp/single.html:2295
+#: internal/web/templates/manager/wp/single.html:2301
 msgid "You are running the latest version."
 msgstr "Você está usando a versão mais recente."
 
@@ -13897,28 +13888,28 @@ msgid "Fetch error. Please try again."
 msgstr "Erro de busca. "
 
 #: internal/web/templates/manager/_cms_app_shared.html:1380
-#: internal/web/templates/manager/wp/single.html:2205
+#: internal/web/templates/manager/wp/single.html:2211
 msgid "Database and Files Backup"
 msgstr "Backup de banco de dados e arquivos"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1381
-#: internal/web/templates/manager/wp/single.html:2207
+#: internal/web/templates/manager/wp/single.html:2213
 msgid "Database Backup"
 msgstr "Backup de banco de dados"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1382
 #: internal/web/templates/manager/websitebuilder.html:371
-#: internal/web/templates/manager/wp/single.html:2209
+#: internal/web/templates/manager/wp/single.html:2215
 msgid "Files Backup"
 msgstr "Backup de arquivos"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1383
-#: internal/web/templates/manager/wp/single.html:2211
+#: internal/web/templates/manager/wp/single.html:2217
 msgid "Unknown Backup Type"
 msgstr "Tipo de backup desconhecido"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1453
-#: internal/web/templates/manager/wp/single.html:2224
+#: internal/web/templates/manager/wp/single.html:2230
 msgid ""
 "No options selected to backup. Please ensure that at least one of the "
 "Database or Files is selected."
@@ -13960,7 +13951,7 @@ msgstr ""
 #: internal/web/templates/manager/tinyfilemanager_app.html:66
 #: internal/web/templates/manager/tinyphotogallery_app.html:166
 #: internal/web/templates/manager/websitebuilder.html:221
-#: internal/web/templates/manager/wp/single.html:1828
+#: internal/web/templates/manager/wp/single.html:1830
 msgid "Confirm Detach"
 msgstr "Confirmar desanexação"
 
@@ -14320,7 +14311,7 @@ msgstr "Executando o instalador via CLI do %(name)s"
 msgid "Registering cron job and saving to Site Manager"
 msgstr "Registrando a tarefa cron e salvando no Gerenciador de Sites"
 
-#: internal/web/templates/manager/_cms_install_shared.html:566
+#: internal/web/templates/manager/_cms_install_shared.html:568
 #: internal/web/templates/manager/drupal_install.html:297
 #: internal/web/templates/manager/flarum_install.html:317
 #: internal/web/templates/manager/joomla_install.html:294
@@ -16091,7 +16082,7 @@ msgstr "A remoção do aplicativo foi iniciada. "
 #: internal/web/templates/manager/n8n_app.html:707
 #: internal/web/templates/manager/python_node_apps.html:1343
 #: internal/web/templates/manager/websitebuilder.html:345
-#: internal/web/templates/manager/wp/single.html:2108
+#: internal/web/templates/manager/wp/single.html:2114
 msgid "An error occurred fetching folder size from the container."
 msgstr "Ocorreu um erro buscando o tamanho da pasta do contêiner."
 
@@ -16890,7 +16881,7 @@ msgid "No new installations found."
 msgstr "Nenhuma nova instalação encontrada."
 
 #: internal/web/templates/manager/sites.html:189
-#: internal/web/templates/manager/wp/list.html:386
+#: internal/web/templates/manager/wp/list.html:385
 msgid "Error occurred during scan. Try again."
 msgstr "Ocorreu um erro durante a varredura. "
 
@@ -17813,27 +17804,27 @@ msgstr ""
 "Google Search e nos navegadores. Aqui você pode ver se este site está "
 "atualmente marcado pelo Google como perigoso para visitar."
 
-#: internal/web/templates/manager/wp/_shared.html:162
+#: internal/web/templates/manager/wp/_shared.html:170
 msgid "No description available."
 msgstr "Nenhuma descrição disponível."
 
-#: internal/web/templates/manager/wp/_shared.html:226
+#: internal/web/templates/manager/wp/_shared.html:234
 msgid "Last checked"
 msgstr "Última verificação"
 
-#: internal/web/templates/manager/wp/_shared.html:292
+#: internal/web/templates/manager/wp/_shared.html:300
 msgid "Checking website status..."
 msgstr "Verificando o status do site..."
 
-#: internal/web/templates/manager/wp/_shared.html:304
+#: internal/web/templates/manager/wp/_shared.html:312
 msgid "No unsafe content found"
 msgstr "Nenhum conteúdo inseguro encontrado"
 
-#: internal/web/templates/manager/wp/_shared.html:306
+#: internal/web/templates/manager/wp/_shared.html:314
 msgid "The website is flagged for threats:"
 msgstr "O site está sinalizado por ameaças:"
 
-#: internal/web/templates/manager/wp/_shared.html:317
+#: internal/web/templates/manager/wp/_shared.html:325
 msgid "Failed to check the website"
 msgstr "Falha ao verificar o site"
 
@@ -18106,20 +18097,20 @@ msgid "An error occurred while removing WordPress. Please try again."
 msgstr "Ocorreu um erro ao remover o WordPress. Tente novamente."
 
 #: internal/web/templates/manager/wp/list.html:256
-#: internal/web/templates/manager/wp/single.html:1889
+#: internal/web/templates/manager/wp/single.html:1891
 msgid "WordPress detach process started. Please wait."
 msgstr "O processo de destacamento do WordPress foi iniciado. "
 
 #: internal/web/templates/manager/wp/list.html:267
-#: internal/web/templates/manager/wp/single.html:1900
+#: internal/web/templates/manager/wp/single.html:1902
 msgid "An error occurred while detaching WordPress. Please try again."
 msgstr "Ocorreu um erro ao destacar o WordPress. "
 
-#: internal/web/templates/manager/wp/list.html:342
+#: internal/web/templates/manager/wp/list.html:341
 msgid "No WordPress Installations"
 msgstr "Sem instalações do WordPress"
 
-#: internal/web/templates/manager/wp/list.html:344
+#: internal/web/templates/manager/wp/list.html:343
 msgid ""
 "No WordPress sites managed via OpenPanel. Install a new WordPress site or "
 "scan to find existing installations."
@@ -18127,33 +18118,33 @@ msgstr ""
 "Nenhum site WordPress gerenciado pelo OpenPanel. Instale um novo site "
 "WordPress ou faça uma varredura para encontrar instalações existentes."
 
-#: internal/web/templates/manager/wp/list.html:346
+#: internal/web/templates/manager/wp/list.html:345
 #: internal/web/templates/system/cronjobs.html:489
 #: internal/web/templates/user/favorites.html:131
 msgid "View Documentation"
 msgstr "Ver documentação"
 
-#: internal/web/templates/manager/wp/list.html:365
+#: internal/web/templates/manager/wp/list.html:364
 msgid "Scanning started..."
 msgstr "A digitalização começou ..."
 
-#: internal/web/templates/manager/wp/list.html:376
+#: internal/web/templates/manager/wp/list.html:375
 msgid "No installations found."
 msgstr "Nenhuma instalação encontrada."
 
-#: internal/web/templates/manager/wp/list.html:380
+#: internal/web/templates/manager/wp/list.html:379
 msgid "Scan skipped. WordPress installation is currently running."
 msgstr "A varredura pulou. "
 
-#: internal/web/templates/manager/wp/list.html:395
+#: internal/web/templates/manager/wp/list.html:394
 msgid "Data refresh in progress... Please wait."
 msgstr "Atualização de dados em andamento ... por favor, espere."
 
-#: internal/web/templates/manager/wp/list.html:401
+#: internal/web/templates/manager/wp/list.html:400
 msgid "Refresh completed."
 msgstr "Atualização concluída."
 
-#: internal/web/templates/manager/wp/list.html:405
+#: internal/web/templates/manager/wp/list.html:404
 msgid "Error occurred during refresh."
 msgstr "Ocorreu um erro durante a atualização."
 
@@ -18515,40 +18506,40 @@ msgstr "Salvar preferências de atualização"
 msgid "Saving update preferences... Please wait."
 msgstr "Economizando as preferências de atualização ... por favor, espere."
 
-#: internal/web/templates/manager/wp/single.html:1358
+#: internal/web/templates/manager/wp/single.html:1359
 msgid "Saving general settings... Please wait."
 msgstr "Salvando configurações gerais ... por favor, espere."
 
-#: internal/web/templates/manager/wp/single.html:1404
+#: internal/web/templates/manager/wp/single.html:1405
 msgid "Error fetching debug info. Refresh the page."
 msgstr "Erro buscar informações de depuração. "
 
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/system/error_logs.html:153
 msgid "Critical"
 msgstr "Crítico"
 
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/system/error_logs.html:153
 msgid "Notice"
 msgstr "Aviso"
 
-#: internal/web/templates/manager/wp/single.html:1440
+#: internal/web/templates/manager/wp/single.html:1441
 msgid "Latest PHP, web server and HTTP 5xx errors for this website."
 msgstr "Últimos erros de PHP, do servidor web e HTTP 5xx deste site."
 
-#: internal/web/templates/manager/wp/single.html:1442
-#: internal/web/templates/manager/wp/single.html:1472
+#: internal/web/templates/manager/wp/single.html:1443
+#: internal/web/templates/manager/wp/single.html:1473
 #: internal/web/templates/system/waf.html:349
 msgid "View Logs"
 msgstr "Ver Logs"
 
-#: internal/web/templates/manager/wp/single.html:1449
+#: internal/web/templates/manager/wp/single.html:1450
 #: internal/web/templates/system/error_logs.html:106
 msgid "No errors found for these filters."
 msgstr "Nenhum erro encontrado para estes filtros."
 
-#: internal/web/templates/manager/wp/single.html:1479
+#: internal/web/templates/manager/wp/single.html:1480
 msgid ""
 "The options below allow you to manage the native WordPress debugging tools, "
 "enabling and disabling these tools in the wp-config.php file. It is not "
@@ -18560,60 +18551,60 @@ msgstr ""
 "config.php. Não é recomendado usar estas opções em sites de produção, pois "
 "elas são destinadas a instalações de desenvolvimento e teste. Consulte"
 
-#: internal/web/templates/manager/wp/single.html:1479
+#: internal/web/templates/manager/wp/single.html:1480
 msgid "Debugging in WordPress"
 msgstr "Depuração no WordPress"
 
-#: internal/web/templates/manager/wp/single.html:1479
+#: internal/web/templates/manager/wp/single.html:1480
 msgid "article for more information on these options."
 msgstr "Artigo para obter mais informações sobre essas opções."
 
-#: internal/web/templates/manager/wp/single.html:1490
-#: internal/web/templates/manager/wp/single.html:1496
+#: internal/web/templates/manager/wp/single.html:1491
+#: internal/web/templates/manager/wp/single.html:1497
 msgid "WP_DEBUG"
 msgstr "Wp_debug"
 
-#: internal/web/templates/manager/wp/single.html:1491
+#: internal/web/templates/manager/wp/single.html:1492
 msgid "WordPress debug mode."
 msgstr "Modo de depuração do WordPress."
 
-#: internal/web/templates/manager/wp/single.html:1498
+#: internal/web/templates/manager/wp/single.html:1499
 msgid "Enable WP_DEBUG mode"
 msgstr "Ativar modo wp_debug"
 
-#: internal/web/templates/manager/wp/single.html:1509
-#: internal/web/templates/manager/wp/single.html:1515
+#: internal/web/templates/manager/wp/single.html:1510
+#: internal/web/templates/manager/wp/single.html:1516
 msgid "WP_DEBUG_LOG"
 msgstr "Wp_debug_log"
 
-#: internal/web/templates/manager/wp/single.html:1510
+#: internal/web/templates/manager/wp/single.html:1511
 msgid "Save all errors to the debug.log file inside the wp-content directory."
 msgstr ""
 "Salve todos os erros no arquivo Debug.log dentro do diretório WP-Content."
 
-#: internal/web/templates/manager/wp/single.html:1517
+#: internal/web/templates/manager/wp/single.html:1518
 msgid "Enable WP_DEBUG_LOG"
 msgstr "Ativar wp_debug_log"
 
-#: internal/web/templates/manager/wp/single.html:1528
-#: internal/web/templates/manager/wp/single.html:1534
+#: internal/web/templates/manager/wp/single.html:1529
+#: internal/web/templates/manager/wp/single.html:1535
 msgid "WP_DEBUG_DISPLAY"
 msgstr "Wp_debug_display"
 
-#: internal/web/templates/manager/wp/single.html:1529
+#: internal/web/templates/manager/wp/single.html:1530
 msgid "Show debug messages inside the HTML pages"
 msgstr "Mostre mensagens de depuração dentro das páginas HTML"
 
-#: internal/web/templates/manager/wp/single.html:1536
+#: internal/web/templates/manager/wp/single.html:1537
 msgid "Enable WP_DEBUG_DISPLAY"
 msgstr "Ativar wp_debug_display"
 
-#: internal/web/templates/manager/wp/single.html:1547
-#: internal/web/templates/manager/wp/single.html:1553
+#: internal/web/templates/manager/wp/single.html:1548
+#: internal/web/templates/manager/wp/single.html:1554
 msgid "SCRIPT_DEBUG"
 msgstr "Script_debug"
 
-#: internal/web/templates/manager/wp/single.html:1548
+#: internal/web/templates/manager/wp/single.html:1549
 msgid ""
 "Force WordPress to use the non-minified versions of core CSS and JavaScript "
 "files. This is useful when you are testing changes made to .js and .css "
@@ -18623,16 +18614,16 @@ msgstr ""
 "JavaScript do núcleo. Isso é útil quando você está testando alterações "
 "feitas em arquivos .js e .css."
 
-#: internal/web/templates/manager/wp/single.html:1555
+#: internal/web/templates/manager/wp/single.html:1556
 msgid "Enable SCRIPT_DEBUG"
 msgstr "Ativar script_debug"
 
-#: internal/web/templates/manager/wp/single.html:1566
-#: internal/web/templates/manager/wp/single.html:1572
+#: internal/web/templates/manager/wp/single.html:1567
+#: internal/web/templates/manager/wp/single.html:1573
 msgid "SAVEQUERIES"
 msgstr "Salvar quileiros"
 
-#: internal/web/templates/manager/wp/single.html:1567
+#: internal/web/templates/manager/wp/single.html:1568
 msgid ""
 "Save database queries to an array that can be displayed to help analyze "
 "them."
@@ -18640,62 +18631,62 @@ msgstr ""
 "Salvar consultas ao banco de dados em um array que pode ser exibido para "
 "auxiliar na análise."
 
-#: internal/web/templates/manager/wp/single.html:1574
+#: internal/web/templates/manager/wp/single.html:1575
 msgid "Enable SAVEQUERIES"
 msgstr "Habilite o SalveQueries"
 
-#: internal/web/templates/manager/wp/single.html:1584
+#: internal/web/templates/manager/wp/single.html:1585
 msgid "Save Debugging"
 msgstr "Salvar depuração"
 
-#: internal/web/templates/manager/wp/single.html:1592
+#: internal/web/templates/manager/wp/single.html:1593
 msgid "Saving debugging options... Please wait."
 msgstr "Economizando as opções de depuração ... por favor, espere."
 
-#: internal/web/templates/manager/wp/single.html:1618
+#: internal/web/templates/manager/wp/single.html:1620
 msgid "Clone a WordPress instance with configured themes and plugins."
 msgstr "Clona uma instância do WordPress com os temas e plugins configurados."
 
-#: internal/web/templates/manager/wp/single.html:1814
-#: internal/web/templates/manager/wp/single.html:1824
+#: internal/web/templates/manager/wp/single.html:1816
+#: internal/web/templates/manager/wp/single.html:1826
 msgid "Remove the"
 msgstr "Remova o"
 
-#: internal/web/templates/manager/wp/single.html:1814
+#: internal/web/templates/manager/wp/single.html:1816
 msgid "website from WP Manager."
 msgstr "site do WP Manager."
 
-#: internal/web/templates/manager/wp/single.html:1821
+#: internal/web/templates/manager/wp/single.html:1823
 msgid "Detach WordPress"
 msgstr "Destacar o wordpress"
 
-#: internal/web/templates/manager/wp/single.html:1824
+#: internal/web/templates/manager/wp/single.html:1826
 msgid "website from this manager without actually deleting any files."
 msgstr "Site deste gerente sem realmente excluir nenhum arquivo."
 
-#: internal/web/templates/manager/wp/single.html:1825
+#: internal/web/templates/manager/wp/single.html:1827
 msgid "All website data such as files, crons and database remains."
 msgstr ""
 "Todos os dados do site, como arquivos, tarefas cron e banco de dados, "
 "permanecem."
 
-#: internal/web/templates/manager/wp/single.html:1846
+#: internal/web/templates/manager/wp/single.html:1848
 msgid "Permanently delete WordPress files & database."
 msgstr "Exclui permanentemente os arquivos e o banco de dados do WordPress."
 
-#: internal/web/templates/manager/wp/single.html:1853
+#: internal/web/templates/manager/wp/single.html:1855
 msgid "Uninstall WordPress"
 msgstr "Desinstale o WordPress"
 
-#: internal/web/templates/manager/wp/single.html:1856
+#: internal/web/templates/manager/wp/single.html:1858
 msgid "Delete the"
 msgstr "Excluir o"
 
-#: internal/web/templates/manager/wp/single.html:1856
+#: internal/web/templates/manager/wp/single.html:1858
 msgid "website and all its files and database."
 msgstr "site e todos os seus arquivos e banco de dados."
 
-#: internal/web/templates/manager/wp/single.html:1857
+#: internal/web/templates/manager/wp/single.html:1859
 msgid ""
 "All WordPress data will be permanently deleted. There is no coming back "
 "after you press delete."
@@ -18703,31 +18694,31 @@ msgstr ""
 "Todos os dados do WordPress serão excluídos permanentemente. Não há como "
 "voltar atrás após pressionar excluir."
 
-#: internal/web/templates/manager/wp/single.html:1860
+#: internal/web/templates/manager/wp/single.html:1862
 msgid "Confirm Uninstall"
 msgstr "Confirme a desinstalação"
 
-#: internal/web/templates/manager/wp/single.html:1875
+#: internal/web/templates/manager/wp/single.html:1877
 msgid "WordPress uninstall process started. Please wait."
 msgstr "O processo de desinstalação do WordPress foi iniciado. "
 
-#: internal/web/templates/manager/wp/single.html:1962
+#: internal/web/templates/manager/wp/single.html:1964
 msgid "An error occurred fetching DB size."
 msgstr "Ocorreu um erro ao buscar o tamanho do banco de dados."
 
-#: internal/web/templates/manager/wp/single.html:2057
+#: internal/web/templates/manager/wp/single.html:2062
 msgid "Update in progress..."
 msgstr "Atualização em andamento ..."
 
-#: internal/web/templates/manager/wp/single.html:2063
+#: internal/web/templates/manager/wp/single.html:2069
 msgid "WordPress updated successfully"
 msgstr "WordPress atualizado com sucesso"
 
-#: internal/web/templates/manager/wp/single.html:2064
+#: internal/web/templates/manager/wp/single.html:2070
 msgid "WordPress updated successfully."
 msgstr "WordPress atualizado com sucesso."
 
-#: internal/web/templates/manager/wp/single.html:2073
+#: internal/web/templates/manager/wp/single.html:2079
 msgid "Update failed."
 msgstr "Falha na atualização."
 
@@ -18832,6 +18823,8 @@ msgstr "Indisponível enquanto o serviço não estiver em execução."
 
 #: internal/web/templates/mongodb/databases.html:71
 #: internal/web/templates/mysql/databases.html:300
+#: internal/web/templates/mysql/databases.html:533
+#: internal/web/templates/mysql/databases.html:550
 #: internal/web/templates/psql/databases.html:137
 msgid "System Database"
 msgstr "Banco de Dados do Sistema"
@@ -18859,7 +18852,7 @@ msgid "Create your first database"
 msgstr "Crie seu primeiro banco de dados"
 
 #: internal/web/templates/mongodb/databases.html:195
-#: internal/web/templates/mysql/databases.html:548
+#: internal/web/templates/mysql/databases.html:567
 #: internal/web/templates/mysql/users.html:179
 #: internal/web/templates/psql/databases.html:261
 msgid "The page will refresh in"
@@ -19185,27 +19178,27 @@ msgstr "Usuários atribuídos"
 msgid "Manage privileges"
 msgstr "Gerenciar privilégios"
 
-#: internal/web/templates/mysql/databases.html:578
+#: internal/web/templates/mysql/databases.html:597
 msgid "Loading tables..."
 msgstr "Carregando tabelas..."
 
-#: internal/web/templates/mysql/databases.html:579
+#: internal/web/templates/mysql/databases.html:598
 msgid "No tables in this database."
 msgstr "Nenhuma tabela neste banco de dados."
 
-#: internal/web/templates/mysql/databases.html:580
+#: internal/web/templates/mysql/databases.html:599
 msgid "Table"
 msgstr "Tabela"
 
-#: internal/web/templates/mysql/databases.html:581
+#: internal/web/templates/mysql/databases.html:600
 msgid "Engine"
 msgstr "Engine"
 
-#: internal/web/templates/mysql/databases.html:583
+#: internal/web/templates/mysql/databases.html:602
 msgid "Unused"
 msgstr "Não utilizado"
 
-#: internal/web/templates/mysql/databases.html:588
+#: internal/web/templates/mysql/databases.html:607
 msgid ""
 "Rebuilds every table to free up unused space and defragment indexes. Tables "
 "are briefly locked while they are rebuilt, so run this when your site is "
@@ -19215,7 +19208,7 @@ msgstr ""
 "desfragmentar índices. As tabelas ficam bloqueadas brevemente durante a "
 "reconstrução, então execute quando o site estiver com pouco movimento."
 
-#: internal/web/templates/mysql/databases.html:589
+#: internal/web/templates/mysql/databases.html:608
 msgid ""
 "Checks every table for damage and fixes it. Only MyISAM, Aria and ARCHIVE "
 "tables can be repaired, InnoDB tables recover on their own and are skipped."
@@ -19224,55 +19217,55 @@ msgstr ""
 "MyISAM, Aria e ARCHIVE podem ser reparadas, as tabelas InnoDB se recuperam "
 "sozinhas e são ignoradas."
 
-#: internal/web/templates/mysql/databases.html:590
+#: internal/web/templates/mysql/databases.html:609
 msgid "Optimize tables"
 msgstr "Otimizar tabelas"
 
-#: internal/web/templates/mysql/databases.html:591
+#: internal/web/templates/mysql/databases.html:610
 msgid "Repair tables"
 msgstr "Reparar tabelas"
 
-#: internal/web/templates/mysql/databases.html:592
+#: internal/web/templates/mysql/databases.html:611
 msgid "Optimizing..."
 msgstr "Otimizando..."
 
-#: internal/web/templates/mysql/databases.html:593
+#: internal/web/templates/mysql/databases.html:612
 msgid "Repairing..."
 msgstr "Reparando..."
 
-#: internal/web/templates/mysql/databases.html:594
+#: internal/web/templates/mysql/databases.html:613
 msgid "OK"
 msgstr "OK"
 
-#: internal/web/templates/mysql/databases.html:595
+#: internal/web/templates/mysql/databases.html:614
 msgid "Rebuilt"
 msgstr "Reconstruída"
 
-#: internal/web/templates/mysql/databases.html:596
+#: internal/web/templates/mysql/databases.html:615
 msgid "Not needed"
 msgstr "Não necessário"
 
-#: internal/web/templates/mysql/databases.html:598
+#: internal/web/templates/mysql/databases.html:617
 msgid "tables"
 msgstr "tabelas"
 
-#: internal/web/templates/mysql/databases.html:599
+#: internal/web/templates/mysql/databases.html:618
 msgid "unused"
 msgstr "não utilizado"
 
-#: internal/web/templates/mysql/databases.html:600
+#: internal/web/templates/mysql/databases.html:619
 msgid "Freed"
 msgstr "Liberado"
 
-#: internal/web/templates/mysql/databases.html:601
+#: internal/web/templates/mysql/databases.html:620
 msgid "All tables done."
 msgstr "Todas as tabelas concluídas."
 
-#: internal/web/templates/mysql/databases.html:602
+#: internal/web/templates/mysql/databases.html:621
 msgid "failed, hover the result to see why."
 msgstr "falharam, passe o mouse sobre o resultado para ver o motivo."
 
-#: internal/web/templates/mysql/databases.html:709
+#: internal/web/templates/mysql/databases.html:728
 msgid "Add new database"
 msgstr "Adicionar novo banco de dados"
 

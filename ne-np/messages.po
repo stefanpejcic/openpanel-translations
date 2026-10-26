@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-22 22:53+0200\n"
+"POT-Creation-Date: 2026-10-26 11:00+0200\n"
 "PO-Revision-Date: 2025-11-15 12:00+0300\n"
 "Last-Translator: Anupam Bista <anupambista3@gmail.com>\n"
 "Language-Team: Nepali <anupambista3@gmail.com>\n"
@@ -26,8 +26,8 @@ msgstr "प्रयोगकर्तानाम र पासवर्ड आ
 #: internal/modules/account/favorites.go:253 internal/modules/crons/bulk.go:42
 #: internal/modules/dns/bulk.go:31 internal/modules/docker/bulk.go:36
 #: internal/modules/domains/bulk.go:29 internal/modules/emails/bulk.go:23
-#: internal/modules/emails/bulk.go:30 internal/modules/ftp/ftp.go:529
-#: internal/modules/malwarescan/bulk.go:17 internal/modules/mongodb/bulk.go:28
+#: internal/modules/emails/bulk.go:30 internal/modules/ftp/ftp.go:530
+#: internal/modules/malwarescan/bulk.go:16 internal/modules/mongodb/bulk.go:28
 #: internal/modules/mongodb/bulk.go:37 internal/modules/mysql/bulk.go:46
 #: internal/modules/mysql/bulk.go:55 internal/modules/postgresql/bulk.go:28
 #: internal/modules/postgresql/bulk.go:37
@@ -40,10 +40,10 @@ msgstr "प्रयोगकर्तानाम र पासवर्ड आ
 #: internal/web/templates/emails/delete.html:10
 #: internal/web/templates/emails/single_account.html:13
 #: internal/web/templates/files/clamav/quarantine.html:88
-#: internal/web/templates/files/filemanager_partials.html:353
-#: internal/web/templates/files/filemanager_partials.html:354
-#: internal/web/templates/files/filemanager_partials.html:417
-#: internal/web/templates/files/filemanager_partials.html:586
+#: internal/web/templates/files/filemanager_partials.html:371
+#: internal/web/templates/files/filemanager_partials.html:372
+#: internal/web/templates/files/filemanager_partials.html:435
+#: internal/web/templates/files/filemanager_partials.html:604
 #: internal/web/templates/files/ftp.html:186
 #: internal/web/templates/files/ftp.html:188
 #: internal/web/templates/files/trash.html:58
@@ -146,11 +146,11 @@ msgstr "तपाईंको पासवर्ड रिसेट गरिए
 msgid "Reset Password"
 msgstr "पासवर्ड रिसेट गर्नुहोस्"
 
-#: internal/modules/account/handlers_passkeys.go:204
+#: internal/modules/account/handlers_passkeys.go:205
 msgid "Passkey removed."
 msgstr "Passkey हटाइयो।"
 
-#: internal/modules/account/handlers_passkeys.go:206
+#: internal/modules/account/handlers_passkeys.go:207
 msgid "Passkey not found."
 msgstr "Passkey फेला परेन।"
 
@@ -182,19 +182,19 @@ msgstr ""
 msgid "Invalid 2FA code. Please try again."
 msgstr "अमान्य 2FA कोड। कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: internal/modules/account/login.go:415
+#: internal/modules/account/login.go:416
 msgid "Autologin failed: Invalid username."
 msgstr "स्वतः लगइन असफल भयो: अमान्य प्रयोगकर्ता नाम।"
 
-#: internal/modules/account/login.go:423
+#: internal/modules/account/login.go:424
 msgid "Error reading token from user files."
 msgstr "प्रयोगकर्ता फाइलहरूबाट टोकन पढ्दा त्रुटि भयो।"
 
-#: internal/modules/account/login.go:430
+#: internal/modules/account/login.go:431
 msgid "Autologin failed: Invalid or expired token."
 msgstr "स्वतः लगइन असफल भयो: अमान्य वा म्याद सकिएको टोकन।"
 
-#: internal/modules/account/login.go:438
+#: internal/modules/account/login.go:439
 msgid "Autologin failed: User does not exist."
 msgstr "स्वतः लगइन असफल भयो: प्रयोगकर्ता अवस्थित छैन।"
 
@@ -459,12 +459,12 @@ msgstr "डाटाबेससँग जडान गर्न असमर्
 msgid "Invalid password. Please try again."
 msgstr "अमान्य पासवर्ड। कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: internal/modules/account/ratelimit.go:93
+#: internal/modules/account/ratelimit.go:94
 msgid "Too many failed login attempts. Please try again later."
 msgstr "धेरै पटक लगइन प्रयास असफल भयो। कृपया पछि फेरि प्रयास गर्नुहोस्।"
 
 #: internal/modules/account/render.go:34 internal/modules/backups/render.go:54
-#: internal/modules/php/render.go:139
+#: internal/modules/php/render.go:137
 #: internal/web/templates/db/configuration.html:8
 #: internal/web/templates/partials/site_manager_shared.html:1050
 msgid "Settings"
@@ -557,7 +557,7 @@ msgstr ""
 "छानिएका सत्रहरू समाप्त गर्ने? तिनलाई प्रयोग गरिरहेका सबै लगआउट हुनेछन्।"
 
 #: internal/modules/account/settings.go:98
-#: internal/modules/emails/emails.go:339 internal/modules/mongodb/users.go:87
+#: internal/modules/emails/emails.go:351 internal/modules/mongodb/users.go:87
 #: internal/modules/mongodb/users.go:181 internal/modules/mongodb/wizard.go:68
 #: internal/modules/mysql/users.go:103 internal/modules/mysql/users.go:211
 #: internal/modules/postgresql/users.go:97
@@ -647,7 +647,7 @@ msgstr ""
 msgid "Two-Factor Authentication is now disabled."
 msgstr "दुई-कारक प्रमाणीकरण अब असक्षम छ।"
 
-#: internal/modules/account/webauthn.go:63
+#: internal/modules/account/webauthn.go:79
 msgid ""
 "Passkeys require the panel to be accessed over HTTPS. Ask your administrator"
 " to configure a domain and SSL certificate for this panel."
@@ -655,7 +655,7 @@ msgstr ""
 "पासकीहरूका लागि प्यानल HTTPS मार्फत खोल्नुपर्छ। यो प्यानलका लागि डोमेन र SSL"
 " प्रमाणपत्र मिलाउन आफ्नो प्रशासकलाई भन्नुहोस्।"
 
-#: internal/modules/account/webauthn.go:65
+#: internal/modules/account/webauthn.go:81
 msgid ""
 "Passkeys require the panel to be accessed via a domain name, not an IP "
 "address. Ask your administrator to configure a domain for this panel."
@@ -689,7 +689,7 @@ msgstr ""
 
 #: internal/modules/appinstall/install.go:109
 #: internal/modules/cmsapp/install.go:47 internal/modules/phpapp/install.go:39
-#: internal/modules/wordpress/install.go:50
+#: internal/modules/wordpress/install.go:51
 msgid ""
 "You have reached the maximum number of sites allowed.%(upgrade_message)s"
 msgstr ""
@@ -925,28 +925,11 @@ msgstr "Ruby एप्लिकेसन इन्स्टल गर्नु�
 msgid "Install App"
 msgstr "एप स्थापना गर्नुहोस्"
 
-#: internal/modules/backups/backups.go:70
-msgid ""
-"A backup is currently in progress. Please wait until it finishes before "
-"saving settings. Or if you want to interrupt the backup process: stop and "
-"start the backup service."
-msgstr ""
-"ब्याकअप चलिरहेको छ। सेटिङहरू सुरक्षित गर्नुअघि यो सकिन पर्खनुहोस्। ब्याकअप "
-"रोक्न चाहनुहुन्छ भने ब्याकअप सेवा बन्द गरी फेरि सुरु गर्नुहोस्।"
-
-#: internal/modules/backups/backups.go:75
-msgid "Error updating settings."
-msgstr "सेटिङहरू अद्यावधिक गर्दा त्रुटि।"
-
-#: internal/modules/backups/backups.go:77
-msgid "Settings updated successfully."
-msgstr "सेटिङहरू सफलतापूर्वक अद्यावधिक गरियो।"
-
-#: internal/modules/backups/backups.go:268
+#: internal/modules/backups/backups.go:313
 msgid "Backup target switched to '%(target)s' successfully."
 msgstr "ब्याकअप गन्तव्य '%(target)s' मा सफलतापूर्वक परिवर्तन गरियो।"
 
-#: internal/modules/backups/reindex.go:131
+#: internal/modules/backups/reindex.go:134
 msgid ""
 "Archive is not in the backup/ layout this page can restore (for example a "
 "full account backup made by the administrator)."
@@ -979,7 +962,7 @@ msgstr "धेरै ब्याकअप गन्तव्यहरू कन
 
 #: internal/modules/backups/render.go:97
 #: internal/modules/dashboard/sections.go:111 internal/web/sidebar.go:278
-#: internal/web/templates/files/filemanager_partials.html:658
+#: internal/web/templates/files/filemanager_partials.html:676
 msgid "Destination"
 msgstr "गन्तव्य"
 
@@ -1033,11 +1016,11 @@ msgstr "ड्रपबक्स क्लाउड स्टोरेजमा 
 
 #: internal/modules/backups/render.go:249
 #: internal/modules/dashboard/sections.go:109
-#: internal/modules/malwarescan/bulk.go:15 internal/web/sidebar.go:275
-#: internal/web/templates/files/backup_restore.html:832
-#: internal/web/templates/files/backup_restore.html:833
+#: internal/modules/malwarescan/bulk.go:14 internal/web/sidebar.go:275
+#: internal/web/templates/files/backup_restore.html:834
+#: internal/web/templates/files/backup_restore.html:835
 #: internal/web/templates/files/clamav/quarantine.html:86
-#: internal/web/templates/files/clamav/quarantine.html:122
+#: internal/web/templates/files/clamav/quarantine.html:113
 #: internal/web/templates/files/trash.html:52
 #: internal/web/templates/files/trash_partials.html:170
 msgid "Restore"
@@ -1083,30 +1066,6 @@ msgid "Backup Wizard"
 msgstr "ब्याकअप विजार्ड"
 
 #: internal/modules/backupwizard/render.go:41
-#: internal/modules/dashboard/sections.go:115
-#: internal/modules/dashboard/sections.go:128
-#: internal/modules/dashboard/sections.go:137
-#: internal/modules/dashboard/sections.go:240
-#: internal/modules/dashboard/sections.go:252
-#: internal/modules/dashboard/sections.go:261
-#: internal/modules/mysql/render.go:58 internal/web/sidebar.go:179
-#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
-#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
-#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
-#: internal/web/templates/dashboard/usage.html:78
-#: internal/web/templates/files/backup_restore.html:455
-#: internal/web/templates/files/backup_restore.html:558
-#: internal/web/templates/files/backup_restore.html:735
-#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
-#: static/js/tour-steps.js:261
-msgid "Databases"
-msgstr "डाटाबेसहरू"
-
-#: internal/modules/backupwizard/render.go:41
-msgid "The home directory"
-msgstr "होम डाइरेक्टरी"
-
-#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:73
 #: internal/modules/dashboard/sections.go:74
 #: internal/modules/dashboard/sections.go:226
@@ -1119,13 +1078,37 @@ msgstr "होम डाइरेक्टरी"
 #: internal/web/templates/domains/domains.html:14
 #: internal/web/templates/emails/deliverability.html:106
 #: internal/web/templates/files/backup_restore.html:10
-#: internal/web/templates/files/backup_restore.html:473
-#: internal/web/templates/files/backup_restore.html:574
-#: internal/web/templates/files/backup_restore.html:737
-#: internal/web/templates/files/backup_restore.html:961
+#: internal/web/templates/files/backup_restore.html:475
+#: internal/web/templates/files/backup_restore.html:576
+#: internal/web/templates/files/backup_restore.html:739
+#: internal/web/templates/files/backup_restore.html:963
 #: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
 msgid "Domains"
 msgstr "डोमेनहरू"
+
+#: internal/modules/backupwizard/render.go:41
+#: internal/modules/dashboard/sections.go:115
+#: internal/modules/dashboard/sections.go:128
+#: internal/modules/dashboard/sections.go:137
+#: internal/modules/dashboard/sections.go:240
+#: internal/modules/dashboard/sections.go:252
+#: internal/modules/dashboard/sections.go:261
+#: internal/modules/mysql/render.go:59 internal/web/sidebar.go:179
+#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
+#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
+#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
+#: internal/web/templates/dashboard/usage.html:78
+#: internal/web/templates/files/backup_restore.html:457
+#: internal/web/templates/files/backup_restore.html:560
+#: internal/web/templates/files/backup_restore.html:737
+#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
+#: static/js/tour-steps.js:261
+msgid "Databases"
+msgstr "डाटाबेसहरू"
+
+#: internal/modules/backupwizard/render.go:41
+msgid "The home directory"
+msgstr "होम डाइरेक्टरी"
 
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/sections.go:81
@@ -1148,7 +1131,7 @@ msgstr "FTP खाताहरू"
 
 #: internal/modules/backupwizard/render.go:43
 #: internal/web/templates/files/backup_restore.html:11
-#: internal/web/templates/files/backup_restore.html:964
+#: internal/web/templates/files/backup_restore.html:966
 msgid "DNS zones"
 msgstr "DNS जोनहरू"
 
@@ -1285,8 +1268,8 @@ msgstr "डोमेन %(domain_name)s का लागि Varnish क्या
 #: internal/modules/cmsapp/remove.go:49 internal/modules/websites/bulk.go:272
 #: internal/modules/websites/websitebuilder.go:63
 #: internal/modules/websites/websitebuilder.go:101
-#: internal/modules/wordpress/manage.go:263
-#: internal/modules/wordpress/manage.go:362
+#: internal/modules/wordpress/manage.go:247
+#: internal/modules/wordpress/manage.go:346
 msgid "No data found for the provided site ID"
 msgstr "दिइएको साइट ID का लागि कुनै डाटा फेला परेन"
 
@@ -1603,7 +1586,7 @@ msgstr "डेलिभरेबिलिटी"
 #: internal/modules/dashboard/sections.go:131
 #: internal/modules/dashboard/sections.go:140
 #: internal/modules/emails/render.go:382
-#: internal/modules/mongodb/render.go:199 internal/modules/mysql/render.go:271
+#: internal/modules/mongodb/render.go:199 internal/modules/mysql/render.go:273
 #: internal/modules/postgresql/render.go:192 internal/web/sidebar.go:181
 #: internal/web/sidebar.go:195 internal/web/sidebar.go:206
 #: internal/web/sidebar.go:249
@@ -1775,7 +1758,7 @@ msgid "Database Wizard"
 msgstr "डेटाबेस विजार्ड"
 
 #: internal/modules/dashboard/sections.go:119
-#: internal/modules/php/render.go:281 internal/web/sidebar.go:182
+#: internal/modules/php/render.go:279 internal/web/sidebar.go:182
 #: internal/web/templates/mysql/databases.html:425
 #: internal/web/templates/mysql/phpmyadmin_unavailable.html:6
 msgid "phpMyAdmin"
@@ -1800,7 +1783,7 @@ msgstr "रिमोट पहुँच"
 #: internal/modules/dashboard/sections.go:122
 #: internal/modules/dashboard/sections.go:133
 #: internal/modules/dashboard/sections.go:141
-#: internal/modules/mongodb/render.go:218 internal/modules/mysql/render.go:289
+#: internal/modules/mongodb/render.go:218 internal/modules/mysql/render.go:291
 #: internal/modules/postgresql/render.go:211 internal/web/sidebar.go:184
 #: internal/web/sidebar.go:197 internal/web/sidebar.go:207
 #: static/js/tour-steps.js:879 static/js/tour-steps.js:928
@@ -1913,9 +1896,9 @@ msgstr "टर्मिनल"
 #: internal/web/templates/docker/containers.html:498
 #: internal/web/templates/docker/logs.html:11
 #: internal/web/templates/docker/logs.html:87
-#: internal/web/templates/files/backup_restore.html:500
-#: internal/web/templates/files/backup_restore.html:603
-#: internal/web/templates/files/backup_restore.html:651
+#: internal/web/templates/files/backup_restore.html:502
+#: internal/web/templates/files/backup_restore.html:605
+#: internal/web/templates/files/backup_restore.html:653
 #: internal/web/templates/manager/_cms_app_shared.html:161
 #: internal/web/templates/manager/n8n_app.html:63
 #: internal/web/templates/manager/php_app.html:62
@@ -1933,9 +1916,9 @@ msgstr "सफ्टवेयर संस्करणहरू"
 #: internal/modules/dashboard/sections.go:310 internal/web/sidebar.go:304
 #: internal/web/sidebar.go:306
 #: internal/web/templates/dashboard/onboarding.html:207
-#: internal/web/templates/files/backup_restore.html:482
-#: internal/web/templates/files/backup_restore.html:582
-#: internal/web/templates/files/backup_settings.html:89
+#: internal/web/templates/files/backup_restore.html:484
+#: internal/web/templates/files/backup_restore.html:584
+#: internal/web/templates/files/backup_settings.html:90
 #: internal/web/templates/system/cronjobs.html:24 static/js/tour-steps.js:507
 msgid "Cron Jobs"
 msgstr "Cron Jobs"
@@ -1989,7 +1972,7 @@ msgstr "स्रोत प्रयोग इतिहास"
 
 #: internal/modules/dashboard/sections.go:183
 #: internal/modules/dashboard/sections.go:218
-#: internal/modules/diskusage/render.go:95 internal/web/sidebar.go:355
+#: internal/modules/diskusage/render.go:128 internal/web/sidebar.go:355
 #: internal/web/templates/files/disk_usage.html:15
 #: internal/web/templates/manager/_cms_app_shared.html:369
 #: internal/web/templates/manager/_cms_app_shared.html:542
@@ -2003,7 +1986,7 @@ msgid "Disk Usage"
 msgstr "डिस्क प्रयोग"
 
 #: internal/modules/dashboard/sections.go:184
-#: internal/modules/inodes/render.go:97 internal/web/sidebar.go:356
+#: internal/modules/inodes/render.go:116 internal/web/sidebar.go:356
 #: internal/web/templates/files/inodes.html:12 static/js/tour-steps.js:725
 msgid "Inode Usage"
 msgstr "Inode प्रयोग"
@@ -2031,7 +2014,7 @@ msgstr "पहुँच लगहरू"
 #: internal/modules/dashboard/sections.go:188
 #: internal/modules/dashboard/sections.go:314
 #: internal/modules/errorlogs/render.go:51 internal/web/sidebar.go:360
-#: internal/web/templates/manager/wp/single.html:1439
+#: internal/web/templates/manager/wp/single.html:1440
 #: internal/web/templates/system/error_logs.html:8
 #: internal/web/templates/system/error_logs.html:11
 msgid "Error Logs"
@@ -2207,11 +2190,11 @@ msgstr "क्यास"
 #: internal/web/templates/dashboard/onboarding.html:203
 #: internal/web/templates/emails/accounts.html:8
 #: internal/web/templates/files/backup_restore.html:9
-#: internal/web/templates/files/backup_restore.html:464
-#: internal/web/templates/files/backup_restore.html:566
-#: internal/web/templates/files/backup_restore.html:736
-#: internal/web/templates/files/backup_restore.html:960
-#: internal/web/templates/files/backup_settings.html:84
+#: internal/web/templates/files/backup_restore.html:466
+#: internal/web/templates/files/backup_restore.html:568
+#: internal/web/templates/files/backup_restore.html:738
+#: internal/web/templates/files/backup_restore.html:962
+#: internal/web/templates/files/backup_settings.html:85
 #: internal/web/templates/partials/_header.html:91
 msgid "Emails"
 msgstr "इमेलहरू"
@@ -2252,7 +2235,7 @@ msgid "PHP Options"
 msgstr "PHP विकल्पहरू"
 
 #: internal/modules/dashboard/sections.go:297
-#: internal/modules/php/render.go:248
+#: internal/modules/php/render.go:246
 #: internal/web/templates/php/extensions.html:229
 msgid "PHP Extensions"
 msgstr "PHP एक्सटेन्सनहरू"
@@ -2530,40 +2513,40 @@ msgstr "DNS Zone सम्पादन गर्नुहोस्"
 msgid "Edit DNS File"
 msgstr "DNS फाइल सम्पादन गर्नुहोस्"
 
-#: internal/modules/docker/actions.go:176
-#: internal/modules/docker/actions.go:183
-#: internal/modules/docker/status.go:125
+#: internal/modules/docker/actions.go:185
+#: internal/modules/docker/actions.go:192
+#: internal/modules/docker/status.go:126
 msgid "Command failed with error. Please try again."
 msgstr "आदेश असफल भयो। कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: internal/modules/docker/actions.go:278
+#: internal/modules/docker/actions.go:287
 msgid "Image pulled and container %(container_name)s activated successfully."
 msgstr "इमेज डाउनलोड गरी कन्टेनर %(container_name)s सफलतापूर्वक सक्रिय गरियो।"
 
-#: internal/modules/docker/actions.go:279
+#: internal/modules/docker/actions.go:288
 msgid ""
 "Image pulled and container %(container_name)s deactivated successfully."
 msgstr ""
 "इमेज डाउनलोड गरी कन्टेनर %(container_name)s सफलतापूर्वक निष्क्रिय गरियो।"
 
-#: internal/modules/docker/actions.go:280
+#: internal/modules/docker/actions.go:289
 msgid "Image pulled and container %(container_name)s restarted successfully."
 msgstr ""
 "इमेज डाउनलोड गरी कन्टेनर %(container_name)s सफलतापूर्वक पुनः सुरु गरियो।"
 
-#: internal/modules/docker/actions.go:284
+#: internal/modules/docker/actions.go:293
 msgid "Container %(container_name)s restarted successfully."
 msgstr "कन्टेनर %(container_name)s सफलतापूर्वक पुनः सुरु गरियो।"
 
-#: internal/modules/docker/actions.go:288
+#: internal/modules/docker/actions.go:297
 msgid "Container %(container_name)s deactivated successfully."
 msgstr "कन्टेनर %(container_name)s सफलतापूर्वक निष्क्रिय गरियो।"
 
-#: internal/modules/docker/actions.go:290
+#: internal/modules/docker/actions.go:299
 msgid "Container %(container_name)s activated successfully."
 msgstr "कन्टेनर %(container_name)s सफलतापूर्वक सक्रिय गरियो।"
 
-#: internal/modules/docker/actions.go:298
+#: internal/modules/docker/actions.go:307
 msgid "Error occurred!"
 msgstr "त्रुटि भयो!"
 
@@ -2610,16 +2593,16 @@ msgstr "CPU सम्पादन गर्नुहोस्"
 msgid "Set the CPU limit for the selected containers:"
 msgstr "छानिएका कन्टेनरहरूको CPU सीमा सेट गर्नुहोस्:"
 
+#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
+#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
+msgid "0 = unlimited"
+msgstr "0 = असीमित"
+
 #: internal/modules/docker/bulk.go:31
 #: internal/web/templates/docker/containers.html:18
 #: internal/web/templates/docker/containers.html:384
 msgid "cores"
 msgstr "कोरहरू"
-
-#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
-#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
-msgid "0 = unlimited"
-msgstr "0 = असीमित"
 
 #: internal/modules/docker/bulk.go:32
 msgid "Edit RAM"
@@ -2674,7 +2657,7 @@ msgid "Failed to update docker-compose.yml."
 msgstr "docker-compose.yml अद्यावधिक गर्न सकिएन।"
 
 #: internal/modules/docker/bulk.go:140
-#: internal/web/templates/files/filemanager_partials.html:588
+#: internal/web/templates/files/filemanager_partials.html:606
 msgid "Deleted."
 msgstr "मेटाइयो।"
 
@@ -2858,7 +2841,7 @@ msgstr "वेबसर्भर"
 msgid "Change docker image tag"
 msgstr "Docker इमेज ट्याग परिवर्तन गर्नुहोस्"
 
-#: internal/modules/docker/status.go:102 internal/modules/docker/status.go:127
+#: internal/modules/docker/status.go:103 internal/modules/docker/status.go:128
 msgid "Unexpected error. Contact Administrator."
 msgstr "अप्रत्याशित त्रुटि। प्रशासकलाई सम्पर्क गर्नुहोस्।"
 
@@ -3049,7 +3032,7 @@ msgstr "डोमेन %(domain_url)s सफलतापूर्वक मे�
 msgid "Failed to delete domain %(domain_url)s. Output: %(output)s"
 msgstr "डोमेन %(domain_url)s मेटाउन सकिएन। आउटपुट: %(output)s"
 
-#: internal/modules/domains/docroot.go:52
+#: internal/modules/domains/docroot.go:56
 msgid "Docroot must be inside '/var/www/html/' directory."
 msgstr "Docroot '/var/www/html/' डाइरेक्टरीभित्र हुनुपर्छ।"
 
@@ -3065,15 +3048,15 @@ msgstr "डोमेन %(domain_name)s को लग फाइल खाली 
 msgid "Error reading log file: %(error)s"
 msgstr "लग फाइल पढ्दा त्रुटि: %(error)s"
 
-#: internal/modules/domains/new.go:60
+#: internal/modules/domains/new.go:69
 msgid "Domain name is required"
 msgstr "डोमेन नाम आवश्यक छ"
 
-#: internal/modules/domains/new.go:81
+#: internal/modules/domains/new.go:90
 msgid "Domain name contains invalid characters."
 msgstr "डोमेन नाममा अमान्य अक्षरहरू छन्।"
 
-#: internal/modules/domains/new.go:91
+#: internal/modules/domains/new.go:100
 #: internal/web/templates/domains/new.html:217
 msgid ""
 "Paths for both public and secret files must be set for importing .onion "
@@ -3082,19 +3065,19 @@ msgstr ""
 ".onion डोमेन आयात गर्न सार्वजनिक र गोप्य दुवै फाइलका मार्ग सेट गरिएको "
 "हुनुपर्छ।"
 
-#: internal/modules/domains/new.go:97
+#: internal/modules/domains/new.go:106
 msgid "Path for public file must start with /var/www/html/"
 msgstr "सार्वजनिक फाइलको पथ /var/www/html/ बाट सुरु हुनुपर्छ"
 
-#: internal/modules/domains/new.go:102
+#: internal/modules/domains/new.go:111
 msgid "Public key file: %(onion_public_key)s does not exist!"
 msgstr "सार्वजनिक कुञ्जी फाइल: %(onion_public_key)s अवस्थित छैन!"
 
-#: internal/modules/domains/new.go:108
+#: internal/modules/domains/new.go:117
 msgid "Path for secret file must start with /var/www/html/"
 msgstr "गोप्य फाइलको पथ /var/www/html/ बाट सुरु हुनुपर्छ"
 
-#: internal/modules/domains/new.go:113
+#: internal/modules/domains/new.go:122
 msgid "Secret key file: %(onion_secret_key)s does not exist!"
 msgstr "गोप्य कुञ्जी फाइल: %(onion_secret_key)s अवस्थित छैन!"
 
@@ -3148,8 +3131,8 @@ msgstr "सबै"
 #: internal/web/templates/domains/ssl.html:26
 #: internal/web/templates/emails/accounts.html:29
 #: internal/web/templates/emails/migrate.html:117
-#: internal/web/templates/files/backup_restore.html:625
-#: internal/web/templates/files/backup_restore.html:661
+#: internal/web/templates/files/backup_restore.html:627
+#: internal/web/templates/files/backup_restore.html:663
 #: internal/web/templates/manager/wp/single.html:1038
 #: internal/web/templates/mysql/remote_mysql.html:32
 #: internal/web/templates/php/extensions.html:48
@@ -3177,7 +3160,7 @@ msgstr "सक्रिय"
 #: internal/web/templates/domains/domains.html:199
 #: internal/web/templates/emails/accounts.html:29
 #: internal/web/templates/emails/accounts.html:43
-#: internal/web/templates/files/backup_restore.html:783
+#: internal/web/templates/files/backup_restore.html:785
 msgid "Suspended"
 msgstr "निलम्बित"
 
@@ -3204,7 +3187,7 @@ msgstr "कस्टम SSL"
 #: internal/web/templates/domains/domains.html:145
 #: internal/web/templates/domains/dynamic_dns.html:166
 #: internal/web/templates/files/filemanager.html:124
-#: internal/web/templates/files/filemanager_partials.html:460
+#: internal/web/templates/files/filemanager_partials.html:478
 #: internal/web/templates/files/trash.html:80
 #: internal/web/templates/files/trash_partials.html:54
 #: internal/web/templates/manager/sites.html:207
@@ -3223,7 +3206,7 @@ msgstr "प्रकार"
 #: internal/web/templates/emails/deliverability.html:31
 #: internal/web/templates/emails/deliverability.html:104
 #: internal/web/templates/emails/new.html:23
-#: internal/web/templates/files/backup_restore.html:762
+#: internal/web/templates/files/backup_restore.html:764
 #: internal/web/templates/files/ftp_new.html:34
 #: internal/web/templates/manager/_cms_install_shared.html:118
 #: internal/web/templates/manager/app_install.html:212
@@ -3366,12 +3349,12 @@ msgid "Alias %(email)s deleted successfully."
 msgstr "उपनाम %(email)s सफलतापूर्वक मेटाइयो।"
 
 #: internal/modules/emails/aliases.go:310
-#: internal/modules/emails/emails.go:320
+#: internal/modules/emails/emails.go:332
 msgid "Error: %(field)s not provided."
 msgstr "त्रुटि: %(field)s दिइएको छैन।"
 
 #: internal/modules/emails/aliases.go:317
-#: internal/modules/emails/emails.go:333
+#: internal/modules/emails/emails.go:345
 msgid "Username can only contain letters, numbers, and . _ % + - (no @)."
 msgstr "प्रयोगकर्ता नाममा अक्षर, अङ्क र . _ % + - मात्र हुन सक्छ (@ बिना)।"
 
@@ -3411,7 +3394,7 @@ msgstr "आगमन निलम्बन हटाउनुहोस्"
 msgid "Unsuspend outgoing"
 msgstr "बहिर्गमन निलम्बन हटाउनुहोस्"
 
-#: internal/modules/emails/bulk.go:20 internal/modules/ftp/ftp.go:527
+#: internal/modules/emails/bulk.go:20 internal/modules/ftp/ftp.go:528
 msgid "Change quota"
 msgstr "कोटा परिवर्तन गर्नुहोस्"
 
@@ -3419,13 +3402,13 @@ msgstr "कोटा परिवर्तन गर्नुहोस्"
 msgid "New mailbox size (GB) for the selected accounts:"
 msgstr "छानिएका खाताहरूका लागि नयाँ मेलबक्स आकार (GB):"
 
-#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:525
+#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:526
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
 msgid "Change password"
 msgstr "पासवर्ड परिवर्तन गर्नुहोस्"
 
-#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:525
+#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:526
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
 #: internal/web/templates/files/ftp_password.html:55
@@ -3465,31 +3448,31 @@ msgstr "अमान्य गन्तव्य इमेल ठेगाना
 msgid "Failed to update default email: %(error)s"
 msgstr "पूर्वनिर्धारित इमेल अद्यावधिक गर्न सकिएन: %(error)s"
 
-#: internal/modules/emails/emails.go:345
+#: internal/modules/emails/emails.go:357
 msgid "Error: reached max number of email accounts on the hosting plan."
 msgstr "त्रुटि: होस्टिङ योजनाको अधिकतम इमेल खाता संख्यामा पुगियो।"
 
-#: internal/modules/emails/emails.go:370
+#: internal/modules/emails/emails.go:382
 msgid "Failed to add email %(email)s: %(msg)s"
 msgstr "इमेल %(email)s थप्न सकिएन: %(msg)s"
 
-#: internal/modules/emails/emails.go:389
+#: internal/modules/emails/emails.go:401
 msgid "Email %(email)s added successfully."
 msgstr "इमेल %(email)s सफलतापूर्वक थपियो।"
 
-#: internal/modules/emails/emails.go:696
+#: internal/modules/emails/emails.go:708
 msgid "Settings saved for email %(email)s"
 msgstr "इमेल %(email)s का लागि सेटिङहरू सुरक्षित गरियो"
 
-#: internal/modules/emails/emails.go:707
+#: internal/modules/emails/emails.go:719
 msgid "Email %(email)s deleted successfully."
 msgstr "इमेल %(email)s सफलतापूर्वक मेटाइयो।"
 
-#: internal/modules/emails/emails.go:710
+#: internal/modules/emails/emails.go:722
 msgid "ERROR: Failed to delete email %(email)s: %(output)s"
 msgstr "त्रुटि: इमेल %(email)s मेटाउन सकिएन: %(output)s"
 
-#: internal/modules/emails/emails.go:775
+#: internal/modules/emails/emails.go:787
 msgid "Error: Invalid configuration type."
 msgstr "त्रुटि: अमान्य कन्फिगरेसन प्रकार।"
 
@@ -3533,7 +3516,7 @@ msgid "Error: Could not open the migrations folder."
 msgstr "त्रुटि: माइग्रेसन फोल्डर खोल्न सकिएन।"
 
 #: internal/modules/emails/render.go:119
-#: internal/web/templates/files/ftp_new.html:184
+#: internal/web/templates/files/ftp_new.html:189
 msgid "Create Account"
 msgstr "खाता सिर्जना गर्नुहोस्"
 
@@ -3574,10 +3557,10 @@ msgid "HTTP 5xx responses"
 msgstr "HTTP 5xx प्रतिक्रियाहरू"
 
 #: internal/modules/errorlogs/render.go:19
-#: internal/web/templates/files/filemanager_partials.html:328
-#: internal/web/templates/files/filemanager_partials.html:329
-#: internal/web/templates/files/filemanager_partials.html:397
-#: internal/web/templates/files/filemanager_partials.html:590
+#: internal/web/templates/files/filemanager_partials.html:346
+#: internal/web/templates/files/filemanager_partials.html:347
+#: internal/web/templates/files/filemanager_partials.html:415
+#: internal/web/templates/files/filemanager_partials.html:608
 #: internal/web/templates/manager/git.html:92
 #: internal/web/templates/mysql/wizard.html:80
 #: internal/web/templates/mysql/wizard.html:139
@@ -3589,14 +3572,14 @@ msgid "Copy"
 msgstr "कपी"
 
 #: internal/modules/errorlogs/render.go:20
-#: internal/web/templates/files/backup_restore.html:830
-#: internal/web/templates/files/backup_restore.html:831
-#: internal/web/templates/files/backup_restore.html:911
-#: internal/web/templates/files/backup_restore.html:1024
+#: internal/web/templates/files/backup_restore.html:832
+#: internal/web/templates/files/backup_restore.html:833
+#: internal/web/templates/files/backup_restore.html:913
+#: internal/web/templates/files/backup_restore.html:1026
 #: internal/web/templates/files/backup_wizard.html:168
-#: internal/web/templates/files/filemanager_partials.html:318
-#: internal/web/templates/files/filemanager_partials.html:319
-#: internal/web/templates/files/filemanager_partials.html:389
+#: internal/web/templates/files/filemanager_partials.html:336
+#: internal/web/templates/files/filemanager_partials.html:337
+#: internal/web/templates/files/filemanager_partials.html:407
 #: internal/web/templates/files/upload_file.html:140
 msgid "Download"
 msgstr "डाउनलोड"
@@ -3621,27 +3604,27 @@ msgstr "निकाल्न असफल भयो।"
 msgid "File extracted successfully"
 msgstr "फाइल सफलतापूर्वक निकालियो"
 
-#: internal/modules/filemanager/archive.go:340
+#: internal/modules/filemanager/archive.go:350
 msgid "Missing required form data for compression: %(missing)s"
 msgstr "कम्प्रेसनका लागि आवश्यक फारम डाटा छुटेको छ: %(missing)s"
 
-#: internal/modules/filemanager/archive.go:378
+#: internal/modules/filemanager/archive.go:388
 msgid "Unsupported archive format."
 msgstr "असमर्थित अभिलेख ढाँचा।"
 
-#: internal/modules/filemanager/archive.go:383
+#: internal/modules/filemanager/archive.go:393
 msgid "Archive creation failed: %(err_msg)s"
 msgstr "अभिलेख सिर्जना असफल भयो: %(err_msg)s"
 
-#: internal/modules/filemanager/archive.go:391
+#: internal/modules/filemanager/archive.go:401
 msgid "Failed to set archive ownership"
 msgstr "अभिलेखको स्वामित्व सेट गर्न सकिएन"
 
-#: internal/modules/filemanager/archive.go:393
+#: internal/modules/filemanager/archive.go:403
 msgid "FILEMANAGER - Archive created successfully."
 msgstr "अभिलेख सफलतापूर्वक सिर्जना गरियो।"
 
-#: internal/modules/filemanager/archive.go:408
+#: internal/modules/filemanager/archive.go:418
 msgid "Invalid selection"
 msgstr "अमान्य चयन"
 
@@ -3669,119 +3652,108 @@ msgstr "फाइल सफलतापूर्वक सिर्जना ग
 msgid "Foldername is missing"
 msgstr "फोल्डर नाम छुटेको छ"
 
-#: internal/modules/filemanager/crud.go:105
-msgid "Error creating directory! Check permissions."
-msgstr "डाइरेक्टरी सिर्जना गर्दा त्रुटि! अनुमतिहरू जाँच्नुहोस्।"
-
-#: internal/modules/filemanager/crud.go:111
+#: internal/modules/filemanager/crud.go:118
 msgid "Failed to set ownership for the new folder."
 msgstr "नयाँ फोल्डरको स्वामित्व सेट गर्न सकिएन।"
 
-#: internal/modules/filemanager/crud.go:113
+#: internal/modules/filemanager/crud.go:120
 msgid "Folder created successfully."
 msgstr "फोल्डर सफलतापूर्वक सिर्जना गरियो।"
 
-#: internal/modules/filemanager/crud.go:152
+#: internal/modules/filemanager/crud.go:160
+msgid "Error renaming item: the new name already exists."
+msgstr ""
+
+#: internal/modules/filemanager/crud.go:163
 msgid ""
 "Error renaming item! Check permissions or if the new name already exists."
 msgstr ""
 "नाम परिवर्तन गर्दा त्रुटि! अनुमतिहरू वा नयाँ नाम पहिल्यै छ कि जाँच्नुहोस्।"
 
-#: internal/modules/filemanager/crud.go:158
+#: internal/modules/filemanager/crud.go:169
 msgid "File renamed successfully."
 msgstr "फाइलको नाम सफलतापूर्वक परिवर्तन गरियो।"
 
-#: internal/modules/filemanager/crud.go:256
-msgid "Invalid permissions format."
-msgstr "अमान्य अनुमति ढाँचा।"
-
-#: internal/modules/filemanager/crud.go:305
+#: internal/modules/filemanager/crud.go:330
 msgid "Permissions changed."
 msgstr "अनुमतिहरू परिवर्तन गरियो।"
 
-#: internal/modules/filemanager/crud.go:307
+#: internal/modules/filemanager/crud.go:332
 msgid "%(changed)s items updated."
 msgstr "%(changed)s वस्तुहरू अद्यावधिक गरियो।"
 
-#: internal/modules/filemanager/crud.go:310
+#: internal/modules/filemanager/crud.go:335
 msgid "Error changing permissions for: %(errored)s. Check ownership."
 msgstr ""
 "यिनका अनुमति परिवर्तन गर्दा त्रुटि: %(errored)s। स्वामित्व जाँच्नुहोस्।"
 
-#: internal/modules/filemanager/editor.go:116
-#: internal/modules/filemanager/editor.go:290
-msgid "Editing this file type is not allowed."
-msgstr "यस प्रकारको फाइल सम्पादन गर्न अनुमति छैन।"
-
-#: internal/modules/filemanager/editor.go:137
+#: internal/modules/filemanager/editor.go:177
 msgid "Error saving file."
 msgstr "फाइल सुरक्षित गर्दा त्रुटि।"
 
-#: internal/modules/filemanager/editor.go:140
+#: internal/modules/filemanager/editor.go:180
 msgid "File saved successfully"
 msgstr "फाइल सफलतापूर्वक सुरक्षित गरियो"
 
-#: internal/modules/filemanager/editor.go:158
-#: internal/modules/filemanager/editor.go:165
-#: internal/modules/filemanager/editor.go:305
-msgid "Error accessing file size."
-msgstr "फाइल आकार पहुँच गर्दा त्रुटि।"
-
-#: internal/modules/filemanager/editor.go:170
+#: internal/modules/filemanager/editor.go:211
 msgid ""
 "File is too large to open in the editor (limit is %(file_limit_mb)s MB)"
 msgstr "फाइल सम्पादकमा खोल्न धेरै ठूलो छ (सीमा %(file_limit_mb)s MB)"
 
-#: internal/modules/filemanager/editor.go:176
-msgid "Error reading file"
-msgstr "फाइल पढ्दा त्रुटि"
-
-#: internal/modules/filemanager/editor.go:220
-#: internal/modules/filemanager/editor.go:226
+#: internal/modules/filemanager/editor.go:261
+#: internal/modules/filemanager/editor.go:267
 msgid "Error retrieving file size."
 msgstr "फाइल आकार प्राप्त गर्दा त्रुटि।"
 
-#: internal/modules/filemanager/editor.go:231
+#: internal/modules/filemanager/editor.go:272
 msgid "File size exceeds %(file_limit_mb)sMB limit. Download aborted."
 msgstr "फाइल आकार %(file_limit_mb)s MB सीमाभन्दा बढी छ। डाउनलोड रद्द गरियो।"
 
-#: internal/modules/filemanager/editor.go:299
-#: internal/modules/filemanager/editor.go:321
+#: internal/modules/filemanager/editor.go:347
+msgid "Editing this file type is not allowed."
+msgstr "यस प्रकारको फाइल सम्पादन गर्न अनुमति छैन।"
+
+#: internal/modules/filemanager/editor.go:355
+#: internal/modules/filemanager/editor.go:377
 msgid "Error opening file."
 msgstr "फाइल खोल्दा त्रुटि।"
 
-#: internal/modules/filemanager/editor.go:309
+#: internal/modules/filemanager/editor.go:361
+msgid "Error accessing file size."
+msgstr "फाइल आकार पहुँच गर्दा त्रुटि।"
+
+#: internal/modules/filemanager/editor.go:365
 msgid ""
 "File is too large to view in the browser (limit is %(file_limit_mb)s MB)"
 msgstr "फाइल ब्राउजरमा हेर्न धेरै ठूलो छ (सीमा %(file_limit_mb)s MB)"
 
-#: internal/modules/filemanager/listing.go:97
+#: internal/modules/filemanager/listing.go:118
 #: internal/modules/trash/trash.go:81
 msgid "Directory does not exist."
 msgstr "डाइरेक्टरी अवस्थित छैन।"
 
-#: internal/modules/filemanager/listing.go:125
+#: internal/modules/filemanager/listing.go:146
 msgid "Error accessing the specified directory."
 msgstr "निर्दिष्ट डाइरेक्टरी पहुँच गर्दा त्रुटि।"
 
-#: internal/modules/filemanager/render.go:236
+#: internal/modules/filemanager/render.go:238
 msgid "Upload Files"
 msgstr "फाइलहरू अपलोड गर्नुहोस्"
 
-#: internal/modules/filemanager/upload.go:64
+#: internal/modules/filemanager/upload.go:118
 msgid "No files were uploaded"
 msgstr "कुनै फाइल अपलोड गरिएन"
 
-#: internal/modules/filemanager/upload.go:133
-#: internal/modules/filemanager/upload.go:145
+#: internal/modules/filemanager/upload.go:187
+#: internal/modules/filemanager/upload.go:202
 msgid "Files uploaded successfully."
 msgstr "फाइलहरू सफलतापूर्वक अपलोड गरियो।"
 
-#: internal/modules/filemanager/upload.go:147
+#: internal/modules/filemanager/upload.go:204
 msgid "Some files failed: %(errs)s"
 msgstr "केही फाइलहरू असफल भए: %(errs)s"
 
-#: internal/modules/filemanager/wget.go:174
+#: internal/modules/filemanager/wget.go:216
 msgid "Download queued..."
 msgstr "डाउनलोड लाइनमा छ..."
 
@@ -3789,40 +3761,40 @@ msgstr "डाउनलोड लाइनमा छ..."
 msgid "Flarum installed successfully on %(selected_domain)s"
 msgstr "Flarum %(selected_domain)s मा सफलतापूर्वक स्थापना गरियो"
 
-#: internal/modules/ftp/ftp.go:133
+#: internal/modules/ftp/ftp.go:145
 msgid ""
 "FTP service is not yet started, please contact Administrator to enable it."
 msgstr "FTP सेवा अझै सुरु भएको छैन, सक्षम गर्न प्रशासकलाई सम्पर्क गर्नुहोस्।"
 
-#: internal/modules/ftp/ftp.go:225
+#: internal/modules/ftp/ftp.go:237
 msgid "No currently active FTP connections"
 msgstr "हाल कुनै सक्रिय FTP जडान छैन"
 
-#: internal/modules/ftp/ftp.go:257
+#: internal/modules/ftp/ftp.go:269
 msgid "FTP username not provided."
 msgstr "FTP प्रयोगकर्ता नाम दिइएको छैन।"
 
-#: internal/modules/ftp/ftp.go:261
+#: internal/modules/ftp/ftp.go:273
 msgid "FTP domain not provided."
 msgstr "FTP डोमेन दिइएको छैन।"
 
-#: internal/modules/ftp/ftp.go:269
+#: internal/modules/ftp/ftp.go:281
 msgid "FTP path not provided."
 msgstr "FTP पथ दिइएको छैन।"
 
-#: internal/modules/ftp/ftp.go:273
+#: internal/modules/ftp/ftp.go:285
 msgid "FTP password not provided."
 msgstr "FTP पासवर्ड दिइएको छैन।"
 
-#: internal/modules/ftp/ftp.go:277 internal/modules/ftp/quota.go:189
+#: internal/modules/ftp/ftp.go:289 internal/modules/ftp/quota.go:189
 msgid "Invalid quota, use a whole number of MB or GB."
 msgstr "अमान्य कोटा, MB वा GB मा पूर्ण संख्या प्रयोग गर्नुहोस्।"
 
-#: internal/modules/ftp/ftp.go:283 internal/modules/ftp/ftp.go:411
+#: internal/modules/ftp/ftp.go:295 internal/modules/ftp/ftp.go:420
 msgid "The FTP path must start with %(real_path)s"
 msgstr "FTP पथ %(real_path)s बाट सुरु हुनुपर्छ"
 
-#: internal/modules/ftp/ftp.go:290
+#: internal/modules/ftp/ftp.go:302
 msgid ""
 "Username %(ftp_username)s contains invalid characters, only allowed: "
 "BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
@@ -3830,103 +3802,103 @@ msgstr ""
 "प्रयोगकर्ता नाम %(ftp_username)s मा अमान्य अक्षरहरू छन्, अनुमति दिइएका "
 "मात्र: BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
 
-#: internal/modules/ftp/ftp.go:300
+#: internal/modules/ftp/ftp.go:312
 msgid "Error creating FTP user %(ftp_username)s: %(output)s"
 msgstr "FTP प्रयोगकर्ता %(ftp_username)s सिर्जना गर्दा त्रुटि: %(output)s"
 
-#: internal/modules/ftp/ftp.go:306
+#: internal/modules/ftp/ftp.go:318
 msgid "FTP account %(ftp_username)s created successfully."
 msgstr "FTP खाता %(ftp_username)s सफलतापूर्वक सिर्जना गरियो।"
 
-#: internal/modules/ftp/ftp.go:309
+#: internal/modules/ftp/ftp.go:321
 msgid "Failed to create FTP account %(ftp_username)s: %(output)s"
 msgstr "FTP खाता %(ftp_username)s सिर्जना गर्न सकिएन: %(output)s"
 
-#: internal/modules/ftp/ftp.go:326 internal/modules/ftp/ftp.go:347
-#: internal/modules/ftp/ftp.go:403 internal/modules/ftp/quota.go:168
+#: internal/modules/ftp/ftp.go:338 internal/modules/ftp/ftp.go:359
+#: internal/modules/ftp/ftp.go:415 internal/modules/ftp/quota.go:168
 msgid "Invalid FTP username."
 msgstr "अमान्य FTP प्रयोगकर्ता नाम।"
 
-#: internal/modules/ftp/ftp.go:338
+#: internal/modules/ftp/ftp.go:350
 msgid "FTP account %(username_to_delete)s deleted successfully!"
 msgstr "FTP खाता %(username_to_delete)s सफलतापूर्वक मेटाइयो!"
 
-#: internal/modules/ftp/ftp.go:341
+#: internal/modules/ftp/ftp.go:353
 msgid ""
 "Failed to delete FTP account %(username_to_delete)s. Output: %(output)s"
 msgstr "FTP खाता %(username_to_delete)s मेटाउन सकिएन। आउटपुट: %(output)s"
 
-#: internal/modules/ftp/ftp.go:359
+#: internal/modules/ftp/ftp.go:371
 msgid "Missing new password"
 msgstr "नयाँ पासवर्ड छुटेको छ"
 
-#: internal/modules/ftp/ftp.go:371
+#: internal/modules/ftp/ftp.go:383
 msgid "Error changing FTP password: %(output)s"
 msgstr "FTP पासवर्ड परिवर्तन गर्दा त्रुटि: %(output)s"
 
-#: internal/modules/ftp/ftp.go:376
+#: internal/modules/ftp/ftp.go:388
 msgid "FTP password changed successfully for user %(username)s"
 msgstr "प्रयोगकर्ता %(username)s को FTP पासवर्ड सफलतापूर्वक परिवर्तन गरियो"
 
-#: internal/modules/ftp/ftp.go:378
+#: internal/modules/ftp/ftp.go:390
 msgid "Failed to change FTP password: %(output)s"
 msgstr "FTP पासवर्ड परिवर्तन गर्न सकिएन: %(output)s"
 
-#: internal/modules/ftp/ftp.go:418
+#: internal/modules/ftp/ftp.go:427
 msgid "Error changing FTP path for user %(username_to_modify)s: %(output)s"
 msgstr ""
 "प्रयोगकर्ता %(username_to_modify)s को FTP पथ परिवर्तन गर्दा त्रुटि: "
 "%(output)s"
 
-#: internal/modules/ftp/ftp.go:423
+#: internal/modules/ftp/ftp.go:432
 msgid "FTP path changed successfully for user %(username_to_modify)s"
 msgstr ""
 "प्रयोगकर्ता %(username_to_modify)s को FTP पथ सफलतापूर्वक परिवर्तन गरियो"
 
-#: internal/modules/ftp/ftp.go:425
+#: internal/modules/ftp/ftp.go:434
 msgid "Failed to change FTP path for user %(username_to_modify)s: %(output)s"
 msgstr ""
 "प्रयोगकर्ता %(username_to_modify)s को FTP पथ परिवर्तन गर्न सकिएन: %(output)s"
 
-#: internal/modules/ftp/ftp.go:436
+#: internal/modules/ftp/ftp.go:445
 msgid "Invalid configuration type, please use cyberduck or filezilla only!"
 msgstr ""
 "अमान्य कन्फिगरेसन प्रकार, कृपया cyberduck वा filezilla मात्र प्रयोग "
 "गर्नुहोस्!"
 
-#: internal/modules/ftp/ftp.go:449
+#: internal/modules/ftp/ftp.go:458
 msgid "User has no FTP accounts."
 msgstr "प्रयोगकर्तासँग कुनै FTP खाता छैन।"
 
-#: internal/modules/ftp/ftp.go:466 internal/modules/ftp/quota.go:181
+#: internal/modules/ftp/ftp.go:475 internal/modules/ftp/quota.go:181
 msgid "FTP account not found."
 msgstr "FTP खाता फेला परेन।"
 
-#: internal/modules/ftp/ftp.go:525
+#: internal/modules/ftp/ftp.go:526
 msgid "Set this password for the selected FTP accounts:"
 msgstr "छानिएका FTP खाताहरूका लागि यो पासवर्ड सेट गर्नुहोस्:"
 
-#: internal/modules/ftp/ftp.go:526
+#: internal/modules/ftp/ftp.go:527
 msgid "Change path"
 msgstr "पथ परिवर्तन गर्नुहोस्"
 
-#: internal/modules/ftp/ftp.go:526
+#: internal/modules/ftp/ftp.go:527
 msgid "New home folder for the selected FTP accounts:"
 msgstr "छानिएका FTP खाताहरूका लागि नयाँ होम फोल्डर:"
 
-#: internal/modules/ftp/ftp.go:527
+#: internal/modules/ftp/ftp.go:528
 msgid "Disk quota for the selected FTP accounts, e.g. 500M or 2G:"
 msgstr "चयन गरिएका FTP खाताहरूको लागि डिस्क कोटा, जस्तै 500M वा 2G:"
 
-#: internal/modules/ftp/ftp.go:528
+#: internal/modules/ftp/ftp.go:529
 msgid "Remove quota"
 msgstr "कोटा हटाउनुहोस्"
 
-#: internal/modules/ftp/ftp.go:528
+#: internal/modules/ftp/ftp.go:529
 msgid "Remove the disk quota from the selected FTP accounts?"
 msgstr "चयन गरिएका FTP खाताहरूबाट डिस्क कोटा हटाउने?"
 
-#: internal/modules/ftp/ftp.go:529
+#: internal/modules/ftp/ftp.go:530
 msgid "Delete the selected FTP accounts? Their files are kept."
 msgstr "छानिएका FTP खाताहरू मेटाउने? तिनका फाइलहरू राखिन्छन्।"
 
@@ -4067,15 +4039,15 @@ msgstr "IP ठेगानाहरू ब्लक गर्न सकिएन
 msgid "Joomla installed successfully on %(selected_domain)s"
 msgstr "Joomla %(selected_domain)s मा सफलतापूर्वक स्थापना गरियो"
 
-#: internal/modules/malwarescan/bulk.go:15
+#: internal/modules/malwarescan/bulk.go:14
 msgid "Restore the selected files to their original location?"
 msgstr "छानिएका फाइलहरू मूल स्थानमा पुनर्स्थापना गर्ने?"
 
-#: internal/modules/malwarescan/bulk.go:16
+#: internal/modules/malwarescan/bulk.go:15
 msgid "Mark safe"
 msgstr "सुरक्षित चिन्ह लगाउनुहोस्"
 
-#: internal/modules/malwarescan/bulk.go:16
+#: internal/modules/malwarescan/bulk.go:15
 msgid ""
 "Mark the selected files as safe and restore them? Future scans will skip "
 "them."
@@ -4083,7 +4055,7 @@ msgstr ""
 "छानिएका फाइलहरूलाई सुरक्षित चिन्ह लगाई पुनर्स्थापना गर्ने? भविष्यका "
 "स्क्यानहरूले तिनलाई छोड्नेछन्।"
 
-#: internal/modules/malwarescan/bulk.go:17
+#: internal/modules/malwarescan/bulk.go:16
 msgid "Permanently delete the selected files? This cannot be undone."
 msgstr "छानिएका फाइलहरू स्थायी रूपमा मेटाउने? यो फिर्ता गर्न सकिँदैन।"
 
@@ -4239,7 +4211,7 @@ msgid ""
 msgstr "MongoDB कन्टेनर चलिरहेको छैन। कृपया सुरु हुन केही क्षण पर्खनुहोस्.."
 
 #: internal/modules/mongodb/databases.go:56
-#: internal/modules/mysql/databases.go:93
+#: internal/modules/mysql/databases.go:109
 #: internal/modules/postgresql/databases.go:62
 msgid "Error fetching databases: %(error)s"
 msgstr "डाटाबेसहरू प्राप्त गर्दा त्रुटि: %(error)s"
@@ -4261,8 +4233,8 @@ msgstr "MongoDB अझै सुरु हुँदैछ, कृपया क�
 #: internal/modules/mongodb/databases.go:168
 #: internal/modules/mongodb/export.go:38 internal/modules/mongodb/wizard.go:50
 #: internal/modules/mysql/assign.go:49 internal/modules/mysql/assign.go:181
-#: internal/modules/mysql/databases.go:166
-#: internal/modules/mysql/databases.go:224 internal/modules/mysql/export.go:41
+#: internal/modules/mysql/databases.go:222
+#: internal/modules/mysql/databases.go:280 internal/modules/mysql/export.go:41
 #: internal/modules/mysql/wizard.go:57
 #: internal/modules/postgresql/databases.go:136
 #: internal/modules/postgresql/databases.go:195
@@ -4275,8 +4247,8 @@ msgstr "डाटाबेस नाम आवश्यक छ।"
 #: internal/modules/mongodb/databases.go:171
 #: internal/modules/mongodb/wizard.go:53 internal/modules/mysql/assign.go:52
 #: internal/modules/mysql/assign.go:184
-#: internal/modules/mysql/databases.go:171
-#: internal/modules/mysql/databases.go:228
+#: internal/modules/mysql/databases.go:227
+#: internal/modules/mysql/databases.go:284
 #: internal/modules/postgresql/databases.go:140
 #: internal/modules/postgresql/databases.go:199
 #: internal/modules/postgresql/wizard.go:50
@@ -4381,12 +4353,12 @@ msgstr ""
 msgid "No database file uploaded!"
 msgstr "कुनै डाटाबेस फाइल अपलोड गरिएन!"
 
-#: internal/modules/mongodb/mongodb.go:42 internal/modules/mysql/mysql.go:197
+#: internal/modules/mongodb/mongodb.go:42 internal/modules/mysql/mysql.go:198
 #: internal/modules/postgresql/postgresql.go:59
 msgid "Service installation is underway and may take up to one minute."
 msgstr "सेवा स्थापना हुँदैछ र यसमा एक मिनेटसम्म लाग्न सक्छ।"
 
-#: internal/modules/mongodb/mongodb.go:44 internal/modules/mysql/mysql.go:199
+#: internal/modules/mongodb/mongodb.go:44 internal/modules/mysql/mysql.go:200
 #: internal/modules/postgresql/postgresql.go:61
 msgid ""
 "Service has been created but not yet started. Start it from the Services "
@@ -4394,7 +4366,7 @@ msgid ""
 msgstr ""
 "सेवा सिर्जना भएको छ तर अझै सुरु भएको छैन। सेवाहरू पृष्ठबाट सुरु गर्नुहोस्।"
 
-#: internal/modules/mongodb/mongodb.go:46 internal/modules/mysql/mysql.go:201
+#: internal/modules/mongodb/mongodb.go:46 internal/modules/mysql/mysql.go:202
 #: internal/modules/postgresql/postgresql.go:63
 msgid ""
 "Service is restarting. This may indicate a configuration error or a crash — "
@@ -4403,12 +4375,12 @@ msgstr ""
 "सेवा पुनः सुरु हुँदैछ। यसले कन्फिगरेसन त्रुटि वा क्र्यास संकेत गर्न सक्छ — "
 "सेवाहरू पृष्ठमा लगहरू जाँच्नुहोस्।"
 
-#: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:203
+#: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:204
 #: internal/modules/postgresql/postgresql.go:65
 msgid "Service is paused. Resume it from the Services page."
 msgstr "सेवा रोकिएको छ। सेवाहरू पृष्ठबाट पुनः सुरु गर्नुहोस्।"
 
-#: internal/modules/mongodb/mongodb.go:50 internal/modules/mysql/mysql.go:205
+#: internal/modules/mongodb/mongodb.go:50 internal/modules/mysql/mysql.go:206
 #: internal/modules/postgresql/postgresql.go:67
 msgid ""
 "Service has stopped. This is usually caused by resource exhaustion — "
@@ -4418,12 +4390,12 @@ msgstr ""
 "सेवा बन्द भएको छ। यो प्रायः स्रोत सकिँदा हुन्छ — यस सेवाको स्रोत सीमा बढाएर "
 "सेवाहरू पृष्ठबाट पुनः सुरु गर्नुहोस्।"
 
-#: internal/modules/mongodb/mongodb.go:52 internal/modules/mysql/mysql.go:207
+#: internal/modules/mongodb/mongodb.go:52 internal/modules/mysql/mysql.go:208
 #: internal/modules/postgresql/postgresql.go:69
 msgid "Service is being deleted. Please wait for the process to complete."
 msgstr "सेवा मेटाइँदैछ। प्रक्रिया पूरा नहुन्जेल पर्खनुहोस्।"
 
-#: internal/modules/mongodb/mongodb.go:54 internal/modules/mysql/mysql.go:209
+#: internal/modules/mongodb/mongodb.go:54 internal/modules/mysql/mysql.go:210
 #: internal/modules/postgresql/postgresql.go:71
 msgid ""
 "Service has crashed and cannot recover. This is usually caused by resource "
@@ -4432,7 +4404,7 @@ msgstr ""
 "सेवा क्र्यास भएको छ र पुनर्प्राप्त हुन सक्दैन। यो प्रायः स्रोत सकिँदा हुन्छ "
 "— सेवाहरू पृष्ठमा लगहरू जाँच्नुहोस्।"
 
-#: internal/modules/mongodb/mongodb.go:60 internal/modules/mysql/mysql.go:215
+#: internal/modules/mongodb/mongodb.go:60 internal/modules/mysql/mysql.go:216
 #: internal/modules/postgresql/postgresql.go:77
 msgid ""
 "Service is unhealthy. Try restarting it from Services, or contact your "
@@ -4441,14 +4413,14 @@ msgstr ""
 "सेवा अस्वस्थ छ। सेवाहरूबाट पुनः सुरु गर्ने प्रयास गर्नुहोस् वा आफ्नो "
 "प्रशासकलाई सम्पर्क गर्नुहोस्।"
 
-#: internal/modules/mongodb/mongodb.go:62 internal/modules/mysql/mysql.go:217
+#: internal/modules/mongodb/mongodb.go:62 internal/modules/mysql/mysql.go:218
 #: internal/modules/postgresql/postgresql.go:79
 msgid "Service is active, but the databases are still initializing."
 msgstr "सेवा सक्रिय छ, तर डाटाबेसहरू अझै सुरु हुँदैछन्।"
 
 #: internal/modules/mongodb/mongodb.go:64
-#: internal/modules/mongodb/mongodb.go:67 internal/modules/mysql/mysql.go:219
-#: internal/modules/mysql/mysql.go:222
+#: internal/modules/mongodb/mongodb.go:67 internal/modules/mysql/mysql.go:220
+#: internal/modules/mysql/mysql.go:223
 #: internal/modules/postgresql/postgresql.go:81
 #: internal/modules/postgresql/postgresql.go:84
 msgid "Unable to retrieve service status. Please contact your administrator."
@@ -4488,7 +4460,7 @@ msgstr "छानिएका अपरेसनहरू रोक्ने?"
 msgid "MongoDB Databases"
 msgstr "MongoDB डाटाबेसहरू"
 
-#: internal/modules/mongodb/render.go:63 internal/modules/mysql/render.go:85
+#: internal/modules/mongodb/render.go:63 internal/modules/mysql/render.go:87
 #: internal/modules/postgresql/render.go:67 internal/web/sidebar_classic.go:95
 #: internal/web/sidebar_classic.go:117 internal/web/sidebar_classic.go:140
 #: internal/web/templates/db/new.html:46
@@ -4501,7 +4473,7 @@ msgstr "डाटाबेस सिर्जना गर्नुहोस्"
 msgid "MongoDB Users"
 msgstr "MongoDB प्रयोगकर्ताहरू"
 
-#: internal/modules/mongodb/render.go:111 internal/modules/mysql/render.go:131
+#: internal/modules/mongodb/render.go:111 internal/modules/mysql/render.go:133
 #: internal/modules/postgresql/render.go:119
 #: internal/web/sidebar_classic.go:96 internal/web/sidebar_classic.go:118
 #: internal/web/sidebar_classic.go:141
@@ -4517,7 +4489,7 @@ msgstr "MongoDB प्रयोगकर्ताहरू"
 msgid "Create User"
 msgstr "प्रयोगकर्ता सिर्जना गर्नुहोस्"
 
-#: internal/modules/mongodb/render.go:129 internal/modules/mysql/render.go:149
+#: internal/modules/mongodb/render.go:129 internal/modules/mysql/render.go:151
 #: internal/modules/postgresql/render.go:137
 #: internal/web/templates/files/ftp.html:162
 #: internal/web/templates/files/ftp.html:164
@@ -4532,7 +4504,7 @@ msgstr "प्रयोगकर्ता सिर्जना गर्नु�
 msgid "Change Password"
 msgstr "पासवर्ड बदल्नुहोस्"
 
-#: internal/modules/mongodb/render.go:167 internal/modules/mysql/render.go:240
+#: internal/modules/mongodb/render.go:167 internal/modules/mysql/render.go:242
 #: internal/modules/postgresql/render.go:162
 #: internal/web/templates/mongodb/assign.html:8
 #: internal/web/templates/mongodb/assign.html:55
@@ -4541,7 +4513,7 @@ msgstr "पासवर्ड बदल्नुहोस्"
 msgid "Assign User to Database"
 msgstr "प्रयोगकर्ता डाटाबेसमा अनुबंध गर्नुहोस्"
 
-#: internal/modules/mongodb/render.go:180 internal/modules/mysql/render.go:252
+#: internal/modules/mongodb/render.go:180 internal/modules/mysql/render.go:254
 #: internal/modules/postgresql/render.go:174
 #: internal/web/templates/mongodb/remove.html:55
 #: internal/web/templates/mysql/remove.html:51
@@ -4704,7 +4676,7 @@ msgstr ""
 
 #: internal/modules/mysql/bulk.go:42
 #: internal/web/templates/mysql/databases.html:398
-#: internal/web/templates/mysql/databases.html:586
+#: internal/web/templates/mysql/databases.html:605
 msgid "Optimize"
 msgstr "अनुकूलन गर्नुहोस्"
 
@@ -4714,7 +4686,7 @@ msgstr "छानिएका डाटाबेसहरूका सबै त
 
 #: internal/modules/mysql/bulk.go:43
 #: internal/web/templates/mysql/databases.html:411
-#: internal/web/templates/mysql/databases.html:587
+#: internal/web/templates/mysql/databases.html:606
 msgid "Repair"
 msgstr "मर्मत गर्नुहोस्"
 
@@ -4738,19 +4710,23 @@ msgstr "पहुँच हटाउनुहोस्"
 msgid "Remove remote access for the selected user and host pairs?"
 msgstr "छानिएका प्रयोगकर्ता र होस्ट जोडीहरूको रिमोट पहुँच हटाउने?"
 
-#: internal/modules/mysql/conf.go:318
+#: internal/modules/mysql/conf.go:321
+msgid "Could not save the configuration file."
+msgstr ""
+
+#: internal/modules/mysql/conf.go:323
 msgid "Unknown database service, cannot restart"
 msgstr "अज्ञात डाटाबेस सेवा, पुनः सुरु गर्न सकिँदैन"
 
-#: internal/modules/mysql/conf.go:320
+#: internal/modules/mysql/conf.go:326
 msgid "%(mysql_version)s configuration updated and applied without a restart."
 msgstr "%(mysql_version)s कन्फिगरेसन अद्यावधिक गरी पुनः सुरु नगरी लागू गरियो।"
 
-#: internal/modules/mysql/conf.go:322
+#: internal/modules/mysql/conf.go:328
 msgid "%(mysql_version)s configuration updated and service restarted."
 msgstr "%(mysql_version)s कन्फिगरेसन अद्यावधिक गरी सेवा पुनः सुरु गरियो।"
 
-#: internal/modules/mysql/conf.go:325
+#: internal/modules/mysql/conf.go:331
 msgid ""
 "%(mysql_version)s did not start with the new settings, so the previous "
 "configuration was restored."
@@ -4758,12 +4734,12 @@ msgstr ""
 "%(mysql_version)s नयाँ सेटिङहरूसँग सुरु भएन, त्यसैले अघिल्लो कन्फिगरेसन "
 "पुनर्स्थापना गरियो।"
 
-#: internal/modules/mysql/conf.go:327
+#: internal/modules/mysql/conf.go:333
 msgid "%(mysql_version)s rejected the new settings, nothing was changed."
 msgstr ""
 "%(mysql_version)s ले नयाँ सेटिङहरू अस्वीकार गर्‍यो, केही परिवर्तन गरिएन।"
 
-#: internal/modules/mysql/conf.go:329
+#: internal/modules/mysql/conf.go:335
 msgid ""
 "%(mysql_version)s did not start with the new settings. The previous "
 "configuration was restored but the service is still not running."
@@ -4771,12 +4747,12 @@ msgstr ""
 "%(mysql_version)s नयाँ सेटिङहरूसँग सुरु भएन। अघिल्लो कन्फिगरेसन पुनर्स्थापना"
 " गरियो तर सेवा अझै चलिरहेको छैन।"
 
-#: internal/modules/mysql/conf.go:339
+#: internal/modules/mysql/conf.go:345
 msgid ""
 "%(mysql_version)s container is not running. Please wait for initialization."
 msgstr "%(mysql_version)s कन्टेनर चलिरहेको छैन। कृपया सुरु हुन पर्खनुहोस्।"
 
-#: internal/modules/mysql/databases.go:158 internal/modules/mysql/wizard.go:30
+#: internal/modules/mysql/databases.go:214 internal/modules/mysql/wizard.go:30
 msgid ""
 "%(mysql_version)s service is not ready yet. Please wait for the installation"
 " to finish before creating a database."
@@ -4784,12 +4760,12 @@ msgstr ""
 "%(mysql_version)s सेवा अझै तयार छैन। डाटाबेस सिर्जना गर्नुअघि स्थापना सकिन "
 "पर्खनुहोस्।"
 
-#: internal/modules/mysql/databases.go:175 internal/modules/mysql/wizard.go:66
+#: internal/modules/mysql/databases.go:231 internal/modules/mysql/wizard.go:66
 msgid ""
 "Database name is too long. MySQL identifiers are limited to 64 characters."
 msgstr "डाटाबेस नाम धेरै लामो छ। MySQL पहिचानकर्ताहरू ६४ अक्षरमा सीमित छन्।"
 
-#: internal/modules/mysql/databases.go:190 internal/modules/mysql/wizard.go:97
+#: internal/modules/mysql/databases.go:246 internal/modules/mysql/wizard.go:97
 msgid ""
 "Error creating database: '%(database_name)s' - You have reached the maximum "
 "number of databases allowed.%(upgrade_message)s"
@@ -4797,19 +4773,19 @@ msgstr ""
 "डाटाबेस सिर्जना गर्दा त्रुटि: '%(database_name)s' - तपाईं अनुमति दिइएका "
 "डाटाबेसहरूको अधिकतम संख्यामा पुग्नुभयो।%(upgrade_message)s"
 
-#: internal/modules/mysql/databases.go:195
+#: internal/modules/mysql/databases.go:251
 msgid "Error creating database: %(error)s"
 msgstr "डाटाबेस सिर्जना गर्दा त्रुटि: %(error)s"
 
-#: internal/modules/mysql/databases.go:203
+#: internal/modules/mysql/databases.go:259
 msgid "Successfully created a database %(database_name)s"
 msgstr "डाटाबेस %(database_name)s सफलतापूर्वक सिर्जना गरियो"
 
-#: internal/modules/mysql/databases.go:233
+#: internal/modules/mysql/databases.go:289
 msgid "Error deleting database: %(error)s"
 msgstr "डाटाबेस मेटाउँदा त्रुटि: %(error)s"
 
-#: internal/modules/mysql/databases.go:241
+#: internal/modules/mysql/databases.go:297
 msgid "Successfully deleted a database %(database_name)s"
 msgstr "डाटाबेस %(database_name)s सफलतापूर्वक मेटाइयो"
 
@@ -4850,16 +4826,16 @@ msgstr "फाइल %(filename)s बाट डाटाबेसमा सफ�
 msgid "Import into '%(db_name)s' failed: %(err_detail)s"
 msgstr "'%(db_name)s' मा आयात असफल भयो: %(err_detail)s"
 
-#: internal/modules/mysql/mysql.go:240
+#: internal/modules/mysql/mysql.go:241
 msgid ""
 "%(service)s service is not yet installed. Starting it in the background.."
 msgstr "%(service)s सेवा अझै स्थापना भएको छैन। पृष्ठभूमिमा सुरु हुँदैछ.."
 
-#: internal/modules/mysql/mysql.go:242
+#: internal/modules/mysql/mysql.go:243
 msgid "%(service)s service is not accessible. Current status: %(state)s."
 msgstr "%(service)s सेवा पहुँचयोग्य छैन। हालको स्थिति: %(state)s।"
 
-#: internal/modules/mysql/mysql.go:244
+#: internal/modules/mysql/mysql.go:245
 msgid ""
 "%(service)s is running but still initializing. If it stays in this state for"
 " more than 60s, check the logs."
@@ -4867,11 +4843,11 @@ msgstr ""
 "%(service)s चलिरहेको छ तर अझै सुरु हुँदैछ। ६० सेकेन्डभन्दा बढी यही अवस्थामा "
 "रहे लगहरू जाँच्नुहोस्।"
 
-#: internal/modules/mysql/mysql.go:246
+#: internal/modules/mysql/mysql.go:247
 msgid "%(service)s is starting. It is not ready to handle queries yet."
 msgstr "%(service)s सुरु हुँदैछ। यो अझै क्वेरीहरू सम्हाल्न तयार छैन।"
 
-#: internal/modules/mysql/mysql.go:248
+#: internal/modules/mysql/mysql.go:249
 msgid ""
 "%(service)s is running, but health status is unknown. It may or may not be "
 "ready to handle queries."
@@ -4981,19 +4957,19 @@ msgstr "पहुँच हटाउँदा त्रुटि: %(error)s"
 msgid "Successfully removed access for %(db_user)s from %(db_host)s"
 msgstr "%(db_host)s बाट %(db_user)s को पहुँच सफलतापूर्वक हटाइयो"
 
-#: internal/modules/mysql/render.go:106
+#: internal/modules/mysql/render.go:108
 msgid "Database Users"
 msgstr "डाटाबेस प्रयोगकर्ताहरू"
 
-#: internal/modules/mysql/render.go:176 internal/modules/mysql/render.go:188
+#: internal/modules/mysql/render.go:178 internal/modules/mysql/render.go:190
 msgid "Wizard"
 msgstr "विजार्ड"
 
-#: internal/modules/mysql/render.go:308 static/js/tour-steps.js:903
+#: internal/modules/mysql/render.go:310 static/js/tour-steps.js:903
 msgid "Change Root Password"
 msgstr "Root पासवर्ड परिवर्तन गर्नुहोस्"
 
-#: internal/modules/mysql/render.go:331
+#: internal/modules/mysql/render.go:333
 msgid "Remote MySQL"
 msgstr "रिमोट MySQL"
 
@@ -5055,8 +5031,8 @@ msgstr "config.inc.php मा डाटाबेस नाम वा प्र�
 msgid "OpenCart installed successfully on %(selected_domain)s"
 msgstr "OpenCart %(selected_domain)s मा सफलतापूर्वक स्थापना गरियो"
 
-#: internal/modules/php/api_extensions.go:229
-#: internal/modules/php/extensions.go:830
+#: internal/modules/php/api_extensions.go:249
+#: internal/modules/php/extensions.go:854
 msgid "Install queued..."
 msgstr "स्थापना लाइनमा छ..."
 
@@ -5072,24 +5048,12 @@ msgstr "पूर्वनिर्धारितमा फर्काउन�
 msgid "Switch the selected domains to the default PHP version?"
 msgstr "छानिएका डोमेनहरू पूर्वनिर्धारित PHP संस्करणमा परिवर्तन गर्ने?"
 
-#: internal/modules/php/default.go:49
-msgid "Invalid PHP version format"
-msgstr "अमान्य PHP संस्करण ढाँचा"
-
-#: internal/modules/php/default.go:53
-msgid ""
-"Default PHP version for OpenLitespeed can not be set to %(new_phpversion)s -"
-" only available tags are: 8.5 8.4 8.3 8.2"
-msgstr ""
-"OpenLitespeed को पूर्वनिर्धारित PHP संस्करण %(new_phpversion)s मा सेट गर्न "
-"सकिँदैन - उपलब्ध ट्यागहरू मात्र: 8.5 8.4 8.3 8.2"
-
-#: internal/modules/php/default.go:61
+#: internal/modules/php/default.go:75
 msgid "PHP version %(new_phpversion)s set as default for new domains"
 msgstr ""
 "PHP संस्करण %(new_phpversion)s नयाँ डोमेनहरूका लागि पूर्वनिर्धारित बनाइयो"
 
-#: internal/modules/php/default.go:65
+#: internal/modules/php/default.go:79
 msgid ""
 "PHP version %(new_phpversion)s saved, and Litespeed restarted to apply the "
 "version."
@@ -5097,7 +5061,7 @@ msgstr ""
 "PHP संस्करण %(new_phpversion)s सुरक्षित गरियो, र संस्करण लागू गर्न Litespeed"
 " पुनः सुरु गरियो।"
 
-#: internal/modules/php/default.go:69
+#: internal/modules/php/default.go:83
 msgid ""
 "PHP version %(new_phpversion)s saved and will be used by Litespeed for new "
 "domains."
@@ -5105,7 +5069,7 @@ msgstr ""
 "PHP संस्करण %(new_phpversion)s सुरक्षित गरियो र Litespeed ले नयाँ डोमेनहरूका"
 " लागि प्रयोग गर्नेछ।"
 
-#: internal/modules/php/default.go:81
+#: internal/modules/php/default.go:95
 msgid "Default PHP version could not be changed to %(new_phpversion)s"
 msgstr "पूर्वनिर्धारित PHP संस्करण %(new_phpversion)s मा परिवर्तन गर्न सकिएन"
 
@@ -5117,27 +5081,32 @@ msgstr ""
 "Litespeed मा एउटा मात्र PHP संस्करण प्रयोग गर्न सकिन्छ, सबै डोमेनको संस्करण "
 "परिवर्तन गर्न यो पृष्ठ प्रयोग गर्नुहोस्।"
 
-#: internal/modules/php/domains.go:94
+#: internal/modules/php/domains.go:93
 msgid "Invalid or unavailable PHP version selected."
 msgstr "अमान्य वा अनुपलब्ध PHP संस्करण छानियो।"
 
-#: internal/modules/php/domains.go:98
-msgid "Invalid current PHP version."
-msgstr "अमान्य हालको PHP संस्करण।"
-
-#: internal/modules/php/domains.go:106
-msgid "Failed to start PHP %(new_phpversion)s: %(message)s"
-msgstr "PHP %(new_phpversion)s सुरु गर्न सकिएन: %(message)s"
-
-#: internal/modules/php/domains.go:115
+#: internal/modules/php/domains.go:99
 msgid "Failed to read vhost configuration for %(domain_url)s: %(error)s"
 msgstr "%(domain_url)s को vhost कन्फिगरेसन पढ्न सकिएन: %(error)s"
 
-#: internal/modules/php/domains.go:123
+#: internal/modules/php/domains.go:105
+msgid "Could not determine the current PHP version for domain %(domain_url)s"
+msgstr ""
+
+#: internal/modules/php/domains.go:109
+msgid ""
+"Domain %(domain_url)s already uses PHP %(new_phpversion)s, nothing to change"
+msgstr ""
+
+#: internal/modules/php/domains.go:117
+msgid "Failed to start PHP %(new_phpversion)s: %(message)s"
+msgstr "PHP %(new_phpversion)s सुरु गर्न सकिएन: %(message)s"
+
+#: internal/modules/php/domains.go:124
 msgid "Error occurred while updating PHP version for domain %(domain_url)s"
 msgstr "डोमेन %(domain_url)s को PHP संस्करण अद्यावधिक गर्दा त्रुटि भयो"
 
-#: internal/modules/php/domains.go:138
+#: internal/modules/php/domains.go:152
 msgid ""
 "PHP version for domain %(domain_url)s was saved, but %(web_server)s could "
 "not apply it and still uses PHP %(old_phpversion)s: %(error)s"
@@ -5146,7 +5115,7 @@ msgstr ""
 "यसलाई लागू गर्न सकेन र अझै PHP %(old_phpversion)s प्रयोग गरिरहेको छ: "
 "%(error)s"
 
-#: internal/modules/php/domains.go:140
+#: internal/modules/php/domains.go:154
 msgid ""
 "PHP version for domain %(domain_url)s updated from %(old_phpversion)s to "
 "%(new_phpversion)s"
@@ -5154,20 +5123,24 @@ msgstr ""
 "डोमेन %(domain_url)s को PHP संस्करण %(old_phpversion)s बाट "
 "%(new_phpversion)s मा अद्यावधिक गरियो"
 
-#: internal/modules/php/extensions.go:500
+#: internal/modules/php/extensions.go:507
 msgid "Extensions installed, restarting PHP-FPM to apply changes..."
 msgstr ""
 "एक्सटेन्सनहरू स्थापना भए, परिवर्तन लागू गर्न PHP-FPM पुनः सुरु हुँदैछ..."
 
-#: internal/modules/php/extensions.go:618
+#: internal/modules/php/extensions.go:624 internal/modules/php/info.go:36
+msgid "Invalid or unavailable PHP version."
+msgstr ""
+
+#: internal/modules/php/extensions.go:629
 msgid "Failed to start PHP %(version)s: %(err_msg)s"
 msgstr "PHP %(version)s सुरु गर्न सकिएन: %(err_msg)s"
 
-#: internal/modules/php/extensions.go:628
+#: internal/modules/php/extensions.go:639
 msgid "Invalid extension name."
 msgstr "अमान्य एक्सटेन्सन नाम।"
 
-#: internal/modules/php/extensions.go:655
+#: internal/modules/php/extensions.go:666
 msgid ""
 "Extension %(extension)s %(action_word)s, PHP %(version)s reloaded to apply "
 "changes."
@@ -5175,13 +5148,17 @@ msgstr ""
 "एक्सटेन्सन %(extension)s %(action_word)s, परिवर्तन लागू गर्न PHP %(version)s"
 " पुनः लोड गरियो।"
 
-#: internal/modules/php/extensions.go:657
+#: internal/modules/php/extensions.go:668
 msgid "Could not change extension %(extension)s: %(err_msg)s"
 msgstr "एक्सटेन्सन %(extension)s परिवर्तन गर्न सकिएन: %(err_msg)s"
 
-#: internal/modules/php/info.go:45
+#: internal/modules/php/info.go:50
 msgid "Failed to start PHP %(service)s: %(message)s"
 msgstr "PHP %(service)s सुरु गर्न सकिएन: %(message)s"
+
+#: internal/modules/php/info.go:78
+msgid "Could not read PHP %(version)s info: %(message)s"
+msgstr ""
 
 #: internal/modules/php/ini.go:69
 msgid "Error saving %(text)s php.ini file!"
@@ -5245,7 +5222,7 @@ msgstr "कृपया सहयोगलाई सम्पर्क गर्
 msgid "Failed to generate autologin token."
 msgstr "स्वतः-लगइन टोकन बनाउन सकिएन।"
 
-#: internal/modules/php/render.go:115
+#: internal/modules/php/render.go:113
 #: internal/web/templates/php/default.html:4
 #: internal/web/templates/php/default.html:7
 msgid "Default PHP version"
@@ -5360,7 +5337,7 @@ msgstr ""
 
 #: internal/modules/postgresql/render.go:44
 #: internal/web/templates/dashboard/onboarding.html:206
-#: internal/web/templates/files/backup_settings.html:87
+#: internal/web/templates/files/backup_settings.html:88
 #: internal/web/templates/psql/databases.html:9
 msgid "PostgreSQL Databases"
 msgstr "PostgreSQL डेटाबेसहरू"
@@ -5443,8 +5420,8 @@ msgid "Disabled"
 msgstr "निष्क्रिय"
 
 #: internal/modules/services/render.go:56
-#: internal/web/templates/files/backup_restore.html:714
-#: internal/web/templates/files/backup_restore.html:764
+#: internal/web/templates/files/backup_restore.html:716
+#: internal/web/templates/files/backup_restore.html:766
 #: internal/web/templates/files/backup_wizard.html:128
 #: internal/web/templates/manager/n8n_app.html:684
 #: internal/web/templates/manager/python_node_apps.html:1320
@@ -5517,7 +5494,7 @@ msgstr "मृत"
 #: internal/web/templates/manager/wp/single.html:1119
 #: internal/web/templates/manager/wp/single.html:1126
 #: internal/web/templates/manager/wp/single.html:1180
-#: internal/web/templates/manager/wp/single.html:2279
+#: internal/web/templates/manager/wp/single.html:2285
 #: internal/web/templates/mysql/remote_mysql.html:71
 #: internal/web/templates/partials/_service_js.html:35
 #: internal/web/templates/psql/remote_psql.html:81
@@ -5614,32 +5591,35 @@ msgstr "TinyFileManager %(selected_domain)s मा सफलतापूर्�
 msgid "TinyPhotoGallery installed successfully on %(selected_domain)s"
 msgstr "TinyPhotoGallery %(selected_domain)s मा सफलतापूर्वक स्थापना गरियो"
 
-#: internal/modules/trash/api.go:76 internal/modules/trash/crud.go:207
+#: internal/modules/trash/api.go:61 internal/modules/trash/crud.go:185
 msgid "Trash emptied successfully"
 msgstr "रद्दीटोकरी सफलतापूर्वक खाली गरियो"
 
-#: internal/modules/trash/crud.go:101
+#: internal/modules/trash/crud.go:104
 msgid "Restored from Trash"
 msgstr "रद्दीटोकरीबाट पुनर्स्थापना गरियो"
 
-#: internal/modules/trash/crud.go:167
+#: internal/modules/trash/crud.go:161
 msgid "Deleted permanently"
 msgstr "स्थायी रूपमा मेटाइयो"
 
-#: internal/modules/trash/crud.go:182 internal/modules/trash/crud.go:197
-#: internal/modules/trash/crud.go:202
+#: internal/modules/trash/crud.go:176
 msgid "Unexpected error"
 msgstr "अप्रत्याशित त्रुटि"
 
-#: internal/modules/trash/crud.go:224
+#: internal/modules/trash/crud.go:180
+msgid "Could not delete %(items)s from the trash."
+msgstr ""
+
+#: internal/modules/trash/crud.go:202
 msgid "Nothing to restore"
 msgstr "पुनर्स्थापना गर्न केही छैन"
 
-#: internal/modules/trash/crud.go:272
+#: internal/modules/trash/crud.go:243
 msgid "Some items could not be restored."
 msgstr "केही वस्तुहरू पुनर्स्थापना गर्न सकिएन।"
 
-#: internal/modules/trash/crud.go:277
+#: internal/modules/trash/crud.go:248
 msgid "All items restored successfully"
 msgstr "सबै वस्तुहरू सफलतापूर्वक पुनर्स्थापना गरियो"
 
@@ -5987,7 +5967,7 @@ msgstr "अमान्य डोमेन नाम ढाँचा।"
 
 #: internal/modules/websites/dispatch.go:153
 #: internal/modules/websites/websitebuilder.go:153
-#: internal/modules/websites/websites.go:993
+#: internal/modules/websites/websites.go:1024
 msgid "Unable to detect docroot for the domain."
 msgstr "डोमेनको docroot पत्ता लगाउन सकिएन।"
 
@@ -6168,7 +6148,7 @@ msgstr "तपाईं अनुमति दिइएका साइटहर
 msgid "Website created successfully on %(selected_domain)s"
 msgstr "वेबसाइट %(selected_domain)s मा सफलतापूर्वक सिर्जना गरियो"
 
-#: internal/modules/websites/wpcache.go:545
+#: internal/modules/websites/wpcache.go:577
 msgid ""
 "Per-site OPcache toggle is not available on OpenLiteSpeed, it does not read "
 ".user.ini files."
@@ -6176,7 +6156,7 @@ msgstr ""
 "OpenLiteSpeed मा प्रति-साइट OPcache टगल उपलब्ध छैन, यसले .user.ini फाइलहरू "
 "पढ्दैन।"
 
-#: internal/modules/websites/wpcache.go:570
+#: internal/modules/websites/wpcache.go:602
 msgid "Unexpected OPcache status output."
 msgstr "OPcache स्थितिको अप्रत्याशित आउटपुट।"
 
@@ -6222,7 +6202,7 @@ msgstr "छानिएका साइटहरूका फाइल र ड�
 #: internal/web/templates/manager/websitebuilder.html:206
 #: internal/web/templates/manager/wp/list.html:142
 #: internal/web/templates/manager/wp/list.html:188
-#: internal/web/templates/manager/wp/single.html:1813
+#: internal/web/templates/manager/wp/single.html:1815
 msgid "Detach"
 msgstr "वियोग गर्नुहोस्"
 
@@ -6237,7 +6217,7 @@ msgstr ""
 #: internal/modules/wordpress/bulk.go:20
 #: internal/web/templates/manager/wp/list.html:145
 #: internal/web/templates/manager/wp/list.html:191
-#: internal/web/templates/manager/wp/single.html:1845
+#: internal/web/templates/manager/wp/single.html:1847
 msgid "Uninstall"
 msgstr "अनइन्स्टल गर्नुहोस्"
 
@@ -6260,23 +6240,25 @@ msgstr "उच्च-प्रदर्शन डाटाबेस कुञ्
 msgid "Could not add high-performance keys to %(table)s: %(error)s"
 msgstr "%(table)s मा उच्च-प्रदर्शन कुञ्जीहरू थप्न सकिएन: %(error)s"
 
-#: internal/modules/wordpress/install.go:372
+#: internal/modules/wordpress/install.go:384
 msgid "WordPress installed successfully on %(selected_domain)s"
 msgstr "WordPress %(selected_domain)s मा सफलतापूर्वक स्थापना गरियो"
 
-#: internal/modules/wordpress/manage.go:272
+#: internal/modules/wordpress/manage.go:256
 msgid "WordPress installation not found in the database"
 msgstr "WordPress स्थापना डाटाबेसमा फेला परेन"
 
-#: internal/modules/wordpress/manage.go:304
-msgid "Database name or user not found in wp-config.php"
-msgstr "wp-config.php मा डाटाबेस नाम वा प्रयोगकर्ता फेला परेन"
+#: internal/modules/wordpress/manage.go:288
+msgid ""
+"Database name or user in wp-config.php is missing or unsafe, so the database"
+" was kept"
+msgstr ""
 
-#: internal/modules/wordpress/manage.go:350
+#: internal/modules/wordpress/manage.go:334
 msgid "Missing site ID."
 msgstr "साइट ID छुटेको छ।"
 
-#: internal/modules/wordpress/manage.go:381
+#: internal/modules/wordpress/manage.go:365
 msgid "WordPress installation detached from Manager."
 msgstr "WordPress स्थापना प्रबन्धकबाट अलग गरियो।"
 
@@ -6354,7 +6336,7 @@ msgid "Accounts"
 msgstr "खाताहरू"
 
 #: internal/web/sidebar.go:273
-#: internal/web/templates/files/backup_restore.html:429
+#: internal/web/templates/files/backup_restore.html:431
 #: internal/web/templates/manager/_cms_app_shared.html:151
 #: internal/web/templates/manager/n8n_app.html:45
 #: internal/web/templates/manager/php_app.html:44
@@ -6442,15 +6424,15 @@ msgstr "सफलता"
 #: internal/web/templates/manager/grapejs_editor.html:114
 #: internal/web/templates/manager/n8n_app.html:403
 #: internal/web/templates/manager/python_node_apps.html:622
-#: internal/web/templates/manager/wp/single.html:1423
-#: internal/web/templates/manager/wp/single.html:1448
+#: internal/web/templates/manager/wp/single.html:1424
+#: internal/web/templates/manager/wp/single.html:1449
 #: internal/web/templates/mysql/databases.html:130
 #: internal/web/templates/system/error_logs.html:153
 msgid "Error"
 msgstr "त्रुटि"
 
 #: internal/web/templates/base.html:66
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/mysql/processlist.html:39
 #: internal/web/templates/system/error_logs.html:153
 #: internal/web/templates/user/activity.html:15
@@ -6458,7 +6440,7 @@ msgid "Info"
 msgstr "जानकारी"
 
 #: internal/web/templates/base.html:67
-#: internal/web/templates/files/filemanager_partials.html:74
+#: internal/web/templates/files/filemanager_partials.html:78
 msgid "Uploading"
 msgstr "अपलोड हुँदैछ"
 
@@ -6467,7 +6449,7 @@ msgid "Loading"
 msgstr "लोड हुँदैछ"
 
 #: internal/web/templates/base.html:69
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/system/error_logs.html:153
 #: internal/web/templates/user/history_usage.html:139
 msgid "Warning"
@@ -6475,12 +6457,12 @@ msgstr "चेतावनी"
 
 #: internal/web/templates/base.html:70 internal/web/templates/base.html:618
 #: internal/web/templates/base.html:689
-#: internal/web/templates/files/backup_restore.html:989
-#: internal/web/templates/files/backup_restore.html:1020
-#: internal/web/templates/files/filemanager_partials.html:601
-#: internal/web/templates/files/filemanager_partials.html:633
+#: internal/web/templates/files/backup_restore.html:991
+#: internal/web/templates/files/backup_restore.html:1022
+#: internal/web/templates/files/filemanager_partials.html:619
+#: internal/web/templates/files/filemanager_partials.html:651
 #: internal/web/templates/manager/git.html:38
-#: internal/web/templates/mysql/databases.html:576
+#: internal/web/templates/mysql/databases.html:595
 #: internal/web/templates/partials/_ai_assistant.html:52
 #: internal/web/templates/system/cronjobs.html:447
 msgid "Close"
@@ -6499,14 +6481,14 @@ msgstr "बन्द गर्नुहोस्"
 #: internal/web/templates/emails/alias_delete.html:27
 #: internal/web/templates/emails/delete.html:30
 #: internal/web/templates/emails/migrate.html:28
-#: internal/web/templates/files/backup_restore.html:925
-#: internal/web/templates/files/backup_restore.html:988
-#: internal/web/templates/files/clamav/quarantine.html:143
+#: internal/web/templates/files/backup_restore.html:927
+#: internal/web/templates/files/backup_restore.html:990
+#: internal/web/templates/files/clamav/quarantine.html:134
 #: internal/web/templates/files/filemanager_partials.html:26
-#: internal/web/templates/files/filemanager_partials.html:584
-#: internal/web/templates/files/filemanager_partials.html:671
-#: internal/web/templates/files/filemanager_partials.html:766
-#: internal/web/templates/files/filemanager_partials.html:780
+#: internal/web/templates/files/filemanager_partials.html:602
+#: internal/web/templates/files/filemanager_partials.html:689
+#: internal/web/templates/files/filemanager_partials.html:784
+#: internal/web/templates/files/filemanager_partials.html:798
 #: internal/web/templates/files/trash_partials.html:172
 #: internal/web/templates/manager/_cms_app_shared.html:1500
 #: internal/web/templates/manager/_cms_app_shared.html:1532
@@ -6531,9 +6513,9 @@ msgstr "बन्द गर्नुहोस्"
 #: internal/web/templates/manager/tinyphotogallery_app.html:201
 #: internal/web/templates/manager/websitebuilder.html:224
 #: internal/web/templates/manager/websitebuilder.html:256
-#: internal/web/templates/manager/wp/single.html:1831
-#: internal/web/templates/manager/wp/single.html:1863
-#: internal/web/templates/mysql/databases.html:577
+#: internal/web/templates/manager/wp/single.html:1833
+#: internal/web/templates/manager/wp/single.html:1865
+#: internal/web/templates/mysql/databases.html:596
 #: internal/web/templates/mysql/remote_mysql.html:145
 #: internal/web/templates/mysql/remote_mysql.html:203
 #: internal/web/templates/partials/_bulk.html:98
@@ -6779,6 +6761,12 @@ msgid "Real-time cache performance and efficiency metrics."
 msgstr "वास्तविक-समयको क्यास प्रदर्शन र दक्षता मेट्रिक्स।"
 
 #: internal/web/templates/cache/service.html:91
+#: internal/web/templates/system/summary.html:40
+#: internal/web/templates/system/summary.html:90
+msgid "Requests"
+msgstr "अनुरोधहरू"
+
+#: internal/web/templates/cache/service.html:91
 msgid "Hit Ratio"
 msgstr "हिट अनुपात"
 
@@ -6793,12 +6781,6 @@ msgstr "मिसहरू"
 #: internal/web/templates/cache/service.html:91
 msgid "Pass"
 msgstr "Pass"
-
-#: internal/web/templates/cache/service.html:91
-#: internal/web/templates/system/summary.html:40
-#: internal/web/templates/system/summary.html:90
-msgid "Requests"
-msgstr "अनुरोधहरू"
 
 #: internal/web/templates/cache/service.html:91
 msgid "Backend Requests"
@@ -6852,7 +6834,7 @@ msgstr "सीमाहरू सम्पादन गर्नुहोस्"
 #: internal/web/templates/docker/containers.html:90
 #: internal/web/templates/domains/dns.html:107
 #: internal/web/templates/domains/dns.html:122
-#: internal/web/templates/files/filemanager_partials.html:438
+#: internal/web/templates/files/filemanager_partials.html:456
 #: internal/web/templates/files/trash_partials.html:22
 #: internal/web/templates/manager/app_install.html:122
 #: internal/web/templates/manager/python_node_apps.html:394
@@ -6880,6 +6862,13 @@ msgid "Memory Usage"
 msgstr "स्मृति (मेमोरी) प्रयोग"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/partials/_service_js.html:24
+#: internal/web/templates/system/services.html:113
+#: internal/web/templates/user/history_usage.html:133
+msgid "Memory %"
+msgstr "मेमोरी %"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/docker/containers.html:64
 #: internal/web/templates/docker/containers.html:101
 #: internal/web/templates/partials/_service_js.html:26
@@ -6888,24 +6877,17 @@ msgid "Block I/O"
 msgstr "ब्लक I/O"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/partials/_service_js.html:25
+#: internal/web/templates/system/services.html:113
+msgid "Network I/O"
+msgstr "नेटवर्क I/O"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/mongodb/processlist.html:32
 #: internal/web/templates/mysql/processlist.html:32
 #: internal/web/templates/system/services.html:113
 msgid "ID"
 msgstr "ID"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/partials/_service_js.html:24
-#: internal/web/templates/system/services.html:113
-#: internal/web/templates/user/history_usage.html:133
-msgid "Memory %"
-msgstr "मेमोरी %"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/partials/_service_js.html:25
-#: internal/web/templates/system/services.html:113
-msgid "Network I/O"
-msgstr "नेटवर्क I/O"
 
 #: internal/web/templates/cache/service.html:270
 #: internal/web/templates/system/services.html:162
@@ -6952,7 +6934,7 @@ msgid "Click to refresh"
 msgstr "रिफ्रेस गर्न क्लिक गर्नुहोस्"
 
 #: internal/web/templates/cache/service.html:331
-#: internal/web/templates/files/backup_restore.html:886
+#: internal/web/templates/files/backup_restore.html:888
 #: internal/web/templates/manager/drupal_app.html:164
 #: internal/web/templates/manager/joomla_app.html:59
 #: internal/web/templates/manager/moodle_app.html:57
@@ -6960,7 +6942,7 @@ msgstr "रिफ्रेस गर्न क्लिक गर्नुहो
 #: internal/web/templates/manager/opencart_app.html:59
 #: internal/web/templates/manager/php_app.html:137
 #: internal/web/templates/manager/prestashop_app.html:59
-#: internal/web/templates/manager/wp/single.html:1447
+#: internal/web/templates/manager/wp/single.html:1448
 #: internal/web/templates/php/extensions.html:97
 #: internal/web/templates/php/extensions.html:125
 #: internal/web/templates/system/server_info.html:20
@@ -7244,27 +7226,27 @@ msgstr "के ब्याकअप गर्ने"
 
 #: internal/web/templates/dashboard/onboarding.html:201
 #: internal/web/templates/files/backup_restore.html:6
-#: internal/web/templates/files/backup_restore.html:437
-#: internal/web/templates/files/backup_restore.html:542
-#: internal/web/templates/files/backup_restore.html:958
-#: internal/web/templates/files/backup_settings.html:82
+#: internal/web/templates/files/backup_restore.html:439
+#: internal/web/templates/files/backup_restore.html:544
+#: internal/web/templates/files/backup_restore.html:960
+#: internal/web/templates/files/backup_settings.html:83
 msgid "Everything"
 msgstr "सबै"
 
 #: internal/web/templates/dashboard/onboarding.html:202
-#: internal/web/templates/files/backup_restore.html:446
-#: internal/web/templates/files/backup_restore.html:550
-#: internal/web/templates/files/backup_settings.html:83
+#: internal/web/templates/files/backup_restore.html:448
+#: internal/web/templates/files/backup_restore.html:552
+#: internal/web/templates/files/backup_settings.html:84
 msgid "Website Files"
 msgstr "वेबसाइट फाइलहरू"
 
 #: internal/web/templates/dashboard/onboarding.html:204
-#: internal/web/templates/files/backup_settings.html:85
+#: internal/web/templates/files/backup_settings.html:86
 msgid "VirtualHosts"
 msgstr "भर्चुअलहोस्टहरू"
 
 #: internal/web/templates/dashboard/onboarding.html:205
-#: internal/web/templates/files/backup_settings.html:86
+#: internal/web/templates/files/backup_settings.html:87
 msgid "MySQL Databases"
 msgstr "MySQL डेटाबेसहरू"
 
@@ -7458,7 +7440,7 @@ msgstr ""
 #: internal/web/templates/dashboard/onboarding.html:530
 #: internal/web/templates/domains/domains.html:289
 #: internal/web/templates/emails/migrate.html:51
-#: internal/web/templates/manager/wp/_shared.html:197
+#: internal/web/templates/manager/wp/_shared.html:205
 #: internal/web/templates/system/waf.html:141
 #: internal/web/templates/system/waf.html:208
 #: internal/web/templates/system/waf.html:343
@@ -7497,7 +7479,7 @@ msgstr "नयाँ डोमेनहरूले कुनै अनुरो
 #: internal/web/templates/manager/ojs_app.html:32
 #: internal/web/templates/manager/phpbb_app.html:29
 #: internal/web/templates/manager/wp/single.html:449
-#: internal/web/templates/manager/wp/single.html:1667
+#: internal/web/templates/manager/wp/single.html:1669
 #: internal/web/templates/mongodb/users.html:27
 #: internal/web/templates/mongodb/users.html:28
 #: internal/web/templates/mongodb/users.html:31
@@ -7542,6 +7524,10 @@ msgstr ""
 "छैनन् भने यो प्रयोग गर्नुहोस्।"
 
 #: internal/web/templates/dashboard/onboarding.html:760
+msgid "Step"
+msgstr "चरण"
+
+#: internal/web/templates/dashboard/onboarding.html:760
 #: internal/web/templates/domains/domains.html:434
 #: internal/web/templates/manager/wp/_caching.html:290
 #: internal/web/templates/system/error_logs.html:96
@@ -7549,10 +7535,6 @@ msgstr ""
 #: internal/web/templates/user/history_usage.html:96
 msgid "of"
 msgstr "को"
-
-#: internal/web/templates/dashboard/onboarding.html:760
-msgid "Step"
-msgstr "चरण"
 
 #: internal/web/templates/dashboard/onboarding.html:829
 msgid "Please choose a webserver, or click Skip."
@@ -7755,7 +7737,7 @@ msgstr "डोकुमेन्टेसन पढ्नुहोस्"
 #: internal/web/templates/emails/accounts.html:19
 #: internal/web/templates/emails/aliases.html:19
 #: internal/web/templates/emails/deliverability.html:16
-#: internal/web/templates/files/backup_restore.html:700
+#: internal/web/templates/files/backup_restore.html:702
 #: internal/web/templates/files/clamav/quarantine.html:28
 #: internal/web/templates/files/ftp.html:41
 #: internal/web/templates/manager/autoinstaller.html:19
@@ -7842,9 +7824,9 @@ msgid "Create a Database"
 msgstr "डेटाबेस बनाउनुहोस्"
 
 #: internal/web/templates/db/new.html:23 internal/web/templates/db/new.html:27
-#: internal/web/templates/files/backup_restore.html:760
+#: internal/web/templates/files/backup_restore.html:762
 #: internal/web/templates/manager/_cms_app_shared.html:975
-#: internal/web/templates/manager/wp/single.html:1673
+#: internal/web/templates/manager/wp/single.html:1675
 #: internal/web/templates/mongodb/databases.html:53
 #: internal/web/templates/mongodb/new.html:21
 #: internal/web/templates/mongodb/new.html:23
@@ -8461,7 +8443,7 @@ msgstr "यो सेवाले प्रयोग गर्न सक्न�
 #: internal/web/templates/domains/dynamic_dns.html:101
 #: internal/web/templates/emails/default_address.html:128
 #: internal/web/templates/files/edit_file.html:140
-#: internal/web/templates/files/filemanager_partials.html:583
+#: internal/web/templates/files/filemanager_partials.html:601
 #: internal/web/templates/mysql/remote_mysql.html:202
 #: internal/web/templates/system/cronjobs.html:234
 #: internal/web/templates/system/cronjobs.html:359 static/js/tour-steps.js:464
@@ -8482,9 +8464,9 @@ msgstr "यो सेवाले चलाउन सक्ने अधिक�
 #: internal/web/templates/domains/vhost.html:22
 #: internal/web/templates/domains/vhost.html:23
 #: internal/web/templates/domains/vhost.html:191
-#: internal/web/templates/files/filemanager_partials.html:313
-#: internal/web/templates/files/filemanager_partials.html:314
-#: internal/web/templates/files/filemanager_partials.html:385
+#: internal/web/templates/files/filemanager_partials.html:331
+#: internal/web/templates/files/filemanager_partials.html:332
+#: internal/web/templates/files/filemanager_partials.html:403
 #: internal/web/templates/mysql/remote_mysql.html:206
 #: internal/web/templates/system/cronjobs.html:357
 msgid "Edit"
@@ -8611,7 +8593,7 @@ msgstr "निष्क्रियता समयसीमा:"
 
 #: internal/web/templates/docker/terminal.html:35
 #: internal/web/templates/mongodb/databases.html:195
-#: internal/web/templates/mysql/databases.html:548
+#: internal/web/templates/mysql/databases.html:567
 #: internal/web/templates/mysql/users.html:179
 #: internal/web/templates/psql/databases.html:261
 msgid "seconds"
@@ -8654,7 +8636,7 @@ msgstr "वेब टर्मिनल खोल्न सक्रिय स�
 #: internal/web/templates/domains/_shared.html:6
 #: internal/web/templates/emails/alias_new.html:69
 #: internal/web/templates/emails/new.html:273
-#: internal/web/templates/files/ftp_new.html:289
+#: internal/web/templates/files/ftp_new.html:294
 #: internal/web/templates/manager/_cms_install_shared.html:401
 #: internal/web/templates/manager/app_install.html:841
 #: internal/web/templates/manager/php_install.html:423
@@ -8665,7 +8647,7 @@ msgstr "अहिलेसम्म कुनै डोमेन छैन"
 #: internal/web/templates/domains/_shared.html:7
 #: internal/web/templates/emails/alias_new.html:70
 #: internal/web/templates/emails/new.html:274
-#: internal/web/templates/files/ftp_new.html:290
+#: internal/web/templates/files/ftp_new.html:295
 #: internal/web/templates/manager/_cms_install_shared.html:402
 #: internal/web/templates/manager/app_install.html:842
 #: internal/web/templates/manager/php_install.html:424
@@ -8676,7 +8658,7 @@ msgstr "सुरु गर्न आफ्नो पहिलो डोमे�
 #: internal/web/templates/domains/_shared.html:8
 #: internal/web/templates/emails/alias_new.html:71
 #: internal/web/templates/emails/new.html:275
-#: internal/web/templates/files/ftp_new.html:291
+#: internal/web/templates/files/ftp_new.html:296
 #: internal/web/templates/manager/_cms_install_shared.html:404
 #: internal/web/templates/manager/app_install.html:844
 #: internal/web/templates/manager/php_install.html:426
@@ -8735,13 +8717,13 @@ msgstr ""
 "डेटा डिस्कमा सुरक्षित रहनेछन्।"
 
 #: internal/web/templates/domains/delete.html:31
-msgid "subdomains"
-msgstr "सबडोमेनहरू"
-
-#: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/domains.html:195
 msgid "subdomain"
 msgstr "सबडोमेन"
+
+#: internal/web/templates/domains/delete.html:31
+msgid "subdomains"
+msgstr "सबडोमेनहरू"
 
 #: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/delete.html:38
@@ -9299,7 +9281,7 @@ msgstr "पङ्क्ति(हरू) चयन गरियो।"
 
 #: internal/web/templates/domains/domains.html:433
 #: internal/web/templates/domains/logs.html:14
-#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/manager/wp/single.html:1472
 #: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
 #: internal/web/templates/user/activity.html:169
@@ -9382,8 +9364,8 @@ msgid "Will be updated automatically on first webcall."
 msgstr "पहिलो वेबकलमा स्वतः अद्यावधिक हुनेछ।"
 
 #: internal/web/templates/domains/dynamic_dns.html:64
-#: internal/web/templates/files/filemanager_partials.html:765
-#: internal/web/templates/files/filemanager_partials.html:779
+#: internal/web/templates/files/filemanager_partials.html:783
+#: internal/web/templates/files/filemanager_partials.html:797
 #: internal/web/templates/manager/git.html:140
 #: internal/web/templates/mysql/mysql_user.html:8
 #: internal/web/templates/mysql/wizard.html:305
@@ -9463,7 +9445,7 @@ msgid "Domain Logs for"
 msgstr "यसका लागि डोमेन लगहरू"
 
 #: internal/web/templates/domains/logs.html:14
-#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/manager/wp/single.html:1472
 #: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
 #: internal/web/templates/user/activity.html:177
@@ -9473,7 +9455,7 @@ msgstr "जसमध्ये"
 
 #: internal/web/templates/domains/logs.html:14
 #: internal/web/templates/domains/logs.html:21
-#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/manager/wp/single.html:1472
 #: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
 #: internal/web/templates/system/waf_logs.html:23
@@ -9531,18 +9513,18 @@ msgstr "URI"
 
 #: internal/web/templates/domains/logs.html:113
 #: internal/web/templates/domains/logs.html:133
-#: internal/web/templates/files/backup_restore.html:716
-#: internal/web/templates/files/backup_restore.html:765
+#: internal/web/templates/files/backup_restore.html:718
+#: internal/web/templates/files/backup_restore.html:767
 #: internal/web/templates/files/backup_wizard.html:48
 #: internal/web/templates/files/backup_wizard.html:125
 #: internal/web/templates/files/disk_usage.html:61
 #: internal/web/templates/files/filemanager.html:123
-#: internal/web/templates/files/filemanager_partials.html:439
+#: internal/web/templates/files/filemanager_partials.html:457
 #: internal/web/templates/files/trash.html:79
 #: internal/web/templates/files/trash_partials.html:23
 #: internal/web/templates/mongodb/databases.html:54
 #: internal/web/templates/mysql/databases.html:203
-#: internal/web/templates/mysql/databases.html:582
+#: internal/web/templates/mysql/databases.html:601
 #: internal/web/templates/psql/databases.html:118
 msgid "Size"
 msgstr "साइज"
@@ -10952,11 +10934,11 @@ msgid "Completed"
 msgstr "पूरा भयो"
 
 #: internal/web/templates/emails/migrate.html:142
-#: internal/web/templates/files/backup_restore.html:526
-#: internal/web/templates/files/backup_restore.html:673
-#: internal/web/templates/files/clamav/quarantine.html:195
+#: internal/web/templates/files/backup_restore.html:528
+#: internal/web/templates/files/backup_restore.html:675
+#: internal/web/templates/files/clamav/quarantine.html:186
 #: internal/web/templates/files/clamav/scan_logs.html:66
-#: internal/web/templates/mysql/databases.html:597
+#: internal/web/templates/mysql/databases.html:616
 msgid "Failed"
 msgstr "असफल भयो"
 
@@ -11056,7 +11038,7 @@ msgid "Create a new Email account."
 msgstr "नयाँ इमेल खाता बनाउनुहोस्।"
 
 #: internal/web/templates/emails/new.html:38
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid "info"
 msgstr "जानकारी"
 
@@ -11148,7 +11130,7 @@ msgstr "बलियो पासवर्ड"
 #: internal/web/templates/emails/new.html:85
 #: internal/web/templates/emails/single_account.html:197
 #: internal/web/templates/manager/_cms_app_shared.html:991
-#: internal/web/templates/manager/wp/single.html:1689
+#: internal/web/templates/manager/wp/single.html:1691
 #: internal/web/templates/mysql/mysql_user.html:50
 #: internal/web/templates/mysql/password.html:47
 #: internal/web/templates/mysql/root_password.html:40
@@ -11245,7 +11227,7 @@ msgid "Select"
 msgstr "छान्नुहोस्"
 
 #: internal/web/templates/files/backup_destinations.html:80
-#: internal/web/templates/files/backup_settings.html:106
+#: internal/web/templates/files/backup_settings.html:108
 #: internal/web/templates/user/notifications.html:80
 msgid "Learn more"
 msgstr "थप जान्नुहोस्"
@@ -11255,181 +11237,181 @@ msgid "Files only (no databases)"
 msgstr "केवल फाइलहरू मात्र (डाटाबेस बिना)"
 
 #: internal/web/templates/files/backup_restore.html:8
-#: internal/web/templates/files/backup_restore.html:734
-#: internal/web/templates/files/backup_restore.html:959
+#: internal/web/templates/files/backup_restore.html:736
+#: internal/web/templates/files/backup_restore.html:961
 msgid "Website files"
 msgstr "वेबसाइट फाइलहरू"
 
 #: internal/web/templates/files/backup_restore.html:12
-#: internal/web/templates/files/backup_restore.html:738
-#: internal/web/templates/files/backup_restore.html:962
+#: internal/web/templates/files/backup_restore.html:740
+#: internal/web/templates/files/backup_restore.html:964
 msgid "Cron jobs"
 msgstr "Cron Jobs"
 
 #: internal/web/templates/files/backup_restore.html:14
-#: internal/web/templates/files/backup_restore.html:965
+#: internal/web/templates/files/backup_restore.html:967
 msgid "Selected files"
 msgstr "चयन गरिएका फाइलहरू"
 
 #: internal/web/templates/files/backup_restore.html:15
-#: internal/web/templates/files/backup_restore.html:966
+#: internal/web/templates/files/backup_restore.html:968
 msgid "Selected mailboxes"
 msgstr "चयन गरिएका मेलबक्सहरू"
 
 #: internal/web/templates/files/backup_restore.html:16
-#: internal/web/templates/files/backup_restore.html:967
+#: internal/web/templates/files/backup_restore.html:969
 msgid "Selected domains"
 msgstr "चयन गरिएका डोमेनहरू"
 
 #: internal/web/templates/files/backup_restore.html:17
-#: internal/web/templates/files/backup_restore.html:968
+#: internal/web/templates/files/backup_restore.html:970
 msgid "Selected DNS zones"
 msgstr "चयन गरिएका DNS जोनहरू"
 
-#: internal/web/templates/files/backup_restore.html:370
+#: internal/web/templates/files/backup_restore.html:372
 msgid "Added to the queue."
 msgstr "लाइनमा थपियो।"
 
-#: internal/web/templates/files/backup_restore.html:380
+#: internal/web/templates/files/backup_restore.html:382
 msgid "Restore & Download"
 msgstr "पुनर्स्थापना र डाउनलोड"
 
-#: internal/web/templates/files/backup_restore.html:387
+#: internal/web/templates/files/backup_restore.html:389
 msgid "Indexing..."
 msgstr "अनुक्रमणिका बनाउँदै..."
 
-#: internal/web/templates/files/backup_restore.html:391
+#: internal/web/templates/files/backup_restore.html:393
 msgid "Restore or download backups from destination."
 msgstr "गन्तव्यबाट ब्याकअपहरू पुनर्स्थापना वा डाउनलोड गर्नुहोस्।"
 
-#: internal/web/templates/files/backup_restore.html:403
+#: internal/web/templates/files/backup_restore.html:405
 msgid "Reindex Destination"
 msgstr "गन्तव्य पुनः अनुक्रमणिका गर्नुहोस्"
 
-#: internal/web/templates/files/backup_restore.html:422
+#: internal/web/templates/files/backup_restore.html:424
 msgid "Backup types"
 msgstr "ब्याकअपका प्रकार"
 
-#: internal/web/templates/files/backup_restore.html:491
-#: internal/web/templates/files/backup_restore.html:595
-#: internal/web/templates/files/backup_restore.html:614
+#: internal/web/templates/files/backup_restore.html:493
+#: internal/web/templates/files/backup_restore.html:597
+#: internal/web/templates/files/backup_restore.html:616
 msgid "Queue"
 msgstr "लाइन"
 
-#: internal/web/templates/files/backup_restore.html:512
+#: internal/web/templates/files/backup_restore.html:514
 msgid "Total Backups"
 msgstr "कुल ब्याकअप"
 
-#: internal/web/templates/files/backup_restore.html:516
+#: internal/web/templates/files/backup_restore.html:518
 msgid "Latest Backup"
 msgstr "पछिल्लो ब्याकअप"
 
-#: internal/web/templates/files/backup_restore.html:520
+#: internal/web/templates/files/backup_restore.html:522
 msgid "Total Size"
 msgstr "कुल साइज"
 
-#: internal/web/templates/files/backup_restore.html:524
+#: internal/web/templates/files/backup_restore.html:526
 msgid "Last Restore"
 msgstr "पछिल्लो पुनर्स्थापना"
 
-#: internal/web/templates/files/backup_restore.html:525
-#: internal/web/templates/files/backup_restore.html:672
+#: internal/web/templates/files/backup_restore.html:527
+#: internal/web/templates/files/backup_restore.html:674
 msgid "Done"
 msgstr "सम्पन्न"
 
-#: internal/web/templates/files/backup_restore.html:529
-#: internal/web/templates/files/backup_restore.html:596
+#: internal/web/templates/files/backup_restore.html:531
+#: internal/web/templates/files/backup_restore.html:598
 msgid "in queue"
 msgstr "लाइनमा"
 
-#: internal/web/templates/files/backup_restore.html:535
+#: internal/web/templates/files/backup_restore.html:537
 msgid "What do you want to restore?"
 msgstr "तपाईं के पुनर्स्थापना गर्न चाहनुहुन्छ?"
 
-#: internal/web/templates/files/backup_restore.html:536
+#: internal/web/templates/files/backup_restore.html:538
 msgid "Pick a type to see its backups."
 msgstr "ब्याकअपहरू हेर्न एउटा प्रकार छान्नुहोस्।"
 
-#: internal/web/templates/files/backup_restore.html:543
-#: internal/web/templates/files/backup_restore.html:551
-#: internal/web/templates/files/backup_restore.html:583
+#: internal/web/templates/files/backup_restore.html:545
+#: internal/web/templates/files/backup_restore.html:553
+#: internal/web/templates/files/backup_restore.html:585
 msgid "backups"
 msgstr "ब्याकअप"
 
-#: internal/web/templates/files/backup_restore.html:559
+#: internal/web/templates/files/backup_restore.html:561
 msgid "databases"
 msgstr "डाटाबेस"
 
-#: internal/web/templates/files/backup_restore.html:567
+#: internal/web/templates/files/backup_restore.html:569
 msgid "email accounts"
 msgstr "इमेल खाता"
 
-#: internal/web/templates/files/backup_restore.html:575
+#: internal/web/templates/files/backup_restore.html:577
 #: internal/web/templates/php/settings.html:49
 msgid "domains"
 msgstr "डोमेनहरू"
 
-#: internal/web/templates/files/backup_restore.html:588
+#: internal/web/templates/files/backup_restore.html:590
 msgid "Restore activity"
 msgstr "पुनर्स्थापना गतिविधि"
 
-#: internal/web/templates/files/backup_restore.html:589
+#: internal/web/templates/files/backup_restore.html:591
 msgid "Restores run one at a time, the rest wait in the queue."
 msgstr "पुनर्स्थापना एक पटकमा एउटा चल्छ, बाँकी लाइनमा पर्खन्छन्।"
 
-#: internal/web/templates/files/backup_restore.html:604
+#: internal/web/templates/files/backup_restore.html:606
 msgid "restores"
 msgstr "पुनर्स्थापना"
 
-#: internal/web/templates/files/backup_restore.html:617
+#: internal/web/templates/files/backup_restore.html:619
 msgid "Restores run one at a time, the rest wait here."
 msgstr "पुनर्स्थापना एक पटकमा एउटा चल्छ, बाँकी यहाँ पर्खन्छन्।"
 
-#: internal/web/templates/files/backup_restore.html:622
-#: internal/web/templates/files/backup_restore.html:657
+#: internal/web/templates/files/backup_restore.html:624
+#: internal/web/templates/files/backup_restore.html:659
 msgid "What"
 msgstr "के"
 
-#: internal/web/templates/files/backup_restore.html:623
-#: internal/web/templates/files/backup_restore.html:658
+#: internal/web/templates/files/backup_restore.html:625
+#: internal/web/templates/files/backup_restore.html:660
 msgid "From backup"
 msgstr "ब्याकअपबाट"
 
-#: internal/web/templates/files/backup_restore.html:624
+#: internal/web/templates/files/backup_restore.html:626
 #: internal/web/templates/user/passkeys.html:36
 msgid "Added"
 msgstr "थपियो"
 
-#: internal/web/templates/files/backup_restore.html:635
-#: internal/web/templates/files/backup_restore.html:995
+#: internal/web/templates/files/backup_restore.html:637
+#: internal/web/templates/files/backup_restore.html:997
 msgid "Restoring..."
 msgstr "पुनर्स्थापना गर्दै..."
 
-#: internal/web/templates/files/backup_restore.html:636
+#: internal/web/templates/files/backup_restore.html:638
 msgid "Waiting"
 msgstr "पर्खँदै"
 
-#: internal/web/templates/files/backup_restore.html:641
+#: internal/web/templates/files/backup_restore.html:643
 msgid "Nothing is being restored right now."
 msgstr "अहिले केही पनि पुनर्स्थापना भइरहेको छैन।"
 
-#: internal/web/templates/files/backup_restore.html:652
+#: internal/web/templates/files/backup_restore.html:654
 msgid "Your latest restores, newest first."
 msgstr "तपाईंका पछिल्ला पुनर्स्थापनाहरू, नयाँ पहिले।"
 
-#: internal/web/templates/files/backup_restore.html:659
+#: internal/web/templates/files/backup_restore.html:661
 msgid "Restored"
 msgstr "पुनर्स्थापना भयो"
 
-#: internal/web/templates/files/backup_restore.html:660
+#: internal/web/templates/files/backup_restore.html:662
 msgid "Took"
 msgstr "लागेको समय"
 
-#: internal/web/templates/files/backup_restore.html:679
+#: internal/web/templates/files/backup_restore.html:681
 msgid "No restores yet."
 msgstr "अहिलेसम्म कुनै पुनर्स्थापना छैन।"
 
-#: internal/web/templates/files/backup_restore.html:689
+#: internal/web/templates/files/backup_restore.html:691
 msgid ""
 "Select a backup to restore everything in it: files, databases, emails, "
 "domains with their DNS zones and cron jobs."
@@ -11437,7 +11419,7 @@ msgstr ""
 "सबै पुनर्स्थापना गर्न एउटा ब्याकअप छान्नुहोस्: फाइलहरू, डाटाबेसहरू, इमेलहरू,"
 " DNS जोनसहित डोमेनहरू र cron jobs।"
 
-#: internal/web/templates/files/backup_restore.html:690
+#: internal/web/templates/files/backup_restore.html:692
 msgid ""
 "Select a backup to restore all its website files, or pick single files and "
 "folders with Choose files."
@@ -11445,7 +11427,7 @@ msgstr ""
 "सबै वेबसाइट फाइलहरू पुनर्स्थापना गर्न ब्याकअप छान्नुहोस्, वा फाइलहरू "
 "छान्नुहोस् मार्फत छुट्टाछुट्टै फाइल र फोल्डर छान्नुहोस्।"
 
-#: internal/web/templates/files/backup_restore.html:691
+#: internal/web/templates/files/backup_restore.html:693
 msgid ""
 "Select one or more databases. The newest backup is used unless you choose "
 "another one."
@@ -11453,7 +11435,7 @@ msgstr ""
 "एक वा बढी डाटाबेस छान्नुहोस्। तपाईंले अर्को नछानेसम्म सबैभन्दा नयाँ ब्याकअप "
 "प्रयोग हुन्छ।"
 
-#: internal/web/templates/files/backup_restore.html:692
+#: internal/web/templates/files/backup_restore.html:694
 msgid ""
 "Select one or more email accounts. The newest backup is used unless you "
 "choose another one."
@@ -11461,7 +11443,7 @@ msgstr ""
 "एक वा बढी इमेल खाता छान्नुहोस्। तपाईंले अर्को नछानेसम्म सबैभन्दा नयाँ "
 "ब्याकअप प्रयोग हुन्छ।"
 
-#: internal/web/templates/files/backup_restore.html:693
+#: internal/web/templates/files/backup_restore.html:695
 msgid ""
 "Select one or more domains to restore their configuration, PHP version and "
 "DNS zone. Domains you deleted are added back to your account first, "
@@ -11471,15 +11453,15 @@ msgstr ""
 "छान्नुहोस्। तपाईंले मेटाएका डोमेनहरू पहिले तपाईंको खातामा फेरि थपिन्छन्, "
 "निलम्बित डोमेनहरू पुनर्स्थापना गर्न मिल्दैन।"
 
-#: internal/web/templates/files/backup_restore.html:694
+#: internal/web/templates/files/backup_restore.html:696
 msgid "Select a backup to restore only the cron jobs from it."
 msgstr "केवल cron jobs पुनर्स्थापना गर्न एउटा ब्याकअप छान्नुहोस्।"
 
-#: internal/web/templates/files/backup_restore.html:715
+#: internal/web/templates/files/backup_restore.html:717
 msgid "Contents"
 msgstr "सामग्री"
 
-#: internal/web/templates/files/backup_restore.html:729
+#: internal/web/templates/files/backup_restore.html:731
 #: internal/web/templates/manager/_cms_install_shared.html:84
 #: internal/web/templates/manager/_cms_install_shared.html:110
 #: internal/web/templates/manager/flarum_install.html:23
@@ -11488,15 +11470,15 @@ msgstr "सामग्री"
 msgid "Latest"
 msgstr "नवीनतम"
 
-#: internal/web/templates/files/backup_restore.html:745
+#: internal/web/templates/files/backup_restore.html:747
 msgid "No backups found."
 msgstr "कुनै ब्याकअप भेटिएन।"
 
-#: internal/web/templates/files/backup_restore.html:757
-#: internal/web/templates/files/filemanager_partials.html:303
-#: internal/web/templates/files/filemanager_partials.html:304
-#: internal/web/templates/files/filemanager_partials.html:377
-#: internal/web/templates/files/filemanager_partials.html:578
+#: internal/web/templates/files/backup_restore.html:759
+#: internal/web/templates/files/filemanager_partials.html:321
+#: internal/web/templates/files/filemanager_partials.html:322
+#: internal/web/templates/files/filemanager_partials.html:395
+#: internal/web/templates/files/filemanager_partials.html:596
 #: internal/web/templates/files/trash.html:44
 #: internal/web/templates/files/trash_partials.html:421
 #: internal/web/templates/manager/sites.html:205
@@ -11505,49 +11487,49 @@ msgstr "कुनै ब्याकअप भेटिएन।"
 msgid "Select all"
 msgstr "सबै चयन गर्नुहोस्"
 
-#: internal/web/templates/files/backup_restore.html:761
+#: internal/web/templates/files/backup_restore.html:763
 #: internal/web/templates/partials/_search.html:62
 msgid "Email Account"
 msgstr "इमेल खाता"
 
-#: internal/web/templates/files/backup_restore.html:780
+#: internal/web/templates/files/backup_restore.html:782
 msgid "VirtualHost"
 msgstr "VirtualHost"
 
-#: internal/web/templates/files/backup_restore.html:781
+#: internal/web/templates/files/backup_restore.html:783
 #: internal/web/templates/manager/php_app.html:94
 msgid "PHP version"
 msgstr "PHP संस्करण"
 
-#: internal/web/templates/files/backup_restore.html:782
+#: internal/web/templates/files/backup_restore.html:784
 msgid "DNS zone"
 msgstr "DNS जोन"
 
-#: internal/web/templates/files/backup_restore.html:783
+#: internal/web/templates/files/backup_restore.html:785
 msgid "Unsuspend the domain to restore its VirtualHost."
 msgstr "VirtualHost पुनर्स्थापना गर्न डोमेनको निलम्बन हटाउनुहोस्।"
 
-#: internal/web/templates/files/backup_restore.html:784
+#: internal/web/templates/files/backup_restore.html:786
 msgid "Will be added"
 msgstr "थपिनेछ"
 
-#: internal/web/templates/files/backup_restore.html:785
+#: internal/web/templates/files/backup_restore.html:787
 msgid "Restore the domain first"
 msgstr "पहिले डोमेन पुनर्स्थापना गर्नुहोस्"
 
-#: internal/web/templates/files/backup_restore.html:790
+#: internal/web/templates/files/backup_restore.html:792
 msgid "backups found"
 msgstr "ब्याकअप भेटिए"
 
-#: internal/web/templates/files/backup_restore.html:802
+#: internal/web/templates/files/backup_restore.html:804
 msgid "messages"
 msgstr "सन्देश"
 
-#: internal/web/templates/files/backup_restore.html:808
+#: internal/web/templates/files/backup_restore.html:810
 msgid "No databases found in the backups."
 msgstr "ब्याकअपहरूमा कुनै डाटाबेस भेटिएन।"
 
-#: internal/web/templates/files/backup_restore.html:809
+#: internal/web/templates/files/backup_restore.html:811
 msgid ""
 "Nothing found in the backups. Backups made before this version don't list "
 "emails and domains, restore those from the Everything tab."
@@ -11555,101 +11537,101 @@ msgstr ""
 "ब्याकअपहरूमा केही भेटिएन। यो संस्करणभन्दा अघिका ब्याकअपहरूमा इमेल र डोमेनको "
 "सूची हुँदैन, तिनलाई सबै ट्याबबाट पुनर्स्थापना गर्नुहोस्।"
 
-#: internal/web/templates/files/backup_restore.html:822
-#: internal/web/templates/files/backup_restore.html:922
-#: internal/web/templates/files/filemanager_partials.html:580
+#: internal/web/templates/files/backup_restore.html:824
+#: internal/web/templates/files/backup_restore.html:924
+#: internal/web/templates/files/filemanager_partials.html:598
 #: internal/web/templates/manager/sites.html:484
 #: internal/web/templates/partials/_bulk.html:57
 #: internal/web/templates/partials/_bulk.html:74
 msgid "selected"
 msgstr "चयन गरियो"
 
-#: internal/web/templates/files/backup_restore.html:824
+#: internal/web/templates/files/backup_restore.html:826
 #: internal/web/templates/manager/sites.html:485
 #: internal/web/templates/partials/_bulk.html:58
 msgid "Clear"
 msgstr "खाली गर्नुहोस्"
 
-#: internal/web/templates/files/backup_restore.html:828
+#: internal/web/templates/files/backup_restore.html:830
 msgid "This backup was made before single items could be restored."
 msgstr ""
 "यो ब्याकअप छुट्टाछुट्टै वस्तुहरू पुनर्स्थापना गर्न मिल्नुअघि बनाइएको हो।"
 
-#: internal/web/templates/files/backup_restore.html:828
-#: internal/web/templates/files/backup_restore.html:829
-#: internal/web/templates/files/backup_restore.html:862
+#: internal/web/templates/files/backup_restore.html:830
+#: internal/web/templates/files/backup_restore.html:831
+#: internal/web/templates/files/backup_restore.html:864
 msgid "Choose files"
 msgstr "फाइलहरू छान्नुहोस्"
 
-#: internal/web/templates/files/backup_restore.html:842
+#: internal/web/templates/files/backup_restore.html:844
 msgid "Indexing destination, please wait..."
 msgstr "गन्तव्य अनुक्रमणिका गर्दै, कृपया पर्खनुहोस्..."
 
-#: internal/web/templates/files/backup_restore.html:846
+#: internal/web/templates/files/backup_restore.html:848
 msgid "No backups indexed yet"
 msgstr "अहिलेसम्म कुनै ब्याकअप अनुक्रमणिका गरिएको छैन"
 
-#: internal/web/templates/files/backup_restore.html:847
+#: internal/web/templates/files/backup_restore.html:849
 msgid "Click \"Reindex Destination\" to fetch available backups."
 msgstr ""
 "उपलब्ध ब्याकअपहरू ल्याउन \"गन्तव्य पुनः अनुक्रमणिका गर्नुहोस्\" क्लिक "
 "गर्नुहोस्।"
 
-#: internal/web/templates/files/backup_restore.html:914
+#: internal/web/templates/files/backup_restore.html:916
 msgid "This folder is empty."
 msgstr "यो फोल्डर खाली छ।"
 
-#: internal/web/templates/files/backup_restore.html:927
+#: internal/web/templates/files/backup_restore.html:929
 msgid "Restore selected"
 msgstr "चयन गरिएका पुनर्स्थापना गर्नुहोस्"
 
-#: internal/web/templates/files/backup_restore.html:939
+#: internal/web/templates/files/backup_restore.html:941
 msgid "Restore Summary"
 msgstr "पुनर्स्थापना सारांश"
 
-#: internal/web/templates/files/backup_restore.html:948
+#: internal/web/templates/files/backup_restore.html:950
 msgid "Restoring will overwrite existing data. This action cannot be undone."
 msgstr ""
 "पुनर्स्थापना गर्दा अवस्थित डेटा ओभरराइट हुनेछ। यो कार्य पूर्ववत गर्न "
 "सकिँदैन।"
 
-#: internal/web/templates/files/backup_restore.html:948
+#: internal/web/templates/files/backup_restore.html:950
 msgid "The items are added to the queue and restored one at a time."
 msgstr "वस्तुहरू लाइनमा थपिन्छन् र एक-एक गरी पुनर्स्थापना हुन्छन्।"
 
-#: internal/web/templates/files/backup_restore.html:952
+#: internal/web/templates/files/backup_restore.html:954
 msgid "Items to restore"
 msgstr "पुनर्स्थापना गर्ने वस्तुहरू"
 
-#: internal/web/templates/files/backup_restore.html:994
+#: internal/web/templates/files/backup_restore.html:996
 msgid "Restore Selected Items"
 msgstr "चयन गरिएका वस्तुहरू पुनर्स्थापना गर्नुहोस्"
 
-#: internal/web/templates/files/backup_restore.html:1007
+#: internal/web/templates/files/backup_restore.html:1009
 msgid "Download Backup"
 msgstr "ब्याकअप डाउनलोड गर्नुहोस्"
 
-#: internal/web/templates/files/backup_restore.html:1011
+#: internal/web/templates/files/backup_restore.html:1013
 msgid ""
 "The backup archive will be fetched from the destination and downloaded to "
 "your browser."
 msgstr ""
 "ब्याकअप आर्काइभ गन्तव्यबाट ल्याइनेछ र तपाईंको ब्राउजरमा डाउनलोड गरिनेछ।"
 
-#: internal/web/templates/files/backup_restore.html:1011
+#: internal/web/templates/files/backup_restore.html:1013
 msgid "Large files may take a moment to transfer."
 msgstr "ठूला फाइलहरू स्थानान्तरण गर्न केही समय लाग्न सक्छ।"
 
-#: internal/web/templates/files/backup_restore.html:1012
+#: internal/web/templates/files/backup_restore.html:1014
 msgid "Download started."
 msgstr "डाउनलोड सुरु भयो।"
 
-#: internal/web/templates/files/backup_restore.html:1014
+#: internal/web/templates/files/backup_restore.html:1016
 #: internal/web/templates/files/upload_file.html:301
 msgid "Download failed."
 msgstr "डाउनलोड असफल भयो।"
 
-#: internal/web/templates/files/backup_restore.html:1025
+#: internal/web/templates/files/backup_restore.html:1027
 msgid "Downloading..."
 msgstr "डाउनलोड गर्दै..."
 
@@ -11666,7 +11648,7 @@ msgid "Save settings"
 msgstr "सेटिङहरू सेभ गर्नुहोस्"
 
 #: internal/web/templates/files/backup_settings.html:31
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid "error"
 msgstr "त्रुटि"
 
@@ -11686,15 +11668,20 @@ msgstr "ब्याकअप सेटिङहरू"
 msgid "Configure schedule, retention, etc."
 msgstr "तालिका, रिटेन्सन आदि कन्फिगर गर्नुहोस्।"
 
-#: internal/web/templates/files/backup_settings.html:96
+#: internal/web/templates/files/backup_settings.html:82
+#: internal/web/templates/files/backup_settings.html:97
+msgid "(not set)"
+msgstr ""
+
+#: internal/web/templates/files/backup_settings.html:98
 msgid "INFO"
 msgstr "सूचना"
 
-#: internal/web/templates/files/backup_settings.html:97
+#: internal/web/templates/files/backup_settings.html:99
 msgid "ERROR"
 msgstr "त्रुटि"
 
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid ""
 "By default, notifications would only be sent out when a backup run fails. To"
 " receive notifications for every run, set NOTIFICATION_LEVEL to"
@@ -11702,11 +11689,11 @@ msgstr ""
 "डिफल्ट रूपमा, ब्याकअप रन असफल हुँदा मात्र सूचना पठाइनेछ। प्रत्येक रनको लागि "
 "सूचना प्राप्त गर्न, NOTIFICATION_LEVEL लाई सेट गर्नुहोस्"
 
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid "instead of the default"
 msgstr "डिफल्टको सट्टा"
 
-#: internal/web/templates/files/backup_settings.html:106
+#: internal/web/templates/files/backup_settings.html:108
 msgid ""
 "Notifications (email, Slack, etc.) can be sent out when a backup run "
 "finishes. Configuration is provided as a comma-separated list of URLs."
@@ -11714,7 +11701,7 @@ msgstr ""
 "ब्याकअप रन समाप्त हुँदा सूचनाहरू (इमेल, Slack आदि) पठाउन सकिन्छ। कन्फिगरेसन "
 "URLहरूको कमा-सेपरेटेड सूचीको रूपमा प्रदान गरिन्छ।"
 
-#: internal/web/templates/files/backup_settings.html:109
+#: internal/web/templates/files/backup_settings.html:111
 msgid ""
 "Parallelism level for \"gz\" (Gzip) compression defines how many blocks of "
 "data are concurrently processed. Higher values result in faster compression."
@@ -11724,11 +11711,11 @@ msgstr ""
 "प्रोसेस हुन्छन् भन्ने निर्धारण गर्छ। उच्च मानले छिटो कम्प्रेसन प्रदान गर्छ। "
 "डिफल्ट = १। यसलाई ० सेट गर्दा सबै उपलब्ध थ्रेडहरू प्रयोग हुन्छन्।"
 
-#: internal/web/templates/files/backup_settings.html:112
+#: internal/web/templates/files/backup_settings.html:114
 msgid "Full path to exclude, or regular expressions."
 msgstr "बहिष्कृत गर्न पूर्ण पथ, वा नियमित अभिव्यक्तिहरू।"
 
-#: internal/web/templates/files/backup_settings.html:114
+#: internal/web/templates/files/backup_settings.html:116
 msgid ""
 "IThe number of days for which a backup is kept. Pass zero or a positive "
 "integer value to enable automatic rotation of old backups."
@@ -11782,7 +11769,7 @@ msgstr "ब्याकअप प्रगतिमा छ…"
 #: internal/web/templates/manager/python_node_apps.html:1043
 #: internal/web/templates/manager/python_node_apps.html:1048
 #: internal/web/templates/manager/websitebuilder.html:164
-#: internal/web/templates/manager/wp/single.html:1765
+#: internal/web/templates/manager/wp/single.html:1767
 #: static/js/tour-steps.js:1162
 msgid "Generate Backup"
 msgstr "ब्याकअप उत्पन्न गर्नुहोस्"
@@ -11970,32 +11957,32 @@ msgid "Reason"
 msgstr "कारण"
 
 #: internal/web/templates/files/clamav/quarantine.html:87
-#: internal/web/templates/files/clamav/quarantine.html:123
+#: internal/web/templates/files/clamav/quarantine.html:114
 msgid "Mark as safe"
 msgstr "सुरक्षित रूपमा चिन्ह लगाउनुहोस्"
 
-#: internal/web/templates/files/clamav/quarantine.html:124
+#: internal/web/templates/files/clamav/quarantine.html:115
 #: internal/web/templates/files/trash_partials.html:171
 msgid "Delete permanently"
 msgstr "स्थायी रूपमा मेटाउनुहोस्"
 
-#: internal/web/templates/files/clamav/quarantine.html:185
+#: internal/web/templates/files/clamav/quarantine.html:176
 msgid "File restored."
 msgstr "फाइल पुनर्स्थापना गरियो।"
 
-#: internal/web/templates/files/clamav/quarantine.html:185
+#: internal/web/templates/files/clamav/quarantine.html:176
 msgid "Restore failed"
 msgstr "पुनर्स्थापना असफल भयो"
 
-#: internal/web/templates/files/clamav/quarantine.html:190
+#: internal/web/templates/files/clamav/quarantine.html:181
 msgid "File deleted."
 msgstr "फाइल मेटाइयो।"
 
-#: internal/web/templates/files/clamav/quarantine.html:190
+#: internal/web/templates/files/clamav/quarantine.html:181
 msgid "Delete failed"
 msgstr "मेटाउन असफल भयो"
 
-#: internal/web/templates/files/clamav/quarantine.html:195
+#: internal/web/templates/files/clamav/quarantine.html:186
 msgid "Marked as safe and restored."
 msgstr "सुरक्षित चिन्ह लगाइयो र पुनर्स्थापना गरियो।"
 
@@ -12028,7 +12015,7 @@ msgstr "सकिएका स्क्यानहरू यहाँ देख
 #: internal/web/templates/files/clamav/scan_logs.html:39
 #: internal/web/templates/manager/_cms_app_shared.html:664
 #: internal/web/templates/manager/git.html:68
-#: internal/web/templates/manager/wp/single.html:1637
+#: internal/web/templates/manager/wp/single.html:1639
 msgid "Source"
 msgstr "स्रोत"
 
@@ -12039,7 +12026,7 @@ msgid "Directory"
 msgstr "डाइरेक्टरी"
 
 #: internal/web/templates/files/clamav/scan_logs.html:42
-#: internal/web/templates/mysql/databases.html:584
+#: internal/web/templates/mysql/databases.html:603
 msgid "Result"
 msgstr "नतिजा"
 
@@ -12130,7 +12117,7 @@ msgid "No malware found."
 msgstr "कुनै मालवेयर फेला परेन।"
 
 #: internal/web/templates/files/clamav/scanner.html:216
-#: internal/web/templates/files/fix_permissions.html:86
+#: internal/web/templates/files/fix_permissions.html:87
 msgid "Network response was not ok"
 msgstr "नेटवर्क प्रतिकृया ठीक भएन"
 
@@ -12173,7 +12160,7 @@ msgstr "एक तह माथि"
 msgid "Disk Usage (MB)"
 msgstr "डिस्क प्रयोग (MB)"
 
-#: internal/web/templates/files/disk_usage.html:193
+#: internal/web/templates/files/disk_usage.html:195
 msgid "Calculating disk usage for parent directory.."
 msgstr "पेरेन्ट डाइरेक्टरीको डिस्क प्रयोग गणना गर्दै..."
 
@@ -12256,12 +12243,12 @@ msgstr "नयाँ फाइल"
 
 #: internal/web/templates/files/filemanager.html:101
 #: internal/web/templates/files/filemanager.html:102
-#: internal/web/templates/files/filemanager_partials.html:652
+#: internal/web/templates/files/filemanager_partials.html:670
 msgid "New Folder"
 msgstr "नयाँ फोल्डर"
 
 #: internal/web/templates/files/filemanager.html:117
-#: internal/web/templates/files/filemanager_partials.html:442
+#: internal/web/templates/files/filemanager_partials.html:460
 #: internal/web/templates/files/trash.html:73
 #: internal/web/templates/files/trash_partials.html:26
 #: internal/web/templates/manager/git.html:437
@@ -12272,21 +12259,21 @@ msgid "Date"
 msgstr "मिति"
 
 #: internal/web/templates/files/filemanager.html:118
-#: internal/web/templates/files/filemanager_partials.html:445
+#: internal/web/templates/files/filemanager_partials.html:463
 #: internal/web/templates/files/trash.html:74
 #: internal/web/templates/files/trash_partials.html:39
 msgid "Owner"
 msgstr "मालिक"
 
 #: internal/web/templates/files/filemanager.html:119
-#: internal/web/templates/files/filemanager_partials.html:448
+#: internal/web/templates/files/filemanager_partials.html:466
 #: internal/web/templates/files/trash.html:75
 #: internal/web/templates/files/trash_partials.html:42
 msgid "Group"
 msgstr "समूह"
 
 #: internal/web/templates/files/filemanager.html:120
-#: internal/web/templates/files/filemanager_partials.html:452
+#: internal/web/templates/files/filemanager_partials.html:470
 #: internal/web/templates/files/trash.html:76
 #: internal/web/templates/files/trash_partials.html:46
 msgid "Links"
@@ -12298,10 +12285,10 @@ msgid "Link Target"
 msgstr "लिङ्क लक्ष्य"
 
 #: internal/web/templates/files/filemanager.html:122
-#: internal/web/templates/files/filemanager_partials.html:348
-#: internal/web/templates/files/filemanager_partials.html:349
-#: internal/web/templates/files/filemanager_partials.html:413
-#: internal/web/templates/files/filemanager_partials.html:465
+#: internal/web/templates/files/filemanager_partials.html:366
+#: internal/web/templates/files/filemanager_partials.html:367
+#: internal/web/templates/files/filemanager_partials.html:431
+#: internal/web/templates/files/filemanager_partials.html:483
 #: internal/web/templates/files/trash.html:78
 #: internal/web/templates/files/trash_partials.html:59
 msgid "Permissions"
@@ -12359,136 +12346,140 @@ msgstr "कुनै पनि प्रकारको फाइल (धेर�
 msgid "Max size:"
 msgstr "अधिकतम आकार:"
 
-#: internal/web/templates/files/filemanager_partials.html:73
+#: internal/web/templates/files/filemanager_partials.html:77
 msgid "Queued"
 msgstr "लाइनमा"
 
-#: internal/web/templates/files/filemanager_partials.html:81
+#: internal/web/templates/files/filemanager_partials.html:85
 msgid "file(s) selected"
 msgstr "फाइल(हरू) चयन गरियो"
 
 #: internal/web/templates/files/filemanager_partials.html:144
+msgid "%(file)s exceeds the upload limit of %(size)s MB."
+msgstr ""
+
+#: internal/web/templates/files/filemanager_partials.html:162
 msgid "Uploading..."
 msgstr "अपलोड हुँदै..."
 
-#: internal/web/templates/files/filemanager_partials.html:157
+#: internal/web/templates/files/filemanager_partials.html:175
 msgid "Uploading %%(count)s files"
 msgstr "%%(count)s फाइलहरू अपलोड गर्दै"
 
-#: internal/web/templates/files/filemanager_partials.html:191
+#: internal/web/templates/files/filemanager_partials.html:209
 msgid "Upload error. Please try again."
 msgstr "अपलोड त्रुटि। कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: internal/web/templates/files/filemanager_partials.html:200
+#: internal/web/templates/files/filemanager_partials.html:218
 msgid "Upload complete."
 msgstr "अपलोड पूरा भयो।"
 
-#: internal/web/templates/files/filemanager_partials.html:201
+#: internal/web/templates/files/filemanager_partials.html:219
 msgid "Upload successful!"
 msgstr "अपलोड सफल भयो!"
 
-#: internal/web/templates/files/filemanager_partials.html:208
-#: internal/web/templates/files/filemanager_partials.html:211
+#: internal/web/templates/files/filemanager_partials.html:226
+#: internal/web/templates/files/filemanager_partials.html:229
 msgid "Upload failed:"
 msgstr "अपलोड असफल भयो:"
 
-#: internal/web/templates/files/filemanager_partials.html:283
+#: internal/web/templates/files/filemanager_partials.html:301
 msgid "No items found."
 msgstr "कुनै वस्तु भेटिएन।"
 
-#: internal/web/templates/files/filemanager_partials.html:284
+#: internal/web/templates/files/filemanager_partials.html:302
 msgid "Start creating new folders or uploading a new file!"
 msgstr "नयाँ फोल्डरहरू बनाउन वा नयाँ फाइल अपलोड गर्न सुरू गर्नुहोस्!"
 
-#: internal/web/templates/files/filemanager_partials.html:308
-#: internal/web/templates/files/filemanager_partials.html:309
-#: internal/web/templates/files/filemanager_partials.html:381
+#: internal/web/templates/files/filemanager_partials.html:326
+#: internal/web/templates/files/filemanager_partials.html:327
+#: internal/web/templates/files/filemanager_partials.html:399
 msgid "View"
 msgstr "हेर्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:323
-#: internal/web/templates/files/filemanager_partials.html:324
-#: internal/web/templates/files/filemanager_partials.html:393
+#: internal/web/templates/files/filemanager_partials.html:341
+#: internal/web/templates/files/filemanager_partials.html:342
+#: internal/web/templates/files/filemanager_partials.html:411
 msgid "Rename"
 msgstr "नाम परिवर्तन गर्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:333
-#: internal/web/templates/files/filemanager_partials.html:334
-#: internal/web/templates/files/filemanager_partials.html:401
-#: internal/web/templates/files/filemanager_partials.html:591
+#: internal/web/templates/files/filemanager_partials.html:351
+#: internal/web/templates/files/filemanager_partials.html:352
+#: internal/web/templates/files/filemanager_partials.html:419
+#: internal/web/templates/files/filemanager_partials.html:609
 msgid "Move"
 msgstr "सार्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:338
-#: internal/web/templates/files/filemanager_partials.html:339
-#: internal/web/templates/files/filemanager_partials.html:405
-#: internal/web/templates/files/filemanager_partials.html:592
+#: internal/web/templates/files/filemanager_partials.html:356
+#: internal/web/templates/files/filemanager_partials.html:357
+#: internal/web/templates/files/filemanager_partials.html:423
+#: internal/web/templates/files/filemanager_partials.html:610
 msgid "Compress"
 msgstr "कम्प्रेस गर्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:343
-#: internal/web/templates/files/filemanager_partials.html:344
-#: internal/web/templates/files/filemanager_partials.html:409
-#: internal/web/templates/files/filemanager_partials.html:593
+#: internal/web/templates/files/filemanager_partials.html:361
+#: internal/web/templates/files/filemanager_partials.html:362
+#: internal/web/templates/files/filemanager_partials.html:427
+#: internal/web/templates/files/filemanager_partials.html:611
 msgid "Extract"
 msgstr "एक्स्ट्र्याक्ट गर्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:441
+#: internal/web/templates/files/filemanager_partials.html:459
 #: internal/web/templates/files/trash_partials.html:25
 msgid "Last Modified"
 msgstr "अन्तिम परिवर्तन"
 
-#: internal/web/templates/files/filemanager_partials.html:456
+#: internal/web/templates/files/filemanager_partials.html:474
 #: internal/web/templates/files/trash_partials.html:50
 msgid "Link target"
 msgstr "लिङ्क लक्ष्य"
 
-#: internal/web/templates/files/filemanager_partials.html:479
+#: internal/web/templates/files/filemanager_partials.html:497
 msgid "Go Up"
 msgstr "माथि जानुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:520
-#: internal/web/templates/files/filemanager_partials.html:582
+#: internal/web/templates/files/filemanager_partials.html:538
+#: internal/web/templates/files/filemanager_partials.html:600
 #: internal/web/templates/files/trash_partials.html:97
 #: internal/web/templates/files/trash_partials.html:318
 msgid "Calculate"
 msgstr "गणना गर्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:579
+#: internal/web/templates/files/filemanager_partials.html:597
 #: internal/web/templates/files/trash_partials.html:420
 msgid "Deselect"
 msgstr "चयन हटाउनुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:581
+#: internal/web/templates/files/filemanager_partials.html:599
 #: internal/web/templates/files/trash_partials.html:308
 msgid "Calculating..."
 msgstr "गणना गर्दै..."
 
-#: internal/web/templates/files/filemanager_partials.html:585
+#: internal/web/templates/files/filemanager_partials.html:603
 msgid "Recursive"
 msgstr "पुनरावर्ती"
 
-#: internal/web/templates/files/filemanager_partials.html:587
+#: internal/web/templates/files/filemanager_partials.html:605
 msgid "Skip the trash"
 msgstr "रद्दीटोकरी छोड्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:589
+#: internal/web/templates/files/filemanager_partials.html:607
 msgid "Moved to trash."
 msgstr "रद्दीटोकरीमा सारियो।"
 
-#: internal/web/templates/files/filemanager_partials.html:594
+#: internal/web/templates/files/filemanager_partials.html:612
 msgid "Copy here"
 msgstr "यहाँ प्रतिलिपि गर्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:595
+#: internal/web/templates/files/filemanager_partials.html:613
 msgid "Move here"
 msgstr "यहाँ सार्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:596
+#: internal/web/templates/files/filemanager_partials.html:614
 msgid "Extract here"
 msgstr "यहाँ निकाल्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:597
+#: internal/web/templates/files/filemanager_partials.html:615
 #: internal/web/templates/user/activity.html:169
 #: internal/web/templates/user/activity.html:177
 #: internal/web/templates/user/history_usage.html:96
@@ -12496,72 +12487,72 @@ msgstr "यहाँ निकाल्नुहोस्"
 msgid "items"
 msgstr "वस्तुहरू"
 
-#: internal/web/templates/files/filemanager_partials.html:598
+#: internal/web/templates/files/filemanager_partials.html:616
 msgid "No subfolders"
 msgstr "कुनै सबफोल्डर छैन"
 
-#: internal/web/templates/files/filemanager_partials.html:599
+#: internal/web/templates/files/filemanager_partials.html:617
 msgid "Folder not found."
 msgstr "फोल्डर भेटिएन।"
 
-#: internal/web/templates/files/filemanager_partials.html:600
+#: internal/web/templates/files/filemanager_partials.html:618
 #: internal/web/templates/files/fix_permissions.html:49
-#: internal/web/templates/mysql/databases.html:585
+#: internal/web/templates/mysql/databases.html:604
 #: internal/web/templates/partials/site_manager_shared.html:1019
 msgid "Working..."
 msgstr "काम भइरहेको छ..."
 
-#: internal/web/templates/files/filemanager_partials.html:602
+#: internal/web/templates/files/filemanager_partials.html:620
 msgid "Done! Reloading..."
 msgstr "सकियो! पुनः लोड हुँदै..."
 
-#: internal/web/templates/files/filemanager_partials.html:603
+#: internal/web/templates/files/filemanager_partials.html:621
 msgid "Items could not be deleted."
 msgstr "वस्तुहरू मेटाउन सकिएन।"
 
-#: internal/web/templates/files/filemanager_partials.html:604
+#: internal/web/templates/files/filemanager_partials.html:622
 msgid "Some items could not be deleted."
 msgstr "केही वस्तुहरू मेटाउन सकिएन।"
 
-#: internal/web/templates/files/filemanager_partials.html:605
+#: internal/web/templates/files/filemanager_partials.html:623
 #: internal/web/templates/files/trash_partials.html:272
 #: internal/web/templates/files/trash_partials.html:312
 msgid "Unknown error"
 msgstr "अज्ञात त्रुटि"
 
-#: internal/web/templates/files/filemanager_partials.html:606
+#: internal/web/templates/files/filemanager_partials.html:624
 msgid "Path copied to clipboard!"
 msgstr "पथ क्लिपबोर्डमा प्रतिलिपि गरियो!"
 
-#: internal/web/templates/files/filemanager_partials.html:607
+#: internal/web/templates/files/filemanager_partials.html:625
 msgid "Error fetching folder size:"
 msgstr "फोल्डरको आकार ल्याउँदा त्रुटि:"
 
-#: internal/web/templates/files/filemanager_partials.html:608
+#: internal/web/templates/files/filemanager_partials.html:626
 msgid "Error deleting"
 msgstr "मेटाउँदा त्रुटि"
 
-#: internal/web/templates/files/filemanager_partials.html:609
+#: internal/web/templates/files/filemanager_partials.html:627
 msgid "Download for {file} started."
 msgstr "{file} को डाउनलोड सुरु भयो।"
 
-#: internal/web/templates/files/filemanager_partials.html:638
+#: internal/web/templates/files/filemanager_partials.html:656
 msgid "Archive name"
 msgstr "अर्काइभको नाम"
 
-#: internal/web/templates/files/filemanager_partials.html:664
+#: internal/web/templates/files/filemanager_partials.html:682
 msgid "Extract into a new folder"
 msgstr "नयाँ फोल्डरमा निकाल्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:764
+#: internal/web/templates/files/filemanager_partials.html:782
 msgid "File Name"
 msgstr "फाइल नाम"
 
-#: internal/web/templates/files/filemanager_partials.html:769
+#: internal/web/templates/files/filemanager_partials.html:787
 msgid "Open in File Editor after creation"
 msgstr "बनेपछि फाइल सम्पादकमा खोल्नुहोस्"
 
-#: internal/web/templates/files/filemanager_partials.html:778
+#: internal/web/templates/files/filemanager_partials.html:796
 msgid "Folder Name"
 msgstr "फोल्डर नाम"
 
@@ -12583,17 +12574,17 @@ msgstr ""
 "प्रक्रिया सुरु भएको छ। निर्दिष्ट पथमा रहेका फाइल र फोल्डरहरूको सङ्ख्यामा "
 "निर्भर गरी यसले केही मिनेट लाग्न सक्छ। कृपया पर्खनुहोस्।"
 
-#: internal/web/templates/files/fix_permissions.html:96
-msgid "Fixing permissions failed"
-msgstr "अनुमतिहरू मिलाउन असफल भयो"
-
-#: internal/web/templates/files/fix_permissions.html:100
+#: internal/web/templates/files/fix_permissions.html:94
 msgid ""
 "Permissions successfully fixed for all files and subdirectories inside the "
 "directory"
 msgstr ""
 "डाइरेक्टरी भित्रका सबै फाइल तथा उप-डाइरेक्टरीहरूको अनुमति (permissions) "
 "सफलतापूर्वक मिलाइयो"
+
+#: internal/web/templates/files/fix_permissions.html:99
+msgid "Fixing permissions failed"
+msgstr "अनुमतिहरू मिलाउन असफल भयो"
 
 #: internal/web/templates/files/ftp.html:10
 msgid "FTP Accounts Header"
@@ -12650,7 +12641,7 @@ msgid "Over quota"
 msgstr "कोटा नाघ्यो"
 
 #: internal/web/templates/files/ftp.html:135
-#: internal/web/templates/files/ftp_new.html:165
+#: internal/web/templates/files/ftp_new.html:170
 #: internal/web/templates/files/ftp_quota.html:28
 #: internal/web/templates/files/ftp_quota.html:34
 msgid "Unlimited"
@@ -12710,21 +12701,21 @@ msgstr ""
 "पासवर्ड कम्तीमा ८ अक्षरको हुनुपर्छ, र त्यसमा सानो अक्षर, ठूलो अक्षर, एउटा "
 "अंक, र एउटा विशेष क्यारेक्टर समावेश हुनुपर्छ।"
 
-#: internal/web/templates/files/ftp_new.html:154
+#: internal/web/templates/files/ftp_new.html:159
 msgid "Path (folder)"
 msgstr "पथ (फोल्डर)"
 
-#: internal/web/templates/files/ftp_new.html:163
+#: internal/web/templates/files/ftp_new.html:168
 #: internal/web/templates/files/ftp_quota.html:32
 msgid "Disk quota"
 msgstr "डिस्क कोटा"
 
-#: internal/web/templates/files/ftp_new.html:166
+#: internal/web/templates/files/ftp_new.html:171
 #: internal/web/templates/files/ftp_quota.html:35
 msgid "Unit"
 msgstr "एकाइ"
 
-#: internal/web/templates/files/ftp_new.html:171
+#: internal/web/templates/files/ftp_new.html:176
 #: internal/web/templates/files/ftp_quota.html:40
 msgid ""
 "Leave empty or set 0 for no limit. Uploads are blocked once the folder grows"
@@ -12733,7 +12724,7 @@ msgstr ""
 "सीमा नराख्न खाली छोड्नुहोस् वा 0 राख्नुहोस्। फोल्डर कोटाभन्दा ठूलो भएपछि "
 "अपलोड रोकिन्छ, फाइलहरू भने मेटाउन सकिन्छ।"
 
-#: internal/web/templates/files/ftp_new.html:182
+#: internal/web/templates/files/ftp_new.html:187
 #: internal/web/templates/files/ftp_quota.html:49
 msgid "Back to FTP Accounts"
 msgstr "FTP खाताहरूमा फर्कनुहोस्"
@@ -12848,11 +12839,11 @@ msgstr ""
 msgid "Inodes Usage"
 msgstr "इनोद प्रयोग"
 
-#: internal/web/templates/files/inodes.html:157
+#: internal/web/templates/files/inodes.html:159
 msgid "Calculating inodes count for parent directory.."
 msgstr "मुख्य डाइरेक्टरीका इनोदहरूको संख्या गणना गर्दै…"
 
-#: internal/web/templates/files/inodes.html:168
+#: internal/web/templates/files/inodes.html:167
 msgid "Failed to fetch"
 msgstr "डेटा ल्याउन असफल"
 
@@ -12980,31 +12971,31 @@ msgstr "नेटवर्क त्रुटि।"
 msgid "Network error during file download. Please try again."
 msgstr "फाइल डाउनलोडको क्रममा नेटवर्क त्रुटि। कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: internal/web/templates/files/upload_file.html:420
-msgid "Total file size exceeds {max}MB limit."
-msgstr "फाइलहरूको कुल आकार {max}MB सीमाभन्दा बढी छ।"
-
-#: internal/web/templates/files/upload_file.html:437
+#: internal/web/templates/files/upload_file.html:440
 msgid "Please select files to upload."
 msgstr "कृपया अपलोड गर्न फाइलहरू चयन गर्नुहोस्।"
 
-#: internal/web/templates/files/upload_file.html:514
+#: internal/web/templates/files/upload_file.html:445
+msgid "Over the %(size)s MB upload limit:"
+msgstr ""
+
+#: internal/web/templates/files/upload_file.html:544
 msgid "Files uploaded successfully!"
 msgstr "फाइलहरू सफलतापूर्वक अपलोड भए!"
 
-#: internal/web/templates/files/upload_file.html:524
+#: internal/web/templates/files/upload_file.html:553
 msgid "Error uploading file:"
 msgstr "फाइल अपलोड गर्दा त्रुटि:"
 
-#: internal/web/templates/files/upload_file.html:534
+#: internal/web/templates/files/upload_file.html:562
 msgid "Network error during file upload. Please try again."
 msgstr "फाइल अपलोडको क्रममा नेटवर्क त्रुटि। कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: internal/web/templates/files/upload_file.html:555
+#: internal/web/templates/files/upload_file.html:579
 msgid "An upload is in progress. Are you sure you want to leave?"
 msgstr "अपलोड भइरहेको छ। के तपाईं पक्का छोड्न चाहनुहुन्छ?"
 
-#: internal/web/templates/files/upload_file.html:560
+#: internal/web/templates/files/upload_file.html:584
 msgid "A download is in progress. Are you sure you want to leave?"
 msgstr "डाउनलोड भइरहेको छ। के तपाईं पक्का छोड्न चाहनुहुन्छ?"
 
@@ -13189,7 +13180,7 @@ msgid "Open FTP Accounts"
 msgstr "FTP खाताहरू खोल्नुहोस्"
 
 #: internal/web/templates/manager/_cms_app_shared.html:489
-#: internal/web/templates/manager/wp/single.html:2004
+#: internal/web/templates/manager/wp/single.html:2006
 msgid "MariaDB:"
 msgstr "MariaDB:"
 
@@ -13197,7 +13188,7 @@ msgstr "MariaDB:"
 #: internal/web/templates/manager/_cms_app_shared.html:1197
 #: internal/web/templates/manager/python_node_apps.html:980
 #: internal/web/templates/manager/websitebuilder.html:153
-#: internal/web/templates/manager/wp/single.html:1750
+#: internal/web/templates/manager/wp/single.html:1752
 msgid "Create a Backup"
 msgstr "ब्याकअप बनाउनुहोस्"
 
@@ -13218,8 +13209,8 @@ msgstr "साइट फाइलहरूको ब्याकअप उत्
 #: internal/web/templates/manager/tinyphotogallery_app.html:179
 #: internal/web/templates/manager/websitebuilder.html:171
 #: internal/web/templates/manager/websitebuilder.html:234
-#: internal/web/templates/manager/wp/single.html:1772
-#: internal/web/templates/manager/wp/single.html:1841
+#: internal/web/templates/manager/wp/single.html:1774
+#: internal/web/templates/manager/wp/single.html:1843
 #: internal/web/templates/system/cronjobs_new.html:68
 msgid "or"
 msgstr "वा"
@@ -13228,7 +13219,7 @@ msgstr "वा"
 #: internal/web/templates/manager/_cms_app_shared.html:1238
 #: internal/web/templates/manager/python_node_apps.html:996
 #: internal/web/templates/manager/websitebuilder.html:175
-#: internal/web/templates/manager/wp/single.html:1776
+#: internal/web/templates/manager/wp/single.html:1778
 msgid "Restore from Backups"
 msgstr "ब्याकअपबाट पुनर्स्थापना गर्नुहोस्"
 
@@ -13240,7 +13231,7 @@ msgstr "ब्याकअपबाट साइट फाइलहरू पु
 #: internal/web/templates/manager/_cms_app_shared.html:1246
 #: internal/web/templates/manager/python_node_apps.html:1004
 #: internal/web/templates/manager/websitebuilder.html:183
-#: internal/web/templates/manager/wp/single.html:1784
+#: internal/web/templates/manager/wp/single.html:1786
 msgid "Display Backups"
 msgstr "ब्याकअपहरू देखाउनुहोस्"
 
@@ -13248,7 +13239,7 @@ msgstr "ब्याकअपहरू देखाउनुहोस्"
 #: internal/web/templates/manager/_cms_app_shared.html:1250
 #: internal/web/templates/manager/python_node_apps.html:1008
 #: internal/web/templates/manager/websitebuilder.html:187
-#: internal/web/templates/manager/wp/single.html:1788
+#: internal/web/templates/manager/wp/single.html:1790
 msgid "Select a backup date:"
 msgstr "ब्याकअप मिति चयन गर्नुहोस्:"
 
@@ -13260,25 +13251,25 @@ msgstr "ब्याकअप मिति चयन गर्नुहोस्
 #: internal/web/templates/manager/python_node_apps.html:1099
 #: internal/web/templates/manager/websitebuilder.html:193
 #: internal/web/templates/manager/websitebuilder.html:418
-#: internal/web/templates/manager/wp/single.html:1794
-#: internal/web/templates/manager/wp/single.html:2182
+#: internal/web/templates/manager/wp/single.html:1796
+#: internal/web/templates/manager/wp/single.html:2188
 msgid "Start Restore"
 msgstr "पुनर्स्थापना सुरु गर्नुहोस्"
 
 #: internal/web/templates/manager/_cms_app_shared.html:658
 #: internal/web/templates/manager/python_node_apps.html:854
-#: internal/web/templates/manager/wp/single.html:1631
+#: internal/web/templates/manager/wp/single.html:1633
 msgid "Location"
 msgstr "स्थान"
 
 #: internal/web/templates/manager/_cms_app_shared.html:659
-#: internal/web/templates/manager/wp/single.html:1632
+#: internal/web/templates/manager/wp/single.html:1634
 msgid "Please choose the URL to install the software"
 msgstr "सफ्टवेयर स्थापना गर्न URL छान्नुहोस्"
 
 #: internal/web/templates/manager/_cms_app_shared.html:670
 #: internal/web/templates/manager/python_node_apps.html:860
-#: internal/web/templates/manager/wp/single.html:1643
+#: internal/web/templates/manager/wp/single.html:1645
 msgid "Target"
 msgstr "लक्ष्य"
 
@@ -13292,7 +13283,7 @@ msgstr "लक्ष्य"
 #: internal/web/templates/manager/python_node_apps.html:925
 #: internal/web/templates/manager/websitebuilder_install.html:41
 #: internal/web/templates/manager/wp/install.html:76
-#: internal/web/templates/manager/wp/single.html:1647
+#: internal/web/templates/manager/wp/single.html:1649
 msgid "Select a domain"
 msgstr "डोमेन चयन गर्नुहोस्"
 
@@ -13305,12 +13296,12 @@ msgstr "डोमेन चयन गर्नुहोस्"
 #: internal/web/templates/manager/python_node_apps.html:870
 #: internal/web/templates/manager/websitebuilder_install.html:46
 #: internal/web/templates/manager/wp/install.html:81
-#: internal/web/templates/manager/wp/single.html:1653
+#: internal/web/templates/manager/wp/single.html:1655
 msgid "subfolder"
 msgstr "सबफोल्डर"
 
 #: internal/web/templates/manager/_cms_app_shared.html:683
-#: internal/web/templates/manager/wp/single.html:1656
+#: internal/web/templates/manager/wp/single.html:1658
 msgid ""
 "Make sure that the domain or the subdomain selected as a target is not being"
 " used by an existing website. During cloning, website data that exists on "
@@ -13324,7 +13315,7 @@ msgstr ""
 #: internal/web/templates/manager/_cms_app_shared.html:1403
 #: internal/web/templates/manager/python_node_apps.html:1070
 #: internal/web/templates/manager/websitebuilder.html:376
-#: internal/web/templates/manager/wp/single.html:2139
+#: internal/web/templates/manager/wp/single.html:2145
 msgid "No backups available"
 msgstr "कुनै ब्याकअप उपलब्ध छैन"
 
@@ -13332,7 +13323,7 @@ msgstr "कुनै ब्याकअप उपलब्ध छैन"
 #: internal/web/templates/manager/_cms_app_shared.html:1415
 #: internal/web/templates/manager/python_node_apps.html:1082
 #: internal/web/templates/manager/websitebuilder.html:390
-#: internal/web/templates/manager/wp/single.html:2154
+#: internal/web/templates/manager/wp/single.html:2160
 msgid "Click again to confirm"
 msgstr "पुष्टि गर्न पुन: क्लिक गर्नुहोस्"
 
@@ -13340,34 +13331,34 @@ msgstr "पुष्टि गर्न पुन: क्लिक गर्न�
 #: internal/web/templates/manager/_cms_app_shared.html:1422
 #: internal/web/templates/manager/python_node_apps.html:1089
 #: internal/web/templates/manager/websitebuilder.html:404
-#: internal/web/templates/manager/wp/single.html:2168
+#: internal/web/templates/manager/wp/single.html:2174
 msgid "Restoring backup... Please wait."
 msgstr "ब्याकअप पुनर्स्थापना हुँदैछ... कृपया प्रतीक्षा गर्नुहोस्।"
 
 #: internal/web/templates/manager/_cms_app_shared.html:742
 #: internal/web/templates/manager/_cms_app_shared.html:1426
 #: internal/web/templates/manager/websitebuilder.html:411
-#: internal/web/templates/manager/wp/single.html:2175
+#: internal/web/templates/manager/wp/single.html:2181
 msgid "Restore request failed."
 msgstr "पुनर्स्थापना अनुरोध असफल भयो।"
 
 #: internal/web/templates/manager/_cms_app_shared.html:765
 #: internal/web/templates/manager/_cms_app_shared.html:1458
-#: internal/web/templates/manager/wp/single.html:2230
+#: internal/web/templates/manager/wp/single.html:2236
 msgid "Generating Backup..."
 msgstr "ब्याकअप तयार गर्दै..."
 
 #: internal/web/templates/manager/_cms_app_shared.html:766
 #: internal/web/templates/manager/_cms_app_shared.html:1459
 #: internal/web/templates/manager/websitebuilder.html:451
-#: internal/web/templates/manager/wp/single.html:2232
+#: internal/web/templates/manager/wp/single.html:2238
 msgid "Generating website backup.. Please wait."
 msgstr "वेबसाइटको ब्याकअप तयार हुँदैछ.. कृपया प्रतीक्षा गर्नुहोस्।"
 
 #: internal/web/templates/manager/_cms_app_shared.html:770
 #: internal/web/templates/manager/_cms_app_shared.html:1463
 #: internal/web/templates/manager/websitebuilder.html:458
-#: internal/web/templates/manager/wp/single.html:2239
+#: internal/web/templates/manager/wp/single.html:2245
 msgid "Backup request failed."
 msgstr "ब्याकअप अनुरोध असफल भयो।"
 
@@ -13459,52 +13450,52 @@ msgstr "phpMyAdmin लगइन फारम खोल्नुहोस्"
 
 #: internal/web/templates/manager/_cms_app_shared.html:898
 #: internal/web/templates/manager/_cms_app_shared.html:1551
-#: internal/web/templates/manager/wp/single.html:1699
+#: internal/web/templates/manager/wp/single.html:1701
 msgid "Clone website"
 msgstr "वेबसाइट क्लोन गर्नुहोस्"
 
 #: internal/web/templates/manager/_cms_app_shared.html:912
 #: internal/web/templates/manager/python_node_apps.html:942
-#: internal/web/templates/manager/wp/single.html:1707
+#: internal/web/templates/manager/wp/single.html:1709
 msgid "Cloning..."
 msgstr "क्लोन गर्दै..."
 
 #: internal/web/templates/manager/_cms_app_shared.html:914
 #: internal/web/templates/manager/python_node_apps.html:944
-#: internal/web/templates/manager/wp/single.html:1713
+#: internal/web/templates/manager/wp/single.html:1715
 msgid "Cloning process started... Please wait."
 msgstr "क्लोनिङ प्रक्रिया सुरु भयो... कृपया पर्खनुहोस्।"
 
 #: internal/web/templates/manager/_cms_app_shared.html:927
-#: internal/web/templates/manager/wp/single.html:1726
+#: internal/web/templates/manager/wp/single.html:1728
 msgid "Cloned to {target} successfully!"
 msgstr "{target} मा सफलतापूर्वक क्लोन गरियो!"
 
 #: internal/web/templates/manager/_cms_app_shared.html:928
 #: internal/web/templates/manager/python_node_apps.html:958
-#: internal/web/templates/manager/wp/single.html:1727
+#: internal/web/templates/manager/wp/single.html:1729
 msgid "Clone Complete"
 msgstr "क्लोन सम्पन्न भयो"
 
 #: internal/web/templates/manager/_cms_app_shared.html:930
-#: internal/web/templates/manager/wp/single.html:1729
+#: internal/web/templates/manager/wp/single.html:1731
 msgid "Error cloning site"
 msgstr "साइट क्लोन गर्दा त्रुटि"
 
 #: internal/web/templates/manager/_cms_app_shared.html:932
 #: internal/web/templates/manager/python_node_apps.html:962
-#: internal/web/templates/manager/wp/single.html:1731
+#: internal/web/templates/manager/wp/single.html:1733
 msgid "Try Again"
 msgstr "फेरि प्रयास गर्नुहोस्"
 
 #: internal/web/templates/manager/_cms_app_shared.html:938
 #: internal/web/templates/manager/python_node_apps.html:968
-#: internal/web/templates/manager/wp/single.html:1737
+#: internal/web/templates/manager/wp/single.html:1739
 msgid "Retry Clone"
 msgstr "क्लोन पुनः प्रयास गर्नुहोस्"
 
 #: internal/web/templates/manager/_cms_app_shared.html:952
-#: internal/web/templates/manager/wp/single.html:1443
+#: internal/web/templates/manager/wp/single.html:1444
 #: internal/web/templates/system/cronjobs.html:67
 msgid "Refresh"
 msgstr "ताजा गर्नुहोस्"
@@ -13515,27 +13506,27 @@ msgid "Loading error log.."
 msgstr "त्रुटि लग लोड गर्दै.."
 
 #: internal/web/templates/manager/_cms_app_shared.html:970
-#: internal/web/templates/manager/wp/single.html:1668
+#: internal/web/templates/manager/wp/single.html:1670
 msgid "Database name and user to use for the clone (optional)"
 msgstr "क्लोनका लागि प्रयोग गर्ने डाटाबेस नाम र प्रयोगकर्ता (वैकल्पिक)"
 
 #: internal/web/templates/manager/_cms_app_shared.html:978
-#: internal/web/templates/manager/wp/single.html:1676
+#: internal/web/templates/manager/wp/single.html:1678
 msgid "Database name must be between 6 and 30 characters."
 msgstr "डाटाबेस नाम 6 देखि 30 क्यारेक्टरको बीचमा हुनुपर्छ।"
 
 #: internal/web/templates/manager/_cms_app_shared.html:982
-#: internal/web/templates/manager/wp/single.html:1680
+#: internal/web/templates/manager/wp/single.html:1682
 msgid "Database user"
 msgstr "डाटाबेस प्रयोगकर्ता"
 
 #: internal/web/templates/manager/_cms_app_shared.html:985
-#: internal/web/templates/manager/wp/single.html:1683
+#: internal/web/templates/manager/wp/single.html:1685
 msgid "Username must be between 6 and 30 characters."
 msgstr "प्रयोगकर्ता नाम 6 देखि 30 क्यारेक्टरको बीचमा हुनुपर्छ।"
 
 #: internal/web/templates/manager/_cms_app_shared.html:989
-#: internal/web/templates/manager/wp/single.html:1687
+#: internal/web/templates/manager/wp/single.html:1689
 msgid "User password"
 msgstr "प्रयोगकर्ता पासवर्ड"
 
@@ -13640,18 +13631,18 @@ msgid "A backup is recommended before updating - see the Backups tab."
 msgstr "अद्यावधिक गर्नुअघि ब्याकअप सिफारिस गरिन्छ - Backups ट्याब हेर्नुहोस्।"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1198
-#: internal/web/templates/manager/wp/single.html:1751
+#: internal/web/templates/manager/wp/single.html:1753
 msgid "Generate a backup of files and/or database."
 msgstr "फाइल र/वा डाटाबेसको ब्याकअप उत्पन्न गर्नुहोस्।"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1206
-#: internal/web/templates/manager/wp/single.html:1759
+#: internal/web/templates/manager/wp/single.html:1761
 msgid "Backup Database"
 msgstr "डेटाबेस ब्याकअप गर्नुहोस्"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1210
 #: internal/web/templates/manager/websitebuilder.html:162
-#: internal/web/templates/manager/wp/single.html:1763
+#: internal/web/templates/manager/wp/single.html:1765
 msgid "Backup Files"
 msgstr "फाइलहरू ब्याकअप गर्नुहोस्"
 
@@ -13660,7 +13651,7 @@ msgid "Clone a %(name)s instance with its database and files."
 msgstr "यसको डाटाबेस र फाइलहरूसहित %(name)s इन्स्ट्यान्स क्लोन गर्नुहोस्।"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1239
-#: internal/web/templates/manager/wp/single.html:1777
+#: internal/web/templates/manager/wp/single.html:1779
 msgid "Restore files and/or database from a backup."
 msgstr "ब्याकअपबाट फाइल र/वा डाटाबेस पुनर्स्थापना गर्नुहोस्।"
 
@@ -13672,7 +13663,7 @@ msgstr "ब्याकअपबाट फाइल र/वा डाटाब�
 #: internal/web/templates/manager/ojs_app.html:204
 #: internal/web/templates/manager/opencart_app.html:190
 #: internal/web/templates/manager/prestashop_app.html:174
-#: internal/web/templates/manager/wp/single.html:2306
+#: internal/web/templates/manager/wp/single.html:2312
 msgid "A newer version is available."
 msgstr "नयाँ संस्करण उपलब्ध छ।"
 
@@ -13685,7 +13676,7 @@ msgstr "नयाँ संस्करण उपलब्ध छ।"
 #: internal/web/templates/manager/ojs_app.html:209
 #: internal/web/templates/manager/opencart_app.html:194
 #: internal/web/templates/manager/prestashop_app.html:178
-#: internal/web/templates/manager/wp/single.html:2295
+#: internal/web/templates/manager/wp/single.html:2301
 msgid "You are running the latest version."
 msgstr "तपाईं नवीनतम संस्करण चलाउँदै हुनुहुन्छ।"
 
@@ -13757,28 +13748,28 @@ msgid "Fetch error. Please try again."
 msgstr "डेटा लिन त्रुटि भयो। कृपया पुन: प्रयास गर्नुहोस्।"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1380
-#: internal/web/templates/manager/wp/single.html:2205
+#: internal/web/templates/manager/wp/single.html:2211
 msgid "Database and Files Backup"
 msgstr "डेटाबेस र फाइलहरूको ब्याकअप"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1381
-#: internal/web/templates/manager/wp/single.html:2207
+#: internal/web/templates/manager/wp/single.html:2213
 msgid "Database Backup"
 msgstr "डेटाबेस ब्याकअप"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1382
 #: internal/web/templates/manager/websitebuilder.html:371
-#: internal/web/templates/manager/wp/single.html:2209
+#: internal/web/templates/manager/wp/single.html:2215
 msgid "Files Backup"
 msgstr "फाइलहरूको ब्याकअप"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1383
-#: internal/web/templates/manager/wp/single.html:2211
+#: internal/web/templates/manager/wp/single.html:2217
 msgid "Unknown Backup Type"
 msgstr "अज्ञात ब्याकअप प्रकार"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1453
-#: internal/web/templates/manager/wp/single.html:2224
+#: internal/web/templates/manager/wp/single.html:2230
 msgid ""
 "No options selected to backup. Please ensure that at least one of the "
 "Database or Files is selected."
@@ -13820,7 +13811,7 @@ msgstr ""
 #: internal/web/templates/manager/tinyfilemanager_app.html:66
 #: internal/web/templates/manager/tinyphotogallery_app.html:166
 #: internal/web/templates/manager/websitebuilder.html:221
-#: internal/web/templates/manager/wp/single.html:1828
+#: internal/web/templates/manager/wp/single.html:1830
 msgid "Confirm Detach"
 msgstr "अलग गर्ने कार्य पुष्टि गर्नुहोस्"
 
@@ -14179,7 +14170,7 @@ msgstr "%(name)s CLI इन्स्टलर चलिरहेको छ"
 msgid "Registering cron job and saving to Site Manager"
 msgstr "cron जब दर्ता गर्दै र Site Manager मा सुरक्षित गर्दै"
 
-#: internal/web/templates/manager/_cms_install_shared.html:566
+#: internal/web/templates/manager/_cms_install_shared.html:568
 #: internal/web/templates/manager/drupal_install.html:297
 #: internal/web/templates/manager/flarum_install.html:317
 #: internal/web/templates/manager/joomla_install.html:294
@@ -15926,7 +15917,7 @@ msgstr "एप्लिकेशन हटाउने प्रक्रिय�
 #: internal/web/templates/manager/n8n_app.html:707
 #: internal/web/templates/manager/python_node_apps.html:1343
 #: internal/web/templates/manager/websitebuilder.html:345
-#: internal/web/templates/manager/wp/single.html:2108
+#: internal/web/templates/manager/wp/single.html:2114
 msgid "An error occurred fetching folder size from the container."
 msgstr "कन्टेनरबाट फोल्डर आकार ल्याउँदा त्रुटि भयो।"
 
@@ -16717,7 +16708,7 @@ msgid "No new installations found."
 msgstr "कुनै नयाँ स्थापना फेला परेन।"
 
 #: internal/web/templates/manager/sites.html:189
-#: internal/web/templates/manager/wp/list.html:386
+#: internal/web/templates/manager/wp/list.html:385
 msgid "Error occurred during scan. Try again."
 msgstr "स्क्यान गर्दा त्रुटि भयो। फेरि प्रयास गर्नुहोस्।"
 
@@ -17625,27 +17616,27 @@ msgstr ""
 "देखाइन्छ। यहाँ तपाईं यो वेबसाइट हाल Google द्वारा भ्रमण गर्न खतरनाक चिन्हित "
 "छ कि छैन हेर्न सक्नुहुन्छ।"
 
-#: internal/web/templates/manager/wp/_shared.html:162
+#: internal/web/templates/manager/wp/_shared.html:170
 msgid "No description available."
 msgstr "कुनै विवरण उपलब्ध छैन।"
 
-#: internal/web/templates/manager/wp/_shared.html:226
+#: internal/web/templates/manager/wp/_shared.html:234
 msgid "Last checked"
 msgstr "अन्तिम पटक जाँचिएको"
 
-#: internal/web/templates/manager/wp/_shared.html:292
+#: internal/web/templates/manager/wp/_shared.html:300
 msgid "Checking website status..."
 msgstr "वेबसाइट स्थिति जाँच गर्दै..."
 
-#: internal/web/templates/manager/wp/_shared.html:304
+#: internal/web/templates/manager/wp/_shared.html:312
 msgid "No unsafe content found"
 msgstr "कुनै असुरक्षित सामग्री फेला परेन"
 
-#: internal/web/templates/manager/wp/_shared.html:306
+#: internal/web/templates/manager/wp/_shared.html:314
 msgid "The website is flagged for threats:"
 msgstr "वेबसाइट खतराहरूका लागि फ्ल्याग गरिएको छ:"
 
-#: internal/web/templates/manager/wp/_shared.html:317
+#: internal/web/templates/manager/wp/_shared.html:325
 msgid "Failed to check the website"
 msgstr "वेबसाइट जाँच गर्न असफल भयो"
 
@@ -17918,20 +17909,20 @@ msgid "An error occurred while removing WordPress. Please try again."
 msgstr "WordPress हटाउने क्रममा त्रुटि भयो। कृपया पुनः प्रयास गर्नुहोस्।"
 
 #: internal/web/templates/manager/wp/list.html:256
-#: internal/web/templates/manager/wp/single.html:1889
+#: internal/web/templates/manager/wp/single.html:1891
 msgid "WordPress detach process started. Please wait."
 msgstr "WordPress वियोग प्रक्रिया सुरु भयो। कृपया प्रतीक्षा गर्नुहोस्।"
 
 #: internal/web/templates/manager/wp/list.html:267
-#: internal/web/templates/manager/wp/single.html:1900
+#: internal/web/templates/manager/wp/single.html:1902
 msgid "An error occurred while detaching WordPress. Please try again."
 msgstr "WordPress वियोग गर्दै गर्दा त्रुटि भयो। कृपया पुनः प्रयास गर्नुहोस्।"
 
-#: internal/web/templates/manager/wp/list.html:342
+#: internal/web/templates/manager/wp/list.html:341
 msgid "No WordPress Installations"
 msgstr "कुनै WordPress स्थापना छैन"
 
-#: internal/web/templates/manager/wp/list.html:344
+#: internal/web/templates/manager/wp/list.html:343
 msgid ""
 "No WordPress sites managed via OpenPanel. Install a new WordPress site or "
 "scan to find existing installations."
@@ -17940,33 +17931,33 @@ msgstr ""
 "WordPress साइट इन्स्टल गर्नुहोस् वा अवस्थित स्थापनाहरू खोज्न स्क्यान "
 "गर्नुहोस्।"
 
-#: internal/web/templates/manager/wp/list.html:346
+#: internal/web/templates/manager/wp/list.html:345
 #: internal/web/templates/system/cronjobs.html:489
 #: internal/web/templates/user/favorites.html:131
 msgid "View Documentation"
 msgstr "डक्स हेर्नुहोस्"
 
-#: internal/web/templates/manager/wp/list.html:365
+#: internal/web/templates/manager/wp/list.html:364
 msgid "Scanning started..."
 msgstr "स्क्यान सुरु भयो..."
 
-#: internal/web/templates/manager/wp/list.html:376
+#: internal/web/templates/manager/wp/list.html:375
 msgid "No installations found."
 msgstr "कुनै स्थापना फेला परेन।"
 
-#: internal/web/templates/manager/wp/list.html:380
+#: internal/web/templates/manager/wp/list.html:379
 msgid "Scan skipped. WordPress installation is currently running."
 msgstr "स्क्यान छुटाइयो। WordPress स्थापना अहिले चलिरहेको छ।"
 
-#: internal/web/templates/manager/wp/list.html:395
+#: internal/web/templates/manager/wp/list.html:394
 msgid "Data refresh in progress... Please wait."
 msgstr "डेटा रिफ्रेस भइरहेको छ... कृपया पर्खनुहोस्।"
 
-#: internal/web/templates/manager/wp/list.html:401
+#: internal/web/templates/manager/wp/list.html:400
 msgid "Refresh completed."
 msgstr "रिफ्रेस पूरा भयो।"
 
-#: internal/web/templates/manager/wp/list.html:405
+#: internal/web/templates/manager/wp/list.html:404
 msgid "Error occurred during refresh."
 msgstr "रिफ्रेस गर्दा त्रुटि भयो।"
 
@@ -18328,40 +18319,40 @@ msgstr "अपडेट प्राथमिकताहरू सुरक्�
 msgid "Saving update preferences... Please wait."
 msgstr "अपडेट प्राथमिकताहरू सुरक्षित गर्दै... कृपया प्रतीक्षा गर्नुहोस्।"
 
-#: internal/web/templates/manager/wp/single.html:1358
+#: internal/web/templates/manager/wp/single.html:1359
 msgid "Saving general settings... Please wait."
 msgstr "सामान्य सेटिङहरू सुरक्षित गर्दै... कृपया प्रतीक्षा गर्नुहोस्।"
 
-#: internal/web/templates/manager/wp/single.html:1404
+#: internal/web/templates/manager/wp/single.html:1405
 msgid "Error fetching debug info. Refresh the page."
 msgstr "डिबग जानकारी ल्याउन त्रुटि भयो। पृष्ठ रिफ्रेस गर्नुहोस्।"
 
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/system/error_logs.html:153
 msgid "Critical"
 msgstr "गम्भीर"
 
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/system/error_logs.html:153
 msgid "Notice"
 msgstr "सूचना"
 
-#: internal/web/templates/manager/wp/single.html:1440
+#: internal/web/templates/manager/wp/single.html:1441
 msgid "Latest PHP, web server and HTTP 5xx errors for this website."
 msgstr "यो वेबसाइटका पछिल्ला PHP, वेब सर्भर र HTTP 5xx त्रुटिहरू।"
 
-#: internal/web/templates/manager/wp/single.html:1442
-#: internal/web/templates/manager/wp/single.html:1472
+#: internal/web/templates/manager/wp/single.html:1443
+#: internal/web/templates/manager/wp/single.html:1473
 #: internal/web/templates/system/waf.html:349
 msgid "View Logs"
 msgstr "लगहरू हेर्नुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1449
+#: internal/web/templates/manager/wp/single.html:1450
 #: internal/web/templates/system/error_logs.html:106
 msgid "No errors found for these filters."
 msgstr "यी फिल्टरहरूका लागि कुनै त्रुटि भेटिएन।"
 
-#: internal/web/templates/manager/wp/single.html:1479
+#: internal/web/templates/manager/wp/single.html:1480
 msgid ""
 "The options below allow you to manage the native WordPress debugging tools, "
 "enabling and disabling these tools in the wp-config.php file. It is not "
@@ -18373,59 +18364,59 @@ msgstr ""
 " प्रयोग गर्न सुझाव दिइँदैन किनकि यी विकास र परीक्षण स्थापनाका लागि मात्र "
 "हुन्। कृपया हेर्नुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1479
+#: internal/web/templates/manager/wp/single.html:1480
 msgid "Debugging in WordPress"
 msgstr "WordPress मा डिबगिङ"
 
-#: internal/web/templates/manager/wp/single.html:1479
+#: internal/web/templates/manager/wp/single.html:1480
 msgid "article for more information on these options."
 msgstr "यी विकल्पहरूको विस्तृत जानकारीका लागि लेख।"
 
-#: internal/web/templates/manager/wp/single.html:1490
-#: internal/web/templates/manager/wp/single.html:1496
+#: internal/web/templates/manager/wp/single.html:1491
+#: internal/web/templates/manager/wp/single.html:1497
 msgid "WP_DEBUG"
 msgstr "WP_DEBUG"
 
-#: internal/web/templates/manager/wp/single.html:1491
+#: internal/web/templates/manager/wp/single.html:1492
 msgid "WordPress debug mode."
 msgstr "WordPress डिबग मोड।"
 
-#: internal/web/templates/manager/wp/single.html:1498
+#: internal/web/templates/manager/wp/single.html:1499
 msgid "Enable WP_DEBUG mode"
 msgstr "WP_DEBUG मोड सक्षम गर्नुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1509
-#: internal/web/templates/manager/wp/single.html:1515
+#: internal/web/templates/manager/wp/single.html:1510
+#: internal/web/templates/manager/wp/single.html:1516
 msgid "WP_DEBUG_LOG"
 msgstr "WP_DEBUG_LOG"
 
-#: internal/web/templates/manager/wp/single.html:1510
+#: internal/web/templates/manager/wp/single.html:1511
 msgid "Save all errors to the debug.log file inside the wp-content directory."
 msgstr "सबै त्रुटिहरू wp-content भित्रको debug.log फाइलमा सुरक्षित गर्नुहोस्।"
 
-#: internal/web/templates/manager/wp/single.html:1517
+#: internal/web/templates/manager/wp/single.html:1518
 msgid "Enable WP_DEBUG_LOG"
 msgstr "WP_DEBUG_LOG सक्षम गर्नुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1528
-#: internal/web/templates/manager/wp/single.html:1534
+#: internal/web/templates/manager/wp/single.html:1529
+#: internal/web/templates/manager/wp/single.html:1535
 msgid "WP_DEBUG_DISPLAY"
 msgstr "WP_DEBUG_DISPLAY"
 
-#: internal/web/templates/manager/wp/single.html:1529
+#: internal/web/templates/manager/wp/single.html:1530
 msgid "Show debug messages inside the HTML pages"
 msgstr "HTML पृष्ठहरूमा डिबग सन्देशहरू देखाउनुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1536
+#: internal/web/templates/manager/wp/single.html:1537
 msgid "Enable WP_DEBUG_DISPLAY"
 msgstr "WP_DEBUG_DISPLAY सक्षम गर्नुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1547
-#: internal/web/templates/manager/wp/single.html:1553
+#: internal/web/templates/manager/wp/single.html:1548
+#: internal/web/templates/manager/wp/single.html:1554
 msgid "SCRIPT_DEBUG"
 msgstr "SCRIPT_DEBUG"
 
-#: internal/web/templates/manager/wp/single.html:1548
+#: internal/web/templates/manager/wp/single.html:1549
 msgid ""
 "Force WordPress to use the non-minified versions of core CSS and JavaScript "
 "files. This is useful when you are testing changes made to .js and .css "
@@ -18435,76 +18426,76 @@ msgstr ""
 "गर्न बाध्य पार्नुहोस्। .js र .css फाइलहरूमा परिवर्तनहरू परीक्षण गर्दा यो "
 "उपयोगी हुन्छ।"
 
-#: internal/web/templates/manager/wp/single.html:1555
+#: internal/web/templates/manager/wp/single.html:1556
 msgid "Enable SCRIPT_DEBUG"
 msgstr "SCRIPT_DEBUG सक्षम गर्नुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1566
-#: internal/web/templates/manager/wp/single.html:1572
+#: internal/web/templates/manager/wp/single.html:1567
+#: internal/web/templates/manager/wp/single.html:1573
 msgid "SAVEQUERIES"
 msgstr "SAVEQUERIES"
 
-#: internal/web/templates/manager/wp/single.html:1567
+#: internal/web/templates/manager/wp/single.html:1568
 msgid ""
 "Save database queries to an array that can be displayed to help analyze "
 "them."
 msgstr "डेटाबेस क्वेरीहरूलाई विश्लेषण गर्नका लागि एरेमा सुरक्षित गर्नुहोस्।"
 
-#: internal/web/templates/manager/wp/single.html:1574
+#: internal/web/templates/manager/wp/single.html:1575
 msgid "Enable SAVEQUERIES"
 msgstr "SAVEQUERIES सक्षम गर्नुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1584
+#: internal/web/templates/manager/wp/single.html:1585
 msgid "Save Debugging"
 msgstr "डिबगिङ सुरक्षित गर्नुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1592
+#: internal/web/templates/manager/wp/single.html:1593
 msgid "Saving debugging options... Please wait."
 msgstr "डिबगिङ विकल्पहरू सुरक्षित गर्दै... कृपया प्रतीक्षा गर्नुहोस्।"
 
-#: internal/web/templates/manager/wp/single.html:1618
+#: internal/web/templates/manager/wp/single.html:1620
 msgid "Clone a WordPress instance with configured themes and plugins."
 msgstr ""
 "कन्फिगर गरिएका थिम र प्लगइनहरूसहित WordPress इन्स्टेन्स क्लोन गर्नुहोस्।"
 
-#: internal/web/templates/manager/wp/single.html:1814
-#: internal/web/templates/manager/wp/single.html:1824
+#: internal/web/templates/manager/wp/single.html:1816
+#: internal/web/templates/manager/wp/single.html:1826
 msgid "Remove the"
 msgstr "हटाउनुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1814
+#: internal/web/templates/manager/wp/single.html:1816
 msgid "website from WP Manager."
 msgstr "WP Manager बाट वेबसाइट।"
 
-#: internal/web/templates/manager/wp/single.html:1821
+#: internal/web/templates/manager/wp/single.html:1823
 msgid "Detach WordPress"
 msgstr "WordPress अलग गर्नुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1824
+#: internal/web/templates/manager/wp/single.html:1826
 msgid "website from this manager without actually deleting any files."
 msgstr "फाइलहरू मेटाइबिना यो व्यवस्थापकबाट वेबसाइट हटाउनुहोस्।"
 
-#: internal/web/templates/manager/wp/single.html:1825
+#: internal/web/templates/manager/wp/single.html:1827
 msgid "All website data such as files, crons and database remains."
 msgstr "फाइल, cron, र डाटाबेस जस्ता सबै वेबसाइट डेटा रहन्छ।"
 
-#: internal/web/templates/manager/wp/single.html:1846
+#: internal/web/templates/manager/wp/single.html:1848
 msgid "Permanently delete WordPress files & database."
 msgstr "WordPress फाइल र डाटाबेस स्थायी रूपमा मेटाउनुहोस्।"
 
-#: internal/web/templates/manager/wp/single.html:1853
+#: internal/web/templates/manager/wp/single.html:1855
 msgid "Uninstall WordPress"
 msgstr "WordPress अनइन्स्टल गर्नुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1856
+#: internal/web/templates/manager/wp/single.html:1858
 msgid "Delete the"
 msgstr "मेटाउनुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1856
+#: internal/web/templates/manager/wp/single.html:1858
 msgid "website and all its files and database."
 msgstr "वेबसाइट र यसका सबै फाइल र डाटाबेस।"
 
-#: internal/web/templates/manager/wp/single.html:1857
+#: internal/web/templates/manager/wp/single.html:1859
 msgid ""
 "All WordPress data will be permanently deleted. There is no coming back "
 "after you press delete."
@@ -18512,31 +18503,31 @@ msgstr ""
 "सबै WordPress डेटा स्थायी रूपमा मेटिनेछ। एकपटक Delete थिचेपछि फर्किन "
 "सकिँदैन।"
 
-#: internal/web/templates/manager/wp/single.html:1860
+#: internal/web/templates/manager/wp/single.html:1862
 msgid "Confirm Uninstall"
 msgstr "अनइन्स्टल पुष्टि गर्नुहोस्"
 
-#: internal/web/templates/manager/wp/single.html:1875
+#: internal/web/templates/manager/wp/single.html:1877
 msgid "WordPress uninstall process started. Please wait."
 msgstr "WordPress अनइन्स्टल प्रक्रिया सुरु भएको छ। कृपया प्रतीक्षा गर्नुहोस्।"
 
-#: internal/web/templates/manager/wp/single.html:1962
+#: internal/web/templates/manager/wp/single.html:1964
 msgid "An error occurred fetching DB size."
 msgstr "डेटाबेस आकार ल्याउँदा त्रुटि भयो।"
 
-#: internal/web/templates/manager/wp/single.html:2057
+#: internal/web/templates/manager/wp/single.html:2062
 msgid "Update in progress..."
 msgstr "अपडेट भइरहेकाे छ..."
 
-#: internal/web/templates/manager/wp/single.html:2063
+#: internal/web/templates/manager/wp/single.html:2069
 msgid "WordPress updated successfully"
 msgstr "WordPress सफलतापूर्वक अद्यावधिक गरियो"
 
-#: internal/web/templates/manager/wp/single.html:2064
+#: internal/web/templates/manager/wp/single.html:2070
 msgid "WordPress updated successfully."
 msgstr "WordPress सफलतापूर्वक अपडेट भयो।"
 
-#: internal/web/templates/manager/wp/single.html:2073
+#: internal/web/templates/manager/wp/single.html:2079
 msgid "Update failed."
 msgstr "अद्यावधिक असफल भयो।"
 
@@ -18641,6 +18632,8 @@ msgstr "सेवा नचलिरहेको बेला अनुपलब
 
 #: internal/web/templates/mongodb/databases.html:71
 #: internal/web/templates/mysql/databases.html:300
+#: internal/web/templates/mysql/databases.html:533
+#: internal/web/templates/mysql/databases.html:550
 #: internal/web/templates/psql/databases.html:137
 msgid "System Database"
 msgstr "सिस्टम डेटाबेस"
@@ -18668,7 +18661,7 @@ msgid "Create your first database"
 msgstr "आफ्नो पहिलो डाटाबेस सिर्जना गर्नुहोस्"
 
 #: internal/web/templates/mongodb/databases.html:195
-#: internal/web/templates/mysql/databases.html:548
+#: internal/web/templates/mysql/databases.html:567
 #: internal/web/templates/mysql/users.html:179
 #: internal/web/templates/psql/databases.html:261
 msgid "The page will refresh in"
@@ -18993,27 +18986,27 @@ msgstr "असाइन गरिएका प्रयोगकर्ताह�
 msgid "Manage privileges"
 msgstr "विशेषाधिकारहरू व्यवस्थापन गर्नुहोस्"
 
-#: internal/web/templates/mysql/databases.html:578
+#: internal/web/templates/mysql/databases.html:597
 msgid "Loading tables..."
 msgstr "तालिकाहरू लोड हुँदैछ..."
 
-#: internal/web/templates/mysql/databases.html:579
+#: internal/web/templates/mysql/databases.html:598
 msgid "No tables in this database."
 msgstr "यो डाटाबेसमा कुनै टेबल छैन।"
 
-#: internal/web/templates/mysql/databases.html:580
+#: internal/web/templates/mysql/databases.html:599
 msgid "Table"
 msgstr "टेबल"
 
-#: internal/web/templates/mysql/databases.html:581
+#: internal/web/templates/mysql/databases.html:600
 msgid "Engine"
 msgstr "इन्जिन"
 
-#: internal/web/templates/mysql/databases.html:583
+#: internal/web/templates/mysql/databases.html:602
 msgid "Unused"
 msgstr "प्रयोग नभएको"
 
-#: internal/web/templates/mysql/databases.html:588
+#: internal/web/templates/mysql/databases.html:607
 msgid ""
 "Rebuilds every table to free up unused space and defragment indexes. Tables "
 "are briefly locked while they are rebuilt, so run this when your site is "
@@ -19023,7 +19016,7 @@ msgstr ""
 "तालिका पुनः निर्माण गर्छ। पुनः निर्माण हुँदा तालिकाहरू छोटो समय लक हुन्छन्, "
 "त्यसैले साइट शान्त हुँदा चलाउनुहोस्।"
 
-#: internal/web/templates/mysql/databases.html:589
+#: internal/web/templates/mysql/databases.html:608
 msgid ""
 "Checks every table for damage and fixes it. Only MyISAM, Aria and ARCHIVE "
 "tables can be repaired, InnoDB tables recover on their own and are skipped."
@@ -19032,55 +19025,55 @@ msgstr ""
 "मात्र मर्मत गर्न सकिन्छ, InnoDB तालिकाहरू आफैं पुनर्प्राप्त हुन्छन् र "
 "छोडिन्छन्।"
 
-#: internal/web/templates/mysql/databases.html:590
+#: internal/web/templates/mysql/databases.html:609
 msgid "Optimize tables"
 msgstr "तालिकाहरू अप्टिमाइज गर्नुहोस्"
 
-#: internal/web/templates/mysql/databases.html:591
+#: internal/web/templates/mysql/databases.html:610
 msgid "Repair tables"
 msgstr "तालिकाहरू मर्मत गर्नुहोस्"
 
-#: internal/web/templates/mysql/databases.html:592
+#: internal/web/templates/mysql/databases.html:611
 msgid "Optimizing..."
 msgstr "अप्टिमाइज हुँदैछ..."
 
-#: internal/web/templates/mysql/databases.html:593
+#: internal/web/templates/mysql/databases.html:612
 msgid "Repairing..."
 msgstr "मर्मत हुँदैछ..."
 
-#: internal/web/templates/mysql/databases.html:594
+#: internal/web/templates/mysql/databases.html:613
 msgid "OK"
 msgstr "OK"
 
-#: internal/web/templates/mysql/databases.html:595
+#: internal/web/templates/mysql/databases.html:614
 msgid "Rebuilt"
 msgstr "पुनः निर्मित"
 
-#: internal/web/templates/mysql/databases.html:596
+#: internal/web/templates/mysql/databases.html:615
 msgid "Not needed"
 msgstr "आवश्यक छैन"
 
-#: internal/web/templates/mysql/databases.html:598
+#: internal/web/templates/mysql/databases.html:617
 msgid "tables"
 msgstr "तालिकाहरू"
 
-#: internal/web/templates/mysql/databases.html:599
+#: internal/web/templates/mysql/databases.html:618
 msgid "unused"
 msgstr "प्रयोग नभएको"
 
-#: internal/web/templates/mysql/databases.html:600
+#: internal/web/templates/mysql/databases.html:619
 msgid "Freed"
 msgstr "खाली गरियो"
 
-#: internal/web/templates/mysql/databases.html:601
+#: internal/web/templates/mysql/databases.html:620
 msgid "All tables done."
 msgstr "सबै तालिकाहरू सम्पन्न।"
 
-#: internal/web/templates/mysql/databases.html:602
+#: internal/web/templates/mysql/databases.html:621
 msgid "failed, hover the result to see why."
 msgstr "असफल, कारण हेर्न नतिजामा माउस राख्नुहोस्।"
 
-#: internal/web/templates/mysql/databases.html:709
+#: internal/web/templates/mysql/databases.html:728
 msgid "Add new database"
 msgstr "नयाँ डाटाबेस थप्नुहोस्"
 

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-22 22:53+0200\n"
+"POT-Creation-Date: 2026-10-26 11:00+0200\n"
 "PO-Revision-Date: 2026-06-01 00:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,8 +22,8 @@ msgstr "ຕ້ອງລະບຸຊື່ຜູ້ໃຊ້ ແລະ ລະຫ�
 #: internal/modules/account/favorites.go:253 internal/modules/crons/bulk.go:42
 #: internal/modules/dns/bulk.go:31 internal/modules/docker/bulk.go:36
 #: internal/modules/domains/bulk.go:29 internal/modules/emails/bulk.go:23
-#: internal/modules/emails/bulk.go:30 internal/modules/ftp/ftp.go:529
-#: internal/modules/malwarescan/bulk.go:17 internal/modules/mongodb/bulk.go:28
+#: internal/modules/emails/bulk.go:30 internal/modules/ftp/ftp.go:530
+#: internal/modules/malwarescan/bulk.go:16 internal/modules/mongodb/bulk.go:28
 #: internal/modules/mongodb/bulk.go:37 internal/modules/mysql/bulk.go:46
 #: internal/modules/mysql/bulk.go:55 internal/modules/postgresql/bulk.go:28
 #: internal/modules/postgresql/bulk.go:37
@@ -36,10 +36,10 @@ msgstr "ຕ້ອງລະບຸຊື່ຜູ້ໃຊ້ ແລະ ລະຫ�
 #: internal/web/templates/emails/delete.html:10
 #: internal/web/templates/emails/single_account.html:13
 #: internal/web/templates/files/clamav/quarantine.html:88
-#: internal/web/templates/files/filemanager_partials.html:353
-#: internal/web/templates/files/filemanager_partials.html:354
-#: internal/web/templates/files/filemanager_partials.html:417
-#: internal/web/templates/files/filemanager_partials.html:586
+#: internal/web/templates/files/filemanager_partials.html:371
+#: internal/web/templates/files/filemanager_partials.html:372
+#: internal/web/templates/files/filemanager_partials.html:435
+#: internal/web/templates/files/filemanager_partials.html:604
 #: internal/web/templates/files/ftp.html:186
 #: internal/web/templates/files/ftp.html:188
 #: internal/web/templates/files/trash.html:58
@@ -140,11 +140,11 @@ msgstr "ລະຫັດຜ່ານຂອງທ່ານຖືກຕັ້ງໃ
 msgid "Reset Password"
 msgstr "ຕັ້ງລະຫັດຜ່ານໃໝ່"
 
-#: internal/modules/account/handlers_passkeys.go:204
+#: internal/modules/account/handlers_passkeys.go:205
 msgid "Passkey removed."
 msgstr "ລຶບ passkey ແລ້ວ."
 
-#: internal/modules/account/handlers_passkeys.go:206
+#: internal/modules/account/handlers_passkeys.go:207
 msgid "Passkey not found."
 msgstr "ບໍ່ພົບ passkey."
 
@@ -176,19 +176,19 @@ msgstr ""
 msgid "Invalid 2FA code. Please try again."
 msgstr "ລະຫັດ 2FA ບໍ່ຖືກຕ້ອງ. ກະລຸນາລອງໃໝ່."
 
-#: internal/modules/account/login.go:415
+#: internal/modules/account/login.go:416
 msgid "Autologin failed: Invalid username."
 msgstr "ການເຂົ້າສູ່ລະບົບອັດຕະໂນມັດລົ້ມເຫລວ: ຊື່ຜູ້ໃຊ້ບໍ່ຖືກຕ້ອງ."
 
-#: internal/modules/account/login.go:423
+#: internal/modules/account/login.go:424
 msgid "Error reading token from user files."
 msgstr "ເກີດຂໍ້ຜິດພາດໃນການອ່ານໂທເຄັນຈາກໄຟລ໌ຂອງຜູ້ໃຊ້."
 
-#: internal/modules/account/login.go:430
+#: internal/modules/account/login.go:431
 msgid "Autologin failed: Invalid or expired token."
 msgstr "ການເຂົ້າສູ່ລະບົບອັດຕະໂນມັດລົ້ມເຫລວ: ໂທເຄັນບໍ່ຖືກຕ້ອງ ຫຼື ໝົດອາຍຸແລ້ວ."
 
-#: internal/modules/account/login.go:438
+#: internal/modules/account/login.go:439
 msgid "Autologin failed: User does not exist."
 msgstr "ການເຂົ້າສູ່ລະບົບອັດຕະໂນມັດລົ້ມເຫລວ: ບໍ່ມີຜູ້ໃຊ້ນີ້ຢູ່."
 
@@ -443,12 +443,12 @@ msgstr "ບໍ່ສາມາດເຊື່ອມຕໍ່ຖານຂໍ້ມ
 msgid "Invalid password. Please try again."
 msgstr "ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ. ກະລຸນາລອງໃໝ່."
 
-#: internal/modules/account/ratelimit.go:93
+#: internal/modules/account/ratelimit.go:94
 msgid "Too many failed login attempts. Please try again later."
 msgstr "ພະຍາຍາມເຂົ້າສູ່ລະບົບຜິດພາດຫຼາຍເທື່ອເກີນໄປ. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ."
 
 #: internal/modules/account/render.go:34 internal/modules/backups/render.go:54
-#: internal/modules/php/render.go:139
+#: internal/modules/php/render.go:137
 #: internal/web/templates/db/configuration.html:8
 #: internal/web/templates/partials/site_manager_shared.html:1050
 msgid "Settings"
@@ -540,7 +540,7 @@ msgid "Terminate the selected sessions? Anyone using them will be logged out."
 msgstr "ສິ້ນສຸດເຊສຊັນທີ່ເລືອກບໍ? ຜູ້ທີ່ໃຊ້ຢູ່ຈະຖືກອອກຈາກລະບົບ."
 
 #: internal/modules/account/settings.go:98
-#: internal/modules/emails/emails.go:339 internal/modules/mongodb/users.go:87
+#: internal/modules/emails/emails.go:351 internal/modules/mongodb/users.go:87
 #: internal/modules/mongodb/users.go:181 internal/modules/mongodb/wizard.go:68
 #: internal/modules/mysql/users.go:103 internal/modules/mysql/users.go:211
 #: internal/modules/postgresql/users.go:97
@@ -629,7 +629,7 @@ msgstr ""
 msgid "Two-Factor Authentication is now disabled."
 msgstr "ຕອນນີ້ການຢືນຢັນສອງຂັ້ນຕອນຖືກປິດແລ້ວ."
 
-#: internal/modules/account/webauthn.go:63
+#: internal/modules/account/webauthn.go:79
 msgid ""
 "Passkeys require the panel to be accessed over HTTPS. Ask your administrator"
 " to configure a domain and SSL certificate for this panel."
@@ -637,7 +637,7 @@ msgstr ""
 "Passkeys ຕ້ອງການໃຫ້ເຂົ້າເຖິງແຜງຄວບຄຸມຜ່ານ HTTPS. "
 "ກະລຸນາຂໍໃຫ້ຜູ້ດູແລລະບົບຕັ້ງຄ່າໂດເມນ ແລະ ໃບຢັ້ງຢືນ SSL ສຳລັບແຜງຄວບຄຸມນີ້."
 
-#: internal/modules/account/webauthn.go:65
+#: internal/modules/account/webauthn.go:81
 msgid ""
 "Passkeys require the panel to be accessed via a domain name, not an IP "
 "address. Ask your administrator to configure a domain for this panel."
@@ -671,7 +671,7 @@ msgstr ""
 
 #: internal/modules/appinstall/install.go:109
 #: internal/modules/cmsapp/install.go:47 internal/modules/phpapp/install.go:39
-#: internal/modules/wordpress/install.go:50
+#: internal/modules/wordpress/install.go:51
 msgid ""
 "You have reached the maximum number of sites allowed.%(upgrade_message)s"
 msgstr "ທ່ານໄດ້ຮອດຈຳນວນເວັບໄຊສູງສຸດທີ່ອະນຸຍາດແລ້ວ.%(upgrade_message)s"
@@ -907,28 +907,11 @@ msgstr "ຕິດຕັ້ງແອັບພລິເຄຊັນ Ruby"
 msgid "Install App"
 msgstr "ຕິດຕັ້ງແອັບ"
 
-#: internal/modules/backups/backups.go:70
-msgid ""
-"A backup is currently in progress. Please wait until it finishes before "
-"saving settings. Or if you want to interrupt the backup process: stop and "
-"start the backup service."
-msgstr ""
-"ກຳລັງສຳຮອງຂໍ້ມູນຢູ່. ກະລຸນາລໍຖ້າໃຫ້ສຳເລັດກ່ອນບັນທຶກການຕັ້ງຄ່າ. "
-"ຖ້າຕ້ອງການຢຸດ, ໃຫ້ຢຸດ ແລະ ເລີ່ມບໍລິການສຳຮອງຂໍ້ມູນ."
-
-#: internal/modules/backups/backups.go:75
-msgid "Error updating settings."
-msgstr "ຂໍ້ຜິດພາດໃນການອັບເດດການຕັ້ງຄ່າ."
-
-#: internal/modules/backups/backups.go:77
-msgid "Settings updated successfully."
-msgstr "ອັບເດດການຕັ້ງຄ່າສຳເລັດແລ້ວ."
-
-#: internal/modules/backups/backups.go:268
+#: internal/modules/backups/backups.go:313
 msgid "Backup target switched to '%(target)s' successfully."
 msgstr "ປ່ຽນປາຍທາງສຳຮອງຂໍ້ມູນເປັນ '%(target)s' ສຳເລັດແລ້ວ."
 
-#: internal/modules/backups/reindex.go:131
+#: internal/modules/backups/reindex.go:134
 msgid ""
 "Archive is not in the backup/ layout this page can restore (for example a "
 "full account backup made by the administrator)."
@@ -961,7 +944,7 @@ msgstr "ມີການຕັ້ງຄ່າປາຍທາງສຳຮອງຂ
 
 #: internal/modules/backups/render.go:97
 #: internal/modules/dashboard/sections.go:111 internal/web/sidebar.go:278
-#: internal/web/templates/files/filemanager_partials.html:658
+#: internal/web/templates/files/filemanager_partials.html:676
 msgid "Destination"
 msgstr "ປາຍທາງ"
 
@@ -1015,11 +998,11 @@ msgstr "ສຳຮອງຂໍ້ມູນໄປຍັງບໍລິການເ
 
 #: internal/modules/backups/render.go:249
 #: internal/modules/dashboard/sections.go:109
-#: internal/modules/malwarescan/bulk.go:15 internal/web/sidebar.go:275
-#: internal/web/templates/files/backup_restore.html:832
-#: internal/web/templates/files/backup_restore.html:833
+#: internal/modules/malwarescan/bulk.go:14 internal/web/sidebar.go:275
+#: internal/web/templates/files/backup_restore.html:834
+#: internal/web/templates/files/backup_restore.html:835
 #: internal/web/templates/files/clamav/quarantine.html:86
-#: internal/web/templates/files/clamav/quarantine.html:122
+#: internal/web/templates/files/clamav/quarantine.html:113
 #: internal/web/templates/files/trash.html:52
 #: internal/web/templates/files/trash_partials.html:170
 msgid "Restore"
@@ -1065,30 +1048,6 @@ msgid "Backup Wizard"
 msgstr "ຕົວຊ່ວຍສຳຮອງຂໍ້ມູນ"
 
 #: internal/modules/backupwizard/render.go:41
-#: internal/modules/dashboard/sections.go:115
-#: internal/modules/dashboard/sections.go:128
-#: internal/modules/dashboard/sections.go:137
-#: internal/modules/dashboard/sections.go:240
-#: internal/modules/dashboard/sections.go:252
-#: internal/modules/dashboard/sections.go:261
-#: internal/modules/mysql/render.go:58 internal/web/sidebar.go:179
-#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
-#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
-#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
-#: internal/web/templates/dashboard/usage.html:78
-#: internal/web/templates/files/backup_restore.html:455
-#: internal/web/templates/files/backup_restore.html:558
-#: internal/web/templates/files/backup_restore.html:735
-#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
-#: static/js/tour-steps.js:261
-msgid "Databases"
-msgstr "ຖານຂໍ້ມູນ"
-
-#: internal/modules/backupwizard/render.go:41
-msgid "The home directory"
-msgstr "ໄດເລກທໍລີ home"
-
-#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:73
 #: internal/modules/dashboard/sections.go:74
 #: internal/modules/dashboard/sections.go:226
@@ -1101,13 +1060,37 @@ msgstr "ໄດເລກທໍລີ home"
 #: internal/web/templates/domains/domains.html:14
 #: internal/web/templates/emails/deliverability.html:106
 #: internal/web/templates/files/backup_restore.html:10
-#: internal/web/templates/files/backup_restore.html:473
-#: internal/web/templates/files/backup_restore.html:574
-#: internal/web/templates/files/backup_restore.html:737
-#: internal/web/templates/files/backup_restore.html:961
+#: internal/web/templates/files/backup_restore.html:475
+#: internal/web/templates/files/backup_restore.html:576
+#: internal/web/templates/files/backup_restore.html:739
+#: internal/web/templates/files/backup_restore.html:963
 #: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
 msgid "Domains"
 msgstr "ໂດເມນ"
+
+#: internal/modules/backupwizard/render.go:41
+#: internal/modules/dashboard/sections.go:115
+#: internal/modules/dashboard/sections.go:128
+#: internal/modules/dashboard/sections.go:137
+#: internal/modules/dashboard/sections.go:240
+#: internal/modules/dashboard/sections.go:252
+#: internal/modules/dashboard/sections.go:261
+#: internal/modules/mysql/render.go:59 internal/web/sidebar.go:179
+#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
+#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
+#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
+#: internal/web/templates/dashboard/usage.html:78
+#: internal/web/templates/files/backup_restore.html:457
+#: internal/web/templates/files/backup_restore.html:560
+#: internal/web/templates/files/backup_restore.html:737
+#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
+#: static/js/tour-steps.js:261
+msgid "Databases"
+msgstr "ຖານຂໍ້ມູນ"
+
+#: internal/modules/backupwizard/render.go:41
+msgid "The home directory"
+msgstr "ໄດເລກທໍລີ home"
 
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/sections.go:81
@@ -1130,7 +1113,7 @@ msgstr "ບັນຊີ FTP"
 
 #: internal/modules/backupwizard/render.go:43
 #: internal/web/templates/files/backup_restore.html:11
-#: internal/web/templates/files/backup_restore.html:964
+#: internal/web/templates/files/backup_restore.html:966
 msgid "DNS zones"
 msgstr "ໂຊນ DNS"
 
@@ -1263,8 +1246,8 @@ msgstr "ແຄຊ Varnish ຕອນນີ້ %(new_status)s ສຳລັບໂ�
 #: internal/modules/cmsapp/remove.go:49 internal/modules/websites/bulk.go:272
 #: internal/modules/websites/websitebuilder.go:63
 #: internal/modules/websites/websitebuilder.go:101
-#: internal/modules/wordpress/manage.go:263
-#: internal/modules/wordpress/manage.go:362
+#: internal/modules/wordpress/manage.go:247
+#: internal/modules/wordpress/manage.go:346
 msgid "No data found for the provided site ID"
 msgstr "ບໍ່ພົບຂໍ້ມູນສຳລັບ ID ເວັບໄຊທີ່ລະບຸ"
 
@@ -1581,7 +1564,7 @@ msgstr "ການສົ່ງເຖິງ (Deliverability)"
 #: internal/modules/dashboard/sections.go:131
 #: internal/modules/dashboard/sections.go:140
 #: internal/modules/emails/render.go:382
-#: internal/modules/mongodb/render.go:199 internal/modules/mysql/render.go:271
+#: internal/modules/mongodb/render.go:199 internal/modules/mysql/render.go:273
 #: internal/modules/postgresql/render.go:192 internal/web/sidebar.go:181
 #: internal/web/sidebar.go:195 internal/web/sidebar.go:206
 #: internal/web/sidebar.go:249
@@ -1753,7 +1736,7 @@ msgid "Database Wizard"
 msgstr "ຕົວຊ່ວຍສ້າງຖານຂໍ້ມູນ"
 
 #: internal/modules/dashboard/sections.go:119
-#: internal/modules/php/render.go:281 internal/web/sidebar.go:182
+#: internal/modules/php/render.go:279 internal/web/sidebar.go:182
 #: internal/web/templates/mysql/databases.html:425
 #: internal/web/templates/mysql/phpmyadmin_unavailable.html:6
 msgid "phpMyAdmin"
@@ -1778,7 +1761,7 @@ msgstr "ການເຂົ້າເຖິງຈາກໄລຍະໄກ"
 #: internal/modules/dashboard/sections.go:122
 #: internal/modules/dashboard/sections.go:133
 #: internal/modules/dashboard/sections.go:141
-#: internal/modules/mongodb/render.go:218 internal/modules/mysql/render.go:289
+#: internal/modules/mongodb/render.go:218 internal/modules/mysql/render.go:291
 #: internal/modules/postgresql/render.go:211 internal/web/sidebar.go:184
 #: internal/web/sidebar.go:197 internal/web/sidebar.go:207
 #: static/js/tour-steps.js:879 static/js/tour-steps.js:928
@@ -1891,9 +1874,9 @@ msgstr "Terminal"
 #: internal/web/templates/docker/containers.html:498
 #: internal/web/templates/docker/logs.html:11
 #: internal/web/templates/docker/logs.html:87
-#: internal/web/templates/files/backup_restore.html:500
-#: internal/web/templates/files/backup_restore.html:603
-#: internal/web/templates/files/backup_restore.html:651
+#: internal/web/templates/files/backup_restore.html:502
+#: internal/web/templates/files/backup_restore.html:605
+#: internal/web/templates/files/backup_restore.html:653
 #: internal/web/templates/manager/_cms_app_shared.html:161
 #: internal/web/templates/manager/n8n_app.html:63
 #: internal/web/templates/manager/php_app.html:62
@@ -1911,9 +1894,9 @@ msgstr "ເວີຊັນຊອບແວ"
 #: internal/modules/dashboard/sections.go:310 internal/web/sidebar.go:304
 #: internal/web/sidebar.go:306
 #: internal/web/templates/dashboard/onboarding.html:207
-#: internal/web/templates/files/backup_restore.html:482
-#: internal/web/templates/files/backup_restore.html:582
-#: internal/web/templates/files/backup_settings.html:89
+#: internal/web/templates/files/backup_restore.html:484
+#: internal/web/templates/files/backup_restore.html:584
+#: internal/web/templates/files/backup_settings.html:90
 #: internal/web/templates/system/cronjobs.html:24 static/js/tour-steps.js:507
 msgid "Cron Jobs"
 msgstr "ວຽກອັດຕະໂນມັດ (Cron Jobs)"
@@ -1967,7 +1950,7 @@ msgstr "ປະຫວັດການໃຊ້ຊັບພະຍາກອນ"
 
 #: internal/modules/dashboard/sections.go:183
 #: internal/modules/dashboard/sections.go:218
-#: internal/modules/diskusage/render.go:95 internal/web/sidebar.go:355
+#: internal/modules/diskusage/render.go:128 internal/web/sidebar.go:355
 #: internal/web/templates/files/disk_usage.html:15
 #: internal/web/templates/manager/_cms_app_shared.html:369
 #: internal/web/templates/manager/_cms_app_shared.html:542
@@ -1981,7 +1964,7 @@ msgid "Disk Usage"
 msgstr "ການນຳໃຊ້ພື້ນທີ່ດິດ"
 
 #: internal/modules/dashboard/sections.go:184
-#: internal/modules/inodes/render.go:97 internal/web/sidebar.go:356
+#: internal/modules/inodes/render.go:116 internal/web/sidebar.go:356
 #: internal/web/templates/files/inodes.html:12 static/js/tour-steps.js:725
 msgid "Inode Usage"
 msgstr "ການໃຊ້ Inode"
@@ -2009,7 +1992,7 @@ msgstr "ບັນທຶກການເຂົ້າເຖິງ"
 #: internal/modules/dashboard/sections.go:188
 #: internal/modules/dashboard/sections.go:314
 #: internal/modules/errorlogs/render.go:51 internal/web/sidebar.go:360
-#: internal/web/templates/manager/wp/single.html:1439
+#: internal/web/templates/manager/wp/single.html:1440
 #: internal/web/templates/system/error_logs.html:8
 #: internal/web/templates/system/error_logs.html:11
 msgid "Error Logs"
@@ -2185,11 +2168,11 @@ msgstr "ແຄຊ (Cache)"
 #: internal/web/templates/dashboard/onboarding.html:203
 #: internal/web/templates/emails/accounts.html:8
 #: internal/web/templates/files/backup_restore.html:9
-#: internal/web/templates/files/backup_restore.html:464
-#: internal/web/templates/files/backup_restore.html:566
-#: internal/web/templates/files/backup_restore.html:736
-#: internal/web/templates/files/backup_restore.html:960
-#: internal/web/templates/files/backup_settings.html:84
+#: internal/web/templates/files/backup_restore.html:466
+#: internal/web/templates/files/backup_restore.html:568
+#: internal/web/templates/files/backup_restore.html:738
+#: internal/web/templates/files/backup_restore.html:962
+#: internal/web/templates/files/backup_settings.html:85
 #: internal/web/templates/partials/_header.html:91
 msgid "Emails"
 msgstr "ອີເມລ"
@@ -2230,7 +2213,7 @@ msgid "PHP Options"
 msgstr "ຕົວເລືອກ PHP"
 
 #: internal/modules/dashboard/sections.go:297
-#: internal/modules/php/render.go:248
+#: internal/modules/php/render.go:246
 #: internal/web/templates/php/extensions.html:229
 msgid "PHP Extensions"
 msgstr "ສ່ວນເສີມ (Extensions) ຂອງ PHP"
@@ -2507,38 +2490,38 @@ msgstr "ແກ້ໄຂ DNS Zone"
 msgid "Edit DNS File"
 msgstr "ແກ້ໄຂໄຟລ໌ DNS"
 
-#: internal/modules/docker/actions.go:176
-#: internal/modules/docker/actions.go:183
-#: internal/modules/docker/status.go:125
+#: internal/modules/docker/actions.go:185
+#: internal/modules/docker/actions.go:192
+#: internal/modules/docker/status.go:126
 msgid "Command failed with error. Please try again."
 msgstr "ຄຳສັ່ງລົ້ມເຫຼວ. ກະລຸນາລອງໃໝ່."
 
-#: internal/modules/docker/actions.go:278
+#: internal/modules/docker/actions.go:287
 msgid "Image pulled and container %(container_name)s activated successfully."
 msgstr "ດາວໂຫຼດອິມເມຈ ແລະ ເປີດໃຊ້ຄອນເທນເນີ %(container_name)s ສຳເລັດແລ້ວ."
 
-#: internal/modules/docker/actions.go:279
+#: internal/modules/docker/actions.go:288
 msgid ""
 "Image pulled and container %(container_name)s deactivated successfully."
 msgstr "ດາວໂຫຼດອິມເມຈ ແລະ ປິດໃຊ້ຄອນເທນເນີ %(container_name)s ສຳເລັດແລ້ວ."
 
-#: internal/modules/docker/actions.go:280
+#: internal/modules/docker/actions.go:289
 msgid "Image pulled and container %(container_name)s restarted successfully."
 msgstr "ດາວໂຫຼດອິມເມຈ ແລະ ຣີສະຕາດຄອນເທນເນີ %(container_name)s ສຳເລັດແລ້ວ."
 
-#: internal/modules/docker/actions.go:284
+#: internal/modules/docker/actions.go:293
 msgid "Container %(container_name)s restarted successfully."
 msgstr "ຣີສະຕາດຄອນເທນເນີ %(container_name)s ສຳເລັດແລ້ວ."
 
-#: internal/modules/docker/actions.go:288
+#: internal/modules/docker/actions.go:297
 msgid "Container %(container_name)s deactivated successfully."
 msgstr "ປິດໃຊ້ຄອນເທນເນີ %(container_name)s ສຳເລັດແລ້ວ."
 
-#: internal/modules/docker/actions.go:290
+#: internal/modules/docker/actions.go:299
 msgid "Container %(container_name)s activated successfully."
 msgstr "ເປີດໃຊ້ຄອນເທນເນີ %(container_name)s ສຳເລັດແລ້ວ."
 
-#: internal/modules/docker/actions.go:298
+#: internal/modules/docker/actions.go:307
 msgid "Error occurred!"
 msgstr "ເກີດຂໍ້ຜິດພາດ!"
 
@@ -2585,16 +2568,16 @@ msgstr "ແກ້ໄຂ CPU"
 msgid "Set the CPU limit for the selected containers:"
 msgstr "ຕັ້ງຂີດຈຳກັດ CPU ສຳລັບຄອນເທນເນີທີ່ເລືອກ:"
 
+#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
+#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
+msgid "0 = unlimited"
+msgstr "0 = ບໍ່ຈຳກັດ"
+
 #: internal/modules/docker/bulk.go:31
 #: internal/web/templates/docker/containers.html:18
 #: internal/web/templates/docker/containers.html:384
 msgid "cores"
 msgstr "ຄໍຣ"
-
-#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
-#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
-msgid "0 = unlimited"
-msgstr "0 = ບໍ່ຈຳກັດ"
 
 #: internal/modules/docker/bulk.go:32
 msgid "Edit RAM"
@@ -2647,7 +2630,7 @@ msgid "Failed to update docker-compose.yml."
 msgstr "ບໍ່ສາມາດອັບເດດ docker-compose.yml."
 
 #: internal/modules/docker/bulk.go:140
-#: internal/web/templates/files/filemanager_partials.html:588
+#: internal/web/templates/files/filemanager_partials.html:606
 msgid "Deleted."
 msgstr "ລຶບແລ້ວ."
 
@@ -2828,7 +2811,7 @@ msgstr "ເວັບເຊີບເວີ"
 msgid "Change docker image tag"
 msgstr "ປ່ຽນແທັກຮູບພາບ docker"
 
-#: internal/modules/docker/status.go:102 internal/modules/docker/status.go:127
+#: internal/modules/docker/status.go:103 internal/modules/docker/status.go:128
 msgid "Unexpected error. Contact Administrator."
 msgstr "ຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິດ. ຕິດຕໍ່ຜູ້ດູແລລະບົບ."
 
@@ -3018,7 +3001,7 @@ msgstr "ລຶບໂດເມນ %(domain_url)s ສຳເລັດແລ້ວ."
 msgid "Failed to delete domain %(domain_url)s. Output: %(output)s"
 msgstr "ບໍ່ສາມາດລຶບໂດເມນ %(domain_url)s. ຜົນອອກ: %(output)s"
 
-#: internal/modules/domains/docroot.go:52
+#: internal/modules/domains/docroot.go:56
 msgid "Docroot must be inside '/var/www/html/' directory."
 msgstr "Docroot ຕ້ອງຢູ່ພາຍໃນໂຟນເດີ '/var/www/html/'."
 
@@ -3034,15 +3017,15 @@ msgstr "ໄຟລ໌ບັນທຶກຂອງໂດເມນ %(domain_name)s �
 msgid "Error reading log file: %(error)s"
 msgstr "ຂໍ້ຜິດພາດໃນການອ່ານໄຟລ໌ບັນທຶກ: %(error)s"
 
-#: internal/modules/domains/new.go:60
+#: internal/modules/domains/new.go:69
 msgid "Domain name is required"
 msgstr "ຕ້ອງລະບຸຊື່ໂດເມນ"
 
-#: internal/modules/domains/new.go:81
+#: internal/modules/domains/new.go:90
 msgid "Domain name contains invalid characters."
 msgstr "ຊື່ໂດເມນມີຕົວອັກສອນບໍ່ຖືກຕ້ອງ."
 
-#: internal/modules/domains/new.go:91
+#: internal/modules/domains/new.go:100
 #: internal/web/templates/domains/new.html:217
 msgid ""
 "Paths for both public and secret files must be set for importing .onion "
@@ -3050,19 +3033,19 @@ msgid ""
 msgstr ""
 "ຕ້ອງກຳນົດເສັ້ນທາງສຳລັບທັງໄຟລ໌ສາທາລະນະ ແລະ ໄຟລ໌ລັບ ເພື່ອນຳເຂົ້າໂດເມນ .onion."
 
-#: internal/modules/domains/new.go:97
+#: internal/modules/domains/new.go:106
 msgid "Path for public file must start with /var/www/html/"
 msgstr "ເສັ້ນທາງໄຟລ໌ສາທາລະນະຕ້ອງເລີ່ມດ້ວຍ /var/www/html/"
 
-#: internal/modules/domains/new.go:102
+#: internal/modules/domains/new.go:111
 msgid "Public key file: %(onion_public_key)s does not exist!"
 msgstr "ໄຟລ໌ກະແຈສາທາລະນະ: %(onion_public_key)s ບໍ່ມີຢູ່!"
 
-#: internal/modules/domains/new.go:108
+#: internal/modules/domains/new.go:117
 msgid "Path for secret file must start with /var/www/html/"
 msgstr "ເສັ້ນທາງໄຟລ໌ລັບຕ້ອງເລີ່ມດ້ວຍ /var/www/html/"
 
-#: internal/modules/domains/new.go:113
+#: internal/modules/domains/new.go:122
 msgid "Secret key file: %(onion_secret_key)s does not exist!"
 msgstr "ໄຟລ໌ກະແຈລັບ: %(onion_secret_key)s ບໍ່ມີຢູ່!"
 
@@ -3114,8 +3097,8 @@ msgstr "ທັງໝົດ"
 #: internal/web/templates/domains/ssl.html:26
 #: internal/web/templates/emails/accounts.html:29
 #: internal/web/templates/emails/migrate.html:117
-#: internal/web/templates/files/backup_restore.html:625
-#: internal/web/templates/files/backup_restore.html:661
+#: internal/web/templates/files/backup_restore.html:627
+#: internal/web/templates/files/backup_restore.html:663
 #: internal/web/templates/manager/wp/single.html:1038
 #: internal/web/templates/mysql/remote_mysql.html:32
 #: internal/web/templates/php/extensions.html:48
@@ -3143,7 +3126,7 @@ msgstr "ກຳລັງໃຊ້ງານ"
 #: internal/web/templates/domains/domains.html:199
 #: internal/web/templates/emails/accounts.html:29
 #: internal/web/templates/emails/accounts.html:43
-#: internal/web/templates/files/backup_restore.html:783
+#: internal/web/templates/files/backup_restore.html:785
 msgid "Suspended"
 msgstr "ຖືກລະງັບ"
 
@@ -3170,7 +3153,7 @@ msgstr "Custom SSL"
 #: internal/web/templates/domains/domains.html:145
 #: internal/web/templates/domains/dynamic_dns.html:166
 #: internal/web/templates/files/filemanager.html:124
-#: internal/web/templates/files/filemanager_partials.html:460
+#: internal/web/templates/files/filemanager_partials.html:478
 #: internal/web/templates/files/trash.html:80
 #: internal/web/templates/files/trash_partials.html:54
 #: internal/web/templates/manager/sites.html:207
@@ -3189,7 +3172,7 @@ msgstr "ປະເພດ"
 #: internal/web/templates/emails/deliverability.html:31
 #: internal/web/templates/emails/deliverability.html:104
 #: internal/web/templates/emails/new.html:23
-#: internal/web/templates/files/backup_restore.html:762
+#: internal/web/templates/files/backup_restore.html:764
 #: internal/web/templates/files/ftp_new.html:34
 #: internal/web/templates/manager/_cms_install_shared.html:118
 #: internal/web/templates/manager/app_install.html:212
@@ -3332,12 +3315,12 @@ msgid "Alias %(email)s deleted successfully."
 msgstr "ລຶບ alias %(email)s ສຳເລັດແລ້ວ."
 
 #: internal/modules/emails/aliases.go:310
-#: internal/modules/emails/emails.go:320
+#: internal/modules/emails/emails.go:332
 msgid "Error: %(field)s not provided."
 msgstr "ຂໍ້ຜິດພາດ: ບໍ່ໄດ້ລະບຸ %(field)s."
 
 #: internal/modules/emails/aliases.go:317
-#: internal/modules/emails/emails.go:333
+#: internal/modules/emails/emails.go:345
 msgid "Username can only contain letters, numbers, and . _ % + - (no @)."
 msgstr "ຊື່ຜູ້ໃຊ້ສາມາດມີໄດ້ສະເພາະຕົວອັກສອນ, ຕົວເລກ ແລະ . _ % + - (ບໍ່ມີ @)."
 
@@ -3377,7 +3360,7 @@ msgstr "ຍົກເລີກການລະງັບຂາເຂົ້າ"
 msgid "Unsuspend outgoing"
 msgstr "ຍົກເລີກການລະງັບຂາອອກ"
 
-#: internal/modules/emails/bulk.go:20 internal/modules/ftp/ftp.go:527
+#: internal/modules/emails/bulk.go:20 internal/modules/ftp/ftp.go:528
 msgid "Change quota"
 msgstr "ປ່ຽນໂຄຕ້າ"
 
@@ -3385,13 +3368,13 @@ msgstr "ປ່ຽນໂຄຕ້າ"
 msgid "New mailbox size (GB) for the selected accounts:"
 msgstr "ຂະໜາດກ່ອງຈົດໝາຍໃໝ່ (GB) ສຳລັບບັນຊີທີ່ເລືອກ:"
 
-#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:525
+#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:526
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
 msgid "Change password"
 msgstr "ປ່ຽນລະຫັດຜ່ານ"
 
-#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:525
+#: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:526
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
 #: internal/web/templates/files/ftp_password.html:55
@@ -3429,31 +3412,31 @@ msgstr "ທີ່ຢູ່ອີເມວປາຍທາງບໍ່ຖືກຕ
 msgid "Failed to update default email: %(error)s"
 msgstr "ບໍ່ສາມາດອັບເດດອີເມວເລີ່ມຕົ້ນ: %(error)s"
 
-#: internal/modules/emails/emails.go:345
+#: internal/modules/emails/emails.go:357
 msgid "Error: reached max number of email accounts on the hosting plan."
 msgstr "ຂໍ້ຜິດພາດ: ຮອດຈຳນວນບັນຊີອີເມວສູງສຸດຂອງແພັກເກັດໂຮສຕິ້ງແລ້ວ."
 
-#: internal/modules/emails/emails.go:370
+#: internal/modules/emails/emails.go:382
 msgid "Failed to add email %(email)s: %(msg)s"
 msgstr "ບໍ່ສາມາດເພີ່ມອີເມວ %(email)s: %(msg)s"
 
-#: internal/modules/emails/emails.go:389
+#: internal/modules/emails/emails.go:401
 msgid "Email %(email)s added successfully."
 msgstr "ເພີ່ມອີເມວ %(email)s ສຳເລັດແລ້ວ."
 
-#: internal/modules/emails/emails.go:696
+#: internal/modules/emails/emails.go:708
 msgid "Settings saved for email %(email)s"
 msgstr "ບັນທຶກການຕັ້ງຄ່າສຳລັບອີເມວ %(email)s ແລ້ວ"
 
-#: internal/modules/emails/emails.go:707
+#: internal/modules/emails/emails.go:719
 msgid "Email %(email)s deleted successfully."
 msgstr "ລຶບອີເມວ %(email)s ສຳເລັດແລ້ວ."
 
-#: internal/modules/emails/emails.go:710
+#: internal/modules/emails/emails.go:722
 msgid "ERROR: Failed to delete email %(email)s: %(output)s"
 msgstr "ຂໍ້ຜິດພາດ: ບໍ່ສາມາດລຶບອີເມວ %(email)s: %(output)s"
 
-#: internal/modules/emails/emails.go:775
+#: internal/modules/emails/emails.go:787
 msgid "Error: Invalid configuration type."
 msgstr "ຂໍ້ຜິດພາດ: ປະເພດການຕັ້ງຄ່າບໍ່ຖືກຕ້ອງ."
 
@@ -3497,7 +3480,7 @@ msgid "Error: Could not open the migrations folder."
 msgstr "ຂໍ້ຜິດພາດ: ບໍ່ສາມາດເປີດໂຟນເດີການຍ້າຍໄດ້."
 
 #: internal/modules/emails/render.go:119
-#: internal/web/templates/files/ftp_new.html:184
+#: internal/web/templates/files/ftp_new.html:189
 msgid "Create Account"
 msgstr "ສ້າງບັນຊີ"
 
@@ -3537,10 +3520,10 @@ msgid "HTTP 5xx responses"
 msgstr "ການຕອບກັບ HTTP 5xx"
 
 #: internal/modules/errorlogs/render.go:19
-#: internal/web/templates/files/filemanager_partials.html:328
-#: internal/web/templates/files/filemanager_partials.html:329
-#: internal/web/templates/files/filemanager_partials.html:397
-#: internal/web/templates/files/filemanager_partials.html:590
+#: internal/web/templates/files/filemanager_partials.html:346
+#: internal/web/templates/files/filemanager_partials.html:347
+#: internal/web/templates/files/filemanager_partials.html:415
+#: internal/web/templates/files/filemanager_partials.html:608
 #: internal/web/templates/manager/git.html:92
 #: internal/web/templates/mysql/wizard.html:80
 #: internal/web/templates/mysql/wizard.html:139
@@ -3552,14 +3535,14 @@ msgid "Copy"
 msgstr "ສຳເນົາ"
 
 #: internal/modules/errorlogs/render.go:20
-#: internal/web/templates/files/backup_restore.html:830
-#: internal/web/templates/files/backup_restore.html:831
-#: internal/web/templates/files/backup_restore.html:911
-#: internal/web/templates/files/backup_restore.html:1024
+#: internal/web/templates/files/backup_restore.html:832
+#: internal/web/templates/files/backup_restore.html:833
+#: internal/web/templates/files/backup_restore.html:913
+#: internal/web/templates/files/backup_restore.html:1026
 #: internal/web/templates/files/backup_wizard.html:168
-#: internal/web/templates/files/filemanager_partials.html:318
-#: internal/web/templates/files/filemanager_partials.html:319
-#: internal/web/templates/files/filemanager_partials.html:389
+#: internal/web/templates/files/filemanager_partials.html:336
+#: internal/web/templates/files/filemanager_partials.html:337
+#: internal/web/templates/files/filemanager_partials.html:407
 #: internal/web/templates/files/upload_file.html:140
 msgid "Download"
 msgstr "ດາວໂຫຼດ"
@@ -3584,27 +3567,27 @@ msgstr "ການແຕກໄຟລ໌ລົ້ມເຫຼວ."
 msgid "File extracted successfully"
 msgstr "ແຕກໄຟລ໌ສຳເລັດແລ້ວ"
 
-#: internal/modules/filemanager/archive.go:340
+#: internal/modules/filemanager/archive.go:350
 msgid "Missing required form data for compression: %(missing)s"
 msgstr "ຂາດຂໍ້ມູນແບບຟອມທີ່ຈຳເປັນສຳລັບການບີບອັດ: %(missing)s"
 
-#: internal/modules/filemanager/archive.go:378
+#: internal/modules/filemanager/archive.go:388
 msgid "Unsupported archive format."
 msgstr "ຮູບແບບໄຟລ໌ບີບອັດບໍ່ຮອງຮັບ."
 
-#: internal/modules/filemanager/archive.go:383
+#: internal/modules/filemanager/archive.go:393
 msgid "Archive creation failed: %(err_msg)s"
 msgstr "ການສ້າງໄຟລ໌ບີບອັດລົ້ມເຫຼວ: %(err_msg)s"
 
-#: internal/modules/filemanager/archive.go:391
+#: internal/modules/filemanager/archive.go:401
 msgid "Failed to set archive ownership"
 msgstr "ບໍ່ສາມາດຕັ້ງເຈົ້າຂອງໄຟລ໌ບີບອັດໄດ້"
 
-#: internal/modules/filemanager/archive.go:393
+#: internal/modules/filemanager/archive.go:403
 msgid "FILEMANAGER - Archive created successfully."
 msgstr "ສ້າງໄຟລ໌ບີບອັດສຳເລັດ."
 
-#: internal/modules/filemanager/archive.go:408
+#: internal/modules/filemanager/archive.go:418
 msgid "Invalid selection"
 msgstr "ການເລືອກບໍ່ຖືກຕ້ອງ"
 
@@ -3632,117 +3615,106 @@ msgstr "ສ້າງໄຟລ໌ສຳເລັດ."
 msgid "Foldername is missing"
 msgstr "ຂາດຊື່ໂຟນເດີ"
 
-#: internal/modules/filemanager/crud.go:105
-msgid "Error creating directory! Check permissions."
-msgstr "ຂໍ້ຜິດພາດໃນການສ້າງໂຟນເດີ! ກວດສອບສິດ."
-
-#: internal/modules/filemanager/crud.go:111
+#: internal/modules/filemanager/crud.go:118
 msgid "Failed to set ownership for the new folder."
 msgstr "ບໍ່ສາມາດຕັ້ງເຈົ້າຂອງໂຟນເດີໃໝ່ໄດ້."
 
-#: internal/modules/filemanager/crud.go:113
+#: internal/modules/filemanager/crud.go:120
 msgid "Folder created successfully."
 msgstr "ສ້າງໂຟນເດີສຳເລັດ."
 
-#: internal/modules/filemanager/crud.go:152
+#: internal/modules/filemanager/crud.go:160
+msgid "Error renaming item: the new name already exists."
+msgstr ""
+
+#: internal/modules/filemanager/crud.go:163
 msgid ""
 "Error renaming item! Check permissions or if the new name already exists."
 msgstr "ຂໍ້ຜິດພາດໃນການປ່ຽນຊື່! ກວດສອບສິດ ຫຼື ຊື່ໃໝ່ມີຢູ່ແລ້ວບໍ່."
 
-#: internal/modules/filemanager/crud.go:158
+#: internal/modules/filemanager/crud.go:169
 msgid "File renamed successfully."
 msgstr "ປ່ຽນຊື່ໄຟລ໌ສຳເລັດແລ້ວ."
 
-#: internal/modules/filemanager/crud.go:256
-msgid "Invalid permissions format."
-msgstr "ຮູບແບບສິດບໍ່ຖືກຕ້ອງ."
-
-#: internal/modules/filemanager/crud.go:305
+#: internal/modules/filemanager/crud.go:330
 msgid "Permissions changed."
 msgstr "ປ່ຽນສິດແລ້ວ."
 
-#: internal/modules/filemanager/crud.go:307
+#: internal/modules/filemanager/crud.go:332
 msgid "%(changed)s items updated."
 msgstr "ອັບເດດ %(changed)s ລາຍການແລ້ວ."
 
-#: internal/modules/filemanager/crud.go:310
+#: internal/modules/filemanager/crud.go:335
 msgid "Error changing permissions for: %(errored)s. Check ownership."
 msgstr "ຂໍ້ຜິດພາດໃນການປ່ຽນສິດສຳລັບ: %(errored)s. ກວດສອບເຈົ້າຂອງ."
 
-#: internal/modules/filemanager/editor.go:116
-#: internal/modules/filemanager/editor.go:290
-msgid "Editing this file type is not allowed."
-msgstr "ບໍ່ອະນຸຍາດໃຫ້ແກ້ໄຂໄຟລ໌ປະເພດນີ້."
-
-#: internal/modules/filemanager/editor.go:137
+#: internal/modules/filemanager/editor.go:177
 msgid "Error saving file."
 msgstr "ຂໍ້ຜິດພາດໃນການບັນທຶກໄຟລ໌."
 
-#: internal/modules/filemanager/editor.go:140
+#: internal/modules/filemanager/editor.go:180
 msgid "File saved successfully"
 msgstr "ບັນທຶກໄຟລ໌ສຳເລັດ"
 
-#: internal/modules/filemanager/editor.go:158
-#: internal/modules/filemanager/editor.go:165
-#: internal/modules/filemanager/editor.go:305
-msgid "Error accessing file size."
-msgstr "ຂໍ້ຜິດພາດໃນການເຂົ້າເຖິງຂະໜາດໄຟລ໌."
-
-#: internal/modules/filemanager/editor.go:170
+#: internal/modules/filemanager/editor.go:211
 msgid ""
 "File is too large to open in the editor (limit is %(file_limit_mb)s MB)"
 msgstr "ໄຟລ໌ໃຫຍ່ເກີນໄປສຳລັບຕົວແກ້ໄຂ (ຂີດຈຳກັດ %(file_limit_mb)s MB)"
 
-#: internal/modules/filemanager/editor.go:176
-msgid "Error reading file"
-msgstr "ຂໍ້ຜິດພາດໃນການອ່ານໄຟລ໌"
-
-#: internal/modules/filemanager/editor.go:220
-#: internal/modules/filemanager/editor.go:226
+#: internal/modules/filemanager/editor.go:261
+#: internal/modules/filemanager/editor.go:267
 msgid "Error retrieving file size."
 msgstr "ຂໍ້ຜິດພາດໃນການດຶງຂະໜາດໄຟລ໌."
 
-#: internal/modules/filemanager/editor.go:231
+#: internal/modules/filemanager/editor.go:272
 msgid "File size exceeds %(file_limit_mb)sMB limit. Download aborted."
 msgstr "ຂະໜາດໄຟລ໌ເກີນຂີດຈຳກັດ %(file_limit_mb)s MB. ຍົກເລີກການດາວໂຫຼດ."
 
-#: internal/modules/filemanager/editor.go:299
-#: internal/modules/filemanager/editor.go:321
+#: internal/modules/filemanager/editor.go:347
+msgid "Editing this file type is not allowed."
+msgstr "ບໍ່ອະນຸຍາດໃຫ້ແກ້ໄຂໄຟລ໌ປະເພດນີ້."
+
+#: internal/modules/filemanager/editor.go:355
+#: internal/modules/filemanager/editor.go:377
 msgid "Error opening file."
 msgstr "ຂໍ້ຜິດພາດໃນການເປີດໄຟລ໌."
 
-#: internal/modules/filemanager/editor.go:309
+#: internal/modules/filemanager/editor.go:361
+msgid "Error accessing file size."
+msgstr "ຂໍ້ຜິດພາດໃນການເຂົ້າເຖິງຂະໜາດໄຟລ໌."
+
+#: internal/modules/filemanager/editor.go:365
 msgid ""
 "File is too large to view in the browser (limit is %(file_limit_mb)s MB)"
 msgstr "ໄຟລ໌ໃຫຍ່ເກີນໄປທີ່ຈະເບິ່ງໃນບຣາວເຊີ (ຂີດຈຳກັດ %(file_limit_mb)s MB)"
 
-#: internal/modules/filemanager/listing.go:97
+#: internal/modules/filemanager/listing.go:118
 #: internal/modules/trash/trash.go:81
 msgid "Directory does not exist."
 msgstr "ໂຟນເດີບໍ່ມີຢູ່."
 
-#: internal/modules/filemanager/listing.go:125
+#: internal/modules/filemanager/listing.go:146
 msgid "Error accessing the specified directory."
 msgstr "ຂໍ້ຜິດພາດໃນການເຂົ້າເຖິງໂຟນເດີທີ່ລະບຸ."
 
-#: internal/modules/filemanager/render.go:236
+#: internal/modules/filemanager/render.go:238
 msgid "Upload Files"
 msgstr "ອັບໂຫຼດໄຟລ໌"
 
-#: internal/modules/filemanager/upload.go:64
+#: internal/modules/filemanager/upload.go:118
 msgid "No files were uploaded"
 msgstr "ບໍ່ມີໄຟລ໌ທີ່ອັບໂຫຼດ"
 
-#: internal/modules/filemanager/upload.go:133
-#: internal/modules/filemanager/upload.go:145
+#: internal/modules/filemanager/upload.go:187
+#: internal/modules/filemanager/upload.go:202
 msgid "Files uploaded successfully."
 msgstr "ອັບໂຫຼດໄຟລ໌ສຳເລັດແລ້ວ."
 
-#: internal/modules/filemanager/upload.go:147
+#: internal/modules/filemanager/upload.go:204
 msgid "Some files failed: %(errs)s"
 msgstr "ບາງໄຟລ໌ລົ້ມເຫຼວ: %(errs)s"
 
-#: internal/modules/filemanager/wget.go:174
+#: internal/modules/filemanager/wget.go:216
 msgid "Download queued..."
 msgstr "ການດາວໂຫຼດຢູ່ໃນຄິວ..."
 
@@ -3750,40 +3722,40 @@ msgstr "ການດາວໂຫຼດຢູ່ໃນຄິວ..."
 msgid "Flarum installed successfully on %(selected_domain)s"
 msgstr "ຕິດຕັ້ງ Flarum ໃນ %(selected_domain)s ສຳເລັດແລ້ວ"
 
-#: internal/modules/ftp/ftp.go:133
+#: internal/modules/ftp/ftp.go:145
 msgid ""
 "FTP service is not yet started, please contact Administrator to enable it."
 msgstr "ບໍລິການ FTP ຍັງບໍ່ໄດ້ເລີ່ມ, ກະລຸນາຕິດຕໍ່ຜູ້ດູແລລະບົບເພື່ອເປີດໃຊ້."
 
-#: internal/modules/ftp/ftp.go:225
+#: internal/modules/ftp/ftp.go:237
 msgid "No currently active FTP connections"
 msgstr "ບໍ່ມີການເຊື່ອມຕໍ່ FTP ທີ່ເຮັດວຽກຢູ່ໃນຂະນະນີ້"
 
-#: internal/modules/ftp/ftp.go:257
+#: internal/modules/ftp/ftp.go:269
 msgid "FTP username not provided."
 msgstr "ບໍ່ໄດ້ລະບຸຊື່ຜູ້ໃຊ້ FTP."
 
-#: internal/modules/ftp/ftp.go:261
+#: internal/modules/ftp/ftp.go:273
 msgid "FTP domain not provided."
 msgstr "ບໍ່ໄດ້ລະບຸໂດເມນ FTP."
 
-#: internal/modules/ftp/ftp.go:269
+#: internal/modules/ftp/ftp.go:281
 msgid "FTP path not provided."
 msgstr "ບໍ່ໄດ້ລະບຸເສັ້ນທາງ FTP."
 
-#: internal/modules/ftp/ftp.go:273
+#: internal/modules/ftp/ftp.go:285
 msgid "FTP password not provided."
 msgstr "ບໍ່ໄດ້ລະບຸລະຫັດຜ່ານ FTP."
 
-#: internal/modules/ftp/ftp.go:277 internal/modules/ftp/quota.go:189
+#: internal/modules/ftp/ftp.go:289 internal/modules/ftp/quota.go:189
 msgid "Invalid quota, use a whole number of MB or GB."
 msgstr "ໂຄຕ້າບໍ່ຖືກຕ້ອງ, ໃຊ້ຕົວເລກຖ້ວນເປັນ MB ຫຼື GB."
 
-#: internal/modules/ftp/ftp.go:283 internal/modules/ftp/ftp.go:411
+#: internal/modules/ftp/ftp.go:295 internal/modules/ftp/ftp.go:420
 msgid "The FTP path must start with %(real_path)s"
 msgstr "ເສັ້ນທາງ FTP ຕ້ອງເລີ່ມດ້ວຍ %(real_path)s"
 
-#: internal/modules/ftp/ftp.go:290
+#: internal/modules/ftp/ftp.go:302
 msgid ""
 "Username %(ftp_username)s contains invalid characters, only allowed: "
 "BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
@@ -3791,100 +3763,100 @@ msgstr ""
 "ຊື່ຜູ້ໃຊ້ %(ftp_username)s ມີຕົວອັກສອນບໍ່ຖືກຕ້ອງ, ອະນຸຍາດສະເພາະ: "
 "BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
 
-#: internal/modules/ftp/ftp.go:300
+#: internal/modules/ftp/ftp.go:312
 msgid "Error creating FTP user %(ftp_username)s: %(output)s"
 msgstr "ຂໍ້ຜິດພາດໃນການສ້າງຜູ້ໃຊ້ FTP %(ftp_username)s: %(output)s"
 
-#: internal/modules/ftp/ftp.go:306
+#: internal/modules/ftp/ftp.go:318
 msgid "FTP account %(ftp_username)s created successfully."
 msgstr "ສ້າງບັນຊີ FTP %(ftp_username)s ສຳເລັດແລ້ວ."
 
-#: internal/modules/ftp/ftp.go:309
+#: internal/modules/ftp/ftp.go:321
 msgid "Failed to create FTP account %(ftp_username)s: %(output)s"
 msgstr "ບໍ່ສາມາດສ້າງບັນຊີ FTP %(ftp_username)s: %(output)s"
 
-#: internal/modules/ftp/ftp.go:326 internal/modules/ftp/ftp.go:347
-#: internal/modules/ftp/ftp.go:403 internal/modules/ftp/quota.go:168
+#: internal/modules/ftp/ftp.go:338 internal/modules/ftp/ftp.go:359
+#: internal/modules/ftp/ftp.go:415 internal/modules/ftp/quota.go:168
 msgid "Invalid FTP username."
 msgstr "ຊື່ຜູ້ໃຊ້ FTP ບໍ່ຖືກຕ້ອງ."
 
-#: internal/modules/ftp/ftp.go:338
+#: internal/modules/ftp/ftp.go:350
 msgid "FTP account %(username_to_delete)s deleted successfully!"
 msgstr "ລຶບບັນຊີ FTP %(username_to_delete)s ສຳເລັດແລ້ວ!"
 
-#: internal/modules/ftp/ftp.go:341
+#: internal/modules/ftp/ftp.go:353
 msgid ""
 "Failed to delete FTP account %(username_to_delete)s. Output: %(output)s"
 msgstr "ບໍ່ສາມາດລຶບບັນຊີ FTP %(username_to_delete)s. ຜົນອອກ: %(output)s"
 
-#: internal/modules/ftp/ftp.go:359
+#: internal/modules/ftp/ftp.go:371
 msgid "Missing new password"
 msgstr "ຂາດລະຫັດຜ່ານໃໝ່"
 
-#: internal/modules/ftp/ftp.go:371
+#: internal/modules/ftp/ftp.go:383
 msgid "Error changing FTP password: %(output)s"
 msgstr "ຂໍ້ຜິດພາດໃນການປ່ຽນລະຫັດຜ່ານ FTP: %(output)s"
 
-#: internal/modules/ftp/ftp.go:376
+#: internal/modules/ftp/ftp.go:388
 msgid "FTP password changed successfully for user %(username)s"
 msgstr "ປ່ຽນລະຫັດຜ່ານ FTP ສຳລັບຜູ້ໃຊ້ %(username)s ສຳເລັດແລ້ວ"
 
-#: internal/modules/ftp/ftp.go:378
+#: internal/modules/ftp/ftp.go:390
 msgid "Failed to change FTP password: %(output)s"
 msgstr "ບໍ່ສາມາດປ່ຽນລະຫັດຜ່ານ FTP: %(output)s"
 
-#: internal/modules/ftp/ftp.go:418
+#: internal/modules/ftp/ftp.go:427
 msgid "Error changing FTP path for user %(username_to_modify)s: %(output)s"
 msgstr ""
 "ຂໍ້ຜິດພາດໃນການປ່ຽນເສັ້ນທາງ FTP ສຳລັບຜູ້ໃຊ້ %(username_to_modify)s: "
 "%(output)s"
 
-#: internal/modules/ftp/ftp.go:423
+#: internal/modules/ftp/ftp.go:432
 msgid "FTP path changed successfully for user %(username_to_modify)s"
 msgstr "ປ່ຽນເສັ້ນທາງ FTP ສຳລັບຜູ້ໃຊ້ %(username_to_modify)s ສຳເລັດແລ້ວ"
 
-#: internal/modules/ftp/ftp.go:425
+#: internal/modules/ftp/ftp.go:434
 msgid "Failed to change FTP path for user %(username_to_modify)s: %(output)s"
 msgstr ""
 "ບໍ່ສາມາດປ່ຽນເສັ້ນທາງ FTP ສຳລັບຜູ້ໃຊ້ %(username_to_modify)s: %(output)s"
 
-#: internal/modules/ftp/ftp.go:436
+#: internal/modules/ftp/ftp.go:445
 msgid "Invalid configuration type, please use cyberduck or filezilla only!"
 msgstr "ປະເພດການຕັ້ງຄ່າບໍ່ຖືກຕ້ອງ, ກະລຸນາໃຊ້ສະເພາະ cyberduck ຫຼື filezilla!"
 
-#: internal/modules/ftp/ftp.go:449
+#: internal/modules/ftp/ftp.go:458
 msgid "User has no FTP accounts."
 msgstr "ຜູ້ໃຊ້ບໍ່ມີບັນຊີ FTP."
 
-#: internal/modules/ftp/ftp.go:466 internal/modules/ftp/quota.go:181
+#: internal/modules/ftp/ftp.go:475 internal/modules/ftp/quota.go:181
 msgid "FTP account not found."
 msgstr "ບໍ່ພົບບັນຊີ FTP."
 
-#: internal/modules/ftp/ftp.go:525
+#: internal/modules/ftp/ftp.go:526
 msgid "Set this password for the selected FTP accounts:"
 msgstr "ຕັ້ງລະຫັດຜ່ານນີ້ສຳລັບບັນຊີ FTP ທີ່ເລືອກ:"
 
-#: internal/modules/ftp/ftp.go:526
+#: internal/modules/ftp/ftp.go:527
 msgid "Change path"
 msgstr "ປ່ຽນເສັ້ນທາງ"
 
-#: internal/modules/ftp/ftp.go:526
+#: internal/modules/ftp/ftp.go:527
 msgid "New home folder for the selected FTP accounts:"
 msgstr "ໂຟນເດີຫຼັກໃໝ່ສຳລັບບັນຊີ FTP ທີ່ເລືອກ:"
 
-#: internal/modules/ftp/ftp.go:527
+#: internal/modules/ftp/ftp.go:528
 msgid "Disk quota for the selected FTP accounts, e.g. 500M or 2G:"
 msgstr "ໂຄຕ້າດິສສຳລັບບັນຊີ FTP ທີ່ເລືອກ, ເຊັ່ນ 500M ຫຼື 2G:"
 
-#: internal/modules/ftp/ftp.go:528
+#: internal/modules/ftp/ftp.go:529
 msgid "Remove quota"
 msgstr "ລຶບໂຄຕ້າ"
 
-#: internal/modules/ftp/ftp.go:528
+#: internal/modules/ftp/ftp.go:529
 msgid "Remove the disk quota from the selected FTP accounts?"
 msgstr "ລຶບໂຄຕ້າດິສອອກຈາກບັນຊີ FTP ທີ່ເລືອກບໍ?"
 
-#: internal/modules/ftp/ftp.go:529
+#: internal/modules/ftp/ftp.go:530
 msgid "Delete the selected FTP accounts? Their files are kept."
 msgstr "ລຶບບັນຊີ FTP ທີ່ເລືອກບໍ? ໄຟລ໌ຈະຖືກເກັບໄວ້."
 
@@ -4022,21 +3994,21 @@ msgstr "ບໍ່ສາມາດບລັອກທີ່ຢູ່ IP ໄດ້ -
 msgid "Joomla installed successfully on %(selected_domain)s"
 msgstr "ຕິດຕັ້ງ Joomla ໃນ %(selected_domain)s ສຳເລັດແລ້ວ"
 
-#: internal/modules/malwarescan/bulk.go:15
+#: internal/modules/malwarescan/bulk.go:14
 msgid "Restore the selected files to their original location?"
 msgstr "ກູ້ຄືນໄຟລ໌ທີ່ເລືອກໄປບ່ອນເດີມບໍ?"
 
-#: internal/modules/malwarescan/bulk.go:16
+#: internal/modules/malwarescan/bulk.go:15
 msgid "Mark safe"
 msgstr "ໝາຍວ່າປອດໄພ"
 
-#: internal/modules/malwarescan/bulk.go:16
+#: internal/modules/malwarescan/bulk.go:15
 msgid ""
 "Mark the selected files as safe and restore them? Future scans will skip "
 "them."
 msgstr "ໝາຍໄຟລ໌ທີ່ເລືອກວ່າປອດໄພ ແລະ ກູ້ຄືນບໍ? ການສະແກນຄັ້ງຕໍ່ໄປຈະຂ້າມພວກມັນ."
 
-#: internal/modules/malwarescan/bulk.go:17
+#: internal/modules/malwarescan/bulk.go:16
 msgid "Permanently delete the selected files? This cannot be undone."
 msgstr "ລຶບໄຟລ໌ທີ່ເລືອກຖາວອນບໍ? ບໍ່ສາມາດຍົກເລີກໄດ້."
 
@@ -4191,7 +4163,7 @@ msgid ""
 msgstr "ຄອນເທນເນີ MongoDB ບໍ່ໄດ້ເຮັດວຽກ. ກະລຸນາລໍຖ້າຈັກໜ້ອຍເພື່ອເລີ່ມຕົ້ນ.."
 
 #: internal/modules/mongodb/databases.go:56
-#: internal/modules/mysql/databases.go:93
+#: internal/modules/mysql/databases.go:109
 #: internal/modules/postgresql/databases.go:62
 msgid "Error fetching databases: %(error)s"
 msgstr "ຂໍ້ຜິດພາດໃນການດຶງຖານຂໍ້ມູນ: %(error)s"
@@ -4213,8 +4185,8 @@ msgstr "MongoDB ຍັງກຳລັງເລີ່ມຕົ້ນ, ກະລ�
 #: internal/modules/mongodb/databases.go:168
 #: internal/modules/mongodb/export.go:38 internal/modules/mongodb/wizard.go:50
 #: internal/modules/mysql/assign.go:49 internal/modules/mysql/assign.go:181
-#: internal/modules/mysql/databases.go:166
-#: internal/modules/mysql/databases.go:224 internal/modules/mysql/export.go:41
+#: internal/modules/mysql/databases.go:222
+#: internal/modules/mysql/databases.go:280 internal/modules/mysql/export.go:41
 #: internal/modules/mysql/wizard.go:57
 #: internal/modules/postgresql/databases.go:136
 #: internal/modules/postgresql/databases.go:195
@@ -4227,8 +4199,8 @@ msgstr "ຕ້ອງລະບຸຊື່ຖານຂໍ້ມູນ."
 #: internal/modules/mongodb/databases.go:171
 #: internal/modules/mongodb/wizard.go:53 internal/modules/mysql/assign.go:52
 #: internal/modules/mysql/assign.go:184
-#: internal/modules/mysql/databases.go:171
-#: internal/modules/mysql/databases.go:228
+#: internal/modules/mysql/databases.go:227
+#: internal/modules/mysql/databases.go:284
 #: internal/modules/postgresql/databases.go:140
 #: internal/modules/postgresql/databases.go:199
 #: internal/modules/postgresql/wizard.go:50
@@ -4331,19 +4303,19 @@ msgstr ""
 msgid "No database file uploaded!"
 msgstr "ບໍ່ມີໄຟລ໌ຖານຂໍ້ມູນທີ່ອັບໂຫຼດ!"
 
-#: internal/modules/mongodb/mongodb.go:42 internal/modules/mysql/mysql.go:197
+#: internal/modules/mongodb/mongodb.go:42 internal/modules/mysql/mysql.go:198
 #: internal/modules/postgresql/postgresql.go:59
 msgid "Service installation is underway and may take up to one minute."
 msgstr "ກຳລັງຕິດຕັ້ງບໍລິການ ແລະ ອາດໃຊ້ເວລາເຖິງໜຶ່ງນາທີ."
 
-#: internal/modules/mongodb/mongodb.go:44 internal/modules/mysql/mysql.go:199
+#: internal/modules/mongodb/mongodb.go:44 internal/modules/mysql/mysql.go:200
 #: internal/modules/postgresql/postgresql.go:61
 msgid ""
 "Service has been created but not yet started. Start it from the Services "
 "page."
 msgstr "ບໍລິການຖືກສ້າງແລ້ວ ແຕ່ຍັງບໍ່ໄດ້ເລີ່ມ. ເລີ່ມມັນຈາກໜ້າບໍລິການ."
 
-#: internal/modules/mongodb/mongodb.go:46 internal/modules/mysql/mysql.go:201
+#: internal/modules/mongodb/mongodb.go:46 internal/modules/mysql/mysql.go:202
 #: internal/modules/postgresql/postgresql.go:63
 msgid ""
 "Service is restarting. This may indicate a configuration error or a crash — "
@@ -4352,12 +4324,12 @@ msgstr ""
 "ບໍລິການກຳລັງຣີສະຕາດ. ນີ້ອາດສະແດງເຖິງຂໍ້ຜິດພາດການຕັ້ງຄ່າ ຫຼື ການລົ້ມ — "
 "ກວດເບິ່ງບັນທຶກໃນໜ້າບໍລິການ."
 
-#: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:203
+#: internal/modules/mongodb/mongodb.go:48 internal/modules/mysql/mysql.go:204
 #: internal/modules/postgresql/postgresql.go:65
 msgid "Service is paused. Resume it from the Services page."
 msgstr "ບໍລິການຖືກຢຸດຊົ່ວຄາວ. ສືບຕໍ່ມັນຈາກໜ້າບໍລິການ."
 
-#: internal/modules/mongodb/mongodb.go:50 internal/modules/mysql/mysql.go:205
+#: internal/modules/mongodb/mongodb.go:50 internal/modules/mysql/mysql.go:206
 #: internal/modules/postgresql/postgresql.go:67
 msgid ""
 "Service has stopped. This is usually caused by resource exhaustion — "
@@ -4367,12 +4339,12 @@ msgstr ""
 "ບໍລິການຢຸດແລ້ວ. ປົກກະຕິເກີດຈາກຊັບພະຍາກອນໝົດ — "
 "ເພີ່ມຂີດຈຳກັດຊັບພະຍາກອນສຳລັບບໍລິການນີ້ ແລ້ວຣີສະຕາດຈາກໜ້າບໍລິການ."
 
-#: internal/modules/mongodb/mongodb.go:52 internal/modules/mysql/mysql.go:207
+#: internal/modules/mongodb/mongodb.go:52 internal/modules/mysql/mysql.go:208
 #: internal/modules/postgresql/postgresql.go:69
 msgid "Service is being deleted. Please wait for the process to complete."
 msgstr "ກຳລັງລຶບບໍລິການ. ກະລຸນາລໍຖ້າໃຫ້ຂະບວນການສຳເລັດ."
 
-#: internal/modules/mongodb/mongodb.go:54 internal/modules/mysql/mysql.go:209
+#: internal/modules/mongodb/mongodb.go:54 internal/modules/mysql/mysql.go:210
 #: internal/modules/postgresql/postgresql.go:71
 msgid ""
 "Service has crashed and cannot recover. This is usually caused by resource "
@@ -4381,21 +4353,21 @@ msgstr ""
 "ບໍລິການລົ້ມ ແລະ ບໍ່ສາມາດຟື້ນຕົວໄດ້. ປົກກະຕິເກີດຈາກຊັບພະຍາກອນໝົດ — "
 "ກວດເບິ່ງບັນທຶກໃນໜ້າບໍລິການ."
 
-#: internal/modules/mongodb/mongodb.go:60 internal/modules/mysql/mysql.go:215
+#: internal/modules/mongodb/mongodb.go:60 internal/modules/mysql/mysql.go:216
 #: internal/modules/postgresql/postgresql.go:77
 msgid ""
 "Service is unhealthy. Try restarting it from Services, or contact your "
 "administrator."
 msgstr "ບໍລິການບໍ່ປົກກະຕິ. ລອງຣີສະຕາດຈາກໜ້າບໍລິການ ຫຼື ຕິດຕໍ່ຜູ້ດູແລລະບົບ."
 
-#: internal/modules/mongodb/mongodb.go:62 internal/modules/mysql/mysql.go:217
+#: internal/modules/mongodb/mongodb.go:62 internal/modules/mysql/mysql.go:218
 #: internal/modules/postgresql/postgresql.go:79
 msgid "Service is active, but the databases are still initializing."
 msgstr "ບໍລິການເຮັດວຽກຢູ່ ແຕ່ຖານຂໍ້ມູນຍັງກຳລັງເລີ່ມຕົ້ນ."
 
 #: internal/modules/mongodb/mongodb.go:64
-#: internal/modules/mongodb/mongodb.go:67 internal/modules/mysql/mysql.go:219
-#: internal/modules/mysql/mysql.go:222
+#: internal/modules/mongodb/mongodb.go:67 internal/modules/mysql/mysql.go:220
+#: internal/modules/mysql/mysql.go:223
 #: internal/modules/postgresql/postgresql.go:81
 #: internal/modules/postgresql/postgresql.go:84
 msgid "Unable to retrieve service status. Please contact your administrator."
@@ -4434,7 +4406,7 @@ msgstr "ຢຸດການດຳເນີນການທີ່ເລືອກບ
 msgid "MongoDB Databases"
 msgstr "ຖານຂໍ້ມູນ MongoDB"
 
-#: internal/modules/mongodb/render.go:63 internal/modules/mysql/render.go:85
+#: internal/modules/mongodb/render.go:63 internal/modules/mysql/render.go:87
 #: internal/modules/postgresql/render.go:67 internal/web/sidebar_classic.go:95
 #: internal/web/sidebar_classic.go:117 internal/web/sidebar_classic.go:140
 #: internal/web/templates/db/new.html:46
@@ -4447,7 +4419,7 @@ msgstr "ສ້າງຖານຂໍ້ມູນ"
 msgid "MongoDB Users"
 msgstr "ຜູ້ໃຊ້ MongoDB"
 
-#: internal/modules/mongodb/render.go:111 internal/modules/mysql/render.go:131
+#: internal/modules/mongodb/render.go:111 internal/modules/mysql/render.go:133
 #: internal/modules/postgresql/render.go:119
 #: internal/web/sidebar_classic.go:96 internal/web/sidebar_classic.go:118
 #: internal/web/sidebar_classic.go:141
@@ -4463,7 +4435,7 @@ msgstr "ຜູ້ໃຊ້ MongoDB"
 msgid "Create User"
 msgstr "ສ້າງຜູ້ໃຊ້"
 
-#: internal/modules/mongodb/render.go:129 internal/modules/mysql/render.go:149
+#: internal/modules/mongodb/render.go:129 internal/modules/mysql/render.go:151
 #: internal/modules/postgresql/render.go:137
 #: internal/web/templates/files/ftp.html:162
 #: internal/web/templates/files/ftp.html:164
@@ -4478,7 +4450,7 @@ msgstr "ສ້າງຜູ້ໃຊ້"
 msgid "Change Password"
 msgstr "ປ່ຽນລະຫັດຜ່ານ"
 
-#: internal/modules/mongodb/render.go:167 internal/modules/mysql/render.go:240
+#: internal/modules/mongodb/render.go:167 internal/modules/mysql/render.go:242
 #: internal/modules/postgresql/render.go:162
 #: internal/web/templates/mongodb/assign.html:8
 #: internal/web/templates/mongodb/assign.html:55
@@ -4487,7 +4459,7 @@ msgstr "ປ່ຽນລະຫັດຜ່ານ"
 msgid "Assign User to Database"
 msgstr "ກຳນົດຜູ້ໃຊ້ໃຫ້ຖານຂໍ້ມູນ"
 
-#: internal/modules/mongodb/render.go:180 internal/modules/mysql/render.go:252
+#: internal/modules/mongodb/render.go:180 internal/modules/mysql/render.go:254
 #: internal/modules/postgresql/render.go:174
 #: internal/web/templates/mongodb/remove.html:55
 #: internal/web/templates/mysql/remove.html:51
@@ -4647,7 +4619,7 @@ msgstr "ສົ່ງອອກຖານຂໍ້ມູນທີ່ເລືອກ
 
 #: internal/modules/mysql/bulk.go:42
 #: internal/web/templates/mysql/databases.html:398
-#: internal/web/templates/mysql/databases.html:586
+#: internal/web/templates/mysql/databases.html:605
 msgid "Optimize"
 msgstr "ເພີ່ມປະສິດທິພາບ"
 
@@ -4657,7 +4629,7 @@ msgstr "ປັບປຸງຕາຕະລາງທັງໝົດໃນຖານ
 
 #: internal/modules/mysql/bulk.go:43
 #: internal/web/templates/mysql/databases.html:411
-#: internal/web/templates/mysql/databases.html:587
+#: internal/web/templates/mysql/databases.html:606
 msgid "Repair"
 msgstr "ສ້ອມແປງ"
 
@@ -4681,19 +4653,23 @@ msgstr "ລຶບສິດເຂົ້າເຖິງ"
 msgid "Remove remote access for the selected user and host pairs?"
 msgstr "ລຶບສິດເຂົ້າເຖິງທາງໄກສຳລັບຄູ່ຜູ້ໃຊ້ ແລະ host ທີ່ເລືອກບໍ?"
 
-#: internal/modules/mysql/conf.go:318
+#: internal/modules/mysql/conf.go:321
+msgid "Could not save the configuration file."
+msgstr ""
+
+#: internal/modules/mysql/conf.go:323
 msgid "Unknown database service, cannot restart"
 msgstr "ບໍລິການຖານຂໍ້ມູນບໍ່ຮູ້ຈັກ, ບໍ່ສາມາດຣີສະຕາດໄດ້"
 
-#: internal/modules/mysql/conf.go:320
+#: internal/modules/mysql/conf.go:326
 msgid "%(mysql_version)s configuration updated and applied without a restart."
 msgstr "ອັບເດດການຕັ້ງຄ່າ %(mysql_version)s ແລະ ນຳໃຊ້ໂດຍບໍ່ຕ້ອງຣີສະຕາດແລ້ວ."
 
-#: internal/modules/mysql/conf.go:322
+#: internal/modules/mysql/conf.go:328
 msgid "%(mysql_version)s configuration updated and service restarted."
 msgstr "ອັບເດດການຕັ້ງຄ່າ %(mysql_version)s ແລະ ຣີສະຕາດບໍລິການແລ້ວ."
 
-#: internal/modules/mysql/conf.go:325
+#: internal/modules/mysql/conf.go:331
 msgid ""
 "%(mysql_version)s did not start with the new settings, so the previous "
 "configuration was restored."
@@ -4701,11 +4677,11 @@ msgstr ""
 "%(mysql_version)s ບໍ່ໄດ້ເລີ່ມຕົ້ນດ້ວຍການຕັ້ງຄ່າໃໝ່, "
 "ສະນັ້ນຈຶ່ງໄດ້ກູ້ຄືນການຕັ້ງຄ່າກ່ອນໜ້າ."
 
-#: internal/modules/mysql/conf.go:327
+#: internal/modules/mysql/conf.go:333
 msgid "%(mysql_version)s rejected the new settings, nothing was changed."
 msgstr "%(mysql_version)s ປະຕິເສດການຕັ້ງຄ່າໃໝ່, ບໍ່ມີຫຍັງຖືກປ່ຽນແປງ."
 
-#: internal/modules/mysql/conf.go:329
+#: internal/modules/mysql/conf.go:335
 msgid ""
 "%(mysql_version)s did not start with the new settings. The previous "
 "configuration was restored but the service is still not running."
@@ -4713,12 +4689,12 @@ msgstr ""
 "%(mysql_version)s ບໍ່ໄດ້ເລີ່ມຕົ້ນດ້ວຍການຕັ້ງຄ່າໃໝ່. "
 "ການຕັ້ງຄ່າກ່ອນໜ້າໄດ້ຖືກກູ້ຄືນແລ້ວ ແຕ່ບໍລິການຍັງບໍ່ເຮັດວຽກ."
 
-#: internal/modules/mysql/conf.go:339
+#: internal/modules/mysql/conf.go:345
 msgid ""
 "%(mysql_version)s container is not running. Please wait for initialization."
 msgstr "ຄອນເທນເນີ %(mysql_version)s ບໍ່ໄດ້ເຮັດວຽກ. ກະລຸນາລໍຖ້າການເລີ່ມຕົ້ນ."
 
-#: internal/modules/mysql/databases.go:158 internal/modules/mysql/wizard.go:30
+#: internal/modules/mysql/databases.go:214 internal/modules/mysql/wizard.go:30
 msgid ""
 "%(mysql_version)s service is not ready yet. Please wait for the installation"
 " to finish before creating a database."
@@ -4726,12 +4702,12 @@ msgstr ""
 "ບໍລິການ %(mysql_version)s ຍັງບໍ່ພ້ອມ. "
 "ກະລຸນາລໍຖ້າໃຫ້ການຕິດຕັ້ງສຳເລັດກ່ອນສ້າງຖານຂໍ້ມູນ."
 
-#: internal/modules/mysql/databases.go:175 internal/modules/mysql/wizard.go:66
+#: internal/modules/mysql/databases.go:231 internal/modules/mysql/wizard.go:66
 msgid ""
 "Database name is too long. MySQL identifiers are limited to 64 characters."
 msgstr "ຊື່ຖານຂໍ້ມູນຍາວເກີນໄປ. ຕົວລະບຸ MySQL ຈຳກັດທີ່ 64 ຕົວອັກສອນ."
 
-#: internal/modules/mysql/databases.go:190 internal/modules/mysql/wizard.go:97
+#: internal/modules/mysql/databases.go:246 internal/modules/mysql/wizard.go:97
 msgid ""
 "Error creating database: '%(database_name)s' - You have reached the maximum "
 "number of databases allowed.%(upgrade_message)s"
@@ -4739,19 +4715,19 @@ msgstr ""
 "ຂໍ້ຜິດພາດໃນການສ້າງຖານຂໍ້ມູນ: '%(database_name)s' - "
 "ທ່ານໄດ້ຮອດຈຳນວນຖານຂໍ້ມູນສູງສຸດທີ່ອະນຸຍາດແລ້ວ.%(upgrade_message)s"
 
-#: internal/modules/mysql/databases.go:195
+#: internal/modules/mysql/databases.go:251
 msgid "Error creating database: %(error)s"
 msgstr "ຂໍ້ຜິດພາດໃນການສ້າງຖານຂໍ້ມູນ: %(error)s"
 
-#: internal/modules/mysql/databases.go:203
+#: internal/modules/mysql/databases.go:259
 msgid "Successfully created a database %(database_name)s"
 msgstr "ສ້າງຖານຂໍ້ມູນ %(database_name)s ສຳເລັດແລ້ວ"
 
-#: internal/modules/mysql/databases.go:233
+#: internal/modules/mysql/databases.go:289
 msgid "Error deleting database: %(error)s"
 msgstr "ຂໍ້ຜິດພາດໃນການລຶບຖານຂໍ້ມູນ: %(error)s"
 
-#: internal/modules/mysql/databases.go:241
+#: internal/modules/mysql/databases.go:297
 msgid "Successfully deleted a database %(database_name)s"
 msgstr "ລຶບຖານຂໍ້ມູນ %(database_name)s ສຳເລັດແລ້ວ"
 
@@ -4792,16 +4768,16 @@ msgstr "ນຳເຂົ້າຈາກໄຟລ໌ %(filename)s ໃສ່ຖາ�
 msgid "Import into '%(db_name)s' failed: %(err_detail)s"
 msgstr "ການນຳເຂົ້າໃສ່ '%(db_name)s' ລົ້ມເຫຼວ: %(err_detail)s"
 
-#: internal/modules/mysql/mysql.go:240
+#: internal/modules/mysql/mysql.go:241
 msgid ""
 "%(service)s service is not yet installed. Starting it in the background.."
 msgstr "ບໍລິການ %(service)s ຍັງບໍ່ໄດ້ຕິດຕັ້ງ. ກຳລັງເລີ່ມໃນພື້ນຫຼັງ.."
 
-#: internal/modules/mysql/mysql.go:242
+#: internal/modules/mysql/mysql.go:243
 msgid "%(service)s service is not accessible. Current status: %(state)s."
 msgstr "ບໍລິການ %(service)s ບໍ່ສາມາດເຂົ້າເຖິງໄດ້. ສະຖານະປັດຈຸບັນ: %(state)s."
 
-#: internal/modules/mysql/mysql.go:244
+#: internal/modules/mysql/mysql.go:245
 msgid ""
 "%(service)s is running but still initializing. If it stays in this state for"
 " more than 60s, check the logs."
@@ -4809,11 +4785,11 @@ msgstr ""
 "%(service)s ກຳລັງເຮັດວຽກ ແຕ່ຍັງກຳລັງເລີ່ມຕົ້ນ. ຖ້າຍັງຢູ່ໃນສະຖານະນີ້ເກີນ 60 "
 "ວິນາທີ, ກວດເບິ່ງບັນທຶກ."
 
-#: internal/modules/mysql/mysql.go:246
+#: internal/modules/mysql/mysql.go:247
 msgid "%(service)s is starting. It is not ready to handle queries yet."
 msgstr "%(service)s ກຳລັງເລີ່ມ. ຍັງບໍ່ພ້ອມຮັບຄຳສັ່ງ."
 
-#: internal/modules/mysql/mysql.go:248
+#: internal/modules/mysql/mysql.go:249
 msgid ""
 "%(service)s is running, but health status is unknown. It may or may not be "
 "ready to handle queries."
@@ -4920,19 +4896,19 @@ msgstr "ຂໍ້ຜິດພາດໃນການລຶບສິດເຂົ້
 msgid "Successfully removed access for %(db_user)s from %(db_host)s"
 msgstr "ລຶບສິດເຂົ້າເຖິງຂອງ %(db_user)s ຈາກ %(db_host)s ສຳເລັດແລ້ວ"
 
-#: internal/modules/mysql/render.go:106
+#: internal/modules/mysql/render.go:108
 msgid "Database Users"
 msgstr "ຜູ້ໃຊ້ຖານຂໍ້ມູນ"
 
-#: internal/modules/mysql/render.go:176 internal/modules/mysql/render.go:188
+#: internal/modules/mysql/render.go:178 internal/modules/mysql/render.go:190
 msgid "Wizard"
 msgstr "ຕົວຊ່ວຍ"
 
-#: internal/modules/mysql/render.go:308 static/js/tour-steps.js:903
+#: internal/modules/mysql/render.go:310 static/js/tour-steps.js:903
 msgid "Change Root Password"
 msgstr "ປ່ຽນລະຫັດຜ່ານ root"
 
-#: internal/modules/mysql/render.go:331
+#: internal/modules/mysql/render.go:333
 msgid "Remote MySQL"
 msgstr "MySQL ທາງໄກ"
 
@@ -4994,8 +4970,8 @@ msgstr "ບໍ່ພົບຊື່ຖານຂໍ້ມູນ ຫຼື ຜູ�
 msgid "OpenCart installed successfully on %(selected_domain)s"
 msgstr "ຕິດຕັ້ງ OpenCart ໃນ %(selected_domain)s ສຳເລັດແລ້ວ"
 
-#: internal/modules/php/api_extensions.go:229
-#: internal/modules/php/extensions.go:830
+#: internal/modules/php/api_extensions.go:249
+#: internal/modules/php/extensions.go:854
 msgid "Install queued..."
 msgstr "ການຕິດຕັ້ງຢູ່ໃນຄິວ..."
 
@@ -5011,23 +4987,11 @@ msgstr "ຕັ້ງຄືນເປັນຄ່າເລີ່ມຕົ້ນ"
 msgid "Switch the selected domains to the default PHP version?"
 msgstr "ປ່ຽນໂດເມນທີ່ເລືອກເປັນເວີຊັນ PHP ເລີ່ມຕົ້ນບໍ?"
 
-#: internal/modules/php/default.go:49
-msgid "Invalid PHP version format"
-msgstr "ຮູບແບບເວີຊັນ PHP ບໍ່ຖືກຕ້ອງ"
-
-#: internal/modules/php/default.go:53
-msgid ""
-"Default PHP version for OpenLitespeed can not be set to %(new_phpversion)s -"
-" only available tags are: 8.5 8.4 8.3 8.2"
-msgstr ""
-"ເວີຊັນ PHP ເລີ່ມຕົ້ນສຳລັບ OpenLitespeed ບໍ່ສາມາດຕັ້ງເປັນ %(new_phpversion)s "
-"- ມີໃຫ້ສະເພາະ: 8.5 8.4 8.3 8.2"
-
-#: internal/modules/php/default.go:61
+#: internal/modules/php/default.go:75
 msgid "PHP version %(new_phpversion)s set as default for new domains"
 msgstr "ຕັ້ງ PHP ເວີຊັນ %(new_phpversion)s ເປັນຄ່າເລີ່ມຕົ້ນສຳລັບໂດເມນໃໝ່ແລ້ວ"
 
-#: internal/modules/php/default.go:65
+#: internal/modules/php/default.go:79
 msgid ""
 "PHP version %(new_phpversion)s saved, and Litespeed restarted to apply the "
 "version."
@@ -5035,14 +4999,14 @@ msgstr ""
 "ບັນທຶກ PHP ເວີຊັນ %(new_phpversion)s ແລະ ຣີສະຕາດ Litespeed "
 "ເພື່ອນຳໃຊ້ເວີຊັນແລ້ວ."
 
-#: internal/modules/php/default.go:69
+#: internal/modules/php/default.go:83
 msgid ""
 "PHP version %(new_phpversion)s saved and will be used by Litespeed for new "
 "domains."
 msgstr ""
 "ບັນທຶກ PHP ເວີຊັນ %(new_phpversion)s ແລ້ວ ແລະ Litespeed ຈະໃຊ້ສຳລັບໂດເມນໃໝ່."
 
-#: internal/modules/php/default.go:81
+#: internal/modules/php/default.go:95
 msgid "Default PHP version could not be changed to %(new_phpversion)s"
 msgstr "ບໍ່ສາມາດປ່ຽນເວີຊັນ PHP ເລີ່ມຕົ້ນເປັນ %(new_phpversion)s"
 
@@ -5054,27 +5018,32 @@ msgstr ""
 "Litespeed ໃຊ້ໄດ້ສະເພາະ PHP ເວີຊັນດຽວ, "
 "ເພື່ອປ່ຽນເວີຊັນສຳລັບທຸກໂດເມນໃຫ້ໃຊ້ໜ້ານີ້."
 
-#: internal/modules/php/domains.go:94
+#: internal/modules/php/domains.go:93
 msgid "Invalid or unavailable PHP version selected."
 msgstr "ເລືອກເວີຊັນ PHP ບໍ່ຖືກຕ້ອງ ຫຼື ບໍ່ມີໃຫ້ໃຊ້."
 
-#: internal/modules/php/domains.go:98
-msgid "Invalid current PHP version."
-msgstr "ເວີຊັນ PHP ປັດຈຸບັນບໍ່ຖືກຕ້ອງ."
-
-#: internal/modules/php/domains.go:106
-msgid "Failed to start PHP %(new_phpversion)s: %(message)s"
-msgstr "ບໍ່ສາມາດເລີ່ມ PHP %(new_phpversion)s: %(message)s"
-
-#: internal/modules/php/domains.go:115
+#: internal/modules/php/domains.go:99
 msgid "Failed to read vhost configuration for %(domain_url)s: %(error)s"
 msgstr "ບໍ່ສາມາດອ່ານການຕັ້ງຄ່າ vhost ສຳລັບ %(domain_url)s: %(error)s"
 
-#: internal/modules/php/domains.go:123
+#: internal/modules/php/domains.go:105
+msgid "Could not determine the current PHP version for domain %(domain_url)s"
+msgstr ""
+
+#: internal/modules/php/domains.go:109
+msgid ""
+"Domain %(domain_url)s already uses PHP %(new_phpversion)s, nothing to change"
+msgstr ""
+
+#: internal/modules/php/domains.go:117
+msgid "Failed to start PHP %(new_phpversion)s: %(message)s"
+msgstr "ບໍ່ສາມາດເລີ່ມ PHP %(new_phpversion)s: %(message)s"
+
+#: internal/modules/php/domains.go:124
 msgid "Error occurred while updating PHP version for domain %(domain_url)s"
 msgstr "ເກີດຂໍ້ຜິດພາດໃນການອັບເດດເວີຊັນ PHP ສຳລັບໂດເມນ %(domain_url)s"
 
-#: internal/modules/php/domains.go:138
+#: internal/modules/php/domains.go:152
 msgid ""
 "PHP version for domain %(domain_url)s was saved, but %(web_server)s could "
 "not apply it and still uses PHP %(old_phpversion)s: %(error)s"
@@ -5082,7 +5051,7 @@ msgstr ""
 "ບັນທຶກເວີຊັນ PHP ສຳລັບໂດເມນ %(domain_url)s ແລ້ວ ແຕ່ %(web_server)s "
 "ບໍ່ສາມາດນຳໃຊ້ໄດ້ ແລະ ຍັງໃຊ້ PHP %(old_phpversion)s ຢູ່: %(error)s"
 
-#: internal/modules/php/domains.go:140
+#: internal/modules/php/domains.go:154
 msgid ""
 "PHP version for domain %(domain_url)s updated from %(old_phpversion)s to "
 "%(new_phpversion)s"
@@ -5090,19 +5059,23 @@ msgstr ""
 "ອັບເດດເວີຊັນ PHP ສຳລັບໂດເມນ %(domain_url)s ຈາກ %(old_phpversion)s ເປັນ "
 "%(new_phpversion)s ແລ້ວ"
 
-#: internal/modules/php/extensions.go:500
+#: internal/modules/php/extensions.go:507
 msgid "Extensions installed, restarting PHP-FPM to apply changes..."
 msgstr "ຕິດຕັ້ງສ່ວນຂະຫຍາຍແລ້ວ, ກຳລັງຣີສະຕາດ PHP-FPM ເພື່ອນຳໃຊ້ການປ່ຽນແປງ..."
 
-#: internal/modules/php/extensions.go:618
+#: internal/modules/php/extensions.go:624 internal/modules/php/info.go:36
+msgid "Invalid or unavailable PHP version."
+msgstr ""
+
+#: internal/modules/php/extensions.go:629
 msgid "Failed to start PHP %(version)s: %(err_msg)s"
 msgstr "ບໍ່ສາມາດເລີ່ມ PHP %(version)s: %(err_msg)s"
 
-#: internal/modules/php/extensions.go:628
+#: internal/modules/php/extensions.go:639
 msgid "Invalid extension name."
 msgstr "ຊື່ສ່ວນຂະຫຍາຍບໍ່ຖືກຕ້ອງ."
 
-#: internal/modules/php/extensions.go:655
+#: internal/modules/php/extensions.go:666
 msgid ""
 "Extension %(extension)s %(action_word)s, PHP %(version)s reloaded to apply "
 "changes."
@@ -5110,13 +5083,17 @@ msgstr ""
 "ສ່ວນຂະຫຍາຍ %(extension)s %(action_word)s, ໂຫຼດ PHP %(version)s "
 "ຄືນໃໝ່ເພື່ອນຳໃຊ້ການປ່ຽນແປງ."
 
-#: internal/modules/php/extensions.go:657
+#: internal/modules/php/extensions.go:668
 msgid "Could not change extension %(extension)s: %(err_msg)s"
 msgstr "ບໍ່ສາມາດປ່ຽນສ່ວນຂະຫຍາຍ %(extension)s: %(err_msg)s"
 
-#: internal/modules/php/info.go:45
+#: internal/modules/php/info.go:50
 msgid "Failed to start PHP %(service)s: %(message)s"
 msgstr "ບໍ່ສາມາດເລີ່ມ PHP %(service)s: %(message)s"
+
+#: internal/modules/php/info.go:78
+msgid "Could not read PHP %(version)s info: %(message)s"
+msgstr ""
 
 #: internal/modules/php/ini.go:69
 msgid "Error saving %(text)s php.ini file!"
@@ -5178,7 +5155,7 @@ msgstr "ກະລຸນາຕິດຕໍ່ຝ່າຍສະໜັບສະໜ
 msgid "Failed to generate autologin token."
 msgstr "ບໍ່ສາມາດສ້າງ token ເຂົ້າສູ່ລະບົບອັດຕະໂນມັດ."
 
-#: internal/modules/php/render.go:115
+#: internal/modules/php/render.go:113
 #: internal/web/templates/php/default.html:4
 #: internal/web/templates/php/default.html:7
 msgid "Default PHP version"
@@ -5292,7 +5269,7 @@ msgstr ""
 
 #: internal/modules/postgresql/render.go:44
 #: internal/web/templates/dashboard/onboarding.html:206
-#: internal/web/templates/files/backup_settings.html:87
+#: internal/web/templates/files/backup_settings.html:88
 #: internal/web/templates/psql/databases.html:9
 msgid "PostgreSQL Databases"
 msgstr "ຖານຂໍ້ມູນ PostgreSQL"
@@ -5374,8 +5351,8 @@ msgid "Disabled"
 msgstr "ປິດໃຊ້ງານແລ້ວ"
 
 #: internal/modules/services/render.go:56
-#: internal/web/templates/files/backup_restore.html:714
-#: internal/web/templates/files/backup_restore.html:764
+#: internal/web/templates/files/backup_restore.html:716
+#: internal/web/templates/files/backup_restore.html:766
 #: internal/web/templates/files/backup_wizard.html:128
 #: internal/web/templates/manager/n8n_app.html:684
 #: internal/web/templates/manager/python_node_apps.html:1320
@@ -5448,7 +5425,7 @@ msgstr "ຕາຍແລ້ວ"
 #: internal/web/templates/manager/wp/single.html:1119
 #: internal/web/templates/manager/wp/single.html:1126
 #: internal/web/templates/manager/wp/single.html:1180
-#: internal/web/templates/manager/wp/single.html:2279
+#: internal/web/templates/manager/wp/single.html:2285
 #: internal/web/templates/mysql/remote_mysql.html:71
 #: internal/web/templates/partials/_service_js.html:35
 #: internal/web/templates/psql/remote_psql.html:81
@@ -5545,32 +5522,35 @@ msgstr "ຕິດຕັ້ງ TinyFileManager ໃນ %(selected_domain)s ສຳ�
 msgid "TinyPhotoGallery installed successfully on %(selected_domain)s"
 msgstr "ຕິດຕັ້ງ TinyPhotoGallery ໃນ %(selected_domain)s ສຳເລັດແລ້ວ"
 
-#: internal/modules/trash/api.go:76 internal/modules/trash/crud.go:207
+#: internal/modules/trash/api.go:61 internal/modules/trash/crud.go:185
 msgid "Trash emptied successfully"
 msgstr "ລ້າງຖັງຂີ້ເຫຍື້ອສຳເລັດແລ້ວ"
 
-#: internal/modules/trash/crud.go:101
+#: internal/modules/trash/crud.go:104
 msgid "Restored from Trash"
 msgstr "ກູ້ຄືນຈາກຖັງຂີ້ເຫຍື້ອແລ້ວ"
 
-#: internal/modules/trash/crud.go:167
+#: internal/modules/trash/crud.go:161
 msgid "Deleted permanently"
 msgstr "ລຶບຖາວອນແລ້ວ"
 
-#: internal/modules/trash/crud.go:182 internal/modules/trash/crud.go:197
-#: internal/modules/trash/crud.go:202
+#: internal/modules/trash/crud.go:176
 msgid "Unexpected error"
 msgstr "ຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິດ"
 
-#: internal/modules/trash/crud.go:224
+#: internal/modules/trash/crud.go:180
+msgid "Could not delete %(items)s from the trash."
+msgstr ""
+
+#: internal/modules/trash/crud.go:202
 msgid "Nothing to restore"
 msgstr "ບໍ່ມີຫຍັງໃຫ້ກູ້ຄືນ"
 
-#: internal/modules/trash/crud.go:272
+#: internal/modules/trash/crud.go:243
 msgid "Some items could not be restored."
 msgstr "ບາງລາຍການບໍ່ສາມາດກູ້ຄືນໄດ້."
 
-#: internal/modules/trash/crud.go:277
+#: internal/modules/trash/crud.go:248
 msgid "All items restored successfully"
 msgstr "ກູ້ຄືນທຸກລາຍການສຳເລັດແລ້ວ"
 
@@ -5910,7 +5890,7 @@ msgstr "ຮູບແບບຊື່ໂດເມນບໍ່ຖືກຕ້ອງ
 
 #: internal/modules/websites/dispatch.go:153
 #: internal/modules/websites/websitebuilder.go:153
-#: internal/modules/websites/websites.go:993
+#: internal/modules/websites/websites.go:1024
 msgid "Unable to detect docroot for the domain."
 msgstr "ບໍ່ສາມາດກວດຫາ docroot ສຳລັບໂດເມນ."
 
@@ -6094,7 +6074,7 @@ msgstr "ທ່ານໄດ້ຮອດຈຳນວນເວັບໄຊສູງ
 msgid "Website created successfully on %(selected_domain)s"
 msgstr "ສ້າງເວັບໄຊໃນ %(selected_domain)s ສຳເລັດແລ້ວ"
 
-#: internal/modules/websites/wpcache.go:545
+#: internal/modules/websites/wpcache.go:577
 msgid ""
 "Per-site OPcache toggle is not available on OpenLiteSpeed, it does not read "
 ".user.ini files."
@@ -6102,7 +6082,7 @@ msgstr ""
 "ການເປີດ/ປິດ OPcache ແຍກຕາມເວັບໄຊບໍ່ມີໃນ OpenLiteSpeed, ມັນບໍ່ອ່ານໄຟລ໌ "
 ".user.ini."
 
-#: internal/modules/websites/wpcache.go:570
+#: internal/modules/websites/wpcache.go:602
 msgid "Unexpected OPcache status output."
 msgstr "ຜົນຂອງສະຖານະ OPcache ບໍ່ເປັນຕາມທີ່ຄາດໄວ້."
 
@@ -6148,7 +6128,7 @@ msgstr "ສຳຮອງໄຟລ໌ ແລະ ຖານຂໍ້ມູນຂອ�
 #: internal/web/templates/manager/websitebuilder.html:206
 #: internal/web/templates/manager/wp/list.html:142
 #: internal/web/templates/manager/wp/list.html:188
-#: internal/web/templates/manager/wp/single.html:1813
+#: internal/web/templates/manager/wp/single.html:1815
 msgid "Detach"
 msgstr "ແຍກອອກ (Detach)"
 
@@ -6163,7 +6143,7 @@ msgstr ""
 #: internal/modules/wordpress/bulk.go:20
 #: internal/web/templates/manager/wp/list.html:145
 #: internal/web/templates/manager/wp/list.html:191
-#: internal/web/templates/manager/wp/single.html:1845
+#: internal/web/templates/manager/wp/single.html:1847
 msgid "Uninstall"
 msgstr "ຖອນການຕິດຕັ້ງ"
 
@@ -6186,23 +6166,25 @@ msgstr "ກຳລັງເພີ່ມ keys ຖານຂໍ້ມູນປະສ
 msgid "Could not add high-performance keys to %(table)s: %(error)s"
 msgstr "ບໍ່ສາມາດເພີ່ມ keys ປະສິດທິພາບສູງໃຫ້ %(table)s: %(error)s"
 
-#: internal/modules/wordpress/install.go:372
+#: internal/modules/wordpress/install.go:384
 msgid "WordPress installed successfully on %(selected_domain)s"
 msgstr "ຕິດຕັ້ງ WordPress ໃນ %(selected_domain)s ສຳເລັດແລ້ວ"
 
-#: internal/modules/wordpress/manage.go:272
+#: internal/modules/wordpress/manage.go:256
 msgid "WordPress installation not found in the database"
 msgstr "ບໍ່ພົບການຕິດຕັ້ງ WordPress ໃນຖານຂໍ້ມູນ"
 
-#: internal/modules/wordpress/manage.go:304
-msgid "Database name or user not found in wp-config.php"
-msgstr "ບໍ່ພົບຊື່ຖານຂໍ້ມູນ ຫຼື ຜູ້ໃຊ້ໃນ wp-config.php"
+#: internal/modules/wordpress/manage.go:288
+msgid ""
+"Database name or user in wp-config.php is missing or unsafe, so the database"
+" was kept"
+msgstr ""
 
-#: internal/modules/wordpress/manage.go:350
+#: internal/modules/wordpress/manage.go:334
 msgid "Missing site ID."
 msgstr "ຂາດ ID ເວັບໄຊ."
 
-#: internal/modules/wordpress/manage.go:381
+#: internal/modules/wordpress/manage.go:365
 msgid "WordPress installation detached from Manager."
 msgstr "ແຍກການຕິດຕັ້ງ WordPress ອອກຈາກຕົວຈັດການແລ້ວ."
 
@@ -6275,7 +6257,7 @@ msgid "Accounts"
 msgstr "ບັນຊີ"
 
 #: internal/web/sidebar.go:273
-#: internal/web/templates/files/backup_restore.html:429
+#: internal/web/templates/files/backup_restore.html:431
 #: internal/web/templates/manager/_cms_app_shared.html:151
 #: internal/web/templates/manager/n8n_app.html:45
 #: internal/web/templates/manager/php_app.html:44
@@ -6363,15 +6345,15 @@ msgstr "ສຳເລັດ"
 #: internal/web/templates/manager/grapejs_editor.html:114
 #: internal/web/templates/manager/n8n_app.html:403
 #: internal/web/templates/manager/python_node_apps.html:622
-#: internal/web/templates/manager/wp/single.html:1423
-#: internal/web/templates/manager/wp/single.html:1448
+#: internal/web/templates/manager/wp/single.html:1424
+#: internal/web/templates/manager/wp/single.html:1449
 #: internal/web/templates/mysql/databases.html:130
 #: internal/web/templates/system/error_logs.html:153
 msgid "Error"
 msgstr "ຂໍ້ຜິດພາດ"
 
 #: internal/web/templates/base.html:66
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/mysql/processlist.html:39
 #: internal/web/templates/system/error_logs.html:153
 #: internal/web/templates/user/activity.html:15
@@ -6379,7 +6361,7 @@ msgid "Info"
 msgstr "ຂໍ້ມູນ"
 
 #: internal/web/templates/base.html:67
-#: internal/web/templates/files/filemanager_partials.html:74
+#: internal/web/templates/files/filemanager_partials.html:78
 msgid "Uploading"
 msgstr "ກຳລັງອັບໂຫລດ"
 
@@ -6388,7 +6370,7 @@ msgid "Loading"
 msgstr "ກຳລັງໂຫລດ"
 
 #: internal/web/templates/base.html:69
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/system/error_logs.html:153
 #: internal/web/templates/user/history_usage.html:139
 msgid "Warning"
@@ -6396,12 +6378,12 @@ msgstr "ຄຳເຕືອນ"
 
 #: internal/web/templates/base.html:70 internal/web/templates/base.html:618
 #: internal/web/templates/base.html:689
-#: internal/web/templates/files/backup_restore.html:989
-#: internal/web/templates/files/backup_restore.html:1020
-#: internal/web/templates/files/filemanager_partials.html:601
-#: internal/web/templates/files/filemanager_partials.html:633
+#: internal/web/templates/files/backup_restore.html:991
+#: internal/web/templates/files/backup_restore.html:1022
+#: internal/web/templates/files/filemanager_partials.html:619
+#: internal/web/templates/files/filemanager_partials.html:651
 #: internal/web/templates/manager/git.html:38
-#: internal/web/templates/mysql/databases.html:576
+#: internal/web/templates/mysql/databases.html:595
 #: internal/web/templates/partials/_ai_assistant.html:52
 #: internal/web/templates/system/cronjobs.html:447
 msgid "Close"
@@ -6420,14 +6402,14 @@ msgstr "ປິດ"
 #: internal/web/templates/emails/alias_delete.html:27
 #: internal/web/templates/emails/delete.html:30
 #: internal/web/templates/emails/migrate.html:28
-#: internal/web/templates/files/backup_restore.html:925
-#: internal/web/templates/files/backup_restore.html:988
-#: internal/web/templates/files/clamav/quarantine.html:143
+#: internal/web/templates/files/backup_restore.html:927
+#: internal/web/templates/files/backup_restore.html:990
+#: internal/web/templates/files/clamav/quarantine.html:134
 #: internal/web/templates/files/filemanager_partials.html:26
-#: internal/web/templates/files/filemanager_partials.html:584
-#: internal/web/templates/files/filemanager_partials.html:671
-#: internal/web/templates/files/filemanager_partials.html:766
-#: internal/web/templates/files/filemanager_partials.html:780
+#: internal/web/templates/files/filemanager_partials.html:602
+#: internal/web/templates/files/filemanager_partials.html:689
+#: internal/web/templates/files/filemanager_partials.html:784
+#: internal/web/templates/files/filemanager_partials.html:798
 #: internal/web/templates/files/trash_partials.html:172
 #: internal/web/templates/manager/_cms_app_shared.html:1500
 #: internal/web/templates/manager/_cms_app_shared.html:1532
@@ -6452,9 +6434,9 @@ msgstr "ປິດ"
 #: internal/web/templates/manager/tinyphotogallery_app.html:201
 #: internal/web/templates/manager/websitebuilder.html:224
 #: internal/web/templates/manager/websitebuilder.html:256
-#: internal/web/templates/manager/wp/single.html:1831
-#: internal/web/templates/manager/wp/single.html:1863
-#: internal/web/templates/mysql/databases.html:577
+#: internal/web/templates/manager/wp/single.html:1833
+#: internal/web/templates/manager/wp/single.html:1865
+#: internal/web/templates/mysql/databases.html:596
 #: internal/web/templates/mysql/remote_mysql.html:145
 #: internal/web/templates/mysql/remote_mysql.html:203
 #: internal/web/templates/partials/_bulk.html:98
@@ -6699,6 +6681,12 @@ msgid "Real-time cache performance and efficiency metrics."
 msgstr "ຂໍ້ມູນປະສິດທິພາບ ແລະປະສິດທິຜົນຂອງແຄຊແບບຣີໄທມ໌."
 
 #: internal/web/templates/cache/service.html:91
+#: internal/web/templates/system/summary.html:40
+#: internal/web/templates/system/summary.html:90
+msgid "Requests"
+msgstr "ຄຳຂໍ"
+
+#: internal/web/templates/cache/service.html:91
 msgid "Hit Ratio"
 msgstr "ອັດຕາການພົບ"
 
@@ -6713,12 +6701,6 @@ msgstr "ການພາດ"
 #: internal/web/templates/cache/service.html:91
 msgid "Pass"
 msgstr "Pass"
-
-#: internal/web/templates/cache/service.html:91
-#: internal/web/templates/system/summary.html:40
-#: internal/web/templates/system/summary.html:90
-msgid "Requests"
-msgstr "ຄຳຂໍ"
 
 #: internal/web/templates/cache/service.html:91
 msgid "Backend Requests"
@@ -6772,7 +6754,7 @@ msgstr "ແກ້ໄຂຂີດຈຳກັດ"
 #: internal/web/templates/docker/containers.html:90
 #: internal/web/templates/domains/dns.html:107
 #: internal/web/templates/domains/dns.html:122
-#: internal/web/templates/files/filemanager_partials.html:438
+#: internal/web/templates/files/filemanager_partials.html:456
 #: internal/web/templates/files/trash_partials.html:22
 #: internal/web/templates/manager/app_install.html:122
 #: internal/web/templates/manager/python_node_apps.html:394
@@ -6800,6 +6782,13 @@ msgid "Memory Usage"
 msgstr "ການນຳໃຊ້ໜ່ວຍຄວາມຈຳ (Memory)"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/partials/_service_js.html:24
+#: internal/web/templates/system/services.html:113
+#: internal/web/templates/user/history_usage.html:133
+msgid "Memory %"
+msgstr "ໜ່ວຍຄວາມຈຳ %"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/docker/containers.html:64
 #: internal/web/templates/docker/containers.html:101
 #: internal/web/templates/partials/_service_js.html:26
@@ -6808,24 +6797,17 @@ msgid "Block I/O"
 msgstr "ການອ່ານ/ຂຽນຂໍ້ມູນ (Block I/O)"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/partials/_service_js.html:25
+#: internal/web/templates/system/services.html:113
+msgid "Network I/O"
+msgstr "ການຮັບ/ສົ່ງຂໍ້ມູນເຄືອຂ່າຍ (Network I/O)"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/mongodb/processlist.html:32
 #: internal/web/templates/mysql/processlist.html:32
 #: internal/web/templates/system/services.html:113
 msgid "ID"
 msgstr "ID"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/partials/_service_js.html:24
-#: internal/web/templates/system/services.html:113
-#: internal/web/templates/user/history_usage.html:133
-msgid "Memory %"
-msgstr "ໜ່ວຍຄວາມຈຳ %"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/partials/_service_js.html:25
-#: internal/web/templates/system/services.html:113
-msgid "Network I/O"
-msgstr "ການຮັບ/ສົ່ງຂໍ້ມູນເຄືອຂ່າຍ (Network I/O)"
 
 #: internal/web/templates/cache/service.html:270
 #: internal/web/templates/system/services.html:162
@@ -6872,7 +6854,7 @@ msgid "Click to refresh"
 msgstr "ຄລິກເພື່ອໂຫລດຄືນໃໝ່"
 
 #: internal/web/templates/cache/service.html:331
-#: internal/web/templates/files/backup_restore.html:886
+#: internal/web/templates/files/backup_restore.html:888
 #: internal/web/templates/manager/drupal_app.html:164
 #: internal/web/templates/manager/joomla_app.html:59
 #: internal/web/templates/manager/moodle_app.html:57
@@ -6880,7 +6862,7 @@ msgstr "ຄລິກເພື່ອໂຫລດຄືນໃໝ່"
 #: internal/web/templates/manager/opencart_app.html:59
 #: internal/web/templates/manager/php_app.html:137
 #: internal/web/templates/manager/prestashop_app.html:59
-#: internal/web/templates/manager/wp/single.html:1447
+#: internal/web/templates/manager/wp/single.html:1448
 #: internal/web/templates/php/extensions.html:97
 #: internal/web/templates/php/extensions.html:125
 #: internal/web/templates/system/server_info.html:20
@@ -7162,27 +7144,27 @@ msgstr "ສິ່ງທີ່ຈະສຳຮອງຂໍ້ມູນ"
 
 #: internal/web/templates/dashboard/onboarding.html:201
 #: internal/web/templates/files/backup_restore.html:6
-#: internal/web/templates/files/backup_restore.html:437
-#: internal/web/templates/files/backup_restore.html:542
-#: internal/web/templates/files/backup_restore.html:958
-#: internal/web/templates/files/backup_settings.html:82
+#: internal/web/templates/files/backup_restore.html:439
+#: internal/web/templates/files/backup_restore.html:544
+#: internal/web/templates/files/backup_restore.html:960
+#: internal/web/templates/files/backup_settings.html:83
 msgid "Everything"
 msgstr "ທັງໝົດ"
 
 #: internal/web/templates/dashboard/onboarding.html:202
-#: internal/web/templates/files/backup_restore.html:446
-#: internal/web/templates/files/backup_restore.html:550
-#: internal/web/templates/files/backup_settings.html:83
+#: internal/web/templates/files/backup_restore.html:448
+#: internal/web/templates/files/backup_restore.html:552
+#: internal/web/templates/files/backup_settings.html:84
 msgid "Website Files"
 msgstr "ໄຟລ໌ເວັບໄຊທ໌"
 
 #: internal/web/templates/dashboard/onboarding.html:204
-#: internal/web/templates/files/backup_settings.html:85
+#: internal/web/templates/files/backup_settings.html:86
 msgid "VirtualHosts"
 msgstr "VirtualHosts"
 
 #: internal/web/templates/dashboard/onboarding.html:205
-#: internal/web/templates/files/backup_settings.html:86
+#: internal/web/templates/files/backup_settings.html:87
 msgid "MySQL Databases"
 msgstr "ຖານຂໍ້ມູນ MySQL"
 
@@ -7366,7 +7348,7 @@ msgstr "ຄຳຮ້ອງຂໍຈະໄປຫາເວັບເຊີບເວ
 #: internal/web/templates/dashboard/onboarding.html:530
 #: internal/web/templates/domains/domains.html:289
 #: internal/web/templates/emails/migrate.html:51
-#: internal/web/templates/manager/wp/_shared.html:197
+#: internal/web/templates/manager/wp/_shared.html:205
 #: internal/web/templates/system/waf.html:141
 #: internal/web/templates/system/waf.html:208
 #: internal/web/templates/system/waf.html:343
@@ -7403,7 +7385,7 @@ msgstr "ໂດເມນໃໝ່ຈະບໍ່ມີການກັ່ນຕອ
 #: internal/web/templates/manager/ojs_app.html:32
 #: internal/web/templates/manager/phpbb_app.html:29
 #: internal/web/templates/manager/wp/single.html:449
-#: internal/web/templates/manager/wp/single.html:1667
+#: internal/web/templates/manager/wp/single.html:1669
 #: internal/web/templates/mongodb/users.html:27
 #: internal/web/templates/mongodb/users.html:28
 #: internal/web/templates/mongodb/users.html:31
@@ -7447,6 +7429,10 @@ msgstr ""
 "ໃຊ້ອັນນີ້ຖ້າແອັບຂອງທ່ານຍັງບໍ່ໄດ້ຖືກທົດສອບກັບເວີຊັນຫລ້າສຸດ."
 
 #: internal/web/templates/dashboard/onboarding.html:760
+msgid "Step"
+msgstr "ຂັ້ນຕອນ"
+
+#: internal/web/templates/dashboard/onboarding.html:760
 #: internal/web/templates/domains/domains.html:434
 #: internal/web/templates/manager/wp/_caching.html:290
 #: internal/web/templates/system/error_logs.html:96
@@ -7454,10 +7440,6 @@ msgstr ""
 #: internal/web/templates/user/history_usage.html:96
 msgid "of"
 msgstr "ຈາກ"
-
-#: internal/web/templates/dashboard/onboarding.html:760
-msgid "Step"
-msgstr "ຂັ້ນຕອນ"
 
 #: internal/web/templates/dashboard/onboarding.html:829
 msgid "Please choose a webserver, or click Skip."
@@ -7660,7 +7642,7 @@ msgstr "ອ່ານເອກະສານປະກອບ"
 #: internal/web/templates/emails/accounts.html:19
 #: internal/web/templates/emails/aliases.html:19
 #: internal/web/templates/emails/deliverability.html:16
-#: internal/web/templates/files/backup_restore.html:700
+#: internal/web/templates/files/backup_restore.html:702
 #: internal/web/templates/files/clamav/quarantine.html:28
 #: internal/web/templates/files/ftp.html:41
 #: internal/web/templates/manager/autoinstaller.html:19
@@ -7747,9 +7729,9 @@ msgid "Create a Database"
 msgstr "ສ້າງຖານຂໍ້ມູນ"
 
 #: internal/web/templates/db/new.html:23 internal/web/templates/db/new.html:27
-#: internal/web/templates/files/backup_restore.html:760
+#: internal/web/templates/files/backup_restore.html:762
 #: internal/web/templates/manager/_cms_app_shared.html:975
-#: internal/web/templates/manager/wp/single.html:1673
+#: internal/web/templates/manager/wp/single.html:1675
 #: internal/web/templates/mongodb/databases.html:53
 #: internal/web/templates/mongodb/new.html:21
 #: internal/web/templates/mongodb/new.html:23
@@ -8364,7 +8346,7 @@ msgstr "ຈຳນວນ CPU ສູງສຸດທີ່ບໍລິການນ�
 #: internal/web/templates/domains/dynamic_dns.html:101
 #: internal/web/templates/emails/default_address.html:128
 #: internal/web/templates/files/edit_file.html:140
-#: internal/web/templates/files/filemanager_partials.html:583
+#: internal/web/templates/files/filemanager_partials.html:601
 #: internal/web/templates/mysql/remote_mysql.html:202
 #: internal/web/templates/system/cronjobs.html:234
 #: internal/web/templates/system/cronjobs.html:359 static/js/tour-steps.js:464
@@ -8385,9 +8367,9 @@ msgstr "ຈຳນວນໂປຣເຊສສູງສຸດທີ່ບໍລິ
 #: internal/web/templates/domains/vhost.html:22
 #: internal/web/templates/domains/vhost.html:23
 #: internal/web/templates/domains/vhost.html:191
-#: internal/web/templates/files/filemanager_partials.html:313
-#: internal/web/templates/files/filemanager_partials.html:314
-#: internal/web/templates/files/filemanager_partials.html:385
+#: internal/web/templates/files/filemanager_partials.html:331
+#: internal/web/templates/files/filemanager_partials.html:332
+#: internal/web/templates/files/filemanager_partials.html:403
 #: internal/web/templates/mysql/remote_mysql.html:206
 #: internal/web/templates/system/cronjobs.html:357
 msgid "Edit"
@@ -8514,7 +8496,7 @@ msgstr "ໝົດເວລາເມື່ອບໍ່ມີການເຄື່
 
 #: internal/web/templates/docker/terminal.html:35
 #: internal/web/templates/mongodb/databases.html:195
-#: internal/web/templates/mysql/databases.html:548
+#: internal/web/templates/mysql/databases.html:567
 #: internal/web/templates/mysql/users.html:179
 #: internal/web/templates/psql/databases.html:261
 msgid "seconds"
@@ -8557,7 +8539,7 @@ msgstr "ເລືອກບໍລິການທີ່ກຳລັງເຮັດ
 #: internal/web/templates/domains/_shared.html:6
 #: internal/web/templates/emails/alias_new.html:69
 #: internal/web/templates/emails/new.html:273
-#: internal/web/templates/files/ftp_new.html:289
+#: internal/web/templates/files/ftp_new.html:294
 #: internal/web/templates/manager/_cms_install_shared.html:401
 #: internal/web/templates/manager/app_install.html:841
 #: internal/web/templates/manager/php_install.html:423
@@ -8568,7 +8550,7 @@ msgstr "ຍັງບໍ່ມີໂດເມນ"
 #: internal/web/templates/domains/_shared.html:7
 #: internal/web/templates/emails/alias_new.html:70
 #: internal/web/templates/emails/new.html:274
-#: internal/web/templates/files/ftp_new.html:290
+#: internal/web/templates/files/ftp_new.html:295
 #: internal/web/templates/manager/_cms_install_shared.html:402
 #: internal/web/templates/manager/app_install.html:842
 #: internal/web/templates/manager/php_install.html:424
@@ -8579,7 +8561,7 @@ msgstr "ເພີ່ມໂດເມນທຳອິດຂອງທ່ານເພ
 #: internal/web/templates/domains/_shared.html:8
 #: internal/web/templates/emails/alias_new.html:71
 #: internal/web/templates/emails/new.html:275
-#: internal/web/templates/files/ftp_new.html:291
+#: internal/web/templates/files/ftp_new.html:296
 #: internal/web/templates/manager/_cms_install_shared.html:404
 #: internal/web/templates/manager/app_install.html:844
 #: internal/web/templates/manager/php_install.html:426
@@ -8638,13 +8620,13 @@ msgstr ""
 "ແຕ່ຂໍ້ມູນທີ່ມີຢູ່ທັງໝົດ ເຊັ່ນ: ອີເມລ ແລະ ໄຟລ໌ ຈະຍັງຄົງຢູ່ໃນດິສກ໌."
 
 #: internal/web/templates/domains/delete.html:31
-msgid "subdomains"
-msgstr "ໂດເມນຍ່ອຍ (subdomains)"
-
-#: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/domains.html:195
 msgid "subdomain"
 msgstr "ໂດເມນຍ່ອຍ"
+
+#: internal/web/templates/domains/delete.html:31
+msgid "subdomains"
+msgstr "ໂດເມນຍ່ອຍ (subdomains)"
 
 #: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/delete.html:38
@@ -9202,7 +9184,7 @@ msgstr "ແຖວທີ່ຖືກເລືອກ."
 
 #: internal/web/templates/domains/domains.html:433
 #: internal/web/templates/domains/logs.html:14
-#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/manager/wp/single.html:1472
 #: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
 #: internal/web/templates/user/activity.html:169
@@ -9283,8 +9265,8 @@ msgid "Will be updated automatically on first webcall."
 msgstr "ຈະຖືກອັບເດດໂດຍອັດຕະໂນມັດເມື່ອມີການເອີ້ນເວັບຄັ້ງທຳອິດ."
 
 #: internal/web/templates/domains/dynamic_dns.html:64
-#: internal/web/templates/files/filemanager_partials.html:765
-#: internal/web/templates/files/filemanager_partials.html:779
+#: internal/web/templates/files/filemanager_partials.html:783
+#: internal/web/templates/files/filemanager_partials.html:797
 #: internal/web/templates/manager/git.html:140
 #: internal/web/templates/mysql/mysql_user.html:8
 #: internal/web/templates/mysql/wizard.html:305
@@ -9364,7 +9346,7 @@ msgid "Domain Logs for"
 msgstr "ລັອກໂດເມນສຳລັບ"
 
 #: internal/web/templates/domains/logs.html:14
-#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/manager/wp/single.html:1472
 #: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
 #: internal/web/templates/user/activity.html:177
@@ -9374,7 +9356,7 @@ msgstr "ຈາກທັງໝົດ"
 
 #: internal/web/templates/domains/logs.html:14
 #: internal/web/templates/domains/logs.html:21
-#: internal/web/templates/manager/wp/single.html:1471
+#: internal/web/templates/manager/wp/single.html:1472
 #: internal/web/templates/system/error_logs.html:59
 #: internal/web/templates/system/waf_logs.html:16
 #: internal/web/templates/system/waf_logs.html:23
@@ -9432,18 +9414,18 @@ msgstr "URI"
 
 #: internal/web/templates/domains/logs.html:113
 #: internal/web/templates/domains/logs.html:133
-#: internal/web/templates/files/backup_restore.html:716
-#: internal/web/templates/files/backup_restore.html:765
+#: internal/web/templates/files/backup_restore.html:718
+#: internal/web/templates/files/backup_restore.html:767
 #: internal/web/templates/files/backup_wizard.html:48
 #: internal/web/templates/files/backup_wizard.html:125
 #: internal/web/templates/files/disk_usage.html:61
 #: internal/web/templates/files/filemanager.html:123
-#: internal/web/templates/files/filemanager_partials.html:439
+#: internal/web/templates/files/filemanager_partials.html:457
 #: internal/web/templates/files/trash.html:79
 #: internal/web/templates/files/trash_partials.html:23
 #: internal/web/templates/mongodb/databases.html:54
 #: internal/web/templates/mysql/databases.html:203
-#: internal/web/templates/mysql/databases.html:582
+#: internal/web/templates/mysql/databases.html:601
 #: internal/web/templates/psql/databases.html:118
 msgid "Size"
 msgstr "ຂະໜາດ"
@@ -10843,11 +10825,11 @@ msgid "Completed"
 msgstr "ສຳເລັດແລ້ວ"
 
 #: internal/web/templates/emails/migrate.html:142
-#: internal/web/templates/files/backup_restore.html:526
-#: internal/web/templates/files/backup_restore.html:673
-#: internal/web/templates/files/clamav/quarantine.html:195
+#: internal/web/templates/files/backup_restore.html:528
+#: internal/web/templates/files/backup_restore.html:675
+#: internal/web/templates/files/clamav/quarantine.html:186
 #: internal/web/templates/files/clamav/scan_logs.html:66
-#: internal/web/templates/mysql/databases.html:597
+#: internal/web/templates/mysql/databases.html:616
 msgid "Failed"
 msgstr "ລົ້ມເຫຼວ"
 
@@ -10946,7 +10928,7 @@ msgid "Create a new Email account."
 msgstr "ສ້າງບັນຊີອີເມລໃໝ່."
 
 #: internal/web/templates/emails/new.html:38
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid "info"
 msgstr "info"
 
@@ -11038,7 +11020,7 @@ msgstr "ລະຫັດຜ່ານທີ່ຄາດເດົາຍາກ"
 #: internal/web/templates/emails/new.html:85
 #: internal/web/templates/emails/single_account.html:197
 #: internal/web/templates/manager/_cms_app_shared.html:991
-#: internal/web/templates/manager/wp/single.html:1689
+#: internal/web/templates/manager/wp/single.html:1691
 #: internal/web/templates/mysql/mysql_user.html:50
 #: internal/web/templates/mysql/password.html:47
 #: internal/web/templates/mysql/root_password.html:40
@@ -11135,7 +11117,7 @@ msgid "Select"
 msgstr "ເລືອກ"
 
 #: internal/web/templates/files/backup_destinations.html:80
-#: internal/web/templates/files/backup_settings.html:106
+#: internal/web/templates/files/backup_settings.html:108
 #: internal/web/templates/user/notifications.html:80
 msgid "Learn more"
 msgstr "ຮຽນຮູ້ເພີ່ມເຕີມ"
@@ -11145,181 +11127,181 @@ msgid "Files only (no databases)"
 msgstr "ໄຟລ໌ເທົ່ານັ້ນ (ບໍ່ລວມຖານຂໍ້ມູນ)"
 
 #: internal/web/templates/files/backup_restore.html:8
-#: internal/web/templates/files/backup_restore.html:734
-#: internal/web/templates/files/backup_restore.html:959
+#: internal/web/templates/files/backup_restore.html:736
+#: internal/web/templates/files/backup_restore.html:961
 msgid "Website files"
 msgstr "ໄຟລ໌ເວັບໄຊທ໌"
 
 #: internal/web/templates/files/backup_restore.html:12
-#: internal/web/templates/files/backup_restore.html:738
-#: internal/web/templates/files/backup_restore.html:962
+#: internal/web/templates/files/backup_restore.html:740
+#: internal/web/templates/files/backup_restore.html:964
 msgid "Cron jobs"
 msgstr "ວຽກອັດຕະໂນມັດ (Cron Jobs)"
 
 #: internal/web/templates/files/backup_restore.html:14
-#: internal/web/templates/files/backup_restore.html:965
+#: internal/web/templates/files/backup_restore.html:967
 msgid "Selected files"
 msgstr "ໄຟລ໌ທີ່ເລືອກ"
 
 #: internal/web/templates/files/backup_restore.html:15
-#: internal/web/templates/files/backup_restore.html:966
+#: internal/web/templates/files/backup_restore.html:968
 msgid "Selected mailboxes"
 msgstr "ກ່ອງອີເມວທີ່ເລືອກ"
 
 #: internal/web/templates/files/backup_restore.html:16
-#: internal/web/templates/files/backup_restore.html:967
+#: internal/web/templates/files/backup_restore.html:969
 msgid "Selected domains"
 msgstr "ໂດເມນທີ່ເລືອກ"
 
 #: internal/web/templates/files/backup_restore.html:17
-#: internal/web/templates/files/backup_restore.html:968
+#: internal/web/templates/files/backup_restore.html:970
 msgid "Selected DNS zones"
 msgstr "ໂຊນ DNS ທີ່ເລືອກ"
 
-#: internal/web/templates/files/backup_restore.html:370
+#: internal/web/templates/files/backup_restore.html:372
 msgid "Added to the queue."
 msgstr "ເພີ່ມເຂົ້າຄິວແລ້ວ."
 
-#: internal/web/templates/files/backup_restore.html:380
+#: internal/web/templates/files/backup_restore.html:382
 msgid "Restore & Download"
 msgstr "ກູ້ຄືນ & ດາວໂຫຼດ"
 
-#: internal/web/templates/files/backup_restore.html:387
+#: internal/web/templates/files/backup_restore.html:389
 msgid "Indexing..."
 msgstr "ກຳລັງສ້າງດັດຊະນີ..."
 
-#: internal/web/templates/files/backup_restore.html:391
+#: internal/web/templates/files/backup_restore.html:393
 msgid "Restore or download backups from destination."
 msgstr "ກູ້ຄືນ ຫຼື ດາວໂຫຼດການສຳຮອງຂໍ້ມູນຈາກປາຍທາງ."
 
-#: internal/web/templates/files/backup_restore.html:403
+#: internal/web/templates/files/backup_restore.html:405
 msgid "Reindex Destination"
 msgstr "ສ້າງດັດຊະນີປາຍທາງໃໝ່"
 
-#: internal/web/templates/files/backup_restore.html:422
+#: internal/web/templates/files/backup_restore.html:424
 msgid "Backup types"
 msgstr "ປະເພດການສຳຮອງ"
 
-#: internal/web/templates/files/backup_restore.html:491
-#: internal/web/templates/files/backup_restore.html:595
-#: internal/web/templates/files/backup_restore.html:614
+#: internal/web/templates/files/backup_restore.html:493
+#: internal/web/templates/files/backup_restore.html:597
+#: internal/web/templates/files/backup_restore.html:616
 msgid "Queue"
 msgstr "ຄິວ"
 
-#: internal/web/templates/files/backup_restore.html:512
+#: internal/web/templates/files/backup_restore.html:514
 msgid "Total Backups"
 msgstr "ການສຳຮອງທັງໝົດ"
 
-#: internal/web/templates/files/backup_restore.html:516
+#: internal/web/templates/files/backup_restore.html:518
 msgid "Latest Backup"
 msgstr "ການສຳຮອງຫຼ້າສຸດ"
 
-#: internal/web/templates/files/backup_restore.html:520
+#: internal/web/templates/files/backup_restore.html:522
 msgid "Total Size"
 msgstr "ຂະໜາດທັງໝົດ"
 
-#: internal/web/templates/files/backup_restore.html:524
+#: internal/web/templates/files/backup_restore.html:526
 msgid "Last Restore"
 msgstr "ການກູ້ຄືນຫຼ້າສຸດ"
 
-#: internal/web/templates/files/backup_restore.html:525
-#: internal/web/templates/files/backup_restore.html:672
+#: internal/web/templates/files/backup_restore.html:527
+#: internal/web/templates/files/backup_restore.html:674
 msgid "Done"
 msgstr "ສຳເລັດ"
 
-#: internal/web/templates/files/backup_restore.html:529
-#: internal/web/templates/files/backup_restore.html:596
+#: internal/web/templates/files/backup_restore.html:531
+#: internal/web/templates/files/backup_restore.html:598
 msgid "in queue"
 msgstr "ໃນຄິວ"
 
-#: internal/web/templates/files/backup_restore.html:535
+#: internal/web/templates/files/backup_restore.html:537
 msgid "What do you want to restore?"
 msgstr "ທ່ານຕ້ອງການກູ້ຄືນຫຍັງ?"
 
-#: internal/web/templates/files/backup_restore.html:536
+#: internal/web/templates/files/backup_restore.html:538
 msgid "Pick a type to see its backups."
 msgstr "ເລືອກປະເພດເພື່ອເບິ່ງການສຳຮອງຂອງມັນ."
 
-#: internal/web/templates/files/backup_restore.html:543
-#: internal/web/templates/files/backup_restore.html:551
-#: internal/web/templates/files/backup_restore.html:583
+#: internal/web/templates/files/backup_restore.html:545
+#: internal/web/templates/files/backup_restore.html:553
+#: internal/web/templates/files/backup_restore.html:585
 msgid "backups"
 msgstr "ການສຳຮອງ"
 
-#: internal/web/templates/files/backup_restore.html:559
+#: internal/web/templates/files/backup_restore.html:561
 msgid "databases"
 msgstr "ຖານຂໍ້ມູນ"
 
-#: internal/web/templates/files/backup_restore.html:567
+#: internal/web/templates/files/backup_restore.html:569
 msgid "email accounts"
 msgstr "ບັນຊີອີເມວ"
 
-#: internal/web/templates/files/backup_restore.html:575
+#: internal/web/templates/files/backup_restore.html:577
 #: internal/web/templates/php/settings.html:49
 msgid "domains"
 msgstr "ໂດເມນ"
 
-#: internal/web/templates/files/backup_restore.html:588
+#: internal/web/templates/files/backup_restore.html:590
 msgid "Restore activity"
 msgstr "ກິດຈະກຳການກູ້ຄືນ"
 
-#: internal/web/templates/files/backup_restore.html:589
+#: internal/web/templates/files/backup_restore.html:591
 msgid "Restores run one at a time, the rest wait in the queue."
 msgstr "ການກູ້ຄືນເຮັດເທື່ອລະອັນ, ອັນອື່ນລໍຖ້າໃນຄິວ."
 
-#: internal/web/templates/files/backup_restore.html:604
+#: internal/web/templates/files/backup_restore.html:606
 msgid "restores"
 msgstr "ການກູ້ຄືນ"
 
-#: internal/web/templates/files/backup_restore.html:617
+#: internal/web/templates/files/backup_restore.html:619
 msgid "Restores run one at a time, the rest wait here."
 msgstr "ການກູ້ຄືນເຮັດເທື່ອລະອັນ, ອັນອື່ນລໍຖ້າຢູ່ນີ້."
 
-#: internal/web/templates/files/backup_restore.html:622
-#: internal/web/templates/files/backup_restore.html:657
+#: internal/web/templates/files/backup_restore.html:624
+#: internal/web/templates/files/backup_restore.html:659
 msgid "What"
 msgstr "ຫຍັງ"
 
-#: internal/web/templates/files/backup_restore.html:623
-#: internal/web/templates/files/backup_restore.html:658
+#: internal/web/templates/files/backup_restore.html:625
+#: internal/web/templates/files/backup_restore.html:660
 msgid "From backup"
 msgstr "ຈາກການສຳຮອງ"
 
-#: internal/web/templates/files/backup_restore.html:624
+#: internal/web/templates/files/backup_restore.html:626
 #: internal/web/templates/user/passkeys.html:36
 msgid "Added"
 msgstr "ເພີ່ມແລ້ວ"
 
-#: internal/web/templates/files/backup_restore.html:635
-#: internal/web/templates/files/backup_restore.html:995
+#: internal/web/templates/files/backup_restore.html:637
+#: internal/web/templates/files/backup_restore.html:997
 msgid "Restoring..."
 msgstr "ກຳລັງກູ້ຄືນ..."
 
-#: internal/web/templates/files/backup_restore.html:636
+#: internal/web/templates/files/backup_restore.html:638
 msgid "Waiting"
 msgstr "ກຳລັງລໍຖ້າ"
 
-#: internal/web/templates/files/backup_restore.html:641
+#: internal/web/templates/files/backup_restore.html:643
 msgid "Nothing is being restored right now."
 msgstr "ຕອນນີ້ບໍ່ມີຫຍັງກຳລັງກູ້ຄືນ."
 
-#: internal/web/templates/files/backup_restore.html:652
+#: internal/web/templates/files/backup_restore.html:654
 msgid "Your latest restores, newest first."
 msgstr "ການກູ້ຄືນຫຼ້າສຸດຂອງທ່ານ, ອັນໃໝ່ສຸດກ່ອນ."
 
-#: internal/web/templates/files/backup_restore.html:659
+#: internal/web/templates/files/backup_restore.html:661
 msgid "Restored"
 msgstr "ກູ້ຄືນເມື່ອ"
 
-#: internal/web/templates/files/backup_restore.html:660
+#: internal/web/templates/files/backup_restore.html:662
 msgid "Took"
 msgstr "ໃຊ້ເວລາ"
 
-#: internal/web/templates/files/backup_restore.html:679
+#: internal/web/templates/files/backup_restore.html:681
 msgid "No restores yet."
 msgstr "ຍັງບໍ່ມີການກູ້ຄືນ."
 
-#: internal/web/templates/files/backup_restore.html:689
+#: internal/web/templates/files/backup_restore.html:691
 msgid ""
 "Select a backup to restore everything in it: files, databases, emails, "
 "domains with their DNS zones and cron jobs."
@@ -11327,7 +11309,7 @@ msgstr ""
 "ເລືອກການສຳຮອງເພື່ອກູ້ຄືນທຸກຢ່າງໃນນັ້ນ: ໄຟລ໌, ຖານຂໍ້ມູນ, ອີເມວ, ໂດເມນພ້ອມໂຊນ "
 "DNS ແລະ ວຽກອັດຕະໂນມັດ."
 
-#: internal/web/templates/files/backup_restore.html:690
+#: internal/web/templates/files/backup_restore.html:692
 msgid ""
 "Select a backup to restore all its website files, or pick single files and "
 "folders with Choose files."
@@ -11335,7 +11317,7 @@ msgstr ""
 "ເລືອກການສຳຮອງເພື່ອກູ້ຄືນໄຟລ໌ເວັບໄຊທ໌ທັງໝົດ, ຫຼື ເລືອກໄຟລ໌ ແລະ "
 "ໂຟນເດີແຕ່ລະອັນດ້ວຍ ເລືອກໄຟລ໌."
 
-#: internal/web/templates/files/backup_restore.html:691
+#: internal/web/templates/files/backup_restore.html:693
 msgid ""
 "Select one or more databases. The newest backup is used unless you choose "
 "another one."
@@ -11343,7 +11325,7 @@ msgstr ""
 "ເລືອກຖານຂໍ້ມູນໜຶ່ງ ຫຼື ຫຼາຍອັນ. ຈະໃຊ້ການສຳຮອງໃໝ່ສຸດ "
 "ເວັ້ນເສຍແຕ່ທ່ານເລືອກອັນອື່ນ."
 
-#: internal/web/templates/files/backup_restore.html:692
+#: internal/web/templates/files/backup_restore.html:694
 msgid ""
 "Select one or more email accounts. The newest backup is used unless you "
 "choose another one."
@@ -11351,7 +11333,7 @@ msgstr ""
 "ເລືອກບັນຊີອີເມວໜຶ່ງ ຫຼື ຫຼາຍບັນຊີ. ຈະໃຊ້ການສຳຮອງໃໝ່ສຸດ "
 "ເວັ້ນເສຍແຕ່ທ່ານເລືອກອັນອື່ນ."
 
-#: internal/web/templates/files/backup_restore.html:693
+#: internal/web/templates/files/backup_restore.html:695
 msgid ""
 "Select one or more domains to restore their configuration, PHP version and "
 "DNS zone. Domains you deleted are added back to your account first, "
@@ -11361,15 +11343,15 @@ msgstr ""
 "ຂອງມັນ. ໂດເມນທີ່ທ່ານລຶບແລ້ວຈະຖືກເພີ່ມຄືນເຂົ້າບັນຊີກ່ອນ, "
 "ໂດເມນທີ່ຖືກລະງັບບໍ່ສາມາດກູ້ຄືນໄດ້."
 
-#: internal/web/templates/files/backup_restore.html:694
+#: internal/web/templates/files/backup_restore.html:696
 msgid "Select a backup to restore only the cron jobs from it."
 msgstr "ເລືອກການສຳຮອງເພື່ອກູ້ຄືນສະເພາະວຽກອັດຕະໂນມັດ."
 
-#: internal/web/templates/files/backup_restore.html:715
+#: internal/web/templates/files/backup_restore.html:717
 msgid "Contents"
 msgstr "ເນື້ອຫາ"
 
-#: internal/web/templates/files/backup_restore.html:729
+#: internal/web/templates/files/backup_restore.html:731
 #: internal/web/templates/manager/_cms_install_shared.html:84
 #: internal/web/templates/manager/_cms_install_shared.html:110
 #: internal/web/templates/manager/flarum_install.html:23
@@ -11378,15 +11360,15 @@ msgstr "ເນື້ອຫາ"
 msgid "Latest"
 msgstr "ຫຼ້າສຸດ"
 
-#: internal/web/templates/files/backup_restore.html:745
+#: internal/web/templates/files/backup_restore.html:747
 msgid "No backups found."
 msgstr "ບໍ່ພົບການສຳຮອງ."
 
-#: internal/web/templates/files/backup_restore.html:757
-#: internal/web/templates/files/filemanager_partials.html:303
-#: internal/web/templates/files/filemanager_partials.html:304
-#: internal/web/templates/files/filemanager_partials.html:377
-#: internal/web/templates/files/filemanager_partials.html:578
+#: internal/web/templates/files/backup_restore.html:759
+#: internal/web/templates/files/filemanager_partials.html:321
+#: internal/web/templates/files/filemanager_partials.html:322
+#: internal/web/templates/files/filemanager_partials.html:395
+#: internal/web/templates/files/filemanager_partials.html:596
 #: internal/web/templates/files/trash.html:44
 #: internal/web/templates/files/trash_partials.html:421
 #: internal/web/templates/manager/sites.html:205
@@ -11395,49 +11377,49 @@ msgstr "ບໍ່ພົບການສຳຮອງ."
 msgid "Select all"
 msgstr "ເລືອກທັງໝົດ"
 
-#: internal/web/templates/files/backup_restore.html:761
+#: internal/web/templates/files/backup_restore.html:763
 #: internal/web/templates/partials/_search.html:62
 msgid "Email Account"
 msgstr "ບັນຊີອີເມວ"
 
-#: internal/web/templates/files/backup_restore.html:780
+#: internal/web/templates/files/backup_restore.html:782
 msgid "VirtualHost"
 msgstr "VirtualHost"
 
-#: internal/web/templates/files/backup_restore.html:781
+#: internal/web/templates/files/backup_restore.html:783
 #: internal/web/templates/manager/php_app.html:94
 msgid "PHP version"
 msgstr "ເວີຊັນ PHP"
 
-#: internal/web/templates/files/backup_restore.html:782
+#: internal/web/templates/files/backup_restore.html:784
 msgid "DNS zone"
 msgstr "ໂຊນ DNS"
 
-#: internal/web/templates/files/backup_restore.html:783
+#: internal/web/templates/files/backup_restore.html:785
 msgid "Unsuspend the domain to restore its VirtualHost."
 msgstr "ຍົກເລີກການລະງັບໂດເມນເພື່ອກູ້ຄືນ VirtualHost ຂອງມັນ."
 
-#: internal/web/templates/files/backup_restore.html:784
+#: internal/web/templates/files/backup_restore.html:786
 msgid "Will be added"
 msgstr "ຈະຖືກເພີ່ມ"
 
-#: internal/web/templates/files/backup_restore.html:785
+#: internal/web/templates/files/backup_restore.html:787
 msgid "Restore the domain first"
 msgstr "ກູ້ຄືນໂດເມນກ່ອນ"
 
-#: internal/web/templates/files/backup_restore.html:790
+#: internal/web/templates/files/backup_restore.html:792
 msgid "backups found"
 msgstr "ການສຳຮອງທີ່ພົບ"
 
-#: internal/web/templates/files/backup_restore.html:802
+#: internal/web/templates/files/backup_restore.html:804
 msgid "messages"
 msgstr "ຂໍ້ຄວາມ"
 
-#: internal/web/templates/files/backup_restore.html:808
+#: internal/web/templates/files/backup_restore.html:810
 msgid "No databases found in the backups."
 msgstr "ບໍ່ພົບຖານຂໍ້ມູນໃນການສຳຮອງ."
 
-#: internal/web/templates/files/backup_restore.html:809
+#: internal/web/templates/files/backup_restore.html:811
 msgid ""
 "Nothing found in the backups. Backups made before this version don't list "
 "emails and domains, restore those from the Everything tab."
@@ -11445,95 +11427,95 @@ msgstr ""
 "ບໍ່ພົບຫຍັງໃນການສຳຮອງ. ການສຳຮອງກ່ອນເວີຊັນນີ້ບໍ່ມີລາຍຊື່ອີເມວ ແລະ ໂດເມນ, "
 "ກະລຸນາກູ້ຄືນຈາກແຖບ ທັງໝົດ."
 
-#: internal/web/templates/files/backup_restore.html:822
-#: internal/web/templates/files/backup_restore.html:922
-#: internal/web/templates/files/filemanager_partials.html:580
+#: internal/web/templates/files/backup_restore.html:824
+#: internal/web/templates/files/backup_restore.html:924
+#: internal/web/templates/files/filemanager_partials.html:598
 #: internal/web/templates/manager/sites.html:484
 #: internal/web/templates/partials/_bulk.html:57
 #: internal/web/templates/partials/_bulk.html:74
 msgid "selected"
 msgstr "ຖືກເລືອກ"
 
-#: internal/web/templates/files/backup_restore.html:824
+#: internal/web/templates/files/backup_restore.html:826
 #: internal/web/templates/manager/sites.html:485
 #: internal/web/templates/partials/_bulk.html:58
 msgid "Clear"
 msgstr "ລ້າງ"
 
-#: internal/web/templates/files/backup_restore.html:828
+#: internal/web/templates/files/backup_restore.html:830
 msgid "This backup was made before single items could be restored."
 msgstr "ການສຳຮອງນີ້ສ້າງຂຶ້ນກ່ອນທີ່ຈະສາມາດກູ້ຄືນລາຍການແຕ່ລະອັນໄດ້."
 
-#: internal/web/templates/files/backup_restore.html:828
-#: internal/web/templates/files/backup_restore.html:829
-#: internal/web/templates/files/backup_restore.html:862
+#: internal/web/templates/files/backup_restore.html:830
+#: internal/web/templates/files/backup_restore.html:831
+#: internal/web/templates/files/backup_restore.html:864
 msgid "Choose files"
 msgstr "ເລືອກໄຟລ໌"
 
-#: internal/web/templates/files/backup_restore.html:842
+#: internal/web/templates/files/backup_restore.html:844
 msgid "Indexing destination, please wait..."
 msgstr "ກຳລັງສ້າງດັດຊະນີປາຍທາງ, ກະລຸນາລໍຖ້າ..."
 
-#: internal/web/templates/files/backup_restore.html:846
+#: internal/web/templates/files/backup_restore.html:848
 msgid "No backups indexed yet"
 msgstr "ຍັງບໍ່ມີການສຳຮອງຂໍ້ມູນທີ່ຖືກສ້າງດັດຊະນີ"
 
-#: internal/web/templates/files/backup_restore.html:847
+#: internal/web/templates/files/backup_restore.html:849
 msgid "Click \"Reindex Destination\" to fetch available backups."
 msgstr "ກົດ \"ສ້າງດັດຊະນີປາຍທາງໃໝ່\" ເພື່ອດຶງເອົາການສຳຮອງຂໍ້ມູນທີ່ມີ."
 
-#: internal/web/templates/files/backup_restore.html:914
+#: internal/web/templates/files/backup_restore.html:916
 msgid "This folder is empty."
 msgstr "ໂຟນເດີນີ້ຫວ່າງເປົ່າ."
 
-#: internal/web/templates/files/backup_restore.html:927
+#: internal/web/templates/files/backup_restore.html:929
 msgid "Restore selected"
 msgstr "ກູ້ຄືນທີ່ເລືອກ"
 
-#: internal/web/templates/files/backup_restore.html:939
+#: internal/web/templates/files/backup_restore.html:941
 msgid "Restore Summary"
 msgstr "ສະຫຼຸບການກູ້ຄືນ"
 
-#: internal/web/templates/files/backup_restore.html:948
+#: internal/web/templates/files/backup_restore.html:950
 msgid "Restoring will overwrite existing data. This action cannot be undone."
 msgstr "ການກູ້ຄືນຈະຂຽນທັບຂໍ້ມູນທີ່ມີຢູ່. ບໍ່ສາມາດຍົກເລີກການກະທຳນີ້ໄດ້."
 
-#: internal/web/templates/files/backup_restore.html:948
+#: internal/web/templates/files/backup_restore.html:950
 msgid "The items are added to the queue and restored one at a time."
 msgstr "ລາຍການຈະຖືກເພີ່ມເຂົ້າຄິວ ແລະ ກູ້ຄືນເທື່ອລະອັນ."
 
-#: internal/web/templates/files/backup_restore.html:952
+#: internal/web/templates/files/backup_restore.html:954
 msgid "Items to restore"
 msgstr "ລາຍການທີ່ຈະກູ້ຄືນ"
 
-#: internal/web/templates/files/backup_restore.html:994
+#: internal/web/templates/files/backup_restore.html:996
 msgid "Restore Selected Items"
 msgstr "ກູ້ຄືນລາຍການທີ່ເລືອກ"
 
-#: internal/web/templates/files/backup_restore.html:1007
+#: internal/web/templates/files/backup_restore.html:1009
 msgid "Download Backup"
 msgstr "ດາວໂຫຼດການສຳຮອງຂໍ້ມູນ"
 
-#: internal/web/templates/files/backup_restore.html:1011
+#: internal/web/templates/files/backup_restore.html:1013
 msgid ""
 "The backup archive will be fetched from the destination and downloaded to "
 "your browser."
 msgstr "ຄັງເກັບການສຳຮອງຂໍ້ມູນຈະຖືກດຶງຈາກປາຍທາງແລະດາວໂຫຼດລົງໃນບຣາວເຊີຂອງທ່ານ."
 
-#: internal/web/templates/files/backup_restore.html:1011
+#: internal/web/templates/files/backup_restore.html:1013
 msgid "Large files may take a moment to transfer."
 msgstr "ໄຟລ໌ຂະໜາດໃຫຍ່ອາດຈະໃຊ້ເວລາໃນການໂອນຍ້າຍ."
 
-#: internal/web/templates/files/backup_restore.html:1012
+#: internal/web/templates/files/backup_restore.html:1014
 msgid "Download started."
 msgstr "ເລີ່ມການດາວໂຫຼດແລ້ວ."
 
-#: internal/web/templates/files/backup_restore.html:1014
+#: internal/web/templates/files/backup_restore.html:1016
 #: internal/web/templates/files/upload_file.html:301
 msgid "Download failed."
 msgstr "ດາວໂຫລດບໍ່ສຳເລັດ."
 
-#: internal/web/templates/files/backup_restore.html:1025
+#: internal/web/templates/files/backup_restore.html:1027
 msgid "Downloading..."
 msgstr "ກຳລັງດາວໂຫຼດ..."
 
@@ -11550,7 +11532,7 @@ msgid "Save settings"
 msgstr "ບັນທຶກການຕັ້ງຄ່າ"
 
 #: internal/web/templates/files/backup_settings.html:31
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid "error"
 msgstr "ຂໍ້ຜິດພາດ"
 
@@ -11570,15 +11552,20 @@ msgstr "ການຕັ້ງຄ່າການສຳຮອງຂໍ້ມູນ
 msgid "Configure schedule, retention, etc."
 msgstr "ກຳນົດຄ່າຕາຕະລາງເວລາ, ການເກັບຮັກສາ ແລະ ອື່ນໆ."
 
-#: internal/web/templates/files/backup_settings.html:96
+#: internal/web/templates/files/backup_settings.html:82
+#: internal/web/templates/files/backup_settings.html:97
+msgid "(not set)"
+msgstr ""
+
+#: internal/web/templates/files/backup_settings.html:98
 msgid "INFO"
 msgstr "ຂໍ້ມູນ"
 
-#: internal/web/templates/files/backup_settings.html:97
+#: internal/web/templates/files/backup_settings.html:99
 msgid "ERROR"
 msgstr "ຂໍ້ຜິດພາດ"
 
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid ""
 "By default, notifications would only be sent out when a backup run fails. To"
 " receive notifications for every run, set NOTIFICATION_LEVEL to"
@@ -11587,11 +11574,11 @@ msgstr ""
 "ການແຈ້ງເຕືອນຈະຖືກສົ່ງອອກສະເພາະເມື່ອການສຳຮອງຂໍ້ມູນລົ້ມເຫຼວເທົ່ານັ້ນ. "
 "ເພື່ອຮັບການແຈ້ງເຕືອນທຸກຄັ້ງທີ່ດຳເນີນການ, ໃຫ້ຕັ້ງຄ່າ NOTIFICATION_LEVEL ເປັນ"
 
-#: internal/web/templates/files/backup_settings.html:99
+#: internal/web/templates/files/backup_settings.html:101
 msgid "instead of the default"
 msgstr "ແທນທີ່ຄ່າເລີ່ມຕົ້ນ"
 
-#: internal/web/templates/files/backup_settings.html:106
+#: internal/web/templates/files/backup_settings.html:108
 msgid ""
 "Notifications (email, Slack, etc.) can be sent out when a backup run "
 "finishes. Configuration is provided as a comma-separated list of URLs."
@@ -11600,7 +11587,7 @@ msgstr ""
 "ສາມາດຖືກສົ່ງອອກເມື່ອການສຳຮອງຂໍ້ມູນສຳເລັດ. ການຕັ້ງຄ່າຖືກລະບຸເປັນລາຍການ URL "
 "ຄັ່ນດ້ວຍເຄື່ອງໝາຍຈຸດຈ້ຳ."
 
-#: internal/web/templates/files/backup_settings.html:109
+#: internal/web/templates/files/backup_settings.html:111
 msgid ""
 "Parallelism level for \"gz\" (Gzip) compression defines how many blocks of "
 "data are concurrently processed. Higher values result in faster compression."
@@ -11611,11 +11598,11 @@ msgstr ""
 "ຄ່າສູງກວ່າຈະເຮັດໃຫ້ການບີບອັດໄວຂຶ້ນ. ຄ່າເລີ່ມຕົ້ນ = 1. ຖ້າຕັ້ງເປັນ 0 "
 "ຈະໃຊ້ທຸກເທຣດທີ່ມີ."
 
-#: internal/web/templates/files/backup_settings.html:112
+#: internal/web/templates/files/backup_settings.html:114
 msgid "Full path to exclude, or regular expressions."
 msgstr "ເສັ້ນທາງເຕັມທີ່ຈະຍົກເວັ້ນ, ຫຼື regular expressions."
 
-#: internal/web/templates/files/backup_settings.html:114
+#: internal/web/templates/files/backup_settings.html:116
 msgid ""
 "IThe number of days for which a backup is kept. Pass zero or a positive "
 "integer value to enable automatic rotation of old backups."
@@ -11666,7 +11653,7 @@ msgstr "ກຳລັງສຳຮອງຂໍ້ມູນ…"
 #: internal/web/templates/manager/python_node_apps.html:1043
 #: internal/web/templates/manager/python_node_apps.html:1048
 #: internal/web/templates/manager/websitebuilder.html:164
-#: internal/web/templates/manager/wp/single.html:1765
+#: internal/web/templates/manager/wp/single.html:1767
 #: static/js/tour-steps.js:1162
 msgid "Generate Backup"
 msgstr "ເລີ່ມການສຳຮອງຂໍ້ມູນ"
@@ -11853,32 +11840,32 @@ msgid "Reason"
 msgstr "ເຫດຜົນ"
 
 #: internal/web/templates/files/clamav/quarantine.html:87
-#: internal/web/templates/files/clamav/quarantine.html:123
+#: internal/web/templates/files/clamav/quarantine.html:114
 msgid "Mark as safe"
 msgstr "ໝາຍວ່າປອດໄພ"
 
-#: internal/web/templates/files/clamav/quarantine.html:124
+#: internal/web/templates/files/clamav/quarantine.html:115
 #: internal/web/templates/files/trash_partials.html:171
 msgid "Delete permanently"
 msgstr "ລຶບຖາວອນ"
 
-#: internal/web/templates/files/clamav/quarantine.html:185
+#: internal/web/templates/files/clamav/quarantine.html:176
 msgid "File restored."
 msgstr "ກູ້ຄືນໄຟລ໌ແລ້ວ."
 
-#: internal/web/templates/files/clamav/quarantine.html:185
+#: internal/web/templates/files/clamav/quarantine.html:176
 msgid "Restore failed"
 msgstr "ການກູ້ຄືນລົ້ມເຫຼວ"
 
-#: internal/web/templates/files/clamav/quarantine.html:190
+#: internal/web/templates/files/clamav/quarantine.html:181
 msgid "File deleted."
 msgstr "ລຶບໄຟລ໌ແລ້ວ."
 
-#: internal/web/templates/files/clamav/quarantine.html:190
+#: internal/web/templates/files/clamav/quarantine.html:181
 msgid "Delete failed"
 msgstr "ການລຶບລົ້ມເຫຼວ"
 
-#: internal/web/templates/files/clamav/quarantine.html:195
+#: internal/web/templates/files/clamav/quarantine.html:186
 msgid "Marked as safe and restored."
 msgstr "ໝາຍວ່າປອດໄພແລະກູ້ຄືນແລ້ວ."
 
@@ -11911,7 +11898,7 @@ msgstr "ການສະແກນທີ່ສຳເລັດຈະສະແດງ
 #: internal/web/templates/files/clamav/scan_logs.html:39
 #: internal/web/templates/manager/_cms_app_shared.html:664
 #: internal/web/templates/manager/git.html:68
-#: internal/web/templates/manager/wp/single.html:1637
+#: internal/web/templates/manager/wp/single.html:1639
 msgid "Source"
 msgstr "ຕົ້ນທາງ"
 
@@ -11922,7 +11909,7 @@ msgid "Directory"
 msgstr "ໄດເຣັກທໍຣີ"
 
 #: internal/web/templates/files/clamav/scan_logs.html:42
-#: internal/web/templates/mysql/databases.html:584
+#: internal/web/templates/mysql/databases.html:603
 msgid "Result"
 msgstr "ຜົນລັບ"
 
@@ -12013,7 +12000,7 @@ msgid "No malware found."
 msgstr "ບໍ່ພົບມັນແວຮ້າຍ."
 
 #: internal/web/templates/files/clamav/scanner.html:216
-#: internal/web/templates/files/fix_permissions.html:86
+#: internal/web/templates/files/fix_permissions.html:87
 msgid "Network response was not ok"
 msgstr "ການຕອບສະໜອງຈາກເຄືອຂ່າຍມີຂໍ້ຜິດພາດ"
 
@@ -12057,7 +12044,7 @@ msgstr "ຂຶ້ນໄປໜຶ່ງລະດັບ"
 msgid "Disk Usage (MB)"
 msgstr "ການນຳໃຊ້ພື້ນທີ່ດິດ (MB)"
 
-#: internal/web/templates/files/disk_usage.html:193
+#: internal/web/templates/files/disk_usage.html:195
 msgid "Calculating disk usage for parent directory.."
 msgstr "ກຳລັງຄິດໄລ່ການນຳໃຊ້ພື້ນທີ່ດິດສຳລັບໂຟນເດີຫຼັກ.."
 
@@ -12138,12 +12125,12 @@ msgstr "ໄຟລ໌ໃໝ່"
 
 #: internal/web/templates/files/filemanager.html:101
 #: internal/web/templates/files/filemanager.html:102
-#: internal/web/templates/files/filemanager_partials.html:652
+#: internal/web/templates/files/filemanager_partials.html:670
 msgid "New Folder"
 msgstr "ໂຟນເດີໃໝ່"
 
 #: internal/web/templates/files/filemanager.html:117
-#: internal/web/templates/files/filemanager_partials.html:442
+#: internal/web/templates/files/filemanager_partials.html:460
 #: internal/web/templates/files/trash.html:73
 #: internal/web/templates/files/trash_partials.html:26
 #: internal/web/templates/manager/git.html:437
@@ -12154,21 +12141,21 @@ msgid "Date"
 msgstr "ວັນທີ"
 
 #: internal/web/templates/files/filemanager.html:118
-#: internal/web/templates/files/filemanager_partials.html:445
+#: internal/web/templates/files/filemanager_partials.html:463
 #: internal/web/templates/files/trash.html:74
 #: internal/web/templates/files/trash_partials.html:39
 msgid "Owner"
 msgstr "ເຈົ້າຂອງ"
 
 #: internal/web/templates/files/filemanager.html:119
-#: internal/web/templates/files/filemanager_partials.html:448
+#: internal/web/templates/files/filemanager_partials.html:466
 #: internal/web/templates/files/trash.html:75
 #: internal/web/templates/files/trash_partials.html:42
 msgid "Group"
 msgstr "ກຸ່ມ"
 
 #: internal/web/templates/files/filemanager.html:120
-#: internal/web/templates/files/filemanager_partials.html:452
+#: internal/web/templates/files/filemanager_partials.html:470
 #: internal/web/templates/files/trash.html:76
 #: internal/web/templates/files/trash_partials.html:46
 msgid "Links"
@@ -12180,10 +12167,10 @@ msgid "Link Target"
 msgstr "ເປົ້າໝາຍລິ້ງຄ໌"
 
 #: internal/web/templates/files/filemanager.html:122
-#: internal/web/templates/files/filemanager_partials.html:348
-#: internal/web/templates/files/filemanager_partials.html:349
-#: internal/web/templates/files/filemanager_partials.html:413
-#: internal/web/templates/files/filemanager_partials.html:465
+#: internal/web/templates/files/filemanager_partials.html:366
+#: internal/web/templates/files/filemanager_partials.html:367
+#: internal/web/templates/files/filemanager_partials.html:431
+#: internal/web/templates/files/filemanager_partials.html:483
 #: internal/web/templates/files/trash.html:78
 #: internal/web/templates/files/trash_partials.html:59
 msgid "Permissions"
@@ -12241,136 +12228,140 @@ msgstr "ໄຟລ໌ປະເພດໃດກໍໄດ້ (ອະນຸຍາດ�
 msgid "Max size:"
 msgstr "ຂະໜາດສູງສຸດ:"
 
-#: internal/web/templates/files/filemanager_partials.html:73
+#: internal/web/templates/files/filemanager_partials.html:77
 msgid "Queued"
 msgstr "ຢູ່ໃນຄິວ"
 
-#: internal/web/templates/files/filemanager_partials.html:81
+#: internal/web/templates/files/filemanager_partials.html:85
 msgid "file(s) selected"
 msgstr "ໄຟລ໌ທີ່ເລືອກ"
 
 #: internal/web/templates/files/filemanager_partials.html:144
+msgid "%(file)s exceeds the upload limit of %(size)s MB."
+msgstr ""
+
+#: internal/web/templates/files/filemanager_partials.html:162
 msgid "Uploading..."
 msgstr "ກຳລັງອັບໂຫຼດ..."
 
-#: internal/web/templates/files/filemanager_partials.html:157
+#: internal/web/templates/files/filemanager_partials.html:175
 msgid "Uploading %%(count)s files"
 msgstr "ກຳລັງອັບໂຫຼດ %%(count)s ໄຟລ໌"
 
-#: internal/web/templates/files/filemanager_partials.html:191
+#: internal/web/templates/files/filemanager_partials.html:209
 msgid "Upload error. Please try again."
 msgstr "ຂໍ້ຜິດພາດໃນການອັບໂຫຼດ. ກະລຸນາລອງໃໝ່."
 
-#: internal/web/templates/files/filemanager_partials.html:200
+#: internal/web/templates/files/filemanager_partials.html:218
 msgid "Upload complete."
 msgstr "ອັບໂຫຼດສຳເລັດ."
 
-#: internal/web/templates/files/filemanager_partials.html:201
+#: internal/web/templates/files/filemanager_partials.html:219
 msgid "Upload successful!"
 msgstr "ອັບໂຫຼດສຳເລັດ!"
 
-#: internal/web/templates/files/filemanager_partials.html:208
-#: internal/web/templates/files/filemanager_partials.html:211
+#: internal/web/templates/files/filemanager_partials.html:226
+#: internal/web/templates/files/filemanager_partials.html:229
 msgid "Upload failed:"
 msgstr "ການອັບໂຫຼດລົ້ມເຫຼວ:"
 
-#: internal/web/templates/files/filemanager_partials.html:283
+#: internal/web/templates/files/filemanager_partials.html:301
 msgid "No items found."
 msgstr "ບໍ່ພົບລາຍການໃດໆ."
 
-#: internal/web/templates/files/filemanager_partials.html:284
+#: internal/web/templates/files/filemanager_partials.html:302
 msgid "Start creating new folders or uploading a new file!"
 msgstr "ເລີ່ມສ້າງໂຟນເດີໃໝ່ ຫຼື ອັບໂຫຼດໄຟລ໌ໃໝ່ໄດ້ເລີຍ!"
 
-#: internal/web/templates/files/filemanager_partials.html:308
-#: internal/web/templates/files/filemanager_partials.html:309
-#: internal/web/templates/files/filemanager_partials.html:381
+#: internal/web/templates/files/filemanager_partials.html:326
+#: internal/web/templates/files/filemanager_partials.html:327
+#: internal/web/templates/files/filemanager_partials.html:399
 msgid "View"
 msgstr "ເບິ່ງ"
 
-#: internal/web/templates/files/filemanager_partials.html:323
-#: internal/web/templates/files/filemanager_partials.html:324
-#: internal/web/templates/files/filemanager_partials.html:393
+#: internal/web/templates/files/filemanager_partials.html:341
+#: internal/web/templates/files/filemanager_partials.html:342
+#: internal/web/templates/files/filemanager_partials.html:411
 msgid "Rename"
 msgstr "ປ່ຽນຊື່"
 
-#: internal/web/templates/files/filemanager_partials.html:333
-#: internal/web/templates/files/filemanager_partials.html:334
-#: internal/web/templates/files/filemanager_partials.html:401
-#: internal/web/templates/files/filemanager_partials.html:591
+#: internal/web/templates/files/filemanager_partials.html:351
+#: internal/web/templates/files/filemanager_partials.html:352
+#: internal/web/templates/files/filemanager_partials.html:419
+#: internal/web/templates/files/filemanager_partials.html:609
 msgid "Move"
 msgstr "ຍ້າຍ"
 
-#: internal/web/templates/files/filemanager_partials.html:338
-#: internal/web/templates/files/filemanager_partials.html:339
-#: internal/web/templates/files/filemanager_partials.html:405
-#: internal/web/templates/files/filemanager_partials.html:592
+#: internal/web/templates/files/filemanager_partials.html:356
+#: internal/web/templates/files/filemanager_partials.html:357
+#: internal/web/templates/files/filemanager_partials.html:423
+#: internal/web/templates/files/filemanager_partials.html:610
 msgid "Compress"
 msgstr "ບີບອັດ"
 
-#: internal/web/templates/files/filemanager_partials.html:343
-#: internal/web/templates/files/filemanager_partials.html:344
-#: internal/web/templates/files/filemanager_partials.html:409
-#: internal/web/templates/files/filemanager_partials.html:593
+#: internal/web/templates/files/filemanager_partials.html:361
+#: internal/web/templates/files/filemanager_partials.html:362
+#: internal/web/templates/files/filemanager_partials.html:427
+#: internal/web/templates/files/filemanager_partials.html:611
 msgid "Extract"
 msgstr "ແຕກໄຟລ໌"
 
-#: internal/web/templates/files/filemanager_partials.html:441
+#: internal/web/templates/files/filemanager_partials.html:459
 #: internal/web/templates/files/trash_partials.html:25
 msgid "Last Modified"
 msgstr "ແກ້ໄຂລ້າສຸດ"
 
-#: internal/web/templates/files/filemanager_partials.html:456
+#: internal/web/templates/files/filemanager_partials.html:474
 #: internal/web/templates/files/trash_partials.html:50
 msgid "Link target"
 msgstr "ເປົ້າໝາຍລິ້ງຄ໌"
 
-#: internal/web/templates/files/filemanager_partials.html:479
+#: internal/web/templates/files/filemanager_partials.html:497
 msgid "Go Up"
 msgstr "ຂຶ້ນໄປ"
 
-#: internal/web/templates/files/filemanager_partials.html:520
-#: internal/web/templates/files/filemanager_partials.html:582
+#: internal/web/templates/files/filemanager_partials.html:538
+#: internal/web/templates/files/filemanager_partials.html:600
 #: internal/web/templates/files/trash_partials.html:97
 #: internal/web/templates/files/trash_partials.html:318
 msgid "Calculate"
 msgstr "ຄິດໄລ່"
 
-#: internal/web/templates/files/filemanager_partials.html:579
+#: internal/web/templates/files/filemanager_partials.html:597
 #: internal/web/templates/files/trash_partials.html:420
 msgid "Deselect"
 msgstr "ຍົກເລີກການເລືອກ"
 
-#: internal/web/templates/files/filemanager_partials.html:581
+#: internal/web/templates/files/filemanager_partials.html:599
 #: internal/web/templates/files/trash_partials.html:308
 msgid "Calculating..."
 msgstr "ກຳລັງຄິດໄລ່..."
 
-#: internal/web/templates/files/filemanager_partials.html:585
+#: internal/web/templates/files/filemanager_partials.html:603
 msgid "Recursive"
 msgstr "ແບບວົນຊ້ຳ (Recursive)"
 
-#: internal/web/templates/files/filemanager_partials.html:587
+#: internal/web/templates/files/filemanager_partials.html:605
 msgid "Skip the trash"
 msgstr "ຂ້າມຖັງຂີ້ເຫຍື້ອ"
 
-#: internal/web/templates/files/filemanager_partials.html:589
+#: internal/web/templates/files/filemanager_partials.html:607
 msgid "Moved to trash."
 msgstr "ຍ້າຍໄປຖັງຂີ້ເຫຍື້ອແລ້ວ."
 
-#: internal/web/templates/files/filemanager_partials.html:594
+#: internal/web/templates/files/filemanager_partials.html:612
 msgid "Copy here"
 msgstr "ສຳເນົາມາບ່ອນນີ້"
 
-#: internal/web/templates/files/filemanager_partials.html:595
+#: internal/web/templates/files/filemanager_partials.html:613
 msgid "Move here"
 msgstr "ຍ້າຍມາບ່ອນນີ້"
 
-#: internal/web/templates/files/filemanager_partials.html:596
+#: internal/web/templates/files/filemanager_partials.html:614
 msgid "Extract here"
 msgstr "ແຕກໄຟລ໌ບ່ອນນີ້"
 
-#: internal/web/templates/files/filemanager_partials.html:597
+#: internal/web/templates/files/filemanager_partials.html:615
 #: internal/web/templates/user/activity.html:169
 #: internal/web/templates/user/activity.html:177
 #: internal/web/templates/user/history_usage.html:96
@@ -12378,72 +12369,72 @@ msgstr "ແຕກໄຟລ໌ບ່ອນນີ້"
 msgid "items"
 msgstr "ລາຍການ"
 
-#: internal/web/templates/files/filemanager_partials.html:598
+#: internal/web/templates/files/filemanager_partials.html:616
 msgid "No subfolders"
 msgstr "ບໍ່ມີໂຟນເດີຍ່ອຍ"
 
-#: internal/web/templates/files/filemanager_partials.html:599
+#: internal/web/templates/files/filemanager_partials.html:617
 msgid "Folder not found."
 msgstr "ບໍ່ພົບໂຟນເດີ."
 
-#: internal/web/templates/files/filemanager_partials.html:600
+#: internal/web/templates/files/filemanager_partials.html:618
 #: internal/web/templates/files/fix_permissions.html:49
-#: internal/web/templates/mysql/databases.html:585
+#: internal/web/templates/mysql/databases.html:604
 #: internal/web/templates/partials/site_manager_shared.html:1019
 msgid "Working..."
 msgstr "ກຳລັງເຮັດວຽກ..."
 
-#: internal/web/templates/files/filemanager_partials.html:602
+#: internal/web/templates/files/filemanager_partials.html:620
 msgid "Done! Reloading..."
 msgstr "ສຳເລັດ! ກຳລັງໂຫຼດຄືນໃໝ່..."
 
-#: internal/web/templates/files/filemanager_partials.html:603
+#: internal/web/templates/files/filemanager_partials.html:621
 msgid "Items could not be deleted."
 msgstr "ບໍ່ສາມາດລຶບລາຍການໄດ້."
 
-#: internal/web/templates/files/filemanager_partials.html:604
+#: internal/web/templates/files/filemanager_partials.html:622
 msgid "Some items could not be deleted."
 msgstr "ບາງລາຍການບໍ່ສາມາດລຶບໄດ້."
 
-#: internal/web/templates/files/filemanager_partials.html:605
+#: internal/web/templates/files/filemanager_partials.html:623
 #: internal/web/templates/files/trash_partials.html:272
 #: internal/web/templates/files/trash_partials.html:312
 msgid "Unknown error"
 msgstr "ຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ຈັກ"
 
-#: internal/web/templates/files/filemanager_partials.html:606
+#: internal/web/templates/files/filemanager_partials.html:624
 msgid "Path copied to clipboard!"
 msgstr "ສຳເນົາເສັ້ນທາງໄປຍັງຄລິບບອດແລ້ວ!"
 
-#: internal/web/templates/files/filemanager_partials.html:607
+#: internal/web/templates/files/filemanager_partials.html:625
 msgid "Error fetching folder size:"
 msgstr "ເກີດຂໍ້ຜິດພາດໃນການດຶງຂະໜາດໂຟນເດີ:"
 
-#: internal/web/templates/files/filemanager_partials.html:608
+#: internal/web/templates/files/filemanager_partials.html:626
 msgid "Error deleting"
 msgstr "ເກີດຂໍ້ຜິດພາດໃນການລຶບ"
 
-#: internal/web/templates/files/filemanager_partials.html:609
+#: internal/web/templates/files/filemanager_partials.html:627
 msgid "Download for {file} started."
 msgstr "ເລີ່ມດາວໂຫຼດ {file} ແລ້ວ."
 
-#: internal/web/templates/files/filemanager_partials.html:638
+#: internal/web/templates/files/filemanager_partials.html:656
 msgid "Archive name"
 msgstr "ຊື່ໄຟລ໌ບີບອັດ"
 
-#: internal/web/templates/files/filemanager_partials.html:664
+#: internal/web/templates/files/filemanager_partials.html:682
 msgid "Extract into a new folder"
 msgstr "ແຕກໄຟລ໌ໄປໂຟນເດີໃໝ່"
 
-#: internal/web/templates/files/filemanager_partials.html:764
+#: internal/web/templates/files/filemanager_partials.html:782
 msgid "File Name"
 msgstr "ຊື່ໄຟລ໌"
 
-#: internal/web/templates/files/filemanager_partials.html:769
+#: internal/web/templates/files/filemanager_partials.html:787
 msgid "Open in File Editor after creation"
 msgstr "ເປີດໃນຕົວແກ້ໄຂໄຟລ໌ຫຼັງຈາກສ້າງສຳເລັດ"
 
-#: internal/web/templates/files/filemanager_partials.html:778
+#: internal/web/templates/files/filemanager_partials.html:796
 msgid "Folder Name"
 msgstr "ຊື່ໂຟນເດີ"
 
@@ -12463,15 +12454,15 @@ msgstr ""
 "ຂະບວນການໄດ້ເລີ່ມຂຶ້ນແລ້ວ. ອາດຈະໃຊ້ເວລາສອງສາມນາທີ ຂຶ້ນກັບຈຳນວນໄຟລ໌ ແລະ "
 "ໂຟນເດີໃນເສັ້ນທາງທີ່ລະບຸໄວ້. ກະລຸນາລໍຖ້າ."
 
-#: internal/web/templates/files/fix_permissions.html:96
-msgid "Fixing permissions failed"
-msgstr "ການແກ້ໄຂສິດການເຂົ້າເຖິງຫຼົ້ມເຫຼວ"
-
-#: internal/web/templates/files/fix_permissions.html:100
+#: internal/web/templates/files/fix_permissions.html:94
 msgid ""
 "Permissions successfully fixed for all files and subdirectories inside the "
 "directory"
 msgstr "ແກ້ໄຂສິດການເຂົ້າເຖິງສຳເລັດສຳລັບທຸກໄຟລ໌ ແລະ ໂຟນເດີຍ່ອຍພາຍໃນໄດເຣັກທໍຣີ"
+
+#: internal/web/templates/files/fix_permissions.html:99
+msgid "Fixing permissions failed"
+msgstr "ການແກ້ໄຂສິດການເຂົ້າເຖິງຫຼົ້ມເຫຼວ"
 
 #: internal/web/templates/files/ftp.html:10
 msgid "FTP Accounts Header"
@@ -12528,7 +12519,7 @@ msgid "Over quota"
 msgstr "ເກີນໂຄຕ້າ"
 
 #: internal/web/templates/files/ftp.html:135
-#: internal/web/templates/files/ftp_new.html:165
+#: internal/web/templates/files/ftp_new.html:170
 #: internal/web/templates/files/ftp_quota.html:28
 #: internal/web/templates/files/ftp_quota.html:34
 msgid "Unlimited"
@@ -12588,21 +12579,21 @@ msgstr ""
 "ລະຫັດຜ່ານຕ້ອງມີຢ່າງໜ້ອຍ 8 ຕົວອັກສອນ, ແລະ ປະກອບມີຕົວອັກສອນພິມນ້ອຍ, ພິມໃຫຍ່, "
 "ຕົວເລກ, ແລະ ອັກສອນພິເສດ."
 
-#: internal/web/templates/files/ftp_new.html:154
+#: internal/web/templates/files/ftp_new.html:159
 msgid "Path (folder)"
 msgstr "ເສັ້ນທາງ (ໂຟນເດີ)"
 
-#: internal/web/templates/files/ftp_new.html:163
+#: internal/web/templates/files/ftp_new.html:168
 #: internal/web/templates/files/ftp_quota.html:32
 msgid "Disk quota"
 msgstr "ໂຄຕ້າດິສ"
 
-#: internal/web/templates/files/ftp_new.html:166
+#: internal/web/templates/files/ftp_new.html:171
 #: internal/web/templates/files/ftp_quota.html:35
 msgid "Unit"
 msgstr "ໜ່ວຍ"
 
-#: internal/web/templates/files/ftp_new.html:171
+#: internal/web/templates/files/ftp_new.html:176
 #: internal/web/templates/files/ftp_quota.html:40
 msgid ""
 "Leave empty or set 0 for no limit. Uploads are blocked once the folder grows"
@@ -12611,7 +12602,7 @@ msgstr ""
 "ປ່ອຍຫວ່າງ ຫຼື ໃສ່ 0 ເພື່ອບໍ່ຈຳກັດ. ການອັບໂຫຼດຈະຖືກບລັອກເມື່ອໂຟນເດີເກີນໂຄຕ້າ,"
 " ຍັງສາມາດລຶບໄຟລ໌ໄດ້."
 
-#: internal/web/templates/files/ftp_new.html:182
+#: internal/web/templates/files/ftp_new.html:187
 #: internal/web/templates/files/ftp_quota.html:49
 msgid "Back to FTP Accounts"
 msgstr "ກັບຄືນໄປຫາໜ້າບັນຊີ FTP"
@@ -12726,11 +12717,11 @@ msgstr ""
 msgid "Inodes Usage"
 msgstr "ການນຳໃຊ້ Inode"
 
-#: internal/web/templates/files/inodes.html:157
+#: internal/web/templates/files/inodes.html:159
 msgid "Calculating inodes count for parent directory.."
 msgstr "ກຳລັງຄິດໄລ່ຈຳນວນ inode ສຳລັບໂຟນເດີຫຼັກ.."
 
-#: internal/web/templates/files/inodes.html:168
+#: internal/web/templates/files/inodes.html:167
 msgid "Failed to fetch"
 msgstr "ດຶງຂໍ້ມູນຫຼົ້ມເຫຼວ"
 
@@ -12858,31 +12849,31 @@ msgstr "ຂໍ້ຜິດພາດເຄືອຂ່າຍ."
 msgid "Network error during file download. Please try again."
 msgstr "ຂໍ້ຜິດພາດເຄືອຂ່າຍໃນລະຫວ່າງການດາວໂຫຼດໄຟລ໌. ກະລຸນາລອງໃໝ່."
 
-#: internal/web/templates/files/upload_file.html:420
-msgid "Total file size exceeds {max}MB limit."
-msgstr "ຂະໜາດໄຟລ໌ທັງໝົດເກີນຂີດຈຳກັດ {max}MB."
-
-#: internal/web/templates/files/upload_file.html:437
+#: internal/web/templates/files/upload_file.html:440
 msgid "Please select files to upload."
 msgstr "ກະລຸນາເລືອກໄຟລ໌ທີ່ຈະອັບໂຫຼດ."
 
-#: internal/web/templates/files/upload_file.html:514
+#: internal/web/templates/files/upload_file.html:445
+msgid "Over the %(size)s MB upload limit:"
+msgstr ""
+
+#: internal/web/templates/files/upload_file.html:544
 msgid "Files uploaded successfully!"
 msgstr "ອັບໂຫຼດໄຟລ໌ສຳເລັດ!"
 
-#: internal/web/templates/files/upload_file.html:524
+#: internal/web/templates/files/upload_file.html:553
 msgid "Error uploading file:"
 msgstr "ຂໍ້ຜິດພາດໃນການອັບໂຫຼດໄຟລ໌:"
 
-#: internal/web/templates/files/upload_file.html:534
+#: internal/web/templates/files/upload_file.html:562
 msgid "Network error during file upload. Please try again."
 msgstr "ຂໍ້ຜິດພາດເຄືອຂ່າຍໃນລະຫວ່າງການອັບໂຫຼດໄຟລ໌. ກະລຸນາລອງໃໝ່."
 
-#: internal/web/templates/files/upload_file.html:555
+#: internal/web/templates/files/upload_file.html:579
 msgid "An upload is in progress. Are you sure you want to leave?"
 msgstr "ກຳລັງອັບໂຫຼດຢູ່. ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການອອກ?"
 
-#: internal/web/templates/files/upload_file.html:560
+#: internal/web/templates/files/upload_file.html:584
 msgid "A download is in progress. Are you sure you want to leave?"
 msgstr "ກຳລັງດາວໂຫຼດຢູ່. ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການອອກ?"
 
@@ -13067,7 +13058,7 @@ msgid "Open FTP Accounts"
 msgstr "ເປີດບັນຊີ FTP"
 
 #: internal/web/templates/manager/_cms_app_shared.html:489
-#: internal/web/templates/manager/wp/single.html:2004
+#: internal/web/templates/manager/wp/single.html:2006
 msgid "MariaDB:"
 msgstr "MariaDB:"
 
@@ -13075,7 +13066,7 @@ msgstr "MariaDB:"
 #: internal/web/templates/manager/_cms_app_shared.html:1197
 #: internal/web/templates/manager/python_node_apps.html:980
 #: internal/web/templates/manager/websitebuilder.html:153
-#: internal/web/templates/manager/wp/single.html:1750
+#: internal/web/templates/manager/wp/single.html:1752
 msgid "Create a Backup"
 msgstr "ສ້າງການສຳຮອງຂໍ້ມູນ"
 
@@ -13096,8 +13087,8 @@ msgstr "ສ້າງການສໍາຮອງໄຟລ໌ຂອງເວັບ
 #: internal/web/templates/manager/tinyphotogallery_app.html:179
 #: internal/web/templates/manager/websitebuilder.html:171
 #: internal/web/templates/manager/websitebuilder.html:234
-#: internal/web/templates/manager/wp/single.html:1772
-#: internal/web/templates/manager/wp/single.html:1841
+#: internal/web/templates/manager/wp/single.html:1774
+#: internal/web/templates/manager/wp/single.html:1843
 #: internal/web/templates/system/cronjobs_new.html:68
 msgid "or"
 msgstr "ຫຼື"
@@ -13106,7 +13097,7 @@ msgstr "ຫຼື"
 #: internal/web/templates/manager/_cms_app_shared.html:1238
 #: internal/web/templates/manager/python_node_apps.html:996
 #: internal/web/templates/manager/websitebuilder.html:175
-#: internal/web/templates/manager/wp/single.html:1776
+#: internal/web/templates/manager/wp/single.html:1778
 msgid "Restore from Backups"
 msgstr "ກູ້ຄືນຈາກການສຳຮອງຂໍ້ມູນ"
 
@@ -13118,7 +13109,7 @@ msgstr "ກູ້ຄືນໄຟລ໌ຂອງເວັບໄຊທ໌ຈາກ
 #: internal/web/templates/manager/_cms_app_shared.html:1246
 #: internal/web/templates/manager/python_node_apps.html:1004
 #: internal/web/templates/manager/websitebuilder.html:183
-#: internal/web/templates/manager/wp/single.html:1784
+#: internal/web/templates/manager/wp/single.html:1786
 msgid "Display Backups"
 msgstr "ສະແດງລາຍການສຳຮອງຂໍ້ມູນ"
 
@@ -13126,7 +13117,7 @@ msgstr "ສະແດງລາຍການສຳຮອງຂໍ້ມູນ"
 #: internal/web/templates/manager/_cms_app_shared.html:1250
 #: internal/web/templates/manager/python_node_apps.html:1008
 #: internal/web/templates/manager/websitebuilder.html:187
-#: internal/web/templates/manager/wp/single.html:1788
+#: internal/web/templates/manager/wp/single.html:1790
 msgid "Select a backup date:"
 msgstr "ເລືອກວັນທີສຳຮອງຂໍ້ມູນ:"
 
@@ -13138,25 +13129,25 @@ msgstr "ເລືອກວັນທີສຳຮອງຂໍ້ມູນ:"
 #: internal/web/templates/manager/python_node_apps.html:1099
 #: internal/web/templates/manager/websitebuilder.html:193
 #: internal/web/templates/manager/websitebuilder.html:418
-#: internal/web/templates/manager/wp/single.html:1794
-#: internal/web/templates/manager/wp/single.html:2182
+#: internal/web/templates/manager/wp/single.html:1796
+#: internal/web/templates/manager/wp/single.html:2188
 msgid "Start Restore"
 msgstr "ເລີ່ມການກູ້ຄືນ"
 
 #: internal/web/templates/manager/_cms_app_shared.html:658
 #: internal/web/templates/manager/python_node_apps.html:854
-#: internal/web/templates/manager/wp/single.html:1631
+#: internal/web/templates/manager/wp/single.html:1633
 msgid "Location"
 msgstr "ທີ່ຕັ້ງ"
 
 #: internal/web/templates/manager/_cms_app_shared.html:659
-#: internal/web/templates/manager/wp/single.html:1632
+#: internal/web/templates/manager/wp/single.html:1634
 msgid "Please choose the URL to install the software"
 msgstr "ກະລຸນາເລືອກ URL ສໍາລັບຕິດຕັ້ງຊອຟແວ"
 
 #: internal/web/templates/manager/_cms_app_shared.html:670
 #: internal/web/templates/manager/python_node_apps.html:860
-#: internal/web/templates/manager/wp/single.html:1643
+#: internal/web/templates/manager/wp/single.html:1645
 msgid "Target"
 msgstr "ປາຍທາງ"
 
@@ -13170,7 +13161,7 @@ msgstr "ປາຍທາງ"
 #: internal/web/templates/manager/python_node_apps.html:925
 #: internal/web/templates/manager/websitebuilder_install.html:41
 #: internal/web/templates/manager/wp/install.html:76
-#: internal/web/templates/manager/wp/single.html:1647
+#: internal/web/templates/manager/wp/single.html:1649
 msgid "Select a domain"
 msgstr "ເລືອກໂດເມນ"
 
@@ -13183,12 +13174,12 @@ msgstr "ເລືອກໂດເມນ"
 #: internal/web/templates/manager/python_node_apps.html:870
 #: internal/web/templates/manager/websitebuilder_install.html:46
 #: internal/web/templates/manager/wp/install.html:81
-#: internal/web/templates/manager/wp/single.html:1653
+#: internal/web/templates/manager/wp/single.html:1655
 msgid "subfolder"
 msgstr "ໂຟນເດີຍ່ອຍ"
 
 #: internal/web/templates/manager/_cms_app_shared.html:683
-#: internal/web/templates/manager/wp/single.html:1656
+#: internal/web/templates/manager/wp/single.html:1658
 msgid ""
 "Make sure that the domain or the subdomain selected as a target is not being"
 " used by an existing website. During cloning, website data that exists on "
@@ -13203,7 +13194,7 @@ msgstr ""
 #: internal/web/templates/manager/_cms_app_shared.html:1403
 #: internal/web/templates/manager/python_node_apps.html:1070
 #: internal/web/templates/manager/websitebuilder.html:376
-#: internal/web/templates/manager/wp/single.html:2139
+#: internal/web/templates/manager/wp/single.html:2145
 msgid "No backups available"
 msgstr "ບໍ່ມີການສໍາຮອງຂໍ້ມູນ"
 
@@ -13211,7 +13202,7 @@ msgstr "ບໍ່ມີການສໍາຮອງຂໍ້ມູນ"
 #: internal/web/templates/manager/_cms_app_shared.html:1415
 #: internal/web/templates/manager/python_node_apps.html:1082
 #: internal/web/templates/manager/websitebuilder.html:390
-#: internal/web/templates/manager/wp/single.html:2154
+#: internal/web/templates/manager/wp/single.html:2160
 msgid "Click again to confirm"
 msgstr "ຄລິກອີກຄັ້ງເພື່ອຢືນຢັນ"
 
@@ -13219,34 +13210,34 @@ msgstr "ຄລິກອີກຄັ້ງເພື່ອຢືນຢັນ"
 #: internal/web/templates/manager/_cms_app_shared.html:1422
 #: internal/web/templates/manager/python_node_apps.html:1089
 #: internal/web/templates/manager/websitebuilder.html:404
-#: internal/web/templates/manager/wp/single.html:2168
+#: internal/web/templates/manager/wp/single.html:2174
 msgid "Restoring backup... Please wait."
 msgstr "ກຳລັງກູ້ຄືນຂໍ້ມູນ.. ກະລຸນາລໍຖ້າ."
 
 #: internal/web/templates/manager/_cms_app_shared.html:742
 #: internal/web/templates/manager/_cms_app_shared.html:1426
 #: internal/web/templates/manager/websitebuilder.html:411
-#: internal/web/templates/manager/wp/single.html:2175
+#: internal/web/templates/manager/wp/single.html:2181
 msgid "Restore request failed."
 msgstr "ຄຳຂໍກູ້ຄືນຂໍ້ມູນຫຼົ້ມເຫຼວ."
 
 #: internal/web/templates/manager/_cms_app_shared.html:765
 #: internal/web/templates/manager/_cms_app_shared.html:1458
-#: internal/web/templates/manager/wp/single.html:2230
+#: internal/web/templates/manager/wp/single.html:2236
 msgid "Generating Backup..."
 msgstr "ກໍາລັງສ້າງການສໍາຮອງຂໍ້ມູນ..."
 
 #: internal/web/templates/manager/_cms_app_shared.html:766
 #: internal/web/templates/manager/_cms_app_shared.html:1459
 #: internal/web/templates/manager/websitebuilder.html:451
-#: internal/web/templates/manager/wp/single.html:2232
+#: internal/web/templates/manager/wp/single.html:2238
 msgid "Generating website backup.. Please wait."
 msgstr "ກຳລັງສ້າງການສຳຮອງຂໍ້ມູນເວັບໄຊທ໌.. ກະລຸນາລໍຖ້າ."
 
 #: internal/web/templates/manager/_cms_app_shared.html:770
 #: internal/web/templates/manager/_cms_app_shared.html:1463
 #: internal/web/templates/manager/websitebuilder.html:458
-#: internal/web/templates/manager/wp/single.html:2239
+#: internal/web/templates/manager/wp/single.html:2245
 msgid "Backup request failed."
 msgstr "ຄຳຂໍສຳຮອງຂໍ້ມູນຫຼົ້ມເຫຼວ."
 
@@ -13338,52 +13329,52 @@ msgstr "ເປີດຟອມເຂົ້າສູ່ລະບົບ phpMyAdmin"
 
 #: internal/web/templates/manager/_cms_app_shared.html:898
 #: internal/web/templates/manager/_cms_app_shared.html:1551
-#: internal/web/templates/manager/wp/single.html:1699
+#: internal/web/templates/manager/wp/single.html:1701
 msgid "Clone website"
 msgstr "ໂຄລນເວັບໄຊທ໌"
 
 #: internal/web/templates/manager/_cms_app_shared.html:912
 #: internal/web/templates/manager/python_node_apps.html:942
-#: internal/web/templates/manager/wp/single.html:1707
+#: internal/web/templates/manager/wp/single.html:1709
 msgid "Cloning..."
 msgstr "ກໍາລັງໂຄລນ..."
 
 #: internal/web/templates/manager/_cms_app_shared.html:914
 #: internal/web/templates/manager/python_node_apps.html:944
-#: internal/web/templates/manager/wp/single.html:1713
+#: internal/web/templates/manager/wp/single.html:1715
 msgid "Cloning process started... Please wait."
 msgstr "ຂະບວນການໂຄລນເລີ່ມຕົ້ນແລ້ວ... ກະລຸນາລໍຖ້າ."
 
 #: internal/web/templates/manager/_cms_app_shared.html:927
-#: internal/web/templates/manager/wp/single.html:1726
+#: internal/web/templates/manager/wp/single.html:1728
 msgid "Cloned to {target} successfully!"
 msgstr "ໂຄລນໄປຍັງ {target} ສຳເລັດ!"
 
 #: internal/web/templates/manager/_cms_app_shared.html:928
 #: internal/web/templates/manager/python_node_apps.html:958
-#: internal/web/templates/manager/wp/single.html:1727
+#: internal/web/templates/manager/wp/single.html:1729
 msgid "Clone Complete"
 msgstr "ໂຄລນສໍາເລັດແລ້ວ"
 
 #: internal/web/templates/manager/_cms_app_shared.html:930
-#: internal/web/templates/manager/wp/single.html:1729
+#: internal/web/templates/manager/wp/single.html:1731
 msgid "Error cloning site"
 msgstr "ເກີດຂໍ້ຜິດພາດໃນການໂຄລນເວັບໄຊ"
 
 #: internal/web/templates/manager/_cms_app_shared.html:932
 #: internal/web/templates/manager/python_node_apps.html:962
-#: internal/web/templates/manager/wp/single.html:1731
+#: internal/web/templates/manager/wp/single.html:1733
 msgid "Try Again"
 msgstr "ລອງໃໝ່ອີກຄັ້ງ"
 
 #: internal/web/templates/manager/_cms_app_shared.html:938
 #: internal/web/templates/manager/python_node_apps.html:968
-#: internal/web/templates/manager/wp/single.html:1737
+#: internal/web/templates/manager/wp/single.html:1739
 msgid "Retry Clone"
 msgstr "ລອງໂຄລນໃໝ່"
 
 #: internal/web/templates/manager/_cms_app_shared.html:952
-#: internal/web/templates/manager/wp/single.html:1443
+#: internal/web/templates/manager/wp/single.html:1444
 #: internal/web/templates/system/cronjobs.html:67
 msgid "Refresh"
 msgstr "ໂຫຼດໃໝ່"
@@ -13394,27 +13385,27 @@ msgid "Loading error log.."
 msgstr "ກຳລັງໂຫລດລ໋ອກຂໍ້ຜິດພາດ.."
 
 #: internal/web/templates/manager/_cms_app_shared.html:970
-#: internal/web/templates/manager/wp/single.html:1668
+#: internal/web/templates/manager/wp/single.html:1670
 msgid "Database name and user to use for the clone (optional)"
 msgstr "ຊື່ຖານຂໍ້ມູນ ແລະ ຜູ້ໃຊ້ທີ່ຈະໃຊ້ສໍາລັບການໂຄລນ (ບໍ່ບັງຄັບ)"
 
 #: internal/web/templates/manager/_cms_app_shared.html:978
-#: internal/web/templates/manager/wp/single.html:1676
+#: internal/web/templates/manager/wp/single.html:1678
 msgid "Database name must be between 6 and 30 characters."
 msgstr "ຊື່ຖານຂໍ້ມູນຕ້ອງມີລະຫວ່າງ 6 ຫາ 30 ຕົວອັກສອນ."
 
 #: internal/web/templates/manager/_cms_app_shared.html:982
-#: internal/web/templates/manager/wp/single.html:1680
+#: internal/web/templates/manager/wp/single.html:1682
 msgid "Database user"
 msgstr "ຜູ້ໃຊ້ຖານຂໍ້ມູນ"
 
 #: internal/web/templates/manager/_cms_app_shared.html:985
-#: internal/web/templates/manager/wp/single.html:1683
+#: internal/web/templates/manager/wp/single.html:1685
 msgid "Username must be between 6 and 30 characters."
 msgstr "ຊື່ຜູ້ໃຊ້ຕ້ອງມີລະຫວ່າງ 6 ຫາ 30 ຕົວອັກສອນ."
 
 #: internal/web/templates/manager/_cms_app_shared.html:989
-#: internal/web/templates/manager/wp/single.html:1687
+#: internal/web/templates/manager/wp/single.html:1689
 msgid "User password"
 msgstr "ລະຫັດຜ່ານຜູ້ໃຊ້"
 
@@ -13519,18 +13510,18 @@ msgid "A backup is recommended before updating - see the Backups tab."
 msgstr "ແນະນໍາໃຫ້ສໍາຮອງຂໍ້ມູນກ່ອນອັບເດດ - ເບິ່ງແທັບ Backups."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1198
-#: internal/web/templates/manager/wp/single.html:1751
+#: internal/web/templates/manager/wp/single.html:1753
 msgid "Generate a backup of files and/or database."
 msgstr "ສ້າງການສໍາຮອງໄຟລ໌ ແລະ/ຫຼື ຖານຂໍ້ມູນ."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1206
-#: internal/web/templates/manager/wp/single.html:1759
+#: internal/web/templates/manager/wp/single.html:1761
 msgid "Backup Database"
 msgstr "ສຳຮອງຂໍ້ມູນຖານຂໍ້ມູນ"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1210
 #: internal/web/templates/manager/websitebuilder.html:162
-#: internal/web/templates/manager/wp/single.html:1763
+#: internal/web/templates/manager/wp/single.html:1765
 msgid "Backup Files"
 msgstr "ສຳຮອງຂໍ້ມູນໄຟລ໌"
 
@@ -13539,7 +13530,7 @@ msgid "Clone a %(name)s instance with its database and files."
 msgstr "ໂຄລນອິນສະແຕນ %(name)s ພ້ອມກັບຖານຂໍ້ມູນ ແລະ ໄຟລ໌ຂອງມັນ."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1239
-#: internal/web/templates/manager/wp/single.html:1777
+#: internal/web/templates/manager/wp/single.html:1779
 msgid "Restore files and/or database from a backup."
 msgstr "ກູ້ຄືນໄຟລ໌ ແລະ/ຫຼື ຖານຂໍ້ມູນຈາກການສໍາຮອງຂໍ້ມູນ."
 
@@ -13551,7 +13542,7 @@ msgstr "ກູ້ຄືນໄຟລ໌ ແລະ/ຫຼື ຖານຂໍ້ມ
 #: internal/web/templates/manager/ojs_app.html:204
 #: internal/web/templates/manager/opencart_app.html:190
 #: internal/web/templates/manager/prestashop_app.html:174
-#: internal/web/templates/manager/wp/single.html:2306
+#: internal/web/templates/manager/wp/single.html:2312
 msgid "A newer version is available."
 msgstr "ມີເວີຊັນໃໝ່ກວ່າໃຫ້ໃຊ້ງານ."
 
@@ -13564,7 +13555,7 @@ msgstr "ມີເວີຊັນໃໝ່ກວ່າໃຫ້ໃຊ້ງານ
 #: internal/web/templates/manager/ojs_app.html:209
 #: internal/web/templates/manager/opencart_app.html:194
 #: internal/web/templates/manager/prestashop_app.html:178
-#: internal/web/templates/manager/wp/single.html:2295
+#: internal/web/templates/manager/wp/single.html:2301
 msgid "You are running the latest version."
 msgstr "ທ່ານກໍາລັງໃຊ້ເວີຊັນຫຼ້າສຸດຢູ່ແລ້ວ."
 
@@ -13636,28 +13627,28 @@ msgid "Fetch error. Please try again."
 msgstr "ດຶງຂໍ້ມູນຜິດພາດ. ກະລຸນາລອງໃໝ່."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1380
-#: internal/web/templates/manager/wp/single.html:2205
+#: internal/web/templates/manager/wp/single.html:2211
 msgid "Database and Files Backup"
 msgstr "ສຳຮອງຂໍ້ມູນຖານຂໍ້ມູນ ແລະ ໄຟລ໌"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1381
-#: internal/web/templates/manager/wp/single.html:2207
+#: internal/web/templates/manager/wp/single.html:2213
 msgid "Database Backup"
 msgstr "ສຳຮອງຂໍ້ມູນຖານຂໍ້ມູນ"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1382
 #: internal/web/templates/manager/websitebuilder.html:371
-#: internal/web/templates/manager/wp/single.html:2209
+#: internal/web/templates/manager/wp/single.html:2215
 msgid "Files Backup"
 msgstr "ສຳຮອງຂໍ້ມູນໄຟລ໌"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1383
-#: internal/web/templates/manager/wp/single.html:2211
+#: internal/web/templates/manager/wp/single.html:2217
 msgid "Unknown Backup Type"
 msgstr "ບໍ່ຮູ້ຈັກປະເພດການສຳຮອງຂໍ້ມູນ"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1453
-#: internal/web/templates/manager/wp/single.html:2224
+#: internal/web/templates/manager/wp/single.html:2230
 msgid ""
 "No options selected to backup. Please ensure that at least one of the "
 "Database or Files is selected."
@@ -13699,7 +13690,7 @@ msgstr ""
 #: internal/web/templates/manager/tinyfilemanager_app.html:66
 #: internal/web/templates/manager/tinyphotogallery_app.html:166
 #: internal/web/templates/manager/websitebuilder.html:221
-#: internal/web/templates/manager/wp/single.html:1828
+#: internal/web/templates/manager/wp/single.html:1830
 msgid "Confirm Detach"
 msgstr "ຢືນຢັນການແຍກອອກ"
 
@@ -14058,7 +14049,7 @@ msgstr "ກຳລັງດຳເນີນຕົວຕິດຕັ້ງ %(name)s
 msgid "Registering cron job and saving to Site Manager"
 msgstr "ກຳລັງລົງທະບຽນ cron job ແລະ ບັນທຶກໄປໃສ່ Site Manager"
 
-#: internal/web/templates/manager/_cms_install_shared.html:566
+#: internal/web/templates/manager/_cms_install_shared.html:568
 #: internal/web/templates/manager/drupal_install.html:297
 #: internal/web/templates/manager/flarum_install.html:317
 #: internal/web/templates/manager/joomla_install.html:294
@@ -15797,7 +15788,7 @@ msgstr "ເລີ່ມການລົບແອັບພລິເຄຊັນແ
 #: internal/web/templates/manager/n8n_app.html:707
 #: internal/web/templates/manager/python_node_apps.html:1343
 #: internal/web/templates/manager/websitebuilder.html:345
-#: internal/web/templates/manager/wp/single.html:2108
+#: internal/web/templates/manager/wp/single.html:2114
 msgid "An error occurred fetching folder size from the container."
 msgstr "ເກີດຂໍ້ຜິດພາດໃນການດຶງຂະໜາດໂຟນເດີຈາກຄອນເທນເນີ."
 
@@ -16582,7 +16573,7 @@ msgid "No new installations found."
 msgstr "ບໍ່ພົບການຕິດຕັ້ງໃໝ່."
 
 #: internal/web/templates/manager/sites.html:189
-#: internal/web/templates/manager/wp/list.html:386
+#: internal/web/templates/manager/wp/list.html:385
 msgid "Error occurred during scan. Try again."
 msgstr "ເກີດຂໍ້ຜິດພາດໃນລະຫວ່າງການສະແກນ. ກະລຸນາລອງໃໝ່."
 
@@ -17483,27 +17474,27 @@ msgstr ""
 "ໃນຕົວທ່ອງເວັບຕ່າງໆ. ຢູ່ບ່ອນນີ້ທ່ານສາມາດເບິ່ງໄດ້ວ່າເວັບໄຊທ໌ນີ້ຖືກ Google "
 "ໝາຍວ່າເປັນອັນຕະລາຍໃນປັດຈຸບັນຫຼືບໍ່."
 
-#: internal/web/templates/manager/wp/_shared.html:162
+#: internal/web/templates/manager/wp/_shared.html:170
 msgid "No description available."
 msgstr "ບໍ່ມີຄຳອະທິບາຍ."
 
-#: internal/web/templates/manager/wp/_shared.html:226
+#: internal/web/templates/manager/wp/_shared.html:234
 msgid "Last checked"
 msgstr "ກວດສອບລ້າສຸດເມື່ອ"
 
-#: internal/web/templates/manager/wp/_shared.html:292
+#: internal/web/templates/manager/wp/_shared.html:300
 msgid "Checking website status..."
 msgstr "ກຳລັງກວດສອບສະຖານະເວັບໄຊທ໌..."
 
-#: internal/web/templates/manager/wp/_shared.html:304
+#: internal/web/templates/manager/wp/_shared.html:312
 msgid "No unsafe content found"
 msgstr "ບໍ່ພົບເນື້ອຫາທີ່ບໍ່ປອດໄພ"
 
-#: internal/web/templates/manager/wp/_shared.html:306
+#: internal/web/templates/manager/wp/_shared.html:314
 msgid "The website is flagged for threats:"
 msgstr "ເວັບໄຊທ໌ນີ້ຖືກທຳເຄື່ອງໝາຍວ່າມີໄພຄຸກຄາມ:"
 
-#: internal/web/templates/manager/wp/_shared.html:317
+#: internal/web/templates/manager/wp/_shared.html:325
 msgid "Failed to check the website"
 msgstr "ບໍ່ສາມາດກວດສອບເວັບໄຊທ໌ໄດ້"
 
@@ -17775,20 +17766,20 @@ msgid "An error occurred while removing WordPress. Please try again."
 msgstr "ເກີດຂໍ້ຜິດພາດໃນຂະນະທີ່ລຶບ WordPress. ກະລຸນາລອງໃໝ່."
 
 #: internal/web/templates/manager/wp/list.html:256
-#: internal/web/templates/manager/wp/single.html:1889
+#: internal/web/templates/manager/wp/single.html:1891
 msgid "WordPress detach process started. Please wait."
 msgstr "ເລີ່ມຂະບວນການຖອນການເຊື່ອມຕໍ່ WordPress ແລ້ວ. ກະລຸນາລໍຖ້າ."
 
 #: internal/web/templates/manager/wp/list.html:267
-#: internal/web/templates/manager/wp/single.html:1900
+#: internal/web/templates/manager/wp/single.html:1902
 msgid "An error occurred while detaching WordPress. Please try again."
 msgstr "ເກີດຂໍ້ຜິດພາດໃນຂະນະທີ່ຖອນການເຊື່ອມຕໍ່ WordPress. ກະລຸນາລອງໃໝ່."
 
-#: internal/web/templates/manager/wp/list.html:342
+#: internal/web/templates/manager/wp/list.html:341
 msgid "No WordPress Installations"
 msgstr "ບໍ່ມີການຕິດຕັ້ງ WordPress"
 
-#: internal/web/templates/manager/wp/list.html:344
+#: internal/web/templates/manager/wp/list.html:343
 msgid ""
 "No WordPress sites managed via OpenPanel. Install a new WordPress site or "
 "scan to find existing installations."
@@ -17796,33 +17787,33 @@ msgstr ""
 "ບໍ່ມີເວັບໄຊ WordPress ທີ່ຈັດການຜ່ານ OpenPanel. ຕິດຕັ້ງເວັບໄຊ WordPress ໃໝ່ "
 "ຫຼື ສະແກນຫາການຕິດຕັ້ງທີ່ມີຢູ່ແລ້ວ."
 
-#: internal/web/templates/manager/wp/list.html:346
+#: internal/web/templates/manager/wp/list.html:345
 #: internal/web/templates/system/cronjobs.html:489
 #: internal/web/templates/user/favorites.html:131
 msgid "View Documentation"
 msgstr "ເບິ່ງເອກະສານແນະນຳ"
 
-#: internal/web/templates/manager/wp/list.html:365
+#: internal/web/templates/manager/wp/list.html:364
 msgid "Scanning started..."
 msgstr "ກຳລັງເລີ່ມສະແກນ..."
 
-#: internal/web/templates/manager/wp/list.html:376
+#: internal/web/templates/manager/wp/list.html:375
 msgid "No installations found."
 msgstr "ບໍ່ພົບການຕິດຕັ້ງ."
 
-#: internal/web/templates/manager/wp/list.html:380
+#: internal/web/templates/manager/wp/list.html:379
 msgid "Scan skipped. WordPress installation is currently running."
 msgstr "ຂ້າມການສະແກນ. ລະບົບກຳລັງຕິດຕັ້ງ WordPress ຢູ່."
 
-#: internal/web/templates/manager/wp/list.html:395
+#: internal/web/templates/manager/wp/list.html:394
 msgid "Data refresh in progress... Please wait."
 msgstr "ກຳລັງຣີເຟຣຊຂໍ້ມູນ... ກະລຸນາລໍຖ້າ."
 
-#: internal/web/templates/manager/wp/list.html:401
+#: internal/web/templates/manager/wp/list.html:400
 msgid "Refresh completed."
 msgstr "ຣີເຟຣຊສຳເລັດແລ້ວ."
 
-#: internal/web/templates/manager/wp/list.html:405
+#: internal/web/templates/manager/wp/list.html:404
 msgid "Error occurred during refresh."
 msgstr "ເກີດຂໍ້ຜິດພາດໃນລະຫວ່າງການຣີເຟຣຊ."
 
@@ -18180,40 +18171,40 @@ msgstr "ບັນທຶກການຕັ້ງຄ່າການອັບເດ
 msgid "Saving update preferences... Please wait."
 msgstr "ກຳລັງບັນທຶກການຕັ້ງຄ່າການອັບເດດ... ກະລຸນາລໍຖ້າ."
 
-#: internal/web/templates/manager/wp/single.html:1358
+#: internal/web/templates/manager/wp/single.html:1359
 msgid "Saving general settings... Please wait."
 msgstr "ກຳລັງບັນທຶກການຕັ້ງຄ່າທົ່ວໄປ... ກະລຸນາລໍຖ້າ."
 
-#: internal/web/templates/manager/wp/single.html:1404
+#: internal/web/templates/manager/wp/single.html:1405
 msgid "Error fetching debug info. Refresh the page."
 msgstr "ເກີດຂໍ້ຜິດພາດໃນການດຶງຂໍ້ມູນດີບັກ. ກະລຸນາໂຫຼດໜ້າຄືນໃໝ່."
 
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/system/error_logs.html:153
 msgid "Critical"
 msgstr "ຮ້າຍແຮງ"
 
-#: internal/web/templates/manager/wp/single.html:1423
+#: internal/web/templates/manager/wp/single.html:1424
 #: internal/web/templates/system/error_logs.html:153
 msgid "Notice"
 msgstr "ແຈ້ງເຕືອນ"
 
-#: internal/web/templates/manager/wp/single.html:1440
+#: internal/web/templates/manager/wp/single.html:1441
 msgid "Latest PHP, web server and HTTP 5xx errors for this website."
 msgstr "ຂໍ້ຜິດພາດ PHP, ເວັບເຊີບເວີ ແລະ HTTP 5xx ລ່າສຸດຂອງເວັບໄຊນີ້."
 
-#: internal/web/templates/manager/wp/single.html:1442
-#: internal/web/templates/manager/wp/single.html:1472
+#: internal/web/templates/manager/wp/single.html:1443
+#: internal/web/templates/manager/wp/single.html:1473
 #: internal/web/templates/system/waf.html:349
 msgid "View Logs"
 msgstr "ເບິ່ງບັນທຶກ (Logs)"
 
-#: internal/web/templates/manager/wp/single.html:1449
+#: internal/web/templates/manager/wp/single.html:1450
 #: internal/web/templates/system/error_logs.html:106
 msgid "No errors found for these filters."
 msgstr "ບໍ່ພົບຂໍ້ຜິດພາດສຳລັບຕົວກອງເຫຼົ່ານີ້."
 
-#: internal/web/templates/manager/wp/single.html:1479
+#: internal/web/templates/manager/wp/single.html:1480
 msgid ""
 "The options below allow you to manage the native WordPress debugging tools, "
 "enabling and disabling these tools in the wp-config.php file. It is not "
@@ -18225,59 +18216,59 @@ msgstr ""
 "ບໍ່ແນະນຳໃຫ້ໃຊ້ຕົວເລືອກເຫຼົ່ານີ້ໃນເວັບໄຊທ໌ທີ່ໃຊ້ງານຈິງ "
 "ເພາະມັນມີໄວ້ສຳລັບການພັດທະນາ ແລະ ທົດສອບເທົ່ານັ້ນ. ອ້າງອີງຈາກ"
 
-#: internal/web/templates/manager/wp/single.html:1479
+#: internal/web/templates/manager/wp/single.html:1480
 msgid "Debugging in WordPress"
 msgstr "ການດີບັກໃນ WordPress"
 
-#: internal/web/templates/manager/wp/single.html:1479
+#: internal/web/templates/manager/wp/single.html:1480
 msgid "article for more information on these options."
 msgstr "ບົດຄວາມສຳລັບຂໍ້ມູນເພີ່ມເຕີມກ່ຽວກັບຕົວເລືອກເຫຼົ່ານີ້."
 
-#: internal/web/templates/manager/wp/single.html:1490
-#: internal/web/templates/manager/wp/single.html:1496
+#: internal/web/templates/manager/wp/single.html:1491
+#: internal/web/templates/manager/wp/single.html:1497
 msgid "WP_DEBUG"
 msgstr "WP_DEBUG"
 
-#: internal/web/templates/manager/wp/single.html:1491
+#: internal/web/templates/manager/wp/single.html:1492
 msgid "WordPress debug mode."
 msgstr "ໂໝດດີບັກຂອງ WordPress."
 
-#: internal/web/templates/manager/wp/single.html:1498
+#: internal/web/templates/manager/wp/single.html:1499
 msgid "Enable WP_DEBUG mode"
 msgstr "ເປີດໃຊ້ໂໝດ WP_DEBUG"
 
-#: internal/web/templates/manager/wp/single.html:1509
-#: internal/web/templates/manager/wp/single.html:1515
+#: internal/web/templates/manager/wp/single.html:1510
+#: internal/web/templates/manager/wp/single.html:1516
 msgid "WP_DEBUG_LOG"
 msgstr "WP_DEBUG_LOG"
 
-#: internal/web/templates/manager/wp/single.html:1510
+#: internal/web/templates/manager/wp/single.html:1511
 msgid "Save all errors to the debug.log file inside the wp-content directory."
 msgstr "ບັນທຶກຂໍ້ຜິດພາດທັງໝົດລົງໃນໄຟລ໌ debug.log ພາຍໃນໄດເຣັກທໍຣີ wp-content."
 
-#: internal/web/templates/manager/wp/single.html:1517
+#: internal/web/templates/manager/wp/single.html:1518
 msgid "Enable WP_DEBUG_LOG"
 msgstr "ເປີດໃຊ້ WP_DEBUG_LOG"
 
-#: internal/web/templates/manager/wp/single.html:1528
-#: internal/web/templates/manager/wp/single.html:1534
+#: internal/web/templates/manager/wp/single.html:1529
+#: internal/web/templates/manager/wp/single.html:1535
 msgid "WP_DEBUG_DISPLAY"
 msgstr "WP_DEBUG_DISPLAY"
 
-#: internal/web/templates/manager/wp/single.html:1529
+#: internal/web/templates/manager/wp/single.html:1530
 msgid "Show debug messages inside the HTML pages"
 msgstr "ສະແດງຂໍ້ຄວາມດີບັກພາຍໃນໜ້າ HTML"
 
-#: internal/web/templates/manager/wp/single.html:1536
+#: internal/web/templates/manager/wp/single.html:1537
 msgid "Enable WP_DEBUG_DISPLAY"
 msgstr "ເປີດໃຊ້ WP_DEBUG_DISPLAY"
 
-#: internal/web/templates/manager/wp/single.html:1547
-#: internal/web/templates/manager/wp/single.html:1553
+#: internal/web/templates/manager/wp/single.html:1548
+#: internal/web/templates/manager/wp/single.html:1554
 msgid "SCRIPT_DEBUG"
 msgstr "SCRIPT_DEBUG"
 
-#: internal/web/templates/manager/wp/single.html:1548
+#: internal/web/templates/manager/wp/single.html:1549
 msgid ""
 "Force WordPress to use the non-minified versions of core CSS and JavaScript "
 "files. This is useful when you are testing changes made to .js and .css "
@@ -18287,16 +18278,16 @@ msgstr ""
 "ນີ້ມີປະໂຫຍດໃນເວລາທີ່ທ່ານກໍາລັງທົດສອບການປ່ຽນແປງທີ່ເກີດຂຶ້ນກັບໄຟລ໌ .js ແລະ "
 ".css."
 
-#: internal/web/templates/manager/wp/single.html:1555
+#: internal/web/templates/manager/wp/single.html:1556
 msgid "Enable SCRIPT_DEBUG"
 msgstr "ເປີດໃຊ້ SCRIPT_DEBUG"
 
-#: internal/web/templates/manager/wp/single.html:1566
-#: internal/web/templates/manager/wp/single.html:1572
+#: internal/web/templates/manager/wp/single.html:1567
+#: internal/web/templates/manager/wp/single.html:1573
 msgid "SAVEQUERIES"
 msgstr "SAVEQUERIES"
 
-#: internal/web/templates/manager/wp/single.html:1567
+#: internal/web/templates/manager/wp/single.html:1568
 msgid ""
 "Save database queries to an array that can be displayed to help analyze "
 "them."
@@ -18304,91 +18295,91 @@ msgstr ""
 "ບັນທຶກການສອບຖາມຖານຂໍ້ມູນ (queries) ໄວ້ໃນອາເຣ (array) "
 "ທີ່ສາມາດສະແດງອອກມາເພື່ອຊ່ວຍໃນການວິເຄາະ."
 
-#: internal/web/templates/manager/wp/single.html:1574
+#: internal/web/templates/manager/wp/single.html:1575
 msgid "Enable SAVEQUERIES"
 msgstr "ເປີດໃຊ້ SAVEQUERIES"
 
-#: internal/web/templates/manager/wp/single.html:1584
+#: internal/web/templates/manager/wp/single.html:1585
 msgid "Save Debugging"
 msgstr "ບັນທຶກການດີບັກ (Debugging)"
 
-#: internal/web/templates/manager/wp/single.html:1592
+#: internal/web/templates/manager/wp/single.html:1593
 msgid "Saving debugging options... Please wait."
 msgstr "ກຳລັງບັນທຶກຕົວເລືອກການດີບັກ... ກະລຸນາລໍຖ້າ."
 
-#: internal/web/templates/manager/wp/single.html:1618
+#: internal/web/templates/manager/wp/single.html:1620
 msgid "Clone a WordPress instance with configured themes and plugins."
 msgstr "ໂຄລນອິນສະແຕນ WordPress ພ້ອມທີມ ແລະ ປລັກອິນທີ່ຕັ້ງຄ່າໄວ້."
 
-#: internal/web/templates/manager/wp/single.html:1814
-#: internal/web/templates/manager/wp/single.html:1824
+#: internal/web/templates/manager/wp/single.html:1816
+#: internal/web/templates/manager/wp/single.html:1826
 msgid "Remove the"
 msgstr "ເອົາ"
 
-#: internal/web/templates/manager/wp/single.html:1814
+#: internal/web/templates/manager/wp/single.html:1816
 msgid "website from WP Manager."
 msgstr "ເວັບໄຊທ໌ອອກຈາກ WP Manager."
 
-#: internal/web/templates/manager/wp/single.html:1821
+#: internal/web/templates/manager/wp/single.html:1823
 msgid "Detach WordPress"
 msgstr "ແຍກ WordPress ອອກ"
 
-#: internal/web/templates/manager/wp/single.html:1824
+#: internal/web/templates/manager/wp/single.html:1826
 msgid "website from this manager without actually deleting any files."
 msgstr "ເວັບໄຊທ໌ອອກຈາກຕົວຈັດການນີ້ໂດຍບໍ່ໄດ້ລົບໄຟລ໌ແທ້."
 
-#: internal/web/templates/manager/wp/single.html:1825
+#: internal/web/templates/manager/wp/single.html:1827
 msgid "All website data such as files, crons and database remains."
 msgstr "ຂໍ້ມູນເວັບໄຊທ໌ທັງໝົດ ເຊັ່ນ ໄຟລ໌, cron ແລະ ຖານຂໍ້ມູນຍັງຄົງຢູ່."
 
-#: internal/web/templates/manager/wp/single.html:1846
+#: internal/web/templates/manager/wp/single.html:1848
 msgid "Permanently delete WordPress files & database."
 msgstr "ລຶບໄຟລ໌ ແລະ ຖານຂໍ້ມູນຂອງ WordPress ຖາວອນ."
 
-#: internal/web/templates/manager/wp/single.html:1853
+#: internal/web/templates/manager/wp/single.html:1855
 msgid "Uninstall WordPress"
 msgstr "ຖອນການຕິດຕັ້ງ WordPress"
 
-#: internal/web/templates/manager/wp/single.html:1856
+#: internal/web/templates/manager/wp/single.html:1858
 msgid "Delete the"
 msgstr "ລຶບ"
 
-#: internal/web/templates/manager/wp/single.html:1856
+#: internal/web/templates/manager/wp/single.html:1858
 msgid "website and all its files and database."
 msgstr "ເວັບໄຊທ໌ພ້ອມທັງໄຟລ໌ ແລະ ຖານຂໍ້ມູນທັງໝົດ."
 
-#: internal/web/templates/manager/wp/single.html:1857
+#: internal/web/templates/manager/wp/single.html:1859
 msgid ""
 "All WordPress data will be permanently deleted. There is no coming back "
 "after you press delete."
 msgstr ""
 "ຂໍ້ມູນ WordPress ທັງໝົດຈະຖືກລົບຖາວອນ. ທ່ານຈະບໍ່ສາມາດກູ້ຄືນໄດ້ຫຼັງຈາກກົດລົບ."
 
-#: internal/web/templates/manager/wp/single.html:1860
+#: internal/web/templates/manager/wp/single.html:1862
 msgid "Confirm Uninstall"
 msgstr "ຢືນຢັນການຖອນການຕິດຕັ້ງ"
 
-#: internal/web/templates/manager/wp/single.html:1875
+#: internal/web/templates/manager/wp/single.html:1877
 msgid "WordPress uninstall process started. Please wait."
 msgstr "ຂະບວນການຖອນການຕິດຕັ້ງ WordPress ເລີ່ມແລ້ວ. ກະລຸນາລໍຖ້າ."
 
-#: internal/web/templates/manager/wp/single.html:1962
+#: internal/web/templates/manager/wp/single.html:1964
 msgid "An error occurred fetching DB size."
 msgstr "ເກີດຂໍ້ຜິດພາດໃນການດຶງຂະໜາດຖານຂໍ້ມູນ."
 
-#: internal/web/templates/manager/wp/single.html:2057
+#: internal/web/templates/manager/wp/single.html:2062
 msgid "Update in progress..."
 msgstr "ກຳລັງອັບເດດ..."
 
-#: internal/web/templates/manager/wp/single.html:2063
+#: internal/web/templates/manager/wp/single.html:2069
 msgid "WordPress updated successfully"
 msgstr "ອັບເດດ WordPress ສຳເລັດແລ້ວ"
 
-#: internal/web/templates/manager/wp/single.html:2064
+#: internal/web/templates/manager/wp/single.html:2070
 msgid "WordPress updated successfully."
 msgstr "ອັບເດດ WordPress ສຳເລັດແລ້ວ."
 
-#: internal/web/templates/manager/wp/single.html:2073
+#: internal/web/templates/manager/wp/single.html:2079
 msgid "Update failed."
 msgstr "ອັບເດດບໍ່ສຳເລັດ."
 
@@ -18492,6 +18483,8 @@ msgstr "ບໍ່ສາມາດໃຊ້ງານໄດ້ໃນຂະນະທ
 
 #: internal/web/templates/mongodb/databases.html:71
 #: internal/web/templates/mysql/databases.html:300
+#: internal/web/templates/mysql/databases.html:533
+#: internal/web/templates/mysql/databases.html:550
 #: internal/web/templates/psql/databases.html:137
 msgid "System Database"
 msgstr "ຖານຂໍ້ມູນລະບົບ"
@@ -18519,7 +18512,7 @@ msgid "Create your first database"
 msgstr "ສ້າງຖານຂໍ້ມູນທຳອິດຂອງທ່ານ"
 
 #: internal/web/templates/mongodb/databases.html:195
-#: internal/web/templates/mysql/databases.html:548
+#: internal/web/templates/mysql/databases.html:567
 #: internal/web/templates/mysql/users.html:179
 #: internal/web/templates/psql/databases.html:261
 msgid "The page will refresh in"
@@ -18840,27 +18833,27 @@ msgstr "ຜູ້ໃຊ້ທີ່ຖືກມອບໝາຍ"
 msgid "Manage privileges"
 msgstr "ຈັດການສິດທິ"
 
-#: internal/web/templates/mysql/databases.html:578
+#: internal/web/templates/mysql/databases.html:597
 msgid "Loading tables..."
 msgstr "ກຳລັງໂຫຼດຕາຕະລາງ..."
 
-#: internal/web/templates/mysql/databases.html:579
+#: internal/web/templates/mysql/databases.html:598
 msgid "No tables in this database."
 msgstr "ບໍ່ມີຕາຕະລາງໃນຖານຂໍ້ມູນນີ້."
 
-#: internal/web/templates/mysql/databases.html:580
+#: internal/web/templates/mysql/databases.html:599
 msgid "Table"
 msgstr "ຕາຕະລາງ"
 
-#: internal/web/templates/mysql/databases.html:581
+#: internal/web/templates/mysql/databases.html:600
 msgid "Engine"
 msgstr "Engine"
 
-#: internal/web/templates/mysql/databases.html:583
+#: internal/web/templates/mysql/databases.html:602
 msgid "Unused"
 msgstr "ບໍ່ໄດ້ໃຊ້"
 
-#: internal/web/templates/mysql/databases.html:588
+#: internal/web/templates/mysql/databases.html:607
 msgid ""
 "Rebuilds every table to free up unused space and defragment indexes. Tables "
 "are briefly locked while they are rebuilt, so run this when your site is "
@@ -18870,7 +18863,7 @@ msgstr ""
 "ຕາຕະລາງຈະຖືກລັອກໄລຍະສັ້ນໆໃນຂະນະສ້າງໃໝ່, "
 "ສະນັ້ນໃຫ້ແລ່ນເມື່ອເວັບໄຊຂອງທ່ານບໍ່ຄ່ອຍມີຄົນໃຊ້."
 
-#: internal/web/templates/mysql/databases.html:589
+#: internal/web/templates/mysql/databases.html:608
 msgid ""
 "Checks every table for damage and fixes it. Only MyISAM, Aria and ARCHIVE "
 "tables can be repaired, InnoDB tables recover on their own and are skipped."
@@ -18878,55 +18871,55 @@ msgstr ""
 "ກວດທຸກຕາຕະລາງຫາຄວາມເສຍຫາຍ ແລະ ແກ້ໄຂ. ສາມາດສ້ອມແປງໄດ້ສະເພາະຕາຕະລາງ MyISAM, "
 "Aria ແລະ ARCHIVE, ຕາຕະລາງ InnoDB ຟື້ນຕົວເອງ ແລະ ຈະຖືກຂ້າມ."
 
-#: internal/web/templates/mysql/databases.html:590
+#: internal/web/templates/mysql/databases.html:609
 msgid "Optimize tables"
 msgstr "ປັບປຸງຕາຕະລາງ"
 
-#: internal/web/templates/mysql/databases.html:591
+#: internal/web/templates/mysql/databases.html:610
 msgid "Repair tables"
 msgstr "ສ້ອມແປງຕາຕະລາງ"
 
-#: internal/web/templates/mysql/databases.html:592
+#: internal/web/templates/mysql/databases.html:611
 msgid "Optimizing..."
 msgstr "ກຳລັງປັບປຸງ..."
 
-#: internal/web/templates/mysql/databases.html:593
+#: internal/web/templates/mysql/databases.html:612
 msgid "Repairing..."
 msgstr "ກຳລັງສ້ອມແປງ..."
 
-#: internal/web/templates/mysql/databases.html:594
+#: internal/web/templates/mysql/databases.html:613
 msgid "OK"
 msgstr "OK"
 
-#: internal/web/templates/mysql/databases.html:595
+#: internal/web/templates/mysql/databases.html:614
 msgid "Rebuilt"
 msgstr "ສ້າງໃໝ່ແລ້ວ"
 
-#: internal/web/templates/mysql/databases.html:596
+#: internal/web/templates/mysql/databases.html:615
 msgid "Not needed"
 msgstr "ບໍ່ຈຳເປັນ"
 
-#: internal/web/templates/mysql/databases.html:598
+#: internal/web/templates/mysql/databases.html:617
 msgid "tables"
 msgstr "ຕາຕະລາງ"
 
-#: internal/web/templates/mysql/databases.html:599
+#: internal/web/templates/mysql/databases.html:618
 msgid "unused"
 msgstr "ບໍ່ໄດ້ໃຊ້"
 
-#: internal/web/templates/mysql/databases.html:600
+#: internal/web/templates/mysql/databases.html:619
 msgid "Freed"
 msgstr "ປົດປ່ອຍແລ້ວ"
 
-#: internal/web/templates/mysql/databases.html:601
+#: internal/web/templates/mysql/databases.html:620
 msgid "All tables done."
 msgstr "ຕາຕະລາງທັງໝົດສຳເລັດແລ້ວ."
 
-#: internal/web/templates/mysql/databases.html:602
+#: internal/web/templates/mysql/databases.html:621
 msgid "failed, hover the result to see why."
 msgstr "ລົ້ມເຫຼວ, ວາງເມົ້າເທິງຜົນລັບເພື່ອເບິ່ງສາເຫດ."
 
-#: internal/web/templates/mysql/databases.html:709
+#: internal/web/templates/mysql/databases.html:728
 msgid "Add new database"
 msgstr "ເພີ່ມຖານຂໍ້ມູນໃໝ່"
 
