@@ -81,6 +81,8 @@ FLASH_CALL_RE = re.compile(r'\b(?:flash\.Add|(?!Test)\w*[Ff]lash\w*)\(')
 
 # request-locale translations built outside templates: web.Tr(a, r, "Deleted %(name)s", "name", n)
 WEB_TR_RE = re.compile(r'\bTr\(\s*\w+,\s*\w+,\s*"((?:[^"\\]|\\.)*)"')
+# local translator closures, e.g. tr := requestTr(a, r) in webserverconf/errors.go and git/handlers.go
+GO_TR_RE = re.compile(r'(?:^|[^\w.])tr\(\s*"((?:[^"\\]|\\.)*)"')
 FLASH_ARG_RE = re.compile(r'(?:^|,)\s*"((?:[^"\\]|\\.)*)"\s*(?=,|$)')
 
 WEBSITES_RENDER_DISPATCH_GO = "internal/modules/websites/render_dispatch.go"
@@ -137,6 +139,8 @@ def extract(source_root):
                     for m in PAGE_TITLE_RE.finditer(line):
                         add(results, m.group(1), None, rel, i)
                     for m in WEB_TR_RE.finditer(line):
+                        add(results, m.group(1), None, rel, i)
+                    for m in GO_TR_RE.finditer(line):
                         add(results, m.group(1), None, rel, i)
                     for m in ASSIGN_RE.finditer(line.rstrip()):
                         if " " in m.group(1):

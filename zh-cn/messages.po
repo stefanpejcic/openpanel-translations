@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-26 11:00+0200\n"
+"POT-Creation-Date: 2026-10-29 14:36+0200\n"
 "PO-Revision-Date: 2026-01-15 00:00+0500\n"
 "Last-Translator: Hasnain ALi <me@hasnainali9.com>\n"
 "Language-Team: Chinese  <LL@li.org>\n"
@@ -412,19 +412,19 @@ msgstr "国家/地区"
 msgid "Browser"
 msgstr "浏览器"
 
-#: internal/modules/account/passwords.go:38
+#: internal/modules/account/passwords.go:40
 msgid "Your account is suspended. Please contact support."
 msgstr "您的账户已被暂停。请联系客服。"
 
-#: internal/modules/account/passwords.go:40
+#: internal/modules/account/passwords.go:42
 msgid "Unrecognized account. Please check username."
 msgstr "无法识别的账户。请检查用户名。"
 
-#: internal/modules/account/passwords.go:44
+#: internal/modules/account/passwords.go:46
 msgid "Unable to connect to database."
 msgstr "无法连接到数据库。"
 
-#: internal/modules/account/passwords.go:67
+#: internal/modules/account/passwords.go:69
 msgid "Invalid password. Please try again."
 msgstr "密码错误。请重试。"
 
@@ -643,7 +643,7 @@ msgstr ""
 "返回的操作。读取类操作会立即运行。会更改内容的操作将以确认卡片的形式显示给用户，只有用户批准后才会运行，因此不要事先在文字中请求许可。"
 
 #: internal/modules/appinstall/install.go:109
-#: internal/modules/cmsapp/install.go:47 internal/modules/phpapp/install.go:39
+#: internal/modules/cmsapp/install.go:48 internal/modules/phpapp/install.go:39
 #: internal/modules/wordpress/install.go:51
 msgid ""
 "You have reached the maximum number of sites allowed.%(upgrade_message)s"
@@ -955,7 +955,7 @@ msgstr "将备份远程存储到 Dropbox 云存储。"
 #: internal/web/templates/files/clamav/quarantine.html:86
 #: internal/web/templates/files/clamav/quarantine.html:113
 #: internal/web/templates/files/trash.html:52
-#: internal/web/templates/files/trash_partials.html:170
+#: internal/web/templates/files/trash_partials.html:171
 msgid "Restore"
 msgstr "恢复"
 
@@ -999,6 +999,26 @@ msgid "Backup Wizard"
 msgstr "备份向导"
 
 #: internal/modules/backupwizard/render.go:41
+#: internal/modules/dashboard/sections.go:115
+#: internal/modules/dashboard/sections.go:128
+#: internal/modules/dashboard/sections.go:137
+#: internal/modules/dashboard/sections.go:240
+#: internal/modules/dashboard/sections.go:252
+#: internal/modules/dashboard/sections.go:261
+#: internal/modules/mysql/render.go:59 internal/web/sidebar.go:179
+#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
+#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
+#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
+#: internal/web/templates/dashboard/usage.html:78
+#: internal/web/templates/files/backup_restore.html:457
+#: internal/web/templates/files/backup_restore.html:560
+#: internal/web/templates/files/backup_restore.html:737
+#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
+#: static/js/tour-steps.js:261
+msgid "Databases"
+msgstr "数据库"
+
+#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:73
 #: internal/modules/dashboard/sections.go:74
 #: internal/modules/dashboard/sections.go:226
@@ -1018,26 +1038,6 @@ msgstr "备份向导"
 #: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
 msgid "Domains"
 msgstr "域名"
-
-#: internal/modules/backupwizard/render.go:41
-#: internal/modules/dashboard/sections.go:115
-#: internal/modules/dashboard/sections.go:128
-#: internal/modules/dashboard/sections.go:137
-#: internal/modules/dashboard/sections.go:240
-#: internal/modules/dashboard/sections.go:252
-#: internal/modules/dashboard/sections.go:261
-#: internal/modules/mysql/render.go:59 internal/web/sidebar.go:179
-#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
-#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
-#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
-#: internal/web/templates/dashboard/usage.html:78
-#: internal/web/templates/files/backup_restore.html:457
-#: internal/web/templates/files/backup_restore.html:560
-#: internal/web/templates/files/backup_restore.html:737
-#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
-#: static/js/tour-steps.js:261
-msgid "Databases"
-msgstr "数据库"
 
 #: internal/modules/backupwizard/render.go:41
 msgid "The home directory"
@@ -2504,16 +2504,16 @@ msgstr "编辑 CPU"
 msgid "Set the CPU limit for the selected containers:"
 msgstr "为所选容器设置 CPU 限制："
 
-#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
-#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
-msgid "0 = unlimited"
-msgstr "0 = 不限"
-
 #: internal/modules/docker/bulk.go:31
 #: internal/web/templates/docker/containers.html:18
 #: internal/web/templates/docker/containers.html:384
 msgid "cores"
 msgstr "核"
+
+#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
+#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
+msgid "0 = unlimited"
+msgstr "0 = 不限"
 
 #: internal/modules/docker/bulk.go:32
 msgid "Edit RAM"
@@ -3031,6 +3031,14 @@ msgid "Status"
 msgstr "状态"
 
 #: internal/modules/domains/render.go:60
+#: internal/web/templates/domains/domains.html:199
+#: internal/web/templates/emails/accounts.html:29
+#: internal/web/templates/emails/accounts.html:43
+#: internal/web/templates/files/backup_restore.html:785
+msgid "Suspended"
+msgstr "已暂停"
+
+#: internal/modules/domains/render.go:60
 #: internal/web/templates/domains/domains.html:203
 #: internal/web/templates/manager/n8n_app.html:111
 #: internal/web/templates/manager/python_node_apps.html:155
@@ -3038,14 +3046,6 @@ msgstr "状态"
 #: internal/web/templates/system/cronjobs.html:201
 msgid "Active"
 msgstr "活跃"
-
-#: internal/modules/domains/render.go:60
-#: internal/web/templates/domains/domains.html:199
-#: internal/web/templates/emails/accounts.html:29
-#: internal/web/templates/emails/accounts.html:43
-#: internal/web/templates/files/backup_restore.html:785
-msgid "Suspended"
-msgstr "已暂停"
 
 #: internal/modules/domains/render.go:63
 #: internal/web/templates/domains/domains.html:82
@@ -3055,27 +3055,14 @@ msgstr "PHP 版本"
 
 #: internal/modules/domains/render.go:75
 #: internal/web/templates/domains/domains.html:285
-msgid "AutoSSL"
-msgstr "AutoSSL"
-
-#: internal/modules/domains/render.go:75
-#: internal/web/templates/domains/domains.html:285
 #: internal/web/templates/domains/ssl.html:52
 msgid "Custom SSL"
 msgstr "自定义 SSL"
 
-#: internal/modules/domains/render.go:77
-#: internal/web/templates/domains/dns.html:109
-#: internal/web/templates/domains/domains.html:77
-#: internal/web/templates/domains/domains.html:145
-#: internal/web/templates/domains/dynamic_dns.html:166
-#: internal/web/templates/files/filemanager.html:124
-#: internal/web/templates/files/filemanager_partials.html:478
-#: internal/web/templates/files/trash.html:80
-#: internal/web/templates/files/trash_partials.html:54
-#: internal/web/templates/manager/sites.html:207
-msgid "Type"
-msgstr "类型"
+#: internal/modules/domains/render.go:75
+#: internal/web/templates/domains/domains.html:285
+msgid "AutoSSL"
+msgstr "AutoSSL"
 
 #: internal/modules/domains/render.go:77
 #: internal/web/templates/docker/container_form.html:240
@@ -3108,6 +3095,19 @@ msgstr "域名"
 #: internal/web/templates/domains/dynamic_dns.html:165
 msgid "Subdomain"
 msgstr "子域名"
+
+#: internal/modules/domains/render.go:77
+#: internal/web/templates/domains/dns.html:109
+#: internal/web/templates/domains/domains.html:77
+#: internal/web/templates/domains/domains.html:145
+#: internal/web/templates/domains/dynamic_dns.html:166
+#: internal/web/templates/files/filemanager.html:124
+#: internal/web/templates/files/filemanager_partials.html:478
+#: internal/web/templates/files/trash.html:80
+#: internal/web/templates/files/trash_partials.html:54
+#: internal/web/templates/manager/sites.html:207
+msgid "Type"
+msgstr "类型"
 
 #: internal/modules/domains/render.go:79
 #: internal/web/templates/domains/domains.html:85
@@ -3288,15 +3288,15 @@ msgstr "所选账户的新邮箱大小（GB）："
 #: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:526
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
-msgid "Change password"
-msgstr "更改密码"
+#: internal/web/templates/files/ftp_password.html:55
+msgid "New password"
+msgstr "新密码"
 
 #: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:526
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
-#: internal/web/templates/files/ftp_password.html:55
-msgid "New password"
-msgstr "新密码"
+msgid "Change password"
+msgstr "更改密码"
 
 #: internal/modules/emails/bulk.go:22
 msgid "Set this password for the selected accounts:"
@@ -3392,7 +3392,7 @@ msgstr "错误：文件无效 - 第一列必须包含有效的邮箱地址。"
 msgid "Error: No import data found, please try again."
 msgstr "错误：未找到导入数据，请重试。"
 
-#: internal/modules/emails/migrate.go:811
+#: internal/modules/emails/migrate.go:845
 msgid "Error: Could not open the migrations folder."
 msgstr "错误：无法打开迁移文件夹。"
 
@@ -3875,6 +3875,86 @@ msgid ""
 " in place."
 msgstr "删除所选仓库？已部署到网站的文件会保留。"
 
+#: internal/modules/git/handlers.go:308
+msgid ""
+"Repository %(repo)s was added, but its first deployment failed: %(error)s"
+msgstr ""
+
+#: internal/modules/git/handlers.go:310
+msgid ""
+"Local repository %(repo)s created. Push to branch %(branch)s to deploy it to"
+" %(dir)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:312
+msgid "Repository %(repo)s cloned and branch %(branch)s deployed to %(dir)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:314
+msgid ""
+"Repository %(repo)s cloned (branch %(branch)s), nothing was deployed yet."
+msgstr ""
+
+#: internal/modules/git/handlers.go:321 internal/modules/git/handlers.go:341
+msgid "Repository %(repo)s not found."
+msgstr ""
+
+#: internal/modules/git/handlers.go:325
+msgid "Pulling %(repo)s failed: %(error)s"
+msgstr ""
+
+#: internal/modules/git/handlers.go:330
+msgid "%(repo)s is already up to date, no new commits on %(branch)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:334
+msgid ""
+"Pulled %(count)s new commit(s) into %(repo)s on %(branch)s and deployed "
+"%(commit)s to %(dir)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:336
+msgid ""
+"Pulled %(count)s new commit(s) into %(repo)s on %(branch)s, latest is "
+"%(commit)s. Not deployed yet."
+msgstr ""
+
+#: internal/modules/git/handlers.go:344
+msgid "Deploying %(repo)s failed: %(error)s"
+msgstr ""
+
+#: internal/modules/git/handlers.go:348
+msgid "Deployed %(repo)s (%(branch)s at %(commit)s) to %(dir)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:350
+msgid "Deploy actions ran in %(container)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:356
+msgid "Could not save settings for %(repo)s: %(error)s"
+msgstr ""
+
+#: internal/modules/git/handlers.go:360
+msgid ""
+"Settings saved for %(repo)s: branch %(branch)s, %(mode)s, deploying to "
+"%(dir)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:368
+msgid "New push password generated for %(repo)s, the old one no longer works."
+msgstr ""
+
+#: internal/modules/git/handlers.go:373
+msgid "Could not remove %(repo)s: %(error)s"
+msgstr ""
+
+#: internal/modules/git/handlers.go:376
+msgid ""
+"Repository %(repo)s removed. Files already deployed to %(dir)s were left in "
+"place."
+msgstr ""
+
 #: internal/modules/goaccess/goaccess.go:39
 msgid ""
 "Stats file for domain %(domain_name)s not found. Data is generated every "
@@ -3897,7 +3977,7 @@ msgstr "所有 IP 地址已成功从封锁列表移除，现在可以访问网�
 msgid "Failed to block IP addresses - please try again"
 msgstr "无法封禁 IP 地址 - 请重试"
 
-#: internal/modules/joomla/install.go:233
+#: internal/modules/joomla/install.go:238
 msgid "Joomla installed successfully on %(selected_domain)s"
 msgstr "Joomla 已成功安装在 %(selected_domain)s"
 
@@ -3936,11 +4016,11 @@ msgstr "恶意软件隔离区"
 msgid "Malware Scan Logs"
 msgstr "恶意软件扫描日志"
 
-#: internal/modules/matomo/install.go:273
+#: internal/modules/matomo/install.go:278
 msgid "Matomo installed successfully on %(selected_domain)s"
 msgstr "Matomo 已成功安装在 %(selected_domain)s"
 
-#: internal/modules/mediawiki/install.go:256
+#: internal/modules/mediawiki/install.go:260
 msgid "MediaWiki installed successfully on %(selected_domain)s"
 msgstr "MediaWiki 已成功安装在 %(selected_domain)s"
 
@@ -4454,7 +4534,7 @@ msgid ""
 "granted %(role)s."
 msgstr "已成功创建数据库 %(database_name)s 和用户 %(db_user)s，并授予 %(role)s 角色。"
 
-#: internal/modules/moodle/install.go:286
+#: internal/modules/moodle/install.go:291
 msgid "Moodle installed successfully on %(selected_domain)s"
 msgstr "Moodle 已成功安装在 %(selected_domain)s"
 
@@ -4817,7 +4897,7 @@ msgstr "删除用户时出错：%(error)s"
 msgid "Error changing password: %(error)s"
 msgstr "更改密码时出错：%(error)s"
 
-#: internal/modules/nextcloud/install.go:252
+#: internal/modules/nextcloud/install.go:256
 msgid "Nextcloud installed successfully on %(selected_domain)s"
 msgstr "Nextcloud 已成功安装在 %(selected_domain)s"
 
@@ -4829,7 +4909,7 @@ msgstr "OJS 已成功安装在 %(selected_domain)s"
 msgid "Database name or user not found in config.inc.php"
 msgstr "config.inc.php 中未找到数据库名或用户"
 
-#: internal/modules/opencart/install.go:259
+#: internal/modules/opencart/install.go:264
 msgid "OpenCart installed successfully on %(selected_domain)s"
 msgstr "OpenCart 已成功安装在 %(selected_domain)s"
 
@@ -5141,7 +5221,7 @@ msgid ""
 "granted privileges."
 msgstr "已成功创建数据库 %(database_name)s 和用户 %(db_user)s，并授予权限。"
 
-#: internal/modules/prestashop/install.go:300
+#: internal/modules/prestashop/install.go:305
 msgid "PrestaShop installed successfully on %(selected_domain)s"
 msgstr "PrestaShop 已成功安装在 %(selected_domain)s"
 
@@ -5588,48 +5668,82 @@ msgstr "为所选域名停用防火墙？"
 msgid "Custom"
 msgstr "自定义"
 
-#: internal/modules/webserverconf/handlers.go:80
+#: internal/modules/webserverconf/errors.go:88
+msgid "%(file)s, line %(line)s: %(message)s"
+msgstr "%(file)s，第 %(line)s 行：%(message)s"
+
+#: internal/modules/webserverconf/errors.go:90
+msgid "%(file)s: %(message)s"
+msgstr "%(file)s：%(message)s"
+
+#: internal/modules/webserverconf/errors.go:97
+msgid ""
+"%(host)s could not be found. If it's one of your containers, start it and "
+"save again, otherwise check the name."
+msgstr "找不到 %(host)s。如果它是您的某个容器，请启动它后再次保存，否则请检查名称。"
+
+#: internal/modules/webserverconf/errors.go:102
+msgid ""
+"The problem is in the VirtualHost file of %(domain)s, not in %(conf_file)s. "
+"Fix that file first, then save again."
+msgstr "问题出在 %(domain)s 的 VirtualHost 文件中，而不是 %(conf_file)s。请先修复该文件，然后再次保存。"
+
+#: internal/modules/webserverconf/errors.go:106
+msgid ""
+"The test took longer than expected, the %(service_name)s image may still be "
+"downloading. Try again in a minute."
+msgstr "测试耗时超出预期，%(service_name)s 镜像可能仍在下载。请一分钟后重试。"
+
+#: internal/modules/webserverconf/errors.go:108
+msgid ""
+"OpenLiteSpeed could not load this configuration at all. Check that the file "
+"isn't empty or cut off."
+msgstr "OpenLiteSpeed 完全无法加载此配置。请检查文件是否为空或被截断。"
+
+#: internal/modules/webserverconf/handlers.go:88
 msgid "No default configuration is available for %(service_name)s."
 msgstr "%(service_name)s 没有可用的默认配置。"
 
-#: internal/modules/webserverconf/handlers.go:86
-#: internal/modules/webserverconf/handlers.go:90
+#: internal/modules/webserverconf/handlers.go:94
+#: internal/modules/webserverconf/handlers.go:98
 msgid "Error restoring %(conf_file)s: %(error)s"
 msgstr "恢复 %(conf_file)s 时出错：%(error)s"
 
-#: internal/modules/webserverconf/handlers.go:104
+#: internal/modules/webserverconf/handlers.go:112
 msgid "Error writing to %(conf_file)s: %(error)s"
 msgstr "写入 %(conf_file)s 时出错：%(error)s"
 
-#: internal/modules/webserverconf/handlers.go:114
+#: internal/modules/webserverconf/handlers.go:123
 msgid ""
-"Configuration was not saved - it failed the %(service_name)s syntax check: "
-"%(test_output)s"
-msgstr "配置未保存 - 未通过 %(service_name)s 语法检查：%(test_output)s"
+"Configuration was not saved, the %(service_name)s config test found a "
+"problem. Your changes are still in the editor."
+msgstr "配置未保存，%(service_name)s 配置测试发现了问题。您的更改仍在编辑器中。"
 
-#: internal/modules/webserverconf/handlers.go:125
-msgid "Error reloading %(service_name)s container."
-msgstr "重新加载 %(service_name)s 容器时出错。"
+#: internal/modules/webserverconf/handlers.go:135
+msgid ""
+"Changes were saved to %(conf_file)s, but reloading the %(service_name)s "
+"container failed: %(error)s"
+msgstr "更改已保存到 %(conf_file)s，但重新加载 %(service_name)s 容器失败：%(error)s"
 
-#: internal/modules/webserverconf/handlers.go:129
+#: internal/modules/webserverconf/handlers.go:139
 msgid ""
 "Restored %(conf_file)s to the default configuration and %(service_name)s "
 "container reloaded successfully."
 msgstr "%(conf_file)s 已恢复为默认配置，%(service_name)s 容器已成功重新加载。"
 
-#: internal/modules/webserverconf/handlers.go:131
+#: internal/modules/webserverconf/handlers.go:141
 msgid ""
 "Changes saved to %(conf_file)s and %(service_name)s container reloaded "
 "successfully."
 msgstr "更改已保存到 %(conf_file)s，%(service_name)s 容器已成功重新加载。"
 
-#: internal/modules/webserverconf/handlers.go:139
+#: internal/modules/webserverconf/handlers.go:149
 msgid ""
 "Restored %(conf_file)s to the default configuration - the %(service_name)s "
 "container is not running."
 msgstr "%(conf_file)s 已恢复为默认配置 - %(service_name)s 容器未运行。"
 
-#: internal/modules/webserverconf/handlers.go:141
+#: internal/modules/webserverconf/handlers.go:151
 msgid ""
 "Changes saved to %(conf_file)s - the %(service_name)s container is not "
 "running."
@@ -5853,20 +5967,20 @@ msgstr ""
 msgid "Website not found in the database"
 msgstr "数据库中未找到网站"
 
-#: internal/modules/websites/websitebuilder_render.go:36
+#: internal/modules/websites/websitebuilder_render.go:37
 #: internal/web/templates/manager/autoinstaller.html:161
 msgid "Create Website"
 msgstr "创建网站"
 
-#: internal/modules/websites/websitebuilder_render.go:49
+#: internal/modules/websites/websitebuilder_render.go:50
 msgid "GrapesJS Website Editor"
 msgstr "GrapesJS 网站编辑器"
 
-#: internal/modules/websites/websitebuilder_render.go:80
+#: internal/modules/websites/websitebuilder_render.go:81
 msgid "You have reached the maximum number of sites allowed."
 msgstr "您已达到允许的最大站点数量。"
 
-#: internal/modules/websites/websitebuilder_render.go:198
+#: internal/modules/websites/websitebuilder_render.go:199
 msgid "Website created successfully on %(selected_domain)s"
 msgstr "网站已成功创建在 %(selected_domain)s"
 
@@ -6193,7 +6307,7 @@ msgstr "关闭"
 #: internal/web/templates/files/filemanager_partials.html:689
 #: internal/web/templates/files/filemanager_partials.html:784
 #: internal/web/templates/files/filemanager_partials.html:798
-#: internal/web/templates/files/trash_partials.html:172
+#: internal/web/templates/files/trash_partials.html:173
 #: internal/web/templates/manager/_cms_app_shared.html:1500
 #: internal/web/templates/manager/_cms_app_shared.html:1532
 #: internal/web/templates/manager/_cms_app_shared.html:1609
@@ -6464,12 +6578,6 @@ msgid "Real-time cache performance and efficiency metrics."
 msgstr "实时缓存性能与效率指标。"
 
 #: internal/web/templates/cache/service.html:91
-#: internal/web/templates/system/summary.html:40
-#: internal/web/templates/system/summary.html:90
-msgid "Requests"
-msgstr "请求"
-
-#: internal/web/templates/cache/service.html:91
 msgid "Hit Ratio"
 msgstr "命中率"
 
@@ -6484,6 +6592,12 @@ msgstr "未命中"
 #: internal/web/templates/cache/service.html:91
 msgid "Pass"
 msgstr "Pass"
+
+#: internal/web/templates/cache/service.html:91
+#: internal/web/templates/system/summary.html:40
+#: internal/web/templates/system/summary.html:90
+msgid "Requests"
+msgstr "请求"
 
 #: internal/web/templates/cache/service.html:91
 msgid "Backend Requests"
@@ -6532,6 +6646,13 @@ msgid "Edit limits"
 msgstr "编辑限制"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/mongodb/processlist.html:32
+#: internal/web/templates/mysql/processlist.html:32
+#: internal/web/templates/system/services.html:113
+msgid "ID"
+msgstr "ID"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/docker/container_form.html:89
 #: internal/web/templates/docker/containers.html:61
 #: internal/web/templates/docker/containers.html:90
@@ -6572,25 +6693,18 @@ msgid "Memory %"
 msgstr "内存占用率"
 
 #: internal/web/templates/cache/service.html:231
-#: internal/web/templates/docker/containers.html:64
-#: internal/web/templates/docker/containers.html:101
-#: internal/web/templates/partials/_service_js.html:26
-#: internal/web/templates/system/services.html:113
-msgid "Block I/O"
-msgstr "块I/O"
-
-#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/partials/_service_js.html:25
 #: internal/web/templates/system/services.html:113
 msgid "Network I/O"
 msgstr "网络I/O"
 
 #: internal/web/templates/cache/service.html:231
-#: internal/web/templates/mongodb/processlist.html:32
-#: internal/web/templates/mysql/processlist.html:32
+#: internal/web/templates/docker/containers.html:64
+#: internal/web/templates/docker/containers.html:101
+#: internal/web/templates/partials/_service_js.html:26
 #: internal/web/templates/system/services.html:113
-msgid "ID"
-msgstr "ID"
+msgid "Block I/O"
+msgstr "块I/O"
 
 #: internal/web/templates/cache/service.html:270
 #: internal/web/templates/system/services.html:162
@@ -7451,7 +7565,7 @@ msgstr "搜索"
 #: internal/web/templates/partials/_db_tuning.html:100
 #: internal/web/templates/php/ini_editor.html:24
 #: internal/web/templates/php/options.html:26
-#: internal/web/templates/system/apache_nginx_conf_editor.html:26
+#: internal/web/templates/system/apache_nginx_conf_editor.html:33
 #: internal/web/templates/system/cronjobs.html:82
 #: internal/web/templates/system/ip_blocker.html:24
 #: static/js/tour-steps.js:422
@@ -7615,14 +7729,14 @@ msgid "Choose the database server for your MySQL databases."
 msgstr "为您的 MySQL 数据库选择数据库服务器。"
 
 #: internal/web/templates/docker/change_mysql.html:21
-msgid ""
-"To switch the database server, first remove all databases from your account."
-msgstr "要切换数据库服务器，请先从您的账户中删除所有数据库。"
-
-#: internal/web/templates/docker/change_mysql.html:21
 #: internal/web/templates/partials/_db_tuning.html:31
 msgid "Databases:"
 msgstr "数据库："
+
+#: internal/web/templates/docker/change_mysql.html:21
+msgid ""
+"To switch the database server, first remove all databases from your account."
+msgstr "要切换数据库服务器，请先从您的账户中删除所有数据库。"
 
 #: internal/web/templates/docker/change_mysql.html:21
 msgid "Go to Databases"
@@ -7656,13 +7770,13 @@ msgid "Change Webserver"
 msgstr "更改 Web 服务器"
 
 #: internal/web/templates/docker/change_webserver.html:21
-msgid "To switch the webserver, first remove all domains from your account."
-msgstr "要切换 Web 服务器，请先从您的账户中删除所有域名。"
-
-#: internal/web/templates/docker/change_webserver.html:21
 #: internal/web/templates/partials/_db_tuning.html:33
 msgid "Domains:"
 msgstr "域名："
+
+#: internal/web/templates/docker/change_webserver.html:21
+msgid "To switch the webserver, first remove all domains from your account."
+msgstr "要切换 Web 服务器，请先从您的账户中删除所有域名。"
 
 #: internal/web/templates/docker/change_webserver.html:21
 msgid "Go to Domains"
@@ -8229,16 +8343,16 @@ msgid ""
 msgstr "该终端为交互式终端，将以容器内的 “root” 用户身份执行命令。"
 
 #: internal/web/templates/docker/terminal.html:35
-msgid "Inactivity timeout:"
-msgstr "空闲超时时间："
-
-#: internal/web/templates/docker/terminal.html:35
 #: internal/web/templates/mongodb/databases.html:195
 #: internal/web/templates/mysql/databases.html:567
 #: internal/web/templates/mysql/users.html:179
 #: internal/web/templates/psql/databases.html:261
 msgid "seconds"
 msgstr "秒"
+
+#: internal/web/templates/docker/terminal.html:35
+msgid "Inactivity timeout:"
+msgstr "空闲超时时间："
 
 #: internal/web/templates/docker/terminal.html:42
 msgid "Container:"
@@ -8354,12 +8468,12 @@ msgid ""
 msgstr "删除域名将停止与此域名关联的所有服务，但所有现有数据（如电子邮件和文件）将保留在磁盘上。"
 
 #: internal/web/templates/domains/delete.html:31
-#: internal/web/templates/domains/domains.html:195
-msgid "subdomain"
+msgid "subdomains"
 msgstr "子域名"
 
 #: internal/web/templates/domains/delete.html:31
-msgid "subdomains"
+#: internal/web/templates/domains/domains.html:195
+msgid "subdomain"
 msgstr "子域名"
 
 #: internal/web/templates/domains/delete.html:31
@@ -8700,13 +8814,13 @@ msgid "Edit as Table"
 msgstr "编辑为表格"
 
 #: internal/web/templates/domains/dns.html:719
+msgid "Saving zone file for domain"
+msgstr "域名保存区域文件"
+
+#: internal/web/templates/domains/dns.html:719
 #: internal/web/templates/domains/new.html:256
 msgid "Please wait for the process to finish."
 msgstr "请等待流程完成。"
-
-#: internal/web/templates/domains/dns.html:719
-msgid "Saving zone file for domain"
-msgstr "域名保存区域文件"
 
 #: internal/web/templates/domains/dns.html:733
 msgid "Zone file saved successfully"
@@ -8908,6 +9022,10 @@ msgid "Showing"
 msgstr "展示"
 
 #: internal/web/templates/domains/domains.html:495
+msgid "Showing domains"
+msgstr "显示域名"
+
+#: internal/web/templates/domains/domains.html:495
 #: internal/web/templates/files/filemanager.html:348
 #: internal/web/templates/mongodb/users.html:27
 #: internal/web/templates/mongodb/users.html:31
@@ -8922,10 +9040,6 @@ msgstr "到"
 #: internal/web/templates/files/filemanager.html:348
 msgid "from a total of"
 msgstr "从总计"
-
-#: internal/web/templates/domains/domains.html:495
-msgid "Showing domains"
-msgstr "显示域名"
 
 #: internal/web/templates/domains/domains.html:500
 #: internal/web/templates/files/filemanager.html:353
@@ -11041,7 +11155,7 @@ msgstr "未找到备份。"
 #: internal/web/templates/files/filemanager_partials.html:395
 #: internal/web/templates/files/filemanager_partials.html:596
 #: internal/web/templates/files/trash.html:44
-#: internal/web/templates/files/trash_partials.html:421
+#: internal/web/templates/files/trash_partials.html:422
 #: internal/web/templates/manager/sites.html:205
 #: internal/web/templates/manager/sites.html:222
 #: internal/web/templates/partials/_bulk.html:15
@@ -11463,15 +11577,15 @@ msgid "No quarantined files"
 msgstr "无隔离文件"
 
 #: internal/web/templates/files/clamav/quarantine.html:49
-#: internal/web/templates/files/clamav/scan_logs.html:26
-msgid "Click here to start a new scan"
-msgstr "点击此处开始新的扫描"
-
-#: internal/web/templates/files/clamav/quarantine.html:49
 msgid ""
 "No malicious files have been detected or the scan has not been initiated "
 "yet."
 msgstr "未检测到恶意文件，或扫描尚未启动。"
+
+#: internal/web/templates/files/clamav/quarantine.html:49
+#: internal/web/templates/files/clamav/scan_logs.html:26
+msgid "Click here to start a new scan"
+msgstr "点击此处开始新的扫描"
 
 #: internal/web/templates/files/clamav/quarantine.html:55
 msgid "Quarantined Files"
@@ -11492,7 +11606,7 @@ msgid "Mark as safe"
 msgstr "标记为安全"
 
 #: internal/web/templates/files/clamav/quarantine.html:115
-#: internal/web/templates/files/trash_partials.html:171
+#: internal/web/templates/files/trash_partials.html:172
 msgid "Delete permanently"
 msgstr "永久删除"
 
@@ -11962,17 +12076,17 @@ msgstr "返回上一级"
 #: internal/web/templates/files/filemanager_partials.html:538
 #: internal/web/templates/files/filemanager_partials.html:600
 #: internal/web/templates/files/trash_partials.html:97
-#: internal/web/templates/files/trash_partials.html:318
+#: internal/web/templates/files/trash_partials.html:319
 msgid "Calculate"
 msgstr "计算"
 
 #: internal/web/templates/files/filemanager_partials.html:597
-#: internal/web/templates/files/trash_partials.html:420
+#: internal/web/templates/files/trash_partials.html:421
 msgid "Deselect"
 msgstr "取消选择"
 
 #: internal/web/templates/files/filemanager_partials.html:599
-#: internal/web/templates/files/trash_partials.html:308
+#: internal/web/templates/files/trash_partials.html:309
 msgid "Calculating..."
 msgstr "正在计算..."
 
@@ -12036,8 +12150,8 @@ msgid "Some items could not be deleted."
 msgstr "部分项目无法删除。"
 
 #: internal/web/templates/files/filemanager_partials.html:623
-#: internal/web/templates/files/trash_partials.html:272
-#: internal/web/templates/files/trash_partials.html:312
+#: internal/web/templates/files/trash_partials.html:273
+#: internal/web/templates/files/trash_partials.html:313
 msgid "Unknown error"
 msgstr "未知错误"
 
@@ -12378,15 +12492,15 @@ msgstr "回收站中没有文件。"
 msgid "Deleted"
 msgstr "已删除"
 
-#: internal/web/templates/files/trash_partials.html:173
+#: internal/web/templates/files/trash_partials.html:174
 msgid "Items restored. Reloading..."
 msgstr "项目已恢复。正在重新加载..."
 
-#: internal/web/templates/files/trash_partials.html:174
+#: internal/web/templates/files/trash_partials.html:175
 msgid "Items permanently deleted. Reloading..."
 msgstr "项目已永久删除。正在重新加载..."
 
-#: internal/web/templates/files/trash_partials.html:175
+#: internal/web/templates/files/trash_partials.html:176
 msgid "Some items could not be processed."
 msgstr "部分项目无法处理。"
 
@@ -19569,23 +19683,35 @@ msgstr "创建新的 PostgreSQL 数据库，设置具有安全密码的用户，
 msgid "Create DB, User, and Grant Privileges"
 msgstr "创建数据库、用户和授予权限"
 
-#: internal/web/templates/system/apache_nginx_conf_editor.html:16
+#: internal/web/templates/system/apache_nginx_conf_editor.html:23
 msgid "WebServer Conf Editor Header"
 msgstr "Web 服务器配置编辑器标题"
 
-#: internal/web/templates/system/apache_nginx_conf_editor.html:20
+#: internal/web/templates/system/apache_nginx_conf_editor.html:27
 msgid "Edit main webserver configuration file:"
 msgstr "编辑主Web服务器配置文件："
 
-#: internal/web/templates/system/apache_nginx_conf_editor.html:24
+#: internal/web/templates/system/apache_nginx_conf_editor.html:31
 msgid ""
 "This will overwrite the current file with the default configuration and "
 "restart the service. Continue?"
 msgstr "此操作将使用默认配置覆盖当前文件并重启服务，是否继续？"
 
-#: internal/web/templates/system/apache_nginx_conf_editor.html:24
+#: internal/web/templates/system/apache_nginx_conf_editor.html:31
 msgid "Restore Default"
 msgstr "恢复默认设置"
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:40
+msgid "Not saved. The config test reported:"
+msgstr "未保存。配置测试报告："
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:45
+msgid "Go to line"
+msgstr "跳转到行"
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:46
+msgid "Open the VirtualHost file of"
+msgstr "打开以下域名的 VirtualHost 文件："
 
 #: internal/web/templates/system/cronjobs.html:19
 #: internal/web/templates/system/cronjobs_new.html:7

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-10-26 11:00+0200\n"
+"POT-Creation-Date: 2026-10-29 14:36+0200\n"
 "PO-Revision-Date: 2026-06-24 19:00+0200\n"
 "Last-Translator: Stefan Pejčić <stefan@pejcic.rs>\n"
 "Language-Team: Serbian (Latin) <LL@li.org>\n"
@@ -441,19 +441,19 @@ msgstr "Zemlja"
 msgid "Browser"
 msgstr "Pregledač"
 
-#: internal/modules/account/passwords.go:38
+#: internal/modules/account/passwords.go:40
 msgid "Your account is suspended. Please contact support."
 msgstr "Vaš nalog je suspendovan. Kontaktirajte podršku."
 
-#: internal/modules/account/passwords.go:40
+#: internal/modules/account/passwords.go:42
 msgid "Unrecognized account. Please check username."
 msgstr "Nepoznat nalog. Provedite korisničko ime."
 
-#: internal/modules/account/passwords.go:44
+#: internal/modules/account/passwords.go:46
 msgid "Unable to connect to database."
 msgstr "Nije moguće povezati se sa bazom podataka."
 
-#: internal/modules/account/passwords.go:67
+#: internal/modules/account/passwords.go:69
 msgid "Invalid password. Please try again."
 msgstr "Nevažeća lozinka. Pokušajte ponovo."
 
@@ -687,7 +687,7 @@ msgstr ""
 " tražite dozvolu u tekstu unapred."
 
 #: internal/modules/appinstall/install.go:109
-#: internal/modules/cmsapp/install.go:47 internal/modules/phpapp/install.go:39
+#: internal/modules/cmsapp/install.go:48 internal/modules/phpapp/install.go:39
 #: internal/modules/wordpress/install.go:51
 msgid ""
 "You have reached the maximum number of sites allowed.%(upgrade_message)s"
@@ -1026,7 +1026,7 @@ msgstr "Udaljene rezervne kopije na Dropbox cloud skladište."
 #: internal/web/templates/files/clamav/quarantine.html:86
 #: internal/web/templates/files/clamav/quarantine.html:113
 #: internal/web/templates/files/trash.html:52
-#: internal/web/templates/files/trash_partials.html:170
+#: internal/web/templates/files/trash_partials.html:171
 msgid "Restore"
 msgstr "Vrati"
 
@@ -1073,6 +1073,26 @@ msgid "Backup Wizard"
 msgstr "Čarobnjak za rezervne kopije"
 
 #: internal/modules/backupwizard/render.go:41
+#: internal/modules/dashboard/sections.go:115
+#: internal/modules/dashboard/sections.go:128
+#: internal/modules/dashboard/sections.go:137
+#: internal/modules/dashboard/sections.go:240
+#: internal/modules/dashboard/sections.go:252
+#: internal/modules/dashboard/sections.go:261
+#: internal/modules/mysql/render.go:59 internal/web/sidebar.go:179
+#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
+#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
+#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
+#: internal/web/templates/dashboard/usage.html:78
+#: internal/web/templates/files/backup_restore.html:457
+#: internal/web/templates/files/backup_restore.html:560
+#: internal/web/templates/files/backup_restore.html:737
+#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
+#: static/js/tour-steps.js:261
+msgid "Databases"
+msgstr "Baze podataka"
+
+#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:73
 #: internal/modules/dashboard/sections.go:74
 #: internal/modules/dashboard/sections.go:226
@@ -1092,26 +1112,6 @@ msgstr "Čarobnjak za rezervne kopije"
 #: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
 msgid "Domains"
 msgstr "Domeni"
-
-#: internal/modules/backupwizard/render.go:41
-#: internal/modules/dashboard/sections.go:115
-#: internal/modules/dashboard/sections.go:128
-#: internal/modules/dashboard/sections.go:137
-#: internal/modules/dashboard/sections.go:240
-#: internal/modules/dashboard/sections.go:252
-#: internal/modules/dashboard/sections.go:261
-#: internal/modules/mysql/render.go:59 internal/web/sidebar.go:179
-#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
-#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
-#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
-#: internal/web/templates/dashboard/usage.html:78
-#: internal/web/templates/files/backup_restore.html:457
-#: internal/web/templates/files/backup_restore.html:560
-#: internal/web/templates/files/backup_restore.html:737
-#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
-#: static/js/tour-steps.js:261
-msgid "Databases"
-msgstr "Baze podataka"
 
 #: internal/modules/backupwizard/render.go:41
 msgid "The home directory"
@@ -2604,16 +2604,16 @@ msgstr "Izmeni CPU"
 msgid "Set the CPU limit for the selected containers:"
 msgstr "Postavite CPU limit za izabrane kontejnere:"
 
-#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
-#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
-msgid "0 = unlimited"
-msgstr "0 = neograničeno"
-
 #: internal/modules/docker/bulk.go:31
 #: internal/web/templates/docker/containers.html:18
 #: internal/web/templates/docker/containers.html:384
 msgid "cores"
 msgstr "jezgara"
+
+#: internal/modules/docker/bulk.go:31 internal/modules/docker/bulk.go:33
+#: internal/modules/docker/bulk.go:35 internal/modules/emails/bulk.go:21
+msgid "0 = unlimited"
+msgstr "0 = neograničeno"
 
 #: internal/modules/docker/bulk.go:32
 msgid "Edit RAM"
@@ -3159,6 +3159,14 @@ msgid "Status"
 msgstr "Status"
 
 #: internal/modules/domains/render.go:60
+#: internal/web/templates/domains/domains.html:199
+#: internal/web/templates/emails/accounts.html:29
+#: internal/web/templates/emails/accounts.html:43
+#: internal/web/templates/files/backup_restore.html:785
+msgid "Suspended"
+msgstr "Suspendovan"
+
+#: internal/modules/domains/render.go:60
 #: internal/web/templates/domains/domains.html:203
 #: internal/web/templates/manager/n8n_app.html:111
 #: internal/web/templates/manager/python_node_apps.html:155
@@ -3166,14 +3174,6 @@ msgstr "Status"
 #: internal/web/templates/system/cronjobs.html:201
 msgid "Active"
 msgstr "Aktivan"
-
-#: internal/modules/domains/render.go:60
-#: internal/web/templates/domains/domains.html:199
-#: internal/web/templates/emails/accounts.html:29
-#: internal/web/templates/emails/accounts.html:43
-#: internal/web/templates/files/backup_restore.html:785
-msgid "Suspended"
-msgstr "Suspendovan"
 
 #: internal/modules/domains/render.go:63
 #: internal/web/templates/domains/domains.html:82
@@ -3183,27 +3183,14 @@ msgstr "PHP verzija"
 
 #: internal/modules/domains/render.go:75
 #: internal/web/templates/domains/domains.html:285
-msgid "AutoSSL"
-msgstr "AutoSSL"
-
-#: internal/modules/domains/render.go:75
-#: internal/web/templates/domains/domains.html:285
 #: internal/web/templates/domains/ssl.html:52
 msgid "Custom SSL"
 msgstr "Prilagođeni SSL"
 
-#: internal/modules/domains/render.go:77
-#: internal/web/templates/domains/dns.html:109
-#: internal/web/templates/domains/domains.html:77
-#: internal/web/templates/domains/domains.html:145
-#: internal/web/templates/domains/dynamic_dns.html:166
-#: internal/web/templates/files/filemanager.html:124
-#: internal/web/templates/files/filemanager_partials.html:478
-#: internal/web/templates/files/trash.html:80
-#: internal/web/templates/files/trash_partials.html:54
-#: internal/web/templates/manager/sites.html:207
-msgid "Type"
-msgstr "Tip"
+#: internal/modules/domains/render.go:75
+#: internal/web/templates/domains/domains.html:285
+msgid "AutoSSL"
+msgstr "AutoSSL"
 
 #: internal/modules/domains/render.go:77
 #: internal/web/templates/docker/container_form.html:240
@@ -3236,6 +3223,19 @@ msgstr "Domen"
 #: internal/web/templates/domains/dynamic_dns.html:165
 msgid "Subdomain"
 msgstr "Poddomen"
+
+#: internal/modules/domains/render.go:77
+#: internal/web/templates/domains/dns.html:109
+#: internal/web/templates/domains/domains.html:77
+#: internal/web/templates/domains/domains.html:145
+#: internal/web/templates/domains/dynamic_dns.html:166
+#: internal/web/templates/files/filemanager.html:124
+#: internal/web/templates/files/filemanager_partials.html:478
+#: internal/web/templates/files/trash.html:80
+#: internal/web/templates/files/trash_partials.html:54
+#: internal/web/templates/manager/sites.html:207
+msgid "Type"
+msgstr "Tip"
 
 #: internal/modules/domains/render.go:79
 #: internal/web/templates/domains/domains.html:85
@@ -3417,15 +3417,15 @@ msgstr "Nova veličina sandučeta (GB) za izabrane naloge:"
 #: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:526
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
-msgid "Change password"
-msgstr "Promeni lozinku"
+#: internal/web/templates/files/ftp_password.html:55
+msgid "New password"
+msgstr "Nova lozinka"
 
 #: internal/modules/emails/bulk.go:22 internal/modules/ftp/ftp.go:526
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
-#: internal/web/templates/files/ftp_password.html:55
-msgid "New password"
-msgstr "Nova lozinka"
+msgid "Change password"
+msgstr "Promeni lozinku"
 
 #: internal/modules/emails/bulk.go:22
 msgid "Set this password for the selected accounts:"
@@ -3525,7 +3525,7 @@ msgstr ""
 msgid "Error: No import data found, please try again."
 msgstr "Greška: nisu pronađeni podaci za uvoz, pokušajte ponovo."
 
-#: internal/modules/emails/migrate.go:811
+#: internal/modules/emails/migrate.go:845
 msgid "Error: Could not open the migrations folder."
 msgstr "Greška: folder sa migracijama nije moguće otvoriti."
 
@@ -4025,6 +4025,86 @@ msgstr ""
 "Ukloniti izabrane repozitorijume? Fajlovi koji su već postavljeni na sajt "
 "ostaju."
 
+#: internal/modules/git/handlers.go:308
+msgid ""
+"Repository %(repo)s was added, but its first deployment failed: %(error)s"
+msgstr ""
+
+#: internal/modules/git/handlers.go:310
+msgid ""
+"Local repository %(repo)s created. Push to branch %(branch)s to deploy it to"
+" %(dir)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:312
+msgid "Repository %(repo)s cloned and branch %(branch)s deployed to %(dir)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:314
+msgid ""
+"Repository %(repo)s cloned (branch %(branch)s), nothing was deployed yet."
+msgstr ""
+
+#: internal/modules/git/handlers.go:321 internal/modules/git/handlers.go:341
+msgid "Repository %(repo)s not found."
+msgstr ""
+
+#: internal/modules/git/handlers.go:325
+msgid "Pulling %(repo)s failed: %(error)s"
+msgstr ""
+
+#: internal/modules/git/handlers.go:330
+msgid "%(repo)s is already up to date, no new commits on %(branch)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:334
+msgid ""
+"Pulled %(count)s new commit(s) into %(repo)s on %(branch)s and deployed "
+"%(commit)s to %(dir)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:336
+msgid ""
+"Pulled %(count)s new commit(s) into %(repo)s on %(branch)s, latest is "
+"%(commit)s. Not deployed yet."
+msgstr ""
+
+#: internal/modules/git/handlers.go:344
+msgid "Deploying %(repo)s failed: %(error)s"
+msgstr ""
+
+#: internal/modules/git/handlers.go:348
+msgid "Deployed %(repo)s (%(branch)s at %(commit)s) to %(dir)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:350
+msgid "Deploy actions ran in %(container)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:356
+msgid "Could not save settings for %(repo)s: %(error)s"
+msgstr ""
+
+#: internal/modules/git/handlers.go:360
+msgid ""
+"Settings saved for %(repo)s: branch %(branch)s, %(mode)s, deploying to "
+"%(dir)s."
+msgstr ""
+
+#: internal/modules/git/handlers.go:368
+msgid "New push password generated for %(repo)s, the old one no longer works."
+msgstr ""
+
+#: internal/modules/git/handlers.go:373
+msgid "Could not remove %(repo)s: %(error)s"
+msgstr ""
+
+#: internal/modules/git/handlers.go:376
+msgid ""
+"Repository %(repo)s removed. Files already deployed to %(dir)s were left in "
+"place."
+msgstr ""
+
 #: internal/modules/goaccess/goaccess.go:39
 msgid ""
 "Stats file for domain %(domain_name)s not found. Data is generated every "
@@ -4053,7 +4133,7 @@ msgstr ""
 msgid "Failed to block IP addresses - please try again"
 msgstr "Blokiranje IP adresa nije uspelo - pokušajte ponovo"
 
-#: internal/modules/joomla/install.go:233
+#: internal/modules/joomla/install.go:238
 msgid "Joomla installed successfully on %(selected_domain)s"
 msgstr "Joomla je uspešno instalirana na %(selected_domain)s"
 
@@ -4094,11 +4174,11 @@ msgstr "Karantin malvera"
 msgid "Malware Scan Logs"
 msgstr "Logovi skeniranja malvera"
 
-#: internal/modules/matomo/install.go:273
+#: internal/modules/matomo/install.go:278
 msgid "Matomo installed successfully on %(selected_domain)s"
 msgstr "Matomo je uspešno instaliran na %(selected_domain)s"
 
-#: internal/modules/mediawiki/install.go:256
+#: internal/modules/mediawiki/install.go:260
 msgid "MediaWiki installed successfully on %(selected_domain)s"
 msgstr "MediaWiki je uspešno instaliran na %(selected_domain)s"
 
@@ -4645,7 +4725,7 @@ msgstr ""
 "Uspešno kreirana baza podataka %(database_name)s, korisnik %(db_user)s i "
 "dodeljena uloga %(role)s."
 
-#: internal/modules/moodle/install.go:286
+#: internal/modules/moodle/install.go:291
 msgid "Moodle installed successfully on %(selected_domain)s"
 msgstr "Moodle je uspešno instaliran na %(selected_domain)s"
 
@@ -5041,7 +5121,7 @@ msgstr "Greška pri brisanju korisnika: %(error)s"
 msgid "Error changing password: %(error)s"
 msgstr "Greška pri promeni lozinke: %(error)s"
 
-#: internal/modules/nextcloud/install.go:252
+#: internal/modules/nextcloud/install.go:256
 msgid "Nextcloud installed successfully on %(selected_domain)s"
 msgstr "Nextcloud je uspešno instaliran na %(selected_domain)s"
 
@@ -5053,7 +5133,7 @@ msgstr "OJS je uspešno instaliran na %(selected_domain)s"
 msgid "Database name or user not found in config.inc.php"
 msgstr "Naziv baze podataka ili korisnik nije pronađen u config.inc.php"
 
-#: internal/modules/opencart/install.go:259
+#: internal/modules/opencart/install.go:264
 msgid "OpenCart installed successfully on %(selected_domain)s"
 msgstr "OpenCart je uspešno instaliran na %(selected_domain)s"
 
@@ -5402,7 +5482,7 @@ msgstr ""
 "Uspešno kreirana baza podataka %(database_name)s, korisnik %(db_user)s i "
 "dodeljene privilegije."
 
-#: internal/modules/prestashop/install.go:300
+#: internal/modules/prestashop/install.go:305
 msgid "PrestaShop installed successfully on %(selected_domain)s"
 msgstr "PrestaShop je uspešno instaliran na %(selected_domain)s"
 
@@ -5870,32 +5950,76 @@ msgstr "Isključiti firewall za izabrane domene?"
 msgid "Custom"
 msgstr "Prilagođeno"
 
-#: internal/modules/webserverconf/handlers.go:80
+#: internal/modules/webserverconf/errors.go:88
+msgid "%(file)s, line %(line)s: %(message)s"
+msgstr "%(file)s, red %(line)s: %(message)s"
+
+#: internal/modules/webserverconf/errors.go:90
+msgid "%(file)s: %(message)s"
+msgstr "%(file)s: %(message)s"
+
+#: internal/modules/webserverconf/errors.go:97
+msgid ""
+"%(host)s could not be found. If it's one of your containers, start it and "
+"save again, otherwise check the name."
+msgstr ""
+"%(host)s nije pronađen. Ako je to jedan od vaših kontejnera, pokrenite ga i "
+"sačuvajte ponovo, u suprotnom proverite ime."
+
+#: internal/modules/webserverconf/errors.go:102
+msgid ""
+"The problem is in the VirtualHost file of %(domain)s, not in %(conf_file)s. "
+"Fix that file first, then save again."
+msgstr ""
+"Problem je u VirtualHost fajlu za %(domain)s, a ne u %(conf_file)s. Prvo "
+"ispravite taj fajl, pa sačuvajte ponovo."
+
+#: internal/modules/webserverconf/errors.go:106
+msgid ""
+"The test took longer than expected, the %(service_name)s image may still be "
+"downloading. Try again in a minute."
+msgstr ""
+"Provera je trajala duže nego što se očekivalo, image za %(service_name)s se "
+"možda još preuzima. Pokušajte ponovo za minut."
+
+#: internal/modules/webserverconf/errors.go:108
+msgid ""
+"OpenLiteSpeed could not load this configuration at all. Check that the file "
+"isn't empty or cut off."
+msgstr ""
+"OpenLiteSpeed uopšte nije mogao da učita ovu konfiguraciju. Proverite da "
+"fajl nije prazan ili odsečen."
+
+#: internal/modules/webserverconf/handlers.go:88
 msgid "No default configuration is available for %(service_name)s."
 msgstr "Za %(service_name)s nije dostupna podrazumevana konfiguracija."
 
-#: internal/modules/webserverconf/handlers.go:86
-#: internal/modules/webserverconf/handlers.go:90
+#: internal/modules/webserverconf/handlers.go:94
+#: internal/modules/webserverconf/handlers.go:98
 msgid "Error restoring %(conf_file)s: %(error)s"
 msgstr "Greška pri vraćanju %(conf_file)s: %(error)s"
 
-#: internal/modules/webserverconf/handlers.go:104
+#: internal/modules/webserverconf/handlers.go:112
 msgid "Error writing to %(conf_file)s: %(error)s"
 msgstr "Greška pri upisu u %(conf_file)s: %(error)s"
 
-#: internal/modules/webserverconf/handlers.go:114
+#: internal/modules/webserverconf/handlers.go:123
 msgid ""
-"Configuration was not saved - it failed the %(service_name)s syntax check: "
-"%(test_output)s"
+"Configuration was not saved, the %(service_name)s config test found a "
+"problem. Your changes are still in the editor."
 msgstr ""
-"Konfiguracija nije sačuvana - nije prošla proveru sintakse za "
-"%(service_name)s: %(test_output)s"
+"Konfiguracija nije sačuvana, provera konfiguracije za %(service_name)s je "
+"pronašla problem. Vaše izmene su i dalje u editoru."
 
-#: internal/modules/webserverconf/handlers.go:125
-msgid "Error reloading %(service_name)s container."
-msgstr "Greška pri ponovnom učitavanju kontejnera %(service_name)s."
+#: internal/modules/webserverconf/handlers.go:135
+msgid ""
+"Changes were saved to %(conf_file)s, but reloading the %(service_name)s "
+"container failed: %(error)s"
+msgstr ""
+"Izmene su sačuvane u %(conf_file)s, ali ponovno učitavanje kontejnera "
+"%(service_name)s nije uspelo: %(error)s"
 
-#: internal/modules/webserverconf/handlers.go:129
+#: internal/modules/webserverconf/handlers.go:139
 msgid ""
 "Restored %(conf_file)s to the default configuration and %(service_name)s "
 "container reloaded successfully."
@@ -5903,7 +6027,7 @@ msgstr ""
 "%(conf_file)s je vraćen na podrazumevanu konfiguraciju i kontejner "
 "%(service_name)s je uspešno ponovo učitan."
 
-#: internal/modules/webserverconf/handlers.go:131
+#: internal/modules/webserverconf/handlers.go:141
 msgid ""
 "Changes saved to %(conf_file)s and %(service_name)s container reloaded "
 "successfully."
@@ -5911,7 +6035,7 @@ msgstr ""
 "Izmene su sačuvane u %(conf_file)s i kontejner %(service_name)s je uspešno "
 "ponovo učitan."
 
-#: internal/modules/webserverconf/handlers.go:139
+#: internal/modules/webserverconf/handlers.go:149
 msgid ""
 "Restored %(conf_file)s to the default configuration - the %(service_name)s "
 "container is not running."
@@ -5919,7 +6043,7 @@ msgstr ""
 "%(conf_file)s je vraćen na podrazumevanu konfiguraciju - kontejner "
 "%(service_name)s nije pokrenut."
 
-#: internal/modules/webserverconf/handlers.go:141
+#: internal/modules/webserverconf/handlers.go:151
 msgid ""
 "Changes saved to %(conf_file)s - the %(service_name)s container is not "
 "running."
@@ -6167,20 +6291,20 @@ msgstr ""
 msgid "Website not found in the database"
 msgstr "Sajt nije pronađen u bazi podataka"
 
-#: internal/modules/websites/websitebuilder_render.go:36
+#: internal/modules/websites/websitebuilder_render.go:37
 #: internal/web/templates/manager/autoinstaller.html:161
 msgid "Create Website"
 msgstr "Kreiraj sajt"
 
-#: internal/modules/websites/websitebuilder_render.go:49
+#: internal/modules/websites/websitebuilder_render.go:50
 msgid "GrapesJS Website Editor"
 msgstr "GrapesJS editor sajta"
 
-#: internal/modules/websites/websitebuilder_render.go:80
+#: internal/modules/websites/websitebuilder_render.go:81
 msgid "You have reached the maximum number of sites allowed."
 msgstr "Dostigli ste maksimalan broj dozvoljenih sajtova."
 
-#: internal/modules/websites/websitebuilder_render.go:198
+#: internal/modules/websites/websitebuilder_render.go:199
 msgid "Website created successfully on %(selected_domain)s"
 msgstr "Sajt je uspešno kreiran na %(selected_domain)s"
 
@@ -6527,7 +6651,7 @@ msgstr "Zatvori"
 #: internal/web/templates/files/filemanager_partials.html:689
 #: internal/web/templates/files/filemanager_partials.html:784
 #: internal/web/templates/files/filemanager_partials.html:798
-#: internal/web/templates/files/trash_partials.html:172
+#: internal/web/templates/files/trash_partials.html:173
 #: internal/web/templates/manager/_cms_app_shared.html:1500
 #: internal/web/templates/manager/_cms_app_shared.html:1532
 #: internal/web/templates/manager/_cms_app_shared.html:1609
@@ -6799,12 +6923,6 @@ msgid "Real-time cache performance and efficiency metrics."
 msgstr "Metrike performansi i efikasnosti keša u realnom vremenu."
 
 #: internal/web/templates/cache/service.html:91
-#: internal/web/templates/system/summary.html:40
-#: internal/web/templates/system/summary.html:90
-msgid "Requests"
-msgstr "Zahtevi"
-
-#: internal/web/templates/cache/service.html:91
 msgid "Hit Ratio"
 msgstr "Stopa pogodaka"
 
@@ -6819,6 +6937,12 @@ msgstr "Promašaji"
 #: internal/web/templates/cache/service.html:91
 msgid "Pass"
 msgstr "Propušteno"
+
+#: internal/web/templates/cache/service.html:91
+#: internal/web/templates/system/summary.html:40
+#: internal/web/templates/system/summary.html:90
+msgid "Requests"
+msgstr "Zahtevi"
 
 #: internal/web/templates/cache/service.html:91
 msgid "Backend Requests"
@@ -6867,6 +6991,13 @@ msgid "Edit limits"
 msgstr "Izmeni ograničenja"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/mongodb/processlist.html:32
+#: internal/web/templates/mysql/processlist.html:32
+#: internal/web/templates/system/services.html:113
+msgid "ID"
+msgstr "ID"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/docker/container_form.html:89
 #: internal/web/templates/docker/containers.html:61
 #: internal/web/templates/docker/containers.html:90
@@ -6907,25 +7038,18 @@ msgid "Memory %"
 msgstr "Memorija %"
 
 #: internal/web/templates/cache/service.html:231
-#: internal/web/templates/docker/containers.html:64
-#: internal/web/templates/docker/containers.html:101
-#: internal/web/templates/partials/_service_js.html:26
-#: internal/web/templates/system/services.html:113
-msgid "Block I/O"
-msgstr "Blok I/O"
-
-#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/partials/_service_js.html:25
 #: internal/web/templates/system/services.html:113
 msgid "Network I/O"
 msgstr "Mrežni I/O"
 
 #: internal/web/templates/cache/service.html:231
-#: internal/web/templates/mongodb/processlist.html:32
-#: internal/web/templates/mysql/processlist.html:32
+#: internal/web/templates/docker/containers.html:64
+#: internal/web/templates/docker/containers.html:101
+#: internal/web/templates/partials/_service_js.html:26
 #: internal/web/templates/system/services.html:113
-msgid "ID"
-msgstr "ID"
+msgid "Block I/O"
+msgstr "Blok I/O"
 
 #: internal/web/templates/cache/service.html:270
 #: internal/web/templates/system/services.html:162
@@ -7819,7 +7943,7 @@ msgstr "Pretraga"
 #: internal/web/templates/partials/_db_tuning.html:100
 #: internal/web/templates/php/ini_editor.html:24
 #: internal/web/templates/php/options.html:26
-#: internal/web/templates/system/apache_nginx_conf_editor.html:26
+#: internal/web/templates/system/apache_nginx_conf_editor.html:33
 #: internal/web/templates/system/cronjobs.html:82
 #: internal/web/templates/system/ip_blocker.html:24
 #: static/js/tour-steps.js:422
@@ -7986,16 +8110,16 @@ msgid "Choose the database server for your MySQL databases."
 msgstr "Izaberite server baze podataka za vaše MySQL baze."
 
 #: internal/web/templates/docker/change_mysql.html:21
+#: internal/web/templates/partials/_db_tuning.html:31
+msgid "Databases:"
+msgstr "Baze podataka:"
+
+#: internal/web/templates/docker/change_mysql.html:21
 msgid ""
 "To switch the database server, first remove all databases from your account."
 msgstr ""
 "Da biste promenili server baze podataka, prvo uklonite sve baze sa svog "
 "naloga."
-
-#: internal/web/templates/docker/change_mysql.html:21
-#: internal/web/templates/partials/_db_tuning.html:31
-msgid "Databases:"
-msgstr "Baze podataka:"
 
 #: internal/web/templates/docker/change_mysql.html:21
 msgid "Go to Databases"
@@ -8031,14 +8155,14 @@ msgid "Change Webserver"
 msgstr "Promeni veb server"
 
 #: internal/web/templates/docker/change_webserver.html:21
-msgid "To switch the webserver, first remove all domains from your account."
-msgstr ""
-"Da biste promenili web server, prvo uklonite sve domene sa svog naloga."
-
-#: internal/web/templates/docker/change_webserver.html:21
 #: internal/web/templates/partials/_db_tuning.html:33
 msgid "Domains:"
 msgstr "Domeni:"
+
+#: internal/web/templates/docker/change_webserver.html:21
+msgid "To switch the webserver, first remove all domains from your account."
+msgstr ""
+"Da biste promenili web server, prvo uklonite sve domene sa svog naloga."
 
 #: internal/web/templates/docker/change_webserver.html:21
 msgid "Go to Domains"
@@ -8639,16 +8763,16 @@ msgstr ""
 "kontejnera."
 
 #: internal/web/templates/docker/terminal.html:35
-msgid "Inactivity timeout:"
-msgstr "Vreme neaktivnosti pre isteka:"
-
-#: internal/web/templates/docker/terminal.html:35
 #: internal/web/templates/mongodb/databases.html:195
 #: internal/web/templates/mysql/databases.html:567
 #: internal/web/templates/mysql/users.html:179
 #: internal/web/templates/psql/databases.html:261
 msgid "seconds"
 msgstr "sekundi"
+
+#: internal/web/templates/docker/terminal.html:35
+msgid "Inactivity timeout:"
+msgstr "Vreme neaktivnosti pre isteka:"
 
 #: internal/web/templates/docker/terminal.html:42
 msgid "Container:"
@@ -8769,13 +8893,13 @@ msgstr ""
 "ostati na disku."
 
 #: internal/web/templates/domains/delete.html:31
+msgid "subdomains"
+msgstr "poddomeni"
+
+#: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/domains.html:195
 msgid "subdomain"
 msgstr "poddomen"
-
-#: internal/web/templates/domains/delete.html:31
-msgid "subdomains"
-msgstr "poddomeni"
 
 #: internal/web/templates/domains/delete.html:31
 #: internal/web/templates/domains/delete.html:38
@@ -9127,13 +9251,13 @@ msgid "Edit as Table"
 msgstr "Izmeni kao tabelu"
 
 #: internal/web/templates/domains/dns.html:719
+msgid "Saving zone file for domain"
+msgstr "Čuvanje fajla zone za domen"
+
+#: internal/web/templates/domains/dns.html:719
 #: internal/web/templates/domains/new.html:256
 msgid "Please wait for the process to finish."
 msgstr "Sačekajte da se proces završi."
-
-#: internal/web/templates/domains/dns.html:719
-msgid "Saving zone file for domain"
-msgstr "Čuvanje fajla zone za domen"
 
 #: internal/web/templates/domains/dns.html:733
 msgid "Zone file saved successfully"
@@ -9344,6 +9468,10 @@ msgid "Showing"
 msgstr "Prikazano"
 
 #: internal/web/templates/domains/domains.html:495
+msgid "Showing domains"
+msgstr "Prikazani domeni"
+
+#: internal/web/templates/domains/domains.html:495
 #: internal/web/templates/files/filemanager.html:348
 #: internal/web/templates/mongodb/users.html:27
 #: internal/web/templates/mongodb/users.html:31
@@ -9358,10 +9486,6 @@ msgstr "do"
 #: internal/web/templates/files/filemanager.html:348
 msgid "from a total of"
 msgstr "od ukupno"
-
-#: internal/web/templates/domains/domains.html:495
-msgid "Showing domains"
-msgstr "Prikazani domeni"
 
 #: internal/web/templates/domains/domains.html:500
 #: internal/web/templates/files/filemanager.html:353
@@ -11538,7 +11662,7 @@ msgstr "Nije pronađen nijedan bekap."
 #: internal/web/templates/files/filemanager_partials.html:395
 #: internal/web/templates/files/filemanager_partials.html:596
 #: internal/web/templates/files/trash.html:44
-#: internal/web/templates/files/trash_partials.html:421
+#: internal/web/templates/files/trash_partials.html:422
 #: internal/web/templates/manager/sites.html:205
 #: internal/web/templates/manager/sites.html:222
 #: internal/web/templates/partials/_bulk.html:15
@@ -11996,15 +12120,15 @@ msgid "No quarantined files"
 msgstr "Nema fajlova u karantinu"
 
 #: internal/web/templates/files/clamav/quarantine.html:49
-#: internal/web/templates/files/clamav/scan_logs.html:26
-msgid "Click here to start a new scan"
-msgstr "Kliknite ovde za pokretanje novog skeniranja"
-
-#: internal/web/templates/files/clamav/quarantine.html:49
 msgid ""
 "No malicious files have been detected or the scan has not been initiated "
 "yet."
 msgstr "Nisu otkriveni zlonamerni fajlovi ili skeniranje još nije pokrenuto."
+
+#: internal/web/templates/files/clamav/quarantine.html:49
+#: internal/web/templates/files/clamav/scan_logs.html:26
+msgid "Click here to start a new scan"
+msgstr "Kliknite ovde za pokretanje novog skeniranja"
 
 #: internal/web/templates/files/clamav/quarantine.html:55
 msgid "Quarantined Files"
@@ -12025,7 +12149,7 @@ msgid "Mark as safe"
 msgstr "Označi kao bezbedno"
 
 #: internal/web/templates/files/clamav/quarantine.html:115
-#: internal/web/templates/files/trash_partials.html:171
+#: internal/web/templates/files/trash_partials.html:172
 msgid "Delete permanently"
 msgstr "Obriši trajno"
 
@@ -12508,17 +12632,17 @@ msgstr "Idi nagore"
 #: internal/web/templates/files/filemanager_partials.html:538
 #: internal/web/templates/files/filemanager_partials.html:600
 #: internal/web/templates/files/trash_partials.html:97
-#: internal/web/templates/files/trash_partials.html:318
+#: internal/web/templates/files/trash_partials.html:319
 msgid "Calculate"
 msgstr "Izračunaj"
 
 #: internal/web/templates/files/filemanager_partials.html:597
-#: internal/web/templates/files/trash_partials.html:420
+#: internal/web/templates/files/trash_partials.html:421
 msgid "Deselect"
 msgstr "Poništi izbor"
 
 #: internal/web/templates/files/filemanager_partials.html:599
-#: internal/web/templates/files/trash_partials.html:308
+#: internal/web/templates/files/trash_partials.html:309
 msgid "Calculating..."
 msgstr "Izračunavanje u toku..."
 
@@ -12582,8 +12706,8 @@ msgid "Some items could not be deleted."
 msgstr "Neke stavke nije moguće obrisati."
 
 #: internal/web/templates/files/filemanager_partials.html:623
-#: internal/web/templates/files/trash_partials.html:272
-#: internal/web/templates/files/trash_partials.html:312
+#: internal/web/templates/files/trash_partials.html:273
+#: internal/web/templates/files/trash_partials.html:313
 msgid "Unknown error"
 msgstr "Nepoznata greška"
 
@@ -12938,15 +13062,15 @@ msgstr "Nema fajlova u otpadu."
 msgid "Deleted"
 msgstr "Obrisano"
 
-#: internal/web/templates/files/trash_partials.html:173
+#: internal/web/templates/files/trash_partials.html:174
 msgid "Items restored. Reloading..."
 msgstr "Stavke vraćene. Ponovno učitavanje..."
 
-#: internal/web/templates/files/trash_partials.html:174
+#: internal/web/templates/files/trash_partials.html:175
 msgid "Items permanently deleted. Reloading..."
 msgstr "Stavke trajno obrisane. Ponovno učitavanje..."
 
-#: internal/web/templates/files/trash_partials.html:175
+#: internal/web/templates/files/trash_partials.html:176
 msgid "Some items could not be processed."
 msgstr "Neke stavke nije moguće obraditi."
 
@@ -20493,15 +20617,15 @@ msgstr ""
 msgid "Create DB, User, and Grant Privileges"
 msgstr "Kreiraj bazu podataka, korisnika i dodeli privilegije"
 
-#: internal/web/templates/system/apache_nginx_conf_editor.html:16
+#: internal/web/templates/system/apache_nginx_conf_editor.html:23
 msgid "WebServer Conf Editor Header"
 msgstr "Zaglavlje editora konfiguracije veb servera"
 
-#: internal/web/templates/system/apache_nginx_conf_editor.html:20
+#: internal/web/templates/system/apache_nginx_conf_editor.html:27
 msgid "Edit main webserver configuration file:"
 msgstr "Izmeni glavnu konfiguracionu datoteku veb servera:"
 
-#: internal/web/templates/system/apache_nginx_conf_editor.html:24
+#: internal/web/templates/system/apache_nginx_conf_editor.html:31
 msgid ""
 "This will overwrite the current file with the default configuration and "
 "restart the service. Continue?"
@@ -20509,9 +20633,21 @@ msgstr ""
 "Ovo će prepisati trenutni fajl podrazumevanom konfiguracijom i restartovati "
 "servis. Nastaviti?"
 
-#: internal/web/templates/system/apache_nginx_conf_editor.html:24
+#: internal/web/templates/system/apache_nginx_conf_editor.html:31
 msgid "Restore Default"
 msgstr "Vrati podrazumevano"
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:40
+msgid "Not saved. The config test reported:"
+msgstr "Nije sačuvano. Provera konfiguracije je prijavila:"
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:45
+msgid "Go to line"
+msgstr "Idi na red"
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:46
+msgid "Open the VirtualHost file of"
+msgstr "Otvori VirtualHost fajl za"
 
 #: internal/web/templates/system/cronjobs.html:19
 #: internal/web/templates/system/cronjobs_new.html:7
