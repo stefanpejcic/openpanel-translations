@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-11-02 13:14+0200\n"
+"POT-Creation-Date: 2026-11-09 13:38+0200\n"
 "PO-Revision-Date: 2026-03-17 19:53+0200\n"
 "Last-Translator: Cuța Mihail-Sebastian <contact.mhi.yt@gmail.com>\n"
 "Language-Team: ro-ro\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: internal/modules/account/api_login.go:58
+#: internal/modules/account/api_login.go:65
 #: internal/modules/account/login.go:203
 msgid "Username and password are required."
 msgstr "Numele de utilizator și parola sunt obligatorii."
@@ -26,12 +26,12 @@ msgstr "Numele de utilizator și parola sunt obligatorii."
 #: internal/modules/account/favorites.go:253 internal/modules/crons/bulk.go:42
 #: internal/modules/dns/bulk.go:31 internal/modules/docker/bulk.go:40
 #: internal/modules/domains/bulk.go:29 internal/modules/emails/bulk.go:28
-#: internal/modules/emails/bulk.go:35 internal/modules/ftp/ftp.go:530
+#: internal/modules/emails/bulk.go:35 internal/modules/ftp/ftp.go:534
 #: internal/modules/malwarescan/bulk.go:16 internal/modules/mongodb/bulk.go:28
 #: internal/modules/mongodb/bulk.go:37 internal/modules/mysql/bulk.go:46
 #: internal/modules/mysql/bulk.go:55 internal/modules/postgresql/bulk.go:28
 #: internal/modules/postgresql/bulk.go:37
-#: internal/web/templates/docker/containers.html:502
+#: internal/web/templates/docker/containers.html:503
 #: internal/web/templates/domains/domains.html:410
 #: internal/web/templates/domains/dynamic_dns.html:130
 #: internal/web/templates/domains/dynamic_dns.html:135
@@ -44,8 +44,8 @@ msgstr "Numele de utilizator și parola sunt obligatorii."
 #: internal/web/templates/files/filemanager_partials.html:372
 #: internal/web/templates/files/filemanager_partials.html:435
 #: internal/web/templates/files/filemanager_partials.html:604
-#: internal/web/templates/files/ftp.html:186
 #: internal/web/templates/files/ftp.html:188
+#: internal/web/templates/files/ftp.html:190
 #: internal/web/templates/files/trash.html:58
 #: internal/web/templates/manager/_cms_app_shared.html:1514
 #: internal/web/templates/manager/_cms_app_shared.html:1623
@@ -84,72 +84,61 @@ msgid "Remove the selected pages from favorites?"
 msgstr "Eliminați paginile selectate din favorite?"
 
 #: internal/modules/account/forgotpassword.go:131
-#: internal/modules/account/forgotpassword.go:143
-#: internal/modules/account/forgotpassword.go:162
+#: internal/modules/account/forgotpassword.go:189
 msgid "Forgot Password"
 msgstr "Ai uitat parola"
 
-#: internal/modules/account/forgotpassword.go:134
-msgid "Email %(email)s not found"
-msgstr "Adresa de email %(email)s nu a fost găsită"
-
-#: internal/modules/account/forgotpassword.go:146
-msgid "Email sending is not configured. Please contact your administrator."
-msgstr ""
-"Trimiterea de emailuri nu este configurată. Vă rugăm contactați "
-"administratorul."
-
-#: internal/modules/account/forgotpassword.go:152
+#: internal/modules/account/forgotpassword.go:177
 msgid "password reset requested"
 msgstr "resetarea parolei a fost solicitată"
 
-#: internal/modules/account/forgotpassword.go:155
+#: internal/modules/account/forgotpassword.go:182
 #: internal/web/templates/user/reset_password/link_is_sent.html:6
 msgid "Password Reset Link Sent"
 msgstr "Link-ul de resetare a parolei a fost trimis"
 
-#: internal/modules/account/forgotpassword.go:193
+#: internal/modules/account/forgotpassword.go:220
 msgid "Password Reset Requested"
 msgstr "Solicitare de resetare a parolei"
 
-#: internal/modules/account/forgotpassword.go:203
+#: internal/modules/account/forgotpassword.go:230
 msgid "OpenPanel [%(domain)s] - Password Reset Requested"
 msgstr "OpenPanel [%(domain)s] - Resetare parolă solicitată"
 
-#: internal/modules/account/forgotpassword.go:321
+#: internal/modules/account/forgotpassword.go:348
 msgid "Reset link is invalid"
 msgstr "Link-ul de resetare este invalid"
 
-#: internal/modules/account/forgotpassword.go:323
+#: internal/modules/account/forgotpassword.go:350
 msgid "Reset link has expired"
 msgstr "Link-ul de resetare a expirat"
 
-#: internal/modules/account/forgotpassword.go:335
+#: internal/modules/account/forgotpassword.go:362
 msgid "Link has already been used or is invalid"
 msgstr "Link-ul a fost deja folosit sau este invalid"
 
-#: internal/modules/account/forgotpassword.go:350
+#: internal/modules/account/forgotpassword.go:377
 msgid "Passwords do not match"
 msgstr "Parolele nu se potrivesc"
 
-#: internal/modules/account/forgotpassword.go:375
+#: internal/modules/account/forgotpassword.go:402
 msgid "password changed using email confirmation"
 msgstr "parola a fost schimbată folosind confirmarea prin email"
 
-#: internal/modules/account/forgotpassword.go:379
+#: internal/modules/account/forgotpassword.go:407
 msgid "Your password has been reset. Please log in."
 msgstr "Parola a fost resetată. Te rog autentifică-te."
 
-#: internal/modules/account/forgotpassword.go:386
+#: internal/modules/account/forgotpassword.go:414
 #: internal/web/templates/user/email_template.html:54
 msgid "Reset Password"
 msgstr "Resetează parola"
 
-#: internal/modules/account/handlers_passkeys.go:205
+#: internal/modules/account/handlers_passkeys.go:211
 msgid "Passkey removed."
 msgstr "Passkey eliminată."
 
-#: internal/modules/account/handlers_passkeys.go:207
+#: internal/modules/account/handlers_passkeys.go:213
 msgid "Passkey not found."
 msgstr "Passkey negăsită."
 
@@ -567,12 +556,12 @@ msgid "Terminate the selected sessions? Anyone using them will be logged out."
 msgstr ""
 "Încheiați sesiunile selectate? Cei care le folosesc vor fi deconectați."
 
-#: internal/modules/account/settings.go:98
-#: internal/modules/emails/emails.go:367 internal/modules/mongodb/users.go:87
-#: internal/modules/mongodb/users.go:181 internal/modules/mongodb/wizard.go:68
-#: internal/modules/mysql/users.go:103 internal/modules/mysql/users.go:211
+#: internal/modules/account/settings.go:114
+#: internal/modules/emails/emails.go:389 internal/modules/mongodb/users.go:87
+#: internal/modules/mongodb/users.go:182 internal/modules/mongodb/wizard.go:68
+#: internal/modules/mysql/users.go:103 internal/modules/mysql/users.go:212
 #: internal/modules/postgresql/users.go:97
-#: internal/modules/postgresql/users.go:203
+#: internal/modules/postgresql/users.go:204
 #: internal/modules/postgresql/wizard.go:65
 #: internal/web/templates/emails/new.html:68
 #: internal/web/templates/emails/single_account.html:182
@@ -586,34 +575,34 @@ msgstr ""
 #: internal/web/templates/manager/ojs_install.html:60
 #: internal/web/templates/manager/prestashop_install.html:50
 #: internal/web/templates/manager/wp/install.html:124
-#: internal/web/templates/mongodb/mongodb_user.html:35
+#: internal/web/templates/mongodb/mongodb_user.html:38
 #: internal/web/templates/mongodb/password.html:33
 #: internal/web/templates/mongodb/wizard.html:60
-#: internal/web/templates/mysql/mysql_user.html:36
+#: internal/web/templates/mysql/mysql_user.html:39
 #: internal/web/templates/mysql/password.html:33
 #: internal/web/templates/mysql/root_password.html:26
 #: internal/web/templates/mysql/wizard.html:238
 #: internal/web/templates/psql/password.html:33
-#: internal/web/templates/psql/psql_user.html:35
+#: internal/web/templates/psql/psql_user.html:38
 #: internal/web/templates/psql/wizard.html:60
 #: internal/web/templates/user/account.html:80
 #: internal/web/templates/user/reset_password/set_new_password.html:84
 msgid "Password does not meet the required strength."
 msgstr "Parola nu îndeplinește nivelul de securitate necesar."
 
-#: internal/modules/account/settings.go:100
+#: internal/modules/account/settings.go:116
 msgid "Password is too common, please choose a different one."
 msgstr "Parola este prea comună, alegeți alta."
 
-#: internal/modules/account/settings.go:102
+#: internal/modules/account/settings.go:118
 msgid "Failed to update password."
 msgstr "Parola nu a putut fi actualizată."
 
-#: internal/modules/account/settings.go:145
+#: internal/modules/account/settings.go:161
 msgid "Password has been changed successfully."
 msgstr "Parola a fost schimbată cu succes."
 
-#: internal/modules/account/settings.go:159
+#: internal/modules/account/settings.go:178
 msgid ""
 "Email address has been changed successfully from %(old_email)s to "
 "%(new_email)s."
@@ -621,13 +610,13 @@ msgstr ""
 "Adresa de e-mail a fost schimbată cu succes din %(old_email)s în "
 "%(new_email)s."
 
-#: internal/modules/account/settings.go:170
+#: internal/modules/account/settings.go:189
 msgid "Username must be 3-20 characters, letters and numbers only."
 msgstr ""
 "Numele de utilizator trebuie să aibă 3-20 de caractere, doar litere și "
 "cifre."
 
-#: internal/modules/account/settings.go:178
+#: internal/modules/account/settings.go:197
 msgid ""
 "Username has been changed successfully from %(current_username)s to "
 "%(new_username)s."
@@ -635,7 +624,7 @@ msgstr ""
 "Numele de utilizator a fost schimbat din %(current_username)s în "
 "%(new_username)s."
 
-#: internal/modules/account/settings.go:194
+#: internal/modules/account/settings.go:213
 msgid "Failed to change username."
 msgstr "Numele de utilizator nu a putut fi schimbat."
 
@@ -663,7 +652,7 @@ msgstr ""
 msgid "Two-Factor Authentication is now disabled."
 msgstr "Autentificarea cu doi factori este acum dezactivată."
 
-#: internal/modules/account/webauthn.go:79
+#: internal/modules/account/webauthn.go:83
 msgid ""
 "Passkeys require the panel to be accessed over HTTPS. Ask your administrator"
 " to configure a domain and SSL certificate for this panel."
@@ -672,7 +661,7 @@ msgstr ""
 "administratorului să configureze un domeniu și un certificat SSL pentru "
 "acest panou."
 
-#: internal/modules/account/webauthn.go:81
+#: internal/modules/account/webauthn.go:85
 msgid ""
 "Passkeys require the panel to be accessed via a domain name, not an IP "
 "address. Ask your administrator to configure a domain for this panel."
@@ -940,11 +929,11 @@ msgstr "Instalează aplicație Ruby"
 msgid "Install App"
 msgstr "Instalează aplicația"
 
-#: internal/modules/backups/backups.go:316
+#: internal/modules/backups/backups.go:335
 msgid "Backup target switched to '%(target)s' successfully."
 msgstr "Destinația backup-ului a fost schimbată în '%(target)s'."
 
-#: internal/modules/backups/reindex.go:133
+#: internal/modules/backups/reindex.go:139
 msgid ""
 "Archive is not in the backup/ layout this page can restore (for example a "
 "full account backup made by the administrator)."
@@ -1041,34 +1030,34 @@ msgstr "Backup-uri la distanță către stocarea în cloud Dropbox."
 msgid "Restore"
 msgstr "Restaurează"
 
-#: internal/modules/backupwizard/backupwizard.go:234
+#: internal/modules/backupwizard/backupwizard.go:239
 msgid "A backup is already in progress. Please wait for it to finish."
 msgstr "Un backup este deja în curs. Așteptați finalizarea."
 
-#: internal/modules/backupwizard/backupwizard.go:239
-#: internal/modules/backupwizard/backupwizard.go:246
+#: internal/modules/backupwizard/backupwizard.go:244
+#: internal/modules/backupwizard/backupwizard.go:251
 msgid "Failed to start backup."
 msgstr "Backup-ul nu a putut fi pornit."
 
-#: internal/modules/backupwizard/backupwizard.go:252
+#: internal/modules/backupwizard/backupwizard.go:257
 msgid "Backup started. It will appear in the list below once complete."
 msgstr ""
 "Backup-ul a fost pornit. Va apărea în lista de mai jos după finalizare."
 
-#: internal/modules/backupwizard/backupwizard.go:265
+#: internal/modules/backupwizard/backupwizard.go:270
 msgid "Invalid filename."
 msgstr "Nume de fișier invalid."
 
-#: internal/modules/backupwizard/backupwizard.go:275
+#: internal/modules/backupwizard/backupwizard.go:280
 msgid "Invalid file path."
 msgstr "Cale de fișier invalidă."
 
-#: internal/modules/backupwizard/backupwizard.go:281
-#: internal/modules/backupwizard/backupwizard.go:297
+#: internal/modules/backupwizard/backupwizard.go:286
+#: internal/modules/backupwizard/backupwizard.go:302
 msgid "Backup file not found."
 msgstr "Fișierul de backup nu a fost găsit."
 
-#: internal/modules/backupwizard/backupwizard.go:288
+#: internal/modules/backupwizard/backupwizard.go:293
 msgid ""
 "This backup is still being created. Please wait until it completes before "
 "downloading."
@@ -1082,6 +1071,26 @@ msgstr ""
 #: internal/web/templates/files/backup_wizard.html:10
 msgid "Backup Wizard"
 msgstr "Asistent Backup"
+
+#: internal/modules/backupwizard/render.go:41
+#: internal/modules/dashboard/sections.go:115
+#: internal/modules/dashboard/sections.go:128
+#: internal/modules/dashboard/sections.go:137
+#: internal/modules/dashboard/sections.go:240
+#: internal/modules/dashboard/sections.go:252
+#: internal/modules/dashboard/sections.go:261
+#: internal/modules/mysql/render.go:59 internal/web/sidebar.go:179
+#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
+#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
+#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
+#: internal/web/templates/dashboard/usage.html:78
+#: internal/web/templates/files/backup_restore.html:457
+#: internal/web/templates/files/backup_restore.html:560
+#: internal/web/templates/files/backup_restore.html:737
+#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
+#: static/js/tour-steps.js:261
+msgid "Databases"
+msgstr "Baze de date"
 
 #: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:73
@@ -1103,26 +1112,6 @@ msgstr "Asistent Backup"
 #: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
 msgid "Domains"
 msgstr "Domenii"
-
-#: internal/modules/backupwizard/render.go:41
-#: internal/modules/dashboard/sections.go:115
-#: internal/modules/dashboard/sections.go:128
-#: internal/modules/dashboard/sections.go:137
-#: internal/modules/dashboard/sections.go:240
-#: internal/modules/dashboard/sections.go:252
-#: internal/modules/dashboard/sections.go:261
-#: internal/modules/mysql/render.go:59 internal/web/sidebar.go:179
-#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
-#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
-#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
-#: internal/web/templates/dashboard/usage.html:78
-#: internal/web/templates/files/backup_restore.html:457
-#: internal/web/templates/files/backup_restore.html:560
-#: internal/web/templates/files/backup_restore.html:737
-#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
-#: static/js/tour-steps.js:261
-msgid "Databases"
-msgstr "Baze de date"
 
 #: internal/modules/backupwizard/render.go:41
 msgid "The home directory"
@@ -1407,16 +1396,11 @@ msgid "Invalid cron file path"
 msgstr "Cale invalidă a fișierului cron"
 
 #: internal/modules/crons/handlers.go:250
-#: internal/modules/crons/handlers.go:425
+#: internal/modules/crons/handlers.go:429
 msgid "Missing one or more required fields (schedule, command, container)."
 msgstr ""
 "Lipsesc unul sau mai multe câmpuri obligatorii (program, comandă, "
 "container)."
-
-#: internal/modules/crons/handlers.go:254
-#: internal/modules/crons/handlers.go:362
-msgid "Invalid characters in input."
-msgstr "Caractere invalide în date."
 
 #: internal/modules/crons/handlers.go:258
 msgid "Invalid schedule: %(error)s"
@@ -1425,7 +1409,7 @@ msgstr "Program invalid: %(error)s"
 #: internal/modules/crons/handlers.go:291
 #: internal/modules/crons/handlers.go:318
 #: internal/modules/crons/handlers.go:375
-#: internal/modules/crons/handlers.go:398
+#: internal/modules/crons/handlers.go:402
 #: internal/modules/crons/schedule.go:94
 #: internal/modules/crons/schedule.go:110
 msgid "Error saving cron job. Please try again."
@@ -1460,16 +1444,16 @@ msgstr "Cale invalidă a fișierului cron."
 msgid "Cron job not found."
 msgstr "Cron job-ul nu a fost găsit."
 
-#: internal/modules/crons/handlers.go:406
+#: internal/modules/crons/handlers.go:410
 msgid "Cron job was successfully edited."
 msgstr "Cron job-ul a fost editat."
 
-#: internal/modules/crons/handlers.go:432
-#: internal/modules/crons/handlers.go:441
+#: internal/modules/crons/handlers.go:436
+#: internal/modules/crons/handlers.go:445
 msgid "Error deleting cron job."
 msgstr "Eroare la ștergerea cron job-ului."
 
-#: internal/modules/crons/handlers.go:454
+#: internal/modules/crons/handlers.go:458
 msgid "Cron job was successfully deleted."
 msgstr "Cron job-ul a fost șters."
 
@@ -1516,8 +1500,8 @@ msgstr "2FA este <b>{status}</b> pentru contul tău."
 
 #: internal/modules/dashboard/sections.go:75
 #: internal/modules/dashboard/sections.go:229
-#: internal/modules/dns/render.go:31 internal/web/sidebar.go:223
-#: internal/web/templates/domains/dns.html:792 static/js/tour-steps.js:1144
+#: internal/modules/dns/render.go:34 internal/web/sidebar.go:223
+#: internal/web/templates/domains/dns.html:853 static/js/tour-steps.js:1144
 msgid "DNS Zone Editor"
 msgstr "Editor zonă DNS"
 
@@ -1585,7 +1569,7 @@ msgstr "Conturi de e-mail"
 
 #: internal/modules/dashboard/sections.go:89
 #: internal/modules/dashboard/sections.go:284
-#: internal/modules/emails/render.go:213 internal/web/sidebar.go:245
+#: internal/modules/emails/render.go:221 internal/web/sidebar.go:245
 #: internal/web/templates/emails/aliases.html:10 static/js/tour-steps.js:987
 msgid "Aliases"
 msgstr "Alias-uri"
@@ -1596,7 +1580,7 @@ msgstr "Adresă catch-all"
 
 #: internal/modules/dashboard/sections.go:91
 #: internal/modules/dashboard/sections.go:285
-#: internal/modules/emails/render.go:365 internal/web/sidebar.go:247
+#: internal/modules/emails/render.go:373 internal/web/sidebar.go:247
 #: internal/web/templates/domains/domains.html:103
 #: internal/web/templates/system/waf.html:159 static/js/tour-steps.js:995
 msgid "Filters"
@@ -1610,9 +1594,9 @@ msgstr "Livrabilitate"
 #: internal/modules/dashboard/sections.go:118
 #: internal/modules/dashboard/sections.go:131
 #: internal/modules/dashboard/sections.go:140
-#: internal/modules/emails/render.go:382
-#: internal/modules/mongodb/render.go:199 internal/modules/mysql/render.go:273
-#: internal/modules/postgresql/render.go:192 internal/web/sidebar.go:181
+#: internal/modules/emails/render.go:390
+#: internal/modules/mongodb/render.go:207 internal/modules/mysql/render.go:275
+#: internal/modules/postgresql/render.go:197 internal/web/sidebar.go:181
 #: internal/web/sidebar.go:195 internal/web/sidebar.go:206
 #: internal/web/sidebar.go:249
 #: internal/web/templates/mongodb/databases.html:82
@@ -1628,7 +1612,7 @@ msgstr "Migrare"
 #: internal/modules/dashboard/sections.go:95
 #: internal/modules/mongodb/bulk.go:24 internal/modules/mysql/bulk.go:40
 #: internal/modules/postgresql/bulk.go:24
-#: internal/web/templates/emails/accounts.html:65
+#: internal/web/templates/emails/accounts.html:67
 #: internal/web/templates/mongodb/databases.html:88
 #: internal/web/templates/mongodb/databases.html:94
 #: internal/web/templates/mongodb/databases.html:152
@@ -1643,7 +1627,7 @@ msgstr "Exportă"
 
 #: internal/modules/dashboard/sections.go:96
 #: internal/modules/dashboard/sections.go:291 internal/web/sidebar.go:251
-#: internal/web/templates/emails/accounts.html:114
+#: internal/web/templates/emails/accounts.html:116
 msgid "Webmail"
 msgstr "Webmail"
 
@@ -1652,7 +1636,7 @@ msgstr "Webmail"
 #: internal/web/templates/domains/ssl.html:226
 #: internal/web/templates/files/clamav/scan_logs.html:41
 #: internal/web/templates/files/filemanager.html:146
-#: internal/web/templates/files/filemanager.html:405
+#: internal/web/templates/files/filemanager.html:372
 #: internal/web/templates/manager/_cms_app_shared.html:339
 #: internal/web/templates/manager/_cms_app_shared.html:512
 #: internal/web/templates/manager/python_node_apps.html:320
@@ -1698,7 +1682,7 @@ msgstr "Coș de gunoi"
 
 #: internal/modules/dashboard/sections.go:103
 #: internal/modules/dashboard/sections.go:216
-#: internal/modules/ftp/render.go:28 internal/web/sidebar.go:263
+#: internal/modules/ftp/render.go:29 internal/web/sidebar.go:263
 #: internal/web/templates/dashboard/usage.html:124
 #: internal/web/templates/files/ftp.html:13
 #: internal/web/templates/manager/_cms_app_shared.html:411
@@ -1713,7 +1697,7 @@ msgstr "Conturi FTP"
 
 #: internal/modules/dashboard/sections.go:104
 #: internal/modules/dashboard/sections.go:217
-#: internal/modules/ftp/render.go:48
+#: internal/modules/ftp/render.go:60
 #: internal/web/templates/files/ftp_connections.html:9
 msgid "FTP Connections"
 msgstr "Conexiuni FTP"
@@ -1731,14 +1715,14 @@ msgstr "Repară permisiunile"
 #: internal/modules/dashboard/sections.go:123
 #: internal/modules/dashboard/sections.go:134 internal/web/sidebar.go:185
 #: internal/web/sidebar.go:198 internal/web/sidebar.go:277
-#: internal/web/templates/files/ftp.html:61
-#: internal/web/templates/files/ftp.html:103
+#: internal/web/templates/files/ftp.html:63
+#: internal/web/templates/files/ftp.html:105
 msgid "Configuration"
 msgstr "Configurație"
 
 #: internal/modules/dashboard/sections.go:114
 #: internal/modules/dashboard/sections.go:239
-#: internal/modules/docker/render.go:404 internal/web/sidebar.go:284
+#: internal/modules/docker/render.go:434 internal/web/sidebar.go:284
 #: internal/web/templates/dashboard/onboarding.html:504
 #: internal/web/templates/partials/_header.html:101
 msgid "MySQL"
@@ -1763,8 +1747,8 @@ msgstr "Utilizatori"
 #: internal/modules/dashboard/sections.go:242
 #: internal/modules/dashboard/sections.go:254
 #: internal/modules/dashboard/sections.go:263
-#: internal/modules/mongodb/render.go:148
-#: internal/modules/postgresql/render.go:150
+#: internal/modules/mongodb/render.go:156
+#: internal/modules/postgresql/render.go:155
 #: internal/web/sidebar_classic.go:94 internal/web/sidebar_classic.go:116
 #: internal/web/sidebar_classic.go:139
 #: internal/web/templates/mongodb/databases.html:38
@@ -1806,8 +1790,8 @@ msgstr "Acces la distanță"
 #: internal/modules/dashboard/sections.go:122
 #: internal/modules/dashboard/sections.go:133
 #: internal/modules/dashboard/sections.go:141
-#: internal/modules/mongodb/render.go:218 internal/modules/mysql/render.go:291
-#: internal/modules/postgresql/render.go:211 internal/web/sidebar.go:184
+#: internal/modules/mongodb/render.go:226 internal/modules/mysql/render.go:293
+#: internal/modules/postgresql/render.go:216 internal/web/sidebar.go:184
 #: internal/web/sidebar.go:197 internal/web/sidebar.go:207
 #: static/js/tour-steps.js:879 static/js/tour-steps.js:928
 #: static/js/tour-steps.js:936
@@ -1853,7 +1837,7 @@ msgid "Default Version"
 msgstr "Versiune implicită"
 
 #: internal/modules/dashboard/sections.go:146 internal/web/sidebar.go:298
-#: internal/web/templates/emails/accounts.html:78
+#: internal/web/templates/emails/accounts.html:80
 #: internal/web/templates/emails/aliases.html:42
 #: internal/web/templates/emails/deliverability.html:35
 #: internal/web/templates/manager/wp/single.html:167
@@ -1896,10 +1880,10 @@ msgstr "Tip server web"
 #: internal/modules/dashboard/sections.go:164
 #: internal/modules/dashboard/sections.go:300
 #: internal/modules/dashboard/sections.go:301
-#: internal/modules/docker/render.go:182 internal/web/sidebar.go:329
+#: internal/modules/docker/render.go:207 internal/web/sidebar.go:329
 #: internal/web/sidebar.go:332
 #: internal/web/templates/docker/containers.html:13
-#: internal/web/templates/docker/containers.html:272
+#: internal/web/templates/docker/containers.html:273
 #: internal/web/templates/partials/_header.html:121
 #: static/js/tour-steps.js:473
 msgid "Containers"
@@ -1907,16 +1891,17 @@ msgstr "Containere"
 
 #: internal/modules/dashboard/sections.go:165
 #: internal/modules/dashboard/sections.go:302 internal/web/sidebar.go:333
-#: internal/web/templates/docker/containers.html:495
+#: internal/web/templates/docker/containers.html:496
+#: internal/web/templates/partials/_account_created.html:131
 #: static/js/tour-steps.js:1028
 msgid "Terminal"
 msgstr "Terminal"
 
 #: internal/modules/dashboard/sections.go:166
 #: internal/modules/dashboard/sections.go:303
-#: internal/modules/docker/render.go:593 internal/web/sidebar.go:308
+#: internal/modules/docker/render.go:623 internal/web/sidebar.go:308
 #: internal/web/sidebar.go:334 internal/web/templates/cache/service.html:269
-#: internal/web/templates/docker/containers.html:498
+#: internal/web/templates/docker/containers.html:499
 #: internal/web/templates/docker/logs.html:11
 #: internal/web/templates/docker/logs.html:87
 #: internal/web/templates/files/backup_restore.html:502
@@ -2056,12 +2041,13 @@ msgid "Services"
 msgstr "Servicii"
 
 #: internal/modules/dashboard/sections.go:193 internal/web/sidebar.go:368
+#: internal/web/templates/partials/_account_created.html:118
 msgid "Processes"
 msgstr "Procese"
 
 #: internal/modules/dashboard/sections.go:195 internal/web/sidebar.go:372
 #: internal/web/templates/dashboard/onboarding.html:601
-#: internal/web/templates/emails/migrate.html:47
+#: internal/web/templates/emails/migrate.html:82
 #: internal/web/templates/manager/_cms_app_shared.html:201
 #: internal/web/templates/manager/python_node_apps.html:100
 #: internal/web/templates/manager/wp/single.html:197
@@ -2171,7 +2157,7 @@ msgstr "Deschide phpMyAdmin"
 msgid "Process List"
 msgstr "Listă procese"
 
-#: internal/modules/dashboard/sections.go:248 internal/web/dbengine.go:15
+#: internal/modules/dashboard/sections.go:248 internal/web/dbengine.go:48
 #: static/js/tour-steps.js:895
 msgid "MySQL Configuration"
 msgstr "Configurație MySQL"
@@ -2180,7 +2166,7 @@ msgstr "Configurație MySQL"
 msgid "Change root password"
 msgstr "Schimbă parola root"
 
-#: internal/modules/dashboard/sections.go:258 internal/web/dbengine.go:21
+#: internal/modules/dashboard/sections.go:258 internal/web/dbengine.go:54
 #: static/js/tour-steps.js:952
 msgid "PostgreSQL Configuration"
 msgstr "Configurație PostgreSQL"
@@ -2206,7 +2192,7 @@ msgid "Cache"
 msgstr "Cache"
 
 #: internal/modules/dashboard/sections.go:282
-#: internal/modules/emails/render.go:90
+#: internal/modules/emails/render.go:98
 #: internal/web/templates/dashboard/onboarding.html:204
 #: internal/web/templates/emails/accounts.html:8
 #: internal/web/templates/files/backup_restore.html:9
@@ -2220,7 +2206,7 @@ msgid "Emails"
 msgstr "Emailuri"
 
 #: internal/modules/dashboard/sections.go:286
-#: internal/modules/emails/render.go:322
+#: internal/modules/emails/render.go:330
 #: internal/web/templates/emails/deliverability.html:10
 #: internal/web/templates/emails/deliverability_domain.html:9
 #: static/js/tour-steps.js:1003
@@ -2236,8 +2222,8 @@ msgid "Address Importer"
 msgstr "Importator de adrese"
 
 #: internal/modules/dashboard/sections.go:289
-#: internal/modules/emails/render.go:419
-#: internal/web/templates/emails/migrate.html:15
+#: internal/modules/emails/render.go:427
+#: internal/web/templates/emails/migrate.html:16
 msgid "Migrate Emails"
 msgstr "Migrare e-mailuri"
 
@@ -2424,8 +2410,9 @@ msgstr "Docker"
 #: internal/web/templates/domains/domains.html:526
 #: internal/web/templates/domains/domains.html:527
 #: internal/web/templates/domains/logs.html:222
-#: internal/web/templates/files/filemanager.html:379
-#: internal/web/templates/files/filemanager.html:380
+#: internal/web/templates/emails/migrate.html:163
+#: internal/web/templates/files/filemanager.html:346
+#: internal/web/templates/files/filemanager.html:347
 #: internal/web/templates/system/error_logs.html:99
 #: internal/web/templates/system/waf_logs.html:140
 #: internal/web/templates/user/activity.html:209
@@ -2487,48 +2474,56 @@ msgstr "Eroare la salvarea fișierului de zonă."
 msgid "Error:Zone file not found for domain: %(domain)s"
 msgstr "Eroare: fișierul de zonă nu a fost găsit pentru domeniul: %(domain)s"
 
-#: internal/modules/dns/crud.go:194
+#: internal/modules/dns/crud.go:204
 msgid "Please provide all required fields."
 msgstr "Completați toate câmpurile obligatorii."
 
-#: internal/modules/dns/crud.go:200
+#: internal/modules/dns/crud.go:210
 msgid "Invalid characters in submitted data."
 msgstr "Caractere invalide în datele trimise."
 
-#: internal/modules/dns/crud.go:213 internal/modules/dns/list.go:95
+#: internal/modules/dns/crud.go:223 internal/modules/dns/list.go:95
 msgid "Zone file not found."
 msgstr "Fișierul de zonă nu a fost găsit."
 
-#: internal/modules/dns/crud.go:235
+#: internal/modules/dns/crud.go:230
+msgid "%(type)s records are not allowed on this server."
+msgstr ""
+
+#: internal/modules/dns/crud.go:247
 msgid "CNAME record with this name already exists."
 msgstr "Există deja o înregistrare CNAME cu acest nume."
 
-#: internal/modules/dns/crud.go:241 internal/modules/dns/crud.go:252
+#: internal/modules/dns/crud.go:253 internal/modules/dns/crud.go:266
 msgid "Error adding DNS record: %(error)s"
 msgstr "Eroare la adăugarea înregistrării DNS: %(error)s"
 
-#: internal/modules/dns/crud.go:259
+#: internal/modules/dns/crud.go:257
+msgid "This name already has a DMARC record, edit that one instead."
+msgstr ""
+
+#: internal/modules/dns/crud.go:273
 msgid "DNS record added successfully."
 msgstr "Înregistrarea DNS a fost adăugată."
 
-#: internal/modules/dns/crud.go:338
+#: internal/modules/dns/crud.go:356
 msgid "Please provide a domain name."
 msgstr "Introduceți un nume de domeniu."
 
-#: internal/modules/dns/crud.go:350
+#: internal/modules/dns/crud.go:368
 msgid "Failed to restart DNS zone: %(error)s"
 msgstr "Zona DNS nu a putut fi repornită: %(error)s"
 
-#: internal/modules/dns/crud.go:356
+#: internal/modules/dns/crud.go:374
 msgid "DNS zone restarted successfully."
 msgstr "Zona DNS a fost repornită."
 
-#: internal/modules/dns/render.go:49
+#: internal/modules/dns/render.go:52
 #: internal/web/templates/domains/domains.html:359
 msgid "Edit DNS Zone"
 msgstr "Editează Zona DNS"
 
-#: internal/modules/dns/render.go:65
+#: internal/modules/dns/render.go:71
 #: internal/web/templates/domains/dns.html:121
 #: internal/web/templates/domains/dns.html:133
 msgid "Edit DNS File"
@@ -2540,37 +2535,37 @@ msgstr "Editează Fișierul DNS"
 msgid "Command failed with error. Please try again."
 msgstr "Comanda a eșuat. Încercați din nou."
 
-#: internal/modules/docker/actions.go:296
+#: internal/modules/docker/actions.go:300
 msgid "Image pulled and container %(container_name)s activated successfully."
 msgstr ""
 "Imaginea a fost descărcată și containerul %(container_name)s a fost activat."
 
-#: internal/modules/docker/actions.go:297
+#: internal/modules/docker/actions.go:301
 msgid ""
 "Image pulled and container %(container_name)s deactivated successfully."
 msgstr ""
 "Imaginea a fost descărcată și containerul %(container_name)s a fost "
 "dezactivat."
 
-#: internal/modules/docker/actions.go:298
+#: internal/modules/docker/actions.go:302
 msgid "Image pulled and container %(container_name)s restarted successfully."
 msgstr ""
 "Imaginea a fost descărcată și containerul %(container_name)s a fost "
 "repornit."
 
-#: internal/modules/docker/actions.go:302
+#: internal/modules/docker/actions.go:306
 msgid "Container %(container_name)s restarted successfully."
 msgstr "Containerul %(container_name)s a fost repornit."
 
-#: internal/modules/docker/actions.go:306
+#: internal/modules/docker/actions.go:310
 msgid "Container %(container_name)s deactivated successfully."
 msgstr "Containerul %(container_name)s a fost dezactivat."
 
-#: internal/modules/docker/actions.go:308
+#: internal/modules/docker/actions.go:312
 msgid "Container %(container_name)s activated successfully."
 msgstr "Containerul %(container_name)s a fost activat."
 
-#: internal/modules/docker/actions.go:316
+#: internal/modules/docker/actions.go:320
 msgid "Error occurred!"
 msgstr "A apărut o eroare!"
 
@@ -2581,15 +2576,15 @@ msgstr "0 = nelimitat"
 
 #: internal/modules/docker/bulk.go:24 internal/modules/docker/bulk.go:28
 #: internal/modules/emails/bulk.go:15
-#: internal/web/templates/docker/containers.html:387
-#: internal/web/templates/docker/containers.html:432
+#: internal/web/templates/docker/containers.html:388
+#: internal/web/templates/docker/containers.html:433
 #: internal/web/templates/emails/new.html:168
 #: internal/web/templates/emails/single_account.html:76
 msgid "Maximum allowed: "
 msgstr "Maxim permis: "
 
 #: internal/modules/docker/bulk.go:31
-#: internal/web/templates/docker/containers.html:480
+#: internal/web/templates/docker/containers.html:481
 #: internal/web/templates/manager/python_node_apps.html:214
 #: internal/web/templates/partials/_footer.html:55
 msgid "Start"
@@ -2600,7 +2595,7 @@ msgid "Start the selected containers?"
 msgstr "Porniți containerele selectate?"
 
 #: internal/modules/docker/bulk.go:32
-#: internal/web/templates/docker/containers.html:486
+#: internal/web/templates/docker/containers.html:487
 #: internal/web/templates/files/clamav/scanner.html:50
 #: internal/web/templates/manager/python_node_apps.html:247
 #: internal/web/templates/partials/site_manager_shared.html:782
@@ -2630,8 +2625,8 @@ msgstr "Setați limita de CPU pentru containerele selectate:"
 
 #: internal/modules/docker/bulk.go:35
 #: internal/web/templates/docker/containers.html:18
-#: internal/web/templates/docker/containers.html:384
-#: internal/web/templates/docker/containers.html:387
+#: internal/web/templates/docker/containers.html:385
+#: internal/web/templates/docker/containers.html:388
 msgid "cores"
 msgstr "nuclee"
 
@@ -2653,8 +2648,8 @@ msgstr "Setați numărul maxim de procese pentru containerele selectate:"
 
 #: internal/modules/docker/bulk.go:39
 #: internal/web/templates/cache/service.html:231
-#: internal/web/templates/docker/containers.html:66
-#: internal/web/templates/docker/containers.html:107
+#: internal/web/templates/docker/containers.html:67
+#: internal/web/templates/docker/containers.html:108
 #: internal/web/templates/system/services.html:113
 msgid "PIDs"
 msgstr "PID-uri"
@@ -2696,7 +2691,7 @@ msgstr "Șters."
 msgid "Unknown bulk action."
 msgstr "Acțiune în masă necunoscută."
 
-#: internal/modules/docker/containers.go:112
+#: internal/modules/docker/containers.go:113
 msgid ""
 "Missing environment variables. Please check the configuration or restore "
 "from backup."
@@ -2704,32 +2699,28 @@ msgstr ""
 "Lipsesc variabile de mediu. Verificați configurația sau restaurați dintr-un "
 "backup."
 
-#: internal/modules/docker/containers.go:184
-#: internal/modules/docker/containers.go:202
+#: internal/modules/docker/containers.go:185
+#: internal/modules/docker/containers.go:203
 msgid "Add service"
 msgstr "Adaugă serviciul"
 
-#: internal/modules/docker/containers.go:335
-msgid "Container %(service_name)s created successfully!"
-msgstr "Containerul %(service_name)s a fost creat!"
-
-#: internal/modules/docker/containers.go:408
+#: internal/modules/docker/containers.go:413
 msgid ""
 "Enter a valid image, for example nginx:latest or ghcr.io/owner/app:1.0."
 msgstr ""
 "Introduceți o imagine validă, de exemplu nginx:latest sau "
 "ghcr.io/owner/app:1.0."
 
-#: internal/modules/docker/containers.go:413
+#: internal/modules/docker/containers.go:418
 #: internal/web/templates/docker/container_form.html:155
 msgid "Choose at least one network."
 msgstr "Alegeți cel puțin o rețea."
 
-#: internal/modules/docker/containers.go:419
+#: internal/modules/docker/containers.go:424
 msgid "Service name cannot be changed."
 msgstr "Numele serviciului nu poate fi schimbat."
 
-#: internal/modules/docker/containers.go:424
+#: internal/modules/docker/containers.go:429
 msgid ""
 "Invalid service name. Must start with a letter, contain only lowercase "
 "letters and digits, and be at least 3 characters long."
@@ -2737,11 +2728,11 @@ msgstr ""
 "Nume de serviciu invalid. Trebuie să înceapă cu o literă, să conțină doar "
 "litere mici și cifre și să aibă cel puțin 3 caractere."
 
-#: internal/modules/docker/containers.go:429
+#: internal/modules/docker/containers.go:434
 msgid "CPU limit must be a positive number."
 msgstr "Limita de CPU trebuie să fie un număr pozitiv."
 
-#: internal/modules/docker/containers.go:434
+#: internal/modules/docker/containers.go:439
 msgid ""
 "Memory limit must be a positive number followed by 'M' or 'G' (e.g., 512M or"
 " 1.5G)."
@@ -2749,45 +2740,45 @@ msgstr ""
 "Limita de memorie trebuie să fie un număr pozitiv urmat de 'M' sau 'G' (de "
 "ex. 512M sau 1.5G)."
 
-#: internal/modules/docker/containers.go:439
+#: internal/modules/docker/containers.go:444
 msgid "PIDs limit must be a positive whole number."
 msgstr "Limita de PID-uri trebuie să fie un număr întreg pozitiv."
 
-#: internal/modules/docker/containers.go:517
+#: internal/modules/docker/containers.go:522
 msgid "Container updated and restarted with the new settings."
 msgstr ""
 
-#: internal/modules/docker/containers.go:519
+#: internal/modules/docker/containers.go:524
 msgid "Container updated, the new settings apply when it starts."
 msgstr ""
 
-#: internal/modules/docker/images.go:32
+#: internal/modules/docker/images.go:36
 msgid "The image of %(service)s can't be changed."
 msgstr "Imaginea pentru %(service)s nu poate fi schimbată."
 
-#: internal/modules/docker/images.go:39
+#: internal/modules/docker/images.go:43
 msgid "Invalid image tag."
 msgstr "Tag de imagine invalid."
 
-#: internal/modules/docker/images.go:48
+#: internal/modules/docker/images.go:52
 msgid "Successfully changed image tag for %(service)s to %(value)s!"
 msgstr "Tagul imaginii pentru %(service)s a fost schimbat în %(value)s!"
 
-#: internal/modules/docker/images.go:51
+#: internal/modules/docker/images.go:55
 msgid "Failed to stop the service in order to delete old image."
 msgstr "Serviciul nu a putut fi oprit pentru a șterge imaginea veche."
 
-#: internal/modules/docker/render.go:404
+#: internal/modules/docker/render.go:434
 #: internal/web/templates/dashboard/onboarding.html:505
 msgid "Can be better fine-tuned for any type of application."
 msgstr "Poate fi ajustat mai fin pentru orice tip de aplicație."
 
-#: internal/modules/docker/render.go:405
+#: internal/modules/docker/render.go:435
 #: internal/web/templates/dashboard/onboarding.html:509
 msgid "MariaDB"
 msgstr "MariaDB"
 
-#: internal/modules/docker/render.go:405
+#: internal/modules/docker/render.go:435
 #: internal/web/templates/dashboard/onboarding.html:510
 msgid ""
 "Recommended for WordPress sites - smaller image, lower resource usage, and "
@@ -2796,12 +2787,12 @@ msgstr ""
 "Recomandat pentru site-uri WordPress - imagine mai mică, consum de resurse "
 "redus și execuție implicită mai rapidă a interogărilor."
 
-#: internal/modules/docker/render.go:406
+#: internal/modules/docker/render.go:436
 #: internal/web/templates/dashboard/onboarding.html:514
 msgid "Percona"
 msgstr "Percona"
 
-#: internal/modules/docker/render.go:406
+#: internal/modules/docker/render.go:436
 #: internal/web/templates/dashboard/onboarding.html:515
 msgid ""
 "MySQL drop-in with extra performance and monitoring features, geared toward "
@@ -2810,29 +2801,29 @@ msgstr ""
 "Înlocuitor MySQL cu funcții suplimentare de performanță și monitorizare, "
 "destinat site-urilor cu trafic mare."
 
-#: internal/modules/docker/render.go:419 internal/modules/docker/render.go:425
+#: internal/modules/docker/render.go:449 internal/modules/docker/render.go:455
 #: internal/web/templates/docker/change_mysql.html:10
 msgid "Database Server"
 msgstr "Server de baze de date"
 
-#: internal/modules/docker/render.go:457
+#: internal/modules/docker/render.go:487
 #: internal/web/templates/dashboard/onboarding.html:444
 msgid "Apache"
 msgstr "Apache"
 
-#: internal/modules/docker/render.go:457
+#: internal/modules/docker/render.go:487
 #: internal/web/templates/dashboard/onboarding.html:445
 msgid "Recommended for websites that use .htaccess for rewrite rules."
 msgstr ""
 "Recomandat pentru site-urile care folosesc .htaccess pentru reguli de "
 "rescriere."
 
-#: internal/modules/docker/render.go:458
+#: internal/modules/docker/render.go:488
 #: internal/web/templates/dashboard/onboarding.html:449
 msgid "Nginx"
 msgstr "Nginx"
 
-#: internal/modules/docker/render.go:458
+#: internal/modules/docker/render.go:488
 #: internal/web/templates/dashboard/onboarding.html:450
 msgid ""
 "Recommended for NodeJS and Python applications, and high-traffic sites."
@@ -2840,46 +2831,46 @@ msgstr ""
 "Recomandat pentru aplicații NodeJS și Python, precum și pentru site-uri cu "
 "trafic ridicat."
 
-#: internal/modules/docker/render.go:459
+#: internal/modules/docker/render.go:489
 #: internal/web/templates/dashboard/onboarding.html:454
 msgid "OpenLiteSpeed"
 msgstr "OpenLiteSpeed"
 
-#: internal/modules/docker/render.go:459
+#: internal/modules/docker/render.go:489
 #: internal/web/templates/dashboard/onboarding.html:455
 msgid "Recommended for WordPress websites, but only one PHP version."
 msgstr ""
 "Recomandat pentru site-uri WordPress, dar doar cu o singură versiune PHP."
 
-#: internal/modules/docker/render.go:460
+#: internal/modules/docker/render.go:490
 #: internal/web/templates/dashboard/onboarding.html:489
 msgid "OpenResty"
 msgstr "OpenResty"
 
-#: internal/modules/docker/render.go:460
+#: internal/modules/docker/render.go:490
 #: internal/web/templates/dashboard/onboarding.html:490
 msgid "Nginx core bundled with Lua scripting for custom logic."
 msgstr "Nucleu Nginx combinat cu scripting Lua pentru logică personalizată."
 
-#: internal/modules/docker/render.go:461
+#: internal/modules/docker/render.go:491
 #: internal/web/templates/dashboard/onboarding.html:494
 msgid "LiteSpeed"
 msgstr "LiteSpeed"
 
-#: internal/modules/docker/render.go:461
+#: internal/modules/docker/render.go:491
 #: internal/web/templates/dashboard/onboarding.html:495
 msgid ""
 "LiteSpeed Enterprise with .htaccess support, starts on a trial and takes "
 "your license key any time."
 msgstr ""
 
-#: internal/modules/docker/render.go:492 internal/modules/docker/render.go:498
+#: internal/modules/docker/render.go:522 internal/modules/docker/render.go:528
 #: internal/web/templates/dashboard/onboarding.html:596
 #: internal/web/templates/docker/change_webserver.html:10
 msgid "Webserver"
 msgstr "Server web"
 
-#: internal/modules/docker/render.go:544
+#: internal/modules/docker/render.go:574
 #: internal/web/templates/docker/change_images.html:113
 msgid "Change docker image tag"
 msgstr "Schimbă tag-ul imaginii docker"
@@ -2936,14 +2927,14 @@ msgstr "S-a trecut la %(new_webserver)s!"
 msgid "Invalid web server selected"
 msgstr "Server web selectat invalid"
 
-#: internal/modules/docker/terminal.go:37
+#: internal/modules/docker/terminal.go:38
 #: internal/web/templates/docker/terminal.html:14
 #: internal/web/templates/docker/terminal.html:20
 #: internal/web/templates/docker/terminal.html:219
 msgid "Container Terminal"
 msgstr "Terminal container"
 
-#: internal/modules/docker/terminal.go:60
+#: internal/modules/docker/terminal.go:61
 #: internal/web/templates/docker/terminal.html:215
 msgid "Select Container"
 msgstr "Selectează container"
@@ -3062,7 +3053,7 @@ msgid "Invalid request. Domain name must be provided."
 msgstr "Cerere invalidă. Trebuie furnizat numele domeniului."
 
 #: internal/modules/domains/delete.go:39
-#: internal/modules/domains/redirect.go:95
+#: internal/modules/domains/redirect.go:108
 msgid "Domain name not provided."
 msgstr "Numele domeniului nu a fost furnizat."
 
@@ -3090,15 +3081,15 @@ msgstr "Fișierul jurnal pentru domeniul %(domain_name)s este gol."
 msgid "Error reading log file: %(error)s"
 msgstr "Eroare la citirea fișierului jurnal: %(error)s"
 
-#: internal/modules/domains/new.go:69
+#: internal/modules/domains/new.go:74
 msgid "Domain name is required"
 msgstr "Numele domeniului este obligatoriu"
 
-#: internal/modules/domains/new.go:90
+#: internal/modules/domains/new.go:95
 msgid "Domain name contains invalid characters."
 msgstr "Numele domeniului conține caractere invalide."
 
-#: internal/modules/domains/new.go:100
+#: internal/modules/domains/new.go:105
 #: internal/web/templates/domains/new.html:217
 msgid ""
 "Paths for both public and secret files must be set for importing .onion "
@@ -3107,27 +3098,31 @@ msgstr ""
 "Căile pentru fișierele publice și secrete trebuie setate pentru a importa un"
 " domeniu .onion."
 
-#: internal/modules/domains/new.go:106
+#: internal/modules/domains/new.go:111
 msgid "Path for public file must start with /var/www/html/"
 msgstr "Calea fișierului public trebuie să înceapă cu /var/www/html/"
 
-#: internal/modules/domains/new.go:111
+#: internal/modules/domains/new.go:116
 msgid "Public key file: %(onion_public_key)s does not exist!"
 msgstr "Fișierul cheii publice %(onion_public_key)s nu există!"
 
-#: internal/modules/domains/new.go:117
+#: internal/modules/domains/new.go:122
 msgid "Path for secret file must start with /var/www/html/"
 msgstr "Calea fișierului secret trebuie să înceapă cu /var/www/html/"
 
-#: internal/modules/domains/new.go:122
+#: internal/modules/domains/new.go:127
 msgid "Secret key file: %(onion_secret_key)s does not exist!"
 msgstr "Fișierul cheii secrete %(onion_secret_key)s nu există!"
 
-#: internal/modules/domains/redirect.go:47
+#: internal/modules/domains/new.go:133
+msgid "Onion key paths can't contain '..'."
+msgstr ""
+
+#: internal/modules/domains/redirect.go:61
 msgid "Domain %(domain_url)s does not have a redirect URL configured."
 msgstr "Domeniul %(domain_url)s nu are configurat un URL de redirecționare."
 
-#: internal/modules/domains/redirect.go:76
+#: internal/modules/domains/redirect.go:89
 msgid ""
 "Successfully deleted the redirect link %(redirect_url)s for domain "
 "%(domain_url)s"
@@ -3135,11 +3130,11 @@ msgstr ""
 "Redirecționarea %(redirect_url)s pentru domeniul %(domain_url)s a fost "
 "ștearsă"
 
-#: internal/modules/domains/redirect.go:103
+#: internal/modules/domains/redirect.go:116
 msgid "Invalid URL. Please provide a URL with 'http://' or 'https://' prefix."
 msgstr "URL invalid. Introduceți un URL cu prefixul 'http://' sau 'https://'."
 
-#: internal/modules/domains/redirect.go:122
+#: internal/modules/domains/redirect.go:135
 msgid ""
 "Successfully created redirect from domain %(domain_url)s to %(redirect_url)s"
 msgstr ""
@@ -3150,7 +3145,7 @@ msgstr ""
 #: internal/web/templates/docker/logs.html:37
 #: internal/web/templates/domains/delete.html:62
 #: internal/web/templates/domains/dns.html:102
-#: internal/web/templates/emails/accounts.html:37
+#: internal/web/templates/emails/accounts.html:39
 #: internal/web/templates/system/error_logs.html:31
 #: internal/web/templates/system/waf.html:77
 #: internal/web/templates/system/waf.html:111
@@ -3165,15 +3160,15 @@ msgstr "Toate"
 #: internal/modules/domains/render.go:60
 #: internal/web/templates/cache/service.html:28
 #: internal/web/templates/cache/service.html:158
-#: internal/web/templates/docker/containers.html:67
-#: internal/web/templates/docker/containers.html:111
+#: internal/web/templates/docker/containers.html:68
+#: internal/web/templates/docker/containers.html:112
 #: internal/web/templates/domains/domains.html:78
 #: internal/web/templates/domains/domains.html:148
 #: internal/web/templates/domains/logs.html:112
 #: internal/web/templates/domains/logs.html:132
 #: internal/web/templates/domains/ssl.html:26
-#: internal/web/templates/emails/accounts.html:29
-#: internal/web/templates/emails/migrate.html:117
+#: internal/web/templates/emails/accounts.html:31
+#: internal/web/templates/emails/migrate.html:179
 #: internal/web/templates/files/backup_restore.html:627
 #: internal/web/templates/files/backup_restore.html:663
 #: internal/web/templates/manager/wp/single.html:1038
@@ -3192,8 +3187,8 @@ msgstr "Stare"
 
 #: internal/modules/domains/render.go:60
 #: internal/web/templates/domains/domains.html:199
-#: internal/web/templates/emails/accounts.html:29
-#: internal/web/templates/emails/accounts.html:43
+#: internal/web/templates/emails/accounts.html:31
+#: internal/web/templates/emails/accounts.html:45
 #: internal/web/templates/files/backup_restore.html:785
 msgid "Suspended"
 msgstr "Suspendat"
@@ -3214,20 +3209,20 @@ msgstr "Versiune PHP"
 
 #: internal/modules/domains/render.go:75
 #: internal/web/templates/domains/domains.html:285
+msgid "AutoSSL"
+msgstr "AutoSSL"
+
+#: internal/modules/domains/render.go:75
+#: internal/web/templates/domains/domains.html:285
 #: internal/web/templates/domains/ssl.html:52
 msgid "Custom SSL"
 msgstr "SSL personalizat"
 
-#: internal/modules/domains/render.go:75
-#: internal/web/templates/domains/domains.html:285
-msgid "AutoSSL"
-msgstr "AutoSSL"
-
 #: internal/modules/domains/render.go:77
 #: internal/web/templates/docker/container_form.html:240
 #: internal/web/templates/docker/container_form.html:256
-#: internal/web/templates/domains/dns.html:264
-#: internal/web/templates/domains/dns.html:283
+#: internal/web/templates/domains/dns.html:290
+#: internal/web/templates/domains/dns.html:337
 #: internal/web/templates/domains/dynamic_dns.html:40
 #: internal/web/templates/domains/dynamic_dns.html:86
 #: internal/web/templates/domains/new.html:38
@@ -3243,6 +3238,7 @@ msgstr "AutoSSL"
 #: internal/web/templates/manager/websitebuilder_install.html:36
 #: internal/web/templates/manager/wp/install.html:71
 #: internal/web/templates/manager/wp/list.html:98
+#: internal/web/templates/partials/_account_created.html:112
 #: internal/web/templates/partials/_search.html:59
 #: internal/web/templates/php/settings.html:75
 msgid "Domain"
@@ -3262,6 +3258,7 @@ msgid "Type"
 msgstr "Tip"
 
 #: internal/modules/domains/render.go:77
+#: internal/web/templates/domains/dns.html:311
 #: internal/web/templates/domains/dynamic_dns.html:49
 #: internal/web/templates/domains/dynamic_dns.html:91
 #: internal/web/templates/domains/dynamic_dns.html:165
@@ -3319,51 +3316,51 @@ msgid "Invalid request. Domain name and Vhost content must be provided."
 msgstr ""
 "Cerere invalidă. Trebuie furnizate numele domeniului și conținutul vhost."
 
-#: internal/modules/dynamicdns/handlers.go:37
-#: internal/modules/git/render.go:154 internal/modules/waf/disable_rule.go:77
-#: internal/modules/waf/disable_rule.go:142
-#: internal/modules/waf/disable_rule.go:172
+#: internal/modules/dynamicdns/handlers.go:39
+#: internal/modules/git/render.go:154 internal/modules/waf/disable_rule.go:74
+#: internal/modules/waf/disable_rule.go:136
+#: internal/modules/waf/disable_rule.go:166
 #: internal/modules/waf/profiles.go:324 internal/modules/websites/bulk.go:82
 #: internal/modules/websites/bulk.go:278
 msgid "You do not own this domain."
 msgstr "Nu sunteți proprietarul acestui domeniu."
 
-#: internal/modules/dynamicdns/handlers.go:51
-#: internal/modules/dynamicdns/handlers.go:75
+#: internal/modules/dynamicdns/handlers.go:53
+#: internal/modules/dynamicdns/handlers.go:77
 msgid "Invalid subdomain."
 msgstr "Subdomeniu invalid."
 
-#: internal/modules/dynamicdns/handlers.go:55
-#: internal/modules/dynamicdns/handlers.go:79
+#: internal/modules/dynamicdns/handlers.go:57
+#: internal/modules/dynamicdns/handlers.go:81
 msgid "Invalid IP address."
 msgstr "Adresă IP invalidă."
 
-#: internal/modules/dynamicdns/handlers.go:61
+#: internal/modules/dynamicdns/handlers.go:63
 msgid "Dynamic DNS entry created."
 msgstr "Intrarea DNS dinamic a fost creată."
 
-#: internal/modules/dynamicdns/handlers.go:67
-#: internal/modules/dynamicdns/handlers.go:99
+#: internal/modules/dynamicdns/handlers.go:69
+#: internal/modules/dynamicdns/handlers.go:101
 msgid "Invalid line number."
 msgstr "Număr de linie invalid."
 
-#: internal/modules/dynamicdns/handlers.go:83
-msgid "Invalid token."
-msgstr "Token invalid."
+#: internal/modules/dynamicdns/handlers.go:85
+msgid "The token has to be 16 to 64 letters and numbers."
+msgstr ""
 
-#: internal/modules/dynamicdns/handlers.go:90
+#: internal/modules/dynamicdns/handlers.go:92
 msgid "Dynamic DNS entry updated."
 msgstr "Intrarea DNS dinamic a fost actualizată."
 
-#: internal/modules/dynamicdns/handlers.go:92
+#: internal/modules/dynamicdns/handlers.go:94
 msgid "Failed to update Dynamic DNS entry."
 msgstr "Intrarea DNS dinamic nu a putut fi actualizată."
 
-#: internal/modules/dynamicdns/handlers.go:104
+#: internal/modules/dynamicdns/handlers.go:106
 msgid "Dynamic DNS entry deleted."
 msgstr "Intrarea DNS dinamic a fost ștearsă."
 
-#: internal/modules/dynamicdns/handlers.go:106
+#: internal/modules/dynamicdns/handlers.go:108
 msgid "Failed to delete Dynamic DNS entry."
 msgstr "Intrarea DNS dinamic nu a putut fi ștearsă."
 
@@ -3388,12 +3385,12 @@ msgid "Alias %(email)s deleted successfully."
 msgstr "Aliasul %(email)s a fost șters."
 
 #: internal/modules/emails/aliases.go:310
-#: internal/modules/emails/emails.go:348
+#: internal/modules/emails/emails.go:370
 msgid "Error: %(field)s not provided."
 msgstr "Eroare: %(field)s nu a fost furnizat."
 
 #: internal/modules/emails/aliases.go:317
-#: internal/modules/emails/emails.go:361
+#: internal/modules/emails/emails.go:383
 msgid "Username can only contain letters, numbers, and . _ % + - (no @)."
 msgstr ""
 "Numele de utilizator poate conține doar litere, cifre și . _ % + - (fără @)."
@@ -3434,7 +3431,7 @@ msgstr "Reactivează primirea"
 msgid "Unsuspend outgoing"
 msgstr "Reactivează trimiterea"
 
-#: internal/modules/emails/bulk.go:25 internal/modules/ftp/ftp.go:528
+#: internal/modules/emails/bulk.go:25 internal/modules/ftp/ftp.go:532
 msgid "Change quota"
 msgstr "Schimbă cota"
 
@@ -3442,18 +3439,19 @@ msgstr "Schimbă cota"
 msgid "New mailbox size (GB) for the selected accounts:"
 msgstr "Dimensiune nouă a căsuței (GB) pentru conturile selectate:"
 
-#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:526
+#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:530
+#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
+#: internal/modules/postgresql/bulk.go:34
+#: internal/web/templates/partials/_db_created.html:64
+msgid "Change password"
+msgstr "Schimbă parola"
+
+#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:530
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
 #: internal/web/templates/files/ftp_password.html:55
 msgid "New password"
 msgstr "Parolă nouă"
-
-#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:526
-#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
-#: internal/modules/postgresql/bulk.go:34
-msgid "Change password"
-msgstr "Schimbă parola"
 
 #: internal/modules/emails/bulk.go:27
 msgid "Set this password for the selected accounts:"
@@ -3480,40 +3478,36 @@ msgstr "Livrează aliasurile selectate și către:"
 msgid "Delete the selected aliases?"
 msgstr "Ștergeți aliasurile selectate?"
 
-#: internal/modules/emails/default.go:86
+#: internal/modules/emails/default.go:95
 msgid "Invalid destination email address."
 msgstr "Adresă de e-mail de destinație invalidă."
 
-#: internal/modules/emails/default.go:91
+#: internal/modules/emails/default.go:100
 msgid "Failed to update default email: %(error)s"
 msgstr "E-mailul implicit nu a putut fi actualizat: %(error)s"
 
-#: internal/modules/emails/emails.go:373
+#: internal/modules/emails/emails.go:395
 msgid "Error: reached max number of email accounts on the hosting plan."
 msgstr ""
 "Eroare: s-a atins numărul maxim de conturi de e-mail din planul de găzduire."
 
-#: internal/modules/emails/emails.go:398
+#: internal/modules/emails/emails.go:413
 msgid "Failed to add email %(email)s: %(msg)s"
 msgstr "E-mailul %(email)s nu a putut fi adăugat: %(msg)s"
 
-#: internal/modules/emails/emails.go:417
-msgid "Email %(email)s added successfully."
-msgstr "E-mailul %(email)s a fost adăugat."
-
-#: internal/modules/emails/emails.go:734
+#: internal/modules/emails/emails.go:792
 msgid "Settings saved for email %(email)s"
 msgstr "Setările au fost salvate pentru e-mailul %(email)s"
 
-#: internal/modules/emails/emails.go:745
+#: internal/modules/emails/emails.go:803
 msgid "Email %(email)s deleted successfully."
 msgstr "E-mailul %(email)s a fost șters."
 
-#: internal/modules/emails/emails.go:748
+#: internal/modules/emails/emails.go:806
 msgid "ERROR: Failed to delete email %(email)s: %(output)s"
 msgstr "EROARE: e-mailul %(email)s nu a putut fi șters: %(output)s"
 
-#: internal/modules/emails/emails.go:813
+#: internal/modules/emails/emails.go:915
 msgid "Error: Invalid configuration type."
 msgstr "Eroare: tip de configurație invalid."
 
@@ -3529,19 +3523,19 @@ msgstr "Eroare la salvarea filtrului."
 msgid "Filter saved successfully."
 msgstr "Filtrul a fost salvat."
 
-#: internal/modules/emails/import.go:78
+#: internal/modules/emails/import.go:79
 msgid "Error: No file uploaded."
 msgstr "Eroare: nu a fost încărcat niciun fișier."
 
-#: internal/modules/emails/import.go:92
+#: internal/modules/emails/import.go:93
 msgid "Error reading file: %(error)s"
 msgstr "Eroare la citirea fișierului: %(error)s"
 
-#: internal/modules/emails/import.go:97
+#: internal/modules/emails/import.go:98
 msgid "Error: File must have at least 2 columns: email, password"
 msgstr "Eroare: fișierul trebuie să aibă cel puțin 2 coloane: e-mail, parolă"
 
-#: internal/modules/emails/import.go:103
+#: internal/modules/emails/import.go:104
 msgid ""
 "Error: File is invalid - the first column must contain valid email "
 "addresses."
@@ -3549,46 +3543,46 @@ msgstr ""
 "Eroare: fișierul este invalid - prima coloană trebuie să conțină adrese de "
 "e-mail valide."
 
-#: internal/modules/emails/import.go:164 internal/modules/emails/import.go:172
-#: internal/modules/emails/import.go:177
+#: internal/modules/emails/import.go:165 internal/modules/emails/import.go:173
+#: internal/modules/emails/import.go:178
 msgid "Error: No import data found, please try again."
 msgstr "Eroare: nu s-au găsit date de import, încercați din nou."
 
-#: internal/modules/emails/migrate.go:914
+#: internal/modules/emails/migrate.go:924
 msgid "Error: Could not open the migrations folder."
 msgstr "Eroare: folderul de migrări nu a putut fi deschis."
 
-#: internal/modules/emails/render.go:119
+#: internal/modules/emails/render.go:127
 #: internal/web/templates/files/ftp_new.html:189
 msgid "Create Account"
 msgstr "Crearea Contului"
 
-#: internal/modules/emails/render.go:170
+#: internal/modules/emails/render.go:178
 msgid "Delete address"
 msgstr "Șterge adresa"
 
-#: internal/modules/emails/render.go:192
-#: internal/web/templates/emails/accounts.html:117
+#: internal/modules/emails/render.go:200
+#: internal/web/templates/emails/accounts.html:119
 #: internal/web/templates/emails/info.html:8
 msgid "Connect Devices"
 msgstr "Conectează Dispozitivele"
 
-#: internal/modules/emails/render.go:255
+#: internal/modules/emails/render.go:263
 #: internal/web/templates/emails/aliases.html:28
 msgid "New Alias"
 msgstr "Alias Nou"
 
-#: internal/modules/emails/render.go:302
+#: internal/modules/emails/render.go:310
 msgid "Default Email"
 msgstr "E-mail implicit"
 
-#: internal/modules/emails/render.go:400
+#: internal/modules/emails/render.go:408
 #: internal/web/templates/emails/confirm_import.html:8
 #: internal/web/templates/emails/import.html:8
 msgid "Import Emails"
 msgstr "Importă emailuri"
 
-#: internal/modules/emails/webmail.go:216
+#: internal/modules/emails/webmail.go:247
 msgid ""
 "Webmail service is not yet started, please contact Administrator to enable "
 "it."
@@ -3608,6 +3602,8 @@ msgstr "Răspunsuri HTTP 5xx"
 #: internal/web/templates/manager/git.html:92
 #: internal/web/templates/mysql/wizard.html:80
 #: internal/web/templates/mysql/wizard.html:139
+#: internal/web/templates/partials/_account_created.html:6
+#: internal/web/templates/partials/_db_created.html:12
 #: internal/web/templates/partials/install_success.html:104
 #: internal/web/templates/partials/site_manager_shared.html:1007
 #: internal/web/templates/user/mcp.html:30
@@ -3629,47 +3625,52 @@ msgstr "Copiază"
 msgid "Download"
 msgstr "Descarcă"
 
-#: internal/modules/filemanager/archive.go:59
+#: internal/modules/filemanager/api_transfer.go:188
+#: internal/modules/filemanager/archive.go:90
+msgid "The archive expands to more than %(size)s MB, extraction was stopped."
+msgstr ""
+
+#: internal/modules/filemanager/archive.go:60
 msgid "Error occurred before starting archive extraction: %(error)s"
 msgstr "A apărut o eroare înainte de a începe extragerea arhivei: %(error)s"
 
-#: internal/modules/filemanager/archive.go:69
+#: internal/modules/filemanager/archive.go:70
 msgid "Unsupported file format!"
 msgstr "Format de fișier neacceptat!"
 
-#: internal/modules/filemanager/archive.go:87
+#: internal/modules/filemanager/archive.go:95
 msgid "Extraction timed out after %(minutes)s minutes!"
 msgstr "Extragerea a expirat după %(minutes)s minute!"
 
-#: internal/modules/filemanager/archive.go:90
+#: internal/modules/filemanager/archive.go:98
 msgid "Extraction failed."
 msgstr "Extragerea a eșuat."
 
-#: internal/modules/filemanager/archive.go:96
+#: internal/modules/filemanager/archive.go:104
 msgid "File extracted successfully"
 msgstr "Fișierul a fost extras"
 
-#: internal/modules/filemanager/archive.go:350
+#: internal/modules/filemanager/archive.go:358
 msgid "Missing required form data for compression: %(missing)s"
 msgstr "Lipsesc date obligatorii din formular pentru comprimare: %(missing)s"
 
-#: internal/modules/filemanager/archive.go:388
+#: internal/modules/filemanager/archive.go:396
 msgid "Unsupported archive format."
 msgstr "Format de arhivă neacceptat."
 
-#: internal/modules/filemanager/archive.go:393
+#: internal/modules/filemanager/archive.go:401
 msgid "Archive creation failed: %(err_msg)s"
 msgstr "Crearea arhivei a eșuat: %(err_msg)s"
 
-#: internal/modules/filemanager/archive.go:401
+#: internal/modules/filemanager/archive.go:409
 msgid "Failed to set archive ownership"
 msgstr "Nu s-a putut seta proprietarul arhivei"
 
-#: internal/modules/filemanager/archive.go:403
+#: internal/modules/filemanager/archive.go:411
 msgid "FILEMANAGER - Archive created successfully."
 msgstr "Arhiva a fost creată."
 
-#: internal/modules/filemanager/archive.go:418
+#: internal/modules/filemanager/archive.go:426
 msgid "Invalid selection"
 msgstr "Selecție invalidă"
 
@@ -3805,46 +3806,46 @@ msgstr "Fișierele au fost încărcate."
 msgid "Some files failed: %(errs)s"
 msgstr "Unele fișiere au eșuat: %(errs)s"
 
-#: internal/modules/filemanager/wget.go:216
+#: internal/modules/filemanager/wget.go:220
 msgid "Download queued..."
 msgstr "Descărcare în coadă..."
 
-#: internal/modules/ftp/ftp.go:145
+#: internal/modules/ftp/ftp.go:149
 msgid ""
 "FTP service is not yet started, please contact Administrator to enable it."
 msgstr ""
 "Serviciul FTP nu este încă pornit, contactați administratorul pentru a-l "
 "activa."
 
-#: internal/modules/ftp/ftp.go:237
+#: internal/modules/ftp/ftp.go:241
 msgid "No currently active FTP connections"
 msgstr "Nu există conexiuni FTP active"
 
-#: internal/modules/ftp/ftp.go:269
+#: internal/modules/ftp/ftp.go:273
 msgid "FTP username not provided."
 msgstr "Numele de utilizator FTP nu a fost furnizat."
 
-#: internal/modules/ftp/ftp.go:273
+#: internal/modules/ftp/ftp.go:277
 msgid "FTP domain not provided."
 msgstr "Domeniul FTP nu a fost furnizat."
 
-#: internal/modules/ftp/ftp.go:281
+#: internal/modules/ftp/ftp.go:285
 msgid "FTP path not provided."
 msgstr "Calea FTP nu a fost furnizată."
 
-#: internal/modules/ftp/ftp.go:285
+#: internal/modules/ftp/ftp.go:289
 msgid "FTP password not provided."
 msgstr "Parola FTP nu a fost furnizată."
 
-#: internal/modules/ftp/ftp.go:289 internal/modules/ftp/quota.go:189
+#: internal/modules/ftp/ftp.go:293 internal/modules/ftp/quota.go:189
 msgid "Invalid quota, use a whole number of MB or GB."
 msgstr "Cotă invalidă, folosiți un număr întreg de MB sau GB."
 
-#: internal/modules/ftp/ftp.go:295 internal/modules/ftp/ftp.go:420
+#: internal/modules/ftp/ftp.go:299 internal/modules/ftp/ftp.go:424
 msgid "The FTP path must start with %(real_path)s"
 msgstr "Calea FTP trebuie să înceapă cu %(real_path)s"
 
-#: internal/modules/ftp/ftp.go:302
+#: internal/modules/ftp/ftp.go:306
 msgid ""
 "Username %(ftp_username)s contains invalid characters, only allowed: "
 "BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
@@ -3853,104 +3854,100 @@ msgstr ""
 "permise doar: "
 "BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
 
-#: internal/modules/ftp/ftp.go:312
+#: internal/modules/ftp/ftp.go:316
 msgid "Error creating FTP user %(ftp_username)s: %(output)s"
 msgstr "Eroare la crearea utilizatorului FTP %(ftp_username)s: %(output)s"
 
-#: internal/modules/ftp/ftp.go:318
-msgid "FTP account %(ftp_username)s created successfully."
-msgstr "Contul FTP %(ftp_username)s a fost creat."
-
-#: internal/modules/ftp/ftp.go:321
+#: internal/modules/ftp/ftp.go:325
 msgid "Failed to create FTP account %(ftp_username)s: %(output)s"
 msgstr "Contul FTP %(ftp_username)s nu a putut fi creat: %(output)s"
 
-#: internal/modules/ftp/ftp.go:338 internal/modules/ftp/ftp.go:359
-#: internal/modules/ftp/ftp.go:415 internal/modules/ftp/quota.go:168
+#: internal/modules/ftp/ftp.go:342 internal/modules/ftp/ftp.go:363
+#: internal/modules/ftp/ftp.go:419 internal/modules/ftp/quota.go:168
 msgid "Invalid FTP username."
 msgstr "Nume de utilizator FTP invalid."
 
-#: internal/modules/ftp/ftp.go:350
+#: internal/modules/ftp/ftp.go:354
 msgid "FTP account %(username_to_delete)s deleted successfully!"
 msgstr "Contul FTP %(username_to_delete)s a fost șters!"
 
-#: internal/modules/ftp/ftp.go:353
+#: internal/modules/ftp/ftp.go:357
 msgid ""
 "Failed to delete FTP account %(username_to_delete)s. Output: %(output)s"
 msgstr ""
 "Contul FTP %(username_to_delete)s nu a putut fi șters. Ieșire: %(output)s"
 
-#: internal/modules/ftp/ftp.go:371
+#: internal/modules/ftp/ftp.go:375
 msgid "Missing new password"
 msgstr "Lipsește parola nouă"
 
-#: internal/modules/ftp/ftp.go:383
+#: internal/modules/ftp/ftp.go:387
 msgid "Error changing FTP password: %(output)s"
 msgstr "Eroare la schimbarea parolei FTP: %(output)s"
 
-#: internal/modules/ftp/ftp.go:388
+#: internal/modules/ftp/ftp.go:392
 msgid "FTP password changed successfully for user %(username)s"
 msgstr "Parola FTP a fost schimbată pentru utilizatorul %(username)s"
 
-#: internal/modules/ftp/ftp.go:390
+#: internal/modules/ftp/ftp.go:394
 msgid "Failed to change FTP password: %(output)s"
 msgstr "Parola FTP nu a putut fi schimbată: %(output)s"
 
-#: internal/modules/ftp/ftp.go:427
+#: internal/modules/ftp/ftp.go:431
 msgid "Error changing FTP path for user %(username_to_modify)s: %(output)s"
 msgstr ""
 "Eroare la schimbarea căii FTP pentru utilizatorul %(username_to_modify)s: "
 "%(output)s"
 
-#: internal/modules/ftp/ftp.go:432
+#: internal/modules/ftp/ftp.go:436
 msgid "FTP path changed successfully for user %(username_to_modify)s"
 msgstr "Calea FTP a fost schimbată pentru utilizatorul %(username_to_modify)s"
 
-#: internal/modules/ftp/ftp.go:434
+#: internal/modules/ftp/ftp.go:438
 msgid "Failed to change FTP path for user %(username_to_modify)s: %(output)s"
 msgstr ""
 "Calea FTP pentru utilizatorul %(username_to_modify)s nu a putut fi "
 "schimbată: %(output)s"
 
-#: internal/modules/ftp/ftp.go:445
+#: internal/modules/ftp/ftp.go:449
 msgid "Invalid configuration type, please use cyberduck or filezilla only!"
 msgstr "Tip de configurație invalid, folosiți doar cyberduck sau filezilla!"
 
-#: internal/modules/ftp/ftp.go:458
+#: internal/modules/ftp/ftp.go:462
 msgid "User has no FTP accounts."
 msgstr "Utilizatorul nu are conturi FTP."
 
-#: internal/modules/ftp/ftp.go:475 internal/modules/ftp/quota.go:181
+#: internal/modules/ftp/ftp.go:479 internal/modules/ftp/quota.go:181
 msgid "FTP account not found."
 msgstr "Contul FTP nu a fost găsit."
 
-#: internal/modules/ftp/ftp.go:526
+#: internal/modules/ftp/ftp.go:530
 msgid "Set this password for the selected FTP accounts:"
 msgstr "Setați această parolă pentru conturile FTP selectate:"
 
-#: internal/modules/ftp/ftp.go:527
+#: internal/modules/ftp/ftp.go:531
 #: internal/web/templates/partials/folder_picker.html:6
 #: internal/web/templates/partials/folder_picker.html:25
 msgid "Change path"
 msgstr "Schimbă calea"
 
-#: internal/modules/ftp/ftp.go:527
+#: internal/modules/ftp/ftp.go:531
 msgid "New home folder for the selected FTP accounts:"
 msgstr "Folder principal nou pentru conturile FTP selectate:"
 
-#: internal/modules/ftp/ftp.go:528
+#: internal/modules/ftp/ftp.go:532
 msgid "Disk quota for the selected FTP accounts, e.g. 500M or 2G:"
 msgstr "Cota de disc pentru conturile FTP selectate, de ex. 500M sau 2G:"
 
-#: internal/modules/ftp/ftp.go:529
+#: internal/modules/ftp/ftp.go:533
 msgid "Remove quota"
 msgstr "Elimină cota"
 
-#: internal/modules/ftp/ftp.go:529
+#: internal/modules/ftp/ftp.go:533
 msgid "Remove the disk quota from the selected FTP accounts?"
 msgstr "Eliminați cota de disc pentru conturile FTP selectate?"
 
-#: internal/modules/ftp/ftp.go:530
+#: internal/modules/ftp/ftp.go:534
 msgid "Delete the selected FTP accounts? Their files are kept."
 msgstr "Ștergeți conturile FTP selectate? Fișierele lor sunt păstrate."
 
@@ -3967,20 +3964,20 @@ msgstr "Cota FTP a fost eliminată pentru utilizatorul %(username)s"
 msgid "FTP quota changed successfully for user %(username)s"
 msgstr "Cota FTP a fost schimbată cu succes pentru utilizatorul %(username)s"
 
-#: internal/modules/ftp/render.go:66
+#: internal/modules/ftp/render.go:78
 #: internal/web/templates/files/ftp_new.html:9
 msgid "New FTP Account"
 msgstr "Cont FTP nou"
 
-#: internal/modules/ftp/render.go:84
+#: internal/modules/ftp/render.go:96
 msgid "Change FTP Password"
 msgstr "Schimbă parola FTP"
 
-#: internal/modules/ftp/render.go:96
+#: internal/modules/ftp/render.go:108
 msgid "Change FTP Path"
 msgstr "Schimbă calea FTP"
 
-#: internal/modules/ftp/render.go:115
+#: internal/modules/ftp/render.go:127
 msgid "Change FTP Quota"
 msgstr "Schimbă cota FTP"
 
@@ -4058,81 +4055,81 @@ msgid ""
 msgstr ""
 "Eliminați depozitele selectate? Fișierele deja implementate pe site rămân."
 
-#: internal/modules/git/handlers.go:308
+#: internal/modules/git/handlers.go:314
 msgid ""
 "Repository %(repo)s was added, but its first deployment failed: %(error)s"
 msgstr ""
 
-#: internal/modules/git/handlers.go:310
+#: internal/modules/git/handlers.go:316
 msgid ""
 "Local repository %(repo)s created. Push to branch %(branch)s to deploy it to"
 " %(dir)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:312
+#: internal/modules/git/handlers.go:318
 msgid "Repository %(repo)s cloned and branch %(branch)s deployed to %(dir)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:314
+#: internal/modules/git/handlers.go:320
 msgid ""
 "Repository %(repo)s cloned (branch %(branch)s), nothing was deployed yet."
 msgstr ""
 
-#: internal/modules/git/handlers.go:321 internal/modules/git/handlers.go:341
+#: internal/modules/git/handlers.go:327 internal/modules/git/handlers.go:347
 msgid "Repository %(repo)s not found."
 msgstr ""
 
-#: internal/modules/git/handlers.go:325
+#: internal/modules/git/handlers.go:331
 msgid "Pulling %(repo)s failed: %(error)s"
 msgstr ""
 
-#: internal/modules/git/handlers.go:330
+#: internal/modules/git/handlers.go:336
 msgid "%(repo)s is already up to date, no new commits on %(branch)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:334
+#: internal/modules/git/handlers.go:340
 msgid ""
 "Pulled %(count)s new commit(s) into %(repo)s on %(branch)s and deployed "
 "%(commit)s to %(dir)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:336
+#: internal/modules/git/handlers.go:342
 msgid ""
 "Pulled %(count)s new commit(s) into %(repo)s on %(branch)s, latest is "
 "%(commit)s. Not deployed yet."
 msgstr ""
 
-#: internal/modules/git/handlers.go:344
+#: internal/modules/git/handlers.go:350
 msgid "Deploying %(repo)s failed: %(error)s"
 msgstr ""
 
-#: internal/modules/git/handlers.go:348
+#: internal/modules/git/handlers.go:354
 msgid "Deployed %(repo)s (%(branch)s at %(commit)s) to %(dir)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:350
+#: internal/modules/git/handlers.go:356
 msgid "Deploy actions ran in %(container)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:356
+#: internal/modules/git/handlers.go:362
 msgid "Could not save settings for %(repo)s: %(error)s"
 msgstr ""
 
-#: internal/modules/git/handlers.go:360
+#: internal/modules/git/handlers.go:366
 msgid ""
 "Settings saved for %(repo)s: branch %(branch)s, %(mode)s, deploying to "
 "%(dir)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:368
+#: internal/modules/git/handlers.go:374
 msgid "New push password generated for %(repo)s, the old one no longer works."
 msgstr ""
 
-#: internal/modules/git/handlers.go:373
+#: internal/modules/git/handlers.go:379
 msgid "Could not remove %(repo)s: %(error)s"
 msgstr ""
 
-#: internal/modules/git/handlers.go:376
+#: internal/modules/git/handlers.go:382
 msgid ""
 "Repository %(repo)s removed. Files already deployed to %(dir)s were left in "
 "place."
@@ -4361,27 +4358,27 @@ msgid "MongoDB is still starting, please try again in a moment."
 msgstr "MongoDB încă pornește, încercați din nou peste câteva momente."
 
 #: internal/modules/mongodb/databases.go:107
-#: internal/modules/mongodb/databases.go:170
+#: internal/modules/mongodb/databases.go:169
 #: internal/modules/mongodb/export.go:38 internal/modules/mongodb/wizard.go:50
 #: internal/modules/mysql/assign.go:49 internal/modules/mysql/assign.go:181
 #: internal/modules/mysql/databases.go:222
-#: internal/modules/mysql/databases.go:280 internal/modules/mysql/export.go:41
+#: internal/modules/mysql/databases.go:279 internal/modules/mysql/export.go:41
 #: internal/modules/mysql/wizard.go:57
 #: internal/modules/postgresql/databases.go:136
-#: internal/modules/postgresql/databases.go:195
+#: internal/modules/postgresql/databases.go:194
 #: internal/modules/postgresql/export.go:35
 #: internal/modules/postgresql/wizard.go:47
 msgid "Database name is required."
 msgstr "Numele bazei de date este obligatoriu."
 
 #: internal/modules/mongodb/databases.go:111
-#: internal/modules/mongodb/databases.go:173
+#: internal/modules/mongodb/databases.go:172
 #: internal/modules/mongodb/wizard.go:53 internal/modules/mysql/assign.go:52
 #: internal/modules/mysql/assign.go:184
 #: internal/modules/mysql/databases.go:227
-#: internal/modules/mysql/databases.go:284
+#: internal/modules/mysql/databases.go:283
 #: internal/modules/postgresql/databases.go:140
-#: internal/modules/postgresql/databases.go:199
+#: internal/modules/postgresql/databases.go:198
 #: internal/modules/postgresql/wizard.go:50
 msgid ""
 "Name %(database_name)s is not allowed. Please use alphanumeric characters "
@@ -4412,20 +4409,16 @@ msgstr "Ați atins numărul maxim de baze de date permise.%(upgrade_message)s"
 msgid "Failed to create database: %(error)s"
 msgstr "Baza de date nu a putut fi creată: %(error)s"
 
-#: internal/modules/mongodb/databases.go:148
-msgid "Successfully created a MongoDB database %(database_name)s"
-msgstr "Baza de date MongoDB %(database_name)s a fost creată"
-
-#: internal/modules/mongodb/databases.go:176
+#: internal/modules/mongodb/databases.go:175
 msgid "This is a system database that cannot be deleted."
 msgstr "Aceasta este o bază de date de sistem care nu poate fi ștearsă."
 
-#: internal/modules/mongodb/databases.go:181
-#: internal/modules/postgresql/databases.go:206
+#: internal/modules/mongodb/databases.go:180
+#: internal/modules/postgresql/databases.go:205
 msgid "Error deleting database %(database_name)s: %(error)s"
 msgstr "Eroare la ștergerea bazei de date %(database_name)s: %(error)s"
 
-#: internal/modules/mongodb/databases.go:187
+#: internal/modules/mongodb/databases.go:186
 msgid "Successfully deleted a MongoDB database %(database_name)s"
 msgstr "Baza de date MongoDB %(database_name)s a fost ștearsă"
 
@@ -4592,39 +4585,39 @@ msgstr "Opriți operațiunile selectate?"
 msgid "MongoDB Databases"
 msgstr "Baze de date MongoDB"
 
-#: internal/modules/mongodb/render.go:63 internal/modules/mysql/render.go:87
+#: internal/modules/mongodb/render.go:63 internal/modules/mysql/render.go:88
 #: internal/modules/postgresql/render.go:67 internal/web/sidebar_classic.go:95
 #: internal/web/sidebar_classic.go:117 internal/web/sidebar_classic.go:140
-#: internal/web/templates/db/new.html:46
-#: internal/web/templates/mongodb/new.html:42
+#: internal/web/templates/db/new.html:49
+#: internal/web/templates/mongodb/new.html:45
 msgid "Create Database"
 msgstr "Creează Baza de date"
 
-#: internal/modules/mongodb/render.go:89
+#: internal/modules/mongodb/render.go:93
 #: internal/web/templates/mongodb/users.html:9
 msgid "MongoDB Users"
 msgstr "Utilizatori MongoDB"
 
-#: internal/modules/mongodb/render.go:111 internal/modules/mysql/render.go:133
-#: internal/modules/postgresql/render.go:119
+#: internal/modules/mongodb/render.go:115 internal/modules/mysql/render.go:135
+#: internal/modules/postgresql/render.go:120
 #: internal/web/sidebar_classic.go:96 internal/web/sidebar_classic.go:118
 #: internal/web/sidebar_classic.go:141
-#: internal/web/templates/mongodb/mongodb_user.html:83
+#: internal/web/templates/mongodb/mongodb_user.html:86
 #: internal/web/templates/mongodb/users.html:26
 #: internal/web/templates/mongodb/users.html:30
-#: internal/web/templates/mysql/mysql_user.html:113
+#: internal/web/templates/mysql/mysql_user.html:116
 #: internal/web/templates/mysql/users.html:52
 #: internal/web/templates/mysql/users.html:58
-#: internal/web/templates/psql/psql_user.html:83
+#: internal/web/templates/psql/psql_user.html:86
 #: internal/web/templates/psql/users.html:42
 #: internal/web/templates/psql/users.html:46
 msgid "Create User"
 msgstr "Creează Utilizator"
 
-#: internal/modules/mongodb/render.go:129 internal/modules/mysql/render.go:151
-#: internal/modules/postgresql/render.go:137
-#: internal/web/templates/files/ftp.html:162
+#: internal/modules/mongodb/render.go:137 internal/modules/mysql/render.go:153
+#: internal/modules/postgresql/render.go:142
 #: internal/web/templates/files/ftp.html:164
+#: internal/web/templates/files/ftp.html:166
 #: internal/web/templates/mongodb/password.html:81
 #: internal/web/templates/mongodb/users.html:62
 #: internal/web/templates/mysql/password.html:116
@@ -4636,8 +4629,8 @@ msgstr "Creează Utilizator"
 msgid "Change Password"
 msgstr "Schimbă parola"
 
-#: internal/modules/mongodb/render.go:167 internal/modules/mysql/render.go:242
-#: internal/modules/postgresql/render.go:162
+#: internal/modules/mongodb/render.go:175 internal/modules/mysql/render.go:244
+#: internal/modules/postgresql/render.go:167
 #: internal/web/templates/mongodb/assign.html:8
 #: internal/web/templates/mongodb/assign.html:55
 #: internal/web/templates/psql/assign.html:8
@@ -4645,8 +4638,8 @@ msgstr "Schimbă parola"
 msgid "Assign User to Database"
 msgstr "Trimiteți utilizatorul la Baza de date"
 
-#: internal/modules/mongodb/render.go:180 internal/modules/mysql/render.go:254
-#: internal/modules/postgresql/render.go:174
+#: internal/modules/mongodb/render.go:188 internal/modules/mysql/render.go:256
+#: internal/modules/postgresql/render.go:179
 #: internal/web/templates/mongodb/remove.html:55
 #: internal/web/templates/mysql/remove.html:51
 #: internal/web/templates/psql/remove.html:46
@@ -4658,24 +4651,24 @@ msgstr "Elimină utilizatorul din Baza de date"
 msgid "Error fetching users: %(error)s"
 msgstr "Eroare la obținerea utilizatorilor: %(error)s"
 
-#: internal/modules/mongodb/users.go:78 internal/modules/mongodb/users.go:135
-#: internal/modules/mongodb/users.go:172 internal/modules/mongodb/wizard.go:59
+#: internal/modules/mongodb/users.go:78 internal/modules/mongodb/users.go:136
+#: internal/modules/mongodb/users.go:173 internal/modules/mongodb/wizard.go:59
 #: internal/modules/mysql/assign.go:43 internal/modules/mysql/assign.go:175
-#: internal/modules/mysql/users.go:88 internal/modules/mysql/users.go:155
-#: internal/modules/mysql/users.go:199 internal/modules/mysql/wizard.go:69
+#: internal/modules/mysql/users.go:88 internal/modules/mysql/users.go:156
+#: internal/modules/mysql/users.go:200 internal/modules/mysql/wizard.go:69
 #: internal/modules/postgresql/users.go:88
-#: internal/modules/postgresql/users.go:145
-#: internal/modules/postgresql/users.go:194
+#: internal/modules/postgresql/users.go:146
+#: internal/modules/postgresql/users.go:195
 #: internal/modules/postgresql/wizard.go:56
 msgid "User name is required."
 msgstr "Numele de utilizator este obligatoriu."
 
-#: internal/modules/mongodb/users.go:81 internal/modules/mongodb/users.go:175
+#: internal/modules/mongodb/users.go:81 internal/modules/mongodb/users.go:176
 #: internal/modules/mongodb/wizard.go:62 internal/modules/mysql/assign.go:46
 #: internal/modules/mysql/assign.go:178 internal/modules/mysql/users.go:94
-#: internal/modules/mysql/users.go:158 internal/modules/mysql/users.go:202
+#: internal/modules/mysql/users.go:159 internal/modules/mysql/users.go:203
 #: internal/modules/postgresql/users.go:91
-#: internal/modules/postgresql/users.go:197
+#: internal/modules/postgresql/users.go:198
 #: internal/modules/postgresql/wizard.go:59
 msgid ""
 "Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
@@ -4697,21 +4690,17 @@ msgstr "Acest nume de utilizator nu este permis."
 msgid "Failed to create user: %(error)s"
 msgstr "Utilizatorul nu a putut fi creat: %(error)s"
 
-#: internal/modules/mongodb/users.go:96
-msgid "Successfully created a MongoDB user %(db_user)s"
-msgstr "Utilizatorul MongoDB %(db_user)s a fost creat"
-
-#: internal/modules/mongodb/users.go:110 internal/modules/mongodb/users.go:178
+#: internal/modules/mongodb/users.go:111 internal/modules/mongodb/users.go:179
 #: internal/modules/mysql/assign.go:190
 #: internal/modules/mysql/remotemysql.go:241
-#: internal/modules/mysql/users.go:125 internal/modules/mysql/users.go:205
-#: internal/modules/postgresql/users.go:120
-#: internal/modules/postgresql/users.go:200
+#: internal/modules/mysql/users.go:126 internal/modules/mysql/users.go:206
+#: internal/modules/postgresql/users.go:121
+#: internal/modules/postgresql/users.go:201
 msgid "This is a system username that can not be edited."
 msgstr "Acesta este un nume de utilizator de sistem care nu poate fi editat."
 
-#: internal/modules/mongodb/users.go:138 internal/modules/mysql/wizard.go:75
-#: internal/modules/postgresql/users.go:148
+#: internal/modules/mongodb/users.go:139 internal/modules/mysql/wizard.go:75
+#: internal/modules/postgresql/users.go:149
 msgid ""
 "Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
 "- [a-zA-Z0-9_]+"
@@ -4719,29 +4708,29 @@ msgstr ""
 "Numele %(db_user)s nu este permis. Folosiți caractere alfanumerice și '_' - "
 "[a-zA-Z0-9_]+"
 
-#: internal/modules/mongodb/users.go:141
-#: internal/modules/postgresql/users.go:151
+#: internal/modules/mongodb/users.go:142
+#: internal/modules/postgresql/users.go:152
 msgid "This is a system username that cannot be deleted."
 msgstr "Acesta este un nume de utilizator de sistem care nu poate fi șters."
 
-#: internal/modules/mongodb/users.go:146
-#: internal/modules/postgresql/users.go:168
+#: internal/modules/mongodb/users.go:147
+#: internal/modules/postgresql/users.go:169
 msgid "Error deleting user %(db_user)s: %(error)s"
 msgstr "Eroare la ștergerea utilizatorului %(db_user)s: %(error)s"
 
-#: internal/modules/mongodb/users.go:148 internal/modules/mysql/users.go:176
-#: internal/modules/postgresql/users.go:170
+#: internal/modules/mongodb/users.go:149 internal/modules/mysql/users.go:177
+#: internal/modules/postgresql/users.go:171
 msgid "Successfully deleted user %(db_user)s"
 msgstr "Utilizatorul %(db_user)s a fost șters"
 
-#: internal/modules/mongodb/users.go:186
-#: internal/modules/postgresql/users.go:208
+#: internal/modules/mongodb/users.go:187
+#: internal/modules/postgresql/users.go:209
 msgid "Error changing password for user %(db_user)s: %(error)s"
 msgstr ""
 "Eroare la schimbarea parolei pentru utilizatorul %(db_user)s: %(error)s"
 
-#: internal/modules/mongodb/users.go:190 internal/modules/mysql/users.go:224
-#: internal/modules/postgresql/users.go:212
+#: internal/modules/mongodb/users.go:191 internal/modules/mysql/users.go:225
+#: internal/modules/postgresql/users.go:213
 msgid "Successfully changed password for user %(db_user)s"
 msgstr "Parola utilizatorului %(db_user)s a fost schimbată"
 
@@ -4767,8 +4756,8 @@ msgstr "Trebuie selectat cel puțin un privilegiu."
 #: internal/modules/mysql/remotemysql.go:174
 #: internal/modules/mysql/remotemysql.go:244
 #: internal/modules/mysql/remotemysql.go:286
-#: internal/modules/mysql/users.go:100 internal/modules/mysql/users.go:164
-#: internal/modules/mysql/users.go:208 internal/modules/mysql/wizard.go:78
+#: internal/modules/mysql/users.go:100 internal/modules/mysql/users.go:165
+#: internal/modules/mysql/users.go:209 internal/modules/mysql/wizard.go:78
 msgid "Invalid host format."
 msgstr "Format de host invalid."
 
@@ -4913,15 +4902,11 @@ msgstr ""
 msgid "Error creating database: %(error)s"
 msgstr "Eroare la crearea bazei de date: %(error)s"
 
-#: internal/modules/mysql/databases.go:259
-msgid "Successfully created a database %(database_name)s"
-msgstr "Baza de date %(database_name)s a fost creată"
-
-#: internal/modules/mysql/databases.go:289
+#: internal/modules/mysql/databases.go:288
 msgid "Error deleting database: %(error)s"
 msgstr "Eroare la ștergerea bazei de date: %(error)s"
 
-#: internal/modules/mysql/databases.go:297
+#: internal/modules/mysql/databases.go:296
 msgid "Successfully deleted a database %(database_name)s"
 msgstr "Baza de date %(database_name)s a fost ștearsă"
 
@@ -5083,7 +5068,7 @@ msgid "Successfully updated access for %(db_user)s"
 msgstr "Accesul pentru %(db_user)s a fost actualizat"
 
 #: internal/modules/mysql/remotemysql.go:283
-#: internal/modules/mysql/users.go:161
+#: internal/modules/mysql/users.go:162
 msgid "This is a system username that can not be deleted."
 msgstr "Acesta este un nume de utilizator de sistem care nu poate fi șters."
 
@@ -5096,34 +5081,38 @@ msgstr "Eroare la eliminarea accesului: %(error)s"
 msgid "Successfully removed access for %(db_user)s from %(db_host)s"
 msgstr "Accesul pentru %(db_user)s de pe %(db_host)s a fost eliminat"
 
-#: internal/modules/mysql/render.go:108
+#: internal/modules/mysql/render.go:109
 msgid "Database Users"
 msgstr "Utilizatori baze de date"
 
-#: internal/modules/mysql/render.go:178 internal/modules/mysql/render.go:190
+#: internal/modules/mysql/render.go:180 internal/modules/mysql/render.go:192
 msgid "Wizard"
 msgstr "Asistent"
 
-#: internal/modules/mysql/render.go:310 static/js/tour-steps.js:903
+#: internal/modules/mysql/render.go:312 static/js/tour-steps.js:903
 msgid "Change Root Password"
 msgstr "Schimbă parola root"
 
-#: internal/modules/mysql/render.go:333
+#: internal/modules/mysql/render.go:335
 msgid "Remote MySQL"
 msgstr "MySQL la distanță"
 
-#: internal/modules/mysql/rootpassword.go:38
-#: internal/modules/mysql/rootpassword.go:42
-#: internal/modules/mysql/rootpassword.go:46
+#: internal/modules/mysql/rootpassword.go:36
+msgid "Password can't be empty or contain quotes, backslashes or line breaks."
+msgstr ""
+
+#: internal/modules/mysql/rootpassword.go:43
+#: internal/modules/mysql/rootpassword.go:47
+#: internal/modules/mysql/rootpassword.go:51
 msgid "Error changing MySQL root password: %(error)s"
 msgstr "Eroare la schimbarea parolei root MySQL: %(error)s"
 
-#: internal/modules/mysql/rootpassword.go:56
+#: internal/modules/mysql/rootpassword.go:61
 msgid "Password changed but failed to update stored configuration."
 msgstr ""
 "Parola a fost schimbată, dar configurația salvată nu a putut fi actualizată."
 
-#: internal/modules/mysql/rootpassword.go:61
+#: internal/modules/mysql/rootpassword.go:66
 msgid "Successfully changed root password."
 msgstr "Parola root a fost schimbată."
 
@@ -5143,15 +5132,11 @@ msgstr "Interogări care unesc tabele fără index"
 msgid "Slow queries"
 msgstr "Interogări lente"
 
-#: internal/modules/mysql/users.go:114
-msgid "Successfully created a database user %(db_user)s"
-msgstr "Utilizatorul bazei de date %(db_user)s a fost creat"
-
-#: internal/modules/mysql/users.go:169
+#: internal/modules/mysql/users.go:170
 msgid "Error deleting user: %(error)s"
 msgstr "Eroare la ștergerea utilizatorului: %(error)s"
 
-#: internal/modules/mysql/users.go:217
+#: internal/modules/mysql/users.go:218
 msgid "Error changing password: %(error)s"
 msgstr "Eroare la schimbarea parolei: %(error)s"
 
@@ -5291,11 +5276,11 @@ msgstr "PHP %(service)s nu a putut fi pornit: %(message)s"
 msgid "Could not read PHP %(version)s info: %(message)s"
 msgstr ""
 
-#: internal/modules/php/ini.go:69
+#: internal/modules/php/ini.go:74
 msgid "Error saving %(text)s php.ini file!"
 msgstr "Eroare la salvarea fișierului php.ini pentru %(text)s!"
 
-#: internal/modules/php/ini.go:76
+#: internal/modules/php/ini.go:81
 msgid ""
 "PHP.INI file for %(text)s version %(version)s edited successfully, and "
 "%(container_to_restart)s service reloaded to apply."
@@ -5304,7 +5289,7 @@ msgstr ""
 "succes, iar serviciul %(container_to_restart)s a fost reîncărcat pentru a-l "
 "aplica."
 
-#: internal/modules/php/ini.go:78
+#: internal/modules/php/ini.go:83
 msgid ""
 "PHP.INI file for %(text)s version %(version)s edited successfully, and "
 "%(container_to_restart)s service restarted to apply."
@@ -5312,15 +5297,15 @@ msgstr ""
 "Fișierul PHP.INI pentru %(text)s versiunea %(version)s a fost editat, iar "
 "serviciul %(container_to_restart)s a fost repornit pentru a-l aplica."
 
-#: internal/modules/php/ini.go:82
+#: internal/modules/php/ini.go:87
 msgid "PHP.INI file for %(text)s version %(version)s edited successfully."
 msgstr "Fișierul PHP.INI pentru %(text)s versiunea %(version)s a fost editat."
 
-#: internal/modules/php/options.go:265
+#: internal/modules/php/options.go:274
 msgid "Could not save PHP %(version)s configuration: %(err_msg)s"
 msgstr "Configurația PHP %(version)s nu a putut fi salvată: %(err_msg)s"
 
-#: internal/modules/php/options.go:280
+#: internal/modules/php/options.go:289
 msgid ""
 "Configuration edited successfully and %(text)s reloaded to apply new "
 "settings."
@@ -5328,7 +5313,7 @@ msgstr ""
 "Configurația a fost editată cu succes și %(text)s a fost reîncărcat pentru a"
 " aplica noile setări."
 
-#: internal/modules/php/options.go:282
+#: internal/modules/php/options.go:291
 msgid ""
 "Configuration edited successfully and %(text)s service restarted to apply "
 "new settings."
@@ -5336,7 +5321,7 @@ msgstr ""
 "Configurația a fost editată și serviciul %(text)s a fost repornit pentru a "
 "aplica noile setări."
 
-#: internal/modules/php/options.go:284
+#: internal/modules/php/options.go:293
 msgid ""
 "Configuration edited successfully, but %(text)s failed to restart. Try "
 "restarting it manually from Services."
@@ -5359,7 +5344,7 @@ msgstr "Tokenul de autentificare automată nu a putut fi generat."
 msgid "Default PHP version"
 msgstr "Versiune PHP implicită"
 
-#: internal/modules/phpapp/render.go:31
+#: internal/modules/phpapp/render.go:20
 #: internal/web/templates/manager/php_install.html:9
 msgid "Install PHP Application"
 msgstr "Instalează aplicație PHP"
@@ -5428,11 +5413,7 @@ msgstr ""
 "Serviciul Postgres nu este încă pregătit. Așteptați finalizarea instalării "
 "înainte de a crea o bază de date."
 
-#: internal/modules/postgresql/databases.go:174
-msgid "Successfully created a PostgreSQL database %(database_name)s"
-msgstr "Baza de date PostgreSQL %(database_name)s a fost creată"
-
-#: internal/modules/postgresql/databases.go:212
+#: internal/modules/postgresql/databases.go:211
 msgid "Successfully deleted a PostgreSQL database %(database_name)s"
 msgstr "Baza de date PostgreSQL %(database_name)s a fost ștearsă"
 
@@ -5471,22 +5452,18 @@ msgstr ""
 msgid "PostgreSQL Databases"
 msgstr "Baze de date PostgreSQL"
 
-#: internal/modules/postgresql/render.go:97
+#: internal/modules/postgresql/render.go:98
 #: internal/web/templates/psql/users.html:9 static/js/tour-steps.js:912
 msgid "PostgreSQL Users"
 msgstr "Utilizatori PostgreSQL"
 
-#: internal/modules/postgresql/render.go:234
+#: internal/modules/postgresql/render.go:239
 msgid "Remote PostgreSQL"
 msgstr "PostgreSQL la distanță"
 
-#: internal/modules/postgresql/render.go:258
+#: internal/modules/postgresql/render.go:263
 msgid "Edit PostgreSQL configuration"
 msgstr "Editează configurația PostgreSQL"
-
-#: internal/modules/postgresql/users.go:106
-msgid "Successfully created a PostgreSQL user %(db_user)s"
-msgstr "Utilizatorul PostgreSQL %(db_user)s a fost creat"
 
 #: internal/modules/postgresql/wizard.go:103
 msgid "Database and user created, but failed to grant privileges: %(error)s"
@@ -5517,7 +5494,7 @@ msgstr ""
 
 #: internal/modules/services/render.go:51
 #: internal/modules/services/render.go:52
-#: internal/web/templates/emails/migrate.html:140
+#: internal/web/templates/emails/migrate.html:202
 msgid "Running"
 msgstr "Rulează"
 
@@ -5532,7 +5509,7 @@ msgstr "Pornește"
 #: internal/modules/services/render.go:55
 #: internal/web/templates/dashboard/onboarding.html:533
 #: internal/web/templates/dashboard/onboarding.html:564
-#: internal/web/templates/docker/containers.html:466
+#: internal/web/templates/docker/containers.html:467
 #: internal/web/templates/manager/drupal_app.html:189
 #: internal/web/templates/manager/joomla_app.html:84
 #: internal/web/templates/manager/moodle_app.html:82
@@ -5650,31 +5627,31 @@ msgstr "Click pentru a dezactiva"
 msgid "Click to Enable"
 msgstr "Click pentru a activa"
 
-#: internal/modules/services/services.go:120
+#: internal/modules/services/services.go:125
 msgid "%(service)s service is now restarted."
 msgstr "Serviciul %(service)s a fost repornit."
 
-#: internal/modules/services/services.go:124
+#: internal/modules/services/services.go:129
 msgid "Failed to restart the %(service)s service."
 msgstr "Serviciul %(service)s nu a putut fi repornit."
 
-#: internal/modules/services/services.go:130
+#: internal/modules/services/services.go:135
 msgid "%(service)s service is now disabled."
 msgstr "Serviciul %(service)s este acum dezactivat."
 
-#: internal/modules/services/services.go:131
+#: internal/modules/services/services.go:136
 msgid "Failed to stop the %(service)s service."
 msgstr "Serviciul %(service)s nu a putut fi oprit."
 
-#: internal/modules/services/services.go:134
+#: internal/modules/services/services.go:139
 msgid "%(service)s service is now enabled."
 msgstr "Serviciul %(service)s este acum activat."
 
-#: internal/modules/services/services.go:135
+#: internal/modules/services/services.go:140
 msgid "Failed to start the %(service)s service."
 msgstr "Serviciul %(service)s nu a putut fi pornit."
 
-#: internal/modules/services/services.go:142
+#: internal/modules/services/services.go:147
 msgid "%(fail_msg)s Try restart."
 msgstr "%(fail_msg)s Încercați o repornire."
 
@@ -5746,89 +5723,91 @@ msgstr "Elementele din coșul de gunoi sunt șterse automat după %(days)s zile.
 msgid "Invalid directory."
 msgstr "Director invalid."
 
-#: internal/modules/waf/default_all.go:93
+#: internal/modules/waf/default_all.go:101
 msgid "Invalid action."
 msgstr "Acțiune invalidă."
 
-#: internal/modules/waf/default_all.go:100
+#: internal/modules/waf/default_all.go:108
 msgid "Could not save the default for new domains."
 msgstr "Nu s-a putut salva valoarea implicită pentru domeniile noi."
 
-#: internal/modules/waf/default_all.go:121
+#: internal/modules/waf/default_all.go:129
 msgid "Settings saved but reloading the web server failed."
 msgstr "Setări salvate, dar reîncărcarea serverului web a eșuat."
 
-#: internal/modules/waf/default_all.go:123
+#: internal/modules/waf/default_all.go:131
 msgid "Could not update: %(domains)s"
 msgstr "Nu s-a putut actualiza: %(domains)s"
 
-#: internal/modules/waf/default_all.go:125
+#: internal/modules/waf/default_all.go:133
 msgid "The firewall is now on for all your domains and for new domains."
 msgstr ""
 "Firewall-ul este acum pornit pentru toate domeniile dumneavoastră și pentru "
 "domeniile noi."
 
-#: internal/modules/waf/default_all.go:127
+#: internal/modules/waf/default_all.go:135
 msgid "The firewall is now off for all your domains and for new domains."
 msgstr ""
 "Firewall-ul este acum oprit pentru toate domeniile dumneavoastră și pentru "
 "domeniile noi."
 
-#: internal/modules/waf/disable_rule.go:73
-#: internal/modules/waf/disable_rule.go:138
-#: internal/modules/waf/disable_rule.go:168
+#: internal/modules/waf/disable_rule.go:70
+#: internal/modules/waf/disable_rule.go:132
+#: internal/modules/waf/disable_rule.go:162
 #: internal/modules/waf/profiles.go:320
 msgid "internal error"
 msgstr "eroare internă"
 
-#: internal/modules/waf/disable_rule.go:177
+#: internal/modules/waf/disable_rule.go:171
 #: internal/web/templates/system/waf_domain.html:233
 msgid "Could not clear the log."
 msgstr "Nu s-a putut goli jurnalul."
 
-#: internal/modules/waf/handlers_domain.go:61
+#: internal/modules/waf/handlers_domain.go:77
 msgid "Error: IDs should only contain numbers separated by spaces."
 msgstr "Eroare: ID-urile trebuie să conțină doar numere separate prin spații."
 
-#: internal/modules/waf/handlers_domain.go:75
+#: internal/modules/waf/handlers_domain.go:83
+msgid "Error: tags can only contain letters, numbers and . _ / : -"
+msgstr ""
+
+#: internal/modules/waf/handlers_domain.go:95
 msgid "WAF configuration updated."
 msgstr "Configurația WAF a fost actualizată."
 
-#: internal/modules/waf/handlers_domain.go:78
-#: internal/modules/waf/handlers_domain.go:82
+#: internal/modules/waf/handlers_domain.go:98
 msgid "Error updating WAF!"
 msgstr "Eroare la actualizarea WAF!"
 
-#: internal/modules/waf/handlers_domain.go:86
+#: internal/modules/waf/handlers_domain.go:102
 msgid "Configuration file not found."
 msgstr "Fișierul de configurare nu a fost găsit."
 
-#: internal/modules/waf/handlers_list.go:88
+#: internal/modules/waf/handlers_list.go:87
 msgid "WAF for domain: %(domain_name)s is now %(status_text)s"
 msgstr "WAF pentru domeniul %(domain_name)s este acum %(status_text)s"
 
-#: internal/modules/waf/handlers_list.go:91
-#: internal/modules/waf/handlers_list.go:95
+#: internal/modules/waf/handlers_list.go:90
 msgid "Error changing WAF status."
 msgstr "Eroare la schimbarea stării WAF."
 
-#: internal/modules/waf/handlers_list.go:99
+#: internal/modules/waf/handlers_list.go:94
 msgid "Config file for %(domain_name)s not found"
 msgstr "Fișierul de configurare pentru %(domain_name)s nu a fost găsit"
 
-#: internal/modules/waf/handlers_list.go:144
+#: internal/modules/waf/handlers_list.go:139
 msgid "WAF is disabled for %(domain)s."
 msgstr "WAF este dezactivat pentru %(domain)s."
 
-#: internal/modules/waf/handlers_list.go:149
+#: internal/modules/waf/handlers_list.go:144
 msgid "WAF is disabled for %(count)s domains."
 msgstr "WAF este dezactivat pentru %(count)s domenii."
 
-#: internal/modules/waf/handlers_list.go:161
+#: internal/modules/waf/handlers_list.go:156
 msgid "Open"
 msgstr "Deschide"
 
-#: internal/modules/waf/handlers_list.go:162
+#: internal/modules/waf/handlers_list.go:157
 msgid ""
 "%(app)s found on %(domain)s. Turn on the %(app)s firewall profile to avoid "
 "false blocks."
@@ -5998,20 +5977,20 @@ msgstr ""
 "OpenLiteSpeed nu a putut încărca deloc această configurație. Verifică dacă "
 "fișierul nu este gol sau trunchiat."
 
-#: internal/modules/webserverconf/handlers.go:82
+#: internal/modules/webserverconf/handlers.go:83
 msgid "No default configuration is available for %(service_name)s."
 msgstr "Nu există configurație implicită disponibilă pentru %(service_name)s."
 
-#: internal/modules/webserverconf/handlers.go:88
-#: internal/modules/webserverconf/handlers.go:92
+#: internal/modules/webserverconf/handlers.go:89
+#: internal/modules/webserverconf/handlers.go:93
 msgid "Error restoring %(conf_file)s: %(error)s"
 msgstr "Eroare la restaurarea %(conf_file)s: %(error)s"
 
-#: internal/modules/webserverconf/handlers.go:106
+#: internal/modules/webserverconf/handlers.go:107
 msgid "Error writing to %(conf_file)s: %(error)s"
 msgstr "Eroare la scrierea în %(conf_file)s: %(error)s"
 
-#: internal/modules/webserverconf/handlers.go:117
+#: internal/modules/webserverconf/handlers.go:118
 msgid ""
 "Configuration was not saved, the %(service_name)s config test found a "
 "problem. Your changes are still in the editor."
@@ -6019,7 +5998,7 @@ msgstr ""
 "Configurația nu a fost salvată, testul de configurare %(service_name)s a "
 "găsit o problemă. Modificările tale sunt încă în editor."
 
-#: internal/modules/webserverconf/handlers.go:129
+#: internal/modules/webserverconf/handlers.go:130
 msgid ""
 "Changes were saved to %(conf_file)s, but reloading the %(service_name)s "
 "container failed: %(error)s"
@@ -6027,7 +6006,7 @@ msgstr ""
 "Modificările au fost salvate în %(conf_file)s, dar reîncărcarea "
 "containerului %(service_name)s a eșuat: %(error)s"
 
-#: internal/modules/webserverconf/handlers.go:133
+#: internal/modules/webserverconf/handlers.go:134
 msgid ""
 "Restored %(conf_file)s to the default configuration and %(service_name)s "
 "container reloaded successfully."
@@ -6035,7 +6014,7 @@ msgstr ""
 "%(conf_file)s a fost restaurat la configurația implicită și containerul "
 "%(service_name)s a fost reîncărcat."
 
-#: internal/modules/webserverconf/handlers.go:135
+#: internal/modules/webserverconf/handlers.go:136
 msgid ""
 "Changes saved to %(conf_file)s and %(service_name)s container reloaded "
 "successfully."
@@ -6043,7 +6022,7 @@ msgstr ""
 "Modificările au fost salvate în %(conf_file)s și containerul "
 "%(service_name)s a fost reîncărcat."
 
-#: internal/modules/webserverconf/handlers.go:143
+#: internal/modules/webserverconf/handlers.go:144
 msgid ""
 "Restored %(conf_file)s to the default configuration - the %(service_name)s "
 "container is not running."
@@ -6051,7 +6030,7 @@ msgstr ""
 "%(conf_file)s a fost restaurat la configurația implicită - containerul "
 "%(service_name)s nu rulează."
 
-#: internal/modules/webserverconf/handlers.go:145
+#: internal/modules/webserverconf/handlers.go:146
 msgid ""
 "Changes saved to %(conf_file)s - the %(service_name)s container is not "
 "running."
@@ -6468,7 +6447,7 @@ msgstr ""
 msgid "Not authenticated."
 msgstr "Neautentificat."
 
-#: internal/web/dbengine.go:14
+#: internal/web/dbengine.go:47
 msgid ""
 "Create a new database to store and organize data, providing a foundational "
 "structure for applications to manage and retrieve information efficiently."
@@ -6477,7 +6456,7 @@ msgstr ""
 "structură de bază pentru aplicații în gestionarea și recuperarea eficientă a"
 " informațiilor."
 
-#: internal/web/dbengine.go:16
+#: internal/web/dbengine.go:49
 msgid ""
 "View and modify the MySQL service configuration. Any changes will restart "
 "the service."
@@ -6485,7 +6464,7 @@ msgstr ""
 "Vizualizează și modifică configurația serviciului MySQL. Orice modificări "
 "vor reporni serviciul."
 
-#: internal/web/dbengine.go:20
+#: internal/web/dbengine.go:53
 msgid ""
 "Create a new PostgreSQL database to store and organize data, providing a "
 "foundational structure for applications to manage and retrieve information "
@@ -6495,7 +6474,7 @@ msgstr ""
 "oferind o structură de bază pentru ca aplicațiile să gestioneze și să "
 "recupereze informații eficient."
 
-#: internal/web/dbengine.go:22
+#: internal/web/dbengine.go:55
 msgid ""
 "View and modify the PostgreSQL service configuration. Any changes will "
 "restart the service."
@@ -6530,7 +6509,11 @@ msgstr "Editor de fișiere"
 msgid "Monitor & Secure"
 msgstr "Monitorizare și securitate"
 
-#: internal/web/sidebar.go:389 internal/web/templates/mysql/wizard.html:74
+#: internal/web/sidebar.go:389 internal/web/templates/emails/migrate.html:142
+#: internal/web/templates/mysql/wizard.html:74
+#: internal/web/templates/partials/_account_created.html:49
+#: internal/web/templates/partials/_account_created.html:57
+#: internal/web/templates/partials/_account_created.html:166
 msgid "Server"
 msgstr "Server"
 
@@ -6633,6 +6616,7 @@ msgstr "Avertisment"
 #: internal/web/templates/files/filemanager_partials.html:651
 #: internal/web/templates/manager/git.html:38
 #: internal/web/templates/mysql/databases.html:595
+#: internal/web/templates/partials/_account_created.html:14
 #: internal/web/templates/partials/_ai_assistant.html:52
 #: internal/web/templates/system/cronjobs.html:447
 msgid "Close"
@@ -6641,8 +6625,8 @@ msgstr "Închide"
 #: internal/web/templates/base.html:71
 #: internal/web/templates/docker/container_form.html:293
 #: internal/web/templates/docker/delete_confirm.html:46
-#: internal/web/templates/domains/dns.html:232
-#: internal/web/templates/domains/dns.html:546
+#: internal/web/templates/domains/dns.html:238
+#: internal/web/templates/domains/dns.html:596
 #: internal/web/templates/domains/domains.html:239
 #: internal/web/templates/domains/domains.html:269
 #: internal/web/templates/domains/dynamic_dns.html:22
@@ -6650,7 +6634,7 @@ msgstr "Închide"
 #: internal/web/templates/domains/dynamic_dns.html:134
 #: internal/web/templates/emails/alias_delete.html:27
 #: internal/web/templates/emails/delete.html:30
-#: internal/web/templates/emails/migrate.html:28
+#: internal/web/templates/emails/migrate.html:29
 #: internal/web/templates/files/backup_restore.html:927
 #: internal/web/templates/files/backup_restore.html:990
 #: internal/web/templates/files/clamav/quarantine.html:134
@@ -6974,8 +6958,9 @@ msgid "Domain Name"
 msgstr "Nume domeniu"
 
 #: internal/web/templates/cache/service.html:206
-#: internal/web/templates/docker/containers.html:270
+#: internal/web/templates/docker/containers.html:271
 #: internal/web/templates/manager/python_node_apps.html:393
+#: internal/web/templates/partials/_account_created.html:109
 #: internal/web/templates/partials/_search.html:68
 #: internal/web/templates/system/cronjobs.html:103
 #: internal/web/templates/system/cronjobs.html:282
@@ -6996,44 +6981,21 @@ msgid "Edit limits"
 msgstr "Editează limitele"
 
 #: internal/web/templates/cache/service.html:231
-#: internal/web/templates/mongodb/processlist.html:32
-#: internal/web/templates/mysql/processlist.html:32
-#: internal/web/templates/system/services.html:113
-msgid "ID"
-msgstr "ID"
-
-#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/docker/container_form.html:89
-#: internal/web/templates/docker/containers.html:61
-#: internal/web/templates/docker/containers.html:90
+#: internal/web/templates/docker/containers.html:62
+#: internal/web/templates/docker/containers.html:91
 #: internal/web/templates/domains/dns.html:147
 #: internal/web/templates/domains/dns.html:162
 #: internal/web/templates/files/filemanager_partials.html:456
 #: internal/web/templates/files/trash_partials.html:22
 #: internal/web/templates/manager/app_install.html:122
 #: internal/web/templates/manager/python_node_apps.html:394
+#: internal/web/templates/partials/_account_created.html:110
 #: internal/web/templates/system/services.html:113
 #: internal/web/templates/user/mcp.html:41
 #: internal/web/templates/user/passkeys.html:35
 msgid "Name"
 msgstr "Nume"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/dashboard/usage.html:208
-#: internal/web/templates/docker/containers.html:62
-#: internal/web/templates/docker/containers.html:94
-#: internal/web/templates/partials/_service_js.html:22
-#: internal/web/templates/system/services.html:113 static/js/tour-steps.js:549
-msgid "CPU Usage"
-msgstr "Utilizare CPU"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/dashboard/usage.html:239
-#: internal/web/templates/docker/containers.html:63
-#: internal/web/templates/docker/containers.html:97
-#: internal/web/templates/system/services.html:113
-msgid "Memory Usage"
-msgstr "Utilizare memorie"
 
 #: internal/web/templates/cache/service.html:231
 #: internal/web/templates/partials/_service_js.html:24
@@ -7043,14 +7005,38 @@ msgid "Memory %"
 msgstr "Memorie %"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/dashboard/usage.html:208
+#: internal/web/templates/docker/containers.html:63
+#: internal/web/templates/docker/containers.html:95
+#: internal/web/templates/partials/_service_js.html:22
+#: internal/web/templates/system/services.html:113 static/js/tour-steps.js:549
+msgid "CPU Usage"
+msgstr "Utilizare CPU"
+
+#: internal/web/templates/cache/service.html:231
+#: internal/web/templates/dashboard/usage.html:239
+#: internal/web/templates/docker/containers.html:64
+#: internal/web/templates/docker/containers.html:98
+#: internal/web/templates/system/services.html:113
+msgid "Memory Usage"
+msgstr "Utilizare memorie"
+
+#: internal/web/templates/cache/service.html:231
+#: internal/web/templates/mongodb/processlist.html:32
+#: internal/web/templates/mysql/processlist.html:32
+#: internal/web/templates/system/services.html:113
+msgid "ID"
+msgstr "ID"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/partials/_service_js.html:25
 #: internal/web/templates/system/services.html:113
 msgid "Network I/O"
 msgstr "I/O rețea"
 
 #: internal/web/templates/cache/service.html:231
-#: internal/web/templates/docker/containers.html:64
-#: internal/web/templates/docker/containers.html:101
+#: internal/web/templates/docker/containers.html:65
+#: internal/web/templates/docker/containers.html:102
 #: internal/web/templates/partials/_service_js.html:26
 #: internal/web/templates/system/services.html:113
 msgid "Block I/O"
@@ -7229,31 +7215,33 @@ msgstr "Informații"
 
 #: internal/web/templates/dashboard/information.html:33
 #: internal/web/templates/emails/info.html:26
-#: internal/web/templates/emails/migrate.html:59
+#: internal/web/templates/emails/migrate.html:97
 #: internal/web/templates/emails/new.html:36
-#: internal/web/templates/files/ftp.html:56
-#: internal/web/templates/files/ftp.html:84
+#: internal/web/templates/files/ftp.html:58
+#: internal/web/templates/files/ftp.html:86
 #: internal/web/templates/files/ftp_new.html:29
 #: internal/web/templates/manager/_cms_install_shared.html:380
 #: internal/web/templates/manager/git.html:42
 #: internal/web/templates/manager/joomla_install.html:30
 #: internal/web/templates/manager/ojs_install.html:40
 #: internal/web/templates/manager/wp/install.html:111
-#: internal/web/templates/mongodb/mongodb_user.html:23
-#: internal/web/templates/mongodb/mongodb_user.html:25
+#: internal/web/templates/mongodb/mongodb_user.html:26
+#: internal/web/templates/mongodb/mongodb_user.html:28
 #: internal/web/templates/mongodb/password.html:21
 #: internal/web/templates/mongodb/users.html:44
-#: internal/web/templates/mysql/mysql_user.html:23
 #: internal/web/templates/mysql/mysql_user.html:26
+#: internal/web/templates/mysql/mysql_user.html:29
 #: internal/web/templates/mysql/password.html:21
 #: internal/web/templates/mysql/remote_mysql.html:153
 #: internal/web/templates/mysql/remote_mysql.html:177
 #: internal/web/templates/mysql/users.html:76
 #: internal/web/templates/mysql/wizard.html:72
+#: internal/web/templates/partials/_account_created.html:38
+#: internal/web/templates/partials/_account_created.html:157
 #: internal/web/templates/partials/site_manager_shared.html:977
 #: internal/web/templates/psql/password.html:21
-#: internal/web/templates/psql/psql_user.html:23
-#: internal/web/templates/psql/psql_user.html:25
+#: internal/web/templates/psql/psql_user.html:26
+#: internal/web/templates/psql/psql_user.html:28
 #: internal/web/templates/psql/users.html:60
 #: internal/web/templates/user/account.html:68
 #: internal/web/templates/user/login.html:16
@@ -7557,6 +7545,7 @@ msgstr "Încărcați fișierele site-ului dvs. folosind managerul de fișiere."
 #: internal/web/templates/dashboard/onboarding.html:399
 #: internal/web/templates/mongodb/wizard.html:24
 #: internal/web/templates/mysql/wizard.html:183
+#: internal/web/templates/partials/_db_created.html:63
 #: internal/web/templates/psql/wizard.html:24
 msgid "Create a database"
 msgstr "Creează o bază de date"
@@ -7589,7 +7578,7 @@ msgstr "Vă rugăm așteptați…"
 
 #: internal/web/templates/dashboard/onboarding.html:532
 #: internal/web/templates/dashboard/onboarding.html:563
-#: internal/web/templates/docker/containers.html:137
+#: internal/web/templates/docker/containers.html:138
 #: internal/web/templates/manager/drupal_app.html:186
 #: internal/web/templates/manager/joomla_app.html:81
 #: internal/web/templates/manager/moodle_app.html:79
@@ -7619,7 +7608,7 @@ msgstr ""
 
 #: internal/web/templates/dashboard/onboarding.html:537
 #: internal/web/templates/domains/domains.html:289
-#: internal/web/templates/emails/migrate.html:51
+#: internal/web/templates/emails/migrate.html:86
 #: internal/web/templates/manager/wp/_shared.html:205
 #: internal/web/templates/system/waf.html:141
 #: internal/web/templates/system/waf.html:208
@@ -7706,10 +7695,6 @@ msgstr ""
 " pe cea mai recentă versiune."
 
 #: internal/web/templates/dashboard/onboarding.html:768
-msgid "Step"
-msgstr "Pas"
-
-#: internal/web/templates/dashboard/onboarding.html:768
 #: internal/web/templates/domains/domains.html:434
 #: internal/web/templates/manager/wp/_caching.html:290
 #: internal/web/templates/system/error_logs.html:96
@@ -7717,6 +7702,13 @@ msgstr "Pas"
 #: internal/web/templates/user/history_usage.html:96
 msgid "of"
 msgstr "din"
+
+#: internal/web/templates/dashboard/onboarding.html:768
+#: internal/web/templates/emails/migrate.html:40
+#: internal/web/templates/emails/migrate.html:47
+#: internal/web/templates/emails/migrate.html:54
+msgid "Step"
+msgstr "Pas"
 
 #: internal/web/templates/dashboard/onboarding.html:837
 msgid "Please choose a webserver, or click Skip."
@@ -7910,16 +7902,16 @@ msgid "read the documentation"
 msgstr "citește documentația"
 
 #: internal/web/templates/db/configuration.html:19
-#: internal/web/templates/docker/containers.html:45
+#: internal/web/templates/docker/containers.html:46
 #: internal/web/templates/domains/dns.html:91
 #: internal/web/templates/domains/domains.html:57
 #: internal/web/templates/domains/logs.html:81
-#: internal/web/templates/emails/accounts.html:19
+#: internal/web/templates/emails/accounts.html:21
 #: internal/web/templates/emails/aliases.html:19
 #: internal/web/templates/emails/deliverability.html:16
 #: internal/web/templates/files/backup_restore.html:702
 #: internal/web/templates/files/clamav/quarantine.html:28
-#: internal/web/templates/files/ftp.html:41
+#: internal/web/templates/files/ftp.html:43
 #: internal/web/templates/manager/autoinstaller.html:19
 #: internal/web/templates/manager/git.html:159
 #: internal/web/templates/manager/git.html:424
@@ -7956,7 +7948,7 @@ msgid "Search"
 msgstr "Caută"
 
 #: internal/web/templates/db/configuration.html:26
-#: internal/web/templates/domains/dns.html:713
+#: internal/web/templates/domains/dns.html:774
 #: internal/web/templates/domains/vhost.html:27
 #: internal/web/templates/partials/_db_tuning.html:100
 #: internal/web/templates/php/ini_editor.html:24
@@ -8003,13 +7995,13 @@ msgstr "Valoare"
 msgid "Create a Database"
 msgstr "Creează o bază de date"
 
-#: internal/web/templates/db/new.html:23 internal/web/templates/db/new.html:27
+#: internal/web/templates/db/new.html:26 internal/web/templates/db/new.html:30
 #: internal/web/templates/files/backup_restore.html:762
 #: internal/web/templates/manager/_cms_app_shared.html:975
 #: internal/web/templates/manager/wp/single.html:1675
 #: internal/web/templates/mongodb/databases.html:53
-#: internal/web/templates/mongodb/new.html:21
-#: internal/web/templates/mongodb/new.html:23
+#: internal/web/templates/mongodb/new.html:24
+#: internal/web/templates/mongodb/new.html:26
 #: internal/web/templates/mongodb/wizard.html:27
 #: internal/web/templates/mysql/databases.html:202
 #: internal/web/templates/mysql/wizard.html:193
@@ -8018,17 +8010,17 @@ msgstr "Creează o bază de date"
 msgid "Database Name"
 msgstr "Nume bază de date"
 
-#: internal/web/templates/db/new.html:27
-#: internal/web/templates/mongodb/new.html:23
+#: internal/web/templates/db/new.html:30
+#: internal/web/templates/mongodb/new.html:26
 #: internal/web/templates/mongodb/wizard.html:27
 #: internal/web/templates/mysql/wizard.html:190
 #: internal/web/templates/psql/wizard.html:27
 msgid "Only letters, numbers, and underscores are allowed (1-63 characters)."
 msgstr "Sunt permise doar litere, cifre și underscore (1-63 caractere)."
 
-#: internal/web/templates/db/new.html:43
+#: internal/web/templates/db/new.html:46
 #: internal/web/templates/mongodb/assign.html:53
-#: internal/web/templates/mongodb/new.html:39
+#: internal/web/templates/mongodb/new.html:42
 #: internal/web/templates/mongodb/remove.html:53
 #: internal/web/templates/mongodb/wizard.html:117
 #: internal/web/templates/mysql/assign.html:80
@@ -8100,7 +8092,7 @@ msgid "Change tag"
 msgstr "Schimbă tag-ul"
 
 #: internal/web/templates/docker/change_images.html:109
-#: internal/web/templates/domains/dns.html:789
+#: internal/web/templates/domains/dns.html:850
 #: internal/web/templates/domains/dynamic_dns.html:6
 msgid "Select DNS Zone Header"
 msgstr "Antet selectare zonă DNS"
@@ -8130,16 +8122,16 @@ msgid "Choose the database server for your MySQL databases."
 msgstr "Alegeți serverul de baze de date pentru bazele de date MySQL."
 
 #: internal/web/templates/docker/change_mysql.html:21
+#: internal/web/templates/partials/_db_tuning.html:31
+msgid "Databases:"
+msgstr "Baze de date:"
+
+#: internal/web/templates/docker/change_mysql.html:21
 msgid ""
 "To switch the database server, first remove all databases from your account."
 msgstr ""
 "Pentru a schimba serverul de baze de date, eliminați mai întâi toate bazele "
 "de date din cont."
-
-#: internal/web/templates/docker/change_mysql.html:21
-#: internal/web/templates/partials/_db_tuning.html:31
-msgid "Databases:"
-msgstr "Baze de date:"
 
 #: internal/web/templates/docker/change_mysql.html:21
 msgid "Go to Databases"
@@ -8174,14 +8166,14 @@ msgid "Change Webserver"
 msgstr "Schimbă serverul web"
 
 #: internal/web/templates/docker/change_webserver.html:21
-msgid "To switch the webserver, first remove all domains from your account."
-msgstr ""
-"Pentru a schimba serverul web, eliminați mai întâi toate domeniile din cont."
-
-#: internal/web/templates/docker/change_webserver.html:21
 #: internal/web/templates/partials/_db_tuning.html:33
 msgid "Domains:"
 msgstr "Domenii:"
+
+#: internal/web/templates/docker/change_webserver.html:21
+msgid "To switch the webserver, first remove all domains from your account."
+msgstr ""
+"Pentru a schimba serverul web, eliminați mai întâi toate domeniile din cont."
 
 #: internal/web/templates/docker/change_webserver.html:21
 msgid "Go to Domains"
@@ -8265,6 +8257,7 @@ msgstr "Nuclee CPU"
 
 #: internal/web/templates/docker/container_form.html:122
 #: internal/web/templates/manager/app_install.html:424
+#: internal/web/templates/partials/_account_created.html:117
 msgid "Memory"
 msgstr "Memorie"
 
@@ -8501,11 +8494,11 @@ msgstr "Se pornește containerul"
 msgid "Pointing the domain to the container"
 msgstr "Se direcționează domeniul către container"
 
-#: internal/web/templates/docker/container_form.html:480
+#: internal/web/templates/docker/container_form.html:479
 msgid "The server stopped responding before the container was created."
 msgstr "Serverul a încetat să răspundă înainte de crearea containerului."
 
-#: internal/web/templates/docker/container_form.html:482
+#: internal/web/templates/docker/container_form.html:481
 msgid "Connection lost while creating the container."
 msgstr "Conexiunea s-a pierdut în timpul creării containerului."
 
@@ -8526,10 +8519,10 @@ msgstr "Total CPU:"
 msgid "Total Memory:"
 msgstr "Total memorie:"
 
-#: internal/web/templates/docker/containers.html:56
+#: internal/web/templates/docker/containers.html:57
 #: internal/web/templates/domains/domains.html:70
 #: internal/web/templates/domains/logs.html:96
-#: internal/web/templates/files/ftp.html:52
+#: internal/web/templates/files/ftp.html:54
 #: internal/web/templates/manager/git.html:163
 #: internal/web/templates/system/process_manager.html:51
 #: internal/web/templates/system/waf_logs.html:51 static/js/tour-steps.js:211
@@ -8537,22 +8530,22 @@ msgstr "Total memorie:"
 msgid "Show Columns"
 msgstr "Afișează coloanele"
 
-#: internal/web/templates/docker/containers.html:65
-#: internal/web/templates/docker/containers.html:104
+#: internal/web/templates/docker/containers.html:66
+#: internal/web/templates/docker/containers.html:105
 msgid "Net I/O"
 msgstr "I/O rețea"
 
-#: internal/web/templates/docker/containers.html:68
-#: internal/web/templates/docker/containers.html:115
+#: internal/web/templates/docker/containers.html:69
+#: internal/web/templates/docker/containers.html:116
 #: internal/web/templates/domains/dns.html:151
 #: internal/web/templates/domains/domains.html:93
 #: internal/web/templates/domains/domains.html:171
 #: internal/web/templates/files/backup_wizard.html:131
 #: internal/web/templates/files/clamav/quarantine.html:65
 #: internal/web/templates/files/disk_usage.html:64
-#: internal/web/templates/files/ftp.html:62
-#: internal/web/templates/files/ftp.html:107
-#: internal/web/templates/files/ftp.html:160
+#: internal/web/templates/files/ftp.html:64
+#: internal/web/templates/files/ftp.html:109
+#: internal/web/templates/files/ftp.html:162
 #: internal/web/templates/files/inodes.html:62
 #: internal/web/templates/manager/git.html:172
 #: internal/web/templates/manager/git.html:190
@@ -8576,56 +8569,57 @@ msgstr "I/O rețea"
 msgid "Actions"
 msgstr "Acțiuni"
 
-#: internal/web/templates/docker/containers.html:76
+#: internal/web/templates/docker/containers.html:77
 #: static/js/tour-steps.js:489
 msgid "New Service"
 msgstr "Serviciu nou"
 
-#: internal/web/templates/docker/containers.html:154
+#: internal/web/templates/docker/containers.html:155
 msgid "No container are currently running."
 msgstr "Nu rulează niciun container în acest moment."
 
-#: internal/web/templates/docker/containers.html:270
+#: internal/web/templates/docker/containers.html:271
 msgid "is reaching its CPU/RAM/PIDs limit."
 msgstr "se apropie de limita sa de CPU/RAM/PIDs."
 
-#: internal/web/templates/docker/containers.html:272
+#: internal/web/templates/docker/containers.html:273
 msgid "are reaching their CPU/RAM/PIDs limit."
 msgstr "se apropie de limita lor de CPU/RAM/PIDs."
 
-#: internal/web/templates/docker/containers.html:274
+#: internal/web/templates/docker/containers.html:275
 msgid "containers are reaching their CPU/RAM/PIDs limit."
 msgstr "containere se apropie de limita lor de CPU/RAM/PIDs."
 
-#: internal/web/templates/docker/containers.html:283
+#: internal/web/templates/docker/containers.html:284
 msgid "Error fetching docker stats for containers."
 msgstr "Eroare la preluarea statisticilor docker pentru containere."
 
-#: internal/web/templates/docker/containers.html:339
+#: internal/web/templates/docker/containers.html:340
+#: internal/web/templates/partials/_account_created.html:111
 msgid "Image"
 msgstr "Imagine"
 
-#: internal/web/templates/docker/containers.html:378
-#: internal/web/templates/docker/containers.html:422
+#: internal/web/templates/docker/containers.html:379
+#: internal/web/templates/docker/containers.html:423
 msgid "Usage:"
 msgstr "Utilizare:"
 
-#: internal/web/templates/docker/containers.html:383
-#: internal/web/templates/docker/containers.html:426
+#: internal/web/templates/docker/containers.html:384
+#: internal/web/templates/docker/containers.html:427
 msgid "Allocated:"
 msgstr "Alocat:"
 
-#: internal/web/templates/docker/containers.html:387
+#: internal/web/templates/docker/containers.html:388
 msgid "Max CPUs that this service can use. 0 = unlimited"
 msgstr ""
 "Numărul maxim de CPU pe care îl poate folosi acest serviciu. 0 = nelimitat"
 
-#: internal/web/templates/docker/containers.html:388
-#: internal/web/templates/docker/containers.html:434
-#: internal/web/templates/docker/containers.html:461
+#: internal/web/templates/docker/containers.html:389
+#: internal/web/templates/docker/containers.html:435
+#: internal/web/templates/docker/containers.html:462
 #: internal/web/templates/domains/capitalize.html:100
-#: internal/web/templates/domains/dns.html:230
-#: internal/web/templates/domains/dns.html:545
+#: internal/web/templates/domains/dns.html:236
+#: internal/web/templates/domains/dns.html:595
 #: internal/web/templates/domains/domains.html:237
 #: internal/web/templates/domains/domains.html:267
 #: internal/web/templates/domains/dynamic_dns.html:101
@@ -8639,16 +8633,16 @@ msgstr ""
 msgid "Save"
 msgstr "Salvează"
 
-#: internal/web/templates/docker/containers.html:432
+#: internal/web/templates/docker/containers.html:433
 msgid "Max Memory that this service can use. 0 = unlimited"
 msgstr "Memoria maximă pe care o poate folosi acest serviciu. 0 = nelimitat"
 
-#: internal/web/templates/docker/containers.html:460
+#: internal/web/templates/docker/containers.html:461
 msgid "Max processes that this service can run. 0 = unlimited"
 msgstr ""
 "Numărul maxim de procese pe care le poate rula acest serviciu. 0 = nelimitat"
 
-#: internal/web/templates/docker/containers.html:491
+#: internal/web/templates/docker/containers.html:492
 #: internal/web/templates/domains/dynamic_dns.html:202
 #: internal/web/templates/domains/vhost.html:22
 #: internal/web/templates/domains/vhost.html:23
@@ -8657,6 +8651,7 @@ msgstr ""
 #: internal/web/templates/files/filemanager_partials.html:332
 #: internal/web/templates/files/filemanager_partials.html:403
 #: internal/web/templates/mysql/remote_mysql.html:206
+#: internal/web/templates/partials/_account_created.html:132
 #: internal/web/templates/system/cronjobs.html:357
 msgid "Edit"
 msgstr "Editează"
@@ -8820,7 +8815,7 @@ msgstr "Selectează serviciul activ pentru a deschide terminalul web."
 #: internal/web/templates/emails/new.html:274
 #: internal/web/templates/files/ftp_new.html:294
 #: internal/web/templates/manager/_cms_install_shared.html:402
-#: internal/web/templates/manager/app_install.html:794
+#: internal/web/templates/manager/app_install.html:783
 #: internal/web/templates/manager/php_install.html:430
 #: internal/web/templates/manager/wp/install.html:762
 msgid "No domains yet"
@@ -8831,7 +8826,7 @@ msgstr "Nu există încă domenii"
 #: internal/web/templates/emails/new.html:275
 #: internal/web/templates/files/ftp_new.html:295
 #: internal/web/templates/manager/_cms_install_shared.html:403
-#: internal/web/templates/manager/app_install.html:795
+#: internal/web/templates/manager/app_install.html:784
 #: internal/web/templates/manager/php_install.html:431
 #: internal/web/templates/manager/wp/install.html:763
 msgid "Add your first domain to get started"
@@ -8842,7 +8837,7 @@ msgstr "Adaugă primul tău domeniu pentru a începe"
 #: internal/web/templates/emails/new.html:276
 #: internal/web/templates/files/ftp_new.html:296
 #: internal/web/templates/manager/_cms_install_shared.html:405
-#: internal/web/templates/manager/app_install.html:797
+#: internal/web/templates/manager/app_install.html:786
 #: internal/web/templates/manager/php_install.html:433
 #: internal/web/templates/manager/wp/install.html:764
 msgid "New domain"
@@ -8992,7 +8987,7 @@ msgstr ""
 
 #: internal/web/templates/domains/dns.html:62
 #: internal/web/templates/domains/dns.html:135
-#: internal/web/templates/domains/dns.html:736
+#: internal/web/templates/domains/dns.html:797
 msgid "Reset Zone"
 msgstr "Resetează zona"
 
@@ -9006,7 +9001,7 @@ msgstr "Total înregistrări DNS:"
 
 #: internal/web/templates/domains/dns.html:87
 #: internal/web/templates/domains/logs.html:52
-#: internal/web/templates/files/ftp.html:23
+#: internal/web/templates/files/ftp.html:25
 #: internal/web/templates/files/ftp_connections.html:17
 #: internal/web/templates/user/active_sessions.html:18
 msgid "Records Table"
@@ -9022,7 +9017,7 @@ msgid "Export Zone"
 msgstr "Exportă zona"
 
 #: internal/web/templates/domains/dns.html:127
-#: internal/web/templates/domains/dns.html:727
+#: internal/web/templates/domains/dns.html:788
 #: internal/web/templates/system/error_logs.html:49
 msgid "Reset"
 msgstr "Resetează"
@@ -9034,7 +9029,7 @@ msgid "TTL"
 msgstr "TTL"
 
 #: internal/web/templates/domains/dns.html:150
-#: internal/web/templates/domains/dns.html:182
+#: internal/web/templates/domains/dns.html:175
 msgid "Record"
 msgstr "Înregistrare"
 
@@ -9042,69 +9037,61 @@ msgstr "Înregistrare"
 msgid "Only letters, numbers, and the characters . @ _ - are allowed."
 msgstr "Sunt permise doar litere, cifre și caracterele . @ _ -"
 
-#: internal/web/templates/domains/dns.html:169
-msgid "A"
-msgstr "A"
-
-#: internal/web/templates/domains/dns.html:170
-msgid "AAAA"
-msgstr "AAAA"
-
-#: internal/web/templates/domains/dns.html:171
-msgid "CAA"
-msgstr "CAA"
-
-#: internal/web/templates/domains/dns.html:172
-msgid "CNAME"
-msgstr "CNAME"
-
-#: internal/web/templates/domains/dns.html:173
-msgid "MX"
-msgstr "MX"
-
 #: internal/web/templates/domains/dns.html:174
-msgid "SRV"
-msgstr "SRV"
-
-#: internal/web/templates/domains/dns.html:175
-msgid "TLSA"
-msgstr "TLSA"
-
-#: internal/web/templates/domains/dns.html:176
-msgid "TXT"
-msgstr "TXT"
-
-#: internal/web/templates/domains/dns.html:181
-#: internal/web/templates/domains/dns.html:286
+#: internal/web/templates/domains/dns.html:340
 msgid "Priority"
 msgstr "Prioritate"
 
-#: internal/web/templates/domains/dns.html:189
-#: internal/web/templates/domains/dns.html:350
+#: internal/web/templates/domains/dns.html:178
+msgid "Policy for mail that fails the check"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:180
+msgid "none: only report"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:181
+msgid "quarantine: send to spam"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:182
+msgid "reject: refuse the message"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:185
+msgid "Email for reports (optional)"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:195
+#: internal/web/templates/domains/dns.html:404
 msgid "Generate from existing SSL cert"
 msgstr "Generează din certificatul SSL existent"
 
-#: internal/web/templates/domains/dns.html:198
+#: internal/web/templates/domains/dns.html:204
 msgid "Public key hash (SHA-256)"
 msgstr "Hash cheie publică (SHA-256)"
 
-#: internal/web/templates/domains/dns.html:205
+#: internal/web/templates/domains/dns.html:211
 msgid "Full certificate hash (SHA-256)"
 msgstr "Hash complet al certificatului (SHA-256)"
 
-#: internal/web/templates/domains/dns.html:212
-#: internal/web/templates/emails/migrate.html:55
+#: internal/web/templates/domains/dns.html:218
+#: internal/web/templates/emails/migrate.html:90
 #: internal/web/templates/manager/app_install.html:135
 #: internal/web/templates/mysql/wizard.html:75
+#: internal/web/templates/partials/_account_created.html:50
+#: internal/web/templates/partials/_account_created.html:58
+#: internal/web/templates/partials/_account_created.html:119
+#: internal/web/templates/partials/_account_created.html:167
 msgid "Port"
 msgstr "Port"
 
-#: internal/web/templates/domains/dns.html:215
+#: internal/web/templates/domains/dns.html:221
 msgid "Protocol"
 msgstr "Protocol"
 
-#: internal/web/templates/domains/dns.html:240
-#: internal/web/templates/files/ftp.html:209
+#: internal/web/templates/domains/dns.html:246
+#: internal/web/templates/files/ftp.html:211
 #: internal/web/templates/manager/git.html:510
 #: internal/web/templates/manager/sites.html:521
 #: internal/web/templates/mongodb/databases.html:219
@@ -9121,37 +9108,41 @@ msgstr "Protocol"
 msgid "Confirm"
 msgstr "Confirmă"
 
-#: internal/web/templates/domains/dns.html:241
-#: internal/web/templates/domains/dns.html:415
+#: internal/web/templates/domains/dns.html:247
+#: internal/web/templates/domains/dns.html:469
 msgid " Delete"
 msgstr " Șterge"
 
-#: internal/web/templates/domains/dns.html:242
+#: internal/web/templates/domains/dns.html:248
 msgid "An unexpected error occurred. Please try again."
 msgstr "A apărut o eroare neașteptată. Te rog încearcă din nou."
 
-#: internal/web/templates/domains/dns.html:258
-#: internal/web/templates/domains/dns.html:261
+#: internal/web/templates/domains/dns.html:284
+#: internal/web/templates/domains/dns.html:287
 msgid "Address"
 msgstr "Adresă"
 
-#: internal/web/templates/domains/dns.html:271
+#: internal/web/templates/domains/dns.html:297
 msgid "or use Generate button below"
 msgstr "sau folosește butonul Generează de mai jos"
 
-#: internal/web/templates/domains/dns.html:340
+#: internal/web/templates/domains/dns.html:313
+msgid "fingerprint"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:394
 msgid "Fetching..."
 msgstr "Se preiau datele..."
 
-#: internal/web/templates/domains/dns.html:359
+#: internal/web/templates/domains/dns.html:413
 msgid "Custom certificate"
 msgstr "Certificat personalizat"
 
-#: internal/web/templates/domains/dns.html:360
+#: internal/web/templates/domains/dns.html:414
 msgid "Lets Encrypt certificate"
 msgstr "Certificat Let's Encrypt"
 
-#: internal/web/templates/domains/dns.html:365
+#: internal/web/templates/domains/dns.html:419
 msgid ""
 "Caddy autorenews Lets Encrypt certificates with a new keypair. This record "
 "will go stale after the next renewal — regenerate it then."
@@ -9160,7 +9151,7 @@ msgstr ""
 "chei. Această înregistrare va deveni depășită după următoarea reînnoire — "
 "regenereaz-o atunci."
 
-#: internal/web/templates/domains/dns.html:368
+#: internal/web/templates/domains/dns.html:422
 msgid ""
 "Using a custom certificate. Regenerate this record whenever you replace the "
 "certificate."
@@ -9168,38 +9159,38 @@ msgstr ""
 "Se folosește un certificat personalizat. Regenerează această înregistrare "
 "ori de câte ori înlocuiești certificatul."
 
-#: internal/web/templates/domains/dns.html:383
+#: internal/web/templates/domains/dns.html:437
 #: internal/web/templates/manager/_cms_install_shared.html:294
 #: internal/web/templates/manager/wp/install.html:139
 msgid "Regenerate"
 msgstr "Regenerează"
 
-#: internal/web/templates/domains/dns.html:386
+#: internal/web/templates/domains/dns.html:440
 msgid "Failed to fetch SSL certificate info."
 msgstr "Nu s-au putut prelua informațiile despre certificatul SSL."
 
-#: internal/web/templates/domains/dns.html:414
-#: internal/web/templates/domains/dns.html:547
+#: internal/web/templates/domains/dns.html:468
+#: internal/web/templates/domains/dns.html:597
 msgid " Edit"
 msgstr " Editează"
 
-#: internal/web/templates/domains/dns.html:416
+#: internal/web/templates/domains/dns.html:470
 msgid " Save"
 msgstr " Salvează"
 
-#: internal/web/templates/domains/dns.html:417
+#: internal/web/templates/domains/dns.html:471
 msgid " Cancel"
 msgstr " Anulează"
 
-#: internal/web/templates/domains/dns.html:456
+#: internal/web/templates/domains/dns.html:510
 msgid "Deleting record, please wait."
 msgstr "Se șterge înregistrarea, te rog așteaptă."
 
-#: internal/web/templates/domains/dns.html:472
+#: internal/web/templates/domains/dns.html:526
 msgid "Record deleted successfully."
 msgstr "Înregistrarea a fost ștearsă cu succes."
 
-#: internal/web/templates/domains/dns.html:482
+#: internal/web/templates/domains/dns.html:536
 msgid ""
 "Error occurred deleting the record. Please refresh the page and try again. "
 "If the issue persists, try editing the zone file directly."
@@ -9208,36 +9199,36 @@ msgstr ""
 "încearcă din nou. Dacă problema persistă, încearcă să editezi direct "
 "fișierul zonei."
 
-#: internal/web/templates/domains/dns.html:486
+#: internal/web/templates/domains/dns.html:540
 msgid "An unexpected error occurred."
 msgstr "A apărut o eroare neașteptată."
 
-#: internal/web/templates/domains/dns.html:565
+#: internal/web/templates/domains/dns.html:615
 msgid "Edit Cancelled."
 msgstr "Editarea a fost anulată."
 
-#: internal/web/templates/domains/dns.html:575
+#: internal/web/templates/domains/dns.html:625
 msgid "Edit Cancelled. Reloading the page."
 msgstr "Editarea a fost anulată. Se reîncarcă pagina."
 
-#: internal/web/templates/domains/dns.html:618
+#: internal/web/templates/domains/dns.html:679
 msgid "A CNAME record with this name already exists."
 msgstr "O înregistrare CNAME cu acest nume există deja."
 
-#: internal/web/templates/domains/dns.html:648
+#: internal/web/templates/domains/dns.html:709
 msgid "Record updated successfully."
 msgstr "Înregistrarea a fost actualizată cu succes."
 
-#: internal/web/templates/domains/dns.html:708
+#: internal/web/templates/domains/dns.html:769
 msgid "Edit DNS File for"
 msgstr "Editează fișierul DNS pentru"
 
-#: internal/web/templates/domains/dns.html:709
+#: internal/web/templates/domains/dns.html:770
 #: internal/web/templates/domains/vhost.html:200
 msgid "Attention:"
 msgstr "Atenție:"
 
-#: internal/web/templates/domains/dns.html:709
+#: internal/web/templates/domains/dns.html:770
 msgid ""
 "Editing DNS file is intended for advanced users only. This action can "
 "potentially lead to server misconfiguration or downtime if not done "
@@ -9247,43 +9238,43 @@ msgstr ""
 " acțiune poate duce la o configurare greșită a serverului sau la "
 "indisponibilitate dacă nu este făcută corect."
 
-#: internal/web/templates/domains/dns.html:709
+#: internal/web/templates/domains/dns.html:770
 msgid ""
 "Please be cautious and make sure you understand the changes you are making."
 msgstr ""
 "Te rog fii prudent și asigură-te că înțelegi modificările pe care le faci."
 
-#: internal/web/templates/domains/dns.html:721
+#: internal/web/templates/domains/dns.html:782
 msgid "Table View"
 msgstr "Vizualizare tabel"
 
-#: internal/web/templates/domains/dns.html:724
-#: internal/web/templates/domains/dns.html:735
+#: internal/web/templates/domains/dns.html:785
+#: internal/web/templates/domains/dns.html:796
 msgid "Download File"
 msgstr "Descarcă fișierul"
 
-#: internal/web/templates/domains/dns.html:734
+#: internal/web/templates/domains/dns.html:795
 msgid "Edit as Table"
 msgstr "Editează ca tabel"
 
-#: internal/web/templates/domains/dns.html:759
+#: internal/web/templates/domains/dns.html:820
 #: internal/web/templates/domains/new.html:256
 msgid "Please wait for the process to finish."
 msgstr "Te rog așteaptă finalizarea procesului."
 
-#: internal/web/templates/domains/dns.html:759
+#: internal/web/templates/domains/dns.html:820
 msgid "Saving zone file for domain"
 msgstr "Se salvează fișierul zonei pentru domeniul"
 
-#: internal/web/templates/domains/dns.html:773
+#: internal/web/templates/domains/dns.html:834
 msgid "Zone file saved successfully"
 msgstr "Fișierul zonei a fost salvat cu succes"
 
-#: internal/web/templates/domains/dns.html:779
+#: internal/web/templates/domains/dns.html:840
 msgid "An error occurred while saving the zone file."
 msgstr "A apărut o eroare la salvarea fișierului de zonă."
 
-#: internal/web/templates/domains/dns.html:793
+#: internal/web/templates/domains/dns.html:854
 msgid ""
 "Manage and edit Domain Name System (DNS) zone files, which contain critical "
 "information for mapping domain names to IP addresses and managing various "
@@ -9485,7 +9476,7 @@ msgid "Showing"
 msgstr "Se afișează"
 
 #: internal/web/templates/domains/domains.html:495
-#: internal/web/templates/files/filemanager.html:348
+#: internal/web/templates/files/filemanager.html:315
 #: internal/web/templates/mongodb/users.html:27
 #: internal/web/templates/mongodb/users.html:31
 #: internal/web/templates/mysql/users.html:54
@@ -9496,24 +9487,24 @@ msgid "to"
 msgstr "până la"
 
 #: internal/web/templates/domains/domains.html:495
-msgid "Showing domains"
-msgstr "Se afișează domeniile"
-
-#: internal/web/templates/domains/domains.html:495
-#: internal/web/templates/files/filemanager.html:348
+#: internal/web/templates/files/filemanager.html:315
 msgid "from a total of"
 msgstr "dintr-un total de"
 
+#: internal/web/templates/domains/domains.html:495
+msgid "Showing domains"
+msgstr "Se afișează domeniile"
+
 #: internal/web/templates/domains/domains.html:500
-#: internal/web/templates/files/filemanager.html:353
+#: internal/web/templates/files/filemanager.html:320
 msgid "Page navigation"
 msgstr "Navigare pagină"
 
 #: internal/web/templates/domains/domains.html:504
 #: internal/web/templates/domains/domains.html:505
 #: internal/web/templates/domains/logs.html:206
-#: internal/web/templates/files/filemanager.html:357
-#: internal/web/templates/files/filemanager.html:358
+#: internal/web/templates/files/filemanager.html:324
+#: internal/web/templates/files/filemanager.html:325
 #: internal/web/templates/system/error_logs.html:98
 #: internal/web/templates/system/waf_logs.html:124
 #: internal/web/templates/user/activity.html:189
@@ -9821,8 +9812,8 @@ msgid "Click on Show Details above to view the log."
 msgstr "Apasă pe Arată detaliile de mai sus pentru a vedea logul."
 
 #: internal/web/templates/domains/new.html:328
-#: internal/web/templates/manager/app_install.html:765
-#: internal/web/templates/manager/app_install.html:775
+#: internal/web/templates/manager/app_install.html:754
+#: internal/web/templates/manager/app_install.html:764
 #: internal/web/templates/manager/dokuwiki_app.html:178
 #: internal/web/templates/manager/dokuwiki_app.html:186
 #: internal/web/templates/manager/dokuwiki_app.html:195
@@ -10218,37 +10209,37 @@ msgstr "Antet e-mailuri"
 msgid "Total emails:"
 msgstr "Total emailuri:"
 
-#: internal/web/templates/emails/accounts.html:29
-#: internal/web/templates/emails/accounts.html:49
+#: internal/web/templates/emails/accounts.html:31
+#: internal/web/templates/emails/accounts.html:51
 msgid "Has filter"
 msgstr "Are filtru"
 
-#: internal/web/templates/emails/accounts.html:29
-#: internal/web/templates/emails/accounts.html:55
+#: internal/web/templates/emails/accounts.html:31
+#: internal/web/templates/emails/accounts.html:57
 msgid "Near quota"
 msgstr "Aproape de cotă"
 
-#: internal/web/templates/emails/accounts.html:64 static/js/tour-steps.js:363
+#: internal/web/templates/emails/accounts.html:66 static/js/tour-steps.js:363
 msgid "New Email"
 msgstr "Email nou"
 
-#: internal/web/templates/emails/accounts.html:76
+#: internal/web/templates/emails/accounts.html:78
 msgid "Account @ Domain"
 msgstr "Cont @ Domeniu"
 
-#: internal/web/templates/emails/accounts.html:77
+#: internal/web/templates/emails/accounts.html:79
 msgid "Storage Used"
 msgstr "Stocare folosită"
 
-#: internal/web/templates/emails/accounts.html:85
+#: internal/web/templates/emails/accounts.html:87
 msgid "No emails yet."
 msgstr "Nu există încă adrese de email."
 
-#: internal/web/templates/emails/accounts.html:85
+#: internal/web/templates/emails/accounts.html:87
 msgid "Add your first email"
 msgstr "Adaugă primul tău email"
 
-#: internal/web/templates/emails/accounts.html:116
+#: internal/web/templates/emails/accounts.html:118
 #: internal/web/templates/emails/aliases.html:79
 #: internal/web/templates/manager/sites.html:436
 #: internal/web/templates/manager/sites.html:440
@@ -10258,15 +10249,15 @@ msgstr "Adaugă primul tău email"
 msgid "Manage"
 msgstr "Gestionează"
 
-#: internal/web/templates/emails/accounts.html:151
+#: internal/web/templates/emails/accounts.html:153
 msgid "Webmail for "
 msgstr "Webmail pentru "
 
-#: internal/web/templates/emails/accounts.html:151
+#: internal/web/templates/emails/accounts.html:153
 msgid " opened in new window."
 msgstr " a fost deschis într-o fereastră nouă."
 
-#: internal/web/templates/emails/accounts.html:167
+#: internal/web/templates/emails/accounts.html:169
 msgid "Add new email account"
 msgstr "Adăugați cont de email nou"
 
@@ -10473,7 +10464,7 @@ msgstr "Următorii utilizatori vor fi importați:"
 
 #: internal/web/templates/emails/confirm_import.html:46
 #: internal/web/templates/emails/info.html:30
-#: internal/web/templates/emails/migrate.html:63
+#: internal/web/templates/emails/migrate.html:101
 #: internal/web/templates/emails/new.html:76
 #: internal/web/templates/emails/single_account.html:190
 #: internal/web/templates/files/ftp_new.html:58
@@ -10486,24 +10477,26 @@ msgstr "Următorii utilizatori vor fi importați:"
 #: internal/web/templates/manager/ojs_install.html:65
 #: internal/web/templates/manager/prestashop_install.html:55
 #: internal/web/templates/manager/wp/install.html:129
-#: internal/web/templates/mongodb/mongodb_user.html:40
-#: internal/web/templates/mongodb/mongodb_user.html:49
+#: internal/web/templates/mongodb/mongodb_user.html:43
+#: internal/web/templates/mongodb/mongodb_user.html:52
 #: internal/web/templates/mongodb/password.html:38
 #: internal/web/templates/mongodb/password.html:47
 #: internal/web/templates/mongodb/wizard.html:71
-#: internal/web/templates/mysql/mysql_user.html:41
-#: internal/web/templates/mysql/mysql_user.html:51
+#: internal/web/templates/mysql/mysql_user.html:44
+#: internal/web/templates/mysql/mysql_user.html:54
 #: internal/web/templates/mysql/password.html:38
 #: internal/web/templates/mysql/remote_mysql.html:162
 #: internal/web/templates/mysql/remote_mysql.html:163
 #: internal/web/templates/mysql/root_password.html:41
 #: internal/web/templates/mysql/wizard.html:73
 #: internal/web/templates/mysql/wizard.html:245
+#: internal/web/templates/partials/_account_created.html:40
+#: internal/web/templates/partials/_account_created.html:159
 #: internal/web/templates/partials/site_manager_shared.html:978
 #: internal/web/templates/psql/password.html:38
 #: internal/web/templates/psql/password.html:47
-#: internal/web/templates/psql/psql_user.html:40
-#: internal/web/templates/psql/psql_user.html:49
+#: internal/web/templates/psql/psql_user.html:43
+#: internal/web/templates/psql/psql_user.html:52
 #: internal/web/templates/psql/wizard.html:71
 #: internal/web/templates/user/account.html:84
 #: internal/web/templates/user/login.html:20
@@ -10511,8 +10504,8 @@ msgid "Password"
 msgstr "Parolă"
 
 #: internal/web/templates/emails/confirm_import.html:47
-#: internal/web/templates/files/ftp.html:58
-#: internal/web/templates/files/ftp.html:91
+#: internal/web/templates/files/ftp.html:60
+#: internal/web/templates/files/ftp.html:93
 msgid "Quota"
 msgstr "Cotă"
 
@@ -10836,6 +10829,7 @@ msgid "of these match:"
 msgstr "din acestea se potrivesc:"
 
 #: internal/web/templates/emails/filter.html:128
+#: internal/web/templates/emails/migrate.html:138
 msgid "From"
 msgstr "De la"
 
@@ -10844,6 +10838,7 @@ msgid "Subject"
 msgstr "Subiect"
 
 #: internal/web/templates/emails/filter.html:130
+#: internal/web/templates/emails/migrate.html:146
 msgid "To"
 msgstr "Către"
 
@@ -11021,6 +11016,7 @@ msgid "Non-SSL Settings"
 msgstr "Setări fără SSL"
 
 #: internal/web/templates/emails/info.html:31
+#: internal/web/templates/partials/_account_created.html:41
 msgid "Use the email account's password."
 msgstr "Folosește parola contului de email."
 
@@ -11044,7 +11040,7 @@ msgstr "Port SMTP"
 msgid "IMAP, POP3, and SMTP require authentication."
 msgstr "IMAP, POP3 și SMTP necesită autentificare."
 
-#: internal/web/templates/emails/migrate.html:16
+#: internal/web/templates/emails/migrate.html:17
 msgid ""
 "Copy folders and messages from another IMAP server into one of your email "
 "accounts. Messages already copied are skipped, so a migration can safely be "
@@ -11054,23 +11050,38 @@ msgstr ""
 "dvs. de e-mail. Mesajele deja copiate sunt omise, așa că o migrare poate fi "
 "rulată din nou fără probleme."
 
-#: internal/web/templates/emails/migrate.html:25
+#: internal/web/templates/emails/migrate.html:26
 msgid "Migration in progress"
 msgstr "Migrare în curs"
 
-#: internal/web/templates/emails/migrate.html:38
+#: internal/web/templates/emails/migrate.html:41
+#: internal/web/templates/emails/migrate.html:65
 msgid "Source server"
 msgstr "Server sursă"
 
-#: internal/web/templates/emails/migrate.html:39
+#: internal/web/templates/emails/migrate.html:48
+#: internal/web/templates/emails/migrate.html:110
+msgid "Destination account"
+msgstr "Cont de destinație"
+
+#: internal/web/templates/emails/migrate.html:55
+#: internal/web/templates/emails/migrate.html:133
+msgid "Test and start"
+msgstr ""
+
+#: internal/web/templates/emails/migrate.html:66
 msgid "The server you are moving emails from."
 msgstr "Serverul de pe care vă mutați e-mailurile."
 
-#: internal/web/templates/emails/migrate.html:43
+#: internal/web/templates/emails/migrate.html:68
+msgid "Quick fill"
+msgstr ""
+
+#: internal/web/templates/emails/migrate.html:78
 msgid "IMAP server"
 msgstr "Server IMAP"
 
-#: internal/web/templates/emails/migrate.html:65
+#: internal/web/templates/emails/migrate.html:105
 msgid ""
 "For Gmail, Outlook and other providers with two-factor login, use an app "
 "password."
@@ -11078,69 +11089,76 @@ msgstr ""
 "Pentru Gmail, Outlook și alți furnizori cu autentificare în doi pași, "
 "folosiți o parolă de aplicație."
 
-#: internal/web/templates/emails/migrate.html:71
-msgid "Destination account"
-msgstr "Cont de destinație"
-
-#: internal/web/templates/emails/migrate.html:72
+#: internal/web/templates/emails/migrate.html:111
 msgid "The email account on this server that receives the messages."
 msgstr "Contul de e-mail de pe acest server care primește mesajele."
 
-#: internal/web/templates/emails/migrate.html:76
+#: internal/web/templates/emails/migrate.html:115
 msgid "Email account"
 msgstr "Cont de e-mail"
 
-#: internal/web/templates/emails/migrate.html:85
+#: internal/web/templates/emails/migrate.html:124
 msgid "Account password"
 msgstr "Parola contului"
 
-#: internal/web/templates/emails/migrate.html:87
+#: internal/web/templates/emails/migrate.html:126
 msgid "Forgot it? You can set a new one under Email Accounts."
 msgstr "Ați uitat-o? Puteți seta una nouă în Conturi de e-mail."
 
-#: internal/web/templates/emails/migrate.html:91
+#: internal/web/templates/emails/migrate.html:134
+msgid ""
+"Check both logins work, then start copying. Messages already copied are "
+"skipped."
+msgstr ""
+
+#: internal/web/templates/emails/migrate.html:153
 msgid "Skip Spam, Junk and Trash folders"
 msgstr "Omite folderele Spam, Junk și Coș de gunoi"
 
-#: internal/web/templates/emails/migrate.html:100
+#: internal/web/templates/emails/migrate.html:162
+#: internal/web/templates/manager/git.html:416
+msgid "Back"
+msgstr "Înapoi"
+
+#: internal/web/templates/emails/migrate.html:164
 msgid "Test connection"
 msgstr "Testează conexiunea"
 
-#: internal/web/templates/emails/migrate.html:101
+#: internal/web/templates/emails/migrate.html:165
 msgid "Start migration"
 msgstr "Pornește migrarea"
 
-#: internal/web/templates/emails/migrate.html:110
+#: internal/web/templates/emails/migrate.html:172
 msgid "Recent migrations"
 msgstr "Migrări recente"
 
-#: internal/web/templates/emails/migrate.html:115
+#: internal/web/templates/emails/migrate.html:177
 #: internal/web/templates/files/backup_wizard.html:45
 #: internal/web/templates/files/clamav/scan_logs.html:38
 msgid "Started"
 msgstr "Început"
 
-#: internal/web/templates/emails/migrate.html:116
+#: internal/web/templates/emails/migrate.html:178
 msgid "Migration"
 msgstr "Migrare"
 
-#: internal/web/templates/emails/migrate.html:129
+#: internal/web/templates/emails/migrate.html:191
 msgid "No email accounts yet"
 msgstr "Încă nu există conturi de e-mail"
 
-#: internal/web/templates/emails/migrate.html:130
+#: internal/web/templates/emails/migrate.html:192
 msgid "Create the email account you want to migrate into first."
 msgstr "Creați mai întâi contul de e-mail în care doriți să migrați."
 
-#: internal/web/templates/emails/migrate.html:131
+#: internal/web/templates/emails/migrate.html:193
 msgid "New email account"
 msgstr "Cont de e-mail nou"
 
-#: internal/web/templates/emails/migrate.html:141
+#: internal/web/templates/emails/migrate.html:203
 msgid "Completed"
 msgstr "Finalizată"
 
-#: internal/web/templates/emails/migrate.html:142
+#: internal/web/templates/emails/migrate.html:204
 #: internal/web/templates/files/backup_restore.html:528
 #: internal/web/templates/files/backup_restore.html:675
 #: internal/web/templates/files/clamav/quarantine.html:186
@@ -11149,106 +11167,106 @@ msgstr "Finalizată"
 msgid "Failed"
 msgstr "Eșuat"
 
-#: internal/web/templates/emails/migrate.html:143
+#: internal/web/templates/emails/migrate.html:205
 msgid "Cancelled"
 msgstr "Anulată"
 
-#: internal/web/templates/emails/migrate.html:144
+#: internal/web/templates/emails/migrate.html:206
 msgid "View log"
 msgstr "Vezi jurnalul"
 
-#: internal/web/templates/emails/migrate.html:145
+#: internal/web/templates/emails/migrate.html:207
 msgid "Testing..."
 msgstr "Se testează..."
 
-#: internal/web/templates/emails/migrate.html:146
+#: internal/web/templates/emails/migrate.html:208
 msgid "Starting..."
 msgstr "Se pornește..."
 
-#: internal/web/templates/emails/migrate.html:147
+#: internal/web/templates/emails/migrate.html:209
 msgid "Migration started."
 msgstr "Migrarea a pornit."
 
-#: internal/web/templates/emails/migrate.html:148
+#: internal/web/templates/emails/migrate.html:210
 msgid "Stop the running migration? Messages copied so far are kept."
 msgstr "Opriți migrarea în curs? Mesajele copiate până acum se păstrează."
 
-#: internal/web/templates/emails/migrate.html:149
+#: internal/web/templates/emails/migrate.html:211
 msgid "Source server: login successful"
 msgstr "Server sursă: autentificare reușită"
 
-#: internal/web/templates/emails/migrate.html:150
+#: internal/web/templates/emails/migrate.html:212
 msgid "Source server: login failed"
 msgstr "Server sursă: autentificare eșuată"
 
-#: internal/web/templates/emails/migrate.html:151
+#: internal/web/templates/emails/migrate.html:213
 msgid "Destination account: login successful"
 msgstr "Cont de destinație: autentificare reușită"
 
-#: internal/web/templates/emails/migrate.html:152
+#: internal/web/templates/emails/migrate.html:214
 msgid "Destination account: login failed"
 msgstr "Cont de destinație: autentificare eșuată"
 
-#: internal/web/templates/emails/migrate.html:153
+#: internal/web/templates/emails/migrate.html:215
 #: internal/web/templates/partials/_ai_assistant.html:12
 msgid "Something went wrong, please try again."
 msgstr "Ceva nu a mers bine, încercați din nou."
 
-#: internal/web/templates/emails/migrate.html:154
+#: internal/web/templates/emails/migrate.html:216
 msgid ""
 "%d messages were bigger than this server's %s limit and were not copied."
 msgstr ""
 
-#: internal/web/templates/emails/migrate.html:158
+#: internal/web/templates/emails/migrate.html:220
 msgid "Login to the source server failed, check the username and password."
 msgstr ""
 "Autentificarea pe serverul sursă a eșuat, verificați numele de utilizator și"
 " parola."
 
-#: internal/web/templates/emails/migrate.html:159
+#: internal/web/templates/emails/migrate.html:221
 msgid "Login to the destination account failed, check its password."
 msgstr ""
 "Autentificarea în contul de destinație a eșuat, verificați parola acestuia."
 
-#: internal/web/templates/emails/migrate.html:160
-#: internal/web/templates/emails/migrate.html:166
+#: internal/web/templates/emails/migrate.html:222
+#: internal/web/templates/emails/migrate.html:228
 msgid ""
 "Could not connect to the source server, check the server, security and port."
 msgstr ""
 "Nu s-a putut conecta la serverul sursă, verificați serverul, securitatea și "
 "portul."
 
-#: internal/web/templates/emails/migrate.html:161
+#: internal/web/templates/emails/migrate.html:223
 msgid "Could not connect to the destination server."
 msgstr "Nu s-a putut conecta la serverul de destinație."
 
-#: internal/web/templates/emails/migrate.html:162
+#: internal/web/templates/emails/migrate.html:224
 msgid ""
 "The destination account is full, raise its quota and run the migration "
 "again."
 msgstr ""
 "Contul de destinație este plin, măriți-i cota și rulați din nou migrarea."
 
-#: internal/web/templates/emails/migrate.html:163
+#: internal/web/templates/emails/migrate.html:225
 msgid "Finished with errors, some messages were not copied. See the log."
 msgstr ""
 "Finalizată cu erori, unele mesaje nu au fost copiate. Consultați jurnalul."
 
-#: internal/web/templates/emails/migrate.html:164
+#: internal/web/templates/emails/migrate.html:226
 msgid "Stopped after too many errors. See the log."
 msgstr "Oprită după prea multe erori. Consultați jurnalul."
 
-#: internal/web/templates/emails/migrate.html:165
+#: internal/web/templates/emails/migrate.html:227
 msgid ""
 "The destination account refused some messages, they were not copied. See the"
 " log."
 msgstr ""
 
-#: internal/web/templates/emails/migrate.html:167
+#: internal/web/templates/emails/migrate.html:229
 msgid "The SSL/TLS connection failed, try another Security option."
 msgstr "Conexiunea SSL/TLS a eșuat, încercați altă opțiune de securitate."
 
-#: internal/web/templates/emails/migrate.html:168
+#: internal/web/templates/emails/migrate.html:230
 msgid "Stopped before finishing."
 msgstr "Oprită înainte de final."
 
@@ -11281,15 +11299,15 @@ msgstr "Sunt permise doar litere, cifre și caracterele . _ % + -"
 #: internal/web/templates/manager/ojs_install.html:57
 #: internal/web/templates/manager/prestashop_install.html:47
 #: internal/web/templates/manager/wp/install.html:121
-#: internal/web/templates/mongodb/mongodb_user.html:32
+#: internal/web/templates/mongodb/mongodb_user.html:35
 #: internal/web/templates/mongodb/password.html:30
 #: internal/web/templates/mongodb/wizard.html:57
-#: internal/web/templates/mysql/mysql_user.html:33
+#: internal/web/templates/mysql/mysql_user.html:36
 #: internal/web/templates/mysql/password.html:30
 #: internal/web/templates/mysql/root_password.html:23
 #: internal/web/templates/mysql/wizard.html:235
 #: internal/web/templates/psql/password.html:30
-#: internal/web/templates/psql/psql_user.html:32
+#: internal/web/templates/psql/psql_user.html:35
 #: internal/web/templates/psql/wizard.html:57
 #: internal/web/templates/user/account.html:77
 #: internal/web/templates/user/reset_password/set_new_password.html:81
@@ -11308,15 +11326,15 @@ msgstr "Parolă slabă"
 #: internal/web/templates/manager/ojs_install.html:58
 #: internal/web/templates/manager/prestashop_install.html:48
 #: internal/web/templates/manager/wp/install.html:122
-#: internal/web/templates/mongodb/mongodb_user.html:33
+#: internal/web/templates/mongodb/mongodb_user.html:36
 #: internal/web/templates/mongodb/password.html:31
 #: internal/web/templates/mongodb/wizard.html:58
-#: internal/web/templates/mysql/mysql_user.html:34
+#: internal/web/templates/mysql/mysql_user.html:37
 #: internal/web/templates/mysql/password.html:31
 #: internal/web/templates/mysql/root_password.html:24
 #: internal/web/templates/mysql/wizard.html:236
 #: internal/web/templates/psql/password.html:31
-#: internal/web/templates/psql/psql_user.html:33
+#: internal/web/templates/psql/psql_user.html:36
 #: internal/web/templates/psql/wizard.html:58
 #: internal/web/templates/user/account.html:78
 #: internal/web/templates/user/reset_password/set_new_password.html:82
@@ -11335,15 +11353,15 @@ msgstr "Parolă medie"
 #: internal/web/templates/manager/ojs_install.html:59
 #: internal/web/templates/manager/prestashop_install.html:49
 #: internal/web/templates/manager/wp/install.html:123
-#: internal/web/templates/mongodb/mongodb_user.html:34
+#: internal/web/templates/mongodb/mongodb_user.html:37
 #: internal/web/templates/mongodb/password.html:32
 #: internal/web/templates/mongodb/wizard.html:59
-#: internal/web/templates/mysql/mysql_user.html:35
+#: internal/web/templates/mysql/mysql_user.html:38
 #: internal/web/templates/mysql/password.html:32
 #: internal/web/templates/mysql/root_password.html:25
 #: internal/web/templates/mysql/wizard.html:237
 #: internal/web/templates/psql/password.html:32
-#: internal/web/templates/psql/psql_user.html:34
+#: internal/web/templates/psql/psql_user.html:37
 #: internal/web/templates/psql/wizard.html:59
 #: internal/web/templates/user/account.html:79
 #: internal/web/templates/user/reset_password/set_new_password.html:83
@@ -11354,7 +11372,7 @@ msgstr "Parolă puternică"
 #: internal/web/templates/emails/single_account.html:199
 #: internal/web/templates/manager/_cms_app_shared.html:991
 #: internal/web/templates/manager/wp/single.html:1691
-#: internal/web/templates/mysql/mysql_user.html:50
+#: internal/web/templates/mysql/mysql_user.html:53
 #: internal/web/templates/mysql/password.html:47
 #: internal/web/templates/mysql/root_password.html:40
 msgid "Password must be between 8 and 30 characters."
@@ -12158,6 +12176,11 @@ msgid "No quarantined files"
 msgstr "Nu există fișiere în carantină"
 
 #: internal/web/templates/files/clamav/quarantine.html:49
+#: internal/web/templates/files/clamav/scan_logs.html:26
+msgid "Click here to start a new scan"
+msgstr "Apasă aici pentru a porni o nouă scanare"
+
+#: internal/web/templates/files/clamav/quarantine.html:49
 msgid ""
 "No malicious files have been detected or the scan has not been initiated "
 "yet."
@@ -12165,17 +12188,12 @@ msgstr ""
 "Nu au fost detectate fișiere malițioase sau scanarea nu a fost inițiată "
 "încă."
 
-#: internal/web/templates/files/clamav/quarantine.html:49
-#: internal/web/templates/files/clamav/scan_logs.html:26
-msgid "Click here to start a new scan"
-msgstr "Apasă aici pentru a porni o nouă scanare"
-
 #: internal/web/templates/files/clamav/quarantine.html:55
 msgid "Quarantined Files"
 msgstr "Fișiere în carantină"
 
 #: internal/web/templates/files/clamav/quarantine.html:63
-#: internal/web/templates/files/filemanager.html:403
+#: internal/web/templates/files/filemanager.html:370
 msgid "File"
 msgstr "Fișier"
 
@@ -12249,6 +12267,7 @@ msgstr "Sursă"
 #: internal/web/templates/files/clamav/scan_logs.html:40
 #: internal/web/templates/files/disk_usage.html:58
 #: internal/web/templates/files/inodes.html:56
+#: internal/web/templates/partials/_account_created.html:162
 msgid "Directory"
 msgstr "Director"
 
@@ -12536,19 +12555,19 @@ msgstr "Foldere"
 msgid "Specific extension"
 msgstr "Extensie specifică"
 
-#: internal/web/templates/files/filemanager.html:348
+#: internal/web/templates/files/filemanager.html:315
 msgid "Showing files"
 msgstr "Se afișează fișierele"
 
-#: internal/web/templates/files/filemanager.html:403
+#: internal/web/templates/files/filemanager.html:370
 msgid "has no permissions (0000) and cannot be accessed."
 msgstr "nu are permisiuni (0000) și nu poate fi accesat."
 
-#: internal/web/templates/files/filemanager.html:405
+#: internal/web/templates/files/filemanager.html:372
 msgid "have no permissions (0000) and cannot be accessed."
 msgstr "nu au permisiuni (0000) și nu pot fi accesate."
 
-#: internal/web/templates/files/filemanager.html:407
+#: internal/web/templates/files/filemanager.html:374
 msgid "files have no permissions (0000) and cannot be accessed."
 msgstr "fișiere nu au permisiuni (0000) și nu pot fi accesate."
 
@@ -12831,59 +12850,62 @@ msgstr "Port FTP:"
 msgid "View Connections"
 msgstr "Vezi conexiunile"
 
-#: internal/web/templates/files/ftp.html:57
-#: internal/web/templates/files/ftp.html:87
+#: internal/web/templates/files/ftp.html:59
+#: internal/web/templates/files/ftp.html:89
 #: internal/web/templates/partials/folder_picker.html:18
 msgid "Path"
 msgstr "Cale"
 
-#: internal/web/templates/files/ftp.html:59
-#: internal/web/templates/files/ftp.html:95
+#: internal/web/templates/files/ftp.html:61
+#: internal/web/templates/files/ftp.html:97
 #: internal/web/templates/system/process_manager.html:57
 #: internal/web/templates/system/process_manager.html:103
 msgid "UID"
 msgstr "UID"
 
-#: internal/web/templates/files/ftp.html:60
-#: internal/web/templates/files/ftp.html:99
+#: internal/web/templates/files/ftp.html:62
+#: internal/web/templates/files/ftp.html:101
 msgid "GID"
 msgstr "GID"
 
-#: internal/web/templates/files/ftp.html:70 static/js/tour-steps.js:690
+#: internal/web/templates/files/ftp.html:72 static/js/tour-steps.js:690
 msgid "New Account"
 msgstr "Cont nou"
 
-#: internal/web/templates/files/ftp.html:114
+#: internal/web/templates/files/ftp.html:116
 msgid "No accounts yet."
 msgstr "Nu există încă conturi."
 
-#: internal/web/templates/files/ftp.html:114
+#: internal/web/templates/files/ftp.html:116
 msgid "Add your first account"
 msgstr "Adaugă primul tău cont"
 
-#: internal/web/templates/files/ftp.html:128
+#: internal/web/templates/files/ftp.html:130
 #: internal/web/templates/files/ftp_quota.html:28
 msgid "Over quota"
 msgstr "Cotă depășită"
 
-#: internal/web/templates/files/ftp.html:135
+#: internal/web/templates/files/ftp.html:137
 #: internal/web/templates/files/ftp_new.html:170
 #: internal/web/templates/files/ftp_quota.html:28
 #: internal/web/templates/files/ftp_quota.html:34
+#: internal/web/templates/partials/_account_created.html:116
+#: internal/web/templates/partials/_account_created.html:117
+#: internal/web/templates/partials/_account_created.html:118
 msgid "Unlimited"
 msgstr "Nelimitat"
 
-#: internal/web/templates/files/ftp.html:169
 #: internal/web/templates/files/ftp.html:171
+#: internal/web/templates/files/ftp.html:173
 msgid "Change Path"
 msgstr "Schimbă calea"
 
-#: internal/web/templates/files/ftp.html:176
 #: internal/web/templates/files/ftp.html:178
+#: internal/web/templates/files/ftp.html:180
 msgid "Change Quota"
 msgstr "Schimbă cota"
 
-#: internal/web/templates/files/ftp.html:261
+#: internal/web/templates/files/ftp.html:263
 msgid "Add new FTP account"
 msgstr "Adăugați cont FTP nou"
 
@@ -13945,7 +13967,7 @@ msgid "Connection lost during update."
 msgstr "Conexiunea s-a pierdut în timpul actualizării."
 
 #: internal/web/templates/manager/_cms_app_shared.html:1362
-#: internal/web/templates/manager/app_install.html:785
+#: internal/web/templates/manager/app_install.html:774
 #: internal/web/templates/manager/dokuwiki_app.html:193
 #: internal/web/templates/manager/dokuwiki_install.html:363
 #: internal/web/templates/manager/drupal_app.html:345
@@ -14254,7 +14276,7 @@ msgstr "← Înapoi"
 
 #: internal/web/templates/manager/_cms_install_shared.html:235
 #: internal/web/templates/manager/app_install.html:464
-#: internal/web/templates/manager/app_install.html:693
+#: internal/web/templates/manager/app_install.html:688
 #: internal/web/templates/manager/dokuwiki_install.html:277
 #: internal/web/templates/manager/drupal_install.html:189
 #: internal/web/templates/manager/flarum_install.html:207
@@ -14661,11 +14683,11 @@ msgstr "Procesul de instalare s-a blocat pentru"
 msgid "Install process failed for"
 msgstr "Procesul de instalare a eșuat pentru"
 
-#: internal/web/templates/manager/app_install.html:556
+#: internal/web/templates/manager/app_install.html:551
 msgid "Create a new application."
 msgstr "Creează o aplicație nouă."
 
-#: internal/web/templates/manager/app_install.html:700
+#: internal/web/templates/manager/app_install.html:695
 #: internal/web/templates/manager/dokuwiki_install.html:284
 #: internal/web/templates/manager/drupal_install.html:196
 #: internal/web/templates/manager/flarum_install.html:214
@@ -14687,13 +14709,13 @@ msgstr "Creează o aplicație nouă."
 msgid "Please select a domain name."
 msgstr "Te rog selectează un nume de domeniu."
 
-#: internal/web/templates/manager/app_install.html:718
+#: internal/web/templates/manager/app_install.html:713
 #: internal/web/templates/manager/php_install.html:361
 msgid "Application setup started. Please wait for the process to finish."
 msgstr ""
 "Configurarea aplicației a început. Te rog așteaptă finalizarea procesului."
 
-#: internal/web/templates/manager/app_install.html:775
+#: internal/web/templates/manager/app_install.html:764
 #: internal/web/templates/manager/dokuwiki_install.html:353
 #: internal/web/templates/manager/drupal_install.html:265
 #: internal/web/templates/manager/flarum_install.html:283
@@ -15130,6 +15152,7 @@ msgstr ""
 #: internal/web/templates/manager/sofawiki_app.html:108
 #: internal/web/templates/manager/tinyfilemanager_app.html:32
 #: internal/web/templates/manager/tinyphotogallery_app.html:131
+#: internal/web/templates/partials/_account_created.html:126
 #: internal/web/templates/partials/site_manager_shared.html:75
 msgid "Open site"
 msgstr "Deschide site-ul"
@@ -15686,10 +15709,6 @@ msgstr "Rulează în container"
 msgid "Commands (run after each deployment, from the deploy directory)"
 msgstr ""
 "Comenzi (rulate după fiecare implementare, din directorul de implementare)"
-
-#: internal/web/templates/manager/git.html:416
-msgid "Back"
-msgstr "Înapoi"
 
 #: internal/web/templates/manager/git.html:417
 #: internal/web/templates/partials/site_manager_shared.html:1072
@@ -18919,21 +18938,21 @@ msgstr ""
 "Creați un utilizator MongoDB nou cu nume de utilizator și parolă unice. Apoi"
 " atribuiți-i un rol pe o bază de date din pagina Atribuie utilizator."
 
-#: internal/web/templates/mongodb/mongodb_user.html:25
+#: internal/web/templates/mongodb/mongodb_user.html:28
 #: internal/web/templates/mongodb/wizard.html:44
-#: internal/web/templates/mysql/mysql_user.html:26
+#: internal/web/templates/mysql/mysql_user.html:29
 #: internal/web/templates/mysql/wizard.html:219
-#: internal/web/templates/psql/psql_user.html:25
+#: internal/web/templates/psql/psql_user.html:28
 #: internal/web/templates/psql/wizard.html:44
 msgid "Only letters, numbers, and underscores are allowed (1-31 characters)."
 msgstr "Sunt permise doar litere, cifre și underscore (1-31 caractere)."
 
-#: internal/web/templates/mongodb/mongodb_user.html:81
+#: internal/web/templates/mongodb/mongodb_user.html:84
 #: internal/web/templates/mongodb/password.html:79
-#: internal/web/templates/mysql/mysql_user.html:111
+#: internal/web/templates/mysql/mysql_user.html:114
 #: internal/web/templates/mysql/password.html:114
 #: internal/web/templates/psql/password.html:79
-#: internal/web/templates/psql/psql_user.html:81
+#: internal/web/templates/psql/psql_user.html:84
 msgid "Back to Users"
 msgstr "Înapoi la utilizatori"
 
@@ -19109,6 +19128,7 @@ msgstr ""
 
 #: internal/web/templates/mongodb/wizard.html:41
 #: internal/web/templates/mysql/wizard.html:212
+#: internal/web/templates/partials/_db_created.html:45
 #: internal/web/templates/psql/wizard.html:41
 msgid "Create a user"
 msgstr "Creează un utilizator"
@@ -19521,10 +19541,14 @@ msgid "Download snippet"
 msgstr "Descarcă fragmentul"
 
 #: internal/web/templates/mysql/wizard.html:157
+#: internal/web/templates/partials/_db_created.html:51
 msgid "View Databases"
 msgstr "Vizualizează Bazele de Date"
 
 #: internal/web/templates/mysql/wizard.html:160
+#: internal/web/templates/partials/_account_created.html:134
+#: internal/web/templates/partials/_db_created.html:51
+#: internal/web/templates/partials/_db_created.html:67
 msgid "Create Another"
 msgstr "Creează Altul"
 
@@ -19532,6 +19556,109 @@ msgstr "Creează Altul"
 #: internal/web/templates/psql/wizard.html:101
 msgid "Assign user to database"
 msgstr "Atribuie utilizatorul bazei de date"
+
+#: internal/web/templates/partials/_account_created.html:6
+#: internal/web/templates/partials/_db_created.html:12
+#: internal/web/templates/partials/install_success.html:108
+msgid "Copied to clipboard"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:28
+msgid "Your mailbox is ready. Connect a mail app"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:29
+msgid "A welcome email with these settings went to the new mailbox."
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:37
+#: internal/web/templates/partials/_account_created.html:156
+msgid "Sign in"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:46
+msgid "Incoming (IMAP)"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:54
+msgid "Outgoing (SMTP)"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:62
+msgid ""
+"IMAP and SMTP require authentication. Outgoing mail signs in with the same "
+"username and password."
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:63
+msgid ""
+"This mail server has no SSL certificate, so passwords and mail are sent "
+"unencrypted."
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:67
+msgid "Download settings"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:69
+msgid "Apple Mail & iPhone"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:75
+msgid "Open Webmail"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:77
+msgid "Setup guide"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:100
+msgid "Your container is running"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:100
+msgid "Your container is ready to start"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:101
+msgid "It's saved and the image is ready, but it isn't running yet."
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:115
+msgid "Limits"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:116
+#: internal/web/templates/system/process_manager.html:60
+#: internal/web/templates/system/process_manager.html:142
+#: internal/web/templates/user/stats.html:34
+msgid "CPU"
+msgstr "CPU"
+
+#: internal/web/templates/partials/_account_created.html:128
+msgid "Start container"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:130
+#: internal/web/templates/system/waf_domain.html:13
+msgid "View logs"
+msgstr "Vezi jurnalele"
+
+#: internal/web/templates/partials/_account_created.html:147
+msgid "Your FTP account is ready. Connect an FTP client"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:160
+msgid "Use the FTP account's password."
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:165
+msgid "Connection"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:172
+msgid "Set up automatically"
+msgstr ""
 
 #: internal/web/templates/partials/_ai_assistant.html:2
 #: internal/web/templates/partials/_ai_assistant.html:43
@@ -19757,6 +19884,62 @@ msgstr "Ultimele 6 luni"
 #: internal/web/templates/partials/_date_range.html:62
 msgid "Year to date"
 msgstr "De la începutul anului"
+
+#: internal/web/templates/partials/_db_created.html:41
+msgid "Database created"
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:41
+msgid "Your new database is ready. Here is what you can do next."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:44
+msgid "Assign a user"
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:44
+msgid "Give an existing user access to this database."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:45
+msgid "Make a new user with its own password first."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:47
+msgid "Import a dump"
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:47
+msgid "Load an existing backup into it."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:59
+msgid "Database user created"
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:59
+msgid "Your new user is ready. Assign it to a database to give it access."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:62
+msgid "Assign to a database"
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:62
+msgid "Give this user access to an existing database."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:63
+msgid "Make a new database first, then assign this user."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:64
+msgid "Set a different password for this user."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:67
+msgid "View Users"
+msgstr ""
 
 #: internal/web/templates/partials/_db_tuning.html:11
 msgid "Optimization suggestions are not available right now:"
@@ -20055,10 +20238,6 @@ msgstr ""
 
 #: internal/web/templates/partials/install_success.html:73
 msgid "Hide installation log"
-msgstr ""
-
-#: internal/web/templates/partials/install_success.html:108
-msgid "Copied to clipboard"
 msgstr ""
 
 #: internal/web/templates/partials/install_success.html:136
@@ -21176,12 +21355,6 @@ msgstr "PID"
 msgid "PPID"
 msgstr "PPID"
 
-#: internal/web/templates/system/process_manager.html:60
-#: internal/web/templates/system/process_manager.html:142
-#: internal/web/templates/user/stats.html:34
-msgid "CPU"
-msgstr "CPU"
-
 #: internal/web/templates/system/process_manager.html:61
 #: internal/web/templates/system/process_manager.html:155
 msgid "STIME"
@@ -21568,10 +21741,6 @@ msgid ""
 msgstr ""
 "Protejați %(domain)s împotriva atacurilor precum injecția SQL, cross-site "
 "scripting și boții malițioși."
-
-#: internal/web/templates/system/waf_domain.html:13
-msgid "View logs"
-msgstr "Vezi jurnalele"
 
 #: internal/web/templates/system/waf_domain.html:23
 msgid "Protection"
@@ -22452,7 +22621,7 @@ msgstr ""
 msgid "Enter your email address"
 msgstr "Introdu adresa ta de email"
 
-#: internal/web/templates/user/reset_password/request_email.html:21
+#: internal/web/templates/user/reset_password/request_email.html:35
 msgid "Send Reset Link"
 msgstr "Trimite linkul de resetare"
 

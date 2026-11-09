@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-02 13:14+0200\n"
+"POT-Creation-Date: 2026-11-09 13:38+0200\n"
 "PO-Revision-Date: 2026-01-15 00:00+0500\n"
 "Last-Translator: Hasnain ALi <me@hasnainali9.com>\n"
 "Language-Team: Chinese  <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: internal/modules/account/api_login.go:58
+#: internal/modules/account/api_login.go:65
 #: internal/modules/account/login.go:203
 msgid "Username and password are required."
 msgstr "用户名和密码为必填项。"
@@ -26,12 +26,12 @@ msgstr "用户名和密码为必填项。"
 #: internal/modules/account/favorites.go:253 internal/modules/crons/bulk.go:42
 #: internal/modules/dns/bulk.go:31 internal/modules/docker/bulk.go:40
 #: internal/modules/domains/bulk.go:29 internal/modules/emails/bulk.go:28
-#: internal/modules/emails/bulk.go:35 internal/modules/ftp/ftp.go:530
+#: internal/modules/emails/bulk.go:35 internal/modules/ftp/ftp.go:534
 #: internal/modules/malwarescan/bulk.go:16 internal/modules/mongodb/bulk.go:28
 #: internal/modules/mongodb/bulk.go:37 internal/modules/mysql/bulk.go:46
 #: internal/modules/mysql/bulk.go:55 internal/modules/postgresql/bulk.go:28
 #: internal/modules/postgresql/bulk.go:37
-#: internal/web/templates/docker/containers.html:502
+#: internal/web/templates/docker/containers.html:503
 #: internal/web/templates/domains/domains.html:410
 #: internal/web/templates/domains/dynamic_dns.html:130
 #: internal/web/templates/domains/dynamic_dns.html:135
@@ -44,8 +44,8 @@ msgstr "用户名和密码为必填项。"
 #: internal/web/templates/files/filemanager_partials.html:372
 #: internal/web/templates/files/filemanager_partials.html:435
 #: internal/web/templates/files/filemanager_partials.html:604
-#: internal/web/templates/files/ftp.html:186
 #: internal/web/templates/files/ftp.html:188
+#: internal/web/templates/files/ftp.html:190
 #: internal/web/templates/files/trash.html:58
 #: internal/web/templates/manager/_cms_app_shared.html:1514
 #: internal/web/templates/manager/_cms_app_shared.html:1623
@@ -84,70 +84,61 @@ msgid "Remove the selected pages from favorites?"
 msgstr "从收藏中移除所选页面？"
 
 #: internal/modules/account/forgotpassword.go:131
-#: internal/modules/account/forgotpassword.go:143
-#: internal/modules/account/forgotpassword.go:162
+#: internal/modules/account/forgotpassword.go:189
 msgid "Forgot Password"
 msgstr "忘记密码"
 
-#: internal/modules/account/forgotpassword.go:134
-msgid "Email %(email)s not found"
-msgstr "未找到邮箱 %(email)s"
-
-#: internal/modules/account/forgotpassword.go:146
-msgid "Email sending is not configured. Please contact your administrator."
-msgstr "邮件发送功能尚未配置，请联系您的管理员。"
-
-#: internal/modules/account/forgotpassword.go:152
+#: internal/modules/account/forgotpassword.go:177
 msgid "password reset requested"
 msgstr "已请求重置密码"
 
-#: internal/modules/account/forgotpassword.go:155
+#: internal/modules/account/forgotpassword.go:182
 #: internal/web/templates/user/reset_password/link_is_sent.html:6
 msgid "Password Reset Link Sent"
 msgstr "密码重置链接已发送"
 
-#: internal/modules/account/forgotpassword.go:193
+#: internal/modules/account/forgotpassword.go:220
 msgid "Password Reset Requested"
 msgstr "已请求重置密码"
 
-#: internal/modules/account/forgotpassword.go:203
+#: internal/modules/account/forgotpassword.go:230
 msgid "OpenPanel [%(domain)s] - Password Reset Requested"
 msgstr "OpenPanel [%(domain)s] - 已请求重置密码"
 
-#: internal/modules/account/forgotpassword.go:321
+#: internal/modules/account/forgotpassword.go:348
 msgid "Reset link is invalid"
 msgstr "重置链接无效"
 
-#: internal/modules/account/forgotpassword.go:323
+#: internal/modules/account/forgotpassword.go:350
 msgid "Reset link has expired"
 msgstr "重置链接已过期"
 
-#: internal/modules/account/forgotpassword.go:335
+#: internal/modules/account/forgotpassword.go:362
 msgid "Link has already been used or is invalid"
 msgstr "链接已被使用或无效"
 
-#: internal/modules/account/forgotpassword.go:350
+#: internal/modules/account/forgotpassword.go:377
 msgid "Passwords do not match"
 msgstr "两次输入的密码不一致"
 
-#: internal/modules/account/forgotpassword.go:375
+#: internal/modules/account/forgotpassword.go:402
 msgid "password changed using email confirmation"
 msgstr "已通过邮箱确认修改密码"
 
-#: internal/modules/account/forgotpassword.go:379
+#: internal/modules/account/forgotpassword.go:407
 msgid "Your password has been reset. Please log in."
 msgstr "您的密码已重置，请重新登录。"
 
-#: internal/modules/account/forgotpassword.go:386
+#: internal/modules/account/forgotpassword.go:414
 #: internal/web/templates/user/email_template.html:54
 msgid "Reset Password"
 msgstr "重置密码"
 
-#: internal/modules/account/handlers_passkeys.go:205
+#: internal/modules/account/handlers_passkeys.go:211
 msgid "Passkey removed."
 msgstr "通行密钥已移除。"
 
-#: internal/modules/account/handlers_passkeys.go:207
+#: internal/modules/account/handlers_passkeys.go:213
 msgid "Passkey not found."
 msgstr "未找到通行密钥。"
 
@@ -525,12 +516,12 @@ msgstr "终止"
 msgid "Terminate the selected sessions? Anyone using them will be logged out."
 msgstr "终止所选会话？正在使用它们的用户将被登出。"
 
-#: internal/modules/account/settings.go:98
-#: internal/modules/emails/emails.go:367 internal/modules/mongodb/users.go:87
-#: internal/modules/mongodb/users.go:181 internal/modules/mongodb/wizard.go:68
-#: internal/modules/mysql/users.go:103 internal/modules/mysql/users.go:211
+#: internal/modules/account/settings.go:114
+#: internal/modules/emails/emails.go:389 internal/modules/mongodb/users.go:87
+#: internal/modules/mongodb/users.go:182 internal/modules/mongodb/wizard.go:68
+#: internal/modules/mysql/users.go:103 internal/modules/mysql/users.go:212
 #: internal/modules/postgresql/users.go:97
-#: internal/modules/postgresql/users.go:203
+#: internal/modules/postgresql/users.go:204
 #: internal/modules/postgresql/wizard.go:65
 #: internal/web/templates/emails/new.html:68
 #: internal/web/templates/emails/single_account.html:182
@@ -544,50 +535,50 @@ msgstr "终止所选会话？正在使用它们的用户将被登出。"
 #: internal/web/templates/manager/ojs_install.html:60
 #: internal/web/templates/manager/prestashop_install.html:50
 #: internal/web/templates/manager/wp/install.html:124
-#: internal/web/templates/mongodb/mongodb_user.html:35
+#: internal/web/templates/mongodb/mongodb_user.html:38
 #: internal/web/templates/mongodb/password.html:33
 #: internal/web/templates/mongodb/wizard.html:60
-#: internal/web/templates/mysql/mysql_user.html:36
+#: internal/web/templates/mysql/mysql_user.html:39
 #: internal/web/templates/mysql/password.html:33
 #: internal/web/templates/mysql/root_password.html:26
 #: internal/web/templates/mysql/wizard.html:238
 #: internal/web/templates/psql/password.html:33
-#: internal/web/templates/psql/psql_user.html:35
+#: internal/web/templates/psql/psql_user.html:38
 #: internal/web/templates/psql/wizard.html:60
 #: internal/web/templates/user/account.html:80
 #: internal/web/templates/user/reset_password/set_new_password.html:84
 msgid "Password does not meet the required strength."
 msgstr "密码强度不符合要求。"
 
-#: internal/modules/account/settings.go:100
+#: internal/modules/account/settings.go:116
 msgid "Password is too common, please choose a different one."
 msgstr "密码过于常见，请选择其他密码。"
 
-#: internal/modules/account/settings.go:102
+#: internal/modules/account/settings.go:118
 msgid "Failed to update password."
 msgstr "更新密码失败。"
 
-#: internal/modules/account/settings.go:145
+#: internal/modules/account/settings.go:161
 msgid "Password has been changed successfully."
 msgstr "密码已成功修改。"
 
-#: internal/modules/account/settings.go:159
+#: internal/modules/account/settings.go:178
 msgid ""
 "Email address has been changed successfully from %(old_email)s to "
 "%(new_email)s."
 msgstr "电子邮件地址已成功从 %(old_email)s 更改为 %(new_email)s。"
 
-#: internal/modules/account/settings.go:170
+#: internal/modules/account/settings.go:189
 msgid "Username must be 3-20 characters, letters and numbers only."
 msgstr "用户名必须为 3-20 个字符，仅限字母和数字。"
 
-#: internal/modules/account/settings.go:178
+#: internal/modules/account/settings.go:197
 msgid ""
 "Username has been changed successfully from %(current_username)s to "
 "%(new_username)s."
 msgstr "用户名已成功从 %(current_username)s 更改为 %(new_username)s。"
 
-#: internal/modules/account/settings.go:194
+#: internal/modules/account/settings.go:213
 msgid "Failed to change username."
 msgstr "无法更改用户名。"
 
@@ -611,13 +602,13 @@ msgstr "设置已开始：请设置应用或保存 OTP 代码，然后确认以�
 msgid "Two-Factor Authentication is now disabled."
 msgstr "双因素认证现已禁用。"
 
-#: internal/modules/account/webauthn.go:79
+#: internal/modules/account/webauthn.go:83
 msgid ""
 "Passkeys require the panel to be accessed over HTTPS. Ask your administrator"
 " to configure a domain and SSL certificate for this panel."
 msgstr "通行密钥（passkeys）要求通过 HTTPS 访问面板。请让管理员为此面板配置域名和 SSL 证书。"
 
-#: internal/modules/account/webauthn.go:81
+#: internal/modules/account/webauthn.go:85
 msgid ""
 "Passkeys require the panel to be accessed via a domain name, not an IP "
 "address. Ask your administrator to configure a domain for this panel."
@@ -851,11 +842,11 @@ msgstr "安装 Ruby 应用"
 msgid "Install App"
 msgstr "安装应用"
 
-#: internal/modules/backups/backups.go:316
+#: internal/modules/backups/backups.go:335
 msgid "Backup target switched to '%(target)s' successfully."
 msgstr "备份目标已成功切换为 '%(target)s'。"
 
-#: internal/modules/backups/reindex.go:133
+#: internal/modules/backups/reindex.go:139
 msgid ""
 "Archive is not in the backup/ layout this page can restore (for example a "
 "full account backup made by the administrator)."
@@ -950,33 +941,33 @@ msgstr "将备份远程存储到 Dropbox 云存储。"
 msgid "Restore"
 msgstr "恢复"
 
-#: internal/modules/backupwizard/backupwizard.go:234
+#: internal/modules/backupwizard/backupwizard.go:239
 msgid "A backup is already in progress. Please wait for it to finish."
 msgstr "已有备份正在进行。请等待其完成。"
 
-#: internal/modules/backupwizard/backupwizard.go:239
-#: internal/modules/backupwizard/backupwizard.go:246
+#: internal/modules/backupwizard/backupwizard.go:244
+#: internal/modules/backupwizard/backupwizard.go:251
 msgid "Failed to start backup."
 msgstr "无法启动备份。"
 
-#: internal/modules/backupwizard/backupwizard.go:252
+#: internal/modules/backupwizard/backupwizard.go:257
 msgid "Backup started. It will appear in the list below once complete."
 msgstr "备份已开始。完成后将显示在下方列表中。"
 
-#: internal/modules/backupwizard/backupwizard.go:265
+#: internal/modules/backupwizard/backupwizard.go:270
 msgid "Invalid filename."
 msgstr "无效的文件名。"
 
-#: internal/modules/backupwizard/backupwizard.go:275
+#: internal/modules/backupwizard/backupwizard.go:280
 msgid "Invalid file path."
 msgstr "无效的文件路径。"
 
-#: internal/modules/backupwizard/backupwizard.go:281
-#: internal/modules/backupwizard/backupwizard.go:297
+#: internal/modules/backupwizard/backupwizard.go:286
+#: internal/modules/backupwizard/backupwizard.go:302
 msgid "Backup file not found."
 msgstr "未找到备份文件。"
 
-#: internal/modules/backupwizard/backupwizard.go:288
+#: internal/modules/backupwizard/backupwizard.go:293
 msgid ""
 "This backup is still being created. Please wait until it completes before "
 "downloading."
@@ -988,6 +979,26 @@ msgstr "此备份仍在创建中。请等待完成后再下载。"
 #: internal/web/templates/files/backup_wizard.html:10
 msgid "Backup Wizard"
 msgstr "备份向导"
+
+#: internal/modules/backupwizard/render.go:41
+#: internal/modules/dashboard/sections.go:115
+#: internal/modules/dashboard/sections.go:128
+#: internal/modules/dashboard/sections.go:137
+#: internal/modules/dashboard/sections.go:240
+#: internal/modules/dashboard/sections.go:252
+#: internal/modules/dashboard/sections.go:261
+#: internal/modules/mysql/render.go:59 internal/web/sidebar.go:179
+#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
+#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
+#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
+#: internal/web/templates/dashboard/usage.html:78
+#: internal/web/templates/files/backup_restore.html:457
+#: internal/web/templates/files/backup_restore.html:560
+#: internal/web/templates/files/backup_restore.html:737
+#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
+#: static/js/tour-steps.js:261
+msgid "Databases"
+msgstr "数据库"
 
 #: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:73
@@ -1009,26 +1020,6 @@ msgstr "备份向导"
 #: internal/web/templates/partials/_header.html:96 static/js/tour-steps.js:203
 msgid "Domains"
 msgstr "域名"
-
-#: internal/modules/backupwizard/render.go:41
-#: internal/modules/dashboard/sections.go:115
-#: internal/modules/dashboard/sections.go:128
-#: internal/modules/dashboard/sections.go:137
-#: internal/modules/dashboard/sections.go:240
-#: internal/modules/dashboard/sections.go:252
-#: internal/modules/dashboard/sections.go:261
-#: internal/modules/mysql/render.go:59 internal/web/sidebar.go:179
-#: internal/web/sidebar.go:193 internal/web/sidebar.go:204
-#: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
-#: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
-#: internal/web/templates/dashboard/usage.html:78
-#: internal/web/templates/files/backup_restore.html:457
-#: internal/web/templates/files/backup_restore.html:560
-#: internal/web/templates/files/backup_restore.html:737
-#: internal/web/templates/mysql/databases.html:9 static/js/tour-steps.js:236
-#: static/js/tour-steps.js:261
-msgid "Databases"
-msgstr "数据库"
 
 #: internal/modules/backupwizard/render.go:41
 msgid "The home directory"
@@ -1288,14 +1279,9 @@ msgid "Invalid cron file path"
 msgstr "无效的 cron 文件路径"
 
 #: internal/modules/crons/handlers.go:250
-#: internal/modules/crons/handlers.go:425
+#: internal/modules/crons/handlers.go:429
 msgid "Missing one or more required fields (schedule, command, container)."
 msgstr "缺少一个或多个必填字段（计划、命令、容器）。"
-
-#: internal/modules/crons/handlers.go:254
-#: internal/modules/crons/handlers.go:362
-msgid "Invalid characters in input."
-msgstr "输入中包含无效字符。"
 
 #: internal/modules/crons/handlers.go:258
 msgid "Invalid schedule: %(error)s"
@@ -1304,7 +1290,7 @@ msgstr "无效的计划：%(error)s"
 #: internal/modules/crons/handlers.go:291
 #: internal/modules/crons/handlers.go:318
 #: internal/modules/crons/handlers.go:375
-#: internal/modules/crons/handlers.go:398
+#: internal/modules/crons/handlers.go:402
 #: internal/modules/crons/schedule.go:94
 #: internal/modules/crons/schedule.go:110
 msgid "Error saving cron job. Please try again."
@@ -1339,16 +1325,16 @@ msgstr "无效的 cron 文件路径。"
 msgid "Cron job not found."
 msgstr "未找到计划任务。"
 
-#: internal/modules/crons/handlers.go:406
+#: internal/modules/crons/handlers.go:410
 msgid "Cron job was successfully edited."
 msgstr "计划任务已成功编辑。"
 
-#: internal/modules/crons/handlers.go:432
-#: internal/modules/crons/handlers.go:441
+#: internal/modules/crons/handlers.go:436
+#: internal/modules/crons/handlers.go:445
 msgid "Error deleting cron job."
 msgstr "删除计划任务时出错。"
 
-#: internal/modules/crons/handlers.go:454
+#: internal/modules/crons/handlers.go:458
 msgid "Cron job was successfully deleted."
 msgstr "计划任务已成功删除。"
 
@@ -1395,8 +1381,8 @@ msgstr "您账户的双因素认证（2FA）当前为 <b>{status}</b>。"
 
 #: internal/modules/dashboard/sections.go:75
 #: internal/modules/dashboard/sections.go:229
-#: internal/modules/dns/render.go:31 internal/web/sidebar.go:223
-#: internal/web/templates/domains/dns.html:792 static/js/tour-steps.js:1144
+#: internal/modules/dns/render.go:34 internal/web/sidebar.go:223
+#: internal/web/templates/domains/dns.html:853 static/js/tour-steps.js:1144
 msgid "DNS Zone Editor"
 msgstr "DNS区域编辑器"
 
@@ -1464,7 +1450,7 @@ msgstr "邮箱账户"
 
 #: internal/modules/dashboard/sections.go:89
 #: internal/modules/dashboard/sections.go:284
-#: internal/modules/emails/render.go:213 internal/web/sidebar.go:245
+#: internal/modules/emails/render.go:221 internal/web/sidebar.go:245
 #: internal/web/templates/emails/aliases.html:10 static/js/tour-steps.js:987
 msgid "Aliases"
 msgstr "别名"
@@ -1475,7 +1461,7 @@ msgstr "全收地址（Catch-all）"
 
 #: internal/modules/dashboard/sections.go:91
 #: internal/modules/dashboard/sections.go:285
-#: internal/modules/emails/render.go:365 internal/web/sidebar.go:247
+#: internal/modules/emails/render.go:373 internal/web/sidebar.go:247
 #: internal/web/templates/domains/domains.html:103
 #: internal/web/templates/system/waf.html:159 static/js/tour-steps.js:995
 msgid "Filters"
@@ -1489,9 +1475,9 @@ msgstr "送达率"
 #: internal/modules/dashboard/sections.go:118
 #: internal/modules/dashboard/sections.go:131
 #: internal/modules/dashboard/sections.go:140
-#: internal/modules/emails/render.go:382
-#: internal/modules/mongodb/render.go:199 internal/modules/mysql/render.go:273
-#: internal/modules/postgresql/render.go:192 internal/web/sidebar.go:181
+#: internal/modules/emails/render.go:390
+#: internal/modules/mongodb/render.go:207 internal/modules/mysql/render.go:275
+#: internal/modules/postgresql/render.go:197 internal/web/sidebar.go:181
 #: internal/web/sidebar.go:195 internal/web/sidebar.go:206
 #: internal/web/sidebar.go:249
 #: internal/web/templates/mongodb/databases.html:82
@@ -1507,7 +1493,7 @@ msgstr "迁移"
 #: internal/modules/dashboard/sections.go:95
 #: internal/modules/mongodb/bulk.go:24 internal/modules/mysql/bulk.go:40
 #: internal/modules/postgresql/bulk.go:24
-#: internal/web/templates/emails/accounts.html:65
+#: internal/web/templates/emails/accounts.html:67
 #: internal/web/templates/mongodb/databases.html:88
 #: internal/web/templates/mongodb/databases.html:94
 #: internal/web/templates/mongodb/databases.html:152
@@ -1522,7 +1508,7 @@ msgstr "导出"
 
 #: internal/modules/dashboard/sections.go:96
 #: internal/modules/dashboard/sections.go:291 internal/web/sidebar.go:251
-#: internal/web/templates/emails/accounts.html:114
+#: internal/web/templates/emails/accounts.html:116
 msgid "Webmail"
 msgstr "网页邮件"
 
@@ -1531,7 +1517,7 @@ msgstr "网页邮件"
 #: internal/web/templates/domains/ssl.html:226
 #: internal/web/templates/files/clamav/scan_logs.html:41
 #: internal/web/templates/files/filemanager.html:146
-#: internal/web/templates/files/filemanager.html:405
+#: internal/web/templates/files/filemanager.html:372
 #: internal/web/templates/manager/_cms_app_shared.html:339
 #: internal/web/templates/manager/_cms_app_shared.html:512
 #: internal/web/templates/manager/python_node_apps.html:320
@@ -1577,7 +1563,7 @@ msgstr "回收站"
 
 #: internal/modules/dashboard/sections.go:103
 #: internal/modules/dashboard/sections.go:216
-#: internal/modules/ftp/render.go:28 internal/web/sidebar.go:263
+#: internal/modules/ftp/render.go:29 internal/web/sidebar.go:263
 #: internal/web/templates/dashboard/usage.html:124
 #: internal/web/templates/files/ftp.html:13
 #: internal/web/templates/manager/_cms_app_shared.html:411
@@ -1592,7 +1578,7 @@ msgstr "FTP账户"
 
 #: internal/modules/dashboard/sections.go:104
 #: internal/modules/dashboard/sections.go:217
-#: internal/modules/ftp/render.go:48
+#: internal/modules/ftp/render.go:60
 #: internal/web/templates/files/ftp_connections.html:9
 msgid "FTP Connections"
 msgstr "FTP 连接"
@@ -1610,14 +1596,14 @@ msgstr "修复权限"
 #: internal/modules/dashboard/sections.go:123
 #: internal/modules/dashboard/sections.go:134 internal/web/sidebar.go:185
 #: internal/web/sidebar.go:198 internal/web/sidebar.go:277
-#: internal/web/templates/files/ftp.html:61
-#: internal/web/templates/files/ftp.html:103
+#: internal/web/templates/files/ftp.html:63
+#: internal/web/templates/files/ftp.html:105
 msgid "Configuration"
 msgstr "配置"
 
 #: internal/modules/dashboard/sections.go:114
 #: internal/modules/dashboard/sections.go:239
-#: internal/modules/docker/render.go:404 internal/web/sidebar.go:284
+#: internal/modules/docker/render.go:434 internal/web/sidebar.go:284
 #: internal/web/templates/dashboard/onboarding.html:504
 #: internal/web/templates/partials/_header.html:101
 msgid "MySQL"
@@ -1642,8 +1628,8 @@ msgstr "用户"
 #: internal/modules/dashboard/sections.go:242
 #: internal/modules/dashboard/sections.go:254
 #: internal/modules/dashboard/sections.go:263
-#: internal/modules/mongodb/render.go:148
-#: internal/modules/postgresql/render.go:150
+#: internal/modules/mongodb/render.go:156
+#: internal/modules/postgresql/render.go:155
 #: internal/web/sidebar_classic.go:94 internal/web/sidebar_classic.go:116
 #: internal/web/sidebar_classic.go:139
 #: internal/web/templates/mongodb/databases.html:38
@@ -1685,8 +1671,8 @@ msgstr "远程访问"
 #: internal/modules/dashboard/sections.go:122
 #: internal/modules/dashboard/sections.go:133
 #: internal/modules/dashboard/sections.go:141
-#: internal/modules/mongodb/render.go:218 internal/modules/mysql/render.go:291
-#: internal/modules/postgresql/render.go:211 internal/web/sidebar.go:184
+#: internal/modules/mongodb/render.go:226 internal/modules/mysql/render.go:293
+#: internal/modules/postgresql/render.go:216 internal/web/sidebar.go:184
 #: internal/web/sidebar.go:197 internal/web/sidebar.go:207
 #: static/js/tour-steps.js:879 static/js/tour-steps.js:928
 #: static/js/tour-steps.js:936
@@ -1732,7 +1718,7 @@ msgid "Default Version"
 msgstr "默认版本"
 
 #: internal/modules/dashboard/sections.go:146 internal/web/sidebar.go:298
-#: internal/web/templates/emails/accounts.html:78
+#: internal/web/templates/emails/accounts.html:80
 #: internal/web/templates/emails/aliases.html:42
 #: internal/web/templates/emails/deliverability.html:35
 #: internal/web/templates/manager/wp/single.html:167
@@ -1775,10 +1761,10 @@ msgstr "Web 服务器类型"
 #: internal/modules/dashboard/sections.go:164
 #: internal/modules/dashboard/sections.go:300
 #: internal/modules/dashboard/sections.go:301
-#: internal/modules/docker/render.go:182 internal/web/sidebar.go:329
+#: internal/modules/docker/render.go:207 internal/web/sidebar.go:329
 #: internal/web/sidebar.go:332
 #: internal/web/templates/docker/containers.html:13
-#: internal/web/templates/docker/containers.html:272
+#: internal/web/templates/docker/containers.html:273
 #: internal/web/templates/partials/_header.html:121
 #: static/js/tour-steps.js:473
 msgid "Containers"
@@ -1786,16 +1772,17 @@ msgstr "容器"
 
 #: internal/modules/dashboard/sections.go:165
 #: internal/modules/dashboard/sections.go:302 internal/web/sidebar.go:333
-#: internal/web/templates/docker/containers.html:495
+#: internal/web/templates/docker/containers.html:496
+#: internal/web/templates/partials/_account_created.html:131
 #: static/js/tour-steps.js:1028
 msgid "Terminal"
 msgstr "终端"
 
 #: internal/modules/dashboard/sections.go:166
 #: internal/modules/dashboard/sections.go:303
-#: internal/modules/docker/render.go:593 internal/web/sidebar.go:308
+#: internal/modules/docker/render.go:623 internal/web/sidebar.go:308
 #: internal/web/sidebar.go:334 internal/web/templates/cache/service.html:269
-#: internal/web/templates/docker/containers.html:498
+#: internal/web/templates/docker/containers.html:499
 #: internal/web/templates/docker/logs.html:11
 #: internal/web/templates/docker/logs.html:87
 #: internal/web/templates/files/backup_restore.html:502
@@ -1935,12 +1922,13 @@ msgid "Services"
 msgstr "服务"
 
 #: internal/modules/dashboard/sections.go:193 internal/web/sidebar.go:368
+#: internal/web/templates/partials/_account_created.html:118
 msgid "Processes"
 msgstr "进程"
 
 #: internal/modules/dashboard/sections.go:195 internal/web/sidebar.go:372
 #: internal/web/templates/dashboard/onboarding.html:601
-#: internal/web/templates/emails/migrate.html:47
+#: internal/web/templates/emails/migrate.html:82
 #: internal/web/templates/manager/_cms_app_shared.html:201
 #: internal/web/templates/manager/python_node_apps.html:100
 #: internal/web/templates/manager/wp/single.html:197
@@ -2050,7 +2038,7 @@ msgstr "打开 phpMyAdmin"
 msgid "Process List"
 msgstr "进程列表"
 
-#: internal/modules/dashboard/sections.go:248 internal/web/dbengine.go:15
+#: internal/modules/dashboard/sections.go:248 internal/web/dbengine.go:48
 #: static/js/tour-steps.js:895
 msgid "MySQL Configuration"
 msgstr "MySQL配置"
@@ -2059,7 +2047,7 @@ msgstr "MySQL配置"
 msgid "Change root password"
 msgstr "更改 root 密码"
 
-#: internal/modules/dashboard/sections.go:258 internal/web/dbengine.go:21
+#: internal/modules/dashboard/sections.go:258 internal/web/dbengine.go:54
 #: static/js/tour-steps.js:952
 msgid "PostgreSQL Configuration"
 msgstr "PostgreSQL 配置"
@@ -2085,7 +2073,7 @@ msgid "Cache"
 msgstr "缓存"
 
 #: internal/modules/dashboard/sections.go:282
-#: internal/modules/emails/render.go:90
+#: internal/modules/emails/render.go:98
 #: internal/web/templates/dashboard/onboarding.html:204
 #: internal/web/templates/emails/accounts.html:8
 #: internal/web/templates/files/backup_restore.html:9
@@ -2099,7 +2087,7 @@ msgid "Emails"
 msgstr "邮件"
 
 #: internal/modules/dashboard/sections.go:286
-#: internal/modules/emails/render.go:322
+#: internal/modules/emails/render.go:330
 #: internal/web/templates/emails/deliverability.html:10
 #: internal/web/templates/emails/deliverability_domain.html:9
 #: static/js/tour-steps.js:1003
@@ -2115,8 +2103,8 @@ msgid "Address Importer"
 msgstr "地址导入"
 
 #: internal/modules/dashboard/sections.go:289
-#: internal/modules/emails/render.go:419
-#: internal/web/templates/emails/migrate.html:15
+#: internal/modules/emails/render.go:427
+#: internal/web/templates/emails/migrate.html:16
 msgid "Migrate Emails"
 msgstr "迁移邮件"
 
@@ -2303,8 +2291,9 @@ msgstr "Docker"
 #: internal/web/templates/domains/domains.html:526
 #: internal/web/templates/domains/domains.html:527
 #: internal/web/templates/domains/logs.html:222
-#: internal/web/templates/files/filemanager.html:379
-#: internal/web/templates/files/filemanager.html:380
+#: internal/web/templates/emails/migrate.html:163
+#: internal/web/templates/files/filemanager.html:346
+#: internal/web/templates/files/filemanager.html:347
 #: internal/web/templates/system/error_logs.html:99
 #: internal/web/templates/system/waf_logs.html:140
 #: internal/web/templates/user/activity.html:209
@@ -2364,48 +2353,56 @@ msgstr "保存区域文件时出错。"
 msgid "Error:Zone file not found for domain: %(domain)s"
 msgstr "错误：未找到域名的区域文件：%(domain)s"
 
-#: internal/modules/dns/crud.go:194
+#: internal/modules/dns/crud.go:204
 msgid "Please provide all required fields."
 msgstr "请填写所有必填字段。"
 
-#: internal/modules/dns/crud.go:200
+#: internal/modules/dns/crud.go:210
 msgid "Invalid characters in submitted data."
 msgstr "提交的数据中包含无效字符。"
 
-#: internal/modules/dns/crud.go:213 internal/modules/dns/list.go:95
+#: internal/modules/dns/crud.go:223 internal/modules/dns/list.go:95
 msgid "Zone file not found."
 msgstr "未找到区域文件。"
 
-#: internal/modules/dns/crud.go:235
+#: internal/modules/dns/crud.go:230
+msgid "%(type)s records are not allowed on this server."
+msgstr ""
+
+#: internal/modules/dns/crud.go:247
 msgid "CNAME record with this name already exists."
 msgstr "已存在同名的 CNAME 记录。"
 
-#: internal/modules/dns/crud.go:241 internal/modules/dns/crud.go:252
+#: internal/modules/dns/crud.go:253 internal/modules/dns/crud.go:266
 msgid "Error adding DNS record: %(error)s"
 msgstr "添加 DNS 记录时出错：%(error)s"
 
-#: internal/modules/dns/crud.go:259
+#: internal/modules/dns/crud.go:257
+msgid "This name already has a DMARC record, edit that one instead."
+msgstr ""
+
+#: internal/modules/dns/crud.go:273
 msgid "DNS record added successfully."
 msgstr "DNS 记录已成功添加。"
 
-#: internal/modules/dns/crud.go:338
+#: internal/modules/dns/crud.go:356
 msgid "Please provide a domain name."
 msgstr "请输入域名。"
 
-#: internal/modules/dns/crud.go:350
+#: internal/modules/dns/crud.go:368
 msgid "Failed to restart DNS zone: %(error)s"
 msgstr "无法重启 DNS 区域：%(error)s"
 
-#: internal/modules/dns/crud.go:356
+#: internal/modules/dns/crud.go:374
 msgid "DNS zone restarted successfully."
 msgstr "DNS 区域已成功重启。"
 
-#: internal/modules/dns/render.go:49
+#: internal/modules/dns/render.go:52
 #: internal/web/templates/domains/domains.html:359
 msgid "Edit DNS Zone"
 msgstr "编辑DNS区域"
 
-#: internal/modules/dns/render.go:65
+#: internal/modules/dns/render.go:71
 #: internal/web/templates/domains/dns.html:121
 #: internal/web/templates/domains/dns.html:133
 msgid "Edit DNS File"
@@ -2417,32 +2414,32 @@ msgstr "编辑DNS文件"
 msgid "Command failed with error. Please try again."
 msgstr "命令执行失败。请重试。"
 
-#: internal/modules/docker/actions.go:296
+#: internal/modules/docker/actions.go:300
 msgid "Image pulled and container %(container_name)s activated successfully."
 msgstr "镜像已拉取，容器 %(container_name)s 已成功激活。"
 
-#: internal/modules/docker/actions.go:297
+#: internal/modules/docker/actions.go:301
 msgid ""
 "Image pulled and container %(container_name)s deactivated successfully."
 msgstr "镜像已拉取，容器 %(container_name)s 已成功停用。"
 
-#: internal/modules/docker/actions.go:298
+#: internal/modules/docker/actions.go:302
 msgid "Image pulled and container %(container_name)s restarted successfully."
 msgstr "镜像已拉取，容器 %(container_name)s 已成功重启。"
 
-#: internal/modules/docker/actions.go:302
+#: internal/modules/docker/actions.go:306
 msgid "Container %(container_name)s restarted successfully."
 msgstr "容器 %(container_name)s 已成功重启。"
 
-#: internal/modules/docker/actions.go:306
+#: internal/modules/docker/actions.go:310
 msgid "Container %(container_name)s deactivated successfully."
 msgstr "容器 %(container_name)s 已成功停用。"
 
-#: internal/modules/docker/actions.go:308
+#: internal/modules/docker/actions.go:312
 msgid "Container %(container_name)s activated successfully."
 msgstr "容器 %(container_name)s 已成功激活。"
 
-#: internal/modules/docker/actions.go:316
+#: internal/modules/docker/actions.go:320
 msgid "Error occurred!"
 msgstr "发生错误！"
 
@@ -2453,15 +2450,15 @@ msgstr "0 = 不限"
 
 #: internal/modules/docker/bulk.go:24 internal/modules/docker/bulk.go:28
 #: internal/modules/emails/bulk.go:15
-#: internal/web/templates/docker/containers.html:387
-#: internal/web/templates/docker/containers.html:432
+#: internal/web/templates/docker/containers.html:388
+#: internal/web/templates/docker/containers.html:433
 #: internal/web/templates/emails/new.html:168
 #: internal/web/templates/emails/single_account.html:76
 msgid "Maximum allowed: "
 msgstr "允许的最大值："
 
 #: internal/modules/docker/bulk.go:31
-#: internal/web/templates/docker/containers.html:480
+#: internal/web/templates/docker/containers.html:481
 #: internal/web/templates/manager/python_node_apps.html:214
 #: internal/web/templates/partials/_footer.html:55
 msgid "Start"
@@ -2472,7 +2469,7 @@ msgid "Start the selected containers?"
 msgstr "启动所选容器？"
 
 #: internal/modules/docker/bulk.go:32
-#: internal/web/templates/docker/containers.html:486
+#: internal/web/templates/docker/containers.html:487
 #: internal/web/templates/files/clamav/scanner.html:50
 #: internal/web/templates/manager/python_node_apps.html:247
 #: internal/web/templates/partials/site_manager_shared.html:782
@@ -2502,8 +2499,8 @@ msgstr "为所选容器设置 CPU 限制："
 
 #: internal/modules/docker/bulk.go:35
 #: internal/web/templates/docker/containers.html:18
-#: internal/web/templates/docker/containers.html:384
-#: internal/web/templates/docker/containers.html:387
+#: internal/web/templates/docker/containers.html:385
+#: internal/web/templates/docker/containers.html:388
 msgid "cores"
 msgstr "核"
 
@@ -2525,8 +2522,8 @@ msgstr "为所选容器设置最大进程数："
 
 #: internal/modules/docker/bulk.go:39
 #: internal/web/templates/cache/service.html:231
-#: internal/web/templates/docker/containers.html:66
-#: internal/web/templates/docker/containers.html:107
+#: internal/web/templates/docker/containers.html:67
+#: internal/web/templates/docker/containers.html:108
 #: internal/web/templates/system/services.html:113
 msgid "PIDs"
 msgstr "进程ID"
@@ -2566,173 +2563,169 @@ msgstr "已删除。"
 msgid "Unknown bulk action."
 msgstr "未知的批量操作。"
 
-#: internal/modules/docker/containers.go:112
+#: internal/modules/docker/containers.go:113
 msgid ""
 "Missing environment variables. Please check the configuration or restore "
 "from backup."
 msgstr "缺少环境变量。请检查配置或从备份恢复。"
 
-#: internal/modules/docker/containers.go:184
-#: internal/modules/docker/containers.go:202
+#: internal/modules/docker/containers.go:185
+#: internal/modules/docker/containers.go:203
 msgid "Add service"
 msgstr "添加服务"
 
-#: internal/modules/docker/containers.go:335
-msgid "Container %(service_name)s created successfully!"
-msgstr "容器 %(service_name)s 已成功创建！"
-
-#: internal/modules/docker/containers.go:408
+#: internal/modules/docker/containers.go:413
 msgid ""
 "Enter a valid image, for example nginx:latest or ghcr.io/owner/app:1.0."
 msgstr "请输入有效的镜像，例如 nginx:latest 或 ghcr.io/owner/app:1.0。"
 
-#: internal/modules/docker/containers.go:413
+#: internal/modules/docker/containers.go:418
 #: internal/web/templates/docker/container_form.html:155
 msgid "Choose at least one network."
 msgstr "请至少选择一个网络。"
 
-#: internal/modules/docker/containers.go:419
+#: internal/modules/docker/containers.go:424
 msgid "Service name cannot be changed."
 msgstr "服务名称无法更改。"
 
-#: internal/modules/docker/containers.go:424
+#: internal/modules/docker/containers.go:429
 msgid ""
 "Invalid service name. Must start with a letter, contain only lowercase "
 "letters and digits, and be at least 3 characters long."
 msgstr "无效的服务名称。必须以字母开头，只能包含小写字母和数字，且至少 3 个字符。"
 
-#: internal/modules/docker/containers.go:429
+#: internal/modules/docker/containers.go:434
 msgid "CPU limit must be a positive number."
 msgstr "CPU 限制必须是正数。"
 
-#: internal/modules/docker/containers.go:434
+#: internal/modules/docker/containers.go:439
 msgid ""
 "Memory limit must be a positive number followed by 'M' or 'G' (e.g., 512M or"
 " 1.5G)."
 msgstr "内存限制必须是正数，后跟 'M' 或 'G'（例如 512M 或 1.5G）。"
 
-#: internal/modules/docker/containers.go:439
+#: internal/modules/docker/containers.go:444
 msgid "PIDs limit must be a positive whole number."
 msgstr "PID 限制必须是正整数。"
 
-#: internal/modules/docker/containers.go:517
+#: internal/modules/docker/containers.go:522
 msgid "Container updated and restarted with the new settings."
 msgstr ""
 
-#: internal/modules/docker/containers.go:519
+#: internal/modules/docker/containers.go:524
 msgid "Container updated, the new settings apply when it starts."
 msgstr ""
 
-#: internal/modules/docker/images.go:32
+#: internal/modules/docker/images.go:36
 msgid "The image of %(service)s can't be changed."
 msgstr "%(service)s 的镜像无法更改。"
 
-#: internal/modules/docker/images.go:39
+#: internal/modules/docker/images.go:43
 msgid "Invalid image tag."
 msgstr "无效的镜像标签。"
 
-#: internal/modules/docker/images.go:48
+#: internal/modules/docker/images.go:52
 msgid "Successfully changed image tag for %(service)s to %(value)s!"
 msgstr "%(service)s 的镜像标签已成功更改为 %(value)s！"
 
-#: internal/modules/docker/images.go:51
+#: internal/modules/docker/images.go:55
 msgid "Failed to stop the service in order to delete old image."
 msgstr "无法停止服务以删除旧镜像。"
 
-#: internal/modules/docker/render.go:404
+#: internal/modules/docker/render.go:434
 #: internal/web/templates/dashboard/onboarding.html:505
 msgid "Can be better fine-tuned for any type of application."
 msgstr "可针对任意类型的应用进行更精细的调优。"
 
-#: internal/modules/docker/render.go:405
+#: internal/modules/docker/render.go:435
 #: internal/web/templates/dashboard/onboarding.html:509
 msgid "MariaDB"
 msgstr "MariaDB"
 
-#: internal/modules/docker/render.go:405
+#: internal/modules/docker/render.go:435
 #: internal/web/templates/dashboard/onboarding.html:510
 msgid ""
 "Recommended for WordPress sites - smaller image, lower resource usage, and "
 "faster default query execution."
 msgstr "推荐用于 WordPress 网站 —— 镜像更小、资源占用更低，且默认查询执行速度更快。"
 
-#: internal/modules/docker/render.go:406
+#: internal/modules/docker/render.go:436
 #: internal/web/templates/dashboard/onboarding.html:514
 msgid "Percona"
 msgstr "Percona"
 
-#: internal/modules/docker/render.go:406
+#: internal/modules/docker/render.go:436
 #: internal/web/templates/dashboard/onboarding.html:515
 msgid ""
 "MySQL drop-in with extra performance and monitoring features, geared toward "
 "high-traffic sites."
 msgstr "MySQL 的直接替代品，具有额外的性能和监控功能，适用于高流量网站。"
 
-#: internal/modules/docker/render.go:419 internal/modules/docker/render.go:425
+#: internal/modules/docker/render.go:449 internal/modules/docker/render.go:455
 #: internal/web/templates/docker/change_mysql.html:10
 msgid "Database Server"
 msgstr "数据库服务器"
 
-#: internal/modules/docker/render.go:457
+#: internal/modules/docker/render.go:487
 #: internal/web/templates/dashboard/onboarding.html:444
 msgid "Apache"
 msgstr "Apache"
 
-#: internal/modules/docker/render.go:457
+#: internal/modules/docker/render.go:487
 #: internal/web/templates/dashboard/onboarding.html:445
 msgid "Recommended for websites that use .htaccess for rewrite rules."
 msgstr "推荐用于使用 .htaccess 进行重写规则配置的网站。"
 
-#: internal/modules/docker/render.go:458
+#: internal/modules/docker/render.go:488
 #: internal/web/templates/dashboard/onboarding.html:449
 msgid "Nginx"
 msgstr "Nginx"
 
-#: internal/modules/docker/render.go:458
+#: internal/modules/docker/render.go:488
 #: internal/web/templates/dashboard/onboarding.html:450
 msgid ""
 "Recommended for NodeJS and Python applications, and high-traffic sites."
 msgstr "推荐用于 NodeJS 和 Python 应用以及高流量网站。"
 
-#: internal/modules/docker/render.go:459
+#: internal/modules/docker/render.go:489
 #: internal/web/templates/dashboard/onboarding.html:454
 msgid "OpenLiteSpeed"
 msgstr "OpenLiteSpeed"
 
-#: internal/modules/docker/render.go:459
+#: internal/modules/docker/render.go:489
 #: internal/web/templates/dashboard/onboarding.html:455
 msgid "Recommended for WordPress websites, but only one PHP version."
 msgstr "推荐用于 WordPress 网站，但仅支持一个 PHP 版本。"
 
-#: internal/modules/docker/render.go:460
+#: internal/modules/docker/render.go:490
 #: internal/web/templates/dashboard/onboarding.html:489
 msgid "OpenResty"
 msgstr "OpenResty"
 
-#: internal/modules/docker/render.go:460
+#: internal/modules/docker/render.go:490
 #: internal/web/templates/dashboard/onboarding.html:490
 msgid "Nginx core bundled with Lua scripting for custom logic."
 msgstr "内置 Lua 脚本支持自定义逻辑的 Nginx 核心。"
 
-#: internal/modules/docker/render.go:461
+#: internal/modules/docker/render.go:491
 #: internal/web/templates/dashboard/onboarding.html:494
 msgid "LiteSpeed"
 msgstr "LiteSpeed"
 
-#: internal/modules/docker/render.go:461
+#: internal/modules/docker/render.go:491
 #: internal/web/templates/dashboard/onboarding.html:495
 msgid ""
 "LiteSpeed Enterprise with .htaccess support, starts on a trial and takes "
 "your license key any time."
 msgstr ""
 
-#: internal/modules/docker/render.go:492 internal/modules/docker/render.go:498
+#: internal/modules/docker/render.go:522 internal/modules/docker/render.go:528
 #: internal/web/templates/dashboard/onboarding.html:596
 #: internal/web/templates/docker/change_webserver.html:10
 msgid "Webserver"
 msgstr "Web 服务器"
 
-#: internal/modules/docker/render.go:544
+#: internal/modules/docker/render.go:574
 #: internal/web/templates/docker/change_images.html:113
 msgid "Change docker image tag"
 msgstr "更改Docker镜像标签"
@@ -2785,14 +2778,14 @@ msgstr "已成功切换到 %(new_webserver)s！"
 msgid "Invalid web server selected"
 msgstr "选择的 Web 服务器无效"
 
-#: internal/modules/docker/terminal.go:37
+#: internal/modules/docker/terminal.go:38
 #: internal/web/templates/docker/terminal.html:14
 #: internal/web/templates/docker/terminal.html:20
 #: internal/web/templates/docker/terminal.html:219
 msgid "Container Terminal"
 msgstr "容器终端"
 
-#: internal/modules/docker/terminal.go:60
+#: internal/modules/docker/terminal.go:61
 #: internal/web/templates/docker/terminal.html:215
 msgid "Select Container"
 msgstr "选择容器"
@@ -2905,7 +2898,7 @@ msgid "Invalid request. Domain name must be provided."
 msgstr "无效请求。必须提供域名。"
 
 #: internal/modules/domains/delete.go:39
-#: internal/modules/domains/redirect.go:95
+#: internal/modules/domains/redirect.go:108
 msgid "Domain name not provided."
 msgstr "未提供域名。"
 
@@ -2933,52 +2926,56 @@ msgstr "域名 %(domain_name)s 的日志文件为空。"
 msgid "Error reading log file: %(error)s"
 msgstr "读取日志文件时出错：%(error)s"
 
-#: internal/modules/domains/new.go:69
+#: internal/modules/domains/new.go:74
 msgid "Domain name is required"
 msgstr "域名为必填项"
 
-#: internal/modules/domains/new.go:90
+#: internal/modules/domains/new.go:95
 msgid "Domain name contains invalid characters."
 msgstr "域名包含无效字符。"
 
-#: internal/modules/domains/new.go:100
+#: internal/modules/domains/new.go:105
 #: internal/web/templates/domains/new.html:217
 msgid ""
 "Paths for both public and secret files must be set for importing .onion "
 "domain."
 msgstr "导入 .onion 域名时，必须同时设置公开文件和私密文件的路径。"
 
-#: internal/modules/domains/new.go:106
+#: internal/modules/domains/new.go:111
 msgid "Path for public file must start with /var/www/html/"
 msgstr "公钥文件路径必须以 /var/www/html/ 开头"
 
-#: internal/modules/domains/new.go:111
+#: internal/modules/domains/new.go:116
 msgid "Public key file: %(onion_public_key)s does not exist!"
 msgstr "公钥文件 %(onion_public_key)s 不存在！"
 
-#: internal/modules/domains/new.go:117
+#: internal/modules/domains/new.go:122
 msgid "Path for secret file must start with /var/www/html/"
 msgstr "私钥文件路径必须以 /var/www/html/ 开头"
 
-#: internal/modules/domains/new.go:122
+#: internal/modules/domains/new.go:127
 msgid "Secret key file: %(onion_secret_key)s does not exist!"
 msgstr "私钥文件 %(onion_secret_key)s 不存在！"
 
-#: internal/modules/domains/redirect.go:47
+#: internal/modules/domains/new.go:133
+msgid "Onion key paths can't contain '..'."
+msgstr ""
+
+#: internal/modules/domains/redirect.go:61
 msgid "Domain %(domain_url)s does not have a redirect URL configured."
 msgstr "域名 %(domain_url)s 未配置重定向 URL。"
 
-#: internal/modules/domains/redirect.go:76
+#: internal/modules/domains/redirect.go:89
 msgid ""
 "Successfully deleted the redirect link %(redirect_url)s for domain "
 "%(domain_url)s"
 msgstr "已成功删除域名 %(domain_url)s 的重定向 %(redirect_url)s"
 
-#: internal/modules/domains/redirect.go:103
+#: internal/modules/domains/redirect.go:116
 msgid "Invalid URL. Please provide a URL with 'http://' or 'https://' prefix."
 msgstr "无效的 URL。请提供带有 'http://' 或 'https://' 前缀的 URL。"
 
-#: internal/modules/domains/redirect.go:122
+#: internal/modules/domains/redirect.go:135
 msgid ""
 "Successfully created redirect from domain %(domain_url)s to %(redirect_url)s"
 msgstr "已成功创建从域名 %(domain_url)s 到 %(redirect_url)s 的重定向"
@@ -2987,7 +2984,7 @@ msgstr "已成功创建从域名 %(domain_url)s 到 %(redirect_url)s 的重定�
 #: internal/web/templates/docker/logs.html:37
 #: internal/web/templates/domains/delete.html:62
 #: internal/web/templates/domains/dns.html:102
-#: internal/web/templates/emails/accounts.html:37
+#: internal/web/templates/emails/accounts.html:39
 #: internal/web/templates/system/error_logs.html:31
 #: internal/web/templates/system/waf.html:77
 #: internal/web/templates/system/waf.html:111
@@ -3002,15 +2999,15 @@ msgstr "全部"
 #: internal/modules/domains/render.go:60
 #: internal/web/templates/cache/service.html:28
 #: internal/web/templates/cache/service.html:158
-#: internal/web/templates/docker/containers.html:67
-#: internal/web/templates/docker/containers.html:111
+#: internal/web/templates/docker/containers.html:68
+#: internal/web/templates/docker/containers.html:112
 #: internal/web/templates/domains/domains.html:78
 #: internal/web/templates/domains/domains.html:148
 #: internal/web/templates/domains/logs.html:112
 #: internal/web/templates/domains/logs.html:132
 #: internal/web/templates/domains/ssl.html:26
-#: internal/web/templates/emails/accounts.html:29
-#: internal/web/templates/emails/migrate.html:117
+#: internal/web/templates/emails/accounts.html:31
+#: internal/web/templates/emails/migrate.html:179
 #: internal/web/templates/files/backup_restore.html:627
 #: internal/web/templates/files/backup_restore.html:663
 #: internal/web/templates/manager/wp/single.html:1038
@@ -3029,8 +3026,8 @@ msgstr "状态"
 
 #: internal/modules/domains/render.go:60
 #: internal/web/templates/domains/domains.html:199
-#: internal/web/templates/emails/accounts.html:29
-#: internal/web/templates/emails/accounts.html:43
+#: internal/web/templates/emails/accounts.html:31
+#: internal/web/templates/emails/accounts.html:45
 #: internal/web/templates/files/backup_restore.html:785
 msgid "Suspended"
 msgstr "已暂停"
@@ -3051,20 +3048,20 @@ msgstr "PHP 版本"
 
 #: internal/modules/domains/render.go:75
 #: internal/web/templates/domains/domains.html:285
+msgid "AutoSSL"
+msgstr "AutoSSL"
+
+#: internal/modules/domains/render.go:75
+#: internal/web/templates/domains/domains.html:285
 #: internal/web/templates/domains/ssl.html:52
 msgid "Custom SSL"
 msgstr "自定义 SSL"
 
-#: internal/modules/domains/render.go:75
-#: internal/web/templates/domains/domains.html:285
-msgid "AutoSSL"
-msgstr "AutoSSL"
-
 #: internal/modules/domains/render.go:77
 #: internal/web/templates/docker/container_form.html:240
 #: internal/web/templates/docker/container_form.html:256
-#: internal/web/templates/domains/dns.html:264
-#: internal/web/templates/domains/dns.html:283
+#: internal/web/templates/domains/dns.html:290
+#: internal/web/templates/domains/dns.html:337
 #: internal/web/templates/domains/dynamic_dns.html:40
 #: internal/web/templates/domains/dynamic_dns.html:86
 #: internal/web/templates/domains/new.html:38
@@ -3080,6 +3077,7 @@ msgstr "AutoSSL"
 #: internal/web/templates/manager/websitebuilder_install.html:36
 #: internal/web/templates/manager/wp/install.html:71
 #: internal/web/templates/manager/wp/list.html:98
+#: internal/web/templates/partials/_account_created.html:112
 #: internal/web/templates/partials/_search.html:59
 #: internal/web/templates/php/settings.html:75
 msgid "Domain"
@@ -3099,6 +3097,7 @@ msgid "Type"
 msgstr "类型"
 
 #: internal/modules/domains/render.go:77
+#: internal/web/templates/domains/dns.html:311
 #: internal/web/templates/domains/dynamic_dns.html:49
 #: internal/web/templates/domains/dynamic_dns.html:91
 #: internal/web/templates/domains/dynamic_dns.html:165
@@ -3155,51 +3154,51 @@ msgstr "无效的私钥。"
 msgid "Invalid request. Domain name and Vhost content must be provided."
 msgstr "无效请求。必须提供域名和 Vhost 内容。"
 
-#: internal/modules/dynamicdns/handlers.go:37
-#: internal/modules/git/render.go:154 internal/modules/waf/disable_rule.go:77
-#: internal/modules/waf/disable_rule.go:142
-#: internal/modules/waf/disable_rule.go:172
+#: internal/modules/dynamicdns/handlers.go:39
+#: internal/modules/git/render.go:154 internal/modules/waf/disable_rule.go:74
+#: internal/modules/waf/disable_rule.go:136
+#: internal/modules/waf/disable_rule.go:166
 #: internal/modules/waf/profiles.go:324 internal/modules/websites/bulk.go:82
 #: internal/modules/websites/bulk.go:278
 msgid "You do not own this domain."
 msgstr "您不是此域名的所有者。"
 
-#: internal/modules/dynamicdns/handlers.go:51
-#: internal/modules/dynamicdns/handlers.go:75
+#: internal/modules/dynamicdns/handlers.go:53
+#: internal/modules/dynamicdns/handlers.go:77
 msgid "Invalid subdomain."
 msgstr "无效的子域名。"
 
-#: internal/modules/dynamicdns/handlers.go:55
-#: internal/modules/dynamicdns/handlers.go:79
+#: internal/modules/dynamicdns/handlers.go:57
+#: internal/modules/dynamicdns/handlers.go:81
 msgid "Invalid IP address."
 msgstr "无效的 IP 地址。"
 
-#: internal/modules/dynamicdns/handlers.go:61
+#: internal/modules/dynamicdns/handlers.go:63
 msgid "Dynamic DNS entry created."
 msgstr "动态 DNS 条目已创建。"
 
-#: internal/modules/dynamicdns/handlers.go:67
-#: internal/modules/dynamicdns/handlers.go:99
+#: internal/modules/dynamicdns/handlers.go:69
+#: internal/modules/dynamicdns/handlers.go:101
 msgid "Invalid line number."
 msgstr "无效的行号。"
 
-#: internal/modules/dynamicdns/handlers.go:83
-msgid "Invalid token."
-msgstr "无效的令牌。"
+#: internal/modules/dynamicdns/handlers.go:85
+msgid "The token has to be 16 to 64 letters and numbers."
+msgstr ""
 
-#: internal/modules/dynamicdns/handlers.go:90
+#: internal/modules/dynamicdns/handlers.go:92
 msgid "Dynamic DNS entry updated."
 msgstr "动态 DNS 条目已更新。"
 
-#: internal/modules/dynamicdns/handlers.go:92
+#: internal/modules/dynamicdns/handlers.go:94
 msgid "Failed to update Dynamic DNS entry."
 msgstr "无法更新动态 DNS 条目。"
 
-#: internal/modules/dynamicdns/handlers.go:104
+#: internal/modules/dynamicdns/handlers.go:106
 msgid "Dynamic DNS entry deleted."
 msgstr "动态 DNS 条目已删除。"
 
-#: internal/modules/dynamicdns/handlers.go:106
+#: internal/modules/dynamicdns/handlers.go:108
 msgid "Failed to delete Dynamic DNS entry."
 msgstr "无法删除动态 DNS 条目。"
 
@@ -3224,12 +3223,12 @@ msgid "Alias %(email)s deleted successfully."
 msgstr "别名 %(email)s 已成功删除。"
 
 #: internal/modules/emails/aliases.go:310
-#: internal/modules/emails/emails.go:348
+#: internal/modules/emails/emails.go:370
 msgid "Error: %(field)s not provided."
 msgstr "错误：未提供 %(field)s。"
 
 #: internal/modules/emails/aliases.go:317
-#: internal/modules/emails/emails.go:361
+#: internal/modules/emails/emails.go:383
 msgid "Username can only contain letters, numbers, and . _ % + - (no @)."
 msgstr "用户名只能包含字母、数字和 . _ % + -（不含 @）。"
 
@@ -3269,7 +3268,7 @@ msgstr "恢复接收"
 msgid "Unsuspend outgoing"
 msgstr "恢复发送"
 
-#: internal/modules/emails/bulk.go:25 internal/modules/ftp/ftp.go:528
+#: internal/modules/emails/bulk.go:25 internal/modules/ftp/ftp.go:532
 msgid "Change quota"
 msgstr "更改配额"
 
@@ -3277,18 +3276,19 @@ msgstr "更改配额"
 msgid "New mailbox size (GB) for the selected accounts:"
 msgstr "所选账户的新邮箱大小（GB）："
 
-#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:526
+#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:530
+#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
+#: internal/modules/postgresql/bulk.go:34
+#: internal/web/templates/partials/_db_created.html:64
+msgid "Change password"
+msgstr "更改密码"
+
+#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:530
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
 #: internal/modules/postgresql/bulk.go:34
 #: internal/web/templates/files/ftp_password.html:55
 msgid "New password"
 msgstr "新密码"
-
-#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:526
-#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
-#: internal/modules/postgresql/bulk.go:34
-msgid "Change password"
-msgstr "更改密码"
 
 #: internal/modules/emails/bulk.go:27
 msgid "Set this password for the selected accounts:"
@@ -3313,39 +3313,35 @@ msgstr "同时将所选别名投递到："
 msgid "Delete the selected aliases?"
 msgstr "删除所选别名？"
 
-#: internal/modules/emails/default.go:86
+#: internal/modules/emails/default.go:95
 msgid "Invalid destination email address."
 msgstr "无效的目标邮箱地址。"
 
-#: internal/modules/emails/default.go:91
+#: internal/modules/emails/default.go:100
 msgid "Failed to update default email: %(error)s"
 msgstr "无法更新默认邮箱：%(error)s"
 
-#: internal/modules/emails/emails.go:373
+#: internal/modules/emails/emails.go:395
 msgid "Error: reached max number of email accounts on the hosting plan."
 msgstr "错误：已达到主机套餐的最大邮箱账户数量。"
 
-#: internal/modules/emails/emails.go:398
+#: internal/modules/emails/emails.go:413
 msgid "Failed to add email %(email)s: %(msg)s"
 msgstr "无法添加邮箱 %(email)s：%(msg)s"
 
-#: internal/modules/emails/emails.go:417
-msgid "Email %(email)s added successfully."
-msgstr "邮箱 %(email)s 已成功添加。"
-
-#: internal/modules/emails/emails.go:734
+#: internal/modules/emails/emails.go:792
 msgid "Settings saved for email %(email)s"
 msgstr "已保存邮箱 %(email)s 的设置"
 
-#: internal/modules/emails/emails.go:745
+#: internal/modules/emails/emails.go:803
 msgid "Email %(email)s deleted successfully."
 msgstr "邮箱 %(email)s 已成功删除。"
 
-#: internal/modules/emails/emails.go:748
+#: internal/modules/emails/emails.go:806
 msgid "ERROR: Failed to delete email %(email)s: %(output)s"
 msgstr "错误：无法删除邮箱 %(email)s：%(output)s"
 
-#: internal/modules/emails/emails.go:813
+#: internal/modules/emails/emails.go:915
 msgid "Error: Invalid configuration type."
 msgstr "错误：无效的配置类型。"
 
@@ -3361,64 +3357,64 @@ msgstr "保存过滤器时出错。"
 msgid "Filter saved successfully."
 msgstr "过滤器已成功保存。"
 
-#: internal/modules/emails/import.go:78
+#: internal/modules/emails/import.go:79
 msgid "Error: No file uploaded."
 msgstr "错误：未上传文件。"
 
-#: internal/modules/emails/import.go:92
+#: internal/modules/emails/import.go:93
 msgid "Error reading file: %(error)s"
 msgstr "读取文件时出错：%(error)s"
 
-#: internal/modules/emails/import.go:97
+#: internal/modules/emails/import.go:98
 msgid "Error: File must have at least 2 columns: email, password"
 msgstr "错误：文件必须至少包含 2 列：邮箱、密码"
 
-#: internal/modules/emails/import.go:103
+#: internal/modules/emails/import.go:104
 msgid ""
 "Error: File is invalid - the first column must contain valid email "
 "addresses."
 msgstr "错误：文件无效 - 第一列必须包含有效的邮箱地址。"
 
-#: internal/modules/emails/import.go:164 internal/modules/emails/import.go:172
-#: internal/modules/emails/import.go:177
+#: internal/modules/emails/import.go:165 internal/modules/emails/import.go:173
+#: internal/modules/emails/import.go:178
 msgid "Error: No import data found, please try again."
 msgstr "错误：未找到导入数据，请重试。"
 
-#: internal/modules/emails/migrate.go:914
+#: internal/modules/emails/migrate.go:924
 msgid "Error: Could not open the migrations folder."
 msgstr "错误：无法打开迁移文件夹。"
 
-#: internal/modules/emails/render.go:119
+#: internal/modules/emails/render.go:127
 #: internal/web/templates/files/ftp_new.html:189
 msgid "Create Account"
 msgstr "创建账户"
 
-#: internal/modules/emails/render.go:170
+#: internal/modules/emails/render.go:178
 msgid "Delete address"
 msgstr "删除地址"
 
-#: internal/modules/emails/render.go:192
-#: internal/web/templates/emails/accounts.html:117
+#: internal/modules/emails/render.go:200
+#: internal/web/templates/emails/accounts.html:119
 #: internal/web/templates/emails/info.html:8
 msgid "Connect Devices"
 msgstr "连接设备"
 
-#: internal/modules/emails/render.go:255
+#: internal/modules/emails/render.go:263
 #: internal/web/templates/emails/aliases.html:28
 msgid "New Alias"
 msgstr "新建别名"
 
-#: internal/modules/emails/render.go:302
+#: internal/modules/emails/render.go:310
 msgid "Default Email"
 msgstr "默认邮箱"
 
-#: internal/modules/emails/render.go:400
+#: internal/modules/emails/render.go:408
 #: internal/web/templates/emails/confirm_import.html:8
 #: internal/web/templates/emails/import.html:8
 msgid "Import Emails"
 msgstr "导入邮箱"
 
-#: internal/modules/emails/webmail.go:216
+#: internal/modules/emails/webmail.go:247
 msgid ""
 "Webmail service is not yet started, please contact Administrator to enable "
 "it."
@@ -3436,6 +3432,8 @@ msgstr "HTTP 5xx 响应"
 #: internal/web/templates/manager/git.html:92
 #: internal/web/templates/mysql/wizard.html:80
 #: internal/web/templates/mysql/wizard.html:139
+#: internal/web/templates/partials/_account_created.html:6
+#: internal/web/templates/partials/_db_created.html:12
 #: internal/web/templates/partials/install_success.html:104
 #: internal/web/templates/partials/site_manager_shared.html:1007
 #: internal/web/templates/user/mcp.html:30
@@ -3457,47 +3455,52 @@ msgstr "复制"
 msgid "Download"
 msgstr "下载"
 
-#: internal/modules/filemanager/archive.go:59
+#: internal/modules/filemanager/api_transfer.go:188
+#: internal/modules/filemanager/archive.go:90
+msgid "The archive expands to more than %(size)s MB, extraction was stopped."
+msgstr ""
+
+#: internal/modules/filemanager/archive.go:60
 msgid "Error occurred before starting archive extraction: %(error)s"
 msgstr "开始解压归档文件前出错：%(error)s"
 
-#: internal/modules/filemanager/archive.go:69
+#: internal/modules/filemanager/archive.go:70
 msgid "Unsupported file format!"
 msgstr "不支持的文件格式！"
 
-#: internal/modules/filemanager/archive.go:87
+#: internal/modules/filemanager/archive.go:95
 msgid "Extraction timed out after %(minutes)s minutes!"
 msgstr "解压在 %(minutes)s 分钟后超时！"
 
-#: internal/modules/filemanager/archive.go:90
+#: internal/modules/filemanager/archive.go:98
 msgid "Extraction failed."
 msgstr "解压失败。"
 
-#: internal/modules/filemanager/archive.go:96
+#: internal/modules/filemanager/archive.go:104
 msgid "File extracted successfully"
 msgstr "文件已成功解压"
 
-#: internal/modules/filemanager/archive.go:350
+#: internal/modules/filemanager/archive.go:358
 msgid "Missing required form data for compression: %(missing)s"
 msgstr "压缩所需的表单数据缺失：%(missing)s"
 
-#: internal/modules/filemanager/archive.go:388
+#: internal/modules/filemanager/archive.go:396
 msgid "Unsupported archive format."
 msgstr "不支持的归档格式。"
 
-#: internal/modules/filemanager/archive.go:393
+#: internal/modules/filemanager/archive.go:401
 msgid "Archive creation failed: %(err_msg)s"
 msgstr "创建归档文件失败：%(err_msg)s"
 
-#: internal/modules/filemanager/archive.go:401
+#: internal/modules/filemanager/archive.go:409
 msgid "Failed to set archive ownership"
 msgstr "无法设置归档文件的所有者"
 
-#: internal/modules/filemanager/archive.go:403
+#: internal/modules/filemanager/archive.go:411
 msgid "FILEMANAGER - Archive created successfully."
 msgstr "归档文件创建成功。"
 
-#: internal/modules/filemanager/archive.go:418
+#: internal/modules/filemanager/archive.go:426
 msgid "Invalid selection"
 msgstr "无效的选择"
 
@@ -3624,44 +3627,44 @@ msgstr "文件已成功上传。"
 msgid "Some files failed: %(errs)s"
 msgstr "部分文件失败：%(errs)s"
 
-#: internal/modules/filemanager/wget.go:216
+#: internal/modules/filemanager/wget.go:220
 msgid "Download queued..."
 msgstr "下载已排队..."
 
-#: internal/modules/ftp/ftp.go:145
+#: internal/modules/ftp/ftp.go:149
 msgid ""
 "FTP service is not yet started, please contact Administrator to enable it."
 msgstr "FTP 服务尚未启动，请联系管理员启用。"
 
-#: internal/modules/ftp/ftp.go:237
+#: internal/modules/ftp/ftp.go:241
 msgid "No currently active FTP connections"
 msgstr "当前没有活动的 FTP 连接"
 
-#: internal/modules/ftp/ftp.go:269
+#: internal/modules/ftp/ftp.go:273
 msgid "FTP username not provided."
 msgstr "未提供 FTP 用户名。"
 
-#: internal/modules/ftp/ftp.go:273
+#: internal/modules/ftp/ftp.go:277
 msgid "FTP domain not provided."
 msgstr "未提供 FTP 域名。"
 
-#: internal/modules/ftp/ftp.go:281
+#: internal/modules/ftp/ftp.go:285
 msgid "FTP path not provided."
 msgstr "未提供 FTP 路径。"
 
-#: internal/modules/ftp/ftp.go:285
+#: internal/modules/ftp/ftp.go:289
 msgid "FTP password not provided."
 msgstr "未提供 FTP 密码。"
 
-#: internal/modules/ftp/ftp.go:289 internal/modules/ftp/quota.go:189
+#: internal/modules/ftp/ftp.go:293 internal/modules/ftp/quota.go:189
 msgid "Invalid quota, use a whole number of MB or GB."
 msgstr "配额无效，请使用以 MB 或 GB 为单位的整数。"
 
-#: internal/modules/ftp/ftp.go:295 internal/modules/ftp/ftp.go:420
+#: internal/modules/ftp/ftp.go:299 internal/modules/ftp/ftp.go:424
 msgid "The FTP path must start with %(real_path)s"
 msgstr "FTP 路径必须以 %(real_path)s 开头"
 
-#: internal/modules/ftp/ftp.go:302
+#: internal/modules/ftp/ftp.go:306
 msgid ""
 "Username %(ftp_username)s contains invalid characters, only allowed: "
 "BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
@@ -3669,99 +3672,95 @@ msgstr ""
 "用户名 %(ftp_username)s "
 "包含无效字符，仅允许：BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_@."
 
-#: internal/modules/ftp/ftp.go:312
+#: internal/modules/ftp/ftp.go:316
 msgid "Error creating FTP user %(ftp_username)s: %(output)s"
 msgstr "创建 FTP 用户 %(ftp_username)s 时出错：%(output)s"
 
-#: internal/modules/ftp/ftp.go:318
-msgid "FTP account %(ftp_username)s created successfully."
-msgstr "FTP 账户 %(ftp_username)s 已成功创建。"
-
-#: internal/modules/ftp/ftp.go:321
+#: internal/modules/ftp/ftp.go:325
 msgid "Failed to create FTP account %(ftp_username)s: %(output)s"
 msgstr "无法创建 FTP 账户 %(ftp_username)s：%(output)s"
 
-#: internal/modules/ftp/ftp.go:338 internal/modules/ftp/ftp.go:359
-#: internal/modules/ftp/ftp.go:415 internal/modules/ftp/quota.go:168
+#: internal/modules/ftp/ftp.go:342 internal/modules/ftp/ftp.go:363
+#: internal/modules/ftp/ftp.go:419 internal/modules/ftp/quota.go:168
 msgid "Invalid FTP username."
 msgstr "无效的 FTP 用户名。"
 
-#: internal/modules/ftp/ftp.go:350
+#: internal/modules/ftp/ftp.go:354
 msgid "FTP account %(username_to_delete)s deleted successfully!"
 msgstr "FTP 账户 %(username_to_delete)s 已成功删除！"
 
-#: internal/modules/ftp/ftp.go:353
+#: internal/modules/ftp/ftp.go:357
 msgid ""
 "Failed to delete FTP account %(username_to_delete)s. Output: %(output)s"
 msgstr "无法删除 FTP 账户 %(username_to_delete)s。输出：%(output)s"
 
-#: internal/modules/ftp/ftp.go:371
+#: internal/modules/ftp/ftp.go:375
 msgid "Missing new password"
 msgstr "缺少新密码"
 
-#: internal/modules/ftp/ftp.go:383
+#: internal/modules/ftp/ftp.go:387
 msgid "Error changing FTP password: %(output)s"
 msgstr "更改 FTP 密码时出错：%(output)s"
 
-#: internal/modules/ftp/ftp.go:388
+#: internal/modules/ftp/ftp.go:392
 msgid "FTP password changed successfully for user %(username)s"
 msgstr "用户 %(username)s 的 FTP 密码已成功更改"
 
-#: internal/modules/ftp/ftp.go:390
+#: internal/modules/ftp/ftp.go:394
 msgid "Failed to change FTP password: %(output)s"
 msgstr "无法更改 FTP 密码：%(output)s"
 
-#: internal/modules/ftp/ftp.go:427
+#: internal/modules/ftp/ftp.go:431
 msgid "Error changing FTP path for user %(username_to_modify)s: %(output)s"
 msgstr "更改用户 %(username_to_modify)s 的 FTP 路径时出错：%(output)s"
 
-#: internal/modules/ftp/ftp.go:432
+#: internal/modules/ftp/ftp.go:436
 msgid "FTP path changed successfully for user %(username_to_modify)s"
 msgstr "用户 %(username_to_modify)s 的 FTP 路径已成功更改"
 
-#: internal/modules/ftp/ftp.go:434
+#: internal/modules/ftp/ftp.go:438
 msgid "Failed to change FTP path for user %(username_to_modify)s: %(output)s"
 msgstr "无法更改用户 %(username_to_modify)s 的 FTP 路径：%(output)s"
 
-#: internal/modules/ftp/ftp.go:445
+#: internal/modules/ftp/ftp.go:449
 msgid "Invalid configuration type, please use cyberduck or filezilla only!"
 msgstr "无效的配置类型，请只使用 cyberduck 或 filezilla！"
 
-#: internal/modules/ftp/ftp.go:458
+#: internal/modules/ftp/ftp.go:462
 msgid "User has no FTP accounts."
 msgstr "该用户没有 FTP 账户。"
 
-#: internal/modules/ftp/ftp.go:475 internal/modules/ftp/quota.go:181
+#: internal/modules/ftp/ftp.go:479 internal/modules/ftp/quota.go:181
 msgid "FTP account not found."
 msgstr "未找到 FTP 账户。"
 
-#: internal/modules/ftp/ftp.go:526
+#: internal/modules/ftp/ftp.go:530
 msgid "Set this password for the selected FTP accounts:"
 msgstr "为所选 FTP 账户设置此密码："
 
-#: internal/modules/ftp/ftp.go:527
+#: internal/modules/ftp/ftp.go:531
 #: internal/web/templates/partials/folder_picker.html:6
 #: internal/web/templates/partials/folder_picker.html:25
 msgid "Change path"
 msgstr "更改路径"
 
-#: internal/modules/ftp/ftp.go:527
+#: internal/modules/ftp/ftp.go:531
 msgid "New home folder for the selected FTP accounts:"
 msgstr "所选 FTP 账户的新主目录："
 
-#: internal/modules/ftp/ftp.go:528
+#: internal/modules/ftp/ftp.go:532
 msgid "Disk quota for the selected FTP accounts, e.g. 500M or 2G:"
 msgstr "所选 FTP 账户的磁盘配额，例如 500M 或 2G："
 
-#: internal/modules/ftp/ftp.go:529
+#: internal/modules/ftp/ftp.go:533
 msgid "Remove quota"
 msgstr "移除配额"
 
-#: internal/modules/ftp/ftp.go:529
+#: internal/modules/ftp/ftp.go:533
 msgid "Remove the disk quota from the selected FTP accounts?"
 msgstr "要移除所选 FTP 账户的磁盘配额吗？"
 
-#: internal/modules/ftp/ftp.go:530
+#: internal/modules/ftp/ftp.go:534
 msgid "Delete the selected FTP accounts? Their files are kept."
 msgstr "删除所选 FTP 账户？其文件将被保留。"
 
@@ -3777,20 +3776,20 @@ msgstr "已移除用户 %(username)s 的 FTP 配额"
 msgid "FTP quota changed successfully for user %(username)s"
 msgstr "已成功更改用户 %(username)s 的 FTP 配额"
 
-#: internal/modules/ftp/render.go:66
+#: internal/modules/ftp/render.go:78
 #: internal/web/templates/files/ftp_new.html:9
 msgid "New FTP Account"
 msgstr "新FTP账户"
 
-#: internal/modules/ftp/render.go:84
+#: internal/modules/ftp/render.go:96
 msgid "Change FTP Password"
 msgstr "更改 FTP 密码"
 
-#: internal/modules/ftp/render.go:96
+#: internal/modules/ftp/render.go:108
 msgid "Change FTP Path"
 msgstr "更改 FTP 路径"
 
-#: internal/modules/ftp/render.go:115
+#: internal/modules/ftp/render.go:127
 msgid "Change FTP Quota"
 msgstr "更改 FTP 配额"
 
@@ -3865,81 +3864,81 @@ msgid ""
 " in place."
 msgstr "删除所选仓库？已部署到网站的文件会保留。"
 
-#: internal/modules/git/handlers.go:308
+#: internal/modules/git/handlers.go:314
 msgid ""
 "Repository %(repo)s was added, but its first deployment failed: %(error)s"
 msgstr ""
 
-#: internal/modules/git/handlers.go:310
+#: internal/modules/git/handlers.go:316
 msgid ""
 "Local repository %(repo)s created. Push to branch %(branch)s to deploy it to"
 " %(dir)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:312
+#: internal/modules/git/handlers.go:318
 msgid "Repository %(repo)s cloned and branch %(branch)s deployed to %(dir)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:314
+#: internal/modules/git/handlers.go:320
 msgid ""
 "Repository %(repo)s cloned (branch %(branch)s), nothing was deployed yet."
 msgstr ""
 
-#: internal/modules/git/handlers.go:321 internal/modules/git/handlers.go:341
+#: internal/modules/git/handlers.go:327 internal/modules/git/handlers.go:347
 msgid "Repository %(repo)s not found."
 msgstr ""
 
-#: internal/modules/git/handlers.go:325
+#: internal/modules/git/handlers.go:331
 msgid "Pulling %(repo)s failed: %(error)s"
 msgstr ""
 
-#: internal/modules/git/handlers.go:330
+#: internal/modules/git/handlers.go:336
 msgid "%(repo)s is already up to date, no new commits on %(branch)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:334
+#: internal/modules/git/handlers.go:340
 msgid ""
 "Pulled %(count)s new commit(s) into %(repo)s on %(branch)s and deployed "
 "%(commit)s to %(dir)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:336
+#: internal/modules/git/handlers.go:342
 msgid ""
 "Pulled %(count)s new commit(s) into %(repo)s on %(branch)s, latest is "
 "%(commit)s. Not deployed yet."
 msgstr ""
 
-#: internal/modules/git/handlers.go:344
+#: internal/modules/git/handlers.go:350
 msgid "Deploying %(repo)s failed: %(error)s"
 msgstr ""
 
-#: internal/modules/git/handlers.go:348
+#: internal/modules/git/handlers.go:354
 msgid "Deployed %(repo)s (%(branch)s at %(commit)s) to %(dir)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:350
+#: internal/modules/git/handlers.go:356
 msgid "Deploy actions ran in %(container)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:356
+#: internal/modules/git/handlers.go:362
 msgid "Could not save settings for %(repo)s: %(error)s"
 msgstr ""
 
-#: internal/modules/git/handlers.go:360
+#: internal/modules/git/handlers.go:366
 msgid ""
 "Settings saved for %(repo)s: branch %(branch)s, %(mode)s, deploying to "
 "%(dir)s."
 msgstr ""
 
-#: internal/modules/git/handlers.go:368
+#: internal/modules/git/handlers.go:374
 msgid "New push password generated for %(repo)s, the old one no longer works."
 msgstr ""
 
-#: internal/modules/git/handlers.go:373
+#: internal/modules/git/handlers.go:379
 msgid "Could not remove %(repo)s: %(error)s"
 msgstr ""
 
-#: internal/modules/git/handlers.go:376
+#: internal/modules/git/handlers.go:382
 msgid ""
 "Repository %(repo)s removed. Files already deployed to %(dir)s were left in "
 "place."
@@ -4142,27 +4141,27 @@ msgid "MongoDB is still starting, please try again in a moment."
 msgstr "MongoDB 仍在启动中，请稍后再试。"
 
 #: internal/modules/mongodb/databases.go:107
-#: internal/modules/mongodb/databases.go:170
+#: internal/modules/mongodb/databases.go:169
 #: internal/modules/mongodb/export.go:38 internal/modules/mongodb/wizard.go:50
 #: internal/modules/mysql/assign.go:49 internal/modules/mysql/assign.go:181
 #: internal/modules/mysql/databases.go:222
-#: internal/modules/mysql/databases.go:280 internal/modules/mysql/export.go:41
+#: internal/modules/mysql/databases.go:279 internal/modules/mysql/export.go:41
 #: internal/modules/mysql/wizard.go:57
 #: internal/modules/postgresql/databases.go:136
-#: internal/modules/postgresql/databases.go:195
+#: internal/modules/postgresql/databases.go:194
 #: internal/modules/postgresql/export.go:35
 #: internal/modules/postgresql/wizard.go:47
 msgid "Database name is required."
 msgstr "数据库名为必填项。"
 
 #: internal/modules/mongodb/databases.go:111
-#: internal/modules/mongodb/databases.go:173
+#: internal/modules/mongodb/databases.go:172
 #: internal/modules/mongodb/wizard.go:53 internal/modules/mysql/assign.go:52
 #: internal/modules/mysql/assign.go:184
 #: internal/modules/mysql/databases.go:227
-#: internal/modules/mysql/databases.go:284
+#: internal/modules/mysql/databases.go:283
 #: internal/modules/postgresql/databases.go:140
-#: internal/modules/postgresql/databases.go:199
+#: internal/modules/postgresql/databases.go:198
 #: internal/modules/postgresql/wizard.go:50
 msgid ""
 "Name %(database_name)s is not allowed. Please use alphanumeric characters "
@@ -4191,20 +4190,16 @@ msgstr "您已达到允许的最大数据库数量。%(upgrade_message)s"
 msgid "Failed to create database: %(error)s"
 msgstr "无法创建数据库：%(error)s"
 
-#: internal/modules/mongodb/databases.go:148
-msgid "Successfully created a MongoDB database %(database_name)s"
-msgstr "MongoDB 数据库 %(database_name)s 已成功创建"
-
-#: internal/modules/mongodb/databases.go:176
+#: internal/modules/mongodb/databases.go:175
 msgid "This is a system database that cannot be deleted."
 msgstr "这是系统数据库，无法删除。"
 
-#: internal/modules/mongodb/databases.go:181
-#: internal/modules/postgresql/databases.go:206
+#: internal/modules/mongodb/databases.go:180
+#: internal/modules/postgresql/databases.go:205
 msgid "Error deleting database %(database_name)s: %(error)s"
 msgstr "删除数据库 %(database_name)s 时出错：%(error)s"
 
-#: internal/modules/mongodb/databases.go:187
+#: internal/modules/mongodb/databases.go:186
 msgid "Successfully deleted a MongoDB database %(database_name)s"
 msgstr "MongoDB 数据库 %(database_name)s 已成功删除"
 
@@ -4354,39 +4349,39 @@ msgstr "终止所选操作？"
 msgid "MongoDB Databases"
 msgstr "MongoDB 数据库"
 
-#: internal/modules/mongodb/render.go:63 internal/modules/mysql/render.go:87
+#: internal/modules/mongodb/render.go:63 internal/modules/mysql/render.go:88
 #: internal/modules/postgresql/render.go:67 internal/web/sidebar_classic.go:95
 #: internal/web/sidebar_classic.go:117 internal/web/sidebar_classic.go:140
-#: internal/web/templates/db/new.html:46
-#: internal/web/templates/mongodb/new.html:42
+#: internal/web/templates/db/new.html:49
+#: internal/web/templates/mongodb/new.html:45
 msgid "Create Database"
 msgstr "创建数据库"
 
-#: internal/modules/mongodb/render.go:89
+#: internal/modules/mongodb/render.go:93
 #: internal/web/templates/mongodb/users.html:9
 msgid "MongoDB Users"
 msgstr "MongoDB 用户"
 
-#: internal/modules/mongodb/render.go:111 internal/modules/mysql/render.go:133
-#: internal/modules/postgresql/render.go:119
+#: internal/modules/mongodb/render.go:115 internal/modules/mysql/render.go:135
+#: internal/modules/postgresql/render.go:120
 #: internal/web/sidebar_classic.go:96 internal/web/sidebar_classic.go:118
 #: internal/web/sidebar_classic.go:141
-#: internal/web/templates/mongodb/mongodb_user.html:83
+#: internal/web/templates/mongodb/mongodb_user.html:86
 #: internal/web/templates/mongodb/users.html:26
 #: internal/web/templates/mongodb/users.html:30
-#: internal/web/templates/mysql/mysql_user.html:113
+#: internal/web/templates/mysql/mysql_user.html:116
 #: internal/web/templates/mysql/users.html:52
 #: internal/web/templates/mysql/users.html:58
-#: internal/web/templates/psql/psql_user.html:83
+#: internal/web/templates/psql/psql_user.html:86
 #: internal/web/templates/psql/users.html:42
 #: internal/web/templates/psql/users.html:46
 msgid "Create User"
 msgstr "创建用户"
 
-#: internal/modules/mongodb/render.go:129 internal/modules/mysql/render.go:151
-#: internal/modules/postgresql/render.go:137
-#: internal/web/templates/files/ftp.html:162
+#: internal/modules/mongodb/render.go:137 internal/modules/mysql/render.go:153
+#: internal/modules/postgresql/render.go:142
 #: internal/web/templates/files/ftp.html:164
+#: internal/web/templates/files/ftp.html:166
 #: internal/web/templates/mongodb/password.html:81
 #: internal/web/templates/mongodb/users.html:62
 #: internal/web/templates/mysql/password.html:116
@@ -4398,8 +4393,8 @@ msgstr "创建用户"
 msgid "Change Password"
 msgstr "修改密码"
 
-#: internal/modules/mongodb/render.go:167 internal/modules/mysql/render.go:242
-#: internal/modules/postgresql/render.go:162
+#: internal/modules/mongodb/render.go:175 internal/modules/mysql/render.go:244
+#: internal/modules/postgresql/render.go:167
 #: internal/web/templates/mongodb/assign.html:8
 #: internal/web/templates/mongodb/assign.html:55
 #: internal/web/templates/psql/assign.html:8
@@ -4407,8 +4402,8 @@ msgstr "修改密码"
 msgid "Assign User to Database"
 msgstr "分配用户至数据库"
 
-#: internal/modules/mongodb/render.go:180 internal/modules/mysql/render.go:254
-#: internal/modules/postgresql/render.go:174
+#: internal/modules/mongodb/render.go:188 internal/modules/mysql/render.go:256
+#: internal/modules/postgresql/render.go:179
 #: internal/web/templates/mongodb/remove.html:55
 #: internal/web/templates/mysql/remove.html:51
 #: internal/web/templates/psql/remove.html:46
@@ -4420,24 +4415,24 @@ msgstr "从数据库移除用户"
 msgid "Error fetching users: %(error)s"
 msgstr "获取用户时出错：%(error)s"
 
-#: internal/modules/mongodb/users.go:78 internal/modules/mongodb/users.go:135
-#: internal/modules/mongodb/users.go:172 internal/modules/mongodb/wizard.go:59
+#: internal/modules/mongodb/users.go:78 internal/modules/mongodb/users.go:136
+#: internal/modules/mongodb/users.go:173 internal/modules/mongodb/wizard.go:59
 #: internal/modules/mysql/assign.go:43 internal/modules/mysql/assign.go:175
-#: internal/modules/mysql/users.go:88 internal/modules/mysql/users.go:155
-#: internal/modules/mysql/users.go:199 internal/modules/mysql/wizard.go:69
+#: internal/modules/mysql/users.go:88 internal/modules/mysql/users.go:156
+#: internal/modules/mysql/users.go:200 internal/modules/mysql/wizard.go:69
 #: internal/modules/postgresql/users.go:88
-#: internal/modules/postgresql/users.go:145
-#: internal/modules/postgresql/users.go:194
+#: internal/modules/postgresql/users.go:146
+#: internal/modules/postgresql/users.go:195
 #: internal/modules/postgresql/wizard.go:56
 msgid "User name is required."
 msgstr "用户名为必填项。"
 
-#: internal/modules/mongodb/users.go:81 internal/modules/mongodb/users.go:175
+#: internal/modules/mongodb/users.go:81 internal/modules/mongodb/users.go:176
 #: internal/modules/mongodb/wizard.go:62 internal/modules/mysql/assign.go:46
 #: internal/modules/mysql/assign.go:178 internal/modules/mysql/users.go:94
-#: internal/modules/mysql/users.go:158 internal/modules/mysql/users.go:202
+#: internal/modules/mysql/users.go:159 internal/modules/mysql/users.go:203
 #: internal/modules/postgresql/users.go:91
-#: internal/modules/postgresql/users.go:197
+#: internal/modules/postgresql/users.go:198
 #: internal/modules/postgresql/wizard.go:59
 msgid ""
 "Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
@@ -4457,48 +4452,44 @@ msgstr "不允许使用此用户名。"
 msgid "Failed to create user: %(error)s"
 msgstr "无法创建用户：%(error)s"
 
-#: internal/modules/mongodb/users.go:96
-msgid "Successfully created a MongoDB user %(db_user)s"
-msgstr "MongoDB 用户 %(db_user)s 已成功创建"
-
-#: internal/modules/mongodb/users.go:110 internal/modules/mongodb/users.go:178
+#: internal/modules/mongodb/users.go:111 internal/modules/mongodb/users.go:179
 #: internal/modules/mysql/assign.go:190
 #: internal/modules/mysql/remotemysql.go:241
-#: internal/modules/mysql/users.go:125 internal/modules/mysql/users.go:205
-#: internal/modules/postgresql/users.go:120
-#: internal/modules/postgresql/users.go:200
+#: internal/modules/mysql/users.go:126 internal/modules/mysql/users.go:206
+#: internal/modules/postgresql/users.go:121
+#: internal/modules/postgresql/users.go:201
 msgid "This is a system username that can not be edited."
 msgstr "这是系统用户名，无法编辑。"
 
-#: internal/modules/mongodb/users.go:138 internal/modules/mysql/wizard.go:75
-#: internal/modules/postgresql/users.go:148
+#: internal/modules/mongodb/users.go:139 internal/modules/mysql/wizard.go:75
+#: internal/modules/postgresql/users.go:149
 msgid ""
 "Name %(db_user)s is not allowed. Please use alphanumeric characters and '_' "
 "- [a-zA-Z0-9_]+"
 msgstr "不允许使用名称 %(db_user)s。请使用字母、数字和 '_' - [a-zA-Z0-9_]+"
 
-#: internal/modules/mongodb/users.go:141
-#: internal/modules/postgresql/users.go:151
+#: internal/modules/mongodb/users.go:142
+#: internal/modules/postgresql/users.go:152
 msgid "This is a system username that cannot be deleted."
 msgstr "这是系统用户名，无法删除。"
 
-#: internal/modules/mongodb/users.go:146
-#: internal/modules/postgresql/users.go:168
+#: internal/modules/mongodb/users.go:147
+#: internal/modules/postgresql/users.go:169
 msgid "Error deleting user %(db_user)s: %(error)s"
 msgstr "删除用户 %(db_user)s 时出错：%(error)s"
 
-#: internal/modules/mongodb/users.go:148 internal/modules/mysql/users.go:176
-#: internal/modules/postgresql/users.go:170
+#: internal/modules/mongodb/users.go:149 internal/modules/mysql/users.go:177
+#: internal/modules/postgresql/users.go:171
 msgid "Successfully deleted user %(db_user)s"
 msgstr "用户 %(db_user)s 已成功删除"
 
-#: internal/modules/mongodb/users.go:186
-#: internal/modules/postgresql/users.go:208
+#: internal/modules/mongodb/users.go:187
+#: internal/modules/postgresql/users.go:209
 msgid "Error changing password for user %(db_user)s: %(error)s"
 msgstr "更改用户 %(db_user)s 的密码时出错：%(error)s"
 
-#: internal/modules/mongodb/users.go:190 internal/modules/mysql/users.go:224
-#: internal/modules/postgresql/users.go:212
+#: internal/modules/mongodb/users.go:191 internal/modules/mysql/users.go:225
+#: internal/modules/postgresql/users.go:213
 msgid "Successfully changed password for user %(db_user)s"
 msgstr "用户 %(db_user)s 的密码已成功更改"
 
@@ -4520,8 +4511,8 @@ msgstr "必须至少选择一项权限。"
 #: internal/modules/mysql/remotemysql.go:174
 #: internal/modules/mysql/remotemysql.go:244
 #: internal/modules/mysql/remotemysql.go:286
-#: internal/modules/mysql/users.go:100 internal/modules/mysql/users.go:164
-#: internal/modules/mysql/users.go:208 internal/modules/mysql/wizard.go:78
+#: internal/modules/mysql/users.go:100 internal/modules/mysql/users.go:165
+#: internal/modules/mysql/users.go:209 internal/modules/mysql/wizard.go:78
 msgid "Invalid host format."
 msgstr "无效的主机格式。"
 
@@ -4647,15 +4638,11 @@ msgstr "创建数据库时出错：'%(database_name)s' - 您已达到允许的�
 msgid "Error creating database: %(error)s"
 msgstr "创建数据库时出错：%(error)s"
 
-#: internal/modules/mysql/databases.go:259
-msgid "Successfully created a database %(database_name)s"
-msgstr "数据库 %(database_name)s 已成功创建"
-
-#: internal/modules/mysql/databases.go:289
+#: internal/modules/mysql/databases.go:288
 msgid "Error deleting database: %(error)s"
 msgstr "删除数据库时出错：%(error)s"
 
-#: internal/modules/mysql/databases.go:297
+#: internal/modules/mysql/databases.go:296
 msgid "Successfully deleted a database %(database_name)s"
 msgstr "数据库 %(database_name)s 已成功删除"
 
@@ -4800,7 +4787,7 @@ msgid "Successfully updated access for %(db_user)s"
 msgstr "已成功更新 %(db_user)s 的访问权限"
 
 #: internal/modules/mysql/remotemysql.go:283
-#: internal/modules/mysql/users.go:161
+#: internal/modules/mysql/users.go:162
 msgid "This is a system username that can not be deleted."
 msgstr "这是系统用户名，无法删除。"
 
@@ -4813,33 +4800,37 @@ msgstr "移除访问权限时出错：%(error)s"
 msgid "Successfully removed access for %(db_user)s from %(db_host)s"
 msgstr "已成功移除 %(db_user)s 来自 %(db_host)s 的访问权限"
 
-#: internal/modules/mysql/render.go:108
+#: internal/modules/mysql/render.go:109
 msgid "Database Users"
 msgstr "数据库用户"
 
-#: internal/modules/mysql/render.go:178 internal/modules/mysql/render.go:190
+#: internal/modules/mysql/render.go:180 internal/modules/mysql/render.go:192
 msgid "Wizard"
 msgstr "向导"
 
-#: internal/modules/mysql/render.go:310 static/js/tour-steps.js:903
+#: internal/modules/mysql/render.go:312 static/js/tour-steps.js:903
 msgid "Change Root Password"
 msgstr "更改 Root 密码"
 
-#: internal/modules/mysql/render.go:333
+#: internal/modules/mysql/render.go:335
 msgid "Remote MySQL"
 msgstr "远程 MySQL"
 
-#: internal/modules/mysql/rootpassword.go:38
-#: internal/modules/mysql/rootpassword.go:42
-#: internal/modules/mysql/rootpassword.go:46
+#: internal/modules/mysql/rootpassword.go:36
+msgid "Password can't be empty or contain quotes, backslashes or line breaks."
+msgstr ""
+
+#: internal/modules/mysql/rootpassword.go:43
+#: internal/modules/mysql/rootpassword.go:47
+#: internal/modules/mysql/rootpassword.go:51
 msgid "Error changing MySQL root password: %(error)s"
 msgstr "更改 MySQL root 密码时出错：%(error)s"
 
-#: internal/modules/mysql/rootpassword.go:56
+#: internal/modules/mysql/rootpassword.go:61
 msgid "Password changed but failed to update stored configuration."
 msgstr "密码已更改，但无法更新已保存的配置。"
 
-#: internal/modules/mysql/rootpassword.go:61
+#: internal/modules/mysql/rootpassword.go:66
 msgid "Successfully changed root password."
 msgstr "Root 密码已成功更改。"
 
@@ -4859,15 +4850,11 @@ msgstr "无索引连接表的查询"
 msgid "Slow queries"
 msgstr "慢查询"
 
-#: internal/modules/mysql/users.go:114
-msgid "Successfully created a database user %(db_user)s"
-msgstr "数据库用户 %(db_user)s 已成功创建"
-
-#: internal/modules/mysql/users.go:169
+#: internal/modules/mysql/users.go:170
 msgid "Error deleting user: %(error)s"
 msgstr "删除用户时出错：%(error)s"
 
-#: internal/modules/mysql/users.go:217
+#: internal/modules/mysql/users.go:218
 msgid "Error changing password: %(error)s"
 msgstr "更改密码时出错：%(error)s"
 
@@ -4992,11 +4979,11 @@ msgstr "无法启动 PHP %(service)s：%(message)s"
 msgid "Could not read PHP %(version)s info: %(message)s"
 msgstr ""
 
-#: internal/modules/php/ini.go:69
+#: internal/modules/php/ini.go:74
 msgid "Error saving %(text)s php.ini file!"
 msgstr "保存 %(text)s 的 php.ini 文件时出错！"
 
-#: internal/modules/php/ini.go:76
+#: internal/modules/php/ini.go:81
 msgid ""
 "PHP.INI file for %(text)s version %(version)s edited successfully, and "
 "%(container_to_restart)s service reloaded to apply."
@@ -5004,7 +4991,7 @@ msgstr ""
 "%(text)s 版本 %(version)s 的 PHP.INI 文件已成功编辑，%(container_to_restart)s "
 "服务已重新加载以应用更改。"
 
-#: internal/modules/php/ini.go:78
+#: internal/modules/php/ini.go:83
 msgid ""
 "PHP.INI file for %(text)s version %(version)s edited successfully, and "
 "%(container_to_restart)s service restarted to apply."
@@ -5012,27 +4999,27 @@ msgstr ""
 "%(text)s %(version)s 版本的 PHP.INI 文件已成功编辑，并已重启 %(container_to_restart)s "
 "服务以应用更改。"
 
-#: internal/modules/php/ini.go:82
+#: internal/modules/php/ini.go:87
 msgid "PHP.INI file for %(text)s version %(version)s edited successfully."
 msgstr "%(text)s %(version)s 版本的 PHP.INI 文件已成功编辑。"
 
-#: internal/modules/php/options.go:265
+#: internal/modules/php/options.go:274
 msgid "Could not save PHP %(version)s configuration: %(err_msg)s"
 msgstr "无法保存 PHP %(version)s 配置：%(err_msg)s"
 
-#: internal/modules/php/options.go:280
+#: internal/modules/php/options.go:289
 msgid ""
 "Configuration edited successfully and %(text)s reloaded to apply new "
 "settings."
 msgstr "配置已成功编辑，%(text)s 已重新加载以应用新设置。"
 
-#: internal/modules/php/options.go:282
+#: internal/modules/php/options.go:291
 msgid ""
 "Configuration edited successfully and %(text)s service restarted to apply "
 "new settings."
 msgstr "配置已成功编辑，并已重启 %(text)s 服务以应用新设置。"
 
-#: internal/modules/php/options.go:284
+#: internal/modules/php/options.go:293
 msgid ""
 "Configuration edited successfully, but %(text)s failed to restart. Try "
 "restarting it manually from Services."
@@ -5053,7 +5040,7 @@ msgstr "无法生成自动登录令牌。"
 msgid "Default PHP version"
 msgstr "默认PHP版本"
 
-#: internal/modules/phpapp/render.go:31
+#: internal/modules/phpapp/render.go:20
 #: internal/web/templates/manager/php_install.html:9
 msgid "Install PHP Application"
 msgstr "安装 PHP 应用"
@@ -5111,11 +5098,7 @@ msgid ""
 "finish before creating a database."
 msgstr "Postgres 服务尚未就绪。请等待安装完成后再创建数据库。"
 
-#: internal/modules/postgresql/databases.go:174
-msgid "Successfully created a PostgreSQL database %(database_name)s"
-msgstr "PostgreSQL 数据库 %(database_name)s 已成功创建"
-
-#: internal/modules/postgresql/databases.go:212
+#: internal/modules/postgresql/databases.go:211
 msgid "Successfully deleted a PostgreSQL database %(database_name)s"
 msgstr "PostgreSQL 数据库 %(database_name)s 已成功删除"
 
@@ -5152,22 +5135,18 @@ msgstr "端口已更改，但 PostgreSQL 服务重启失败。请尝试在\"服�
 msgid "PostgreSQL Databases"
 msgstr "PostgreSQL 数据库"
 
-#: internal/modules/postgresql/render.go:97
+#: internal/modules/postgresql/render.go:98
 #: internal/web/templates/psql/users.html:9 static/js/tour-steps.js:912
 msgid "PostgreSQL Users"
 msgstr "PostgreSQL 用户"
 
-#: internal/modules/postgresql/render.go:234
+#: internal/modules/postgresql/render.go:239
 msgid "Remote PostgreSQL"
 msgstr "远程 PostgreSQL"
 
-#: internal/modules/postgresql/render.go:258
+#: internal/modules/postgresql/render.go:263
 msgid "Edit PostgreSQL configuration"
 msgstr "编辑 PostgreSQL 配置"
-
-#: internal/modules/postgresql/users.go:106
-msgid "Successfully created a PostgreSQL user %(db_user)s"
-msgstr "PostgreSQL 用户 %(db_user)s 已成功创建"
 
 #: internal/modules/postgresql/wizard.go:103
 msgid "Database and user created, but failed to grant privileges: %(error)s"
@@ -5193,7 +5172,7 @@ msgstr "暂无资源使用数据。请稍后重试"
 
 #: internal/modules/services/render.go:51
 #: internal/modules/services/render.go:52
-#: internal/web/templates/emails/migrate.html:140
+#: internal/web/templates/emails/migrate.html:202
 msgid "Running"
 msgstr "运行中"
 
@@ -5208,7 +5187,7 @@ msgstr "启动中"
 #: internal/modules/services/render.go:55
 #: internal/web/templates/dashboard/onboarding.html:533
 #: internal/web/templates/dashboard/onboarding.html:564
-#: internal/web/templates/docker/containers.html:466
+#: internal/web/templates/docker/containers.html:467
 #: internal/web/templates/manager/drupal_app.html:189
 #: internal/web/templates/manager/joomla_app.html:84
 #: internal/web/templates/manager/moodle_app.html:82
@@ -5326,31 +5305,31 @@ msgstr "点击以禁用"
 msgid "Click to Enable"
 msgstr "点击启用"
 
-#: internal/modules/services/services.go:120
+#: internal/modules/services/services.go:125
 msgid "%(service)s service is now restarted."
 msgstr "%(service)s 服务已重启。"
 
-#: internal/modules/services/services.go:124
+#: internal/modules/services/services.go:129
 msgid "Failed to restart the %(service)s service."
 msgstr "无法重启 %(service)s 服务。"
 
-#: internal/modules/services/services.go:130
+#: internal/modules/services/services.go:135
 msgid "%(service)s service is now disabled."
 msgstr "%(service)s 服务现已停用。"
 
-#: internal/modules/services/services.go:131
+#: internal/modules/services/services.go:136
 msgid "Failed to stop the %(service)s service."
 msgstr "无法停止 %(service)s 服务。"
 
-#: internal/modules/services/services.go:134
+#: internal/modules/services/services.go:139
 msgid "%(service)s service is now enabled."
 msgstr "%(service)s 服务现已启用。"
 
-#: internal/modules/services/services.go:135
+#: internal/modules/services/services.go:140
 msgid "Failed to start the %(service)s service."
 msgstr "无法启动 %(service)s 服务。"
 
-#: internal/modules/services/services.go:142
+#: internal/modules/services/services.go:147
 msgid "%(fail_msg)s Try restart."
 msgstr "%(fail_msg)s 请尝试重启。"
 
@@ -5422,85 +5401,87 @@ msgstr "回收站中的项目将在 %(days)s 天后自动删除。"
 msgid "Invalid directory."
 msgstr "无效的目录。"
 
-#: internal/modules/waf/default_all.go:93
+#: internal/modules/waf/default_all.go:101
 msgid "Invalid action."
 msgstr "无效的操作。"
 
-#: internal/modules/waf/default_all.go:100
+#: internal/modules/waf/default_all.go:108
 msgid "Could not save the default for new domains."
 msgstr "无法保存新域名的默认设置。"
 
-#: internal/modules/waf/default_all.go:121
+#: internal/modules/waf/default_all.go:129
 msgid "Settings saved but reloading the web server failed."
 msgstr "设置已保存，但重新加载 Web 服务器失败。"
 
-#: internal/modules/waf/default_all.go:123
+#: internal/modules/waf/default_all.go:131
 msgid "Could not update: %(domains)s"
 msgstr "无法更新：%(domains)s"
 
-#: internal/modules/waf/default_all.go:125
+#: internal/modules/waf/default_all.go:133
 msgid "The firewall is now on for all your domains and for new domains."
 msgstr "防火墙现已为您的所有域名和新域名开启。"
 
-#: internal/modules/waf/default_all.go:127
+#: internal/modules/waf/default_all.go:135
 msgid "The firewall is now off for all your domains and for new domains."
 msgstr "防火墙现已为您的所有域名和新域名关闭。"
 
-#: internal/modules/waf/disable_rule.go:73
-#: internal/modules/waf/disable_rule.go:138
-#: internal/modules/waf/disable_rule.go:168
+#: internal/modules/waf/disable_rule.go:70
+#: internal/modules/waf/disable_rule.go:132
+#: internal/modules/waf/disable_rule.go:162
 #: internal/modules/waf/profiles.go:320
 msgid "internal error"
 msgstr "内部错误"
 
-#: internal/modules/waf/disable_rule.go:177
+#: internal/modules/waf/disable_rule.go:171
 #: internal/web/templates/system/waf_domain.html:233
 msgid "Could not clear the log."
 msgstr "无法清空日志。"
 
-#: internal/modules/waf/handlers_domain.go:61
+#: internal/modules/waf/handlers_domain.go:77
 msgid "Error: IDs should only contain numbers separated by spaces."
 msgstr "错误：ID 只能包含以空格分隔的数字。"
 
-#: internal/modules/waf/handlers_domain.go:75
+#: internal/modules/waf/handlers_domain.go:83
+msgid "Error: tags can only contain letters, numbers and . _ / : -"
+msgstr ""
+
+#: internal/modules/waf/handlers_domain.go:95
 msgid "WAF configuration updated."
 msgstr "WAF 配置已更新。"
 
-#: internal/modules/waf/handlers_domain.go:78
-#: internal/modules/waf/handlers_domain.go:82
+#: internal/modules/waf/handlers_domain.go:98
 msgid "Error updating WAF!"
 msgstr "更新 WAF 时出错！"
 
-#: internal/modules/waf/handlers_domain.go:86
+#: internal/modules/waf/handlers_domain.go:102
 msgid "Configuration file not found."
 msgstr "未找到配置文件。"
 
-#: internal/modules/waf/handlers_list.go:88
+#: internal/modules/waf/handlers_list.go:87
 msgid "WAF for domain: %(domain_name)s is now %(status_text)s"
 msgstr "域名 %(domain_name)s 的 WAF 现为 %(status_text)s"
 
-#: internal/modules/waf/handlers_list.go:91
-#: internal/modules/waf/handlers_list.go:95
+#: internal/modules/waf/handlers_list.go:90
 msgid "Error changing WAF status."
 msgstr "更改 WAF 状态时出错。"
 
-#: internal/modules/waf/handlers_list.go:99
+#: internal/modules/waf/handlers_list.go:94
 msgid "Config file for %(domain_name)s not found"
 msgstr "未找到 %(domain_name)s 的配置文件"
 
-#: internal/modules/waf/handlers_list.go:144
+#: internal/modules/waf/handlers_list.go:139
 msgid "WAF is disabled for %(domain)s."
 msgstr "%(domain)s 的 WAF 已停用。"
 
-#: internal/modules/waf/handlers_list.go:149
+#: internal/modules/waf/handlers_list.go:144
 msgid "WAF is disabled for %(count)s domains."
 msgstr "%(count)s 个域名的 WAF 已停用。"
 
-#: internal/modules/waf/handlers_list.go:161
+#: internal/modules/waf/handlers_list.go:156
 msgid "Open"
 msgstr "打开"
 
-#: internal/modules/waf/handlers_list.go:162
+#: internal/modules/waf/handlers_list.go:157
 msgid ""
 "%(app)s found on %(domain)s. Turn on the %(app)s firewall profile to avoid "
 "false blocks."
@@ -5641,50 +5622,50 @@ msgid ""
 "isn't empty or cut off."
 msgstr "OpenLiteSpeed 完全无法加载此配置。请检查文件是否为空或被截断。"
 
-#: internal/modules/webserverconf/handlers.go:82
+#: internal/modules/webserverconf/handlers.go:83
 msgid "No default configuration is available for %(service_name)s."
 msgstr "%(service_name)s 没有可用的默认配置。"
 
-#: internal/modules/webserverconf/handlers.go:88
-#: internal/modules/webserverconf/handlers.go:92
+#: internal/modules/webserverconf/handlers.go:89
+#: internal/modules/webserverconf/handlers.go:93
 msgid "Error restoring %(conf_file)s: %(error)s"
 msgstr "恢复 %(conf_file)s 时出错：%(error)s"
 
-#: internal/modules/webserverconf/handlers.go:106
+#: internal/modules/webserverconf/handlers.go:107
 msgid "Error writing to %(conf_file)s: %(error)s"
 msgstr "写入 %(conf_file)s 时出错：%(error)s"
 
-#: internal/modules/webserverconf/handlers.go:117
+#: internal/modules/webserverconf/handlers.go:118
 msgid ""
 "Configuration was not saved, the %(service_name)s config test found a "
 "problem. Your changes are still in the editor."
 msgstr "配置未保存，%(service_name)s 配置测试发现了问题。您的更改仍在编辑器中。"
 
-#: internal/modules/webserverconf/handlers.go:129
+#: internal/modules/webserverconf/handlers.go:130
 msgid ""
 "Changes were saved to %(conf_file)s, but reloading the %(service_name)s "
 "container failed: %(error)s"
 msgstr "更改已保存到 %(conf_file)s，但重新加载 %(service_name)s 容器失败：%(error)s"
 
-#: internal/modules/webserverconf/handlers.go:133
+#: internal/modules/webserverconf/handlers.go:134
 msgid ""
 "Restored %(conf_file)s to the default configuration and %(service_name)s "
 "container reloaded successfully."
 msgstr "%(conf_file)s 已恢复为默认配置，%(service_name)s 容器已成功重新加载。"
 
-#: internal/modules/webserverconf/handlers.go:135
+#: internal/modules/webserverconf/handlers.go:136
 msgid ""
 "Changes saved to %(conf_file)s and %(service_name)s container reloaded "
 "successfully."
 msgstr "更改已保存到 %(conf_file)s，%(service_name)s 容器已成功重新加载。"
 
-#: internal/modules/webserverconf/handlers.go:143
+#: internal/modules/webserverconf/handlers.go:144
 msgid ""
 "Restored %(conf_file)s to the default configuration - the %(service_name)s "
 "container is not running."
 msgstr "%(conf_file)s 已恢复为默认配置 - %(service_name)s 容器未运行。"
 
-#: internal/modules/webserverconf/handlers.go:145
+#: internal/modules/webserverconf/handlers.go:146
 msgid ""
 "Changes saved to %(conf_file)s - the %(service_name)s container is not "
 "running."
@@ -6057,26 +6038,26 @@ msgstr "%(action_title)s：所选的 %(total)s 个项目中有 %(failed)s 个失
 msgid "Not authenticated."
 msgstr "未通过身份验证。"
 
-#: internal/web/dbengine.go:14
+#: internal/web/dbengine.go:47
 msgid ""
 "Create a new database to store and organize data, providing a foundational "
 "structure for applications to manage and retrieve information efficiently."
 msgstr "创建新数据库以存储和组织数据，为应用程序高效管理和检索信息提供基础结构。"
 
-#: internal/web/dbengine.go:16
+#: internal/web/dbengine.go:49
 msgid ""
 "View and modify the MySQL service configuration. Any changes will restart "
 "the service."
 msgstr "查看和修改MySQL服务配置。任何更改都将重启服务。"
 
-#: internal/web/dbengine.go:20
+#: internal/web/dbengine.go:53
 msgid ""
 "Create a new PostgreSQL database to store and organize data, providing a "
 "foundational structure for applications to manage and retrieve information "
 "efficiently."
 msgstr "创建新的 PostgreSQL 数据库以存储和组织数据，为应用程序高效管理和检索信息提供基础结构。"
 
-#: internal/web/dbengine.go:22
+#: internal/web/dbengine.go:55
 msgid ""
 "View and modify the PostgreSQL service configuration. Any changes will "
 "restart the service."
@@ -6109,7 +6090,11 @@ msgstr "文件编辑器"
 msgid "Monitor & Secure"
 msgstr "监控与安全"
 
-#: internal/web/sidebar.go:389 internal/web/templates/mysql/wizard.html:74
+#: internal/web/sidebar.go:389 internal/web/templates/emails/migrate.html:142
+#: internal/web/templates/mysql/wizard.html:74
+#: internal/web/templates/partials/_account_created.html:49
+#: internal/web/templates/partials/_account_created.html:57
+#: internal/web/templates/partials/_account_created.html:166
 msgid "Server"
 msgstr "服务器"
 
@@ -6212,6 +6197,7 @@ msgstr "警告"
 #: internal/web/templates/files/filemanager_partials.html:651
 #: internal/web/templates/manager/git.html:38
 #: internal/web/templates/mysql/databases.html:595
+#: internal/web/templates/partials/_account_created.html:14
 #: internal/web/templates/partials/_ai_assistant.html:52
 #: internal/web/templates/system/cronjobs.html:447
 msgid "Close"
@@ -6220,8 +6206,8 @@ msgstr "关闭"
 #: internal/web/templates/base.html:71
 #: internal/web/templates/docker/container_form.html:293
 #: internal/web/templates/docker/delete_confirm.html:46
-#: internal/web/templates/domains/dns.html:232
-#: internal/web/templates/domains/dns.html:546
+#: internal/web/templates/domains/dns.html:238
+#: internal/web/templates/domains/dns.html:596
 #: internal/web/templates/domains/domains.html:239
 #: internal/web/templates/domains/domains.html:269
 #: internal/web/templates/domains/dynamic_dns.html:22
@@ -6229,7 +6215,7 @@ msgstr "关闭"
 #: internal/web/templates/domains/dynamic_dns.html:134
 #: internal/web/templates/emails/alias_delete.html:27
 #: internal/web/templates/emails/delete.html:30
-#: internal/web/templates/emails/migrate.html:28
+#: internal/web/templates/emails/migrate.html:29
 #: internal/web/templates/files/backup_restore.html:927
 #: internal/web/templates/files/backup_restore.html:990
 #: internal/web/templates/files/clamav/quarantine.html:134
@@ -6552,8 +6538,9 @@ msgid "Domain Name"
 msgstr "域名"
 
 #: internal/web/templates/cache/service.html:206
-#: internal/web/templates/docker/containers.html:270
+#: internal/web/templates/docker/containers.html:271
 #: internal/web/templates/manager/python_node_apps.html:393
+#: internal/web/templates/partials/_account_created.html:109
 #: internal/web/templates/partials/_search.html:68
 #: internal/web/templates/system/cronjobs.html:103
 #: internal/web/templates/system/cronjobs.html:282
@@ -6574,44 +6561,21 @@ msgid "Edit limits"
 msgstr "编辑限制"
 
 #: internal/web/templates/cache/service.html:231
-#: internal/web/templates/mongodb/processlist.html:32
-#: internal/web/templates/mysql/processlist.html:32
-#: internal/web/templates/system/services.html:113
-msgid "ID"
-msgstr "ID"
-
-#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/docker/container_form.html:89
-#: internal/web/templates/docker/containers.html:61
-#: internal/web/templates/docker/containers.html:90
+#: internal/web/templates/docker/containers.html:62
+#: internal/web/templates/docker/containers.html:91
 #: internal/web/templates/domains/dns.html:147
 #: internal/web/templates/domains/dns.html:162
 #: internal/web/templates/files/filemanager_partials.html:456
 #: internal/web/templates/files/trash_partials.html:22
 #: internal/web/templates/manager/app_install.html:122
 #: internal/web/templates/manager/python_node_apps.html:394
+#: internal/web/templates/partials/_account_created.html:110
 #: internal/web/templates/system/services.html:113
 #: internal/web/templates/user/mcp.html:41
 #: internal/web/templates/user/passkeys.html:35
 msgid "Name"
 msgstr "名称"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/dashboard/usage.html:208
-#: internal/web/templates/docker/containers.html:62
-#: internal/web/templates/docker/containers.html:94
-#: internal/web/templates/partials/_service_js.html:22
-#: internal/web/templates/system/services.html:113 static/js/tour-steps.js:549
-msgid "CPU Usage"
-msgstr "CPU使用率"
-
-#: internal/web/templates/cache/service.html:231
-#: internal/web/templates/dashboard/usage.html:239
-#: internal/web/templates/docker/containers.html:63
-#: internal/web/templates/docker/containers.html:97
-#: internal/web/templates/system/services.html:113
-msgid "Memory Usage"
-msgstr "内存使用情况"
 
 #: internal/web/templates/cache/service.html:231
 #: internal/web/templates/partials/_service_js.html:24
@@ -6621,14 +6585,38 @@ msgid "Memory %"
 msgstr "内存占用率"
 
 #: internal/web/templates/cache/service.html:231
+#: internal/web/templates/dashboard/usage.html:208
+#: internal/web/templates/docker/containers.html:63
+#: internal/web/templates/docker/containers.html:95
+#: internal/web/templates/partials/_service_js.html:22
+#: internal/web/templates/system/services.html:113 static/js/tour-steps.js:549
+msgid "CPU Usage"
+msgstr "CPU使用率"
+
+#: internal/web/templates/cache/service.html:231
+#: internal/web/templates/dashboard/usage.html:239
+#: internal/web/templates/docker/containers.html:64
+#: internal/web/templates/docker/containers.html:98
+#: internal/web/templates/system/services.html:113
+msgid "Memory Usage"
+msgstr "内存使用情况"
+
+#: internal/web/templates/cache/service.html:231
+#: internal/web/templates/mongodb/processlist.html:32
+#: internal/web/templates/mysql/processlist.html:32
+#: internal/web/templates/system/services.html:113
+msgid "ID"
+msgstr "ID"
+
+#: internal/web/templates/cache/service.html:231
 #: internal/web/templates/partials/_service_js.html:25
 #: internal/web/templates/system/services.html:113
 msgid "Network I/O"
 msgstr "网络I/O"
 
 #: internal/web/templates/cache/service.html:231
-#: internal/web/templates/docker/containers.html:64
-#: internal/web/templates/docker/containers.html:101
+#: internal/web/templates/docker/containers.html:65
+#: internal/web/templates/docker/containers.html:102
 #: internal/web/templates/partials/_service_js.html:26
 #: internal/web/templates/system/services.html:113
 msgid "Block I/O"
@@ -6807,31 +6795,33 @@ msgstr "信息"
 
 #: internal/web/templates/dashboard/information.html:33
 #: internal/web/templates/emails/info.html:26
-#: internal/web/templates/emails/migrate.html:59
+#: internal/web/templates/emails/migrate.html:97
 #: internal/web/templates/emails/new.html:36
-#: internal/web/templates/files/ftp.html:56
-#: internal/web/templates/files/ftp.html:84
+#: internal/web/templates/files/ftp.html:58
+#: internal/web/templates/files/ftp.html:86
 #: internal/web/templates/files/ftp_new.html:29
 #: internal/web/templates/manager/_cms_install_shared.html:380
 #: internal/web/templates/manager/git.html:42
 #: internal/web/templates/manager/joomla_install.html:30
 #: internal/web/templates/manager/ojs_install.html:40
 #: internal/web/templates/manager/wp/install.html:111
-#: internal/web/templates/mongodb/mongodb_user.html:23
-#: internal/web/templates/mongodb/mongodb_user.html:25
+#: internal/web/templates/mongodb/mongodb_user.html:26
+#: internal/web/templates/mongodb/mongodb_user.html:28
 #: internal/web/templates/mongodb/password.html:21
 #: internal/web/templates/mongodb/users.html:44
-#: internal/web/templates/mysql/mysql_user.html:23
 #: internal/web/templates/mysql/mysql_user.html:26
+#: internal/web/templates/mysql/mysql_user.html:29
 #: internal/web/templates/mysql/password.html:21
 #: internal/web/templates/mysql/remote_mysql.html:153
 #: internal/web/templates/mysql/remote_mysql.html:177
 #: internal/web/templates/mysql/users.html:76
 #: internal/web/templates/mysql/wizard.html:72
+#: internal/web/templates/partials/_account_created.html:38
+#: internal/web/templates/partials/_account_created.html:157
 #: internal/web/templates/partials/site_manager_shared.html:977
 #: internal/web/templates/psql/password.html:21
-#: internal/web/templates/psql/psql_user.html:23
-#: internal/web/templates/psql/psql_user.html:25
+#: internal/web/templates/psql/psql_user.html:26
+#: internal/web/templates/psql/psql_user.html:28
 #: internal/web/templates/psql/users.html:60
 #: internal/web/templates/user/account.html:68
 #: internal/web/templates/user/login.html:16
@@ -7116,6 +7106,7 @@ msgstr "使用文件管理器上传您的网站文件。"
 #: internal/web/templates/dashboard/onboarding.html:399
 #: internal/web/templates/mongodb/wizard.html:24
 #: internal/web/templates/mysql/wizard.html:183
+#: internal/web/templates/partials/_db_created.html:63
 #: internal/web/templates/psql/wizard.html:24
 msgid "Create a database"
 msgstr "创建数据库"
@@ -7146,7 +7137,7 @@ msgstr "请稍候…"
 
 #: internal/web/templates/dashboard/onboarding.html:532
 #: internal/web/templates/dashboard/onboarding.html:563
-#: internal/web/templates/docker/containers.html:137
+#: internal/web/templates/docker/containers.html:138
 #: internal/web/templates/manager/drupal_app.html:186
 #: internal/web/templates/manager/joomla_app.html:81
 #: internal/web/templates/manager/moodle_app.html:79
@@ -7172,7 +7163,7 @@ msgstr "请求将直接发送到您的 Web 服务器，前端不设缓存层。"
 
 #: internal/web/templates/dashboard/onboarding.html:537
 #: internal/web/templates/domains/domains.html:289
-#: internal/web/templates/emails/migrate.html:51
+#: internal/web/templates/emails/migrate.html:86
 #: internal/web/templates/manager/wp/_shared.html:205
 #: internal/web/templates/system/waf.html:141
 #: internal/web/templates/system/waf.html:208
@@ -7250,10 +7241,6 @@ msgid ""
 msgstr "完全受支持 —— 如果您的应用尚未在最新版本上测试，可使用此版本。"
 
 #: internal/web/templates/dashboard/onboarding.html:768
-msgid "Step"
-msgstr "步骤"
-
-#: internal/web/templates/dashboard/onboarding.html:768
 #: internal/web/templates/domains/domains.html:434
 #: internal/web/templates/manager/wp/_caching.html:290
 #: internal/web/templates/system/error_logs.html:96
@@ -7261,6 +7248,13 @@ msgstr "步骤"
 #: internal/web/templates/user/history_usage.html:96
 msgid "of"
 msgstr "共"
+
+#: internal/web/templates/dashboard/onboarding.html:768
+#: internal/web/templates/emails/migrate.html:40
+#: internal/web/templates/emails/migrate.html:47
+#: internal/web/templates/emails/migrate.html:54
+msgid "Step"
+msgstr "步骤"
 
 #: internal/web/templates/dashboard/onboarding.html:837
 msgid "Please choose a webserver, or click Skip."
@@ -7452,16 +7446,16 @@ msgid "read the documentation"
 msgstr "请查阅文档"
 
 #: internal/web/templates/db/configuration.html:19
-#: internal/web/templates/docker/containers.html:45
+#: internal/web/templates/docker/containers.html:46
 #: internal/web/templates/domains/dns.html:91
 #: internal/web/templates/domains/domains.html:57
 #: internal/web/templates/domains/logs.html:81
-#: internal/web/templates/emails/accounts.html:19
+#: internal/web/templates/emails/accounts.html:21
 #: internal/web/templates/emails/aliases.html:19
 #: internal/web/templates/emails/deliverability.html:16
 #: internal/web/templates/files/backup_restore.html:702
 #: internal/web/templates/files/clamav/quarantine.html:28
-#: internal/web/templates/files/ftp.html:41
+#: internal/web/templates/files/ftp.html:43
 #: internal/web/templates/manager/autoinstaller.html:19
 #: internal/web/templates/manager/git.html:159
 #: internal/web/templates/manager/git.html:424
@@ -7498,7 +7492,7 @@ msgid "Search"
 msgstr "搜索"
 
 #: internal/web/templates/db/configuration.html:26
-#: internal/web/templates/domains/dns.html:713
+#: internal/web/templates/domains/dns.html:774
 #: internal/web/templates/domains/vhost.html:27
 #: internal/web/templates/partials/_db_tuning.html:100
 #: internal/web/templates/php/ini_editor.html:24
@@ -7543,13 +7537,13 @@ msgstr "价值"
 msgid "Create a Database"
 msgstr "创建数据库"
 
-#: internal/web/templates/db/new.html:23 internal/web/templates/db/new.html:27
+#: internal/web/templates/db/new.html:26 internal/web/templates/db/new.html:30
 #: internal/web/templates/files/backup_restore.html:762
 #: internal/web/templates/manager/_cms_app_shared.html:975
 #: internal/web/templates/manager/wp/single.html:1675
 #: internal/web/templates/mongodb/databases.html:53
-#: internal/web/templates/mongodb/new.html:21
-#: internal/web/templates/mongodb/new.html:23
+#: internal/web/templates/mongodb/new.html:24
+#: internal/web/templates/mongodb/new.html:26
 #: internal/web/templates/mongodb/wizard.html:27
 #: internal/web/templates/mysql/databases.html:202
 #: internal/web/templates/mysql/wizard.html:193
@@ -7558,17 +7552,17 @@ msgstr "创建数据库"
 msgid "Database Name"
 msgstr "数据库名称"
 
-#: internal/web/templates/db/new.html:27
-#: internal/web/templates/mongodb/new.html:23
+#: internal/web/templates/db/new.html:30
+#: internal/web/templates/mongodb/new.html:26
 #: internal/web/templates/mongodb/wizard.html:27
 #: internal/web/templates/mysql/wizard.html:190
 #: internal/web/templates/psql/wizard.html:27
 msgid "Only letters, numbers, and underscores are allowed (1-63 characters)."
 msgstr "仅允许使用字母、数字和下划线（1-63 个字符）。"
 
-#: internal/web/templates/db/new.html:43
+#: internal/web/templates/db/new.html:46
 #: internal/web/templates/mongodb/assign.html:53
-#: internal/web/templates/mongodb/new.html:39
+#: internal/web/templates/mongodb/new.html:42
 #: internal/web/templates/mongodb/remove.html:53
 #: internal/web/templates/mongodb/wizard.html:117
 #: internal/web/templates/mysql/assign.html:80
@@ -7639,7 +7633,7 @@ msgid "Change tag"
 msgstr "更改标签"
 
 #: internal/web/templates/docker/change_images.html:109
-#: internal/web/templates/domains/dns.html:789
+#: internal/web/templates/domains/dns.html:850
 #: internal/web/templates/domains/dynamic_dns.html:6
 msgid "Select DNS Zone Header"
 msgstr "选择 DNS 区域标题"
@@ -7667,14 +7661,14 @@ msgid "Choose the database server for your MySQL databases."
 msgstr "为您的 MySQL 数据库选择数据库服务器。"
 
 #: internal/web/templates/docker/change_mysql.html:21
-msgid ""
-"To switch the database server, first remove all databases from your account."
-msgstr "要切换数据库服务器，请先从您的账户中删除所有数据库。"
-
-#: internal/web/templates/docker/change_mysql.html:21
 #: internal/web/templates/partials/_db_tuning.html:31
 msgid "Databases:"
 msgstr "数据库："
+
+#: internal/web/templates/docker/change_mysql.html:21
+msgid ""
+"To switch the database server, first remove all databases from your account."
+msgstr "要切换数据库服务器，请先从您的账户中删除所有数据库。"
 
 #: internal/web/templates/docker/change_mysql.html:21
 msgid "Go to Databases"
@@ -7707,13 +7701,13 @@ msgid "Change Webserver"
 msgstr "更改 Web 服务器"
 
 #: internal/web/templates/docker/change_webserver.html:21
-msgid "To switch the webserver, first remove all domains from your account."
-msgstr "要切换 Web 服务器，请先从您的账户中删除所有域名。"
-
-#: internal/web/templates/docker/change_webserver.html:21
 #: internal/web/templates/partials/_db_tuning.html:33
 msgid "Domains:"
 msgstr "域名："
+
+#: internal/web/templates/docker/change_webserver.html:21
+msgid "To switch the webserver, first remove all domains from your account."
+msgstr "要切换 Web 服务器，请先从您的账户中删除所有域名。"
 
 #: internal/web/templates/docker/change_webserver.html:21
 msgid "Go to Domains"
@@ -7788,6 +7782,7 @@ msgstr "CPU 核心数"
 
 #: internal/web/templates/docker/container_form.html:122
 #: internal/web/templates/manager/app_install.html:424
+#: internal/web/templates/partials/_account_created.html:117
 msgid "Memory"
 msgstr "内存"
 
@@ -8006,11 +8001,11 @@ msgstr "正在启动容器"
 msgid "Pointing the domain to the container"
 msgstr "正在将域名指向容器"
 
-#: internal/web/templates/docker/container_form.html:480
+#: internal/web/templates/docker/container_form.html:479
 msgid "The server stopped responding before the container was created."
 msgstr "服务器在容器创建完成前停止响应。"
 
-#: internal/web/templates/docker/container_form.html:482
+#: internal/web/templates/docker/container_form.html:481
 msgid "Connection lost while creating the container."
 msgstr "创建容器时连接中断。"
 
@@ -8031,10 +8026,10 @@ msgstr "总CPU："
 msgid "Total Memory:"
 msgstr "总内存："
 
-#: internal/web/templates/docker/containers.html:56
+#: internal/web/templates/docker/containers.html:57
 #: internal/web/templates/domains/domains.html:70
 #: internal/web/templates/domains/logs.html:96
-#: internal/web/templates/files/ftp.html:52
+#: internal/web/templates/files/ftp.html:54
 #: internal/web/templates/manager/git.html:163
 #: internal/web/templates/system/process_manager.html:51
 #: internal/web/templates/system/waf_logs.html:51 static/js/tour-steps.js:211
@@ -8042,22 +8037,22 @@ msgstr "总内存："
 msgid "Show Columns"
 msgstr "显示列"
 
-#: internal/web/templates/docker/containers.html:65
-#: internal/web/templates/docker/containers.html:104
+#: internal/web/templates/docker/containers.html:66
+#: internal/web/templates/docker/containers.html:105
 msgid "Net I/O"
 msgstr "网络I/O"
 
-#: internal/web/templates/docker/containers.html:68
-#: internal/web/templates/docker/containers.html:115
+#: internal/web/templates/docker/containers.html:69
+#: internal/web/templates/docker/containers.html:116
 #: internal/web/templates/domains/dns.html:151
 #: internal/web/templates/domains/domains.html:93
 #: internal/web/templates/domains/domains.html:171
 #: internal/web/templates/files/backup_wizard.html:131
 #: internal/web/templates/files/clamav/quarantine.html:65
 #: internal/web/templates/files/disk_usage.html:64
-#: internal/web/templates/files/ftp.html:62
-#: internal/web/templates/files/ftp.html:107
-#: internal/web/templates/files/ftp.html:160
+#: internal/web/templates/files/ftp.html:64
+#: internal/web/templates/files/ftp.html:109
+#: internal/web/templates/files/ftp.html:162
 #: internal/web/templates/files/inodes.html:62
 #: internal/web/templates/manager/git.html:172
 #: internal/web/templates/manager/git.html:190
@@ -8081,55 +8076,56 @@ msgstr "网络I/O"
 msgid "Actions"
 msgstr "行动"
 
-#: internal/web/templates/docker/containers.html:76
+#: internal/web/templates/docker/containers.html:77
 #: static/js/tour-steps.js:489
 msgid "New Service"
 msgstr "新建服务"
 
-#: internal/web/templates/docker/containers.html:154
+#: internal/web/templates/docker/containers.html:155
 msgid "No container are currently running."
 msgstr "目前没有正在运行的容器。"
 
-#: internal/web/templates/docker/containers.html:270
+#: internal/web/templates/docker/containers.html:271
 msgid "is reaching its CPU/RAM/PIDs limit."
 msgstr "已接近其 CPU/内存/PID 限制。"
 
-#: internal/web/templates/docker/containers.html:272
+#: internal/web/templates/docker/containers.html:273
 msgid "are reaching their CPU/RAM/PIDs limit."
 msgstr "已接近其 CPU/内存/PID 限制。"
 
-#: internal/web/templates/docker/containers.html:274
+#: internal/web/templates/docker/containers.html:275
 msgid "containers are reaching their CPU/RAM/PIDs limit."
 msgstr "个容器已接近其 CPU/内存/PID 限制。"
 
-#: internal/web/templates/docker/containers.html:283
+#: internal/web/templates/docker/containers.html:284
 msgid "Error fetching docker stats for containers."
 msgstr "获取容器的Docker统计信息时出错。"
 
-#: internal/web/templates/docker/containers.html:339
+#: internal/web/templates/docker/containers.html:340
+#: internal/web/templates/partials/_account_created.html:111
 msgid "Image"
 msgstr "镜像"
 
-#: internal/web/templates/docker/containers.html:378
-#: internal/web/templates/docker/containers.html:422
+#: internal/web/templates/docker/containers.html:379
+#: internal/web/templates/docker/containers.html:423
 msgid "Usage:"
 msgstr "使用："
 
-#: internal/web/templates/docker/containers.html:383
-#: internal/web/templates/docker/containers.html:426
+#: internal/web/templates/docker/containers.html:384
+#: internal/web/templates/docker/containers.html:427
 msgid "Allocated:"
 msgstr "已分配："
 
-#: internal/web/templates/docker/containers.html:387
+#: internal/web/templates/docker/containers.html:388
 msgid "Max CPUs that this service can use. 0 = unlimited"
 msgstr "此服务可使用的最大 CPU 数。0 = 不限"
 
-#: internal/web/templates/docker/containers.html:388
-#: internal/web/templates/docker/containers.html:434
-#: internal/web/templates/docker/containers.html:461
+#: internal/web/templates/docker/containers.html:389
+#: internal/web/templates/docker/containers.html:435
+#: internal/web/templates/docker/containers.html:462
 #: internal/web/templates/domains/capitalize.html:100
-#: internal/web/templates/domains/dns.html:230
-#: internal/web/templates/domains/dns.html:545
+#: internal/web/templates/domains/dns.html:236
+#: internal/web/templates/domains/dns.html:595
 #: internal/web/templates/domains/domains.html:237
 #: internal/web/templates/domains/domains.html:267
 #: internal/web/templates/domains/dynamic_dns.html:101
@@ -8143,15 +8139,15 @@ msgstr "此服务可使用的最大 CPU 数。0 = 不限"
 msgid "Save"
 msgstr "保存"
 
-#: internal/web/templates/docker/containers.html:432
+#: internal/web/templates/docker/containers.html:433
 msgid "Max Memory that this service can use. 0 = unlimited"
 msgstr "此服务可使用的最大内存。0 = 不限"
 
-#: internal/web/templates/docker/containers.html:460
+#: internal/web/templates/docker/containers.html:461
 msgid "Max processes that this service can run. 0 = unlimited"
 msgstr "此服务可运行的最大进程数。0 = 不限"
 
-#: internal/web/templates/docker/containers.html:491
+#: internal/web/templates/docker/containers.html:492
 #: internal/web/templates/domains/dynamic_dns.html:202
 #: internal/web/templates/domains/vhost.html:22
 #: internal/web/templates/domains/vhost.html:23
@@ -8160,6 +8156,7 @@ msgstr "此服务可运行的最大进程数。0 = 不限"
 #: internal/web/templates/files/filemanager_partials.html:332
 #: internal/web/templates/files/filemanager_partials.html:403
 #: internal/web/templates/mysql/remote_mysql.html:206
+#: internal/web/templates/partials/_account_created.html:132
 #: internal/web/templates/system/cronjobs.html:357
 msgid "Edit"
 msgstr "编辑"
@@ -8321,7 +8318,7 @@ msgstr "选择一个活动服务以打开网页终端。"
 #: internal/web/templates/emails/new.html:274
 #: internal/web/templates/files/ftp_new.html:294
 #: internal/web/templates/manager/_cms_install_shared.html:402
-#: internal/web/templates/manager/app_install.html:794
+#: internal/web/templates/manager/app_install.html:783
 #: internal/web/templates/manager/php_install.html:430
 #: internal/web/templates/manager/wp/install.html:762
 msgid "No domains yet"
@@ -8332,7 +8329,7 @@ msgstr "暂无域名"
 #: internal/web/templates/emails/new.html:275
 #: internal/web/templates/files/ftp_new.html:295
 #: internal/web/templates/manager/_cms_install_shared.html:403
-#: internal/web/templates/manager/app_install.html:795
+#: internal/web/templates/manager/app_install.html:784
 #: internal/web/templates/manager/php_install.html:431
 #: internal/web/templates/manager/wp/install.html:763
 msgid "Add your first domain to get started"
@@ -8343,7 +8340,7 @@ msgstr "添加您的第一个域名以开始使用"
 #: internal/web/templates/emails/new.html:276
 #: internal/web/templates/files/ftp_new.html:296
 #: internal/web/templates/manager/_cms_install_shared.html:405
-#: internal/web/templates/manager/app_install.html:797
+#: internal/web/templates/manager/app_install.html:786
 #: internal/web/templates/manager/php_install.html:433
 #: internal/web/templates/manager/wp/install.html:764
 msgid "New domain"
@@ -8479,7 +8476,7 @@ msgstr "此操作不可逆，将删除所有现有DNS记录，然后恢复默认
 
 #: internal/web/templates/domains/dns.html:62
 #: internal/web/templates/domains/dns.html:135
-#: internal/web/templates/domains/dns.html:736
+#: internal/web/templates/domains/dns.html:797
 msgid "Reset Zone"
 msgstr "重置区域"
 
@@ -8493,7 +8490,7 @@ msgstr "DNS记录总数："
 
 #: internal/web/templates/domains/dns.html:87
 #: internal/web/templates/domains/logs.html:52
-#: internal/web/templates/files/ftp.html:23
+#: internal/web/templates/files/ftp.html:25
 #: internal/web/templates/files/ftp_connections.html:17
 #: internal/web/templates/user/active_sessions.html:18
 msgid "Records Table"
@@ -8509,7 +8506,7 @@ msgid "Export Zone"
 msgstr "出口专区"
 
 #: internal/web/templates/domains/dns.html:127
-#: internal/web/templates/domains/dns.html:727
+#: internal/web/templates/domains/dns.html:788
 #: internal/web/templates/system/error_logs.html:49
 msgid "Reset"
 msgstr "重置"
@@ -8521,7 +8518,7 @@ msgid "TTL"
 msgstr "TTL"
 
 #: internal/web/templates/domains/dns.html:150
-#: internal/web/templates/domains/dns.html:182
+#: internal/web/templates/domains/dns.html:175
 msgid "Record"
 msgstr "记录"
 
@@ -8529,69 +8526,61 @@ msgstr "记录"
 msgid "Only letters, numbers, and the characters . @ _ - are allowed."
 msgstr "仅允许使用字母、数字以及 . @ _ - 等字符。"
 
-#: internal/web/templates/domains/dns.html:169
-msgid "A"
-msgstr "A"
-
-#: internal/web/templates/domains/dns.html:170
-msgid "AAAA"
-msgstr "AAAA"
-
-#: internal/web/templates/domains/dns.html:171
-msgid "CAA"
-msgstr "CAA"
-
-#: internal/web/templates/domains/dns.html:172
-msgid "CNAME"
-msgstr "CNAME"
-
-#: internal/web/templates/domains/dns.html:173
-msgid "MX"
-msgstr "MX"
-
 #: internal/web/templates/domains/dns.html:174
-msgid "SRV"
-msgstr "SRV"
-
-#: internal/web/templates/domains/dns.html:175
-msgid "TLSA"
-msgstr "TLSA"
-
-#: internal/web/templates/domains/dns.html:176
-msgid "TXT"
-msgstr "TXT"
-
-#: internal/web/templates/domains/dns.html:181
-#: internal/web/templates/domains/dns.html:286
+#: internal/web/templates/domains/dns.html:340
 msgid "Priority"
 msgstr "优先级别"
 
-#: internal/web/templates/domains/dns.html:189
-#: internal/web/templates/domains/dns.html:350
+#: internal/web/templates/domains/dns.html:178
+msgid "Policy for mail that fails the check"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:180
+msgid "none: only report"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:181
+msgid "quarantine: send to spam"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:182
+msgid "reject: refuse the message"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:185
+msgid "Email for reports (optional)"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:195
+#: internal/web/templates/domains/dns.html:404
 msgid "Generate from existing SSL cert"
 msgstr "根据现有 SSL 证书生成"
 
-#: internal/web/templates/domains/dns.html:198
+#: internal/web/templates/domains/dns.html:204
 msgid "Public key hash (SHA-256)"
 msgstr "公钥哈希值（SHA-256）"
 
-#: internal/web/templates/domains/dns.html:205
+#: internal/web/templates/domains/dns.html:211
 msgid "Full certificate hash (SHA-256)"
 msgstr "完整证书哈希值（SHA-256）"
 
-#: internal/web/templates/domains/dns.html:212
-#: internal/web/templates/emails/migrate.html:55
+#: internal/web/templates/domains/dns.html:218
+#: internal/web/templates/emails/migrate.html:90
 #: internal/web/templates/manager/app_install.html:135
 #: internal/web/templates/mysql/wizard.html:75
+#: internal/web/templates/partials/_account_created.html:50
+#: internal/web/templates/partials/_account_created.html:58
+#: internal/web/templates/partials/_account_created.html:119
+#: internal/web/templates/partials/_account_created.html:167
 msgid "Port"
 msgstr "港口"
 
-#: internal/web/templates/domains/dns.html:215
+#: internal/web/templates/domains/dns.html:221
 msgid "Protocol"
 msgstr "协议"
 
-#: internal/web/templates/domains/dns.html:240
-#: internal/web/templates/files/ftp.html:209
+#: internal/web/templates/domains/dns.html:246
+#: internal/web/templates/files/ftp.html:211
 #: internal/web/templates/manager/git.html:510
 #: internal/web/templates/manager/sites.html:521
 #: internal/web/templates/mongodb/databases.html:219
@@ -8608,157 +8597,161 @@ msgstr "协议"
 msgid "Confirm"
 msgstr "确认"
 
-#: internal/web/templates/domains/dns.html:241
-#: internal/web/templates/domains/dns.html:415
+#: internal/web/templates/domains/dns.html:247
+#: internal/web/templates/domains/dns.html:469
 msgid " Delete"
 msgstr "删除"
 
-#: internal/web/templates/domains/dns.html:242
+#: internal/web/templates/domains/dns.html:248
 msgid "An unexpected error occurred. Please try again."
 msgstr "发生意外错误，请重试。"
 
-#: internal/web/templates/domains/dns.html:258
-#: internal/web/templates/domains/dns.html:261
+#: internal/web/templates/domains/dns.html:284
+#: internal/web/templates/domains/dns.html:287
 msgid "Address"
 msgstr "地址"
 
-#: internal/web/templates/domains/dns.html:271
+#: internal/web/templates/domains/dns.html:297
 msgid "or use Generate button below"
 msgstr "或使用下方的“生成”按钮"
 
-#: internal/web/templates/domains/dns.html:340
+#: internal/web/templates/domains/dns.html:313
+msgid "fingerprint"
+msgstr ""
+
+#: internal/web/templates/domains/dns.html:394
 msgid "Fetching..."
 msgstr "正在获取..."
 
-#: internal/web/templates/domains/dns.html:359
+#: internal/web/templates/domains/dns.html:413
 msgid "Custom certificate"
 msgstr "自定义证书"
 
-#: internal/web/templates/domains/dns.html:360
+#: internal/web/templates/domains/dns.html:414
 msgid "Lets Encrypt certificate"
 msgstr "Let's Encrypt 证书"
 
-#: internal/web/templates/domains/dns.html:365
+#: internal/web/templates/domains/dns.html:419
 msgid ""
 "Caddy autorenews Lets Encrypt certificates with a new keypair. This record "
 "will go stale after the next renewal — regenerate it then."
 msgstr "Caddy 会使用新密钥对自动续期 Let's Encrypt 证书。下次续期后此记录将失效——届时请重新生成。"
 
-#: internal/web/templates/domains/dns.html:368
+#: internal/web/templates/domains/dns.html:422
 msgid ""
 "Using a custom certificate. Regenerate this record whenever you replace the "
 "certificate."
 msgstr "当前使用自定义证书。每次更换证书后请重新生成此记录。"
 
-#: internal/web/templates/domains/dns.html:383
+#: internal/web/templates/domains/dns.html:437
 #: internal/web/templates/manager/_cms_install_shared.html:294
 #: internal/web/templates/manager/wp/install.html:139
 msgid "Regenerate"
 msgstr "重新生成"
 
-#: internal/web/templates/domains/dns.html:386
+#: internal/web/templates/domains/dns.html:440
 msgid "Failed to fetch SSL certificate info."
 msgstr "获取 SSL 证书信息失败。"
 
-#: internal/web/templates/domains/dns.html:414
-#: internal/web/templates/domains/dns.html:547
+#: internal/web/templates/domains/dns.html:468
+#: internal/web/templates/domains/dns.html:597
 msgid " Edit"
 msgstr "编辑"
 
-#: internal/web/templates/domains/dns.html:416
+#: internal/web/templates/domains/dns.html:470
 msgid " Save"
 msgstr "保存"
 
-#: internal/web/templates/domains/dns.html:417
+#: internal/web/templates/domains/dns.html:471
 msgid " Cancel"
 msgstr "取消"
 
-#: internal/web/templates/domains/dns.html:456
+#: internal/web/templates/domains/dns.html:510
 msgid "Deleting record, please wait."
 msgstr "正在删除记录，请稍候。"
 
-#: internal/web/templates/domains/dns.html:472
+#: internal/web/templates/domains/dns.html:526
 msgid "Record deleted successfully."
 msgstr "记录已成功删除。"
 
-#: internal/web/templates/domains/dns.html:482
+#: internal/web/templates/domains/dns.html:536
 msgid ""
 "Error occurred deleting the record. Please refresh the page and try again. "
 "If the issue persists, try editing the zone file directly."
 msgstr "删除记录时发生错误。请刷新页面后重试。如果问题仍然存在，请尝试直接编辑区域文件。"
 
-#: internal/web/templates/domains/dns.html:486
+#: internal/web/templates/domains/dns.html:540
 msgid "An unexpected error occurred."
 msgstr "发生意外错误。"
 
-#: internal/web/templates/domains/dns.html:565
+#: internal/web/templates/domains/dns.html:615
 msgid "Edit Cancelled."
 msgstr "编辑 取消"
 
-#: internal/web/templates/domains/dns.html:575
+#: internal/web/templates/domains/dns.html:625
 msgid "Edit Cancelled. Reloading the page."
 msgstr "编辑已取消，正在重新加载页面。"
 
-#: internal/web/templates/domains/dns.html:618
+#: internal/web/templates/domains/dns.html:679
 msgid "A CNAME record with this name already exists."
 msgstr "已存在同名的 CNAME 记录。"
 
-#: internal/web/templates/domains/dns.html:648
+#: internal/web/templates/domains/dns.html:709
 msgid "Record updated successfully."
 msgstr "记录已成功更新。"
 
-#: internal/web/templates/domains/dns.html:708
+#: internal/web/templates/domains/dns.html:769
 msgid "Edit DNS File for"
 msgstr "编辑DNS文件以用于"
 
-#: internal/web/templates/domains/dns.html:709
+#: internal/web/templates/domains/dns.html:770
 #: internal/web/templates/domains/vhost.html:200
 msgid "Attention:"
 msgstr "注意："
 
-#: internal/web/templates/domains/dns.html:709
+#: internal/web/templates/domains/dns.html:770
 msgid ""
 "Editing DNS file is intended for advanced users only. This action can "
 "potentially lead to server misconfiguration or downtime if not done "
 "correctly."
 msgstr "编辑DNS文件仅适用于高级用户。如果操作不正确，此操作可能导致服务器配置错误或停机。"
 
-#: internal/web/templates/domains/dns.html:709
+#: internal/web/templates/domains/dns.html:770
 msgid ""
 "Please be cautious and make sure you understand the changes you are making."
 msgstr "请谨慎操作，并确保您了解正在进行的更改。"
 
-#: internal/web/templates/domains/dns.html:721
+#: internal/web/templates/domains/dns.html:782
 msgid "Table View"
 msgstr "表格视图"
 
-#: internal/web/templates/domains/dns.html:724
-#: internal/web/templates/domains/dns.html:735
+#: internal/web/templates/domains/dns.html:785
+#: internal/web/templates/domains/dns.html:796
 msgid "Download File"
 msgstr "下载文件"
 
-#: internal/web/templates/domains/dns.html:734
+#: internal/web/templates/domains/dns.html:795
 msgid "Edit as Table"
 msgstr "编辑为表格"
 
-#: internal/web/templates/domains/dns.html:759
+#: internal/web/templates/domains/dns.html:820
 #: internal/web/templates/domains/new.html:256
 msgid "Please wait for the process to finish."
 msgstr "请等待流程完成。"
 
-#: internal/web/templates/domains/dns.html:759
+#: internal/web/templates/domains/dns.html:820
 msgid "Saving zone file for domain"
 msgstr "域名保存区域文件"
 
-#: internal/web/templates/domains/dns.html:773
+#: internal/web/templates/domains/dns.html:834
 msgid "Zone file saved successfully"
 msgstr "区域文件保存成功"
 
-#: internal/web/templates/domains/dns.html:779
+#: internal/web/templates/domains/dns.html:840
 msgid "An error occurred while saving the zone file."
 msgstr "保存区域文件时发生错误。"
 
-#: internal/web/templates/domains/dns.html:793
+#: internal/web/templates/domains/dns.html:854
 msgid ""
 "Manage and edit Domain Name System (DNS) zone files, which contain critical "
 "information for mapping domain names to IP addresses and managing various "
@@ -8950,7 +8943,7 @@ msgid "Showing"
 msgstr "展示"
 
 #: internal/web/templates/domains/domains.html:495
-#: internal/web/templates/files/filemanager.html:348
+#: internal/web/templates/files/filemanager.html:315
 #: internal/web/templates/mongodb/users.html:27
 #: internal/web/templates/mongodb/users.html:31
 #: internal/web/templates/mysql/users.html:54
@@ -8961,24 +8954,24 @@ msgid "to"
 msgstr "到"
 
 #: internal/web/templates/domains/domains.html:495
-msgid "Showing domains"
-msgstr "显示域名"
-
-#: internal/web/templates/domains/domains.html:495
-#: internal/web/templates/files/filemanager.html:348
+#: internal/web/templates/files/filemanager.html:315
 msgid "from a total of"
 msgstr "从总计"
 
+#: internal/web/templates/domains/domains.html:495
+msgid "Showing domains"
+msgstr "显示域名"
+
 #: internal/web/templates/domains/domains.html:500
-#: internal/web/templates/files/filemanager.html:353
+#: internal/web/templates/files/filemanager.html:320
 msgid "Page navigation"
 msgstr "页面导航"
 
 #: internal/web/templates/domains/domains.html:504
 #: internal/web/templates/domains/domains.html:505
 #: internal/web/templates/domains/logs.html:206
-#: internal/web/templates/files/filemanager.html:357
-#: internal/web/templates/files/filemanager.html:358
+#: internal/web/templates/files/filemanager.html:324
+#: internal/web/templates/files/filemanager.html:325
 #: internal/web/templates/system/error_logs.html:98
 #: internal/web/templates/system/waf_logs.html:124
 #: internal/web/templates/user/activity.html:189
@@ -9273,8 +9266,8 @@ msgid "Click on Show Details above to view the log."
 msgstr "点击上方的“显示详情”以查看日志。"
 
 #: internal/web/templates/domains/new.html:328
-#: internal/web/templates/manager/app_install.html:765
-#: internal/web/templates/manager/app_install.html:775
+#: internal/web/templates/manager/app_install.html:754
+#: internal/web/templates/manager/app_install.html:764
 #: internal/web/templates/manager/dokuwiki_app.html:178
 #: internal/web/templates/manager/dokuwiki_app.html:186
 #: internal/web/templates/manager/dokuwiki_app.html:195
@@ -9646,37 +9639,37 @@ msgstr "邮件标题"
 msgid "Total emails:"
 msgstr "总邮件数："
 
-#: internal/web/templates/emails/accounts.html:29
-#: internal/web/templates/emails/accounts.html:49
+#: internal/web/templates/emails/accounts.html:31
+#: internal/web/templates/emails/accounts.html:51
 msgid "Has filter"
 msgstr "有过滤器"
 
-#: internal/web/templates/emails/accounts.html:29
-#: internal/web/templates/emails/accounts.html:55
+#: internal/web/templates/emails/accounts.html:31
+#: internal/web/templates/emails/accounts.html:57
 msgid "Near quota"
 msgstr "接近配额"
 
-#: internal/web/templates/emails/accounts.html:64 static/js/tour-steps.js:363
+#: internal/web/templates/emails/accounts.html:66 static/js/tour-steps.js:363
 msgid "New Email"
 msgstr "新邮件"
 
-#: internal/web/templates/emails/accounts.html:76
+#: internal/web/templates/emails/accounts.html:78
 msgid "Account @ Domain"
 msgstr "账户 @ 域名"
 
-#: internal/web/templates/emails/accounts.html:77
+#: internal/web/templates/emails/accounts.html:79
 msgid "Storage Used"
 msgstr "已用存储空间"
 
-#: internal/web/templates/emails/accounts.html:85
+#: internal/web/templates/emails/accounts.html:87
 msgid "No emails yet."
 msgstr "暂无邮箱。"
 
-#: internal/web/templates/emails/accounts.html:85
+#: internal/web/templates/emails/accounts.html:87
 msgid "Add your first email"
 msgstr "添加您的第一个邮箱"
 
-#: internal/web/templates/emails/accounts.html:116
+#: internal/web/templates/emails/accounts.html:118
 #: internal/web/templates/emails/aliases.html:79
 #: internal/web/templates/manager/sites.html:436
 #: internal/web/templates/manager/sites.html:440
@@ -9686,15 +9679,15 @@ msgstr "添加您的第一个邮箱"
 msgid "Manage"
 msgstr "管理"
 
-#: internal/web/templates/emails/accounts.html:151
+#: internal/web/templates/emails/accounts.html:153
 msgid "Webmail for "
 msgstr "适用于"
 
-#: internal/web/templates/emails/accounts.html:151
+#: internal/web/templates/emails/accounts.html:153
 msgid " opened in new window."
 msgstr "在新窗口中打开。"
 
-#: internal/web/templates/emails/accounts.html:167
+#: internal/web/templates/emails/accounts.html:169
 msgid "Add new email account"
 msgstr "添加新邮箱账户"
 
@@ -9897,7 +9890,7 @@ msgstr "将导入以下用户："
 
 #: internal/web/templates/emails/confirm_import.html:46
 #: internal/web/templates/emails/info.html:30
-#: internal/web/templates/emails/migrate.html:63
+#: internal/web/templates/emails/migrate.html:101
 #: internal/web/templates/emails/new.html:76
 #: internal/web/templates/emails/single_account.html:190
 #: internal/web/templates/files/ftp_new.html:58
@@ -9910,24 +9903,26 @@ msgstr "将导入以下用户："
 #: internal/web/templates/manager/ojs_install.html:65
 #: internal/web/templates/manager/prestashop_install.html:55
 #: internal/web/templates/manager/wp/install.html:129
-#: internal/web/templates/mongodb/mongodb_user.html:40
-#: internal/web/templates/mongodb/mongodb_user.html:49
+#: internal/web/templates/mongodb/mongodb_user.html:43
+#: internal/web/templates/mongodb/mongodb_user.html:52
 #: internal/web/templates/mongodb/password.html:38
 #: internal/web/templates/mongodb/password.html:47
 #: internal/web/templates/mongodb/wizard.html:71
-#: internal/web/templates/mysql/mysql_user.html:41
-#: internal/web/templates/mysql/mysql_user.html:51
+#: internal/web/templates/mysql/mysql_user.html:44
+#: internal/web/templates/mysql/mysql_user.html:54
 #: internal/web/templates/mysql/password.html:38
 #: internal/web/templates/mysql/remote_mysql.html:162
 #: internal/web/templates/mysql/remote_mysql.html:163
 #: internal/web/templates/mysql/root_password.html:41
 #: internal/web/templates/mysql/wizard.html:73
 #: internal/web/templates/mysql/wizard.html:245
+#: internal/web/templates/partials/_account_created.html:40
+#: internal/web/templates/partials/_account_created.html:159
 #: internal/web/templates/partials/site_manager_shared.html:978
 #: internal/web/templates/psql/password.html:38
 #: internal/web/templates/psql/password.html:47
-#: internal/web/templates/psql/psql_user.html:40
-#: internal/web/templates/psql/psql_user.html:49
+#: internal/web/templates/psql/psql_user.html:43
+#: internal/web/templates/psql/psql_user.html:52
 #: internal/web/templates/psql/wizard.html:71
 #: internal/web/templates/user/account.html:84
 #: internal/web/templates/user/login.html:20
@@ -9935,8 +9930,8 @@ msgid "Password"
 msgstr "密码"
 
 #: internal/web/templates/emails/confirm_import.html:47
-#: internal/web/templates/files/ftp.html:58
-#: internal/web/templates/files/ftp.html:91
+#: internal/web/templates/files/ftp.html:60
+#: internal/web/templates/files/ftp.html:93
 msgid "Quota"
 msgstr "配额"
 
@@ -10248,6 +10243,7 @@ msgid "of these match:"
 msgstr "项匹配以下条件："
 
 #: internal/web/templates/emails/filter.html:128
+#: internal/web/templates/emails/migrate.html:138
 msgid "From"
 msgstr "发件人"
 
@@ -10256,6 +10252,7 @@ msgid "Subject"
 msgstr "主题"
 
 #: internal/web/templates/emails/filter.html:130
+#: internal/web/templates/emails/migrate.html:146
 msgid "To"
 msgstr "收件人"
 
@@ -10433,6 +10430,7 @@ msgid "Non-SSL Settings"
 msgstr "非 SSL 设置"
 
 #: internal/web/templates/emails/info.html:31
+#: internal/web/templates/partials/_account_created.html:41
 msgid "Use the email account's password."
 msgstr "使用该邮箱账户的密码。"
 
@@ -10456,98 +10454,120 @@ msgstr "SMTP 端口"
 msgid "IMAP, POP3, and SMTP require authentication."
 msgstr "IMAP、POP3 和 SMTP 均需要身份验证。"
 
-#: internal/web/templates/emails/migrate.html:16
+#: internal/web/templates/emails/migrate.html:17
 msgid ""
 "Copy folders and messages from another IMAP server into one of your email "
 "accounts. Messages already copied are skipped, so a migration can safely be "
 "run again."
 msgstr "将另一台 IMAP 服务器上的文件夹和邮件复制到您的某个邮箱账户。已复制的邮件会被跳过，因此可以放心地再次运行迁移。"
 
-#: internal/web/templates/emails/migrate.html:25
+#: internal/web/templates/emails/migrate.html:26
 msgid "Migration in progress"
 msgstr "正在迁移"
 
-#: internal/web/templates/emails/migrate.html:38
+#: internal/web/templates/emails/migrate.html:41
+#: internal/web/templates/emails/migrate.html:65
 msgid "Source server"
 msgstr "源服务器"
 
-#: internal/web/templates/emails/migrate.html:39
+#: internal/web/templates/emails/migrate.html:48
+#: internal/web/templates/emails/migrate.html:110
+msgid "Destination account"
+msgstr "目标账户"
+
+#: internal/web/templates/emails/migrate.html:55
+#: internal/web/templates/emails/migrate.html:133
+msgid "Test and start"
+msgstr ""
+
+#: internal/web/templates/emails/migrate.html:66
 msgid "The server you are moving emails from."
 msgstr "您要迁出邮件的服务器。"
 
-#: internal/web/templates/emails/migrate.html:43
+#: internal/web/templates/emails/migrate.html:68
+msgid "Quick fill"
+msgstr ""
+
+#: internal/web/templates/emails/migrate.html:78
 msgid "IMAP server"
 msgstr "IMAP 服务器"
 
-#: internal/web/templates/emails/migrate.html:65
+#: internal/web/templates/emails/migrate.html:105
 msgid ""
 "For Gmail, Outlook and other providers with two-factor login, use an app "
 "password."
 msgstr "对于 Gmail、Outlook 及其他启用两步验证的服务商，请使用应用专用密码。"
 
-#: internal/web/templates/emails/migrate.html:71
-msgid "Destination account"
-msgstr "目标账户"
-
-#: internal/web/templates/emails/migrate.html:72
+#: internal/web/templates/emails/migrate.html:111
 msgid "The email account on this server that receives the messages."
 msgstr "此服务器上接收邮件的邮箱账户。"
 
-#: internal/web/templates/emails/migrate.html:76
+#: internal/web/templates/emails/migrate.html:115
 msgid "Email account"
 msgstr "邮箱账户"
 
-#: internal/web/templates/emails/migrate.html:85
+#: internal/web/templates/emails/migrate.html:124
 msgid "Account password"
 msgstr "账户密码"
 
-#: internal/web/templates/emails/migrate.html:87
+#: internal/web/templates/emails/migrate.html:126
 msgid "Forgot it? You can set a new one under Email Accounts."
 msgstr "忘记了？您可以在“邮箱账户”中设置新密码。"
 
-#: internal/web/templates/emails/migrate.html:91
+#: internal/web/templates/emails/migrate.html:134
+msgid ""
+"Check both logins work, then start copying. Messages already copied are "
+"skipped."
+msgstr ""
+
+#: internal/web/templates/emails/migrate.html:153
 msgid "Skip Spam, Junk and Trash folders"
 msgstr "跳过垃圾邮件和已删除邮件文件夹"
 
-#: internal/web/templates/emails/migrate.html:100
+#: internal/web/templates/emails/migrate.html:162
+#: internal/web/templates/manager/git.html:416
+msgid "Back"
+msgstr "返回"
+
+#: internal/web/templates/emails/migrate.html:164
 msgid "Test connection"
 msgstr "测试连接"
 
-#: internal/web/templates/emails/migrate.html:101
+#: internal/web/templates/emails/migrate.html:165
 msgid "Start migration"
 msgstr "开始迁移"
 
-#: internal/web/templates/emails/migrate.html:110
+#: internal/web/templates/emails/migrate.html:172
 msgid "Recent migrations"
 msgstr "最近的迁移"
 
-#: internal/web/templates/emails/migrate.html:115
+#: internal/web/templates/emails/migrate.html:177
 #: internal/web/templates/files/backup_wizard.html:45
 #: internal/web/templates/files/clamav/scan_logs.html:38
 msgid "Started"
 msgstr "已开始"
 
-#: internal/web/templates/emails/migrate.html:116
+#: internal/web/templates/emails/migrate.html:178
 msgid "Migration"
 msgstr "迁移"
 
-#: internal/web/templates/emails/migrate.html:129
+#: internal/web/templates/emails/migrate.html:191
 msgid "No email accounts yet"
 msgstr "暂无邮箱账户"
 
-#: internal/web/templates/emails/migrate.html:130
+#: internal/web/templates/emails/migrate.html:192
 msgid "Create the email account you want to migrate into first."
 msgstr "请先创建要迁入的邮箱账户。"
 
-#: internal/web/templates/emails/migrate.html:131
+#: internal/web/templates/emails/migrate.html:193
 msgid "New email account"
 msgstr "新建邮箱账户"
 
-#: internal/web/templates/emails/migrate.html:141
+#: internal/web/templates/emails/migrate.html:203
 msgid "Completed"
 msgstr "已完成"
 
-#: internal/web/templates/emails/migrate.html:142
+#: internal/web/templates/emails/migrate.html:204
 #: internal/web/templates/files/backup_restore.html:528
 #: internal/web/templates/files/backup_restore.html:675
 #: internal/web/templates/files/clamav/quarantine.html:186
@@ -10556,99 +10576,99 @@ msgstr "已完成"
 msgid "Failed"
 msgstr "失败"
 
-#: internal/web/templates/emails/migrate.html:143
+#: internal/web/templates/emails/migrate.html:205
 msgid "Cancelled"
 msgstr "已取消"
 
-#: internal/web/templates/emails/migrate.html:144
+#: internal/web/templates/emails/migrate.html:206
 msgid "View log"
 msgstr "查看日志"
 
-#: internal/web/templates/emails/migrate.html:145
+#: internal/web/templates/emails/migrate.html:207
 msgid "Testing..."
 msgstr "正在测试..."
 
-#: internal/web/templates/emails/migrate.html:146
+#: internal/web/templates/emails/migrate.html:208
 msgid "Starting..."
 msgstr "正在启动..."
 
-#: internal/web/templates/emails/migrate.html:147
+#: internal/web/templates/emails/migrate.html:209
 msgid "Migration started."
 msgstr "迁移已开始。"
 
-#: internal/web/templates/emails/migrate.html:148
+#: internal/web/templates/emails/migrate.html:210
 msgid "Stop the running migration? Messages copied so far are kept."
 msgstr "要停止正在进行的迁移吗？已复制的邮件会保留。"
 
-#: internal/web/templates/emails/migrate.html:149
+#: internal/web/templates/emails/migrate.html:211
 msgid "Source server: login successful"
 msgstr "源服务器：登录成功"
 
-#: internal/web/templates/emails/migrate.html:150
+#: internal/web/templates/emails/migrate.html:212
 msgid "Source server: login failed"
 msgstr "源服务器：登录失败"
 
-#: internal/web/templates/emails/migrate.html:151
+#: internal/web/templates/emails/migrate.html:213
 msgid "Destination account: login successful"
 msgstr "目标账户：登录成功"
 
-#: internal/web/templates/emails/migrate.html:152
+#: internal/web/templates/emails/migrate.html:214
 msgid "Destination account: login failed"
 msgstr "目标账户：登录失败"
 
-#: internal/web/templates/emails/migrate.html:153
+#: internal/web/templates/emails/migrate.html:215
 #: internal/web/templates/partials/_ai_assistant.html:12
 msgid "Something went wrong, please try again."
 msgstr "出了点问题，请重试。"
 
-#: internal/web/templates/emails/migrate.html:154
+#: internal/web/templates/emails/migrate.html:216
 msgid ""
 "%d messages were bigger than this server's %s limit and were not copied."
 msgstr ""
 
-#: internal/web/templates/emails/migrate.html:158
+#: internal/web/templates/emails/migrate.html:220
 msgid "Login to the source server failed, check the username and password."
 msgstr "登录源服务器失败，请检查用户名和密码。"
 
-#: internal/web/templates/emails/migrate.html:159
+#: internal/web/templates/emails/migrate.html:221
 msgid "Login to the destination account failed, check its password."
 msgstr "登录目标账户失败，请检查其密码。"
 
-#: internal/web/templates/emails/migrate.html:160
-#: internal/web/templates/emails/migrate.html:166
+#: internal/web/templates/emails/migrate.html:222
+#: internal/web/templates/emails/migrate.html:228
 msgid ""
 "Could not connect to the source server, check the server, security and port."
 msgstr "无法连接到源服务器，请检查服务器、加密方式和端口。"
 
-#: internal/web/templates/emails/migrate.html:161
+#: internal/web/templates/emails/migrate.html:223
 msgid "Could not connect to the destination server."
 msgstr "无法连接到目标服务器。"
 
-#: internal/web/templates/emails/migrate.html:162
+#: internal/web/templates/emails/migrate.html:224
 msgid ""
 "The destination account is full, raise its quota and run the migration "
 "again."
 msgstr "目标账户已满，请提高其配额后再次运行迁移。"
 
-#: internal/web/templates/emails/migrate.html:163
+#: internal/web/templates/emails/migrate.html:225
 msgid "Finished with errors, some messages were not copied. See the log."
 msgstr "已完成但有错误，部分邮件未能复制。请查看日志。"
 
-#: internal/web/templates/emails/migrate.html:164
+#: internal/web/templates/emails/migrate.html:226
 msgid "Stopped after too many errors. See the log."
 msgstr "错误过多，已停止。请查看日志。"
 
-#: internal/web/templates/emails/migrate.html:165
+#: internal/web/templates/emails/migrate.html:227
 msgid ""
 "The destination account refused some messages, they were not copied. See the"
 " log."
 msgstr ""
 
-#: internal/web/templates/emails/migrate.html:167
+#: internal/web/templates/emails/migrate.html:229
 msgid "The SSL/TLS connection failed, try another Security option."
 msgstr "SSL/TLS 连接失败，请尝试其他加密方式。"
 
-#: internal/web/templates/emails/migrate.html:168
+#: internal/web/templates/emails/migrate.html:230
 msgid "Stopped before finishing."
 msgstr "未完成即已停止。"
 
@@ -10681,15 +10701,15 @@ msgstr "仅允许使用字母、数字以及 . _ % + - 等字符。"
 #: internal/web/templates/manager/ojs_install.html:57
 #: internal/web/templates/manager/prestashop_install.html:47
 #: internal/web/templates/manager/wp/install.html:121
-#: internal/web/templates/mongodb/mongodb_user.html:32
+#: internal/web/templates/mongodb/mongodb_user.html:35
 #: internal/web/templates/mongodb/password.html:30
 #: internal/web/templates/mongodb/wizard.html:57
-#: internal/web/templates/mysql/mysql_user.html:33
+#: internal/web/templates/mysql/mysql_user.html:36
 #: internal/web/templates/mysql/password.html:30
 #: internal/web/templates/mysql/root_password.html:23
 #: internal/web/templates/mysql/wizard.html:235
 #: internal/web/templates/psql/password.html:30
-#: internal/web/templates/psql/psql_user.html:32
+#: internal/web/templates/psql/psql_user.html:35
 #: internal/web/templates/psql/wizard.html:57
 #: internal/web/templates/user/account.html:77
 #: internal/web/templates/user/reset_password/set_new_password.html:81
@@ -10708,15 +10728,15 @@ msgstr "弱密码"
 #: internal/web/templates/manager/ojs_install.html:58
 #: internal/web/templates/manager/prestashop_install.html:48
 #: internal/web/templates/manager/wp/install.html:122
-#: internal/web/templates/mongodb/mongodb_user.html:33
+#: internal/web/templates/mongodb/mongodb_user.html:36
 #: internal/web/templates/mongodb/password.html:31
 #: internal/web/templates/mongodb/wizard.html:58
-#: internal/web/templates/mysql/mysql_user.html:34
+#: internal/web/templates/mysql/mysql_user.html:37
 #: internal/web/templates/mysql/password.html:31
 #: internal/web/templates/mysql/root_password.html:24
 #: internal/web/templates/mysql/wizard.html:236
 #: internal/web/templates/psql/password.html:31
-#: internal/web/templates/psql/psql_user.html:33
+#: internal/web/templates/psql/psql_user.html:36
 #: internal/web/templates/psql/wizard.html:58
 #: internal/web/templates/user/account.html:78
 #: internal/web/templates/user/reset_password/set_new_password.html:82
@@ -10735,15 +10755,15 @@ msgstr "中等强度密码"
 #: internal/web/templates/manager/ojs_install.html:59
 #: internal/web/templates/manager/prestashop_install.html:49
 #: internal/web/templates/manager/wp/install.html:123
-#: internal/web/templates/mongodb/mongodb_user.html:34
+#: internal/web/templates/mongodb/mongodb_user.html:37
 #: internal/web/templates/mongodb/password.html:32
 #: internal/web/templates/mongodb/wizard.html:59
-#: internal/web/templates/mysql/mysql_user.html:35
+#: internal/web/templates/mysql/mysql_user.html:38
 #: internal/web/templates/mysql/password.html:32
 #: internal/web/templates/mysql/root_password.html:25
 #: internal/web/templates/mysql/wizard.html:237
 #: internal/web/templates/psql/password.html:32
-#: internal/web/templates/psql/psql_user.html:34
+#: internal/web/templates/psql/psql_user.html:37
 #: internal/web/templates/psql/wizard.html:59
 #: internal/web/templates/user/account.html:79
 #: internal/web/templates/user/reset_password/set_new_password.html:83
@@ -10754,7 +10774,7 @@ msgstr "强密码"
 #: internal/web/templates/emails/single_account.html:199
 #: internal/web/templates/manager/_cms_app_shared.html:991
 #: internal/web/templates/manager/wp/single.html:1691
-#: internal/web/templates/mysql/mysql_user.html:50
+#: internal/web/templates/mysql/mysql_user.html:53
 #: internal/web/templates/mysql/password.html:47
 #: internal/web/templates/mysql/root_password.html:40
 msgid "Password must be between 8 and 30 characters."
@@ -11510,22 +11530,22 @@ msgid "No quarantined files"
 msgstr "无隔离文件"
 
 #: internal/web/templates/files/clamav/quarantine.html:49
+#: internal/web/templates/files/clamav/scan_logs.html:26
+msgid "Click here to start a new scan"
+msgstr "点击此处开始新的扫描"
+
+#: internal/web/templates/files/clamav/quarantine.html:49
 msgid ""
 "No malicious files have been detected or the scan has not been initiated "
 "yet."
 msgstr "未检测到恶意文件，或扫描尚未启动。"
-
-#: internal/web/templates/files/clamav/quarantine.html:49
-#: internal/web/templates/files/clamav/scan_logs.html:26
-msgid "Click here to start a new scan"
-msgstr "点击此处开始新的扫描"
 
 #: internal/web/templates/files/clamav/quarantine.html:55
 msgid "Quarantined Files"
 msgstr "已隔离的文件"
 
 #: internal/web/templates/files/clamav/quarantine.html:63
-#: internal/web/templates/files/filemanager.html:403
+#: internal/web/templates/files/filemanager.html:370
 msgid "File"
 msgstr "文件"
 
@@ -11597,6 +11617,7 @@ msgstr "源"
 #: internal/web/templates/files/clamav/scan_logs.html:40
 #: internal/web/templates/files/disk_usage.html:58
 #: internal/web/templates/files/inodes.html:56
+#: internal/web/templates/partials/_account_created.html:162
 msgid "Directory"
 msgstr "目录"
 
@@ -11874,19 +11895,19 @@ msgstr "文件夹"
 msgid "Specific extension"
 msgstr "指定扩展名"
 
-#: internal/web/templates/files/filemanager.html:348
+#: internal/web/templates/files/filemanager.html:315
 msgid "Showing files"
 msgstr "正在显示文件"
 
-#: internal/web/templates/files/filemanager.html:403
+#: internal/web/templates/files/filemanager.html:370
 msgid "has no permissions (0000) and cannot be accessed."
 msgstr "没有任何权限（0000），无法访问。"
 
-#: internal/web/templates/files/filemanager.html:405
+#: internal/web/templates/files/filemanager.html:372
 msgid "have no permissions (0000) and cannot be accessed."
 msgstr "没有任何权限（0000），无法访问。"
 
-#: internal/web/templates/files/filemanager.html:407
+#: internal/web/templates/files/filemanager.html:374
 msgid "files have no permissions (0000) and cannot be accessed."
 msgstr "个文件没有任何权限（0000），无法访问。"
 
@@ -12165,59 +12186,62 @@ msgstr "FTP端口："
 msgid "View Connections"
 msgstr "查看连接"
 
-#: internal/web/templates/files/ftp.html:57
-#: internal/web/templates/files/ftp.html:87
+#: internal/web/templates/files/ftp.html:59
+#: internal/web/templates/files/ftp.html:89
 #: internal/web/templates/partials/folder_picker.html:18
 msgid "Path"
 msgstr "路径"
 
-#: internal/web/templates/files/ftp.html:59
-#: internal/web/templates/files/ftp.html:95
+#: internal/web/templates/files/ftp.html:61
+#: internal/web/templates/files/ftp.html:97
 #: internal/web/templates/system/process_manager.html:57
 #: internal/web/templates/system/process_manager.html:103
 msgid "UID"
 msgstr "UID"
 
-#: internal/web/templates/files/ftp.html:60
-#: internal/web/templates/files/ftp.html:99
+#: internal/web/templates/files/ftp.html:62
+#: internal/web/templates/files/ftp.html:101
 msgid "GID"
 msgstr "GID"
 
-#: internal/web/templates/files/ftp.html:70 static/js/tour-steps.js:690
+#: internal/web/templates/files/ftp.html:72 static/js/tour-steps.js:690
 msgid "New Account"
 msgstr "新帐户"
 
-#: internal/web/templates/files/ftp.html:114
+#: internal/web/templates/files/ftp.html:116
 msgid "No accounts yet."
 msgstr "暂无账户。"
 
-#: internal/web/templates/files/ftp.html:114
+#: internal/web/templates/files/ftp.html:116
 msgid "Add your first account"
 msgstr "添加您的第一个账户"
 
-#: internal/web/templates/files/ftp.html:128
+#: internal/web/templates/files/ftp.html:130
 #: internal/web/templates/files/ftp_quota.html:28
 msgid "Over quota"
 msgstr "超出配额"
 
-#: internal/web/templates/files/ftp.html:135
+#: internal/web/templates/files/ftp.html:137
 #: internal/web/templates/files/ftp_new.html:170
 #: internal/web/templates/files/ftp_quota.html:28
 #: internal/web/templates/files/ftp_quota.html:34
+#: internal/web/templates/partials/_account_created.html:116
+#: internal/web/templates/partials/_account_created.html:117
+#: internal/web/templates/partials/_account_created.html:118
 msgid "Unlimited"
 msgstr "无限制"
 
-#: internal/web/templates/files/ftp.html:169
 #: internal/web/templates/files/ftp.html:171
+#: internal/web/templates/files/ftp.html:173
 msgid "Change Path"
 msgstr "更改路径"
 
-#: internal/web/templates/files/ftp.html:176
 #: internal/web/templates/files/ftp.html:178
+#: internal/web/templates/files/ftp.html:180
 msgid "Change Quota"
 msgstr "更改配额"
 
-#: internal/web/templates/files/ftp.html:261
+#: internal/web/templates/files/ftp.html:263
 msgid "Add new FTP account"
 msgstr "添加新 FTP 账户"
 
@@ -13260,7 +13284,7 @@ msgid "Connection lost during update."
 msgstr "更新过程中连接中断。"
 
 #: internal/web/templates/manager/_cms_app_shared.html:1362
-#: internal/web/templates/manager/app_install.html:785
+#: internal/web/templates/manager/app_install.html:774
 #: internal/web/templates/manager/dokuwiki_app.html:193
 #: internal/web/templates/manager/dokuwiki_install.html:363
 #: internal/web/templates/manager/drupal_app.html:345
@@ -13556,7 +13580,7 @@ msgstr "← 返回"
 
 #: internal/web/templates/manager/_cms_install_shared.html:235
 #: internal/web/templates/manager/app_install.html:464
-#: internal/web/templates/manager/app_install.html:693
+#: internal/web/templates/manager/app_install.html:688
 #: internal/web/templates/manager/dokuwiki_install.html:277
 #: internal/web/templates/manager/drupal_install.html:189
 #: internal/web/templates/manager/flarum_install.html:207
@@ -13937,11 +13961,11 @@ msgstr "安装进程已挂起"
 msgid "Install process failed for"
 msgstr "安装进程失败"
 
-#: internal/web/templates/manager/app_install.html:556
+#: internal/web/templates/manager/app_install.html:551
 msgid "Create a new application."
 msgstr "创建新的应用程序。"
 
-#: internal/web/templates/manager/app_install.html:700
+#: internal/web/templates/manager/app_install.html:695
 #: internal/web/templates/manager/dokuwiki_install.html:284
 #: internal/web/templates/manager/drupal_install.html:196
 #: internal/web/templates/manager/flarum_install.html:214
@@ -13963,12 +13987,12 @@ msgstr "创建新的应用程序。"
 msgid "Please select a domain name."
 msgstr "請選擇一個域名。"
 
-#: internal/web/templates/manager/app_install.html:718
+#: internal/web/templates/manager/app_install.html:713
 #: internal/web/templates/manager/php_install.html:361
 msgid "Application setup started. Please wait for the process to finish."
 msgstr "应用设置已开始。请等待流程完成。"
 
-#: internal/web/templates/manager/app_install.html:775
+#: internal/web/templates/manager/app_install.html:764
 #: internal/web/templates/manager/dokuwiki_install.html:353
 #: internal/web/templates/manager/drupal_install.html:265
 #: internal/web/templates/manager/flarum_install.html:283
@@ -14395,6 +14419,7 @@ msgstr "管理员账户已在安装过程中创建（生成的密码请查看安
 #: internal/web/templates/manager/sofawiki_app.html:108
 #: internal/web/templates/manager/tinyfilemanager_app.html:32
 #: internal/web/templates/manager/tinyphotogallery_app.html:131
+#: internal/web/templates/partials/_account_created.html:126
 #: internal/web/templates/partials/site_manager_shared.html:75
 msgid "Open site"
 msgstr "打开站点"
@@ -14921,10 +14946,6 @@ msgstr "在容器中运行"
 #: internal/web/templates/partials/site_manager_shared.html:1036
 msgid "Commands (run after each deployment, from the deploy directory)"
 msgstr "命令（每次部署后在部署目录中运行）"
-
-#: internal/web/templates/manager/git.html:416
-msgid "Back"
-msgstr "返回"
 
 #: internal/web/templates/manager/git.html:417
 #: internal/web/templates/partials/site_manager_shared.html:1072
@@ -17933,21 +17954,21 @@ msgid ""
 "role on a database afterward from the Assign User page."
 msgstr "创建一个具有唯一用户名和密码的新 MongoDB 用户。之后在“分配用户”页面为其分配数据库角色。"
 
-#: internal/web/templates/mongodb/mongodb_user.html:25
+#: internal/web/templates/mongodb/mongodb_user.html:28
 #: internal/web/templates/mongodb/wizard.html:44
-#: internal/web/templates/mysql/mysql_user.html:26
+#: internal/web/templates/mysql/mysql_user.html:29
 #: internal/web/templates/mysql/wizard.html:219
-#: internal/web/templates/psql/psql_user.html:25
+#: internal/web/templates/psql/psql_user.html:28
 #: internal/web/templates/psql/wizard.html:44
 msgid "Only letters, numbers, and underscores are allowed (1-31 characters)."
 msgstr "仅允许使用字母、数字和下划线（1-31 个字符）。"
 
-#: internal/web/templates/mongodb/mongodb_user.html:81
+#: internal/web/templates/mongodb/mongodb_user.html:84
 #: internal/web/templates/mongodb/password.html:79
-#: internal/web/templates/mysql/mysql_user.html:111
+#: internal/web/templates/mysql/mysql_user.html:114
 #: internal/web/templates/mysql/password.html:114
 #: internal/web/templates/psql/password.html:79
-#: internal/web/templates/psql/psql_user.html:81
+#: internal/web/templates/psql/psql_user.html:84
 msgid "Back to Users"
 msgstr "返回用户"
 
@@ -18114,6 +18135,7 @@ msgstr "创建新的 MongoDB 数据库，设置一个使用安全密码的用户
 
 #: internal/web/templates/mongodb/wizard.html:41
 #: internal/web/templates/mysql/wizard.html:212
+#: internal/web/templates/partials/_db_created.html:45
 #: internal/web/templates/psql/wizard.html:41
 msgid "Create a user"
 msgstr "创建用户"
@@ -18494,10 +18516,14 @@ msgid "Download snippet"
 msgstr "下载代码片段"
 
 #: internal/web/templates/mysql/wizard.html:157
+#: internal/web/templates/partials/_db_created.html:51
 msgid "View Databases"
 msgstr "查看数据库"
 
 #: internal/web/templates/mysql/wizard.html:160
+#: internal/web/templates/partials/_account_created.html:134
+#: internal/web/templates/partials/_db_created.html:51
+#: internal/web/templates/partials/_db_created.html:67
 msgid "Create Another"
 msgstr "再创建一个"
 
@@ -18505,6 +18531,109 @@ msgstr "再创建一个"
 #: internal/web/templates/psql/wizard.html:101
 msgid "Assign user to database"
 msgstr "将用户分配给数据库"
+
+#: internal/web/templates/partials/_account_created.html:6
+#: internal/web/templates/partials/_db_created.html:12
+#: internal/web/templates/partials/install_success.html:108
+msgid "Copied to clipboard"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:28
+msgid "Your mailbox is ready. Connect a mail app"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:29
+msgid "A welcome email with these settings went to the new mailbox."
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:37
+#: internal/web/templates/partials/_account_created.html:156
+msgid "Sign in"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:46
+msgid "Incoming (IMAP)"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:54
+msgid "Outgoing (SMTP)"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:62
+msgid ""
+"IMAP and SMTP require authentication. Outgoing mail signs in with the same "
+"username and password."
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:63
+msgid ""
+"This mail server has no SSL certificate, so passwords and mail are sent "
+"unencrypted."
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:67
+msgid "Download settings"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:69
+msgid "Apple Mail & iPhone"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:75
+msgid "Open Webmail"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:77
+msgid "Setup guide"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:100
+msgid "Your container is running"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:100
+msgid "Your container is ready to start"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:101
+msgid "It's saved and the image is ready, but it isn't running yet."
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:115
+msgid "Limits"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:116
+#: internal/web/templates/system/process_manager.html:60
+#: internal/web/templates/system/process_manager.html:142
+#: internal/web/templates/user/stats.html:34
+msgid "CPU"
+msgstr "CPU"
+
+#: internal/web/templates/partials/_account_created.html:128
+msgid "Start container"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:130
+#: internal/web/templates/system/waf_domain.html:13
+msgid "View logs"
+msgstr "查看日志"
+
+#: internal/web/templates/partials/_account_created.html:147
+msgid "Your FTP account is ready. Connect an FTP client"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:160
+msgid "Use the FTP account's password."
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:165
+msgid "Connection"
+msgstr ""
+
+#: internal/web/templates/partials/_account_created.html:172
+msgid "Set up automatically"
+msgstr ""
 
 #: internal/web/templates/partials/_ai_assistant.html:2
 #: internal/web/templates/partials/_ai_assistant.html:43
@@ -18714,6 +18843,62 @@ msgstr "最近 6 个月"
 #: internal/web/templates/partials/_date_range.html:62
 msgid "Year to date"
 msgstr "今年至今"
+
+#: internal/web/templates/partials/_db_created.html:41
+msgid "Database created"
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:41
+msgid "Your new database is ready. Here is what you can do next."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:44
+msgid "Assign a user"
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:44
+msgid "Give an existing user access to this database."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:45
+msgid "Make a new user with its own password first."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:47
+msgid "Import a dump"
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:47
+msgid "Load an existing backup into it."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:59
+msgid "Database user created"
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:59
+msgid "Your new user is ready. Assign it to a database to give it access."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:62
+msgid "Assign to a database"
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:62
+msgid "Give this user access to an existing database."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:63
+msgid "Make a new database first, then assign this user."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:64
+msgid "Set a different password for this user."
+msgstr ""
+
+#: internal/web/templates/partials/_db_created.html:67
+msgid "View Users"
+msgstr ""
 
 #: internal/web/templates/partials/_db_tuning.html:11
 msgid "Optimization suggestions are not available right now:"
@@ -19003,10 +19188,6 @@ msgstr ""
 
 #: internal/web/templates/partials/install_success.html:73
 msgid "Hide installation log"
-msgstr ""
-
-#: internal/web/templates/partials/install_success.html:108
-msgid "Copied to clipboard"
 msgstr ""
 
 #: internal/web/templates/partials/install_success.html:136
@@ -20044,12 +20225,6 @@ msgstr "PID"
 msgid "PPID"
 msgstr "PPID"
 
-#: internal/web/templates/system/process_manager.html:60
-#: internal/web/templates/system/process_manager.html:142
-#: internal/web/templates/user/stats.html:34
-msgid "CPU"
-msgstr "CPU"
-
 #: internal/web/templates/system/process_manager.html:61
 #: internal/web/templates/system/process_manager.html:155
 msgid "STIME"
@@ -20424,10 +20599,6 @@ msgid ""
 "Protect %(domain)s from attacks like SQL injection, cross-site scripting and"
 " malicious bots."
 msgstr "保护 %(domain)s 免受 SQL 注入、跨站脚本和恶意机器人等攻击。"
-
-#: internal/web/templates/system/waf_domain.html:13
-msgid "View logs"
-msgstr "查看日志"
 
 #: internal/web/templates/system/waf_domain.html:23
 msgid "Protection"
@@ -21248,7 +21419,7 @@ msgstr "输入您的电子邮件地址，我们会向您发送重置密码的链
 msgid "Enter your email address"
 msgstr "输入您的电子邮件地址"
 
-#: internal/web/templates/user/reset_password/request_email.html:21
+#: internal/web/templates/user/reset_password/request_email.html:35
 msgid "Send Reset Link"
 msgstr "发送重置链接"
 
