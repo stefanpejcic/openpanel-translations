@@ -42,11 +42,11 @@ except ImportError:
 
 TMPL_GET = re.compile(r'(?:\.T|\$t)\.Get\s+"((?:[^"\\]|\\.)*)"')
 # literals handed to a partial that translates them itself, e.g. (dict "T" .T "Title" "Optimize Database")
-TMPL_DICT_RE = re.compile(r'"(?:Title|Intro|Checking)"\s+"((?:[^"\\]|\\.)*)"')
+TMPL_DICT_RE = re.compile(r'"(?:Title|Intro|Checking|Empty|Desc)"\s+"((?:[^"\\]|\\.)*)"')
 TMPL_GETN = re.compile(r'\.T\.GetN\s+"((?:[^"\\]|\\.)*)"\s+"((?:[^"\\]|\\.)*)"')
 GO_GET = re.compile(r'(?:^|[^\w.])(?:t|T|layout\.T|[A-Za-z_][A-Za-z0-9_]*\.T)\.Get\(\s*"((?:[^"\\]|\\.)*)"')
 GO_GETN = re.compile(r'(?:^|[^\w.])(?:t|T|layout\.T|[A-Za-z_][A-Za-z0-9_]*\.T)\.GetN\(\s*"((?:[^"\\]|\\.)*)"\s*,\s*"((?:[^"\\]|\\.)*)"')
-FIELD_RE = re.compile(r'\b(?:Label|Title|PageTitle|TechDetails|Description|RequirementsLabel|RequirementsTooltip|Message|NewIntro|ConfigTitle|ConfigIntro):\s*"((?:[^"\\]|\\.)*)"(?=\s*(?:,|\}|$))')
+FIELD_RE = re.compile(r'\b(?:Label|Title|PageTitle|TechDetails|Description|Desc|NameLabel|MetaLabel|Empty|RequirementsLabel|RequirementsTooltip|Message|NewIntro|ConfigTitle|ConfigIntro):\s*"((?:[^"\\]|\\.)*)"(?=\s*(?:,|\}|$))')
 # form/page errors set before render and translated in the template, e.g. formView.Error = "..."
 ASSIGN_RE = re.compile(r'\.(?:Error|Message)\s*=\s*"((?:[^"\\]|\\.)*)"\s*$')
 
@@ -248,6 +248,40 @@ def flash_literals(content):
                 yield text, content[: start].count("\n") + 1
 
 
+def keep_still_quoted(source_root, extracted, pot_path):
+    """Keep strings the catalog already has when they're still a quoted literal in the source.
+
+    Some text reaches .T.Get through a variable the patterns above can't follow (positional
+    struct rows, error helpers, web.Tr on a field), dropping those would throw away translations
+    people still see. An extra catalog entry costs nothing, a lost one does.
+    """
+    if not os.path.isfile(pot_path):
+        return 0
+    old_ids = [e.msgid for e in polib.pofile(pot_path) if e.msgid and e.msgid not in extracted]
+    if not old_ids:
+        return 0
+    files = []
+    for root, dirs, names in os.walk(source_root):
+        dirs[:] = [d for d in dirs if d not in (".git", "node_modules", "dist", "templates_classic", "vendor")]
+        for n in names:
+            if n.endswith((".go", ".html", ".js")) and not n.endswith("_test.go"):
+                path = os.path.join(root, n)
+                with open(path, encoding="utf-8", errors="ignore") as f:
+                    files.append((os.path.relpath(path, source_root), f.read()))
+    kept = 0
+    for msgid in old_ids:
+        if len(msgid) < 4:
+            continue
+        quoted = ('"' + msgid.replace("\\", "\\\\").replace('"', '\\"') + '"', "'" + msgid.replace("'", "\\'") + "'")
+        for rel, content in files:
+            i = next((content.find(q) for q in quoted if q in content), -1)
+            if i >= 0:
+                add(extracted, msgid, None, rel, content[:i].count("\n") + 1)
+                kept += 1
+                break
+    return kept
+
+
 # --- pot/po generation --------------------------------------------------
 
 def sort_key(item):
@@ -366,6 +400,9 @@ def main():
     print(f"Extracting strings from {source_root} ...")
     extracted = extract(source_root)
     print(f"Found {len(extracted)} unique translatable strings.")
+    kept = keep_still_quoted(source_root, extracted, os.path.join(repo_dir, "en-us", "messages.pot"))
+    if kept:
+        print(f"Kept {kept} existing strings the patterns missed but the source still quotes.")
 
     pot = build_en_us(repo_dir, extracted, project_version)
     print(f"Wrote en-us/messages.pot and en-us/messages.po ({len(pot)} entries).")
