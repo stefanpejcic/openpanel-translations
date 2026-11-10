@@ -6,17 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-10 16:16+0200\n"
-"PO-Revision-Date: 2025-11-15 12:00+0300\n"
-"Last-Translator: Anupam Bista <anupambista3@gmail.com>\n"
-"Language-Team: Nepali <anupambista3@gmail.com>\n"
-"Language: ne_np\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.18.0\n"
+"POT-Creation-Date: 2026-11-11 00:56+0200\n"
 
 #: internal/modules/account/api_login.go:65
 #: internal/modules/account/login.go:206
@@ -46,8 +36,8 @@ msgstr "प्रयोगकर्तानाम र पासवर्ड आ
 #: internal/web/templates/files/filemanager_partials.html:436
 #: internal/web/templates/files/filemanager_partials.html:437
 #: internal/web/templates/files/filemanager_partials.html:600
+#: internal/web/templates/files/ftp.html:188
 #: internal/web/templates/files/ftp.html:190
-#: internal/web/templates/files/ftp.html:192
 #: internal/web/templates/files/trash.html:47
 #: internal/web/templates/manager/_cms_app_shared.html:1438
 #: internal/web/templates/manager/_cms_app_shared.html:1547
@@ -1712,7 +1702,8 @@ msgid "No containers yet"
 msgstr ""
 
 #: internal/modules/dashboard/dashboard.go:164
-#: internal/modules/dashboard/dashboard.go:170 internal/web/sidebar.go:595
+#: internal/modules/dashboard/dashboard.go:170
+#: internal/modules/dashboard/dashboard.go:887 internal/web/sidebar.go:595
 #: internal/web/templates/partials/_header.html:57
 msgid "Dashboard"
 msgstr "ड्यासबोर्ड"
@@ -1934,8 +1925,8 @@ msgstr ""
 #: internal/modules/dashboard/sections.go:123
 #: internal/modules/dashboard/sections.go:134 internal/web/sidebar.go:185
 #: internal/web/sidebar.go:198 internal/web/sidebar.go:277
-#: internal/web/templates/files/ftp.html:70
-#: internal/web/templates/files/ftp.html:107
+#: internal/web/templates/files/ftp.html:68
+#: internal/web/templates/files/ftp.html:105
 msgid "Configuration"
 msgstr "कन्फिगरेसन"
 
@@ -3727,8 +3718,8 @@ msgid "Unsuspend outgoing"
 msgstr "बहिर्गमन निलम्बन हटाउनुहोस्"
 
 #: internal/modules/emails/bulk.go:25 internal/modules/ftp/ftp.go:542
+#: internal/web/templates/files/ftp.html:178
 #: internal/web/templates/files/ftp.html:180
-#: internal/web/templates/files/ftp.html:182
 msgid "Change quota"
 msgstr "कोटा परिवर्तन गर्नुहोस्"
 
@@ -3741,8 +3732,8 @@ msgstr "छानिएका खाताहरूका लागि नया
 #: internal/modules/mysql/bulk.go:52 internal/modules/mysql/render.go:220
 #: internal/modules/postgresql/bulk.go:34
 #: internal/modules/postgresql/render.go:171
+#: internal/web/templates/files/ftp.html:164
 #: internal/web/templates/files/ftp.html:166
-#: internal/web/templates/files/ftp.html:168
 #: internal/web/templates/mongodb/mongodb_user.html:45
 #: internal/web/templates/mongodb/password.html:67
 #: internal/web/templates/mongodb/users.html:57
@@ -3881,13 +3872,13 @@ msgstr "त्रुटि: फाइल अमान्य छ - पहिल�
 msgid "Error: No import data found, please try again."
 msgstr "त्रुटि: आयात गर्ने डाटा फेला परेन, कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: internal/modules/emails/migrate.go:924
+#: internal/modules/emails/migrate.go:914
 msgid "Error: Could not open the migrations folder."
 msgstr "त्रुटि: माइग्रेसन फोल्डर खोल्न सकिएन।"
 
 #: internal/modules/emails/render.go:243
 #: internal/web/templates/dashboard/dashboard.html:167
-#: internal/web/templates/files/ftp.html:139
+#: internal/web/templates/files/ftp.html:137
 #: internal/web/templates/files/ftp_new.html:172
 #: internal/web/templates/files/ftp_quota.html:29
 #: internal/web/templates/files/ftp_quota.html:36
@@ -4233,8 +4224,8 @@ msgstr "FTP खाता फेला परेन।"
 msgid "Set this password for the selected FTP accounts:"
 msgstr "छानिएका FTP खाताहरूका लागि यो पासवर्ड सेट गर्नुहोस्:"
 
-#: internal/modules/ftp/ftp.go:541 internal/web/templates/files/ftp.html:173
-#: internal/web/templates/files/ftp.html:175
+#: internal/modules/ftp/ftp.go:541 internal/web/templates/files/ftp.html:171
+#: internal/web/templates/files/ftp.html:173
 msgid "Change path"
 msgstr "पथ परिवर्तन गर्नुहोस्"
 
@@ -7690,6 +7681,7 @@ msgid "You have used all %(n)s domains on your plan."
 msgstr ""
 
 #: internal/web/templates/dashboard/dashboard.html:154
+#: internal/web/templates/dashboard/dashboard.html:263
 #: internal/web/templates/manager/sites.html:707
 msgid "New website"
 msgstr "नयाँ वेबसाइट"
@@ -7722,7 +7714,7 @@ msgstr ""
 #: internal/web/templates/dashboard/dashboard.html:209
 #: internal/web/templates/dashboard/dashboard.html:276
 #: internal/web/templates/dashboard/dashboard.html:326
-#: internal/web/templates/dashboard/dashboard.html:395
+#: internal/web/templates/dashboard/dashboard.html:398
 #: internal/web/templates/dashboard/howto.html:10
 #: internal/web/templates/partials/site_manager_shared.html:208
 #: internal/web/templates/partials/site_manager_shared.html:297
@@ -7738,7 +7730,7 @@ msgstr ""
 #: internal/web/templates/dashboard/dashboard.html:209
 #: internal/web/templates/dashboard/dashboard.html:276
 #: internal/web/templates/dashboard/dashboard.html:326
-#: internal/web/templates/dashboard/dashboard.html:395
+#: internal/web/templates/dashboard/dashboard.html:398
 #: internal/web/templates/dashboard/howto.html:10
 #: internal/web/templates/partials/site_manager_shared.html:208
 #: internal/web/templates/partials/site_manager_shared.html:297
@@ -7775,9 +7767,9 @@ msgstr ""
 #: internal/web/templates/files/backup_wizard.html:124
 #: internal/web/templates/files/clamav/quarantine.html:71
 #: internal/web/templates/files/disk_usage.html:72
-#: internal/web/templates/files/ftp.html:71
-#: internal/web/templates/files/ftp.html:111
-#: internal/web/templates/files/ftp.html:164
+#: internal/web/templates/files/ftp.html:69
+#: internal/web/templates/files/ftp.html:109
+#: internal/web/templates/files/ftp.html:162
 #: internal/web/templates/files/inodes.html:69
 #: internal/web/templates/manager/git.html:174
 #: internal/web/templates/manager/git.html:192
@@ -7860,10 +7852,6 @@ msgstr "DNS जोन"
 msgid "No websites yet"
 msgstr "अहिले सम्म कुनै वेबसाइट छैन"
 
-#: internal/web/templates/dashboard/dashboard.html:263
-msgid "Install an app"
-msgstr ""
-
 #: internal/web/templates/dashboard/dashboard.html:323
 #: static/js/tour-steps.js:81
 msgid "Usage"
@@ -7877,6 +7865,10 @@ msgstr ""
 msgid "Disk, inodes, CPU and memory for your account."
 msgstr ""
 
+#: internal/web/templates/dashboard/dashboard.html:324
+msgid "Disk and inodes for your account."
+msgstr ""
+
 #: internal/web/templates/dashboard/dashboard.html:341
 #: internal/web/templates/docker/container_form.html:164
 msgid "Storage"
@@ -7884,14 +7876,14 @@ msgstr "भण्डारण"
 
 #: internal/web/templates/dashboard/dashboard.html:342
 #: internal/web/templates/dashboard/dashboard.html:355
-#: internal/web/templates/dashboard/dashboard.html:368
-#: internal/web/templates/dashboard/dashboard.html:381
+#: internal/web/templates/dashboard/dashboard.html:370
+#: internal/web/templates/dashboard/dashboard.html:383
 #: internal/web/templates/dashboard/onboarding.html:769
 #: internal/web/templates/domains/domains.html:331
 #: internal/web/templates/domains/redirect.html:196
 #: internal/web/templates/emails/accounts.html:93
 #: internal/web/templates/emails/single_account.html:33
-#: internal/web/templates/files/ftp.html:131
+#: internal/web/templates/files/ftp.html:129
 #: internal/web/templates/manager/wp/_caching.html:282
 #: internal/web/templates/system/error_logs.html:182
 #: internal/web/templates/system/error_logs.html:217
@@ -7905,7 +7897,7 @@ msgstr "को"
 msgid "Inodes"
 msgstr "Inodes"
 
-#: internal/web/templates/dashboard/dashboard.html:367
+#: internal/web/templates/dashboard/dashboard.html:369
 #: internal/web/templates/partials/_account_created.html:137
 #: internal/web/templates/system/process_manager.html:57
 #: internal/web/templates/system/process_manager.html:111
@@ -7913,65 +7905,65 @@ msgstr "Inodes"
 msgid "CPU"
 msgstr "CPU"
 
-#: internal/web/templates/dashboard/dashboard.html:380
+#: internal/web/templates/dashboard/dashboard.html:382
 #: internal/web/templates/docker/container_form.html:123
 #: internal/web/templates/manager/app_install.html:399
 #: internal/web/templates/partials/_account_created.html:138
 msgid "Memory"
 msgstr "मेमोरी"
 
-#: internal/web/templates/dashboard/dashboard.html:392
+#: internal/web/templates/dashboard/dashboard.html:395
 msgid "Quick actions"
 msgstr ""
 
-#: internal/web/templates/dashboard/dashboard.html:392
+#: internal/web/templates/dashboard/dashboard.html:395
 msgid "All tools"
 msgstr ""
 
-#: internal/web/templates/dashboard/dashboard.html:393
+#: internal/web/templates/dashboard/dashboard.html:396
 msgid "Tools you are likely to need."
 msgstr ""
 
-#: internal/web/templates/dashboard/dashboard.html:436
+#: internal/web/templates/dashboard/dashboard.html:439
 msgid "No tool matches"
 msgstr ""
 
-#: internal/web/templates/dashboard/dashboard.html:437
+#: internal/web/templates/dashboard/dashboard.html:440
 msgid "Try another word."
 msgstr ""
 
-#: internal/web/templates/dashboard/dashboard.html:441
+#: internal/web/templates/dashboard/dashboard.html:444
 #: static/js/tour-steps.js:154
 msgid "Layout"
 msgstr "लेआउट"
 
-#: internal/web/templates/dashboard/dashboard.html:443
+#: internal/web/templates/dashboard/dashboard.html:446
 msgid "Unlock layout"
 msgstr "लेआउट अनलक गर्नुहोस्"
 
-#: internal/web/templates/dashboard/dashboard.html:443
+#: internal/web/templates/dashboard/dashboard.html:446
 msgid "Lock layout"
 msgstr "लेआउट लक गर्नुहोस्"
 
-#: internal/web/templates/dashboard/dashboard.html:444
+#: internal/web/templates/dashboard/dashboard.html:447
 msgid "Reset layout"
 msgstr "लेआउट रिसेट गर्नुहोस्"
 
-#: internal/web/templates/dashboard/dashboard.html:470
+#: internal/web/templates/dashboard/dashboard.html:473
 #: internal/web/templates/system/summary.html:233
 msgid "Needs your attention"
 msgstr "तपाईंको ध्यान चाहिन्छ"
 
-#: internal/web/templates/dashboard/dashboard.html:471
+#: internal/web/templates/dashboard/dashboard.html:474
 #: internal/web/templates/system/summary.html:233
 msgid "Worth a look"
 msgstr "हेर्न लायक"
 
-#: internal/web/templates/dashboard/dashboard.html:472
+#: internal/web/templates/dashboard/dashboard.html:475
 msgid "Yesterday's summary found something to check."
 msgstr "हिजोको सारांशले जाँच्नुपर्ने केही भेट्टायो।"
 
-#: internal/web/templates/dashboard/dashboard.html:473
+#: internal/web/templates/dashboard/dashboard.html:476
 msgid "View summary"
 msgstr "सारांश हेर्नुहोस्"
 
@@ -8677,8 +8669,8 @@ msgstr "परिवर्तनहरू सुरक्षित गर्न�
 #: internal/web/templates/files/clamav/quarantine.html:30
 #: internal/web/templates/files/clamav/quarantine.html:31
 #: internal/web/templates/files/filemanager.html:154
-#: internal/web/templates/files/ftp.html:49
-#: internal/web/templates/files/ftp.html:50
+#: internal/web/templates/files/ftp.html:47
+#: internal/web/templates/files/ftp.html:48
 #: internal/web/templates/manager/autoinstaller.html:22
 #: internal/web/templates/manager/git.html:161
 #: internal/web/templates/manager/git.html:426
@@ -9458,7 +9450,7 @@ msgstr ""
 
 #: internal/web/templates/docker/containers.html:62
 #: internal/web/templates/domains/domains.html:59
-#: internal/web/templates/files/ftp.html:61
+#: internal/web/templates/files/ftp.html:59
 #: internal/web/templates/manager/git.html:165
 #: internal/web/templates/system/process_manager.html:49
 #: internal/web/templates/system/waf_logs.html:38 static/js/tour-steps.js:282
@@ -9912,7 +9904,7 @@ msgstr "जोन रिसेट गर्नुहोस्"
 
 #: internal/web/templates/domains/dns.html:71
 #: internal/web/templates/domains/logs.html:108
-#: internal/web/templates/files/ftp.html:31
+#: internal/web/templates/files/ftp.html:29
 #: internal/web/templates/files/ftp_connections.html:17
 #: internal/web/templates/user/active_sessions.html:18
 msgid "Records Table"
@@ -10004,7 +9996,7 @@ msgstr "प्रोटोकल"
 
 #: internal/web/templates/domains/dns.html:219
 #: internal/web/templates/domains/dns.html:465
-#: internal/web/templates/files/ftp.html:213
+#: internal/web/templates/files/ftp.html:211
 #: internal/web/templates/manager/git.html:503
 #: internal/web/templates/manager/sites.html:513
 #: internal/web/templates/mongodb/databases.html:133
@@ -10818,6 +10810,18 @@ msgstr ""
 #: internal/web/templates/domains/goaccess.html:91
 msgid ""
 msgstr ""
+"Project-Id-Version: OpenPanel 2.0.12\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-11-10 16:16+0200\n"
+"PO-Revision-Date: 2025-11-15 12:00+0300\n"
+"Last-Translator: Anupam Bista <anupambista3@gmail.com>\n"
+"Language-Team: Nepali <anupambista3@gmail.com>\n"
+"Language: ne_np\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: internal/web/templates/domains/goaccess.html:91
 msgid "Countries"
@@ -12029,8 +12033,8 @@ msgid "Password"
 msgstr "पासवर्ड"
 
 #: internal/web/templates/emails/confirm_import.html:47
-#: internal/web/templates/files/ftp.html:67
-#: internal/web/templates/files/ftp.html:95
+#: internal/web/templates/files/ftp.html:65
+#: internal/web/templates/files/ftp.html:93
 msgid "Quota"
 msgstr "कोटा"
 
@@ -12622,8 +12626,8 @@ msgstr "IMAP सर्भर"
 
 #: internal/web/templates/emails/migrate.html:104
 #: internal/web/templates/emails/new.html:32
-#: internal/web/templates/files/ftp.html:65
-#: internal/web/templates/files/ftp.html:88
+#: internal/web/templates/files/ftp.html:63
+#: internal/web/templates/files/ftp.html:86
 #: internal/web/templates/files/ftp_new.html:30
 #: internal/web/templates/files/ftp_new.html:207
 #: internal/web/templates/manager/_cms_install_shared.html:373
@@ -14781,39 +14785,39 @@ msgstr ""
 msgid "New account"
 msgstr ""
 
-#: internal/web/templates/files/ftp.html:66
-#: internal/web/templates/files/ftp.html:91
+#: internal/web/templates/files/ftp.html:64
+#: internal/web/templates/files/ftp.html:89
 #: internal/web/templates/partials/folder_picker.html:6
 #: internal/web/templates/partials/folder_picker.html:8
 msgid "Path"
 msgstr "पथ"
 
-#: internal/web/templates/files/ftp.html:68
-#: internal/web/templates/files/ftp.html:99
+#: internal/web/templates/files/ftp.html:66
+#: internal/web/templates/files/ftp.html:97
 #: internal/web/templates/system/process_manager.html:54
 #: internal/web/templates/system/process_manager.html:90
 msgid "UID"
 msgstr "UID"
 
-#: internal/web/templates/files/ftp.html:69
-#: internal/web/templates/files/ftp.html:103
+#: internal/web/templates/files/ftp.html:67
+#: internal/web/templates/files/ftp.html:101
 msgid "GID"
 msgstr "GID"
 
-#: internal/web/templates/files/ftp.html:118
+#: internal/web/templates/files/ftp.html:116
 msgid "No accounts yet."
 msgstr "अहिलेसम्म कुनै खाता छैन।"
 
-#: internal/web/templates/files/ftp.html:118
+#: internal/web/templates/files/ftp.html:116
 msgid "Add your first account"
 msgstr "आफ्नो पहिलो खाता थप्नुहोस्"
 
-#: internal/web/templates/files/ftp.html:132
+#: internal/web/templates/files/ftp.html:130
 #: internal/web/templates/files/ftp_quota.html:29
 msgid "Over quota"
 msgstr "कोटा नाघ्यो"
 
-#: internal/web/templates/files/ftp.html:262
+#: internal/web/templates/files/ftp.html:260
 msgid "Add new FTP account"
 msgstr "नयाँ FTP खाता थप्नुहोस्"
 

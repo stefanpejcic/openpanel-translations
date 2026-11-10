@@ -6,17 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-10 16:16+0200\n"
-"PO-Revision-Date: 2026-01-15 00:00+0500\n"
-"Last-Translator: Hasnain ALi <me@hasnainali9.com>\n"
-"Language-Team: Chinese  <LL@li.org>\n"
-"Language: zh_CN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"Generated-By: Babel 2.18.0\n"
+"POT-Creation-Date: 2026-11-11 00:56+0200\n"
 
 #: internal/modules/account/api_login.go:65
 #: internal/modules/account/login.go:206
@@ -46,8 +36,8 @@ msgstr "用户名和密码为必填项。"
 #: internal/web/templates/files/filemanager_partials.html:436
 #: internal/web/templates/files/filemanager_partials.html:437
 #: internal/web/templates/files/filemanager_partials.html:600
+#: internal/web/templates/files/ftp.html:188
 #: internal/web/templates/files/ftp.html:190
-#: internal/web/templates/files/ftp.html:192
 #: internal/web/templates/files/trash.html:47
 #: internal/web/templates/manager/_cms_app_shared.html:1438
 #: internal/web/templates/manager/_cms_app_shared.html:1547
@@ -1628,7 +1618,8 @@ msgid "No containers yet"
 msgstr ""
 
 #: internal/modules/dashboard/dashboard.go:164
-#: internal/modules/dashboard/dashboard.go:170 internal/web/sidebar.go:595
+#: internal/modules/dashboard/dashboard.go:170
+#: internal/modules/dashboard/dashboard.go:887 internal/web/sidebar.go:595
 #: internal/web/templates/partials/_header.html:57
 msgid "Dashboard"
 msgstr "仪表盘"
@@ -1850,8 +1841,8 @@ msgstr ""
 #: internal/modules/dashboard/sections.go:123
 #: internal/modules/dashboard/sections.go:134 internal/web/sidebar.go:185
 #: internal/web/sidebar.go:198 internal/web/sidebar.go:277
-#: internal/web/templates/files/ftp.html:70
-#: internal/web/templates/files/ftp.html:107
+#: internal/web/templates/files/ftp.html:68
+#: internal/web/templates/files/ftp.html:105
 msgid "Configuration"
 msgstr "配置"
 
@@ -3612,8 +3603,8 @@ msgid "Unsuspend outgoing"
 msgstr "恢复发送"
 
 #: internal/modules/emails/bulk.go:25 internal/modules/ftp/ftp.go:542
+#: internal/web/templates/files/ftp.html:178
 #: internal/web/templates/files/ftp.html:180
-#: internal/web/templates/files/ftp.html:182
 msgid "Change quota"
 msgstr "更改配额"
 
@@ -3626,8 +3617,8 @@ msgstr "所选账户的新邮箱大小（GB）："
 #: internal/modules/mysql/bulk.go:52 internal/modules/mysql/render.go:220
 #: internal/modules/postgresql/bulk.go:34
 #: internal/modules/postgresql/render.go:171
+#: internal/web/templates/files/ftp.html:164
 #: internal/web/templates/files/ftp.html:166
-#: internal/web/templates/files/ftp.html:168
 #: internal/web/templates/mongodb/mongodb_user.html:45
 #: internal/web/templates/mongodb/password.html:67
 #: internal/web/templates/mongodb/users.html:57
@@ -3764,13 +3755,13 @@ msgstr "错误：文件无效 - 第一列必须包含有效的邮箱地址。"
 msgid "Error: No import data found, please try again."
 msgstr "错误：未找到导入数据，请重试。"
 
-#: internal/modules/emails/migrate.go:924
+#: internal/modules/emails/migrate.go:914
 msgid "Error: Could not open the migrations folder."
 msgstr "错误：无法打开迁移文件夹。"
 
 #: internal/modules/emails/render.go:243
 #: internal/web/templates/dashboard/dashboard.html:167
-#: internal/web/templates/files/ftp.html:139
+#: internal/web/templates/files/ftp.html:137
 #: internal/web/templates/files/ftp_new.html:172
 #: internal/web/templates/files/ftp_quota.html:29
 #: internal/web/templates/files/ftp_quota.html:36
@@ -4107,8 +4098,8 @@ msgstr "未找到 FTP 账户。"
 msgid "Set this password for the selected FTP accounts:"
 msgstr "为所选 FTP 账户设置此密码："
 
-#: internal/modules/ftp/ftp.go:541 internal/web/templates/files/ftp.html:173
-#: internal/web/templates/files/ftp.html:175
+#: internal/modules/ftp/ftp.go:541 internal/web/templates/files/ftp.html:171
+#: internal/web/templates/files/ftp.html:173
 msgid "Change path"
 msgstr "更改路径"
 
@@ -7389,6 +7380,7 @@ msgid "You have used all %(n)s domains on your plan."
 msgstr ""
 
 #: internal/web/templates/dashboard/dashboard.html:154
+#: internal/web/templates/dashboard/dashboard.html:263
 #: internal/web/templates/manager/sites.html:707
 msgid "New website"
 msgstr "新网站"
@@ -7421,7 +7413,7 @@ msgstr ""
 #: internal/web/templates/dashboard/dashboard.html:209
 #: internal/web/templates/dashboard/dashboard.html:276
 #: internal/web/templates/dashboard/dashboard.html:326
-#: internal/web/templates/dashboard/dashboard.html:395
+#: internal/web/templates/dashboard/dashboard.html:398
 #: internal/web/templates/dashboard/howto.html:10
 #: internal/web/templates/partials/site_manager_shared.html:208
 #: internal/web/templates/partials/site_manager_shared.html:297
@@ -7437,7 +7429,7 @@ msgstr ""
 #: internal/web/templates/dashboard/dashboard.html:209
 #: internal/web/templates/dashboard/dashboard.html:276
 #: internal/web/templates/dashboard/dashboard.html:326
-#: internal/web/templates/dashboard/dashboard.html:395
+#: internal/web/templates/dashboard/dashboard.html:398
 #: internal/web/templates/dashboard/howto.html:10
 #: internal/web/templates/partials/site_manager_shared.html:208
 #: internal/web/templates/partials/site_manager_shared.html:297
@@ -7474,9 +7466,9 @@ msgstr ""
 #: internal/web/templates/files/backup_wizard.html:124
 #: internal/web/templates/files/clamav/quarantine.html:71
 #: internal/web/templates/files/disk_usage.html:72
-#: internal/web/templates/files/ftp.html:71
-#: internal/web/templates/files/ftp.html:111
-#: internal/web/templates/files/ftp.html:164
+#: internal/web/templates/files/ftp.html:69
+#: internal/web/templates/files/ftp.html:109
+#: internal/web/templates/files/ftp.html:162
 #: internal/web/templates/files/inodes.html:69
 #: internal/web/templates/manager/git.html:174
 #: internal/web/templates/manager/git.html:192
@@ -7559,10 +7551,6 @@ msgstr "DNS 区域"
 msgid "No websites yet"
 msgstr "目前还没有网站。"
 
-#: internal/web/templates/dashboard/dashboard.html:263
-msgid "Install an app"
-msgstr ""
-
 #: internal/web/templates/dashboard/dashboard.html:323
 #: static/js/tour-steps.js:81
 msgid "Usage"
@@ -7576,6 +7564,10 @@ msgstr ""
 msgid "Disk, inodes, CPU and memory for your account."
 msgstr ""
 
+#: internal/web/templates/dashboard/dashboard.html:324
+msgid "Disk and inodes for your account."
+msgstr ""
+
 #: internal/web/templates/dashboard/dashboard.html:341
 #: internal/web/templates/docker/container_form.html:164
 msgid "Storage"
@@ -7583,14 +7575,14 @@ msgstr "存储"
 
 #: internal/web/templates/dashboard/dashboard.html:342
 #: internal/web/templates/dashboard/dashboard.html:355
-#: internal/web/templates/dashboard/dashboard.html:368
-#: internal/web/templates/dashboard/dashboard.html:381
+#: internal/web/templates/dashboard/dashboard.html:370
+#: internal/web/templates/dashboard/dashboard.html:383
 #: internal/web/templates/dashboard/onboarding.html:769
 #: internal/web/templates/domains/domains.html:331
 #: internal/web/templates/domains/redirect.html:196
 #: internal/web/templates/emails/accounts.html:93
 #: internal/web/templates/emails/single_account.html:33
-#: internal/web/templates/files/ftp.html:131
+#: internal/web/templates/files/ftp.html:129
 #: internal/web/templates/manager/wp/_caching.html:282
 #: internal/web/templates/system/error_logs.html:182
 #: internal/web/templates/system/error_logs.html:217
@@ -7604,7 +7596,7 @@ msgstr "共"
 msgid "Inodes"
 msgstr "inodes"
 
-#: internal/web/templates/dashboard/dashboard.html:367
+#: internal/web/templates/dashboard/dashboard.html:369
 #: internal/web/templates/partials/_account_created.html:137
 #: internal/web/templates/system/process_manager.html:57
 #: internal/web/templates/system/process_manager.html:111
@@ -7612,65 +7604,65 @@ msgstr "inodes"
 msgid "CPU"
 msgstr "CPU"
 
-#: internal/web/templates/dashboard/dashboard.html:380
+#: internal/web/templates/dashboard/dashboard.html:382
 #: internal/web/templates/docker/container_form.html:123
 #: internal/web/templates/manager/app_install.html:399
 #: internal/web/templates/partials/_account_created.html:138
 msgid "Memory"
 msgstr "内存"
 
-#: internal/web/templates/dashboard/dashboard.html:392
+#: internal/web/templates/dashboard/dashboard.html:395
 msgid "Quick actions"
 msgstr ""
 
-#: internal/web/templates/dashboard/dashboard.html:392
+#: internal/web/templates/dashboard/dashboard.html:395
 msgid "All tools"
 msgstr ""
 
-#: internal/web/templates/dashboard/dashboard.html:393
+#: internal/web/templates/dashboard/dashboard.html:396
 msgid "Tools you are likely to need."
 msgstr ""
 
-#: internal/web/templates/dashboard/dashboard.html:436
+#: internal/web/templates/dashboard/dashboard.html:439
 msgid "No tool matches"
 msgstr ""
 
-#: internal/web/templates/dashboard/dashboard.html:437
+#: internal/web/templates/dashboard/dashboard.html:440
 msgid "Try another word."
 msgstr ""
 
-#: internal/web/templates/dashboard/dashboard.html:441
+#: internal/web/templates/dashboard/dashboard.html:444
 #: static/js/tour-steps.js:154
 msgid "Layout"
 msgstr "布局"
 
-#: internal/web/templates/dashboard/dashboard.html:443
+#: internal/web/templates/dashboard/dashboard.html:446
 msgid "Unlock layout"
 msgstr "解锁布局"
 
-#: internal/web/templates/dashboard/dashboard.html:443
+#: internal/web/templates/dashboard/dashboard.html:446
 msgid "Lock layout"
 msgstr "锁定布局"
 
-#: internal/web/templates/dashboard/dashboard.html:444
+#: internal/web/templates/dashboard/dashboard.html:447
 msgid "Reset layout"
 msgstr "重置布局"
 
-#: internal/web/templates/dashboard/dashboard.html:470
+#: internal/web/templates/dashboard/dashboard.html:473
 #: internal/web/templates/system/summary.html:233
 msgid "Needs your attention"
 msgstr "需要您关注"
 
-#: internal/web/templates/dashboard/dashboard.html:471
+#: internal/web/templates/dashboard/dashboard.html:474
 #: internal/web/templates/system/summary.html:233
 msgid "Worth a look"
 msgstr "值得一看"
 
-#: internal/web/templates/dashboard/dashboard.html:472
+#: internal/web/templates/dashboard/dashboard.html:475
 msgid "Yesterday's summary found something to check."
 msgstr "昨天的摘要发现了需要检查的内容。"
 
-#: internal/web/templates/dashboard/dashboard.html:473
+#: internal/web/templates/dashboard/dashboard.html:476
 msgid "View summary"
 msgstr "查看摘要"
 
@@ -8343,8 +8335,8 @@ msgstr "保存更改"
 #: internal/web/templates/files/clamav/quarantine.html:30
 #: internal/web/templates/files/clamav/quarantine.html:31
 #: internal/web/templates/files/filemanager.html:154
-#: internal/web/templates/files/ftp.html:49
-#: internal/web/templates/files/ftp.html:50
+#: internal/web/templates/files/ftp.html:47
+#: internal/web/templates/files/ftp.html:48
 #: internal/web/templates/manager/autoinstaller.html:22
 #: internal/web/templates/manager/git.html:161
 #: internal/web/templates/manager/git.html:426
@@ -9098,7 +9090,7 @@ msgstr ""
 
 #: internal/web/templates/docker/containers.html:62
 #: internal/web/templates/domains/domains.html:59
-#: internal/web/templates/files/ftp.html:61
+#: internal/web/templates/files/ftp.html:59
 #: internal/web/templates/manager/git.html:165
 #: internal/web/templates/system/process_manager.html:49
 #: internal/web/templates/system/waf_logs.html:38 static/js/tour-steps.js:282
@@ -9546,7 +9538,7 @@ msgstr "重置区域"
 
 #: internal/web/templates/domains/dns.html:71
 #: internal/web/templates/domains/logs.html:108
-#: internal/web/templates/files/ftp.html:31
+#: internal/web/templates/files/ftp.html:29
 #: internal/web/templates/files/ftp_connections.html:17
 #: internal/web/templates/user/active_sessions.html:18
 msgid "Records Table"
@@ -9638,7 +9630,7 @@ msgstr "协议"
 
 #: internal/web/templates/domains/dns.html:219
 #: internal/web/templates/domains/dns.html:465
-#: internal/web/templates/files/ftp.html:213
+#: internal/web/templates/files/ftp.html:211
 #: internal/web/templates/manager/git.html:503
 #: internal/web/templates/manager/sites.html:513
 #: internal/web/templates/mongodb/databases.html:133
@@ -10431,6 +10423,18 @@ msgstr ""
 #: internal/web/templates/domains/goaccess.html:91
 msgid ""
 msgstr ""
+"Project-Id-Version: OpenPanel 2.0.12\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-11-10 16:16+0200\n"
+"PO-Revision-Date: 2026-01-15 00:00+0500\n"
+"Last-Translator: Hasnain ALi <me@hasnainali9.com>\n"
+"Language-Team: Chinese  <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: internal/web/templates/domains/goaccess.html:91
 msgid "Countries"
@@ -11622,8 +11626,8 @@ msgid "Password"
 msgstr "密码"
 
 #: internal/web/templates/emails/confirm_import.html:47
-#: internal/web/templates/files/ftp.html:67
-#: internal/web/templates/files/ftp.html:95
+#: internal/web/templates/files/ftp.html:65
+#: internal/web/templates/files/ftp.html:93
 msgid "Quota"
 msgstr "配额"
 
@@ -12201,8 +12205,8 @@ msgstr "IMAP 服务器"
 
 #: internal/web/templates/emails/migrate.html:104
 #: internal/web/templates/emails/new.html:32
-#: internal/web/templates/files/ftp.html:65
-#: internal/web/templates/files/ftp.html:88
+#: internal/web/templates/files/ftp.html:63
+#: internal/web/templates/files/ftp.html:86
 #: internal/web/templates/files/ftp_new.html:30
 #: internal/web/templates/files/ftp_new.html:207
 #: internal/web/templates/manager/_cms_install_shared.html:373
@@ -14311,39 +14315,39 @@ msgstr ""
 msgid "New account"
 msgstr ""
 
-#: internal/web/templates/files/ftp.html:66
-#: internal/web/templates/files/ftp.html:91
+#: internal/web/templates/files/ftp.html:64
+#: internal/web/templates/files/ftp.html:89
 #: internal/web/templates/partials/folder_picker.html:6
 #: internal/web/templates/partials/folder_picker.html:8
 msgid "Path"
 msgstr "路径"
 
-#: internal/web/templates/files/ftp.html:68
-#: internal/web/templates/files/ftp.html:99
+#: internal/web/templates/files/ftp.html:66
+#: internal/web/templates/files/ftp.html:97
 #: internal/web/templates/system/process_manager.html:54
 #: internal/web/templates/system/process_manager.html:90
 msgid "UID"
 msgstr "UID"
 
-#: internal/web/templates/files/ftp.html:69
-#: internal/web/templates/files/ftp.html:103
+#: internal/web/templates/files/ftp.html:67
+#: internal/web/templates/files/ftp.html:101
 msgid "GID"
 msgstr "GID"
 
-#: internal/web/templates/files/ftp.html:118
+#: internal/web/templates/files/ftp.html:116
 msgid "No accounts yet."
 msgstr "暂无账户。"
 
-#: internal/web/templates/files/ftp.html:118
+#: internal/web/templates/files/ftp.html:116
 msgid "Add your first account"
 msgstr "添加您的第一个账户"
 
-#: internal/web/templates/files/ftp.html:132
+#: internal/web/templates/files/ftp.html:130
 #: internal/web/templates/files/ftp_quota.html:29
 msgid "Over quota"
 msgstr "超出配额"
 
-#: internal/web/templates/files/ftp.html:262
+#: internal/web/templates/files/ftp.html:260
 msgid "Add new FTP account"
 msgstr "添加新 FTP 账户"
 
