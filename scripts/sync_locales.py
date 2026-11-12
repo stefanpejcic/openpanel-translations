@@ -102,6 +102,9 @@ def unescape(s):
 
 def add(results, msgid, plural, relpath, lineno):
     msgid = unescape(msgid)
+    if not msgid:
+        # an empty literal like (dict ... "Empty" "") would become a second msgid "" header block
+        return
     entry = results.setdefault(msgid, {"plural": None, "locations": []})
     if plural:
         entry["plural"] = unescape(plural)
