@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-16 12:10+0200\n"
+"POT-Creation-Date: 2026-11-16 12:44+0200\n"
 "PO-Revision-Date: 2025-11-07 15:10-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1219,7 +1219,7 @@ msgstr "Contenedores e imágenes"
 msgid "Invalid bot policy."
 msgstr "Política de bots no válida."
 
-#: internal/modules/botcontrol/render.go:39
+#: internal/modules/botcontrol/render.go:41
 #: internal/modules/dashboard/sections.go:198
 #: internal/modules/dashboard/sections.go:323
 msgid "AI & Bot Control"
@@ -24937,18 +24937,18 @@ msgstr ""
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:26
 #: internal/web/templates/system/bot_control_domain.html:41
-msgid "Rate-limit (10/min)"
-msgstr "Limitar (10/min)"
+msgid "Rate-limit (%(limit)s/min)"
+msgstr "Limitar (%(limit)s/min)"
 
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:41
 msgid ""
-"Caps known AI crawlers at 10 requests/minute per crawler per site (HTTP "
-"429); normal visitors and search engines (Googlebot, Bingbot) are "
+"Caps known AI crawlers at %(limit)s requests/minute per crawler per site "
+"(HTTP 429); normal visitors and search engines (Googlebot, Bingbot) are "
 "unaffected."
 msgstr ""
-"Limita los rastreadores de IA conocidos a 10 solicitudes por minuto por "
-"rastreador y sitio (HTTP 429); los visitantes normales y los buscadores "
+"Limita los rastreadores de IA conocidos a %(limit)s solicitudes por minuto "
+"por rastreador y sitio (HTTP 429); los visitantes normales y los buscadores "
 "(Googlebot, Bingbot) no se ven afectados."
 
 #: internal/web/templates/system/bot_control.html:24
@@ -24979,8 +24979,8 @@ msgid "Blocked (403)"
 msgstr "Bloqueado (403)"
 
 #: internal/web/templates/system/bot_control.html:52
-msgid "Rate-limited (10/min)"
-msgstr "Limitado (10/min)"
+msgid "Rate-limited (%(limit)s/min)"
+msgstr "Limitado (%(limit)s/min)"
 
 #: internal/web/templates/system/bot_control.html:54
 msgid "Allowed"
