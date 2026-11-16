@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-11-16 12:44+0200\n"
+"POT-Creation-Date: 2026-11-16 13:27+0200\n"
 "PO-Revision-Date: 2026-02-08 21:25+0200\n"
 "Last-Translator: Svetoslav Slavkov <contact@sslavkov.eu>\n"
 "Language-Team: English <info@openpanel.com>\n"
@@ -1122,10 +1122,6 @@ msgid "Databases"
 msgstr "Бази данни"
 
 #: internal/modules/backupwizard/render.go:41
-msgid "Home directory"
-msgstr "Домашна директория"
-
-#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:80
 #: internal/modules/dashboard/sections.go:81
 #: internal/modules/dashboard/sections.go:228
@@ -1148,6 +1144,21 @@ msgstr "Домашна директория"
 msgid "Domains"
 msgstr "Домейни"
 
+#: internal/modules/backupwizard/render.go:41
+msgid "Home directory"
+msgstr "Домашна директория"
+
+#: internal/modules/backupwizard/render.go:42
+#: internal/modules/dashboard/sections.go:74
+#: internal/modules/dashboard/sections.go:270
+#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
+#: internal/web/templates/dashboard/dashboard.html:206
+#: internal/web/templates/domains/domains.html:71
+#: internal/web/templates/domains/domains.html:126
+#: internal/web/templates/system/summary.html:169
+msgid "Websites"
+msgstr "Сайтове"
+
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/altlist.go:70
 #: internal/modules/dashboard/sections.go:103
@@ -1162,17 +1173,6 @@ msgstr "Домейни"
 #: internal/web/templates/manager/wp/single.html:345
 msgid "FTP accounts"
 msgstr "FTP акаунти"
-
-#: internal/modules/backupwizard/render.go:42
-#: internal/modules/dashboard/sections.go:74
-#: internal/modules/dashboard/sections.go:270
-#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
-#: internal/web/templates/dashboard/dashboard.html:206
-#: internal/web/templates/domains/domains.html:71
-#: internal/web/templates/domains/domains.html:126
-#: internal/web/templates/system/summary.html:169
-msgid "Websites"
-msgstr "Сайтове"
 
 #: internal/modules/backupwizard/render.go:42
 msgid "Email accounts, filters, aliases"
@@ -1608,14 +1608,10 @@ msgid "Email accounts"
 msgstr "Е-поща акаунти"
 
 #: internal/modules/dashboard/altlist.go:55
-msgid "Your mailboxes, the fullest first."
-msgstr "Вашите пощенски кутии, първо най-пълните."
-
-#: internal/modules/dashboard/altlist.go:55
-#: internal/web/templates/domains/dns.html:257
-#: internal/web/templates/domains/dns.html:260
-msgid "Address"
-msgstr "Адрес"
+#: internal/web/templates/emails/filter.html:26
+#: internal/web/templates/emails/migrate.html:200
+msgid "No email accounts yet"
+msgstr "Все още няма имейл акаунти"
 
 #: internal/modules/dashboard/altlist.go:55
 #: internal/modules/dashboard/altlist.go:70
@@ -1624,14 +1620,14 @@ msgid "Used"
 msgstr "Използвано"
 
 #: internal/modules/dashboard/altlist.go:55
-#: internal/web/templates/emails/filter.html:26
-#: internal/web/templates/emails/migrate.html:200
-msgid "No email accounts yet"
-msgstr "Все още няма имейл акаунти"
+#: internal/web/templates/domains/dns.html:257
+#: internal/web/templates/domains/dns.html:260
+msgid "Address"
+msgstr "Адрес"
 
-#: internal/modules/dashboard/altlist.go:66
-msgid "Your databases on every engine, the biggest first."
-msgstr "Вашите бази данни на всеки енджин, първо най-големите."
+#: internal/modules/dashboard/altlist.go:55
+msgid "Your mailboxes, the fullest first."
+msgstr "Вашите пощенски кутии, първо най-пълните."
 
 #: internal/modules/dashboard/altlist.go:66
 #: internal/web/templates/dashboard/onboarding.html:599
@@ -1692,12 +1688,12 @@ msgid "Size"
 msgstr "Размер"
 
 #: internal/modules/dashboard/altlist.go:66
+msgid "Your databases on every engine, the biggest first."
+msgstr "Вашите бази данни на всеки енджин, първо най-големите."
+
+#: internal/modules/dashboard/altlist.go:66
 msgid "No databases yet"
 msgstr "Все още няма бази данни"
-
-#: internal/modules/dashboard/altlist.go:70
-msgid "FTP users and their folders, the most used first."
-msgstr "FTP потребители и техните папки, първо най-използваните."
 
 #: internal/modules/dashboard/altlist.go:70
 #: internal/web/templates/mongodb/assign.html:21
@@ -1719,8 +1715,26 @@ msgid "User"
 msgstr "Потребител"
 
 #: internal/modules/dashboard/altlist.go:70
+msgid "FTP users and their folders, the most used first."
+msgstr "FTP потребители и техните папки, първо най-използваните."
+
+#: internal/modules/dashboard/altlist.go:70
 msgid "No FTP accounts yet"
 msgstr "Все още няма FTP акаунти"
+
+#: internal/modules/dashboard/altlist.go:74
+#: internal/web/templates/cache/service.html:285
+#: internal/web/templates/docker/change_images.html:34
+#: internal/web/templates/partials/_search.html:71
+#: internal/web/templates/php/info.html:19
+#: internal/web/templates/system/error_logs.html:45
+#: internal/web/templates/system/error_logs.html:92
+#: internal/web/templates/system/error_logs.html:120
+#: internal/web/templates/system/services.html:67
+#: internal/web/templates/system/services.html:171
+#: internal/web/templates/system/services.html:308
+msgid "Service"
+msgstr "Услуга"
 
 #: internal/modules/dashboard/altlist.go:74
 #: internal/modules/dashboard/sections.go:163
@@ -1739,20 +1753,6 @@ msgstr "Контейнери"
 #: internal/modules/dashboard/altlist.go:74
 msgid "The services on your account, running ones first."
 msgstr "Услугите във вашия акаунт, първо работещите."
-
-#: internal/modules/dashboard/altlist.go:74
-#: internal/web/templates/cache/service.html:285
-#: internal/web/templates/docker/change_images.html:34
-#: internal/web/templates/partials/_search.html:71
-#: internal/web/templates/php/info.html:19
-#: internal/web/templates/system/error_logs.html:45
-#: internal/web/templates/system/error_logs.html:92
-#: internal/web/templates/system/error_logs.html:120
-#: internal/web/templates/system/services.html:67
-#: internal/web/templates/system/services.html:171
-#: internal/web/templates/system/services.html:308
-msgid "Service"
-msgstr "Услуга"
 
 #: internal/modules/dashboard/altlist.go:74
 msgid "No containers yet"
@@ -2758,6 +2758,10 @@ msgstr "Лимит на паметта"
 msgid "Bandwidth Limit"
 msgstr "Ограничение на честотната лента"
 
+#: internal/modules/dns/api.go:260
+msgid "record"
+msgstr "запис"
+
 #: internal/modules/dns/bulk.go:29
 msgid "Update TTL"
 msgstr "Обнови TTL"
@@ -3072,10 +3076,6 @@ msgstr "Контейнерът е обновен и рестартиран с н
 msgid "Container updated, the new settings apply when it starts."
 msgstr "Контейнерът е обновен, новите настройки ще важат при стартирането му."
 
-#: internal/modules/docker/domain.go:71
-msgid "NodeJS"
-msgstr "NodeJS"
-
 #: internal/modules/docker/images.go:36
 msgid "The image of %(service)s can't be changed."
 msgstr "Образът на %(service)s не може да бъде сменен."
@@ -3321,21 +3321,21 @@ msgstr "Задай защитната стена за избраните дом�
 
 #: internal/modules/domains/bulk.go:26
 #: internal/web/templates/domains/domains.html:261
-#: internal/web/templates/files/filemanager_partials.html:791
-#: internal/web/templates/system/waf.html:66
-#: internal/web/templates/system/waf.html:72
-#: internal/web/templates/system/waf.html:119
-msgid "On"
-msgstr "Включено"
-
-#: internal/modules/domains/bulk.go:26
-#: internal/web/templates/domains/domains.html:261
 #: internal/web/templates/manager/wp/_tools.html:34
 #: internal/web/templates/system/waf.html:66
 #: internal/web/templates/system/waf.html:74
 #: internal/web/templates/system/waf.html:121
 msgid "Off"
 msgstr "Изключено"
+
+#: internal/modules/domains/bulk.go:26
+#: internal/web/templates/domains/domains.html:261
+#: internal/web/templates/files/filemanager_partials.html:791
+#: internal/web/templates/system/waf.html:66
+#: internal/web/templates/system/waf.html:72
+#: internal/web/templates/system/waf.html:119
+msgid "On"
+msgstr "Включено"
 
 #: internal/modules/domains/bulk.go:27
 msgid "Cloudflare"
@@ -3512,6 +3512,16 @@ msgid "Status"
 msgstr "Статус"
 
 #: internal/modules/domains/render.go:105
+#: internal/web/templates/dashboard/dashboard.html:237
+#: internal/web/templates/domains/domains.html:163
+#: internal/web/templates/emails/accounts.html:37
+#: internal/web/templates/emails/accounts.html:47
+#: internal/web/templates/files/backup_restore.html:782
+#: internal/web/templates/manager/wp/single.html:24
+msgid "Suspended"
+msgstr "Спряна"
+
+#: internal/modules/domains/render.go:105
 #: internal/web/templates/dashboard/dashboard.html:240
 #: internal/web/templates/domains/domains.html:167
 #: internal/web/templates/manager/python_node_apps.html:29
@@ -3522,16 +3532,6 @@ msgstr "Статус"
 #: internal/web/templates/system/cronjobs.html:225
 msgid "Active"
 msgstr "Активно"
-
-#: internal/modules/domains/render.go:105
-#: internal/web/templates/dashboard/dashboard.html:237
-#: internal/web/templates/domains/domains.html:163
-#: internal/web/templates/emails/accounts.html:37
-#: internal/web/templates/emails/accounts.html:47
-#: internal/web/templates/files/backup_restore.html:782
-#: internal/web/templates/manager/wp/single.html:24
-msgid "Suspended"
-msgstr "Спряна"
 
 #: internal/modules/domains/render.go:108
 #: internal/web/templates/domains/domains.html:70
@@ -3557,25 +3557,6 @@ msgstr "AutoSSL"
 #: internal/web/templates/domains/ssl.html:329
 msgid "Custom SSL"
 msgstr "Персонализиран SSL"
-
-#: internal/modules/domains/render.go:122
-#: internal/web/templates/dashboard/dashboard.html:284
-#: internal/web/templates/domains/dns.html:125
-#: internal/web/templates/domains/dns.html:144
-#: internal/web/templates/domains/dns.html:547
-#: internal/web/templates/domains/domains.html:65
-#: internal/web/templates/domains/domains.html:120
-#: internal/web/templates/domains/dynamic_dns.html:155
-#: internal/web/templates/domains/redirect.html:48
-#: internal/web/templates/domains/redirect.html:52
-#: internal/web/templates/domains/ssl.html:309
-#: internal/web/templates/files/filemanager.html:112
-#: internal/web/templates/files/filemanager_partials.html:480
-#: internal/web/templates/files/trash.html:73
-#: internal/web/templates/files/trash_partials.html:55
-#: internal/web/templates/manager/sites.html:209
-msgid "Type"
-msgstr "Тип"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/docker/container_form.html:241
@@ -3614,6 +3595,25 @@ msgstr "Тип"
 #: internal/web/templates/system/bot_control.html:37
 msgid "Domain"
 msgstr "Домейн"
+
+#: internal/modules/domains/render.go:122
+#: internal/web/templates/dashboard/dashboard.html:284
+#: internal/web/templates/domains/dns.html:125
+#: internal/web/templates/domains/dns.html:144
+#: internal/web/templates/domains/dns.html:547
+#: internal/web/templates/domains/domains.html:65
+#: internal/web/templates/domains/domains.html:120
+#: internal/web/templates/domains/dynamic_dns.html:155
+#: internal/web/templates/domains/redirect.html:48
+#: internal/web/templates/domains/redirect.html:52
+#: internal/web/templates/domains/ssl.html:309
+#: internal/web/templates/files/filemanager.html:112
+#: internal/web/templates/files/filemanager_partials.html:480
+#: internal/web/templates/files/trash.html:73
+#: internal/web/templates/files/trash_partials.html:55
+#: internal/web/templates/manager/sites.html:209
+msgid "Type"
+msgstr "Тип"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/domains/dns.html:284
@@ -3680,10 +3680,6 @@ msgid "Invalid request. Domain name and Vhost content must be provided."
 msgstr ""
 "Невалидна заявка. Трябва да бъдат посочени име на домейн и съдържание на "
 "vhost."
-
-#: internal/modules/dynamicdns/dynamicdns.go:63
-msgid "record"
-msgstr "запис"
 
 #: internal/modules/dynamicdns/handlers.go:85
 msgid "Failed to create Dynamic DNS entry."
@@ -3809,6 +3805,22 @@ msgid "New mailbox size (GB) for the selected accounts:"
 msgstr "Нов размер на пощенската кутия (GB) за избраните акаунти:"
 
 #: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
+#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
+#: internal/modules/postgresql/bulk.go:34
+#: internal/web/templates/emails/new.html:74
+#: internal/web/templates/emails/single_account.html:185
+#: internal/web/templates/files/ftp_new.html:71
+#: internal/web/templates/files/ftp_password.html:44
+#: internal/web/templates/files/ftp_password.html:55
+#: internal/web/templates/mysql/password.html:43
+#: internal/web/templates/mysql/root_password.html:54
+#: internal/web/templates/mysql/root_password.html:77
+#: internal/web/templates/user/account.html:118
+#: internal/web/templates/user/reset_password/set_new_password.html:19
+msgid "New password"
+msgstr "Нова парола"
+
+#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mongodb/render.go:202
 #: internal/modules/mysql/bulk.go:52 internal/modules/mysql/render.go:220
 #: internal/modules/postgresql/bulk.go:34
@@ -3828,22 +3840,6 @@ msgstr "Нов размер на пощенската кутия (GB) за из�
 #: internal/web/templates/user/reset_password/set_new_password.html:63
 msgid "Change password"
 msgstr "Смяна на паролата"
-
-#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
-#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
-#: internal/modules/postgresql/bulk.go:34
-#: internal/web/templates/emails/new.html:74
-#: internal/web/templates/emails/single_account.html:185
-#: internal/web/templates/files/ftp_new.html:71
-#: internal/web/templates/files/ftp_password.html:44
-#: internal/web/templates/files/ftp_password.html:55
-#: internal/web/templates/mysql/password.html:43
-#: internal/web/templates/mysql/root_password.html:54
-#: internal/web/templates/mysql/root_password.html:77
-#: internal/web/templates/user/account.html:118
-#: internal/web/templates/user/reset_password/set_new_password.html:19
-msgid "New password"
-msgstr "Нова парола"
 
 #: internal/modules/emails/bulk.go:27
 msgid "Set this password for the selected accounts:"
@@ -4014,6 +4010,10 @@ msgstr ""
 #: internal/modules/errorlogs/collect.go:103
 msgid "HTTP 5xx responses"
 msgstr "HTTP 5xx отговори"
+
+#: internal/modules/errorlogs/sites.go:28
+msgid "NodeJS"
+msgstr "NodeJS"
 
 #: internal/modules/filemanager/api_transfer.go:188
 #: internal/modules/filemanager/archive.go:90
@@ -4512,10 +4512,6 @@ msgstr "%(repo)s (%(branch)s на %(commit)s) е внедрено в %(dir)s."
 msgid "Deploy actions ran in %(container)s."
 msgstr "Действията по внедряване са изпълнени в %(container)s."
 
-#: internal/modules/git/handlers.go:360
-msgid "settings"
-msgstr "настройки"
-
 #: internal/modules/git/handlers.go:362
 msgid "Could not save settings for %(repo)s: %(error)s"
 msgstr "Настройките за %(repo)s не можаха да бъдат запазени: %(error)s"
@@ -4779,6 +4775,10 @@ msgid "Permanently delete the selected users? This cannot be undone."
 msgstr ""
 "Да се изтрият ли окончателно избраните потребители? Това не може да бъде "
 "отменено."
+
+#: internal/modules/mongodb/create.go:51
+msgid "Password must be at least 8 characters long"
+msgstr "Паролата трябва да бъде поне 8 знака дълга"
 
 #: internal/modules/mongodb/databases.go:52
 #: internal/modules/mongodb/users.go:37
@@ -5110,9 +5110,12 @@ msgstr ""
 "Базата данни и потребителят са създадени, но ролята не можа да бъде дадена: "
 "%(error)s"
 
-#: internal/modules/moodle/clone.go:179
-msgid "https://"
-msgstr "https://"
+#: internal/modules/mysql/api.go:190
+msgid ""
+"Database name is too long. MySQL identifiers are limited to 64 characters."
+msgstr ""
+"Името на базата данни е твърде дълго. MySQL идентификаторите са ограничени "
+"до 64 знака."
 
 #: internal/modules/mysql/assign.go:56 internal/modules/mysql/wizard.go:67
 msgid "At least one privilege must be selected."
@@ -5247,17 +5250,6 @@ msgid ""
 "%(mysql_version)s container is not running. Please wait for initialization."
 msgstr ""
 "Контейнерът на %(mysql_version)s не работи. Моля, изчакайте инициализацията."
-
-#: internal/modules/mysql/create.go:32
-msgid ""
-"Database name is too long. MySQL identifiers are limited to 64 characters."
-msgstr ""
-"Името на базата данни е твърде дълго. MySQL идентификаторите са ограничени "
-"до 64 знака."
-
-#: internal/modules/mysql/create.go:55
-msgid "Password must be at least 8 characters long"
-msgstr "Паролата трябва да бъде поне 8 знака дълга"
 
 #: internal/modules/mysql/databases.go:220 internal/modules/mysql/wizard.go:30
 msgid ""
@@ -6412,13 +6404,13 @@ msgstr "Да се включи ли защитната стена за избр�
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable WAF"
-msgstr "Изключване на WAF"
+msgid "Disable the firewall for the selected domains?"
+msgstr "Да се изключи ли защитната стена за избраните домейни?"
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable the firewall for the selected domains?"
-msgstr "Да се изключи ли защитната стена за избраните домейни?"
+msgid "Disable WAF"
+msgstr "Изключване на WAF"
 
 #: internal/modules/waf/render.go:84
 #: internal/web/templates/dashboard/custom_section.html:15
@@ -6809,26 +6801,6 @@ msgstr "GrapesJS редактор на уебсайтове"
 #: internal/modules/websites/websitebuilder_render.go:92
 msgid "You have reached the maximum number of sites allowed."
 msgstr "Достигнахте максималния брой разрешени сайтове."
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG"
-msgstr "WP_DEBUG"
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG_LOG"
-msgstr "WP_DEBUG_LOG"
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG_DISPLAY"
-msgstr "WP_DEBUG_DISPLAY"
-
-#: internal/modules/websites/websites.go:1289
-msgid "SCRIPT_DEBUG"
-msgstr "SCRIPT_DEBUG"
-
-#: internal/modules/websites/websites.go:1289
-msgid "SAVEQUERIES"
-msgstr "SAVEQUERIES"
 
 #: internal/modules/websites/websites.go:1360
 msgid "WordPress updated successfully"
@@ -7688,6 +7660,14 @@ msgid "Name"
 msgstr "Име"
 
 #: internal/web/templates/cache/service.html:210
+#: internal/web/templates/partials/_service_js.html:24
+#: internal/web/templates/system/services.html:216
+#: internal/web/templates/user/history_usage.html:44
+#: internal/web/templates/user/history_usage.html:111
+msgid "Memory %"
+msgstr "Памет %"
+
+#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/docker/containers.html:67
 #: internal/web/templates/docker/containers.html:86
 #: internal/web/templates/docker/containers.html:360
@@ -7707,14 +7687,6 @@ msgid "Memory usage"
 msgstr "Използване на памет"
 
 #: internal/web/templates/cache/service.html:210
-#: internal/web/templates/docker/containers.html:70
-#: internal/web/templates/docker/containers.html:89
-#: internal/web/templates/partials/_service_js.html:26
-#: internal/web/templates/system/services.html:216
-msgid "Block I/O"
-msgstr "Блок I/O"
-
-#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/mongodb/processlist.html:31
 #: internal/web/templates/mysql/processlist.html:31
 #: internal/web/templates/system/services.html:216
@@ -7722,18 +7694,18 @@ msgid "ID"
 msgstr "Номер (ID)"
 
 #: internal/web/templates/cache/service.html:210
-#: internal/web/templates/partials/_service_js.html:24
-#: internal/web/templates/system/services.html:216
-#: internal/web/templates/user/history_usage.html:44
-#: internal/web/templates/user/history_usage.html:111
-msgid "Memory %"
-msgstr "Памет %"
-
-#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/partials/_service_js.html:25
 #: internal/web/templates/system/services.html:216
 msgid "Network I/O"
 msgstr "Мрежови I/O"
+
+#: internal/web/templates/cache/service.html:210
+#: internal/web/templates/docker/containers.html:70
+#: internal/web/templates/docker/containers.html:89
+#: internal/web/templates/partials/_service_js.html:26
+#: internal/web/templates/system/services.html:216
+msgid "Block I/O"
+msgstr "Блок I/O"
 
 #: internal/web/templates/cache/service.html:246
 #: internal/web/templates/system/services.html:262
@@ -7889,14 +7861,14 @@ msgid "You have used all %(n)s domains on your plan."
 msgstr "Използвали сте всички %(n)s домейна от плана си."
 
 #: internal/web/templates/dashboard/dashboard.html:154
+msgid "You have used all %(n)s websites on your plan."
+msgstr "Използвали сте всички %(n)s уебсайта от плана си."
+
+#: internal/web/templates/dashboard/dashboard.html:154
 #: internal/web/templates/dashboard/dashboard.html:263
 #: internal/web/templates/manager/sites.html:708
 msgid "New website"
 msgstr "Нов уеб-сайт"
-
-#: internal/web/templates/dashboard/dashboard.html:154
-msgid "You have used all %(n)s websites on your plan."
-msgstr "Използвали сте всички %(n)s уебсайта от плана си."
 
 #: internal/web/templates/dashboard/dashboard.html:162
 msgid "Plan usage"
@@ -8205,6 +8177,10 @@ msgid "Copied to clipboard"
 msgstr "Копирано в клипборда"
 
 #: internal/web/templates/dashboard/information.html:29
+msgid "General information"
+msgstr "Обща информация"
+
+#: internal/web/templates/dashboard/information.html:29
 #: internal/web/templates/domains/logs.html:132
 #: internal/web/templates/files/filemanager_partials.html:328
 #: internal/web/templates/files/filemanager_partials.html:329
@@ -8213,10 +8189,6 @@ msgstr "Копирано в клипборда"
 #: internal/web/templates/system/error_logs.html:71
 msgid "View"
 msgstr "Преглед"
-
-#: internal/web/templates/dashboard/information.html:29
-msgid "General information"
-msgstr "Обща информация"
 
 #: internal/web/templates/dashboard/information.html:30
 msgid "Your account, plan and the addresses you need to connect."
@@ -9339,16 +9311,16 @@ msgstr ""
 "новия."
 
 #: internal/web/templates/docker/change_mysql.html:21
+#: internal/web/templates/partials/_db_tuning.html:31
+msgid "Databases:"
+msgstr "Бази данни:"
+
+#: internal/web/templates/docker/change_mysql.html:21
 msgid ""
 "To switch the database server, first remove all databases from your account."
 msgstr ""
 "За да смените сървъра за бази данни, първо премахнете всички бази данни от "
 "акаунта си."
-
-#: internal/web/templates/docker/change_mysql.html:21
-#: internal/web/templates/partials/_db_tuning.html:31
-msgid "Databases:"
-msgstr "Бази данни:"
 
 #: internal/web/templates/docker/change_mysql.html:21
 msgid "Go to databases"
@@ -9380,15 +9352,15 @@ msgstr ""
 "новия."
 
 #: internal/web/templates/docker/change_webserver.html:21
-msgid "To switch the webserver, first remove all domains from your account."
-msgstr ""
-"За да смените уеб сървъра, първо премахнете всички домейни от акаунта си."
-
-#: internal/web/templates/docker/change_webserver.html:21
 #: internal/web/templates/partials/_db_tuning.html:34
 #: internal/web/templates/php/wizard.html:15
 msgid "Domains:"
 msgstr "Домейни:"
+
+#: internal/web/templates/docker/change_webserver.html:21
+msgid "To switch the webserver, first remove all domains from your account."
+msgstr ""
+"За да смените уеб сървъра, първо премахнете всички домейни от акаунта си."
 
 #: internal/web/templates/docker/change_webserver.html:21
 msgid "Go to domains"
@@ -9961,16 +9933,16 @@ msgstr ""
 " контейнера."
 
 #: internal/web/templates/docker/terminal.html:25
-msgid "Inactivity timeout:"
-msgstr "Време за прекъсване при неактивност:"
-
-#: internal/web/templates/docker/terminal.html:25
 #: internal/web/templates/mongodb/databases.html:162
 #: internal/web/templates/mysql/databases.html:485
 #: internal/web/templates/mysql/users.html:144
 #: internal/web/templates/psql/databases.html:223
 msgid "seconds"
 msgstr "секунди"
+
+#: internal/web/templates/docker/terminal.html:25
+msgid "Inactivity timeout:"
+msgstr "Време за прекъсване при неактивност:"
 
 #: internal/web/templates/docker/terminal.html:30
 msgid "Container:"
@@ -18132,6 +18104,10 @@ msgid "Commands (run after each deployment, from the deploy directory)"
 msgstr ""
 "Команди (изпълняват се след всяко внедряване от директорията за внедряване)"
 
+#: internal/web/templates/manager/git.html:346
+msgid "settings"
+msgstr "настройки"
+
 #: internal/web/templates/manager/git.html:419
 #: internal/web/templates/partials/site_manager_shared.html:1038
 msgid "Commit log"
@@ -18629,17 +18605,17 @@ msgid "What composer.json asks for and what composer.lock installed."
 msgstr "Какво изисква composer.json и какво е инсталирал composer.lock."
 
 #: internal/web/templates/manager/php_app.html:194
-#: internal/web/templates/manager/php_app.html:221
-#: internal/web/templates/manager/python_node_apps.html:767
-msgid "Package"
-msgstr "Пакет"
-
-#: internal/web/templates/manager/php_app.html:194
 #: internal/web/templates/manager/python_node_apps.html:769
 #: internal/web/templates/manager/wp/single.html:1149
 #: internal/web/templates/php/wizard.html:249
 msgid "Installed"
 msgstr "Инсталирано"
+
+#: internal/web/templates/manager/php_app.html:194
+#: internal/web/templates/manager/php_app.html:221
+#: internal/web/templates/manager/python_node_apps.html:767
+msgid "Package"
+msgstr "Пакет"
 
 #: internal/web/templates/manager/php_app.html:194
 msgid "Constraint"
@@ -19084,6 +19060,10 @@ msgstr ""
 "инсталацията/стартирането - всички локални промени по файловете в docroot се"
 " презаписват. Изчистете полето и запазете, за да прекъснете връзката с "
 "хранилището."
+
+#: internal/web/templates/manager/python_node_apps.html:526
+msgid "https://"
+msgstr "https://"
 
 #: internal/web/templates/manager/python_node_apps.html:536
 msgid ""
@@ -21787,17 +21767,33 @@ msgstr ""
 msgid "Debugging in WordPress"
 msgstr "Отстраняване на грешки в WordPress"
 
+#: internal/web/templates/manager/wp/single.html:1490
+msgid "WP_DEBUG"
+msgstr "WP_DEBUG"
+
 #: internal/web/templates/manager/wp/single.html:1493
 msgid "WordPress debug mode."
 msgstr "Режим на отстраняване на грешки в WordPress."
+
+#: internal/web/templates/manager/wp/single.html:1497
+msgid "WP_DEBUG_LOG"
+msgstr "WP_DEBUG_LOG"
 
 #: internal/web/templates/manager/wp/single.html:1500
 msgid "Save all errors to the debug.log file inside the wp-content directory."
 msgstr "Запазете всички грешки във файла debug.log в директорията wp-content."
 
+#: internal/web/templates/manager/wp/single.html:1504
+msgid "WP_DEBUG_DISPLAY"
+msgstr "WP_DEBUG_DISPLAY"
+
 #: internal/web/templates/manager/wp/single.html:1507
 msgid "Show debug messages inside the HTML pages"
 msgstr "Показване на съобщения за отстраняване на грешки в HTML страниците"
+
+#: internal/web/templates/manager/wp/single.html:1511
+msgid "SCRIPT_DEBUG"
+msgstr "SCRIPT_DEBUG"
 
 #: internal/web/templates/manager/wp/single.html:1514
 msgid ""
@@ -21808,6 +21804,10 @@ msgstr ""
 "Принудете WordPress да използва неминимизираните версии на основните CSS и "
 "JavaScript файлове. Това е полезно, когато тествате промени, направени в .js"
 " и .css файлове."
+
+#: internal/web/templates/manager/wp/single.html:1518
+msgid "SAVEQUERIES"
+msgstr "SAVEQUERIES"
 
 #: internal/web/templates/manager/wp/single.html:1521
 msgid ""
@@ -22093,13 +22093,13 @@ msgstr "Работи като"
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a database to continue."
-msgstr "Изберете база данни, за да продължите."
+msgid "Pick a user to continue."
+msgstr "Изберете потребител, за да продължите."
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a user to continue."
-msgstr "Изберете потребител, за да продължите."
+msgid "Pick a database to continue."
+msgstr "Изберете база данни, за да продължите."
 
 #: internal/web/templates/mongodb/assign.html:53
 msgid "Pick a role to continue."
@@ -22571,15 +22571,6 @@ msgid "Total users:"
 msgstr "Общ брой потребители:"
 
 #: internal/web/templates/mongodb/users.html:15
-#: internal/web/templates/mongodb/users.html:19
-#: internal/web/templates/mysql/users.html:15
-#: internal/web/templates/mysql/users.html:19
-#: internal/web/templates/psql/users.html:15
-#: internal/web/templates/psql/users.html:19
-msgid "from"
-msgstr "от"
-
-#: internal/web/templates/mongodb/users.html:15
 #: internal/web/templates/mongodb/users.html:16
 #: internal/web/templates/mongodb/users.html:19
 #: internal/web/templates/mongodb/users.html:20
@@ -22595,6 +22586,15 @@ msgstr "от"
 #: internal/web/templates/psql/wizard.html:154
 msgid "database"
 msgstr "база данни"
+
+#: internal/web/templates/mongodb/users.html:15
+#: internal/web/templates/mongodb/users.html:19
+#: internal/web/templates/mysql/users.html:15
+#: internal/web/templates/mysql/users.html:19
+#: internal/web/templates/psql/users.html:15
+#: internal/web/templates/psql/users.html:19
+msgid "from"
+msgstr "от"
 
 #: internal/web/templates/mongodb/users.html:40
 msgid "Roles"
@@ -22615,6 +22615,11 @@ msgstr ""
 "му дайте роля за базата данни."
 
 #: internal/web/templates/mongodb/wizard.html:16
+#: internal/web/templates/psql/wizard.html:16
+msgid "Successfully created database"
+msgstr "Базата данни е създадена успешно"
+
+#: internal/web/templates/mongodb/wizard.html:16
 #: internal/web/templates/mysql/mysql_user.html:25
 #: internal/web/templates/mysql/wizard.html:40
 #: internal/web/templates/psql/wizard.html:16
@@ -22622,11 +22627,6 @@ msgid "Save these credentials, the password cannot be retrieved later."
 msgstr ""
 "Запазете тези данни за достъп, паролата не може да бъде възстановена по-"
 "късно."
-
-#: internal/web/templates/mongodb/wizard.html:16
-#: internal/web/templates/psql/wizard.html:16
-msgid "Successfully created database"
-msgstr "Базата данни е създадена успешно"
 
 #: internal/web/templates/mongodb/wizard.html:21
 #: internal/web/templates/mysql/wizard.html:47
@@ -24755,14 +24755,14 @@ msgid "Webserver configuration editor"
 msgstr "Редактор на конфигурацията на уеб сървъра"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:74
-#: internal/web/templates/system/apache_nginx_conf_editor.html:107
-msgid "Test config"
-msgstr "Тест на конфигурацията"
-
-#: internal/web/templates/system/apache_nginx_conf_editor.html:74
 #: internal/web/templates/system/cronjobs.html:430
 msgid "Run again"
 msgstr "Изпълнение отново"
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:74
+#: internal/web/templates/system/apache_nginx_conf_editor.html:107
+msgid "Test config"
+msgstr "Тест на конфигурацията"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:98
 msgid "Config file:"

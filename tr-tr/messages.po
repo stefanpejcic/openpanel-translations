@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-16 12:44+0200\n"
+"POT-Creation-Date: 2026-11-16 13:27+0200\n"
 "PO-Revision-Date: 2025-01-27 12:00+0300\n"
 "Last-Translator: Slaweally  <slaweally@hotmail.com - sys@rootali.net>\n"
 "Language-Team: Turkish <sys@rootali.net>\n"
@@ -1113,10 +1113,6 @@ msgid "Databases"
 msgstr "Veritabanları"
 
 #: internal/modules/backupwizard/render.go:41
-msgid "Home directory"
-msgstr "Ana dizin"
-
-#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:80
 #: internal/modules/dashboard/sections.go:81
 #: internal/modules/dashboard/sections.go:228
@@ -1139,6 +1135,21 @@ msgstr "Ana dizin"
 msgid "Domains"
 msgstr "Alan Adları"
 
+#: internal/modules/backupwizard/render.go:41
+msgid "Home directory"
+msgstr "Ana dizin"
+
+#: internal/modules/backupwizard/render.go:42
+#: internal/modules/dashboard/sections.go:74
+#: internal/modules/dashboard/sections.go:270
+#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
+#: internal/web/templates/dashboard/dashboard.html:206
+#: internal/web/templates/domains/domains.html:71
+#: internal/web/templates/domains/domains.html:126
+#: internal/web/templates/system/summary.html:169
+msgid "Websites"
+msgstr "Web Siteleri"
+
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/altlist.go:70
 #: internal/modules/dashboard/sections.go:103
@@ -1153,17 +1164,6 @@ msgstr "Alan Adları"
 #: internal/web/templates/manager/wp/single.html:345
 msgid "FTP accounts"
 msgstr "FTP hesapları"
-
-#: internal/modules/backupwizard/render.go:42
-#: internal/modules/dashboard/sections.go:74
-#: internal/modules/dashboard/sections.go:270
-#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
-#: internal/web/templates/dashboard/dashboard.html:206
-#: internal/web/templates/domains/domains.html:71
-#: internal/web/templates/domains/domains.html:126
-#: internal/web/templates/system/summary.html:169
-msgid "Websites"
-msgstr "Web Siteleri"
 
 #: internal/modules/backupwizard/render.go:42
 msgid "Email accounts, filters, aliases"
@@ -1596,14 +1596,10 @@ msgid "Email accounts"
 msgstr "E-posta hesapları"
 
 #: internal/modules/dashboard/altlist.go:55
-msgid "Your mailboxes, the fullest first."
-msgstr "Posta kutularınız, en dolu olanlar önce."
-
-#: internal/modules/dashboard/altlist.go:55
-#: internal/web/templates/domains/dns.html:257
-#: internal/web/templates/domains/dns.html:260
-msgid "Address"
-msgstr "Adres"
+#: internal/web/templates/emails/filter.html:26
+#: internal/web/templates/emails/migrate.html:200
+msgid "No email accounts yet"
+msgstr "Henüz e-posta hesabı yok"
 
 #: internal/modules/dashboard/altlist.go:55
 #: internal/modules/dashboard/altlist.go:70
@@ -1612,14 +1608,14 @@ msgid "Used"
 msgstr "Kullanılan"
 
 #: internal/modules/dashboard/altlist.go:55
-#: internal/web/templates/emails/filter.html:26
-#: internal/web/templates/emails/migrate.html:200
-msgid "No email accounts yet"
-msgstr "Henüz e-posta hesabı yok"
+#: internal/web/templates/domains/dns.html:257
+#: internal/web/templates/domains/dns.html:260
+msgid "Address"
+msgstr "Adres"
 
-#: internal/modules/dashboard/altlist.go:66
-msgid "Your databases on every engine, the biggest first."
-msgstr "Tüm motorlardaki veritabanlarınız, en büyükler önce."
+#: internal/modules/dashboard/altlist.go:55
+msgid "Your mailboxes, the fullest first."
+msgstr "Posta kutularınız, en dolu olanlar önce."
 
 #: internal/modules/dashboard/altlist.go:66
 #: internal/web/templates/dashboard/onboarding.html:599
@@ -1680,12 +1676,12 @@ msgid "Size"
 msgstr "Boyut"
 
 #: internal/modules/dashboard/altlist.go:66
+msgid "Your databases on every engine, the biggest first."
+msgstr "Tüm motorlardaki veritabanlarınız, en büyükler önce."
+
+#: internal/modules/dashboard/altlist.go:66
 msgid "No databases yet"
 msgstr "Henüz veritabanı yok"
-
-#: internal/modules/dashboard/altlist.go:70
-msgid "FTP users and their folders, the most used first."
-msgstr "FTP kullanıcıları ve klasörleri, en çok kullanılanlar önce."
 
 #: internal/modules/dashboard/altlist.go:70
 #: internal/web/templates/mongodb/assign.html:21
@@ -1707,8 +1703,26 @@ msgid "User"
 msgstr "Kullanıcı"
 
 #: internal/modules/dashboard/altlist.go:70
+msgid "FTP users and their folders, the most used first."
+msgstr "FTP kullanıcıları ve klasörleri, en çok kullanılanlar önce."
+
+#: internal/modules/dashboard/altlist.go:70
 msgid "No FTP accounts yet"
 msgstr "Henüz FTP hesabı yok"
+
+#: internal/modules/dashboard/altlist.go:74
+#: internal/web/templates/cache/service.html:285
+#: internal/web/templates/docker/change_images.html:34
+#: internal/web/templates/partials/_search.html:71
+#: internal/web/templates/php/info.html:19
+#: internal/web/templates/system/error_logs.html:45
+#: internal/web/templates/system/error_logs.html:92
+#: internal/web/templates/system/error_logs.html:120
+#: internal/web/templates/system/services.html:67
+#: internal/web/templates/system/services.html:171
+#: internal/web/templates/system/services.html:308
+msgid "Service"
+msgstr "Hizmet"
 
 #: internal/modules/dashboard/altlist.go:74
 #: internal/modules/dashboard/sections.go:163
@@ -1727,20 +1741,6 @@ msgstr "Konteynerler"
 #: internal/modules/dashboard/altlist.go:74
 msgid "The services on your account, running ones first."
 msgstr "Hesabınızdaki hizmetler, çalışanlar önce."
-
-#: internal/modules/dashboard/altlist.go:74
-#: internal/web/templates/cache/service.html:285
-#: internal/web/templates/docker/change_images.html:34
-#: internal/web/templates/partials/_search.html:71
-#: internal/web/templates/php/info.html:19
-#: internal/web/templates/system/error_logs.html:45
-#: internal/web/templates/system/error_logs.html:92
-#: internal/web/templates/system/error_logs.html:120
-#: internal/web/templates/system/services.html:67
-#: internal/web/templates/system/services.html:171
-#: internal/web/templates/system/services.html:308
-msgid "Service"
-msgstr "Hizmet"
 
 #: internal/modules/dashboard/altlist.go:74
 msgid "No containers yet"
@@ -2746,6 +2746,10 @@ msgstr "Bellek Sınırı"
 msgid "Bandwidth Limit"
 msgstr "Bant Genişliği Limiti"
 
+#: internal/modules/dns/api.go:260
+msgid "record"
+msgstr "kayıt"
+
 #: internal/modules/dns/bulk.go:29
 msgid "Update TTL"
 msgstr "TTL'yi güncelle"
@@ -3061,10 +3065,6 @@ msgstr "Konteyner güncellendi ve yeni ayarlarla yeniden başlatıldı."
 msgid "Container updated, the new settings apply when it starts."
 msgstr "Konteyner güncellendi, yeni ayarlar başlatıldığında uygulanır."
 
-#: internal/modules/docker/domain.go:71
-msgid "NodeJS"
-msgstr "NodeJS"
-
 #: internal/modules/docker/images.go:36
 msgid "The image of %(service)s can't be changed."
 msgstr "%(service)s imajı değiştirilemez."
@@ -3310,21 +3310,21 @@ msgstr "Seçili alan adlarının güvenlik duvarını şuna ayarla:"
 
 #: internal/modules/domains/bulk.go:26
 #: internal/web/templates/domains/domains.html:261
-#: internal/web/templates/files/filemanager_partials.html:791
-#: internal/web/templates/system/waf.html:66
-#: internal/web/templates/system/waf.html:72
-#: internal/web/templates/system/waf.html:119
-msgid "On"
-msgstr "Açık"
-
-#: internal/modules/domains/bulk.go:26
-#: internal/web/templates/domains/domains.html:261
 #: internal/web/templates/manager/wp/_tools.html:34
 #: internal/web/templates/system/waf.html:66
 #: internal/web/templates/system/waf.html:74
 #: internal/web/templates/system/waf.html:121
 msgid "Off"
 msgstr "Kapalı"
+
+#: internal/modules/domains/bulk.go:26
+#: internal/web/templates/domains/domains.html:261
+#: internal/web/templates/files/filemanager_partials.html:791
+#: internal/web/templates/system/waf.html:66
+#: internal/web/templates/system/waf.html:72
+#: internal/web/templates/system/waf.html:119
+msgid "On"
+msgstr "Açık"
 
 #: internal/modules/domains/bulk.go:27
 msgid "Cloudflare"
@@ -3502,6 +3502,16 @@ msgid "Status"
 msgstr "Durum"
 
 #: internal/modules/domains/render.go:105
+#: internal/web/templates/dashboard/dashboard.html:237
+#: internal/web/templates/domains/domains.html:163
+#: internal/web/templates/emails/accounts.html:37
+#: internal/web/templates/emails/accounts.html:47
+#: internal/web/templates/files/backup_restore.html:782
+#: internal/web/templates/manager/wp/single.html:24
+msgid "Suspended"
+msgstr "Askıya Alındı"
+
+#: internal/modules/domains/render.go:105
 #: internal/web/templates/dashboard/dashboard.html:240
 #: internal/web/templates/domains/domains.html:167
 #: internal/web/templates/manager/python_node_apps.html:29
@@ -3512,16 +3522,6 @@ msgstr "Durum"
 #: internal/web/templates/system/cronjobs.html:225
 msgid "Active"
 msgstr "Aktif"
-
-#: internal/modules/domains/render.go:105
-#: internal/web/templates/dashboard/dashboard.html:237
-#: internal/web/templates/domains/domains.html:163
-#: internal/web/templates/emails/accounts.html:37
-#: internal/web/templates/emails/accounts.html:47
-#: internal/web/templates/files/backup_restore.html:782
-#: internal/web/templates/manager/wp/single.html:24
-msgid "Suspended"
-msgstr "Askıya Alındı"
 
 #: internal/modules/domains/render.go:108
 #: internal/web/templates/domains/domains.html:70
@@ -3547,25 +3547,6 @@ msgstr "AutoSSL"
 #: internal/web/templates/domains/ssl.html:329
 msgid "Custom SSL"
 msgstr "Özel SSL"
-
-#: internal/modules/domains/render.go:122
-#: internal/web/templates/dashboard/dashboard.html:284
-#: internal/web/templates/domains/dns.html:125
-#: internal/web/templates/domains/dns.html:144
-#: internal/web/templates/domains/dns.html:547
-#: internal/web/templates/domains/domains.html:65
-#: internal/web/templates/domains/domains.html:120
-#: internal/web/templates/domains/dynamic_dns.html:155
-#: internal/web/templates/domains/redirect.html:48
-#: internal/web/templates/domains/redirect.html:52
-#: internal/web/templates/domains/ssl.html:309
-#: internal/web/templates/files/filemanager.html:112
-#: internal/web/templates/files/filemanager_partials.html:480
-#: internal/web/templates/files/trash.html:73
-#: internal/web/templates/files/trash_partials.html:55
-#: internal/web/templates/manager/sites.html:209
-msgid "Type"
-msgstr "Tür"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/docker/container_form.html:241
@@ -3604,6 +3585,25 @@ msgstr "Tür"
 #: internal/web/templates/system/bot_control.html:37
 msgid "Domain"
 msgstr "Alan Adı"
+
+#: internal/modules/domains/render.go:122
+#: internal/web/templates/dashboard/dashboard.html:284
+#: internal/web/templates/domains/dns.html:125
+#: internal/web/templates/domains/dns.html:144
+#: internal/web/templates/domains/dns.html:547
+#: internal/web/templates/domains/domains.html:65
+#: internal/web/templates/domains/domains.html:120
+#: internal/web/templates/domains/dynamic_dns.html:155
+#: internal/web/templates/domains/redirect.html:48
+#: internal/web/templates/domains/redirect.html:52
+#: internal/web/templates/domains/ssl.html:309
+#: internal/web/templates/files/filemanager.html:112
+#: internal/web/templates/files/filemanager_partials.html:480
+#: internal/web/templates/files/trash.html:73
+#: internal/web/templates/files/trash_partials.html:55
+#: internal/web/templates/manager/sites.html:209
+msgid "Type"
+msgstr "Tür"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/domains/dns.html:284
@@ -3668,10 +3668,6 @@ msgstr "Bu alan adının sahibi siz değilsiniz."
 #: internal/modules/domains/vhost.go:34
 msgid "Invalid request. Domain name and Vhost content must be provided."
 msgstr "Geçersiz istek. Alan adı ve Vhost içeriği belirtilmelidir."
-
-#: internal/modules/dynamicdns/dynamicdns.go:63
-msgid "record"
-msgstr "kayıt"
 
 #: internal/modules/dynamicdns/handlers.go:85
 msgid "Failed to create Dynamic DNS entry."
@@ -3796,6 +3792,22 @@ msgid "New mailbox size (GB) for the selected accounts:"
 msgstr "Seçili hesaplar için yeni posta kutusu boyutu (GB):"
 
 #: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
+#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
+#: internal/modules/postgresql/bulk.go:34
+#: internal/web/templates/emails/new.html:74
+#: internal/web/templates/emails/single_account.html:185
+#: internal/web/templates/files/ftp_new.html:71
+#: internal/web/templates/files/ftp_password.html:44
+#: internal/web/templates/files/ftp_password.html:55
+#: internal/web/templates/mysql/password.html:43
+#: internal/web/templates/mysql/root_password.html:54
+#: internal/web/templates/mysql/root_password.html:77
+#: internal/web/templates/user/account.html:118
+#: internal/web/templates/user/reset_password/set_new_password.html:19
+msgid "New password"
+msgstr "Yeni şifre"
+
+#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mongodb/render.go:202
 #: internal/modules/mysql/bulk.go:52 internal/modules/mysql/render.go:220
 #: internal/modules/postgresql/bulk.go:34
@@ -3815,22 +3827,6 @@ msgstr "Seçili hesaplar için yeni posta kutusu boyutu (GB):"
 #: internal/web/templates/user/reset_password/set_new_password.html:63
 msgid "Change password"
 msgstr "Parolayı değiştir"
-
-#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
-#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
-#: internal/modules/postgresql/bulk.go:34
-#: internal/web/templates/emails/new.html:74
-#: internal/web/templates/emails/single_account.html:185
-#: internal/web/templates/files/ftp_new.html:71
-#: internal/web/templates/files/ftp_password.html:44
-#: internal/web/templates/files/ftp_password.html:55
-#: internal/web/templates/mysql/password.html:43
-#: internal/web/templates/mysql/root_password.html:54
-#: internal/web/templates/mysql/root_password.html:77
-#: internal/web/templates/user/account.html:118
-#: internal/web/templates/user/reset_password/set_new_password.html:19
-msgid "New password"
-msgstr "Yeni şifre"
 
 #: internal/modules/emails/bulk.go:27
 msgid "Set this password for the selected accounts:"
@@ -4000,6 +3996,10 @@ msgstr ""
 #: internal/modules/errorlogs/collect.go:103
 msgid "HTTP 5xx responses"
 msgstr "HTTP 5xx yanıtları"
+
+#: internal/modules/errorlogs/sites.go:28
+msgid "NodeJS"
+msgstr "NodeJS"
 
 #: internal/modules/filemanager/api_transfer.go:188
 #: internal/modules/filemanager/archive.go:90
@@ -4494,10 +4494,6 @@ msgstr "%(repo)s (%(branch)s, %(commit)s) %(dir)s konumuna dağıtıldı."
 msgid "Deploy actions ran in %(container)s."
 msgstr "Dağıtım işlemleri %(container)s içinde çalıştı."
 
-#: internal/modules/git/handlers.go:360
-msgid "settings"
-msgstr "ayarlar"
-
 #: internal/modules/git/handlers.go:362
 msgid "Could not save settings for %(repo)s: %(error)s"
 msgstr "%(repo)s ayarları kaydedilemedi: %(error)s"
@@ -4754,6 +4750,10 @@ msgstr "Seçili kullanıcıları şuradan kaldır:"
 msgid "Permanently delete the selected users? This cannot be undone."
 msgstr ""
 "Seçili kullanıcılar kalıcı olarak silinsin mi? Bu işlem geri alınamaz."
+
+#: internal/modules/mongodb/create.go:51
+msgid "Password must be at least 8 characters long"
+msgstr "Şifre en az 8 karakter uzunluğunda olmalıdır"
 
 #: internal/modules/mongodb/databases.go:52
 #: internal/modules/mongodb/users.go:37
@@ -5080,9 +5080,11 @@ msgstr "%(db_user)s kullanıcısının parolası başarıyla değiştirildi"
 msgid "Database and user created, but failed to grant role: %(error)s"
 msgstr "Veritabanı ve kullanıcı oluşturuldu, ancak rol verilemedi: %(error)s"
 
-#: internal/modules/moodle/clone.go:179
-msgid "https://"
-msgstr "https://"
+#: internal/modules/mysql/api.go:190
+msgid ""
+"Database name is too long. MySQL identifiers are limited to 64 characters."
+msgstr ""
+"Veritabanı adı çok uzun. MySQL tanımlayıcıları 64 karakterle sınırlıdır."
 
 #: internal/modules/mysql/assign.go:56 internal/modules/mysql/wizard.go:67
 msgid "At least one privilege must be selected."
@@ -5218,16 +5220,6 @@ msgid ""
 "%(mysql_version)s container is not running. Please wait for initialization."
 msgstr ""
 "%(mysql_version)s konteyneri çalışmıyor. Lütfen başlatılmasını bekleyin."
-
-#: internal/modules/mysql/create.go:32
-msgid ""
-"Database name is too long. MySQL identifiers are limited to 64 characters."
-msgstr ""
-"Veritabanı adı çok uzun. MySQL tanımlayıcıları 64 karakterle sınırlıdır."
-
-#: internal/modules/mysql/create.go:55
-msgid "Password must be at least 8 characters long"
-msgstr "Şifre en az 8 karakter uzunluğunda olmalıdır"
 
 #: internal/modules/mysql/databases.go:220 internal/modules/mysql/wizard.go:30
 msgid ""
@@ -6369,13 +6361,13 @@ msgstr "Seçili alan adları için güvenlik duvarı etkinleştirilsin mi?"
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable WAF"
-msgstr "WAF'ı devre dışı bırak"
+msgid "Disable the firewall for the selected domains?"
+msgstr "Seçili alan adları için güvenlik duvarı devre dışı bırakılsın mı?"
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable the firewall for the selected domains?"
-msgstr "Seçili alan adları için güvenlik duvarı devre dışı bırakılsın mı?"
+msgid "Disable WAF"
+msgstr "WAF'ı devre dışı bırak"
 
 #: internal/modules/waf/render.go:84
 #: internal/web/templates/dashboard/custom_section.html:15
@@ -6770,26 +6762,6 @@ msgstr "GrapesJS Web Sitesi Düzenleyici"
 #: internal/modules/websites/websitebuilder_render.go:92
 msgid "You have reached the maximum number of sites allowed."
 msgstr "İzin verilen en fazla site sayısına ulaştınız."
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG"
-msgstr "WP_DEBUG"
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG_LOG"
-msgstr "WP_DEBUG_LOG"
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG_DISPLAY"
-msgstr "WP_DEBUG_DISPLAY"
-
-#: internal/modules/websites/websites.go:1289
-msgid "SCRIPT_DEBUG"
-msgstr "SCRIPT_DEBUG"
-
-#: internal/modules/websites/websites.go:1289
-msgid "SAVEQUERIES"
-msgstr "SAVEQUERIES"
 
 #: internal/modules/websites/websites.go:1360
 msgid "WordPress updated successfully"
@@ -7645,6 +7617,14 @@ msgid "Name"
 msgstr "Ad"
 
 #: internal/web/templates/cache/service.html:210
+#: internal/web/templates/partials/_service_js.html:24
+#: internal/web/templates/system/services.html:216
+#: internal/web/templates/user/history_usage.html:44
+#: internal/web/templates/user/history_usage.html:111
+msgid "Memory %"
+msgstr "Bellek %"
+
+#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/docker/containers.html:67
 #: internal/web/templates/docker/containers.html:86
 #: internal/web/templates/docker/containers.html:360
@@ -7664,14 +7644,6 @@ msgid "Memory usage"
 msgstr "Bellek kullanımı"
 
 #: internal/web/templates/cache/service.html:210
-#: internal/web/templates/docker/containers.html:70
-#: internal/web/templates/docker/containers.html:89
-#: internal/web/templates/partials/_service_js.html:26
-#: internal/web/templates/system/services.html:216
-msgid "Block I/O"
-msgstr "Blok G/Ç"
-
-#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/mongodb/processlist.html:31
 #: internal/web/templates/mysql/processlist.html:31
 #: internal/web/templates/system/services.html:216
@@ -7679,18 +7651,18 @@ msgid "ID"
 msgstr "ID"
 
 #: internal/web/templates/cache/service.html:210
-#: internal/web/templates/partials/_service_js.html:24
-#: internal/web/templates/system/services.html:216
-#: internal/web/templates/user/history_usage.html:44
-#: internal/web/templates/user/history_usage.html:111
-msgid "Memory %"
-msgstr "Bellek %"
-
-#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/partials/_service_js.html:25
 #: internal/web/templates/system/services.html:216
 msgid "Network I/O"
 msgstr "Ağ G/Ç"
+
+#: internal/web/templates/cache/service.html:210
+#: internal/web/templates/docker/containers.html:70
+#: internal/web/templates/docker/containers.html:89
+#: internal/web/templates/partials/_service_js.html:26
+#: internal/web/templates/system/services.html:216
+msgid "Block I/O"
+msgstr "Blok G/Ç"
 
 #: internal/web/templates/cache/service.html:246
 #: internal/web/templates/system/services.html:262
@@ -7846,14 +7818,14 @@ msgid "You have used all %(n)s domains on your plan."
 msgstr "Paketinizdeki %(n)s alan adının tamamını kullandınız."
 
 #: internal/web/templates/dashboard/dashboard.html:154
+msgid "You have used all %(n)s websites on your plan."
+msgstr "Paketinizdeki %(n)s web sitesinin tamamını kullandınız."
+
+#: internal/web/templates/dashboard/dashboard.html:154
 #: internal/web/templates/dashboard/dashboard.html:263
 #: internal/web/templates/manager/sites.html:708
 msgid "New website"
 msgstr "Yeni web sitesi"
-
-#: internal/web/templates/dashboard/dashboard.html:154
-msgid "You have used all %(n)s websites on your plan."
-msgstr "Paketinizdeki %(n)s web sitesinin tamamını kullandınız."
 
 #: internal/web/templates/dashboard/dashboard.html:162
 msgid "Plan usage"
@@ -8162,6 +8134,10 @@ msgid "Copied to clipboard"
 msgstr "Panoya kopyalandı"
 
 #: internal/web/templates/dashboard/information.html:29
+msgid "General information"
+msgstr "Genel bilgiler"
+
+#: internal/web/templates/dashboard/information.html:29
 #: internal/web/templates/domains/logs.html:132
 #: internal/web/templates/files/filemanager_partials.html:328
 #: internal/web/templates/files/filemanager_partials.html:329
@@ -8170,10 +8146,6 @@ msgstr "Panoya kopyalandı"
 #: internal/web/templates/system/error_logs.html:71
 msgid "View"
 msgstr "Görüntüle"
-
-#: internal/web/templates/dashboard/information.html:29
-msgid "General information"
-msgstr "Genel bilgiler"
 
 #: internal/web/templates/dashboard/information.html:30
 msgid "Your account, plan and the addresses you need to connect."
@@ -9292,16 +9264,16 @@ msgstr ""
 " yenisini başlatır."
 
 #: internal/web/templates/docker/change_mysql.html:21
+#: internal/web/templates/partials/_db_tuning.html:31
+msgid "Databases:"
+msgstr "Veritabanları:"
+
+#: internal/web/templates/docker/change_mysql.html:21
 msgid ""
 "To switch the database server, first remove all databases from your account."
 msgstr ""
 "Veritabanı sunucusunu değiştirmek için önce hesabınızdaki tüm "
 "veritabanlarını kaldırın."
-
-#: internal/web/templates/docker/change_mysql.html:21
-#: internal/web/templates/partials/_db_tuning.html:31
-msgid "Databases:"
-msgstr "Veritabanları:"
 
 #: internal/web/templates/docker/change_mysql.html:21
 msgid "Go to databases"
@@ -9333,16 +9305,16 @@ msgstr ""
 "ve yenisini başlatır."
 
 #: internal/web/templates/docker/change_webserver.html:21
-msgid "To switch the webserver, first remove all domains from your account."
-msgstr ""
-"Web sunucusunu değiştirmek için önce hesabınızdaki tüm alan adlarını "
-"kaldırın."
-
-#: internal/web/templates/docker/change_webserver.html:21
 #: internal/web/templates/partials/_db_tuning.html:34
 #: internal/web/templates/php/wizard.html:15
 msgid "Domains:"
 msgstr "Alan adları:"
+
+#: internal/web/templates/docker/change_webserver.html:21
+msgid "To switch the webserver, first remove all domains from your account."
+msgstr ""
+"Web sunucusunu değiştirmek için önce hesabınızdaki tüm alan adlarını "
+"kaldırın."
 
 #: internal/web/templates/docker/change_webserver.html:21
 msgid "Go to domains"
@@ -9906,16 +9878,16 @@ msgstr ""
 "olarak çalıştırır."
 
 #: internal/web/templates/docker/terminal.html:25
-msgid "Inactivity timeout:"
-msgstr "Hareketsizlik zaman aşımı:"
-
-#: internal/web/templates/docker/terminal.html:25
 #: internal/web/templates/mongodb/databases.html:162
 #: internal/web/templates/mysql/databases.html:485
 #: internal/web/templates/mysql/users.html:144
 #: internal/web/templates/psql/databases.html:223
 msgid "seconds"
 msgstr "saniye"
+
+#: internal/web/templates/docker/terminal.html:25
+msgid "Inactivity timeout:"
+msgstr "Hareketsizlik zaman aşımı:"
 
 #: internal/web/templates/docker/terminal.html:30
 msgid "Container:"
@@ -18041,6 +18013,10 @@ msgstr "Konteynerde çalıştır"
 msgid "Commands (run after each deployment, from the deploy directory)"
 msgstr "Komutlar (her dağıtımdan sonra dağıtım dizininden çalıştırılır)"
 
+#: internal/web/templates/manager/git.html:346
+msgid "settings"
+msgstr "ayarlar"
+
 #: internal/web/templates/manager/git.html:419
 #: internal/web/templates/partials/site_manager_shared.html:1038
 msgid "Commit log"
@@ -18528,17 +18504,17 @@ msgid "What composer.json asks for and what composer.lock installed."
 msgstr "composer.json'un istediği ve composer.lock'un kurduğu."
 
 #: internal/web/templates/manager/php_app.html:194
-#: internal/web/templates/manager/php_app.html:221
-#: internal/web/templates/manager/python_node_apps.html:767
-msgid "Package"
-msgstr "Paket"
-
-#: internal/web/templates/manager/php_app.html:194
 #: internal/web/templates/manager/python_node_apps.html:769
 #: internal/web/templates/manager/wp/single.html:1149
 #: internal/web/templates/php/wizard.html:249
 msgid "Installed"
 msgstr "Kurulu"
+
+#: internal/web/templates/manager/php_app.html:194
+#: internal/web/templates/manager/php_app.html:221
+#: internal/web/templates/manager/python_node_apps.html:767
+msgid "Package"
+msgstr "Paket"
 
 #: internal/web/templates/manager/php_app.html:194
 msgid "Constraint"
@@ -18978,6 +18954,10 @@ msgstr ""
 "uygulamanın kodu bu depodan yeniden alınır ve en son commit'e sıfırlanır - "
 "docroot içindeki dosyalarda yapılan yerel değişikliklerin üzerine yazılır. "
 "Depo bağlantısını kesmek için alanı temizleyip kaydedin."
+
+#: internal/web/templates/manager/python_node_apps.html:526
+msgid "https://"
+msgstr "https://"
 
 #: internal/web/templates/manager/python_node_apps.html:536
 msgid ""
@@ -21669,18 +21649,34 @@ msgstr ""
 msgid "Debugging in WordPress"
 msgstr "WordPress'te Hata Ayıklama"
 
+#: internal/web/templates/manager/wp/single.html:1490
+msgid "WP_DEBUG"
+msgstr "WP_DEBUG"
+
 #: internal/web/templates/manager/wp/single.html:1493
 msgid "WordPress debug mode."
 msgstr "WordPress hata ayıklama modu."
+
+#: internal/web/templates/manager/wp/single.html:1497
+msgid "WP_DEBUG_LOG"
+msgstr "WP_DEBUG_LOG"
 
 #: internal/web/templates/manager/wp/single.html:1500
 msgid "Save all errors to the debug.log file inside the wp-content directory."
 msgstr ""
 "Tüm hataları wp-content dizininin içindeki debug.log dosyasına kaydedin."
 
+#: internal/web/templates/manager/wp/single.html:1504
+msgid "WP_DEBUG_DISPLAY"
+msgstr "WP_DEBUG_DISPLAY"
+
 #: internal/web/templates/manager/wp/single.html:1507
 msgid "Show debug messages inside the HTML pages"
 msgstr "HTML sayfaları içinde hata ayıklama mesajlarını göster"
+
+#: internal/web/templates/manager/wp/single.html:1511
+msgid "SCRIPT_DEBUG"
+msgstr "SCRIPT_DEBUG"
 
 #: internal/web/templates/manager/wp/single.html:1514
 msgid ""
@@ -21691,6 +21687,10 @@ msgstr ""
 "WordPress'i çekirdek CSS ve JavaScript dosyalarının küçültülmemiş "
 "sürümlerini kullanmaya zorlayın. Bu, .js ve .css dosyalarında yapılan "
 "değişiklikleri test ederken yararlıdır."
+
+#: internal/web/templates/manager/wp/single.html:1518
+msgid "SAVEQUERIES"
+msgstr "SAVEQUERIES"
 
 #: internal/web/templates/manager/wp/single.html:1521
 msgid ""
@@ -21973,13 +21973,13 @@ msgstr "Şu olarak çalışır:"
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a database to continue."
-msgstr "Devam etmek için bir veritabanı seçin."
+msgid "Pick a user to continue."
+msgstr "Devam etmek için bir kullanıcı seçin."
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a user to continue."
-msgstr "Devam etmek için bir kullanıcı seçin."
+msgid "Pick a database to continue."
+msgstr "Devam etmek için bir veritabanı seçin."
 
 #: internal/web/templates/mongodb/assign.html:53
 msgid "Pick a role to continue."
@@ -22451,15 +22451,6 @@ msgid "Total users:"
 msgstr "Toplam kullanıcılar:"
 
 #: internal/web/templates/mongodb/users.html:15
-#: internal/web/templates/mongodb/users.html:19
-#: internal/web/templates/mysql/users.html:15
-#: internal/web/templates/mysql/users.html:19
-#: internal/web/templates/psql/users.html:15
-#: internal/web/templates/psql/users.html:19
-msgid "from"
-msgstr "dan"
-
-#: internal/web/templates/mongodb/users.html:15
 #: internal/web/templates/mongodb/users.html:16
 #: internal/web/templates/mongodb/users.html:19
 #: internal/web/templates/mongodb/users.html:20
@@ -22475,6 +22466,15 @@ msgstr "dan"
 #: internal/web/templates/psql/wizard.html:154
 msgid "database"
 msgstr "veritabanı"
+
+#: internal/web/templates/mongodb/users.html:15
+#: internal/web/templates/mongodb/users.html:19
+#: internal/web/templates/mysql/users.html:15
+#: internal/web/templates/mysql/users.html:19
+#: internal/web/templates/psql/users.html:15
+#: internal/web/templates/psql/users.html:19
+msgid "from"
+msgstr "dan"
 
 #: internal/web/templates/mongodb/users.html:40
 msgid "Roles"
@@ -22495,16 +22495,16 @@ msgstr ""
 "ayarlayın ve ona veritabanında bir rol verin."
 
 #: internal/web/templates/mongodb/wizard.html:16
+#: internal/web/templates/psql/wizard.html:16
+msgid "Successfully created database"
+msgstr "Veritabanı başarıyla oluşturuldu"
+
+#: internal/web/templates/mongodb/wizard.html:16
 #: internal/web/templates/mysql/mysql_user.html:25
 #: internal/web/templates/mysql/wizard.html:40
 #: internal/web/templates/psql/wizard.html:16
 msgid "Save these credentials, the password cannot be retrieved later."
 msgstr "Bu kimlik bilgilerini kaydedin, şifre daha sonra alınamaz."
-
-#: internal/web/templates/mongodb/wizard.html:16
-#: internal/web/templates/psql/wizard.html:16
-msgid "Successfully created database"
-msgstr "Veritabanı başarıyla oluşturuldu"
 
 #: internal/web/templates/mongodb/wizard.html:21
 #: internal/web/templates/mysql/wizard.html:47
@@ -24623,14 +24623,14 @@ msgid "Webserver configuration editor"
 msgstr "Web sunucusu yapılandırma düzenleyici"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:74
-#: internal/web/templates/system/apache_nginx_conf_editor.html:107
-msgid "Test config"
-msgstr "Yapılandırmayı test et"
-
-#: internal/web/templates/system/apache_nginx_conf_editor.html:74
 #: internal/web/templates/system/cronjobs.html:430
 msgid "Run again"
 msgstr "Tekrar çalıştır"
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:74
+#: internal/web/templates/system/apache_nginx_conf_editor.html:107
+msgid "Test config"
+msgstr "Yapılandırmayı test et"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:98
 msgid "Config file:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-11-16 12:44+0200\n"
+"POT-Creation-Date: 2026-11-16 13:27+0200\n"
 "PO-Revision-Date: 2026-10-22 00:10+0200\n"
 "Last-Translator: Smeris <hello@smeris.me>\n"
 "Language-Team: Dutch <info@openpanel.com>\n"
@@ -1121,10 +1121,6 @@ msgid "Databases"
 msgstr "Databases"
 
 #: internal/modules/backupwizard/render.go:41
-msgid "Home directory"
-msgstr "Thuismap"
-
-#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:80
 #: internal/modules/dashboard/sections.go:81
 #: internal/modules/dashboard/sections.go:228
@@ -1147,6 +1143,21 @@ msgstr "Thuismap"
 msgid "Domains"
 msgstr "Domeinen"
 
+#: internal/modules/backupwizard/render.go:41
+msgid "Home directory"
+msgstr "Thuismap"
+
+#: internal/modules/backupwizard/render.go:42
+#: internal/modules/dashboard/sections.go:74
+#: internal/modules/dashboard/sections.go:270
+#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
+#: internal/web/templates/dashboard/dashboard.html:206
+#: internal/web/templates/domains/domains.html:71
+#: internal/web/templates/domains/domains.html:126
+#: internal/web/templates/system/summary.html:169
+msgid "Websites"
+msgstr "Websites"
+
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/altlist.go:70
 #: internal/modules/dashboard/sections.go:103
@@ -1161,17 +1172,6 @@ msgstr "Domeinen"
 #: internal/web/templates/manager/wp/single.html:345
 msgid "FTP accounts"
 msgstr "FTP-accounts"
-
-#: internal/modules/backupwizard/render.go:42
-#: internal/modules/dashboard/sections.go:74
-#: internal/modules/dashboard/sections.go:270
-#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
-#: internal/web/templates/dashboard/dashboard.html:206
-#: internal/web/templates/domains/domains.html:71
-#: internal/web/templates/domains/domains.html:126
-#: internal/web/templates/system/summary.html:169
-msgid "Websites"
-msgstr "Websites"
 
 #: internal/modules/backupwizard/render.go:42
 msgid "Email accounts, filters, aliases"
@@ -1605,14 +1605,10 @@ msgid "Email accounts"
 msgstr "E-mailaccounts"
 
 #: internal/modules/dashboard/altlist.go:55
-msgid "Your mailboxes, the fullest first."
-msgstr "Uw mailboxen, de volste eerst."
-
-#: internal/modules/dashboard/altlist.go:55
-#: internal/web/templates/domains/dns.html:257
-#: internal/web/templates/domains/dns.html:260
-msgid "Address"
-msgstr "Adres"
+#: internal/web/templates/emails/filter.html:26
+#: internal/web/templates/emails/migrate.html:200
+msgid "No email accounts yet"
+msgstr "Nog geen e-mailaccounts"
 
 #: internal/modules/dashboard/altlist.go:55
 #: internal/modules/dashboard/altlist.go:70
@@ -1621,14 +1617,14 @@ msgid "Used"
 msgstr "Gebruikt"
 
 #: internal/modules/dashboard/altlist.go:55
-#: internal/web/templates/emails/filter.html:26
-#: internal/web/templates/emails/migrate.html:200
-msgid "No email accounts yet"
-msgstr "Nog geen e-mailaccounts"
+#: internal/web/templates/domains/dns.html:257
+#: internal/web/templates/domains/dns.html:260
+msgid "Address"
+msgstr "Adres"
 
-#: internal/modules/dashboard/altlist.go:66
-msgid "Your databases on every engine, the biggest first."
-msgstr "Uw databases op alle engines, de grootste eerst."
+#: internal/modules/dashboard/altlist.go:55
+msgid "Your mailboxes, the fullest first."
+msgstr "Uw mailboxen, de volste eerst."
 
 #: internal/modules/dashboard/altlist.go:66
 #: internal/web/templates/dashboard/onboarding.html:599
@@ -1689,12 +1685,12 @@ msgid "Size"
 msgstr "Grootte"
 
 #: internal/modules/dashboard/altlist.go:66
+msgid "Your databases on every engine, the biggest first."
+msgstr "Uw databases op alle engines, de grootste eerst."
+
+#: internal/modules/dashboard/altlist.go:66
 msgid "No databases yet"
 msgstr "Nog geen databases"
-
-#: internal/modules/dashboard/altlist.go:70
-msgid "FTP users and their folders, the most used first."
-msgstr "FTP-gebruikers en hun mappen, de meest gebruikte eerst."
 
 #: internal/modules/dashboard/altlist.go:70
 #: internal/web/templates/mongodb/assign.html:21
@@ -1716,8 +1712,26 @@ msgid "User"
 msgstr "Gebruiker"
 
 #: internal/modules/dashboard/altlist.go:70
+msgid "FTP users and their folders, the most used first."
+msgstr "FTP-gebruikers en hun mappen, de meest gebruikte eerst."
+
+#: internal/modules/dashboard/altlist.go:70
 msgid "No FTP accounts yet"
 msgstr "Nog geen FTP-accounts"
+
+#: internal/modules/dashboard/altlist.go:74
+#: internal/web/templates/cache/service.html:285
+#: internal/web/templates/docker/change_images.html:34
+#: internal/web/templates/partials/_search.html:71
+#: internal/web/templates/php/info.html:19
+#: internal/web/templates/system/error_logs.html:45
+#: internal/web/templates/system/error_logs.html:92
+#: internal/web/templates/system/error_logs.html:120
+#: internal/web/templates/system/services.html:67
+#: internal/web/templates/system/services.html:171
+#: internal/web/templates/system/services.html:308
+msgid "Service"
+msgstr "Service"
 
 #: internal/modules/dashboard/altlist.go:74
 #: internal/modules/dashboard/sections.go:163
@@ -1736,20 +1750,6 @@ msgstr "Containers"
 #: internal/modules/dashboard/altlist.go:74
 msgid "The services on your account, running ones first."
 msgstr "De services op uw account, draaiende eerst."
-
-#: internal/modules/dashboard/altlist.go:74
-#: internal/web/templates/cache/service.html:285
-#: internal/web/templates/docker/change_images.html:34
-#: internal/web/templates/partials/_search.html:71
-#: internal/web/templates/php/info.html:19
-#: internal/web/templates/system/error_logs.html:45
-#: internal/web/templates/system/error_logs.html:92
-#: internal/web/templates/system/error_logs.html:120
-#: internal/web/templates/system/services.html:67
-#: internal/web/templates/system/services.html:171
-#: internal/web/templates/system/services.html:308
-msgid "Service"
-msgstr "Service"
 
 #: internal/modules/dashboard/altlist.go:74
 msgid "No containers yet"
@@ -2755,6 +2755,10 @@ msgstr "Geheugenlimiet"
 msgid "Bandwidth Limit"
 msgstr "Bandbreedtelimiet"
 
+#: internal/modules/dns/api.go:260
+msgid "record"
+msgstr "record"
+
 #: internal/modules/dns/bulk.go:29
 msgid "Update TTL"
 msgstr "TTL bijwerken"
@@ -3070,10 +3074,6 @@ msgstr "Container bijgewerkt en opnieuw gestart met de nieuwe instellingen."
 msgid "Container updated, the new settings apply when it starts."
 msgstr "Container bijgewerkt, de nieuwe instellingen gelden zodra hij start."
 
-#: internal/modules/docker/domain.go:71
-msgid "NodeJS"
-msgstr "NodeJS"
-
 #: internal/modules/docker/images.go:36
 msgid "The image of %(service)s can't be changed."
 msgstr "De image van %(service)s kan niet worden gewijzigd."
@@ -3317,21 +3317,21 @@ msgstr "Stel de firewall voor de geselecteerde domeinen in op:"
 
 #: internal/modules/domains/bulk.go:26
 #: internal/web/templates/domains/domains.html:261
-#: internal/web/templates/files/filemanager_partials.html:791
-#: internal/web/templates/system/waf.html:66
-#: internal/web/templates/system/waf.html:72
-#: internal/web/templates/system/waf.html:119
-msgid "On"
-msgstr "Aan"
-
-#: internal/modules/domains/bulk.go:26
-#: internal/web/templates/domains/domains.html:261
 #: internal/web/templates/manager/wp/_tools.html:34
 #: internal/web/templates/system/waf.html:66
 #: internal/web/templates/system/waf.html:74
 #: internal/web/templates/system/waf.html:121
 msgid "Off"
 msgstr "Uit"
+
+#: internal/modules/domains/bulk.go:26
+#: internal/web/templates/domains/domains.html:261
+#: internal/web/templates/files/filemanager_partials.html:791
+#: internal/web/templates/system/waf.html:66
+#: internal/web/templates/system/waf.html:72
+#: internal/web/templates/system/waf.html:119
+msgid "On"
+msgstr "Aan"
 
 #: internal/modules/domains/bulk.go:27
 msgid "Cloudflare"
@@ -3510,6 +3510,16 @@ msgid "Status"
 msgstr "Status"
 
 #: internal/modules/domains/render.go:105
+#: internal/web/templates/dashboard/dashboard.html:237
+#: internal/web/templates/domains/domains.html:163
+#: internal/web/templates/emails/accounts.html:37
+#: internal/web/templates/emails/accounts.html:47
+#: internal/web/templates/files/backup_restore.html:782
+#: internal/web/templates/manager/wp/single.html:24
+msgid "Suspended"
+msgstr "Opgeschort"
+
+#: internal/modules/domains/render.go:105
 #: internal/web/templates/dashboard/dashboard.html:240
 #: internal/web/templates/domains/domains.html:167
 #: internal/web/templates/manager/python_node_apps.html:29
@@ -3520,16 +3530,6 @@ msgstr "Status"
 #: internal/web/templates/system/cronjobs.html:225
 msgid "Active"
 msgstr "Actief"
-
-#: internal/modules/domains/render.go:105
-#: internal/web/templates/dashboard/dashboard.html:237
-#: internal/web/templates/domains/domains.html:163
-#: internal/web/templates/emails/accounts.html:37
-#: internal/web/templates/emails/accounts.html:47
-#: internal/web/templates/files/backup_restore.html:782
-#: internal/web/templates/manager/wp/single.html:24
-msgid "Suspended"
-msgstr "Opgeschort"
 
 #: internal/modules/domains/render.go:108
 #: internal/web/templates/domains/domains.html:70
@@ -3555,25 +3555,6 @@ msgstr "AutoSSL"
 #: internal/web/templates/domains/ssl.html:329
 msgid "Custom SSL"
 msgstr "Eigen SSL"
-
-#: internal/modules/domains/render.go:122
-#: internal/web/templates/dashboard/dashboard.html:284
-#: internal/web/templates/domains/dns.html:125
-#: internal/web/templates/domains/dns.html:144
-#: internal/web/templates/domains/dns.html:547
-#: internal/web/templates/domains/domains.html:65
-#: internal/web/templates/domains/domains.html:120
-#: internal/web/templates/domains/dynamic_dns.html:155
-#: internal/web/templates/domains/redirect.html:48
-#: internal/web/templates/domains/redirect.html:52
-#: internal/web/templates/domains/ssl.html:309
-#: internal/web/templates/files/filemanager.html:112
-#: internal/web/templates/files/filemanager_partials.html:480
-#: internal/web/templates/files/trash.html:73
-#: internal/web/templates/files/trash_partials.html:55
-#: internal/web/templates/manager/sites.html:209
-msgid "Type"
-msgstr "Type"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/docker/container_form.html:241
@@ -3612,6 +3593,25 @@ msgstr "Type"
 #: internal/web/templates/system/bot_control.html:37
 msgid "Domain"
 msgstr "Domein"
+
+#: internal/modules/domains/render.go:122
+#: internal/web/templates/dashboard/dashboard.html:284
+#: internal/web/templates/domains/dns.html:125
+#: internal/web/templates/domains/dns.html:144
+#: internal/web/templates/domains/dns.html:547
+#: internal/web/templates/domains/domains.html:65
+#: internal/web/templates/domains/domains.html:120
+#: internal/web/templates/domains/dynamic_dns.html:155
+#: internal/web/templates/domains/redirect.html:48
+#: internal/web/templates/domains/redirect.html:52
+#: internal/web/templates/domains/ssl.html:309
+#: internal/web/templates/files/filemanager.html:112
+#: internal/web/templates/files/filemanager_partials.html:480
+#: internal/web/templates/files/trash.html:73
+#: internal/web/templates/files/trash_partials.html:55
+#: internal/web/templates/manager/sites.html:209
+msgid "Type"
+msgstr "Type"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/domains/dns.html:284
@@ -3676,10 +3676,6 @@ msgstr "Je bent niet de eigenaar van dit domein."
 #: internal/modules/domains/vhost.go:34
 msgid "Invalid request. Domain name and Vhost content must be provided."
 msgstr "Ongeldig verzoek. Domeinnaam en VHost-inhoud moeten worden opgegeven."
-
-#: internal/modules/dynamicdns/dynamicdns.go:63
-msgid "record"
-msgstr "record"
 
 #: internal/modules/dynamicdns/handlers.go:85
 msgid "Failed to create Dynamic DNS entry."
@@ -3804,6 +3800,22 @@ msgid "New mailbox size (GB) for the selected accounts:"
 msgstr "Nieuwe mailboxgrootte (GB) voor de geselecteerde accounts:"
 
 #: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
+#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
+#: internal/modules/postgresql/bulk.go:34
+#: internal/web/templates/emails/new.html:74
+#: internal/web/templates/emails/single_account.html:185
+#: internal/web/templates/files/ftp_new.html:71
+#: internal/web/templates/files/ftp_password.html:44
+#: internal/web/templates/files/ftp_password.html:55
+#: internal/web/templates/mysql/password.html:43
+#: internal/web/templates/mysql/root_password.html:54
+#: internal/web/templates/mysql/root_password.html:77
+#: internal/web/templates/user/account.html:118
+#: internal/web/templates/user/reset_password/set_new_password.html:19
+msgid "New password"
+msgstr "Nieuw wachtwoord"
+
+#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mongodb/render.go:202
 #: internal/modules/mysql/bulk.go:52 internal/modules/mysql/render.go:220
 #: internal/modules/postgresql/bulk.go:34
@@ -3823,22 +3835,6 @@ msgstr "Nieuwe mailboxgrootte (GB) voor de geselecteerde accounts:"
 #: internal/web/templates/user/reset_password/set_new_password.html:63
 msgid "Change password"
 msgstr "Wachtwoord wijzigen"
-
-#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
-#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
-#: internal/modules/postgresql/bulk.go:34
-#: internal/web/templates/emails/new.html:74
-#: internal/web/templates/emails/single_account.html:185
-#: internal/web/templates/files/ftp_new.html:71
-#: internal/web/templates/files/ftp_password.html:44
-#: internal/web/templates/files/ftp_password.html:55
-#: internal/web/templates/mysql/password.html:43
-#: internal/web/templates/mysql/root_password.html:54
-#: internal/web/templates/mysql/root_password.html:77
-#: internal/web/templates/user/account.html:118
-#: internal/web/templates/user/reset_password/set_new_password.html:19
-msgid "New password"
-msgstr "Nieuw wachtwoord"
 
 #: internal/modules/emails/bulk.go:27
 msgid "Set this password for the selected accounts:"
@@ -4009,6 +4005,10 @@ msgstr ""
 #: internal/modules/errorlogs/collect.go:103
 msgid "HTTP 5xx responses"
 msgstr "HTTP 5xx-antwoorden"
+
+#: internal/modules/errorlogs/sites.go:28
+msgid "NodeJS"
+msgstr "NodeJS"
 
 #: internal/modules/filemanager/api_transfer.go:188
 #: internal/modules/filemanager/archive.go:90
@@ -4510,10 +4510,6 @@ msgstr "%(repo)s (%(branch)s op %(commit)s) naar %(dir)s gedeployd."
 msgid "Deploy actions ran in %(container)s."
 msgstr "Deploy-acties zijn uitgevoerd in %(container)s."
 
-#: internal/modules/git/handlers.go:360
-msgid "settings"
-msgstr "instellingen"
-
 #: internal/modules/git/handlers.go:362
 msgid "Could not save settings for %(repo)s: %(error)s"
 msgstr "Instellingen voor %(repo)s konden niet worden opgeslagen: %(error)s"
@@ -4779,6 +4775,10 @@ msgid "Permanently delete the selected users? This cannot be undone."
 msgstr ""
 "Geselecteerde gebruikers permanent verwijderen? Dit kan niet ongedaan worden"
 " gemaakt."
+
+#: internal/modules/mongodb/create.go:51
+msgid "Password must be at least 8 characters long"
+msgstr "Wachtwoord moet minimaal 8 tekens lang zijn"
 
 #: internal/modules/mongodb/databases.go:52
 #: internal/modules/mongodb/users.go:37
@@ -5107,9 +5107,11 @@ msgid "Database and user created, but failed to grant role: %(error)s"
 msgstr ""
 "Database en gebruiker aangemaakt, maar toekennen van rol mislukt: %(error)s"
 
-#: internal/modules/moodle/clone.go:179
-msgid "https://"
-msgstr "https://"
+#: internal/modules/mysql/api.go:190
+msgid ""
+"Database name is too long. MySQL identifiers are limited to 64 characters."
+msgstr ""
+"Databasenaam is te lang. MySQL-identifiers zijn beperkt tot 64 tekens."
 
 #: internal/modules/mysql/assign.go:56 internal/modules/mysql/wizard.go:67
 msgid "At least one privilege must be selected."
@@ -5246,16 +5248,6 @@ msgstr ""
 msgid ""
 "%(mysql_version)s container is not running. Please wait for initialization."
 msgstr "%(mysql_version)s-container draait niet. Wacht op de initialisatie."
-
-#: internal/modules/mysql/create.go:32
-msgid ""
-"Database name is too long. MySQL identifiers are limited to 64 characters."
-msgstr ""
-"Databasenaam is te lang. MySQL-identifiers zijn beperkt tot 64 tekens."
-
-#: internal/modules/mysql/create.go:55
-msgid "Password must be at least 8 characters long"
-msgstr "Wachtwoord moet minimaal 8 tekens lang zijn"
 
 #: internal/modules/mysql/databases.go:220 internal/modules/mysql/wizard.go:30
 msgid ""
@@ -6406,13 +6398,13 @@ msgstr "De firewall inschakelen voor de geselecteerde domeinen?"
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable WAF"
-msgstr "WAF uitschakelen"
+msgid "Disable the firewall for the selected domains?"
+msgstr "De firewall uitschakelen voor de geselecteerde domeinen?"
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable the firewall for the selected domains?"
-msgstr "De firewall uitschakelen voor de geselecteerde domeinen?"
+msgid "Disable WAF"
+msgstr "WAF uitschakelen"
 
 #: internal/modules/waf/render.go:84
 #: internal/web/templates/dashboard/custom_section.html:15
@@ -6806,26 +6798,6 @@ msgstr "GrapesJS-websiteeditor"
 #: internal/modules/websites/websitebuilder_render.go:92
 msgid "You have reached the maximum number of sites allowed."
 msgstr "Je hebt het maximale aantal toegestane sites bereikt."
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG"
-msgstr "WP_DEBUG"
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG_LOG"
-msgstr "WP_DEBUG_LOG"
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG_DISPLAY"
-msgstr "WP_DEBUG_DISPLAY"
-
-#: internal/modules/websites/websites.go:1289
-msgid "SCRIPT_DEBUG"
-msgstr "SCRIPT_DEBUG"
-
-#: internal/modules/websites/websites.go:1289
-msgid "SAVEQUERIES"
-msgstr "SAVEQUERIES"
 
 #: internal/modules/websites/websites.go:1360
 msgid "WordPress updated successfully"
@@ -7680,6 +7652,14 @@ msgid "Name"
 msgstr "Naam"
 
 #: internal/web/templates/cache/service.html:210
+#: internal/web/templates/partials/_service_js.html:24
+#: internal/web/templates/system/services.html:216
+#: internal/web/templates/user/history_usage.html:44
+#: internal/web/templates/user/history_usage.html:111
+msgid "Memory %"
+msgstr "Geheugen %"
+
+#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/docker/containers.html:67
 #: internal/web/templates/docker/containers.html:86
 #: internal/web/templates/docker/containers.html:360
@@ -7699,14 +7679,6 @@ msgid "Memory usage"
 msgstr "Geheugengebruik"
 
 #: internal/web/templates/cache/service.html:210
-#: internal/web/templates/docker/containers.html:70
-#: internal/web/templates/docker/containers.html:89
-#: internal/web/templates/partials/_service_js.html:26
-#: internal/web/templates/system/services.html:216
-msgid "Block I/O"
-msgstr "Block-I/O"
-
-#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/mongodb/processlist.html:31
 #: internal/web/templates/mysql/processlist.html:31
 #: internal/web/templates/system/services.html:216
@@ -7714,18 +7686,18 @@ msgid "ID"
 msgstr "ID"
 
 #: internal/web/templates/cache/service.html:210
-#: internal/web/templates/partials/_service_js.html:24
-#: internal/web/templates/system/services.html:216
-#: internal/web/templates/user/history_usage.html:44
-#: internal/web/templates/user/history_usage.html:111
-msgid "Memory %"
-msgstr "Geheugen %"
-
-#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/partials/_service_js.html:25
 #: internal/web/templates/system/services.html:216
 msgid "Network I/O"
 msgstr "Netwerk-I/O"
+
+#: internal/web/templates/cache/service.html:210
+#: internal/web/templates/docker/containers.html:70
+#: internal/web/templates/docker/containers.html:89
+#: internal/web/templates/partials/_service_js.html:26
+#: internal/web/templates/system/services.html:216
+msgid "Block I/O"
+msgstr "Block-I/O"
 
 #: internal/web/templates/cache/service.html:246
 #: internal/web/templates/system/services.html:262
@@ -7881,14 +7853,14 @@ msgid "You have used all %(n)s domains on your plan."
 msgstr "U hebt alle %(n)s domeinen van uw pakket gebruikt."
 
 #: internal/web/templates/dashboard/dashboard.html:154
+msgid "You have used all %(n)s websites on your plan."
+msgstr "U hebt alle %(n)s websites van uw pakket gebruikt."
+
+#: internal/web/templates/dashboard/dashboard.html:154
 #: internal/web/templates/dashboard/dashboard.html:263
 #: internal/web/templates/manager/sites.html:708
 msgid "New website"
 msgstr "Nieuwe website"
-
-#: internal/web/templates/dashboard/dashboard.html:154
-msgid "You have used all %(n)s websites on your plan."
-msgstr "U hebt alle %(n)s websites van uw pakket gebruikt."
 
 #: internal/web/templates/dashboard/dashboard.html:162
 msgid "Plan usage"
@@ -8197,6 +8169,10 @@ msgid "Copied to clipboard"
 msgstr "Gekopieerd naar klembord"
 
 #: internal/web/templates/dashboard/information.html:29
+msgid "General information"
+msgstr "Algemene informatie"
+
+#: internal/web/templates/dashboard/information.html:29
 #: internal/web/templates/domains/logs.html:132
 #: internal/web/templates/files/filemanager_partials.html:328
 #: internal/web/templates/files/filemanager_partials.html:329
@@ -8205,10 +8181,6 @@ msgstr "Gekopieerd naar klembord"
 #: internal/web/templates/system/error_logs.html:71
 msgid "View"
 msgstr "Bekijken"
-
-#: internal/web/templates/dashboard/information.html:29
-msgid "General information"
-msgstr "Algemene informatie"
 
 #: internal/web/templates/dashboard/information.html:30
 msgid "Your account, plan and the addresses you need to connect."
@@ -9326,16 +9298,16 @@ msgstr ""
 "en start de nieuwe."
 
 #: internal/web/templates/docker/change_mysql.html:21
+#: internal/web/templates/partials/_db_tuning.html:31
+msgid "Databases:"
+msgstr "Databases:"
+
+#: internal/web/templates/docker/change_mysql.html:21
 msgid ""
 "To switch the database server, first remove all databases from your account."
 msgstr ""
 "Verwijder eerst alle databases uit je account om van databaseserver te "
 "wisselen."
-
-#: internal/web/templates/docker/change_mysql.html:21
-#: internal/web/templates/partials/_db_tuning.html:31
-msgid "Databases:"
-msgstr "Databases:"
 
 #: internal/web/templates/docker/change_mysql.html:21
 msgid "Go to databases"
@@ -9367,15 +9339,15 @@ msgstr ""
 "en start de nieuwe."
 
 #: internal/web/templates/docker/change_webserver.html:21
-msgid "To switch the webserver, first remove all domains from your account."
-msgstr ""
-"Verwijder eerst alle domeinen uit je account om van webserver te wisselen."
-
-#: internal/web/templates/docker/change_webserver.html:21
 #: internal/web/templates/partials/_db_tuning.html:34
 #: internal/web/templates/php/wizard.html:15
 msgid "Domains:"
 msgstr "Domeinen:"
+
+#: internal/web/templates/docker/change_webserver.html:21
+msgid "To switch the webserver, first remove all domains from your account."
+msgstr ""
+"Verwijder eerst alle domeinen uit je account om van webserver te wisselen."
 
 #: internal/web/templates/docker/change_webserver.html:21
 msgid "Go to domains"
@@ -9947,16 +9919,16 @@ msgstr ""
 "binnen de container."
 
 #: internal/web/templates/docker/terminal.html:25
-msgid "Inactivity timeout:"
-msgstr "Time-out bij inactiviteit:"
-
-#: internal/web/templates/docker/terminal.html:25
 #: internal/web/templates/mongodb/databases.html:162
 #: internal/web/templates/mysql/databases.html:485
 #: internal/web/templates/mysql/users.html:144
 #: internal/web/templates/psql/databases.html:223
 msgid "seconds"
 msgstr "seconden"
+
+#: internal/web/templates/docker/terminal.html:25
+msgid "Inactivity timeout:"
+msgstr "Time-out bij inactiviteit:"
 
 #: internal/web/templates/docker/terminal.html:30
 msgid "Container:"
@@ -18122,6 +18094,10 @@ msgstr "Uitvoeren in container"
 msgid "Commands (run after each deployment, from the deploy directory)"
 msgstr "Opdrachten (uitgevoerd na elke deployment, vanuit de deploy-map)"
 
+#: internal/web/templates/manager/git.html:346
+msgid "settings"
+msgstr "instellingen"
+
 #: internal/web/templates/manager/git.html:419
 #: internal/web/templates/partials/site_manager_shared.html:1038
 msgid "Commit log"
@@ -18618,17 +18594,17 @@ msgid "What composer.json asks for and what composer.lock installed."
 msgstr "Wat composer.json vraagt en wat composer.lock heeft geïnstalleerd."
 
 #: internal/web/templates/manager/php_app.html:194
-#: internal/web/templates/manager/php_app.html:221
-#: internal/web/templates/manager/python_node_apps.html:767
-msgid "Package"
-msgstr "Pakket"
-
-#: internal/web/templates/manager/php_app.html:194
 #: internal/web/templates/manager/python_node_apps.html:769
 #: internal/web/templates/manager/wp/single.html:1149
 #: internal/web/templates/php/wizard.html:249
 msgid "Installed"
 msgstr "Geïnstalleerd"
+
+#: internal/web/templates/manager/php_app.html:194
+#: internal/web/templates/manager/php_app.html:221
+#: internal/web/templates/manager/python_node_apps.html:767
+msgid "Package"
+msgstr "Pakket"
 
 #: internal/web/templates/manager/php_app.html:194
 msgid "Constraint"
@@ -19076,6 +19052,10 @@ msgstr ""
 "install/opstarten wordt uitgevoerd - lokale wijzigingen aan bestanden in de "
 "docroot worden overschreven. Maak het veld leeg en sla op om de repository "
 "te ontkoppelen."
+
+#: internal/web/templates/manager/python_node_apps.html:526
+msgid "https://"
+msgstr "https://"
 
 #: internal/web/templates/manager/python_node_apps.html:536
 msgid ""
@@ -21795,17 +21775,33 @@ msgstr ""
 msgid "Debugging in WordPress"
 msgstr "Debugging in WordPress"
 
+#: internal/web/templates/manager/wp/single.html:1490
+msgid "WP_DEBUG"
+msgstr "WP_DEBUG"
+
 #: internal/web/templates/manager/wp/single.html:1493
 msgid "WordPress debug mode."
 msgstr "Foutopsporingsmodus van WordPress."
+
+#: internal/web/templates/manager/wp/single.html:1497
+msgid "WP_DEBUG_LOG"
+msgstr "WP_DEBUG_LOG"
 
 #: internal/web/templates/manager/wp/single.html:1500
 msgid "Save all errors to the debug.log file inside the wp-content directory."
 msgstr "Alle fouten opslaan in het bestand debug.log in de map wp-content."
 
+#: internal/web/templates/manager/wp/single.html:1504
+msgid "WP_DEBUG_DISPLAY"
+msgstr "WP_DEBUG_DISPLAY"
+
 #: internal/web/templates/manager/wp/single.html:1507
 msgid "Show debug messages inside the HTML pages"
 msgstr "Foutopsporingsberichten tonen in de HTML-pagina's"
+
+#: internal/web/templates/manager/wp/single.html:1511
+msgid "SCRIPT_DEBUG"
+msgstr "SCRIPT_DEBUG"
 
 #: internal/web/templates/manager/wp/single.html:1514
 msgid ""
@@ -21816,6 +21812,10 @@ msgstr ""
 "Dwing WordPress om de niet-geminificeerde versies van de core CSS- en "
 "JavaScript-bestanden te gebruiken. Handig wanneer je wijzigingen in .js- en "
 ".css-bestanden test."
+
+#: internal/web/templates/manager/wp/single.html:1518
+msgid "SAVEQUERIES"
+msgstr "SAVEQUERIES"
 
 #: internal/web/templates/manager/wp/single.html:1521
 msgid ""
@@ -22100,13 +22100,13 @@ msgstr "Draait als"
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a database to continue."
-msgstr "Kies een database om door te gaan."
+msgid "Pick a user to continue."
+msgstr "Kies een gebruiker om door te gaan."
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a user to continue."
-msgstr "Kies een gebruiker om door te gaan."
+msgid "Pick a database to continue."
+msgstr "Kies een database om door te gaan."
 
 #: internal/web/templates/mongodb/assign.html:53
 msgid "Pick a role to continue."
@@ -22578,15 +22578,6 @@ msgid "Total users:"
 msgstr "Totaal aantal gebruikers:"
 
 #: internal/web/templates/mongodb/users.html:15
-#: internal/web/templates/mongodb/users.html:19
-#: internal/web/templates/mysql/users.html:15
-#: internal/web/templates/mysql/users.html:19
-#: internal/web/templates/psql/users.html:15
-#: internal/web/templates/psql/users.html:19
-msgid "from"
-msgstr "uit"
-
-#: internal/web/templates/mongodb/users.html:15
 #: internal/web/templates/mongodb/users.html:16
 #: internal/web/templates/mongodb/users.html:19
 #: internal/web/templates/mongodb/users.html:20
@@ -22602,6 +22593,15 @@ msgstr "uit"
 #: internal/web/templates/psql/wizard.html:154
 msgid "database"
 msgstr "database"
+
+#: internal/web/templates/mongodb/users.html:15
+#: internal/web/templates/mongodb/users.html:19
+#: internal/web/templates/mysql/users.html:15
+#: internal/web/templates/mysql/users.html:19
+#: internal/web/templates/psql/users.html:15
+#: internal/web/templates/psql/users.html:19
+msgid "from"
+msgstr "uit"
 
 #: internal/web/templates/mongodb/users.html:40
 msgid "Roles"
@@ -22622,6 +22622,11 @@ msgstr ""
 "wachtwoord in en ken deze een rol op de database toe."
 
 #: internal/web/templates/mongodb/wizard.html:16
+#: internal/web/templates/psql/wizard.html:16
+msgid "Successfully created database"
+msgstr "Database gemaakt"
+
+#: internal/web/templates/mongodb/wizard.html:16
 #: internal/web/templates/mysql/mysql_user.html:25
 #: internal/web/templates/mysql/wizard.html:40
 #: internal/web/templates/psql/wizard.html:16
@@ -22629,11 +22634,6 @@ msgid "Save these credentials, the password cannot be retrieved later."
 msgstr ""
 "Bewaar deze inloggegevens; het wachtwoord kan later niet meer worden "
 "opgevraagd."
-
-#: internal/web/templates/mongodb/wizard.html:16
-#: internal/web/templates/psql/wizard.html:16
-msgid "Successfully created database"
-msgstr "Database gemaakt"
 
 #: internal/web/templates/mongodb/wizard.html:21
 #: internal/web/templates/mysql/wizard.html:47
@@ -24766,14 +24766,14 @@ msgid "Webserver configuration editor"
 msgstr "Webserverconfiguratie-editor"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:74
-#: internal/web/templates/system/apache_nginx_conf_editor.html:107
-msgid "Test config"
-msgstr "Configuratie testen"
-
-#: internal/web/templates/system/apache_nginx_conf_editor.html:74
 #: internal/web/templates/system/cronjobs.html:430
 msgid "Run again"
 msgstr "Opnieuw uitvoeren"
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:74
+#: internal/web/templates/system/apache_nginx_conf_editor.html:107
+msgid "Test config"
+msgstr "Configuratie testen"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:98
 msgid "Config file:"

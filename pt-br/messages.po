@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-16 12:44+0200\n"
+"POT-Creation-Date: 2026-11-16 13:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: pt_BR <LL@li.org>\n"
@@ -1112,10 +1112,6 @@ msgid "Databases"
 msgstr "Bancos de dados"
 
 #: internal/modules/backupwizard/render.go:41
-msgid "Home directory"
-msgstr "Diretório pessoal"
-
-#: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:80
 #: internal/modules/dashboard/sections.go:81
 #: internal/modules/dashboard/sections.go:228
@@ -1138,6 +1134,21 @@ msgstr "Diretório pessoal"
 msgid "Domains"
 msgstr "Domínios"
 
+#: internal/modules/backupwizard/render.go:41
+msgid "Home directory"
+msgstr "Diretório pessoal"
+
+#: internal/modules/backupwizard/render.go:42
+#: internal/modules/dashboard/sections.go:74
+#: internal/modules/dashboard/sections.go:270
+#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
+#: internal/web/templates/dashboard/dashboard.html:206
+#: internal/web/templates/domains/domains.html:71
+#: internal/web/templates/domains/domains.html:126
+#: internal/web/templates/system/summary.html:169
+msgid "Websites"
+msgstr "Sites"
+
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/altlist.go:70
 #: internal/modules/dashboard/sections.go:103
@@ -1152,17 +1163,6 @@ msgstr "Domínios"
 #: internal/web/templates/manager/wp/single.html:345
 msgid "FTP accounts"
 msgstr "Contas FTP"
-
-#: internal/modules/backupwizard/render.go:42
-#: internal/modules/dashboard/sections.go:74
-#: internal/modules/dashboard/sections.go:270
-#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
-#: internal/web/templates/dashboard/dashboard.html:206
-#: internal/web/templates/domains/domains.html:71
-#: internal/web/templates/domains/domains.html:126
-#: internal/web/templates/system/summary.html:169
-msgid "Websites"
-msgstr "Sites"
 
 #: internal/modules/backupwizard/render.go:42
 msgid "Email accounts, filters, aliases"
@@ -1600,14 +1600,10 @@ msgid "Email accounts"
 msgstr "Contas de e-mail"
 
 #: internal/modules/dashboard/altlist.go:55
-msgid "Your mailboxes, the fullest first."
-msgstr "Suas caixas de e-mail, as mais cheias primeiro."
-
-#: internal/modules/dashboard/altlist.go:55
-#: internal/web/templates/domains/dns.html:257
-#: internal/web/templates/domains/dns.html:260
-msgid "Address"
-msgstr "Endereço"
+#: internal/web/templates/emails/filter.html:26
+#: internal/web/templates/emails/migrate.html:200
+msgid "No email accounts yet"
+msgstr "Ainda não há contas de e-mail"
 
 #: internal/modules/dashboard/altlist.go:55
 #: internal/modules/dashboard/altlist.go:70
@@ -1616,14 +1612,14 @@ msgid "Used"
 msgstr "Usado"
 
 #: internal/modules/dashboard/altlist.go:55
-#: internal/web/templates/emails/filter.html:26
-#: internal/web/templates/emails/migrate.html:200
-msgid "No email accounts yet"
-msgstr "Ainda não há contas de e-mail"
+#: internal/web/templates/domains/dns.html:257
+#: internal/web/templates/domains/dns.html:260
+msgid "Address"
+msgstr "Endereço"
 
-#: internal/modules/dashboard/altlist.go:66
-msgid "Your databases on every engine, the biggest first."
-msgstr "Seus bancos de dados em todos os mecanismos, os maiores primeiro."
+#: internal/modules/dashboard/altlist.go:55
+msgid "Your mailboxes, the fullest first."
+msgstr "Suas caixas de e-mail, as mais cheias primeiro."
 
 #: internal/modules/dashboard/altlist.go:66
 #: internal/web/templates/dashboard/onboarding.html:599
@@ -1684,12 +1680,12 @@ msgid "Size"
 msgstr "Tamanho"
 
 #: internal/modules/dashboard/altlist.go:66
+msgid "Your databases on every engine, the biggest first."
+msgstr "Seus bancos de dados em todos os mecanismos, os maiores primeiro."
+
+#: internal/modules/dashboard/altlist.go:66
 msgid "No databases yet"
 msgstr "Ainda não há bancos de dados"
-
-#: internal/modules/dashboard/altlist.go:70
-msgid "FTP users and their folders, the most used first."
-msgstr "Usuários FTP e suas pastas, os mais usados primeiro."
 
 #: internal/modules/dashboard/altlist.go:70
 #: internal/web/templates/mongodb/assign.html:21
@@ -1711,8 +1707,26 @@ msgid "User"
 msgstr "Usuário"
 
 #: internal/modules/dashboard/altlist.go:70
+msgid "FTP users and their folders, the most used first."
+msgstr "Usuários FTP e suas pastas, os mais usados primeiro."
+
+#: internal/modules/dashboard/altlist.go:70
 msgid "No FTP accounts yet"
 msgstr "Ainda não há contas FTP"
+
+#: internal/modules/dashboard/altlist.go:74
+#: internal/web/templates/cache/service.html:285
+#: internal/web/templates/docker/change_images.html:34
+#: internal/web/templates/partials/_search.html:71
+#: internal/web/templates/php/info.html:19
+#: internal/web/templates/system/error_logs.html:45
+#: internal/web/templates/system/error_logs.html:92
+#: internal/web/templates/system/error_logs.html:120
+#: internal/web/templates/system/services.html:67
+#: internal/web/templates/system/services.html:171
+#: internal/web/templates/system/services.html:308
+msgid "Service"
+msgstr "Serviço"
 
 #: internal/modules/dashboard/altlist.go:74
 #: internal/modules/dashboard/sections.go:163
@@ -1731,20 +1745,6 @@ msgstr "Contêineres"
 #: internal/modules/dashboard/altlist.go:74
 msgid "The services on your account, running ones first."
 msgstr "Os serviços da sua conta, os em execução primeiro."
-
-#: internal/modules/dashboard/altlist.go:74
-#: internal/web/templates/cache/service.html:285
-#: internal/web/templates/docker/change_images.html:34
-#: internal/web/templates/partials/_search.html:71
-#: internal/web/templates/php/info.html:19
-#: internal/web/templates/system/error_logs.html:45
-#: internal/web/templates/system/error_logs.html:92
-#: internal/web/templates/system/error_logs.html:120
-#: internal/web/templates/system/services.html:67
-#: internal/web/templates/system/services.html:171
-#: internal/web/templates/system/services.html:308
-msgid "Service"
-msgstr "Serviço"
 
 #: internal/modules/dashboard/altlist.go:74
 msgid "No containers yet"
@@ -2750,6 +2750,10 @@ msgstr "Limite de Memória"
 msgid "Bandwidth Limit"
 msgstr "Limite de largura de banda"
 
+#: internal/modules/dns/api.go:260
+msgid "record"
+msgstr "registro"
+
 #: internal/modules/dns/bulk.go:29
 msgid "Update TTL"
 msgstr "Atualizar TTL"
@@ -3063,10 +3067,6 @@ msgid "Container updated, the new settings apply when it starts."
 msgstr ""
 "Contêiner atualizado, as novas configurações valem quando ele iniciar."
 
-#: internal/modules/docker/domain.go:71
-msgid "NodeJS"
-msgstr "Dançarino"
-
 #: internal/modules/docker/images.go:36
 msgid "The image of %(service)s can't be changed."
 msgstr "A imagem de %(service)s não pode ser alterada."
@@ -3310,21 +3310,21 @@ msgstr "Definir o firewall dos domínios selecionados como:"
 
 #: internal/modules/domains/bulk.go:26
 #: internal/web/templates/domains/domains.html:261
-#: internal/web/templates/files/filemanager_partials.html:791
-#: internal/web/templates/system/waf.html:66
-#: internal/web/templates/system/waf.html:72
-#: internal/web/templates/system/waf.html:119
-msgid "On"
-msgstr "Ligado"
-
-#: internal/modules/domains/bulk.go:26
-#: internal/web/templates/domains/domains.html:261
 #: internal/web/templates/manager/wp/_tools.html:34
 #: internal/web/templates/system/waf.html:66
 #: internal/web/templates/system/waf.html:74
 #: internal/web/templates/system/waf.html:121
 msgid "Off"
 msgstr "Desligado"
+
+#: internal/modules/domains/bulk.go:26
+#: internal/web/templates/domains/domains.html:261
+#: internal/web/templates/files/filemanager_partials.html:791
+#: internal/web/templates/system/waf.html:66
+#: internal/web/templates/system/waf.html:72
+#: internal/web/templates/system/waf.html:119
+msgid "On"
+msgstr "Ligado"
 
 #: internal/modules/domains/bulk.go:27
 msgid "Cloudflare"
@@ -3504,6 +3504,16 @@ msgid "Status"
 msgstr "Status"
 
 #: internal/modules/domains/render.go:105
+#: internal/web/templates/dashboard/dashboard.html:237
+#: internal/web/templates/domains/domains.html:163
+#: internal/web/templates/emails/accounts.html:37
+#: internal/web/templates/emails/accounts.html:47
+#: internal/web/templates/files/backup_restore.html:782
+#: internal/web/templates/manager/wp/single.html:24
+msgid "Suspended"
+msgstr "Suspenso"
+
+#: internal/modules/domains/render.go:105
 #: internal/web/templates/dashboard/dashboard.html:240
 #: internal/web/templates/domains/domains.html:167
 #: internal/web/templates/manager/python_node_apps.html:29
@@ -3514,16 +3524,6 @@ msgstr "Status"
 #: internal/web/templates/system/cronjobs.html:225
 msgid "Active"
 msgstr "Ativo"
-
-#: internal/modules/domains/render.go:105
-#: internal/web/templates/dashboard/dashboard.html:237
-#: internal/web/templates/domains/domains.html:163
-#: internal/web/templates/emails/accounts.html:37
-#: internal/web/templates/emails/accounts.html:47
-#: internal/web/templates/files/backup_restore.html:782
-#: internal/web/templates/manager/wp/single.html:24
-msgid "Suspended"
-msgstr "Suspenso"
 
 #: internal/modules/domains/render.go:108
 #: internal/web/templates/domains/domains.html:70
@@ -3549,25 +3549,6 @@ msgstr "AutoSSL"
 #: internal/web/templates/domains/ssl.html:329
 msgid "Custom SSL"
 msgstr "SSL personalizado"
-
-#: internal/modules/domains/render.go:122
-#: internal/web/templates/dashboard/dashboard.html:284
-#: internal/web/templates/domains/dns.html:125
-#: internal/web/templates/domains/dns.html:144
-#: internal/web/templates/domains/dns.html:547
-#: internal/web/templates/domains/domains.html:65
-#: internal/web/templates/domains/domains.html:120
-#: internal/web/templates/domains/dynamic_dns.html:155
-#: internal/web/templates/domains/redirect.html:48
-#: internal/web/templates/domains/redirect.html:52
-#: internal/web/templates/domains/ssl.html:309
-#: internal/web/templates/files/filemanager.html:112
-#: internal/web/templates/files/filemanager_partials.html:480
-#: internal/web/templates/files/trash.html:73
-#: internal/web/templates/files/trash_partials.html:55
-#: internal/web/templates/manager/sites.html:209
-msgid "Type"
-msgstr "Tipo"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/docker/container_form.html:241
@@ -3606,6 +3587,25 @@ msgstr "Tipo"
 #: internal/web/templates/system/bot_control.html:37
 msgid "Domain"
 msgstr "Domínio"
+
+#: internal/modules/domains/render.go:122
+#: internal/web/templates/dashboard/dashboard.html:284
+#: internal/web/templates/domains/dns.html:125
+#: internal/web/templates/domains/dns.html:144
+#: internal/web/templates/domains/dns.html:547
+#: internal/web/templates/domains/domains.html:65
+#: internal/web/templates/domains/domains.html:120
+#: internal/web/templates/domains/dynamic_dns.html:155
+#: internal/web/templates/domains/redirect.html:48
+#: internal/web/templates/domains/redirect.html:52
+#: internal/web/templates/domains/ssl.html:309
+#: internal/web/templates/files/filemanager.html:112
+#: internal/web/templates/files/filemanager_partials.html:480
+#: internal/web/templates/files/trash.html:73
+#: internal/web/templates/files/trash_partials.html:55
+#: internal/web/templates/manager/sites.html:209
+msgid "Type"
+msgstr "Tipo"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/domains/dns.html:284
@@ -3672,10 +3672,6 @@ msgid "Invalid request. Domain name and Vhost content must be provided."
 msgstr ""
 "Solicitação inválida. O nome de domínio e o conteúdo do vhost devem ser "
 "informados."
-
-#: internal/modules/dynamicdns/dynamicdns.go:63
-msgid "record"
-msgstr "registro"
 
 #: internal/modules/dynamicdns/handlers.go:85
 msgid "Failed to create Dynamic DNS entry."
@@ -3800,6 +3796,22 @@ msgid "New mailbox size (GB) for the selected accounts:"
 msgstr "Novo tamanho da caixa de correio (GB) para as contas selecionadas:"
 
 #: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
+#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
+#: internal/modules/postgresql/bulk.go:34
+#: internal/web/templates/emails/new.html:74
+#: internal/web/templates/emails/single_account.html:185
+#: internal/web/templates/files/ftp_new.html:71
+#: internal/web/templates/files/ftp_password.html:44
+#: internal/web/templates/files/ftp_password.html:55
+#: internal/web/templates/mysql/password.html:43
+#: internal/web/templates/mysql/root_password.html:54
+#: internal/web/templates/mysql/root_password.html:77
+#: internal/web/templates/user/account.html:118
+#: internal/web/templates/user/reset_password/set_new_password.html:19
+msgid "New password"
+msgstr "Nova senha"
+
+#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mongodb/render.go:202
 #: internal/modules/mysql/bulk.go:52 internal/modules/mysql/render.go:220
 #: internal/modules/postgresql/bulk.go:34
@@ -3819,22 +3831,6 @@ msgstr "Novo tamanho da caixa de correio (GB) para as contas selecionadas:"
 #: internal/web/templates/user/reset_password/set_new_password.html:63
 msgid "Change password"
 msgstr "Alterar senha"
-
-#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
-#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
-#: internal/modules/postgresql/bulk.go:34
-#: internal/web/templates/emails/new.html:74
-#: internal/web/templates/emails/single_account.html:185
-#: internal/web/templates/files/ftp_new.html:71
-#: internal/web/templates/files/ftp_password.html:44
-#: internal/web/templates/files/ftp_password.html:55
-#: internal/web/templates/mysql/password.html:43
-#: internal/web/templates/mysql/root_password.html:54
-#: internal/web/templates/mysql/root_password.html:77
-#: internal/web/templates/user/account.html:118
-#: internal/web/templates/user/reset_password/set_new_password.html:19
-msgid "New password"
-msgstr "Nova senha"
 
 #: internal/modules/emails/bulk.go:27
 msgid "Set this password for the selected accounts:"
@@ -4004,6 +4000,10 @@ msgstr ""
 #: internal/modules/errorlogs/collect.go:103
 msgid "HTTP 5xx responses"
 msgstr "Respostas HTTP 5xx"
+
+#: internal/modules/errorlogs/sites.go:28
+msgid "NodeJS"
+msgstr "Dançarino"
 
 #: internal/modules/filemanager/api_transfer.go:188
 #: internal/modules/filemanager/archive.go:90
@@ -4506,10 +4506,6 @@ msgstr "%(repo)s (%(branch)s em %(commit)s) implantado em %(dir)s."
 msgid "Deploy actions ran in %(container)s."
 msgstr "As ações de implantação foram executadas em %(container)s."
 
-#: internal/modules/git/handlers.go:360
-msgid "settings"
-msgstr "configurações"
-
 #: internal/modules/git/handlers.go:362
 msgid "Could not save settings for %(repo)s: %(error)s"
 msgstr "Não foi possível salvar as configurações de %(repo)s: %(error)s"
@@ -4776,6 +4772,10 @@ msgid "Permanently delete the selected users? This cannot be undone."
 msgstr ""
 "Excluir permanentemente os usuários selecionados? Esta ação não pode ser "
 "desfeita."
+
+#: internal/modules/mongodb/create.go:51
+msgid "Password must be at least 8 characters long"
+msgstr "A senha deve ter pelo menos 8 caracteres"
 
 #: internal/modules/mongodb/databases.go:52
 #: internal/modules/mongodb/users.go:37
@@ -5110,9 +5110,12 @@ msgstr ""
 "Banco de dados e usuário criados, mas não foi possível conceder a função: "
 "%(error)s"
 
-#: internal/modules/moodle/clone.go:179
-msgid "https://"
-msgstr "https: //"
+#: internal/modules/mysql/api.go:190
+msgid ""
+"Database name is too long. MySQL identifiers are limited to 64 characters."
+msgstr ""
+"O nome do banco de dados é muito longo. Identificadores do MySQL são "
+"limitados a 64 caracteres."
 
 #: internal/modules/mysql/assign.go:56 internal/modules/mysql/wizard.go:67
 msgid "At least one privilege must be selected."
@@ -5250,17 +5253,6 @@ msgid ""
 msgstr ""
 "O contêiner do %(mysql_version)s não está em execução. Aguarde a "
 "inicialização."
-
-#: internal/modules/mysql/create.go:32
-msgid ""
-"Database name is too long. MySQL identifiers are limited to 64 characters."
-msgstr ""
-"O nome do banco de dados é muito longo. Identificadores do MySQL são "
-"limitados a 64 caracteres."
-
-#: internal/modules/mysql/create.go:55
-msgid "Password must be at least 8 characters long"
-msgstr "A senha deve ter pelo menos 8 caracteres"
 
 #: internal/modules/mysql/databases.go:220 internal/modules/mysql/wizard.go:30
 msgid ""
@@ -6407,13 +6399,13 @@ msgstr "Ativar o firewall para os domínios selecionados?"
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable WAF"
-msgstr "Desativar WAF"
+msgid "Disable the firewall for the selected domains?"
+msgstr "Desativar o firewall para os domínios selecionados?"
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable the firewall for the selected domains?"
-msgstr "Desativar o firewall para os domínios selecionados?"
+msgid "Disable WAF"
+msgstr "Desativar WAF"
 
 #: internal/modules/waf/render.go:84
 #: internal/web/templates/dashboard/custom_section.html:15
@@ -6807,26 +6799,6 @@ msgstr "Editor de sites GrapesJS"
 #: internal/modules/websites/websitebuilder_render.go:92
 msgid "You have reached the maximum number of sites allowed."
 msgstr "Você atingiu o número máximo de sites permitidos."
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG"
-msgstr "Wp_debug"
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG_LOG"
-msgstr "Wp_debug_log"
-
-#: internal/modules/websites/websites.go:1289
-msgid "WP_DEBUG_DISPLAY"
-msgstr "Wp_debug_display"
-
-#: internal/modules/websites/websites.go:1289
-msgid "SCRIPT_DEBUG"
-msgstr "Script_debug"
-
-#: internal/modules/websites/websites.go:1289
-msgid "SAVEQUERIES"
-msgstr "Salvar quileiros"
 
 #: internal/modules/websites/websites.go:1360
 msgid "WordPress updated successfully"
@@ -7684,6 +7656,14 @@ msgid "Name"
 msgstr "Nome"
 
 #: internal/web/templates/cache/service.html:210
+#: internal/web/templates/partials/_service_js.html:24
+#: internal/web/templates/system/services.html:216
+#: internal/web/templates/user/history_usage.html:44
+#: internal/web/templates/user/history_usage.html:111
+msgid "Memory %"
+msgstr "Memória %"
+
+#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/docker/containers.html:67
 #: internal/web/templates/docker/containers.html:86
 #: internal/web/templates/docker/containers.html:360
@@ -7703,14 +7683,6 @@ msgid "Memory usage"
 msgstr "Uso de memória"
 
 #: internal/web/templates/cache/service.html:210
-#: internal/web/templates/docker/containers.html:70
-#: internal/web/templates/docker/containers.html:89
-#: internal/web/templates/partials/_service_js.html:26
-#: internal/web/templates/system/services.html:216
-msgid "Block I/O"
-msgstr "Block E/S."
-
-#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/mongodb/processlist.html:31
 #: internal/web/templates/mysql/processlist.html:31
 #: internal/web/templates/system/services.html:216
@@ -7718,18 +7690,18 @@ msgid "ID"
 msgstr "EU IA"
 
 #: internal/web/templates/cache/service.html:210
-#: internal/web/templates/partials/_service_js.html:24
-#: internal/web/templates/system/services.html:216
-#: internal/web/templates/user/history_usage.html:44
-#: internal/web/templates/user/history_usage.html:111
-msgid "Memory %"
-msgstr "Memória %"
-
-#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/partials/_service_js.html:25
 #: internal/web/templates/system/services.html:216
 msgid "Network I/O"
 msgstr "E/S de rede"
+
+#: internal/web/templates/cache/service.html:210
+#: internal/web/templates/docker/containers.html:70
+#: internal/web/templates/docker/containers.html:89
+#: internal/web/templates/partials/_service_js.html:26
+#: internal/web/templates/system/services.html:216
+msgid "Block I/O"
+msgstr "Block E/S."
 
 #: internal/web/templates/cache/service.html:246
 #: internal/web/templates/system/services.html:262
@@ -7885,14 +7857,14 @@ msgid "You have used all %(n)s domains on your plan."
 msgstr "Você usou todos os %(n)s domínios do seu plano."
 
 #: internal/web/templates/dashboard/dashboard.html:154
+msgid "You have used all %(n)s websites on your plan."
+msgstr "Você usou todos os %(n)s sites do seu plano."
+
+#: internal/web/templates/dashboard/dashboard.html:154
 #: internal/web/templates/dashboard/dashboard.html:263
 #: internal/web/templates/manager/sites.html:708
 msgid "New website"
 msgstr "Novo site"
-
-#: internal/web/templates/dashboard/dashboard.html:154
-msgid "You have used all %(n)s websites on your plan."
-msgstr "Você usou todos os %(n)s sites do seu plano."
 
 #: internal/web/templates/dashboard/dashboard.html:162
 msgid "Plan usage"
@@ -8201,6 +8173,10 @@ msgid "Copied to clipboard"
 msgstr "Copiado para a área de transferência"
 
 #: internal/web/templates/dashboard/information.html:29
+msgid "General information"
+msgstr "Informações gerais"
+
+#: internal/web/templates/dashboard/information.html:29
 #: internal/web/templates/domains/logs.html:132
 #: internal/web/templates/files/filemanager_partials.html:328
 #: internal/web/templates/files/filemanager_partials.html:329
@@ -8209,10 +8185,6 @@ msgstr "Copiado para a área de transferência"
 #: internal/web/templates/system/error_logs.html:71
 msgid "View"
 msgstr "Visualizar"
-
-#: internal/web/templates/dashboard/information.html:29
-msgid "General information"
-msgstr "Informações gerais"
 
 #: internal/web/templates/dashboard/information.html:30
 msgid "Your account, plan and the addresses you need to connect."
@@ -9336,16 +9308,16 @@ msgstr ""
 "o novo."
 
 #: internal/web/templates/docker/change_mysql.html:21
+#: internal/web/templates/partials/_db_tuning.html:31
+msgid "Databases:"
+msgstr "Bancos de dados:"
+
+#: internal/web/templates/docker/change_mysql.html:21
 msgid ""
 "To switch the database server, first remove all databases from your account."
 msgstr ""
 "Para trocar o servidor de banco de dados, primeiro remova todos os bancos de"
 " dados da sua conta."
-
-#: internal/web/templates/docker/change_mysql.html:21
-#: internal/web/templates/partials/_db_tuning.html:31
-msgid "Databases:"
-msgstr "Bancos de dados:"
 
 #: internal/web/templates/docker/change_mysql.html:21
 msgid "Go to databases"
@@ -9376,15 +9348,15 @@ msgstr ""
 "A troca para o servidor web atual, remove sua configuração e inicia o novo."
 
 #: internal/web/templates/docker/change_webserver.html:21
-msgid "To switch the webserver, first remove all domains from your account."
-msgstr ""
-"Para trocar o servidor web, primeiro remova todos os domínios da sua conta."
-
-#: internal/web/templates/docker/change_webserver.html:21
 #: internal/web/templates/partials/_db_tuning.html:34
 #: internal/web/templates/php/wizard.html:15
 msgid "Domains:"
 msgstr "Domínios:"
+
+#: internal/web/templates/docker/change_webserver.html:21
+msgid "To switch the webserver, first remove all domains from your account."
+msgstr ""
+"Para trocar o servidor web, primeiro remova todos os domínios da sua conta."
 
 #: internal/web/templates/docker/change_webserver.html:21
 msgid "Go to domains"
@@ -9952,16 +9924,16 @@ msgstr ""
 "contêiner."
 
 #: internal/web/templates/docker/terminal.html:25
-msgid "Inactivity timeout:"
-msgstr "Tempo limite de inatividade:"
-
-#: internal/web/templates/docker/terminal.html:25
 #: internal/web/templates/mongodb/databases.html:162
 #: internal/web/templates/mysql/databases.html:485
 #: internal/web/templates/mysql/users.html:144
 #: internal/web/templates/psql/databases.html:223
 msgid "seconds"
 msgstr "segundos"
+
+#: internal/web/templates/docker/terminal.html:25
+msgid "Inactivity timeout:"
+msgstr "Tempo limite de inatividade:"
 
 #: internal/web/templates/docker/terminal.html:30
 msgid "Container:"
@@ -18116,6 +18088,10 @@ msgstr ""
 "Comandos (executados após cada implantação, a partir do diretório de "
 "implantação)"
 
+#: internal/web/templates/manager/git.html:346
+msgid "settings"
+msgstr "configurações"
+
 #: internal/web/templates/manager/git.html:419
 #: internal/web/templates/partials/site_manager_shared.html:1038
 msgid "Commit log"
@@ -18601,17 +18577,17 @@ msgid "What composer.json asks for and what composer.lock installed."
 msgstr "O que o composer.json pede e o que o composer.lock instalou."
 
 #: internal/web/templates/manager/php_app.html:194
-#: internal/web/templates/manager/php_app.html:221
-#: internal/web/templates/manager/python_node_apps.html:767
-msgid "Package"
-msgstr "Pacote"
-
-#: internal/web/templates/manager/php_app.html:194
 #: internal/web/templates/manager/python_node_apps.html:769
 #: internal/web/templates/manager/wp/single.html:1149
 #: internal/web/templates/php/wizard.html:249
 msgid "Installed"
 msgstr "Instalado"
+
+#: internal/web/templates/manager/php_app.html:194
+#: internal/web/templates/manager/php_app.html:221
+#: internal/web/templates/manager/python_node_apps.html:767
+msgid "Package"
+msgstr "Pacote"
 
 #: internal/web/templates/manager/php_app.html:194
 msgid "Constraint"
@@ -19056,6 +19032,10 @@ msgstr ""
 "executar a instalação/inicialização - quaisquer alterações locais em "
 "arquivos no docroot serão sobrescritas. Limpe o campo e salve para "
 "desconectar o repositório."
+
+#: internal/web/templates/manager/python_node_apps.html:526
+msgid "https://"
+msgstr "https: //"
 
 #: internal/web/templates/manager/python_node_apps.html:536
 msgid ""
@@ -21751,18 +21731,34 @@ msgstr ""
 msgid "Debugging in WordPress"
 msgstr "Depuração no WordPress"
 
+#: internal/web/templates/manager/wp/single.html:1490
+msgid "WP_DEBUG"
+msgstr "Wp_debug"
+
 #: internal/web/templates/manager/wp/single.html:1493
 msgid "WordPress debug mode."
 msgstr "Modo de depuração do WordPress."
+
+#: internal/web/templates/manager/wp/single.html:1497
+msgid "WP_DEBUG_LOG"
+msgstr "Wp_debug_log"
 
 #: internal/web/templates/manager/wp/single.html:1500
 msgid "Save all errors to the debug.log file inside the wp-content directory."
 msgstr ""
 "Salve todos os erros no arquivo Debug.log dentro do diretório WP-Content."
 
+#: internal/web/templates/manager/wp/single.html:1504
+msgid "WP_DEBUG_DISPLAY"
+msgstr "Wp_debug_display"
+
 #: internal/web/templates/manager/wp/single.html:1507
 msgid "Show debug messages inside the HTML pages"
 msgstr "Mostre mensagens de depuração dentro das páginas HTML"
+
+#: internal/web/templates/manager/wp/single.html:1511
+msgid "SCRIPT_DEBUG"
+msgstr "Script_debug"
 
 #: internal/web/templates/manager/wp/single.html:1514
 msgid ""
@@ -21773,6 +21769,10 @@ msgstr ""
 "Forçar o WordPress a usar as versões não minificadas dos arquivos CSS e "
 "JavaScript do núcleo. Isso é útil quando você está testando alterações "
 "feitas em arquivos .js e .css."
+
+#: internal/web/templates/manager/wp/single.html:1518
+msgid "SAVEQUERIES"
+msgstr "Salvar quileiros"
 
 #: internal/web/templates/manager/wp/single.html:1521
 msgid ""
@@ -22058,13 +22058,13 @@ msgstr "Executa como"
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a database to continue."
-msgstr "Escolha um banco de dados para continuar."
+msgid "Pick a user to continue."
+msgstr "Escolha um usuário para continuar."
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a user to continue."
-msgstr "Escolha um usuário para continuar."
+msgid "Pick a database to continue."
+msgstr "Escolha um banco de dados para continuar."
 
 #: internal/web/templates/mongodb/assign.html:53
 msgid "Pick a role to continue."
@@ -22536,15 +22536,6 @@ msgid "Total users:"
 msgstr "Total de usuários:"
 
 #: internal/web/templates/mongodb/users.html:15
-#: internal/web/templates/mongodb/users.html:19
-#: internal/web/templates/mysql/users.html:15
-#: internal/web/templates/mysql/users.html:19
-#: internal/web/templates/psql/users.html:15
-#: internal/web/templates/psql/users.html:19
-msgid "from"
-msgstr "de"
-
-#: internal/web/templates/mongodb/users.html:15
 #: internal/web/templates/mongodb/users.html:16
 #: internal/web/templates/mongodb/users.html:19
 #: internal/web/templates/mongodb/users.html:20
@@ -22560,6 +22551,15 @@ msgstr "de"
 #: internal/web/templates/psql/wizard.html:154
 msgid "database"
 msgstr "banco de dados"
+
+#: internal/web/templates/mongodb/users.html:15
+#: internal/web/templates/mongodb/users.html:19
+#: internal/web/templates/mysql/users.html:15
+#: internal/web/templates/mysql/users.html:19
+#: internal/web/templates/psql/users.html:15
+#: internal/web/templates/psql/users.html:19
+msgid "from"
+msgstr "de"
 
 #: internal/web/templates/mongodb/users.html:40
 msgid "Roles"
@@ -22580,17 +22580,17 @@ msgstr ""
 "segura e conceda a ele uma função no banco."
 
 #: internal/web/templates/mongodb/wizard.html:16
+#: internal/web/templates/psql/wizard.html:16
+msgid "Successfully created database"
+msgstr "Banco de dados criado com sucesso"
+
+#: internal/web/templates/mongodb/wizard.html:16
 #: internal/web/templates/mysql/mysql_user.html:25
 #: internal/web/templates/mysql/wizard.html:40
 #: internal/web/templates/psql/wizard.html:16
 msgid "Save these credentials, the password cannot be retrieved later."
 msgstr ""
 "Salve estas credenciais, a senha não poderá ser recuperada posteriormente."
-
-#: internal/web/templates/mongodb/wizard.html:16
-#: internal/web/templates/psql/wizard.html:16
-msgid "Successfully created database"
-msgstr "Banco de dados criado com sucesso"
 
 #: internal/web/templates/mongodb/wizard.html:21
 #: internal/web/templates/mysql/wizard.html:47
@@ -24712,14 +24712,14 @@ msgid "Webserver configuration editor"
 msgstr "Editor de configuração do servidor web"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:74
-#: internal/web/templates/system/apache_nginx_conf_editor.html:107
-msgid "Test config"
-msgstr "Testar configuração"
-
-#: internal/web/templates/system/apache_nginx_conf_editor.html:74
 #: internal/web/templates/system/cronjobs.html:430
 msgid "Run again"
 msgstr "Executar novamente"
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:74
+#: internal/web/templates/system/apache_nginx_conf_editor.html:107
+msgid "Test config"
+msgstr "Testar configuração"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:98
 msgid "Config file:"
