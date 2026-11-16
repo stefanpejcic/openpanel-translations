@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-16 12:10+0200\n"
+"POT-Creation-Date: 2026-11-16 12:44+0200\n"
 "PO-Revision-Date: 2026-06-01 00:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1177,7 +1177,7 @@ msgstr "ຄອນເທນເນີ ແລະ ອິມເມດ"
 msgid "Invalid bot policy."
 msgstr "ນະໂຍບາຍບອັດບໍ່ຖືກຕ້ອງ."
 
-#: internal/modules/botcontrol/render.go:39
+#: internal/modules/botcontrol/render.go:41
 #: internal/modules/dashboard/sections.go:198
 #: internal/modules/dashboard/sections.go:323
 msgid "AI & Bot Control"
@@ -24299,18 +24299,18 @@ msgstr ""
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:26
 #: internal/web/templates/system/bot_control_domain.html:41
-msgid "Rate-limit (10/min)"
-msgstr "ຈຳກັດ (10/ນາທີ)"
+msgid "Rate-limit (%(limit)s/min)"
+msgstr "ຈຳກັດ (%(limit)s/ນາທີ)"
 
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:41
 msgid ""
-"Caps known AI crawlers at 10 requests/minute per crawler per site (HTTP "
-"429); normal visitors and search engines (Googlebot, Bingbot) are "
+"Caps known AI crawlers at %(limit)s requests/minute per crawler per site "
+"(HTTP 429); normal visitors and search engines (Googlebot, Bingbot) are "
 "unaffected."
 msgstr ""
-"ຈຳກັດ AI crawler ທີ່ຮູ້ຈັກໄວ້ທີ່ 10 ຄຳຂໍຕໍ່ນາທີ ຕໍ່ crawler ຕໍ່ເວັບໄຊ (HTTP "
-"429); ຜູ້ເຂົ້າຊົມທົ່ວໄປ ແລະ ເຄື່ອງມືຄົ້ນຫາ (Googlebot, Bingbot) "
+"ຈຳກັດ AI crawler ທີ່ຮູ້ຈັກໄວ້ທີ່ %(limit)s ຄຳຂໍຕໍ່ນາທີ ຕໍ່ crawler ຕໍ່ເວັບໄຊ"
+" (HTTP 429); ຜູ້ເຂົ້າຊົມທົ່ວໄປ ແລະ ເຄື່ອງມືຄົ້ນຫາ (Googlebot, Bingbot) "
 "ບໍ່ໄດ້ຮັບຜົນກະທົບ."
 
 #: internal/web/templates/system/bot_control.html:24
@@ -24341,8 +24341,8 @@ msgid "Blocked (403)"
 msgstr "ຖືກບລັອກ (403)"
 
 #: internal/web/templates/system/bot_control.html:52
-msgid "Rate-limited (10/min)"
-msgstr "ຖືກຈຳກັດ (10/ນາທີ)"
+msgid "Rate-limited (%(limit)s/min)"
+msgstr "ຖືກຈຳກັດ (%(limit)s/ນາທີ)"
 
 #: internal/web/templates/system/bot_control.html:54
 msgid "Allowed"
