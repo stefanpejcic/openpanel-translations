@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-16 12:10+0200\n"
+"POT-Creation-Date: 2026-11-16 12:44+0200\n"
 "PO-Revision-Date: 2025-01-27 12:00+0300\n"
 "Last-Translator: Slaweally  <slaweally@hotmail.com - sys@rootali.net>\n"
 "Language-Team: Turkish <sys@rootali.net>\n"
@@ -1205,7 +1205,7 @@ msgstr "Konteynerler ve imajlar"
 msgid "Invalid bot policy."
 msgstr "Geçersiz bot politikası."
 
-#: internal/modules/botcontrol/render.go:39
+#: internal/modules/botcontrol/render.go:41
 #: internal/modules/dashboard/sections.go:198
 #: internal/modules/dashboard/sections.go:323
 msgid "AI & Bot Control"
@@ -24695,19 +24695,19 @@ msgstr ""
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:26
 #: internal/web/templates/system/bot_control_domain.html:41
-msgid "Rate-limit (10/min)"
-msgstr "Sınırla (10/dk)"
+msgid "Rate-limit (%(limit)s/min)"
+msgstr "Sınırla (%(limit)s/dk)"
 
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:41
 msgid ""
-"Caps known AI crawlers at 10 requests/minute per crawler per site (HTTP "
-"429); normal visitors and search engines (Googlebot, Bingbot) are "
+"Caps known AI crawlers at %(limit)s requests/minute per crawler per site "
+"(HTTP 429); normal visitors and search engines (Googlebot, Bingbot) are "
 "unaffected."
 msgstr ""
-"Bilinen yapay zeka tarayıcılarını site başına, tarayıcı başına dakikada 10 "
-"istekle sınırlar (HTTP 429); normal ziyaretçiler ve arama motorları "
-"(Googlebot, Bingbot) etkilenmez."
+"Bilinen yapay zeka tarayıcılarını site başına, tarayıcı başına dakikada "
+"%(limit)s istekle sınırlar (HTTP 429); normal ziyaretçiler ve arama "
+"motorları (Googlebot, Bingbot) etkilenmez."
 
 #: internal/web/templates/system/bot_control.html:24
 #: internal/web/templates/system/bot_control_domain.html:29
@@ -24737,8 +24737,8 @@ msgid "Blocked (403)"
 msgstr "Engellendi (403)"
 
 #: internal/web/templates/system/bot_control.html:52
-msgid "Rate-limited (10/min)"
-msgstr "Sınırlandı (10/dk)"
+msgid "Rate-limited (%(limit)s/min)"
+msgstr "Sınırlandı (%(limit)s/dk)"
 
 #: internal/web/templates/system/bot_control.html:54
 msgid "Allowed"
