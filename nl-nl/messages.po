@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-11-16 13:27+0200\n"
+"POT-Creation-Date: 2026-11-16 17:48+0200\n"
 "PO-Revision-Date: 2026-10-22 00:10+0200\n"
 "Last-Translator: Smeris <hello@smeris.me>\n"
 "Language-Team: Dutch <info@openpanel.com>\n"
@@ -949,7 +949,7 @@ msgstr "Ruby-applicatie installeren"
 msgid "Install app"
 msgstr "App installeren"
 
-#: internal/modules/backups/backups.go:335
+#: internal/modules/backups/backups.go:336
 msgid "Backup target switched to '%(target)s' successfully."
 msgstr "Back-updoel succesvol gewijzigd naar '%(target)s'."
 
@@ -1045,8 +1045,8 @@ msgstr "Externe back-ups naar Dropbox-cloudopslag."
 #: internal/modules/backups/render.go:336
 #: internal/modules/dashboard/sections.go:109
 #: internal/modules/malwarescan/bulk.go:14 internal/web/sidebar.go:275
-#: internal/web/templates/files/backup_restore.html:831
-#: internal/web/templates/files/backup_restore.html:832
+#: internal/web/templates/files/backup_restore.html:866
+#: internal/web/templates/files/backup_restore.html:867
 #: internal/web/templates/files/clamav/quarantine.html:92
 #: internal/web/templates/files/clamav/quarantine.html:119
 #: internal/web/templates/files/trash.html:44
@@ -1112,13 +1112,17 @@ msgstr "Back-upwizard"
 #: internal/web/sidebar.go:193 internal/web/sidebar.go:204
 #: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
 #: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
-#: internal/web/templates/files/backup_restore.html:454
-#: internal/web/templates/files/backup_restore.html:557
-#: internal/web/templates/files/backup_restore.html:734
+#: internal/web/templates/files/backup_restore.html:478
+#: internal/web/templates/files/backup_restore.html:582
+#: internal/web/templates/files/backup_restore.html:769
 #: internal/web/templates/system/summary.html:203 static/js/tour-steps.js:307
 #: static/js/tour-steps.js:332
 msgid "Databases"
 msgstr "Databases"
+
+#: internal/modules/backupwizard/render.go:41
+msgid "Home directory"
+msgstr "Thuismap"
 
 #: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:80
@@ -1133,30 +1137,15 @@ msgstr "Databases"
 #: internal/web/templates/domains/logs.html:45
 #: internal/web/templates/emails/deliverability.html:101
 #: internal/web/templates/files/backup_restore.html:10
-#: internal/web/templates/files/backup_restore.html:472
-#: internal/web/templates/files/backup_restore.html:573
-#: internal/web/templates/files/backup_restore.html:736
-#: internal/web/templates/files/backup_restore.html:965
+#: internal/web/templates/files/backup_restore.html:496
+#: internal/web/templates/files/backup_restore.html:598
+#: internal/web/templates/files/backup_restore.html:771
+#: internal/web/templates/files/backup_restore.html:1000
 #: internal/web/templates/files/backups.html:245
 #: internal/web/templates/partials/_header.html:93
 #: internal/web/templates/php/wizard.html:87 static/js/tour-steps.js:274
 msgid "Domains"
 msgstr "Domeinen"
-
-#: internal/modules/backupwizard/render.go:41
-msgid "Home directory"
-msgstr "Thuismap"
-
-#: internal/modules/backupwizard/render.go:42
-#: internal/modules/dashboard/sections.go:74
-#: internal/modules/dashboard/sections.go:270
-#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
-#: internal/web/templates/dashboard/dashboard.html:206
-#: internal/web/templates/domains/domains.html:71
-#: internal/web/templates/domains/domains.html:126
-#: internal/web/templates/system/summary.html:169
-msgid "Websites"
-msgstr "Websites"
 
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/altlist.go:70
@@ -1174,6 +1163,17 @@ msgid "FTP accounts"
 msgstr "FTP-accounts"
 
 #: internal/modules/backupwizard/render.go:42
+#: internal/modules/dashboard/sections.go:74
+#: internal/modules/dashboard/sections.go:270
+#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
+#: internal/web/templates/dashboard/dashboard.html:206
+#: internal/web/templates/domains/domains.html:71
+#: internal/web/templates/domains/domains.html:126
+#: internal/web/templates/system/summary.html:169
+msgid "Websites"
+msgstr "Websites"
+
+#: internal/modules/backupwizard/render.go:42
 msgid "Email accounts, filters, aliases"
 msgstr "E-mailaccounts, filters, aliassen"
 
@@ -1184,10 +1184,10 @@ msgstr "E-mailaccounts, filters, aliassen"
 #: internal/web/sidebar.go:307
 #: internal/web/templates/dashboard/onboarding.html:209
 #: internal/web/templates/files/backup_restore.html:12
-#: internal/web/templates/files/backup_restore.html:481
-#: internal/web/templates/files/backup_restore.html:581
-#: internal/web/templates/files/backup_restore.html:737
-#: internal/web/templates/files/backup_restore.html:966
+#: internal/web/templates/files/backup_restore.html:505
+#: internal/web/templates/files/backup_restore.html:606
+#: internal/web/templates/files/backup_restore.html:772
+#: internal/web/templates/files/backup_restore.html:1001
 #: internal/web/templates/files/backup_settings.html:80
 #: internal/web/templates/system/cronjobs.html:23
 msgid "Cron jobs"
@@ -1195,7 +1195,7 @@ msgstr "Cronjobs"
 
 #: internal/modules/backupwizard/render.go:43
 #: internal/web/templates/files/backup_restore.html:11
-#: internal/web/templates/files/backup_restore.html:968
+#: internal/web/templates/files/backup_restore.html:1003
 msgid "DNS zones"
 msgstr "DNS-zones"
 
@@ -1605,16 +1605,8 @@ msgid "Email accounts"
 msgstr "E-mailaccounts"
 
 #: internal/modules/dashboard/altlist.go:55
-#: internal/web/templates/emails/filter.html:26
-#: internal/web/templates/emails/migrate.html:200
-msgid "No email accounts yet"
-msgstr "Nog geen e-mailaccounts"
-
-#: internal/modules/dashboard/altlist.go:55
-#: internal/modules/dashboard/altlist.go:70
-#: internal/web/templates/files/ftp_quota.html:29
-msgid "Used"
-msgstr "Gebruikt"
+msgid "Your mailboxes, the fullest first."
+msgstr "Uw mailboxen, de volste eerst."
 
 #: internal/modules/dashboard/altlist.go:55
 #: internal/web/templates/domains/dns.html:257
@@ -1623,8 +1615,20 @@ msgid "Address"
 msgstr "Adres"
 
 #: internal/modules/dashboard/altlist.go:55
-msgid "Your mailboxes, the fullest first."
-msgstr "Uw mailboxen, de volste eerst."
+#: internal/modules/dashboard/altlist.go:70
+#: internal/web/templates/files/ftp_quota.html:29
+msgid "Used"
+msgstr "Gebruikt"
+
+#: internal/modules/dashboard/altlist.go:55
+#: internal/web/templates/emails/filter.html:26
+#: internal/web/templates/emails/migrate.html:200
+msgid "No email accounts yet"
+msgstr "Nog geen e-mailaccounts"
+
+#: internal/modules/dashboard/altlist.go:66
+msgid "Your databases on every engine, the biggest first."
+msgstr "Uw databases op alle engines, de grootste eerst."
 
 #: internal/modules/dashboard/altlist.go:66
 #: internal/web/templates/dashboard/onboarding.html:599
@@ -1664,8 +1668,8 @@ msgstr "Database"
 
 #: internal/modules/dashboard/altlist.go:66
 #: internal/web/templates/domains/logs.html:147
-#: internal/web/templates/files/backup_restore.html:715
-#: internal/web/templates/files/backup_restore.html:764
+#: internal/web/templates/files/backup_restore.html:750
+#: internal/web/templates/files/backup_restore.html:799
 #: internal/web/templates/files/backup_wizard.html:46
 #: internal/web/templates/files/backup_wizard.html:118
 #: internal/web/templates/files/disk_usage.html:68
@@ -1685,12 +1689,12 @@ msgid "Size"
 msgstr "Grootte"
 
 #: internal/modules/dashboard/altlist.go:66
-msgid "Your databases on every engine, the biggest first."
-msgstr "Uw databases op alle engines, de grootste eerst."
-
-#: internal/modules/dashboard/altlist.go:66
 msgid "No databases yet"
 msgstr "Nog geen databases"
+
+#: internal/modules/dashboard/altlist.go:70
+msgid "FTP users and their folders, the most used first."
+msgstr "FTP-gebruikers en hun mappen, de meest gebruikte eerst."
 
 #: internal/modules/dashboard/altlist.go:70
 #: internal/web/templates/mongodb/assign.html:21
@@ -1712,26 +1716,8 @@ msgid "User"
 msgstr "Gebruiker"
 
 #: internal/modules/dashboard/altlist.go:70
-msgid "FTP users and their folders, the most used first."
-msgstr "FTP-gebruikers en hun mappen, de meest gebruikte eerst."
-
-#: internal/modules/dashboard/altlist.go:70
 msgid "No FTP accounts yet"
 msgstr "Nog geen FTP-accounts"
-
-#: internal/modules/dashboard/altlist.go:74
-#: internal/web/templates/cache/service.html:285
-#: internal/web/templates/docker/change_images.html:34
-#: internal/web/templates/partials/_search.html:71
-#: internal/web/templates/php/info.html:19
-#: internal/web/templates/system/error_logs.html:45
-#: internal/web/templates/system/error_logs.html:92
-#: internal/web/templates/system/error_logs.html:120
-#: internal/web/templates/system/services.html:67
-#: internal/web/templates/system/services.html:171
-#: internal/web/templates/system/services.html:308
-msgid "Service"
-msgstr "Service"
 
 #: internal/modules/dashboard/altlist.go:74
 #: internal/modules/dashboard/sections.go:163
@@ -1750,6 +1736,20 @@ msgstr "Containers"
 #: internal/modules/dashboard/altlist.go:74
 msgid "The services on your account, running ones first."
 msgstr "De services op uw account, draaiende eerst."
+
+#: internal/modules/dashboard/altlist.go:74
+#: internal/web/templates/cache/service.html:285
+#: internal/web/templates/docker/change_images.html:34
+#: internal/web/templates/partials/_search.html:71
+#: internal/web/templates/php/info.html:19
+#: internal/web/templates/system/error_logs.html:45
+#: internal/web/templates/system/error_logs.html:92
+#: internal/web/templates/system/error_logs.html:120
+#: internal/web/templates/system/services.html:67
+#: internal/web/templates/system/services.html:171
+#: internal/web/templates/system/services.html:308
+msgid "Service"
+msgstr "Service"
 
 #: internal/modules/dashboard/altlist.go:74
 msgid "No containers yet"
@@ -2178,9 +2178,9 @@ msgstr "Terminal"
 #: internal/web/templates/docker/containers.html:462
 #: internal/web/templates/docker/logs.html:9
 #: internal/web/templates/docker/logs.html:59
-#: internal/web/templates/files/backup_restore.html:499
-#: internal/web/templates/files/backup_restore.html:602
-#: internal/web/templates/files/backup_restore.html:650
+#: internal/web/templates/files/backup_restore.html:523
+#: internal/web/templates/files/backup_restore.html:627
+#: internal/web/templates/files/backup_restore.html:684
 #: internal/web/templates/manager/_cms_app_shared.html:167
 #: internal/web/templates/manager/php_app.html:67
 #: internal/web/templates/manager/python_node_apps.html:120
@@ -2476,10 +2476,10 @@ msgstr "Cache"
 #: internal/web/templates/dashboard/onboarding.html:205
 #: internal/web/templates/emails/accounts.html:9
 #: internal/web/templates/files/backup_restore.html:9
-#: internal/web/templates/files/backup_restore.html:463
-#: internal/web/templates/files/backup_restore.html:565
-#: internal/web/templates/files/backup_restore.html:735
-#: internal/web/templates/files/backup_restore.html:964
+#: internal/web/templates/files/backup_restore.html:487
+#: internal/web/templates/files/backup_restore.html:590
+#: internal/web/templates/files/backup_restore.html:770
+#: internal/web/templates/files/backup_restore.html:999
 #: internal/web/templates/files/backup_settings.html:75
 #: internal/web/templates/partials/_header.html:88
 msgid "Emails"
@@ -2754,10 +2754,6 @@ msgstr "Geheugenlimiet"
 #: internal/modules/dashboard/upgrade.go:101
 msgid "Bandwidth Limit"
 msgstr "Bandbreedtelimiet"
-
-#: internal/modules/dns/api.go:260
-msgid "record"
-msgstr "record"
 
 #: internal/modules/dns/bulk.go:29
 msgid "Update TTL"
@@ -3074,6 +3070,10 @@ msgstr "Container bijgewerkt en opnieuw gestart met de nieuwe instellingen."
 msgid "Container updated, the new settings apply when it starts."
 msgstr "Container bijgewerkt, de nieuwe instellingen gelden zodra hij start."
 
+#: internal/modules/docker/domain.go:71
+msgid "NodeJS"
+msgstr "NodeJS"
+
 #: internal/modules/docker/images.go:36
 msgid "The image of %(service)s can't be changed."
 msgstr "De image van %(service)s kan niet worden gewijzigd."
@@ -3317,21 +3317,21 @@ msgstr "Stel de firewall voor de geselecteerde domeinen in op:"
 
 #: internal/modules/domains/bulk.go:26
 #: internal/web/templates/domains/domains.html:261
-#: internal/web/templates/manager/wp/_tools.html:34
-#: internal/web/templates/system/waf.html:66
-#: internal/web/templates/system/waf.html:74
-#: internal/web/templates/system/waf.html:121
-msgid "Off"
-msgstr "Uit"
-
-#: internal/modules/domains/bulk.go:26
-#: internal/web/templates/domains/domains.html:261
 #: internal/web/templates/files/filemanager_partials.html:791
 #: internal/web/templates/system/waf.html:66
 #: internal/web/templates/system/waf.html:72
 #: internal/web/templates/system/waf.html:119
 msgid "On"
 msgstr "Aan"
+
+#: internal/modules/domains/bulk.go:26
+#: internal/web/templates/domains/domains.html:261
+#: internal/web/templates/manager/wp/_tools.html:34
+#: internal/web/templates/system/waf.html:66
+#: internal/web/templates/system/waf.html:74
+#: internal/web/templates/system/waf.html:121
+msgid "Off"
+msgstr "Uit"
 
 #: internal/modules/domains/bulk.go:27
 msgid "Cloudflare"
@@ -3482,8 +3482,8 @@ msgstr "Alle"
 #: internal/web/templates/domains/ssl.html:70
 #: internal/web/templates/emails/accounts.html:37
 #: internal/web/templates/emails/migrate.html:185
-#: internal/web/templates/files/backup_restore.html:624
-#: internal/web/templates/files/backup_restore.html:660
+#: internal/web/templates/files/backup_restore.html:649
+#: internal/web/templates/files/backup_restore.html:694
 #: internal/web/templates/files/imunifyav.html:46
 #: internal/web/templates/files/imunifyav.html:74
 #: internal/web/templates/manager/drupal_app.html:151
@@ -3510,16 +3510,6 @@ msgid "Status"
 msgstr "Status"
 
 #: internal/modules/domains/render.go:105
-#: internal/web/templates/dashboard/dashboard.html:237
-#: internal/web/templates/domains/domains.html:163
-#: internal/web/templates/emails/accounts.html:37
-#: internal/web/templates/emails/accounts.html:47
-#: internal/web/templates/files/backup_restore.html:782
-#: internal/web/templates/manager/wp/single.html:24
-msgid "Suspended"
-msgstr "Opgeschort"
-
-#: internal/modules/domains/render.go:105
 #: internal/web/templates/dashboard/dashboard.html:240
 #: internal/web/templates/domains/domains.html:167
 #: internal/web/templates/manager/python_node_apps.html:29
@@ -3531,10 +3521,20 @@ msgstr "Opgeschort"
 msgid "Active"
 msgstr "Actief"
 
+#: internal/modules/domains/render.go:105
+#: internal/web/templates/dashboard/dashboard.html:237
+#: internal/web/templates/domains/domains.html:163
+#: internal/web/templates/emails/accounts.html:37
+#: internal/web/templates/emails/accounts.html:47
+#: internal/web/templates/files/backup_restore.html:817
+#: internal/web/templates/manager/wp/single.html:24
+msgid "Suspended"
+msgstr "Opgeschort"
+
 #: internal/modules/domains/render.go:108
 #: internal/web/templates/domains/domains.html:70
 #: internal/web/templates/domains/domains.html:125
-#: internal/web/templates/files/backup_restore.html:780
+#: internal/web/templates/files/backup_restore.html:815
 #: internal/web/templates/manager/_cms_app_shared.html:310
 #: internal/web/templates/manager/_cms_app_shared.html:449
 #: internal/web/templates/manager/dokuwiki_app.html:58
@@ -3555,6 +3555,25 @@ msgstr "AutoSSL"
 #: internal/web/templates/domains/ssl.html:329
 msgid "Custom SSL"
 msgstr "Eigen SSL"
+
+#: internal/modules/domains/render.go:122
+#: internal/web/templates/dashboard/dashboard.html:284
+#: internal/web/templates/domains/dns.html:125
+#: internal/web/templates/domains/dns.html:144
+#: internal/web/templates/domains/dns.html:547
+#: internal/web/templates/domains/domains.html:65
+#: internal/web/templates/domains/domains.html:120
+#: internal/web/templates/domains/dynamic_dns.html:155
+#: internal/web/templates/domains/redirect.html:48
+#: internal/web/templates/domains/redirect.html:52
+#: internal/web/templates/domains/ssl.html:309
+#: internal/web/templates/files/filemanager.html:112
+#: internal/web/templates/files/filemanager_partials.html:480
+#: internal/web/templates/files/trash.html:73
+#: internal/web/templates/files/trash_partials.html:55
+#: internal/web/templates/manager/sites.html:209
+msgid "Type"
+msgstr "Type"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/docker/container_form.html:241
@@ -3578,7 +3597,7 @@ msgstr "Eigen SSL"
 #: internal/web/templates/emails/deliverability.html:99
 #: internal/web/templates/emails/new.html:22
 #: internal/web/templates/emails/new.html:35
-#: internal/web/templates/files/backup_restore.html:761
+#: internal/web/templates/files/backup_restore.html:796
 #: internal/web/templates/files/ftp_new.html:36
 #: internal/web/templates/manager/_cms_install_shared.html:118
 #: internal/web/templates/manager/app_install.html:209
@@ -3593,25 +3612,6 @@ msgstr "Eigen SSL"
 #: internal/web/templates/system/bot_control.html:37
 msgid "Domain"
 msgstr "Domein"
-
-#: internal/modules/domains/render.go:122
-#: internal/web/templates/dashboard/dashboard.html:284
-#: internal/web/templates/domains/dns.html:125
-#: internal/web/templates/domains/dns.html:144
-#: internal/web/templates/domains/dns.html:547
-#: internal/web/templates/domains/domains.html:65
-#: internal/web/templates/domains/domains.html:120
-#: internal/web/templates/domains/dynamic_dns.html:155
-#: internal/web/templates/domains/redirect.html:48
-#: internal/web/templates/domains/redirect.html:52
-#: internal/web/templates/domains/ssl.html:309
-#: internal/web/templates/files/filemanager.html:112
-#: internal/web/templates/files/filemanager_partials.html:480
-#: internal/web/templates/files/trash.html:73
-#: internal/web/templates/files/trash_partials.html:55
-#: internal/web/templates/manager/sites.html:209
-msgid "Type"
-msgstr "Type"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/domains/dns.html:284
@@ -3676,6 +3676,10 @@ msgstr "Je bent niet de eigenaar van dit domein."
 #: internal/modules/domains/vhost.go:34
 msgid "Invalid request. Domain name and Vhost content must be provided."
 msgstr "Ongeldig verzoek. Domeinnaam en VHost-inhoud moeten worden opgegeven."
+
+#: internal/modules/dynamicdns/dynamicdns.go:63
+msgid "record"
+msgstr "record"
 
 #: internal/modules/dynamicdns/handlers.go:85
 msgid "Failed to create Dynamic DNS entry."
@@ -3800,22 +3804,6 @@ msgid "New mailbox size (GB) for the selected accounts:"
 msgstr "Nieuwe mailboxgrootte (GB) voor de geselecteerde accounts:"
 
 #: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
-#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
-#: internal/modules/postgresql/bulk.go:34
-#: internal/web/templates/emails/new.html:74
-#: internal/web/templates/emails/single_account.html:185
-#: internal/web/templates/files/ftp_new.html:71
-#: internal/web/templates/files/ftp_password.html:44
-#: internal/web/templates/files/ftp_password.html:55
-#: internal/web/templates/mysql/password.html:43
-#: internal/web/templates/mysql/root_password.html:54
-#: internal/web/templates/mysql/root_password.html:77
-#: internal/web/templates/user/account.html:118
-#: internal/web/templates/user/reset_password/set_new_password.html:19
-msgid "New password"
-msgstr "Nieuw wachtwoord"
-
-#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mongodb/render.go:202
 #: internal/modules/mysql/bulk.go:52 internal/modules/mysql/render.go:220
 #: internal/modules/postgresql/bulk.go:34
@@ -3835,6 +3823,22 @@ msgstr "Nieuw wachtwoord"
 #: internal/web/templates/user/reset_password/set_new_password.html:63
 msgid "Change password"
 msgstr "Wachtwoord wijzigen"
+
+#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
+#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
+#: internal/modules/postgresql/bulk.go:34
+#: internal/web/templates/emails/new.html:74
+#: internal/web/templates/emails/single_account.html:185
+#: internal/web/templates/files/ftp_new.html:71
+#: internal/web/templates/files/ftp_password.html:44
+#: internal/web/templates/files/ftp_password.html:55
+#: internal/web/templates/mysql/password.html:43
+#: internal/web/templates/mysql/root_password.html:54
+#: internal/web/templates/mysql/root_password.html:77
+#: internal/web/templates/user/account.html:118
+#: internal/web/templates/user/reset_password/set_new_password.html:19
+msgid "New password"
+msgstr "Nieuw wachtwoord"
 
 #: internal/modules/emails/bulk.go:27
 msgid "Set this password for the selected accounts:"
@@ -4005,10 +4009,6 @@ msgstr ""
 #: internal/modules/errorlogs/collect.go:103
 msgid "HTTP 5xx responses"
 msgstr "HTTP 5xx-antwoorden"
-
-#: internal/modules/errorlogs/sites.go:28
-msgid "NodeJS"
-msgstr "NodeJS"
 
 #: internal/modules/filemanager/api_transfer.go:188
 #: internal/modules/filemanager/archive.go:90
@@ -4510,6 +4510,10 @@ msgstr "%(repo)s (%(branch)s op %(commit)s) naar %(dir)s gedeployd."
 msgid "Deploy actions ran in %(container)s."
 msgstr "Deploy-acties zijn uitgevoerd in %(container)s."
 
+#: internal/modules/git/handlers.go:360
+msgid "settings"
+msgstr "instellingen"
+
 #: internal/modules/git/handlers.go:362
 msgid "Could not save settings for %(repo)s: %(error)s"
 msgstr "Instellingen voor %(repo)s konden niet worden opgeslagen: %(error)s"
@@ -4775,10 +4779,6 @@ msgid "Permanently delete the selected users? This cannot be undone."
 msgstr ""
 "Geselecteerde gebruikers permanent verwijderen? Dit kan niet ongedaan worden"
 " gemaakt."
-
-#: internal/modules/mongodb/create.go:51
-msgid "Password must be at least 8 characters long"
-msgstr "Wachtwoord moet minimaal 8 tekens lang zijn"
 
 #: internal/modules/mongodb/databases.go:52
 #: internal/modules/mongodb/users.go:37
@@ -5107,11 +5107,9 @@ msgid "Database and user created, but failed to grant role: %(error)s"
 msgstr ""
 "Database en gebruiker aangemaakt, maar toekennen van rol mislukt: %(error)s"
 
-#: internal/modules/mysql/api.go:190
-msgid ""
-"Database name is too long. MySQL identifiers are limited to 64 characters."
-msgstr ""
-"Databasenaam is te lang. MySQL-identifiers zijn beperkt tot 64 tekens."
+#: internal/modules/moodle/clone.go:179
+msgid "https://"
+msgstr "https://"
 
 #: internal/modules/mysql/assign.go:56 internal/modules/mysql/wizard.go:67
 msgid "At least one privilege must be selected."
@@ -5248,6 +5246,16 @@ msgstr ""
 msgid ""
 "%(mysql_version)s container is not running. Please wait for initialization."
 msgstr "%(mysql_version)s-container draait niet. Wacht op de initialisatie."
+
+#: internal/modules/mysql/create.go:32
+msgid ""
+"Database name is too long. MySQL identifiers are limited to 64 characters."
+msgstr ""
+"Databasenaam is te lang. MySQL-identifiers zijn beperkt tot 64 tekens."
+
+#: internal/modules/mysql/create.go:55
+msgid "Password must be at least 8 characters long"
+msgstr "Wachtwoord moet minimaal 8 tekens lang zijn"
 
 #: internal/modules/mysql/databases.go:220 internal/modules/mysql/wizard.go:30
 msgid ""
@@ -5957,8 +5965,8 @@ msgid "Disabled"
 msgstr "Uitgeschakeld"
 
 #: internal/modules/services/render.go:67
-#: internal/web/templates/files/backup_restore.html:713
-#: internal/web/templates/files/backup_restore.html:763
+#: internal/web/templates/files/backup_restore.html:748
+#: internal/web/templates/files/backup_restore.html:798
 #: internal/web/templates/files/backup_wizard.html:121
 #: internal/web/templates/manager/_cms_app_shared.html:327
 #: internal/web/templates/manager/_cms_app_shared.html:473
@@ -6398,13 +6406,13 @@ msgstr "De firewall inschakelen voor de geselecteerde domeinen?"
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable the firewall for the selected domains?"
-msgstr "De firewall uitschakelen voor de geselecteerde domeinen?"
+msgid "Disable WAF"
+msgstr "WAF uitschakelen"
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable WAF"
-msgstr "WAF uitschakelen"
+msgid "Disable the firewall for the selected domains?"
+msgstr "De firewall uitschakelen voor de geselecteerde domeinen?"
 
 #: internal/modules/waf/render.go:84
 #: internal/web/templates/dashboard/custom_section.html:15
@@ -6799,6 +6807,26 @@ msgstr "GrapesJS-websiteeditor"
 msgid "You have reached the maximum number of sites allowed."
 msgstr "Je hebt het maximale aantal toegestane sites bereikt."
 
+#: internal/modules/websites/websites.go:1289
+msgid "WP_DEBUG"
+msgstr "WP_DEBUG"
+
+#: internal/modules/websites/websites.go:1289
+msgid "WP_DEBUG_LOG"
+msgstr "WP_DEBUG_LOG"
+
+#: internal/modules/websites/websites.go:1289
+msgid "WP_DEBUG_DISPLAY"
+msgstr "WP_DEBUG_DISPLAY"
+
+#: internal/modules/websites/websites.go:1289
+msgid "SCRIPT_DEBUG"
+msgstr "SCRIPT_DEBUG"
+
+#: internal/modules/websites/websites.go:1289
+msgid "SAVEQUERIES"
+msgstr "SAVEQUERIES"
+
 #: internal/modules/websites/websites.go:1360
 msgid "WordPress updated successfully"
 msgstr "WordPress succesvol bijgewerkt"
@@ -7014,7 +7042,7 @@ msgstr "Accounts"
 
 #: internal/web/sidebar.go:273
 #: internal/web/templates/dashboard/dashboard.html:121
-#: internal/web/templates/files/backup_restore.html:428
+#: internal/web/templates/files/backup_restore.html:452
 #: internal/web/templates/manager/_cms_app_shared.html:157
 #: internal/web/templates/manager/php_app.html:49
 #: internal/web/templates/manager/php_app.html:91
@@ -7170,10 +7198,10 @@ msgstr "Waarschuwing"
 #: internal/web/templates/base.html:707
 #: internal/web/templates/dashboard/onboarding.html:44
 #: internal/web/templates/domains/dns.html:43
-#: internal/web/templates/files/backup_restore.html:872
-#: internal/web/templates/files/backup_restore.html:945
-#: internal/web/templates/files/backup_restore.html:993
-#: internal/web/templates/files/backup_restore.html:1024
+#: internal/web/templates/files/backup_restore.html:907
+#: internal/web/templates/files/backup_restore.html:980
+#: internal/web/templates/files/backup_restore.html:1028
+#: internal/web/templates/files/backup_restore.html:1059
 #: internal/web/templates/files/edit_file.html:138
 #: internal/web/templates/files/filemanager_partials.html:615
 #: internal/web/templates/files/filemanager_partials.html:655
@@ -7207,8 +7235,9 @@ msgstr "Sluiten"
 #: internal/web/templates/emails/alias_delete.html:25
 #: internal/web/templates/emails/delete.html:27
 #: internal/web/templates/emails/migrate.html:33
-#: internal/web/templates/files/backup_restore.html:930
-#: internal/web/templates/files/backup_restore.html:992
+#: internal/web/templates/files/backup_restore.html:667
+#: internal/web/templates/files/backup_restore.html:965
+#: internal/web/templates/files/backup_restore.html:1027
 #: internal/web/templates/files/clamav/quarantine.html:139
 #: internal/web/templates/files/filemanager_partials.html:23
 #: internal/web/templates/files/filemanager_partials.html:596
@@ -7652,14 +7681,6 @@ msgid "Name"
 msgstr "Naam"
 
 #: internal/web/templates/cache/service.html:210
-#: internal/web/templates/partials/_service_js.html:24
-#: internal/web/templates/system/services.html:216
-#: internal/web/templates/user/history_usage.html:44
-#: internal/web/templates/user/history_usage.html:111
-msgid "Memory %"
-msgstr "Geheugen %"
-
-#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/docker/containers.html:67
 #: internal/web/templates/docker/containers.html:86
 #: internal/web/templates/docker/containers.html:360
@@ -7679,6 +7700,14 @@ msgid "Memory usage"
 msgstr "Geheugengebruik"
 
 #: internal/web/templates/cache/service.html:210
+#: internal/web/templates/docker/containers.html:70
+#: internal/web/templates/docker/containers.html:89
+#: internal/web/templates/partials/_service_js.html:26
+#: internal/web/templates/system/services.html:216
+msgid "Block I/O"
+msgstr "Block-I/O"
+
+#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/mongodb/processlist.html:31
 #: internal/web/templates/mysql/processlist.html:31
 #: internal/web/templates/system/services.html:216
@@ -7686,18 +7715,18 @@ msgid "ID"
 msgstr "ID"
 
 #: internal/web/templates/cache/service.html:210
+#: internal/web/templates/partials/_service_js.html:24
+#: internal/web/templates/system/services.html:216
+#: internal/web/templates/user/history_usage.html:44
+#: internal/web/templates/user/history_usage.html:111
+msgid "Memory %"
+msgstr "Geheugen %"
+
+#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/partials/_service_js.html:25
 #: internal/web/templates/system/services.html:216
 msgid "Network I/O"
 msgstr "Netwerk-I/O"
-
-#: internal/web/templates/cache/service.html:210
-#: internal/web/templates/docker/containers.html:70
-#: internal/web/templates/docker/containers.html:89
-#: internal/web/templates/partials/_service_js.html:26
-#: internal/web/templates/system/services.html:216
-msgid "Block I/O"
-msgstr "Block-I/O"
 
 #: internal/web/templates/cache/service.html:246
 #: internal/web/templates/system/services.html:262
@@ -7734,7 +7763,7 @@ msgid "Click to refresh"
 msgstr "Klik om te vernieuwen"
 
 #: internal/web/templates/cache/service.html:303
-#: internal/web/templates/files/backup_restore.html:891
+#: internal/web/templates/files/backup_restore.html:926
 #: internal/web/templates/manager/php_app.html:233
 #: internal/web/templates/manager/wp/single.html:1547
 #: internal/web/templates/manager/wp/single.html:1588
@@ -7853,14 +7882,14 @@ msgid "You have used all %(n)s domains on your plan."
 msgstr "U hebt alle %(n)s domeinen van uw pakket gebruikt."
 
 #: internal/web/templates/dashboard/dashboard.html:154
-msgid "You have used all %(n)s websites on your plan."
-msgstr "U hebt alle %(n)s websites van uw pakket gebruikt."
-
-#: internal/web/templates/dashboard/dashboard.html:154
 #: internal/web/templates/dashboard/dashboard.html:263
 #: internal/web/templates/manager/sites.html:708
 msgid "New website"
 msgstr "Nieuwe website"
+
+#: internal/web/templates/dashboard/dashboard.html:154
+msgid "You have used all %(n)s websites on your plan."
+msgstr "U hebt alle %(n)s websites van uw pakket gebruikt."
 
 #: internal/web/templates/dashboard/dashboard.html:162
 msgid "Plan usage"
@@ -7938,6 +7967,7 @@ msgstr "Draait op"
 #: internal/web/templates/domains/logs.html:66
 #: internal/web/templates/domains/redirect.html:162
 #: internal/web/templates/domains/ssl.html:310
+#: internal/web/templates/files/backup_restore.html:650
 #: internal/web/templates/files/backup_wizard.html:124
 #: internal/web/templates/files/clamav/quarantine.html:71
 #: internal/web/templates/files/disk_usage.html:72
@@ -8018,7 +8048,7 @@ msgid "Open site"
 msgstr "Site openen"
 
 #: internal/web/templates/dashboard/dashboard.html:249
-#: internal/web/templates/files/backup_restore.html:781
+#: internal/web/templates/files/backup_restore.html:816
 msgid "DNS zone"
 msgstr "DNS-zone"
 
@@ -8169,10 +8199,6 @@ msgid "Copied to clipboard"
 msgstr "Gekopieerd naar klembord"
 
 #: internal/web/templates/dashboard/information.html:29
-msgid "General information"
-msgstr "Algemene informatie"
-
-#: internal/web/templates/dashboard/information.html:29
 #: internal/web/templates/domains/logs.html:132
 #: internal/web/templates/files/filemanager_partials.html:328
 #: internal/web/templates/files/filemanager_partials.html:329
@@ -8181,6 +8207,10 @@ msgstr "Algemene informatie"
 #: internal/web/templates/system/error_logs.html:71
 msgid "View"
 msgstr "Bekijken"
+
+#: internal/web/templates/dashboard/information.html:29
+msgid "General information"
+msgstr "Algemene informatie"
 
 #: internal/web/templates/dashboard/information.html:30
 msgid "Your account, plan and the addresses you need to connect."
@@ -8365,19 +8395,19 @@ msgstr "Waarvan een back-up maken"
 
 #: internal/web/templates/dashboard/onboarding.html:203
 #: internal/web/templates/files/backup_restore.html:6
-#: internal/web/templates/files/backup_restore.html:436
-#: internal/web/templates/files/backup_restore.html:541
-#: internal/web/templates/files/backup_restore.html:962
+#: internal/web/templates/files/backup_restore.html:460
+#: internal/web/templates/files/backup_restore.html:566
+#: internal/web/templates/files/backup_restore.html:997
 #: internal/web/templates/files/backup_settings.html:73
 msgid "Everything"
 msgstr "Alles"
 
 #: internal/web/templates/dashboard/onboarding.html:204
 #: internal/web/templates/files/backup_restore.html:8
-#: internal/web/templates/files/backup_restore.html:445
-#: internal/web/templates/files/backup_restore.html:549
-#: internal/web/templates/files/backup_restore.html:733
-#: internal/web/templates/files/backup_restore.html:963
+#: internal/web/templates/files/backup_restore.html:469
+#: internal/web/templates/files/backup_restore.html:574
+#: internal/web/templates/files/backup_restore.html:768
+#: internal/web/templates/files/backup_restore.html:998
 #: internal/web/templates/files/backup_settings.html:74
 msgid "Website files"
 msgstr "Websitebestanden"
@@ -8881,7 +8911,7 @@ msgstr "Wijzigingen opslaan"
 #: internal/web/templates/emails/aliases.html:21
 #: internal/web/templates/emails/aliases.html:22
 #: internal/web/templates/emails/deliverability.html:16
-#: internal/web/templates/files/backup_restore.html:699
+#: internal/web/templates/files/backup_restore.html:734
 #: internal/web/templates/files/clamav/quarantine.html:30
 #: internal/web/templates/files/clamav/quarantine.html:31
 #: internal/web/templates/files/filemanager.html:154
@@ -8966,7 +8996,7 @@ msgid "Checking your database for possible optimizations..."
 msgstr "Je database wordt gecontroleerd op mogelijke optimalisaties..."
 
 #: internal/web/templates/db/new.html:33 internal/web/templates/db/new.html:36
-#: internal/web/templates/files/backup_restore.html:759
+#: internal/web/templates/files/backup_restore.html:794
 #: internal/web/templates/manager/_cms_app_shared.html:759
 #: internal/web/templates/manager/_cms_app_shared.html:904
 #: internal/web/templates/manager/_cms_install_shared.html:332
@@ -9298,16 +9328,16 @@ msgstr ""
 "en start de nieuwe."
 
 #: internal/web/templates/docker/change_mysql.html:21
-#: internal/web/templates/partials/_db_tuning.html:31
-msgid "Databases:"
-msgstr "Databases:"
-
-#: internal/web/templates/docker/change_mysql.html:21
 msgid ""
 "To switch the database server, first remove all databases from your account."
 msgstr ""
 "Verwijder eerst alle databases uit je account om van databaseserver te "
 "wisselen."
+
+#: internal/web/templates/docker/change_mysql.html:21
+#: internal/web/templates/partials/_db_tuning.html:31
+msgid "Databases:"
+msgstr "Databases:"
 
 #: internal/web/templates/docker/change_mysql.html:21
 msgid "Go to databases"
@@ -9339,15 +9369,15 @@ msgstr ""
 "en start de nieuwe."
 
 #: internal/web/templates/docker/change_webserver.html:21
+msgid "To switch the webserver, first remove all domains from your account."
+msgstr ""
+"Verwijder eerst alle domeinen uit je account om van webserver te wisselen."
+
+#: internal/web/templates/docker/change_webserver.html:21
 #: internal/web/templates/partials/_db_tuning.html:34
 #: internal/web/templates/php/wizard.html:15
 msgid "Domains:"
 msgstr "Domeinen:"
-
-#: internal/web/templates/docker/change_webserver.html:21
-msgid "To switch the webserver, first remove all domains from your account."
-msgstr ""
-"Verwijder eerst alle domeinen uit je account om van webserver te wisselen."
 
 #: internal/web/templates/docker/change_webserver.html:21
 msgid "Go to domains"
@@ -9919,16 +9949,16 @@ msgstr ""
 "binnen de container."
 
 #: internal/web/templates/docker/terminal.html:25
+msgid "Inactivity timeout:"
+msgstr "Time-out bij inactiviteit:"
+
+#: internal/web/templates/docker/terminal.html:25
 #: internal/web/templates/mongodb/databases.html:162
 #: internal/web/templates/mysql/databases.html:485
 #: internal/web/templates/mysql/users.html:144
 #: internal/web/templates/psql/databases.html:223
 msgid "seconds"
 msgstr "seconden"
-
-#: internal/web/templates/docker/terminal.html:25
-msgid "Inactivity timeout:"
-msgstr "Time-out bij inactiviteit:"
 
 #: internal/web/templates/docker/terminal.html:30
 msgid "Container:"
@@ -10841,7 +10871,7 @@ msgstr "Nieuw token voor"
 #: internal/web/templates/domains/dynamic_dns.html:203
 #: internal/web/templates/domains/logs.html:95
 #: internal/web/templates/domains/ssl.html:344
-#: internal/web/templates/files/backup_restore.html:574
+#: internal/web/templates/files/backup_restore.html:599
 #: internal/web/templates/php/wizard.html:248
 msgid "domains"
 msgstr "domeinen"
@@ -12973,7 +13003,7 @@ msgid "The email account on this server that receives the messages."
 msgstr "Het e-mailaccount op deze server dat de berichten ontvangt."
 
 #: internal/web/templates/emails/migrate.html:123
-#: internal/web/templates/files/backup_restore.html:760
+#: internal/web/templates/files/backup_restore.html:795
 msgid "Email account"
 msgstr "E-mailaccount"
 
@@ -13046,8 +13076,8 @@ msgid "Completed"
 msgstr "Voltooid"
 
 #: internal/web/templates/emails/migrate.html:213
-#: internal/web/templates/files/backup_restore.html:525
-#: internal/web/templates/files/backup_restore.html:672
+#: internal/web/templates/files/backup_restore.html:549
+#: internal/web/templates/files/backup_restore.html:706
 #: internal/web/templates/files/clamav/quarantine.html:190
 #: internal/web/templates/files/clamav/scan_logs.html:69
 #: internal/web/templates/files/imunifyav.html:117
@@ -13058,6 +13088,8 @@ msgid "Failed"
 msgstr "Mislukt"
 
 #: internal/web/templates/emails/migrate.html:214
+#: internal/web/templates/files/backup_restore.html:550
+#: internal/web/templates/files/backup_restore.html:707
 msgid "Cancelled"
 msgstr "Geannuleerd"
 
@@ -13395,170 +13427,186 @@ msgid "Files only (no databases)"
 msgstr "Alleen bestanden (geen databases)"
 
 #: internal/web/templates/files/backup_restore.html:14
-#: internal/web/templates/files/backup_restore.html:969
+#: internal/web/templates/files/backup_restore.html:1004
 msgid "Selected files"
 msgstr "Geselecteerde bestanden"
 
 #: internal/web/templates/files/backup_restore.html:15
-#: internal/web/templates/files/backup_restore.html:970
+#: internal/web/templates/files/backup_restore.html:1005
 msgid "Selected mailboxes"
 msgstr "Geselecteerde mailboxen"
 
 #: internal/web/templates/files/backup_restore.html:16
-#: internal/web/templates/files/backup_restore.html:971
+#: internal/web/templates/files/backup_restore.html:1006
 msgid "Selected domains"
 msgstr "Geselecteerde domeinen"
 
 #: internal/web/templates/files/backup_restore.html:17
-#: internal/web/templates/files/backup_restore.html:972
+#: internal/web/templates/files/backup_restore.html:1007
 msgid "Selected DNS zones"
 msgstr "Geselecteerde DNS-zones"
 
-#: internal/web/templates/files/backup_restore.html:372
+#: internal/web/templates/files/backup_restore.html:394
 msgid "Added to the queue."
 msgstr "Toegevoegd aan de wachtrij."
 
-#: internal/web/templates/files/backup_restore.html:382
+#: internal/web/templates/files/backup_restore.html:395
+msgid "Remove this restore from the queue?"
+msgstr "Dit herstel uit de wachtrij verwijderen?"
+
+#: internal/web/templates/files/backup_restore.html:396
+msgid ""
+"Stop this restore? Whatever was restored so far stays, and a database that "
+"was being restored will be left incomplete."
+msgstr ""
+"Dit herstel stoppen? Wat al hersteld is blijft staan, en een database die "
+"werd hersteld blijft onvolledig."
+
+#: internal/web/templates/files/backup_restore.html:406
 msgid "Restore & download"
 msgstr "Herstellen en downloaden"
 
-#: internal/web/templates/files/backup_restore.html:386
+#: internal/web/templates/files/backup_restore.html:410
 msgid "Indexing..."
 msgstr "Bezig met indexeren..."
 
-#: internal/web/templates/files/backup_restore.html:390
+#: internal/web/templates/files/backup_restore.html:414
 msgid "Restore or download backups from destination."
 msgstr "Herstel of download back-ups vanaf de bestemming."
 
-#: internal/web/templates/files/backup_restore.html:403
+#: internal/web/templates/files/backup_restore.html:427
 msgid "Reindex destination"
 msgstr "Bestemming opnieuw indexeren"
 
-#: internal/web/templates/files/backup_restore.html:421
+#: internal/web/templates/files/backup_restore.html:445
 msgid "Backup types"
 msgstr "Back-uptypes"
 
-#: internal/web/templates/files/backup_restore.html:490
-#: internal/web/templates/files/backup_restore.html:594
-#: internal/web/templates/files/backup_restore.html:613
+#: internal/web/templates/files/backup_restore.html:514
+#: internal/web/templates/files/backup_restore.html:619
+#: internal/web/templates/files/backup_restore.html:638
 msgid "Queue"
 msgstr "Wachtrij"
 
-#: internal/web/templates/files/backup_restore.html:511
+#: internal/web/templates/files/backup_restore.html:535
 msgid "Total Backups"
 msgstr "Totaal aantal back-ups"
 
-#: internal/web/templates/files/backup_restore.html:515
+#: internal/web/templates/files/backup_restore.html:539
 msgid "Latest Backup"
 msgstr "Laatste back-up"
 
-#: internal/web/templates/files/backup_restore.html:519
+#: internal/web/templates/files/backup_restore.html:543
 msgid "Total Size"
 msgstr "Totale grootte"
 
-#: internal/web/templates/files/backup_restore.html:523
+#: internal/web/templates/files/backup_restore.html:547
 msgid "Last Restore"
 msgstr "Laatste herstel"
 
-#: internal/web/templates/files/backup_restore.html:524
-#: internal/web/templates/files/backup_restore.html:671
+#: internal/web/templates/files/backup_restore.html:548
+#: internal/web/templates/files/backup_restore.html:705
 #: internal/web/templates/manager/wp/install.html:372
 msgid "Done"
 msgstr "Klaar"
 
-#: internal/web/templates/files/backup_restore.html:528
-#: internal/web/templates/files/backup_restore.html:595
+#: internal/web/templates/files/backup_restore.html:553
+#: internal/web/templates/files/backup_restore.html:620
 msgid "in queue"
 msgstr "in wachtrij"
 
-#: internal/web/templates/files/backup_restore.html:534
+#: internal/web/templates/files/backup_restore.html:559
 msgid "What do you want to restore?"
 msgstr "Wat wil je herstellen?"
 
-#: internal/web/templates/files/backup_restore.html:535
+#: internal/web/templates/files/backup_restore.html:560
 msgid "Pick a type to see its backups."
 msgstr "Kies een type om de back-ups ervan te zien."
 
-#: internal/web/templates/files/backup_restore.html:542
-#: internal/web/templates/files/backup_restore.html:550
-#: internal/web/templates/files/backup_restore.html:582
+#: internal/web/templates/files/backup_restore.html:567
+#: internal/web/templates/files/backup_restore.html:575
+#: internal/web/templates/files/backup_restore.html:607
 #: internal/web/templates/manager/wp/single.html:1854
 #: internal/web/templates/partials/site_manager_shared.html:1163
 msgid "backups"
 msgstr "back-ups"
 
-#: internal/web/templates/files/backup_restore.html:558
+#: internal/web/templates/files/backup_restore.html:583
 #: internal/web/templates/mysql/databases.html:9
 #: internal/web/templates/system/summary.html:221
 msgid "databases"
 msgstr "databases"
 
-#: internal/web/templates/files/backup_restore.html:566
+#: internal/web/templates/files/backup_restore.html:591
 msgid "email accounts"
 msgstr "e-mailaccounts"
 
-#: internal/web/templates/files/backup_restore.html:587
+#: internal/web/templates/files/backup_restore.html:612
 msgid "Restore activity"
 msgstr "Herstelactiviteit"
 
-#: internal/web/templates/files/backup_restore.html:588
+#: internal/web/templates/files/backup_restore.html:613
 msgid "Restores run one at a time, the rest wait in the queue."
 msgstr ""
 "Herstelacties worden één voor één uitgevoerd, de rest wacht in de wachtrij."
 
-#: internal/web/templates/files/backup_restore.html:603
+#: internal/web/templates/files/backup_restore.html:628
 msgid "restores"
 msgstr "herstelacties"
 
-#: internal/web/templates/files/backup_restore.html:616
+#: internal/web/templates/files/backup_restore.html:641
 msgid "Restores run one at a time, the rest wait here."
 msgstr "Herstelacties worden één voor één uitgevoerd, de rest wacht hier."
 
-#: internal/web/templates/files/backup_restore.html:621
-#: internal/web/templates/files/backup_restore.html:656
+#: internal/web/templates/files/backup_restore.html:646
+#: internal/web/templates/files/backup_restore.html:690
 msgid "What"
 msgstr "Wat"
 
-#: internal/web/templates/files/backup_restore.html:622
-#: internal/web/templates/files/backup_restore.html:657
+#: internal/web/templates/files/backup_restore.html:647
+#: internal/web/templates/files/backup_restore.html:691
 msgid "From backup"
 msgstr "Uit back-up"
 
-#: internal/web/templates/files/backup_restore.html:623
+#: internal/web/templates/files/backup_restore.html:648
 #: internal/web/templates/user/passkeys.html:37
 msgid "Added"
 msgstr "Toegevoegd"
 
-#: internal/web/templates/files/backup_restore.html:634
-#: internal/web/templates/files/backup_restore.html:999
+#: internal/web/templates/files/backup_restore.html:660
+#: internal/web/templates/files/backup_restore.html:1034
 msgid "Restoring..."
 msgstr "Bezig met herstellen..."
 
-#: internal/web/templates/files/backup_restore.html:635
+#: internal/web/templates/files/backup_restore.html:661
 msgid "Waiting"
 msgstr "Wachtend"
 
-#: internal/web/templates/files/backup_restore.html:640
+#: internal/web/templates/files/backup_restore.html:668
+msgid "Stopping..."
+msgstr "Bezig met stoppen..."
+
+#: internal/web/templates/files/backup_restore.html:674
 msgid "Nothing is being restored right now."
 msgstr "Er wordt op dit moment niets hersteld."
 
-#: internal/web/templates/files/backup_restore.html:651
+#: internal/web/templates/files/backup_restore.html:685
 msgid "Your latest restores, newest first."
 msgstr "Je laatste herstelacties, nieuwste eerst."
 
-#: internal/web/templates/files/backup_restore.html:658
+#: internal/web/templates/files/backup_restore.html:692
 msgid "Restored"
 msgstr "Hersteld"
 
-#: internal/web/templates/files/backup_restore.html:659
+#: internal/web/templates/files/backup_restore.html:693
 msgid "Took"
 msgstr "Duurde"
 
-#: internal/web/templates/files/backup_restore.html:678
+#: internal/web/templates/files/backup_restore.html:713
 msgid "No restores yet."
 msgstr "Nog geen herstelacties."
 
-#: internal/web/templates/files/backup_restore.html:688
+#: internal/web/templates/files/backup_restore.html:723
 msgid ""
 "Select a backup to restore everything in it: files, databases, emails, "
 "domains with their DNS zones and cron jobs."
@@ -13566,7 +13614,7 @@ msgstr ""
 "Selecteer een back-up om alles erin te herstellen: bestanden, databases, "
 "e-mails, domeinen met hun DNS-zones en cronjobs."
 
-#: internal/web/templates/files/backup_restore.html:689
+#: internal/web/templates/files/backup_restore.html:724
 msgid ""
 "Select a backup to restore all its website files, or pick single files and "
 "folders with Choose files."
@@ -13574,7 +13622,7 @@ msgstr ""
 "Selecteer een back-up om alle websitebestanden te herstellen, of kies "
 "afzonderlijke bestanden en mappen met Bestanden kiezen."
 
-#: internal/web/templates/files/backup_restore.html:690
+#: internal/web/templates/files/backup_restore.html:725
 msgid ""
 "Select one or more databases. The newest backup is used unless you choose "
 "another one."
@@ -13582,7 +13630,7 @@ msgstr ""
 "Selecteer een of meer databases. De nieuwste back-up wordt gebruikt, tenzij "
 "je een andere kiest."
 
-#: internal/web/templates/files/backup_restore.html:691
+#: internal/web/templates/files/backup_restore.html:726
 msgid ""
 "Select one or more email accounts. The newest backup is used unless you "
 "choose another one."
@@ -13590,7 +13638,7 @@ msgstr ""
 "Selecteer een of meer e-mailaccounts. De nieuwste back-up wordt gebruikt, "
 "tenzij je een andere kiest."
 
-#: internal/web/templates/files/backup_restore.html:692
+#: internal/web/templates/files/backup_restore.html:727
 msgid ""
 "Select one or more domains to restore their configuration, PHP version and "
 "DNS zone. Domains you deleted are added back to your account first, "
@@ -13600,16 +13648,16 @@ msgstr ""
 "ervan te herstellen. Domeinen die je hebt verwijderd, worden eerst weer aan "
 "je account toegevoegd; opgeschorte domeinen kunnen niet worden hersteld."
 
-#: internal/web/templates/files/backup_restore.html:693
+#: internal/web/templates/files/backup_restore.html:728
 msgid "Select a backup to restore only the cron jobs from it."
 msgstr "Selecteer een back-up om alleen de cronjobs eruit te herstellen."
 
-#: internal/web/templates/files/backup_restore.html:714
+#: internal/web/templates/files/backup_restore.html:749
 #: internal/web/templates/manager/wp/single.html:1823
 msgid "Contents"
 msgstr "Inhoud"
 
-#: internal/web/templates/files/backup_restore.html:728
+#: internal/web/templates/files/backup_restore.html:763
 #: internal/web/templates/files/backups.html:241
 #: internal/web/templates/manager/_cms_install_shared.html:84
 #: internal/web/templates/manager/_cms_install_shared.html:110
@@ -13620,11 +13668,11 @@ msgstr "Inhoud"
 msgid "Latest"
 msgstr "Nieuwste"
 
-#: internal/web/templates/files/backup_restore.html:744
+#: internal/web/templates/files/backup_restore.html:779
 msgid "No backups found."
 msgstr "Geen back-ups gevonden."
 
-#: internal/web/templates/files/backup_restore.html:756
+#: internal/web/templates/files/backup_restore.html:791
 #: internal/web/templates/files/filemanager_partials.html:323
 #: internal/web/templates/files/filemanager_partials.html:324
 #: internal/web/templates/files/filemanager_partials.html:396
@@ -13640,36 +13688,36 @@ msgstr "Geen back-ups gevonden."
 msgid "Select all"
 msgstr "Alles selecteren"
 
-#: internal/web/templates/files/backup_restore.html:779
+#: internal/web/templates/files/backup_restore.html:814
 msgid "VirtualHost"
 msgstr "VirtualHost"
 
-#: internal/web/templates/files/backup_restore.html:782
+#: internal/web/templates/files/backup_restore.html:817
 msgid "Unsuspend the domain to restore its VirtualHost."
 msgstr "Hef de opschorting van het domein op om de VirtualHost te herstellen."
 
-#: internal/web/templates/files/backup_restore.html:783
+#: internal/web/templates/files/backup_restore.html:818
 msgid "Will be added"
 msgstr "Wordt toegevoegd"
 
-#: internal/web/templates/files/backup_restore.html:784
+#: internal/web/templates/files/backup_restore.html:819
 msgid "Restore the domain first"
 msgstr "Herstel eerst het domein"
 
-#: internal/web/templates/files/backup_restore.html:789
+#: internal/web/templates/files/backup_restore.html:824
 msgid "backups found"
 msgstr "back-ups gevonden"
 
-#: internal/web/templates/files/backup_restore.html:801
+#: internal/web/templates/files/backup_restore.html:836
 #: internal/web/templates/system/error_logs.html:211
 msgid "messages"
 msgstr "berichten"
 
-#: internal/web/templates/files/backup_restore.html:807
+#: internal/web/templates/files/backup_restore.html:842
 msgid "No databases found in the backups."
 msgstr "Geen databases gevonden in de back-ups."
 
-#: internal/web/templates/files/backup_restore.html:808
+#: internal/web/templates/files/backup_restore.html:843
 msgid ""
 "Nothing found in the backups. Backups made before this version don't list "
 "emails and domains, restore those from the Everything tab."
@@ -13678,8 +13726,8 @@ msgstr ""
 "bevatten geen lijst van e-mails en domeinen; herstel die via het tabblad "
 "Alles."
 
-#: internal/web/templates/files/backup_restore.html:821
-#: internal/web/templates/files/backup_restore.html:927
+#: internal/web/templates/files/backup_restore.html:856
+#: internal/web/templates/files/backup_restore.html:962
 #: internal/web/templates/files/filemanager_partials.html:592
 #: internal/web/templates/manager/sites.html:476
 #: internal/web/templates/manager/wp/single.html:1139
@@ -13689,7 +13737,7 @@ msgstr ""
 msgid "selected"
 msgstr "geselecteerd"
 
-#: internal/web/templates/files/backup_restore.html:823
+#: internal/web/templates/files/backup_restore.html:858
 #: internal/web/templates/manager/sites.html:477
 #: internal/web/templates/manager/wp/single.html:1141
 #: internal/web/templates/partials/_bulk.html:58
@@ -13697,21 +13745,21 @@ msgstr "geselecteerd"
 msgid "Clear"
 msgstr "Wissen"
 
-#: internal/web/templates/files/backup_restore.html:827
+#: internal/web/templates/files/backup_restore.html:862
 msgid "This backup was made before single items could be restored."
 msgstr ""
 "Deze back-up is gemaakt voordat afzonderlijke items konden worden hersteld."
 
-#: internal/web/templates/files/backup_restore.html:827
-#: internal/web/templates/files/backup_restore.html:828
-#: internal/web/templates/files/backup_restore.html:868
+#: internal/web/templates/files/backup_restore.html:862
+#: internal/web/templates/files/backup_restore.html:863
+#: internal/web/templates/files/backup_restore.html:903
 msgid "Choose files"
 msgstr "Bestanden kiezen"
 
-#: internal/web/templates/files/backup_restore.html:829
-#: internal/web/templates/files/backup_restore.html:830
-#: internal/web/templates/files/backup_restore.html:916
-#: internal/web/templates/files/backup_restore.html:1028
+#: internal/web/templates/files/backup_restore.html:864
+#: internal/web/templates/files/backup_restore.html:865
+#: internal/web/templates/files/backup_restore.html:951
+#: internal/web/templates/files/backup_restore.html:1063
 #: internal/web/templates/files/backup_wizard.html:156
 #: internal/web/templates/files/filemanager_partials.html:338
 #: internal/web/templates/files/filemanager_partials.html:339
@@ -13722,15 +13770,15 @@ msgstr "Bestanden kiezen"
 msgid "Download"
 msgstr "Downloaden"
 
-#: internal/web/templates/files/backup_restore.html:841
+#: internal/web/templates/files/backup_restore.html:876
 msgid "Indexing destination, please wait..."
 msgstr "Bestemming wordt geïndexeerd, even geduld..."
 
-#: internal/web/templates/files/backup_restore.html:847
+#: internal/web/templates/files/backup_restore.html:882
 msgid "No backup destination set up"
 msgstr "Geen back-upbestemming ingesteld"
 
-#: internal/web/templates/files/backup_restore.html:848
+#: internal/web/templates/files/backup_restore.html:883
 msgid ""
 "Your hosting provider hasn't set up a backup destination for this account "
 "yet."
@@ -13738,62 +13786,62 @@ msgstr ""
 "Uw hostingprovider heeft nog geen back-upbestemming voor dit account "
 "ingesteld."
 
-#: internal/web/templates/files/backup_restore.html:849
+#: internal/web/templates/files/backup_restore.html:884
 msgid ""
 "Add a destination in backup settings, then reindex it to load its backups."
 msgstr ""
 "Voeg een bestemming toe in de back-upinstellingen en indexeer hem daarna "
 "opnieuw om de back-ups te laden."
 
-#: internal/web/templates/files/backup_restore.html:849
+#: internal/web/templates/files/backup_restore.html:884
 msgid "Set up a destination"
 msgstr "Een bestemming instellen"
 
-#: internal/web/templates/files/backup_restore.html:851
+#: internal/web/templates/files/backup_restore.html:886
 msgid "No backups indexed yet"
 msgstr "Nog geen back-ups geïndexeerd"
 
-#: internal/web/templates/files/backup_restore.html:852
+#: internal/web/templates/files/backup_restore.html:887
 msgid "Reindex the destination to load the backups stored there."
 msgstr ""
 "Indexeer de bestemming opnieuw om de daar opgeslagen back-ups te laden."
 
-#: internal/web/templates/files/backup_restore.html:919
+#: internal/web/templates/files/backup_restore.html:954
 #: internal/web/templates/manager/python_node_apps.html:352
 msgid "This folder is empty."
 msgstr "Deze map is leeg."
 
-#: internal/web/templates/files/backup_restore.html:932
+#: internal/web/templates/files/backup_restore.html:967
 msgid "Restore selected"
 msgstr "Geselecteerde herstellen"
 
-#: internal/web/templates/files/backup_restore.html:944
+#: internal/web/templates/files/backup_restore.html:979
 msgid "Restore summary"
 msgstr "Herstelsamenvatting"
 
-#: internal/web/templates/files/backup_restore.html:952
+#: internal/web/templates/files/backup_restore.html:987
 msgid "Restoring will overwrite existing data. This action cannot be undone."
 msgstr ""
 "Herstellen overschrijft bestaande gegevens. Deze actie kan niet ongedaan "
 "worden gemaakt."
 
-#: internal/web/templates/files/backup_restore.html:952
+#: internal/web/templates/files/backup_restore.html:987
 msgid "The items are added to the queue and restored one at a time."
 msgstr "De items worden aan de wachtrij toegevoegd en één voor één hersteld."
 
-#: internal/web/templates/files/backup_restore.html:956
+#: internal/web/templates/files/backup_restore.html:991
 msgid "Items to restore"
 msgstr "Items om te herstellen"
 
-#: internal/web/templates/files/backup_restore.html:998
+#: internal/web/templates/files/backup_restore.html:1033
 msgid "Restore selected items"
 msgstr "Geselecteerde items herstellen"
 
-#: internal/web/templates/files/backup_restore.html:1011
+#: internal/web/templates/files/backup_restore.html:1046
 msgid "Download backup"
 msgstr "Back-up downloaden"
 
-#: internal/web/templates/files/backup_restore.html:1015
+#: internal/web/templates/files/backup_restore.html:1050
 msgid ""
 "The backup archive will be fetched from the destination and downloaded to "
 "your browser."
@@ -13801,20 +13849,20 @@ msgstr ""
 "Het back-uparchief wordt van de bestemming opgehaald en naar je browser "
 "gedownload."
 
-#: internal/web/templates/files/backup_restore.html:1015
+#: internal/web/templates/files/backup_restore.html:1050
 msgid "Large files may take a moment to transfer."
 msgstr "Het overzetten van grote bestanden kan even duren."
 
-#: internal/web/templates/files/backup_restore.html:1016
+#: internal/web/templates/files/backup_restore.html:1051
 msgid "Download started."
 msgstr "Download gestart."
 
-#: internal/web/templates/files/backup_restore.html:1018
+#: internal/web/templates/files/backup_restore.html:1053
 #: internal/web/templates/files/upload_file.html:288
 msgid "Download failed."
 msgstr "Download mislukt."
 
-#: internal/web/templates/files/backup_restore.html:1029
+#: internal/web/templates/files/backup_restore.html:1064
 msgid "Downloading..."
 msgstr "Bezig met downloaden..."
 
@@ -18094,10 +18142,6 @@ msgstr "Uitvoeren in container"
 msgid "Commands (run after each deployment, from the deploy directory)"
 msgstr "Opdrachten (uitgevoerd na elke deployment, vanuit de deploy-map)"
 
-#: internal/web/templates/manager/git.html:346
-msgid "settings"
-msgstr "instellingen"
-
 #: internal/web/templates/manager/git.html:419
 #: internal/web/templates/partials/site_manager_shared.html:1038
 msgid "Commit log"
@@ -18594,17 +18638,17 @@ msgid "What composer.json asks for and what composer.lock installed."
 msgstr "Wat composer.json vraagt en wat composer.lock heeft geïnstalleerd."
 
 #: internal/web/templates/manager/php_app.html:194
+#: internal/web/templates/manager/php_app.html:221
+#: internal/web/templates/manager/python_node_apps.html:767
+msgid "Package"
+msgstr "Pakket"
+
+#: internal/web/templates/manager/php_app.html:194
 #: internal/web/templates/manager/python_node_apps.html:769
 #: internal/web/templates/manager/wp/single.html:1149
 #: internal/web/templates/php/wizard.html:249
 msgid "Installed"
 msgstr "Geïnstalleerd"
-
-#: internal/web/templates/manager/php_app.html:194
-#: internal/web/templates/manager/php_app.html:221
-#: internal/web/templates/manager/python_node_apps.html:767
-msgid "Package"
-msgstr "Pakket"
 
 #: internal/web/templates/manager/php_app.html:194
 msgid "Constraint"
@@ -19052,10 +19096,6 @@ msgstr ""
 "install/opstarten wordt uitgevoerd - lokale wijzigingen aan bestanden in de "
 "docroot worden overschreven. Maak het veld leeg en sla op om de repository "
 "te ontkoppelen."
-
-#: internal/web/templates/manager/python_node_apps.html:526
-msgid "https://"
-msgstr "https://"
 
 #: internal/web/templates/manager/python_node_apps.html:536
 msgid ""
@@ -21775,33 +21815,17 @@ msgstr ""
 msgid "Debugging in WordPress"
 msgstr "Debugging in WordPress"
 
-#: internal/web/templates/manager/wp/single.html:1490
-msgid "WP_DEBUG"
-msgstr "WP_DEBUG"
-
 #: internal/web/templates/manager/wp/single.html:1493
 msgid "WordPress debug mode."
 msgstr "Foutopsporingsmodus van WordPress."
-
-#: internal/web/templates/manager/wp/single.html:1497
-msgid "WP_DEBUG_LOG"
-msgstr "WP_DEBUG_LOG"
 
 #: internal/web/templates/manager/wp/single.html:1500
 msgid "Save all errors to the debug.log file inside the wp-content directory."
 msgstr "Alle fouten opslaan in het bestand debug.log in de map wp-content."
 
-#: internal/web/templates/manager/wp/single.html:1504
-msgid "WP_DEBUG_DISPLAY"
-msgstr "WP_DEBUG_DISPLAY"
-
 #: internal/web/templates/manager/wp/single.html:1507
 msgid "Show debug messages inside the HTML pages"
 msgstr "Foutopsporingsberichten tonen in de HTML-pagina's"
-
-#: internal/web/templates/manager/wp/single.html:1511
-msgid "SCRIPT_DEBUG"
-msgstr "SCRIPT_DEBUG"
 
 #: internal/web/templates/manager/wp/single.html:1514
 msgid ""
@@ -21812,10 +21836,6 @@ msgstr ""
 "Dwing WordPress om de niet-geminificeerde versies van de core CSS- en "
 "JavaScript-bestanden te gebruiken. Handig wanneer je wijzigingen in .js- en "
 ".css-bestanden test."
-
-#: internal/web/templates/manager/wp/single.html:1518
-msgid "SAVEQUERIES"
-msgstr "SAVEQUERIES"
 
 #: internal/web/templates/manager/wp/single.html:1521
 msgid ""
@@ -22100,13 +22120,13 @@ msgstr "Draait als"
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a user to continue."
-msgstr "Kies een gebruiker om door te gaan."
+msgid "Pick a database to continue."
+msgstr "Kies een database om door te gaan."
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a database to continue."
-msgstr "Kies een database om door te gaan."
+msgid "Pick a user to continue."
+msgstr "Kies een gebruiker om door te gaan."
 
 #: internal/web/templates/mongodb/assign.html:53
 msgid "Pick a role to continue."
@@ -22578,6 +22598,15 @@ msgid "Total users:"
 msgstr "Totaal aantal gebruikers:"
 
 #: internal/web/templates/mongodb/users.html:15
+#: internal/web/templates/mongodb/users.html:19
+#: internal/web/templates/mysql/users.html:15
+#: internal/web/templates/mysql/users.html:19
+#: internal/web/templates/psql/users.html:15
+#: internal/web/templates/psql/users.html:19
+msgid "from"
+msgstr "uit"
+
+#: internal/web/templates/mongodb/users.html:15
 #: internal/web/templates/mongodb/users.html:16
 #: internal/web/templates/mongodb/users.html:19
 #: internal/web/templates/mongodb/users.html:20
@@ -22593,15 +22622,6 @@ msgstr "Totaal aantal gebruikers:"
 #: internal/web/templates/psql/wizard.html:154
 msgid "database"
 msgstr "database"
-
-#: internal/web/templates/mongodb/users.html:15
-#: internal/web/templates/mongodb/users.html:19
-#: internal/web/templates/mysql/users.html:15
-#: internal/web/templates/mysql/users.html:19
-#: internal/web/templates/psql/users.html:15
-#: internal/web/templates/psql/users.html:19
-msgid "from"
-msgstr "uit"
 
 #: internal/web/templates/mongodb/users.html:40
 msgid "Roles"
@@ -22622,11 +22642,6 @@ msgstr ""
 "wachtwoord in en ken deze een rol op de database toe."
 
 #: internal/web/templates/mongodb/wizard.html:16
-#: internal/web/templates/psql/wizard.html:16
-msgid "Successfully created database"
-msgstr "Database gemaakt"
-
-#: internal/web/templates/mongodb/wizard.html:16
 #: internal/web/templates/mysql/mysql_user.html:25
 #: internal/web/templates/mysql/wizard.html:40
 #: internal/web/templates/psql/wizard.html:16
@@ -22634,6 +22649,11 @@ msgid "Save these credentials, the password cannot be retrieved later."
 msgstr ""
 "Bewaar deze inloggegevens; het wachtwoord kan later niet meer worden "
 "opgevraagd."
+
+#: internal/web/templates/mongodb/wizard.html:16
+#: internal/web/templates/psql/wizard.html:16
+msgid "Successfully created database"
+msgstr "Database gemaakt"
 
 #: internal/web/templates/mongodb/wizard.html:21
 #: internal/web/templates/mysql/wizard.html:47
@@ -24766,14 +24786,14 @@ msgid "Webserver configuration editor"
 msgstr "Webserverconfiguratie-editor"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:74
-#: internal/web/templates/system/cronjobs.html:430
-msgid "Run again"
-msgstr "Opnieuw uitvoeren"
-
-#: internal/web/templates/system/apache_nginx_conf_editor.html:74
 #: internal/web/templates/system/apache_nginx_conf_editor.html:107
 msgid "Test config"
 msgstr "Configuratie testen"
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:74
+#: internal/web/templates/system/cronjobs.html:430
+msgid "Run again"
+msgstr "Opnieuw uitvoeren"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:98
 msgid "Config file:"

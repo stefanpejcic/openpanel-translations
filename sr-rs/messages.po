@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-11-16 13:27+0200\n"
+"POT-Creation-Date: 2026-11-16 17:48+0200\n"
 "PO-Revision-Date: 2026-06-24 19:00+0200\n"
 "Last-Translator: Stefan Pejčić <stefan@pejcic.rs>\n"
 "Language-Team: Serbian (Latin) <LL@li.org>\n"
@@ -937,7 +937,7 @@ msgstr "Instaliraj Ruby aplikaciju"
 msgid "Install app"
 msgstr "Instaliraj aplikaciju"
 
-#: internal/modules/backups/backups.go:335
+#: internal/modules/backups/backups.go:336
 msgid "Backup target switched to '%(target)s' successfully."
 msgstr "Odredište rezervnih kopija je uspešno promenjeno na '%(target)s'."
 
@@ -1033,8 +1033,8 @@ msgstr "Udaljene rezervne kopije na Dropbox cloud skladište."
 #: internal/modules/backups/render.go:336
 #: internal/modules/dashboard/sections.go:109
 #: internal/modules/malwarescan/bulk.go:14 internal/web/sidebar.go:275
-#: internal/web/templates/files/backup_restore.html:831
-#: internal/web/templates/files/backup_restore.html:832
+#: internal/web/templates/files/backup_restore.html:866
+#: internal/web/templates/files/backup_restore.html:867
 #: internal/web/templates/files/clamav/quarantine.html:92
 #: internal/web/templates/files/clamav/quarantine.html:119
 #: internal/web/templates/files/trash.html:44
@@ -1100,13 +1100,17 @@ msgstr "Čarobnjak za rezervne kopije"
 #: internal/web/sidebar.go:193 internal/web/sidebar.go:204
 #: internal/web/sidebar.go:284 internal/web/sidebar_classic.go:89
 #: internal/web/sidebar_classic.go:112 internal/web/sidebar_classic.go:135
-#: internal/web/templates/files/backup_restore.html:454
-#: internal/web/templates/files/backup_restore.html:557
-#: internal/web/templates/files/backup_restore.html:734
+#: internal/web/templates/files/backup_restore.html:478
+#: internal/web/templates/files/backup_restore.html:582
+#: internal/web/templates/files/backup_restore.html:769
 #: internal/web/templates/system/summary.html:203 static/js/tour-steps.js:307
 #: static/js/tour-steps.js:332
 msgid "Databases"
 msgstr "Baze podataka"
+
+#: internal/modules/backupwizard/render.go:41
+msgid "Home directory"
+msgstr "Početni direktorijum"
 
 #: internal/modules/backupwizard/render.go:41
 #: internal/modules/dashboard/sections.go:80
@@ -1121,30 +1125,15 @@ msgstr "Baze podataka"
 #: internal/web/templates/domains/logs.html:45
 #: internal/web/templates/emails/deliverability.html:101
 #: internal/web/templates/files/backup_restore.html:10
-#: internal/web/templates/files/backup_restore.html:472
-#: internal/web/templates/files/backup_restore.html:573
-#: internal/web/templates/files/backup_restore.html:736
-#: internal/web/templates/files/backup_restore.html:965
+#: internal/web/templates/files/backup_restore.html:496
+#: internal/web/templates/files/backup_restore.html:598
+#: internal/web/templates/files/backup_restore.html:771
+#: internal/web/templates/files/backup_restore.html:1000
 #: internal/web/templates/files/backups.html:245
 #: internal/web/templates/partials/_header.html:93
 #: internal/web/templates/php/wizard.html:87 static/js/tour-steps.js:274
 msgid "Domains"
 msgstr "Domeni"
-
-#: internal/modules/backupwizard/render.go:41
-msgid "Home directory"
-msgstr "Početni direktorijum"
-
-#: internal/modules/backupwizard/render.go:42
-#: internal/modules/dashboard/sections.go:74
-#: internal/modules/dashboard/sections.go:270
-#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
-#: internal/web/templates/dashboard/dashboard.html:206
-#: internal/web/templates/domains/domains.html:71
-#: internal/web/templates/domains/domains.html:126
-#: internal/web/templates/system/summary.html:169
-msgid "Websites"
-msgstr "Sajtovi"
 
 #: internal/modules/backupwizard/render.go:42
 #: internal/modules/dashboard/altlist.go:70
@@ -1162,6 +1151,17 @@ msgid "FTP accounts"
 msgstr "FTP nalozi"
 
 #: internal/modules/backupwizard/render.go:42
+#: internal/modules/dashboard/sections.go:74
+#: internal/modules/dashboard/sections.go:270
+#: internal/modules/websites/render.go:29 internal/web/sidebar.go:217
+#: internal/web/templates/dashboard/dashboard.html:206
+#: internal/web/templates/domains/domains.html:71
+#: internal/web/templates/domains/domains.html:126
+#: internal/web/templates/system/summary.html:169
+msgid "Websites"
+msgstr "Sajtovi"
+
+#: internal/modules/backupwizard/render.go:42
 msgid "Email accounts, filters, aliases"
 msgstr "Imejl nalozi, filteri, aliasi"
 
@@ -1172,10 +1172,10 @@ msgstr "Imejl nalozi, filteri, aliasi"
 #: internal/web/sidebar.go:307
 #: internal/web/templates/dashboard/onboarding.html:209
 #: internal/web/templates/files/backup_restore.html:12
-#: internal/web/templates/files/backup_restore.html:481
-#: internal/web/templates/files/backup_restore.html:581
-#: internal/web/templates/files/backup_restore.html:737
-#: internal/web/templates/files/backup_restore.html:966
+#: internal/web/templates/files/backup_restore.html:505
+#: internal/web/templates/files/backup_restore.html:606
+#: internal/web/templates/files/backup_restore.html:772
+#: internal/web/templates/files/backup_restore.html:1001
 #: internal/web/templates/files/backup_settings.html:80
 #: internal/web/templates/system/cronjobs.html:23
 msgid "Cron jobs"
@@ -1183,7 +1183,7 @@ msgstr "Cron zadaci"
 
 #: internal/modules/backupwizard/render.go:43
 #: internal/web/templates/files/backup_restore.html:11
-#: internal/web/templates/files/backup_restore.html:968
+#: internal/web/templates/files/backup_restore.html:1003
 msgid "DNS zones"
 msgstr "DNS zone"
 
@@ -1593,16 +1593,8 @@ msgid "Email accounts"
 msgstr "Email nalozi"
 
 #: internal/modules/dashboard/altlist.go:55
-#: internal/web/templates/emails/filter.html:26
-#: internal/web/templates/emails/migrate.html:200
-msgid "No email accounts yet"
-msgstr "Još nema email naloga"
-
-#: internal/modules/dashboard/altlist.go:55
-#: internal/modules/dashboard/altlist.go:70
-#: internal/web/templates/files/ftp_quota.html:29
-msgid "Used"
-msgstr "Iskorišćeno"
+msgid "Your mailboxes, the fullest first."
+msgstr "Vaši poštanski sandučići, najpuniji prvo."
 
 #: internal/modules/dashboard/altlist.go:55
 #: internal/web/templates/domains/dns.html:257
@@ -1611,8 +1603,20 @@ msgid "Address"
 msgstr "Adresa"
 
 #: internal/modules/dashboard/altlist.go:55
-msgid "Your mailboxes, the fullest first."
-msgstr "Vaši poštanski sandučići, najpuniji prvo."
+#: internal/modules/dashboard/altlist.go:70
+#: internal/web/templates/files/ftp_quota.html:29
+msgid "Used"
+msgstr "Iskorišćeno"
+
+#: internal/modules/dashboard/altlist.go:55
+#: internal/web/templates/emails/filter.html:26
+#: internal/web/templates/emails/migrate.html:200
+msgid "No email accounts yet"
+msgstr "Još nema email naloga"
+
+#: internal/modules/dashboard/altlist.go:66
+msgid "Your databases on every engine, the biggest first."
+msgstr "Vaše baze podataka na svim motorima, najveće prvo."
 
 #: internal/modules/dashboard/altlist.go:66
 #: internal/web/templates/dashboard/onboarding.html:599
@@ -1652,8 +1656,8 @@ msgstr "Baza podataka"
 
 #: internal/modules/dashboard/altlist.go:66
 #: internal/web/templates/domains/logs.html:147
-#: internal/web/templates/files/backup_restore.html:715
-#: internal/web/templates/files/backup_restore.html:764
+#: internal/web/templates/files/backup_restore.html:750
+#: internal/web/templates/files/backup_restore.html:799
 #: internal/web/templates/files/backup_wizard.html:46
 #: internal/web/templates/files/backup_wizard.html:118
 #: internal/web/templates/files/disk_usage.html:68
@@ -1673,12 +1677,12 @@ msgid "Size"
 msgstr "Veličina"
 
 #: internal/modules/dashboard/altlist.go:66
-msgid "Your databases on every engine, the biggest first."
-msgstr "Vaše baze podataka na svim motorima, najveće prvo."
-
-#: internal/modules/dashboard/altlist.go:66
 msgid "No databases yet"
 msgstr "Još nema baza podataka"
+
+#: internal/modules/dashboard/altlist.go:70
+msgid "FTP users and their folders, the most used first."
+msgstr "FTP korisnici i njihovi folderi, najkorišćeniji prvo."
 
 #: internal/modules/dashboard/altlist.go:70
 #: internal/web/templates/mongodb/assign.html:21
@@ -1700,26 +1704,8 @@ msgid "User"
 msgstr "Korisnik"
 
 #: internal/modules/dashboard/altlist.go:70
-msgid "FTP users and their folders, the most used first."
-msgstr "FTP korisnici i njihovi folderi, najkorišćeniji prvo."
-
-#: internal/modules/dashboard/altlist.go:70
 msgid "No FTP accounts yet"
 msgstr "Još nema FTP naloga"
-
-#: internal/modules/dashboard/altlist.go:74
-#: internal/web/templates/cache/service.html:285
-#: internal/web/templates/docker/change_images.html:34
-#: internal/web/templates/partials/_search.html:71
-#: internal/web/templates/php/info.html:19
-#: internal/web/templates/system/error_logs.html:45
-#: internal/web/templates/system/error_logs.html:92
-#: internal/web/templates/system/error_logs.html:120
-#: internal/web/templates/system/services.html:67
-#: internal/web/templates/system/services.html:171
-#: internal/web/templates/system/services.html:308
-msgid "Service"
-msgstr "Servis"
 
 #: internal/modules/dashboard/altlist.go:74
 #: internal/modules/dashboard/sections.go:163
@@ -1738,6 +1724,20 @@ msgstr "Kontejneri"
 #: internal/modules/dashboard/altlist.go:74
 msgid "The services on your account, running ones first."
 msgstr "Servisi na vašem nalogu, pokrenuti prvo."
+
+#: internal/modules/dashboard/altlist.go:74
+#: internal/web/templates/cache/service.html:285
+#: internal/web/templates/docker/change_images.html:34
+#: internal/web/templates/partials/_search.html:71
+#: internal/web/templates/php/info.html:19
+#: internal/web/templates/system/error_logs.html:45
+#: internal/web/templates/system/error_logs.html:92
+#: internal/web/templates/system/error_logs.html:120
+#: internal/web/templates/system/services.html:67
+#: internal/web/templates/system/services.html:171
+#: internal/web/templates/system/services.html:308
+msgid "Service"
+msgstr "Servis"
 
 #: internal/modules/dashboard/altlist.go:74
 msgid "No containers yet"
@@ -2166,9 +2166,9 @@ msgstr "Terminal"
 #: internal/web/templates/docker/containers.html:462
 #: internal/web/templates/docker/logs.html:9
 #: internal/web/templates/docker/logs.html:59
-#: internal/web/templates/files/backup_restore.html:499
-#: internal/web/templates/files/backup_restore.html:602
-#: internal/web/templates/files/backup_restore.html:650
+#: internal/web/templates/files/backup_restore.html:523
+#: internal/web/templates/files/backup_restore.html:627
+#: internal/web/templates/files/backup_restore.html:684
 #: internal/web/templates/manager/_cms_app_shared.html:167
 #: internal/web/templates/manager/php_app.html:67
 #: internal/web/templates/manager/python_node_apps.html:120
@@ -2464,10 +2464,10 @@ msgstr "Keš"
 #: internal/web/templates/dashboard/onboarding.html:205
 #: internal/web/templates/emails/accounts.html:9
 #: internal/web/templates/files/backup_restore.html:9
-#: internal/web/templates/files/backup_restore.html:463
-#: internal/web/templates/files/backup_restore.html:565
-#: internal/web/templates/files/backup_restore.html:735
-#: internal/web/templates/files/backup_restore.html:964
+#: internal/web/templates/files/backup_restore.html:487
+#: internal/web/templates/files/backup_restore.html:590
+#: internal/web/templates/files/backup_restore.html:770
+#: internal/web/templates/files/backup_restore.html:999
 #: internal/web/templates/files/backup_settings.html:75
 #: internal/web/templates/partials/_header.html:88
 msgid "Emails"
@@ -2742,10 +2742,6 @@ msgstr "Limit memorije"
 #: internal/modules/dashboard/upgrade.go:101
 msgid "Bandwidth Limit"
 msgstr "Limit protoka podataka"
-
-#: internal/modules/dns/api.go:260
-msgid "record"
-msgstr "zapis"
 
 #: internal/modules/dns/bulk.go:29
 msgid "Update TTL"
@@ -3060,6 +3056,10 @@ msgstr "Kontejner je ažuriran i ponovo pokrenut sa novim podešavanjima."
 msgid "Container updated, the new settings apply when it starts."
 msgstr "Kontejner je ažuriran, nova podešavanja važe kada se pokrene."
 
+#: internal/modules/docker/domain.go:71
+msgid "NodeJS"
+msgstr "NodeJS"
+
 #: internal/modules/docker/images.go:36
 msgid "The image of %(service)s can't be changed."
 msgstr "Slika za %(service)s ne može da se promeni."
@@ -3303,21 +3303,21 @@ msgstr "Podesi firewall za izabrane domene na:"
 
 #: internal/modules/domains/bulk.go:26
 #: internal/web/templates/domains/domains.html:261
-#: internal/web/templates/manager/wp/_tools.html:34
-#: internal/web/templates/system/waf.html:66
-#: internal/web/templates/system/waf.html:74
-#: internal/web/templates/system/waf.html:121
-msgid "Off"
-msgstr "Isključen"
-
-#: internal/modules/domains/bulk.go:26
-#: internal/web/templates/domains/domains.html:261
 #: internal/web/templates/files/filemanager_partials.html:791
 #: internal/web/templates/system/waf.html:66
 #: internal/web/templates/system/waf.html:72
 #: internal/web/templates/system/waf.html:119
 msgid "On"
 msgstr "Uključen"
+
+#: internal/modules/domains/bulk.go:26
+#: internal/web/templates/domains/domains.html:261
+#: internal/web/templates/manager/wp/_tools.html:34
+#: internal/web/templates/system/waf.html:66
+#: internal/web/templates/system/waf.html:74
+#: internal/web/templates/system/waf.html:121
+msgid "Off"
+msgstr "Isključen"
 
 #: internal/modules/domains/bulk.go:27
 msgid "Cloudflare"
@@ -3465,8 +3465,8 @@ msgstr "Svi"
 #: internal/web/templates/domains/ssl.html:70
 #: internal/web/templates/emails/accounts.html:37
 #: internal/web/templates/emails/migrate.html:185
-#: internal/web/templates/files/backup_restore.html:624
-#: internal/web/templates/files/backup_restore.html:660
+#: internal/web/templates/files/backup_restore.html:649
+#: internal/web/templates/files/backup_restore.html:694
 #: internal/web/templates/files/imunifyav.html:46
 #: internal/web/templates/files/imunifyav.html:74
 #: internal/web/templates/manager/drupal_app.html:151
@@ -3493,16 +3493,6 @@ msgid "Status"
 msgstr "Status"
 
 #: internal/modules/domains/render.go:105
-#: internal/web/templates/dashboard/dashboard.html:237
-#: internal/web/templates/domains/domains.html:163
-#: internal/web/templates/emails/accounts.html:37
-#: internal/web/templates/emails/accounts.html:47
-#: internal/web/templates/files/backup_restore.html:782
-#: internal/web/templates/manager/wp/single.html:24
-msgid "Suspended"
-msgstr "Suspendovan"
-
-#: internal/modules/domains/render.go:105
 #: internal/web/templates/dashboard/dashboard.html:240
 #: internal/web/templates/domains/domains.html:167
 #: internal/web/templates/manager/python_node_apps.html:29
@@ -3514,10 +3504,20 @@ msgstr "Suspendovan"
 msgid "Active"
 msgstr "Aktivan"
 
+#: internal/modules/domains/render.go:105
+#: internal/web/templates/dashboard/dashboard.html:237
+#: internal/web/templates/domains/domains.html:163
+#: internal/web/templates/emails/accounts.html:37
+#: internal/web/templates/emails/accounts.html:47
+#: internal/web/templates/files/backup_restore.html:817
+#: internal/web/templates/manager/wp/single.html:24
+msgid "Suspended"
+msgstr "Suspendovan"
+
 #: internal/modules/domains/render.go:108
 #: internal/web/templates/domains/domains.html:70
 #: internal/web/templates/domains/domains.html:125
-#: internal/web/templates/files/backup_restore.html:780
+#: internal/web/templates/files/backup_restore.html:815
 #: internal/web/templates/manager/_cms_app_shared.html:310
 #: internal/web/templates/manager/_cms_app_shared.html:449
 #: internal/web/templates/manager/dokuwiki_app.html:58
@@ -3538,6 +3538,25 @@ msgstr "AutoSSL"
 #: internal/web/templates/domains/ssl.html:329
 msgid "Custom SSL"
 msgstr "Prilagođeni SSL"
+
+#: internal/modules/domains/render.go:122
+#: internal/web/templates/dashboard/dashboard.html:284
+#: internal/web/templates/domains/dns.html:125
+#: internal/web/templates/domains/dns.html:144
+#: internal/web/templates/domains/dns.html:547
+#: internal/web/templates/domains/domains.html:65
+#: internal/web/templates/domains/domains.html:120
+#: internal/web/templates/domains/dynamic_dns.html:155
+#: internal/web/templates/domains/redirect.html:48
+#: internal/web/templates/domains/redirect.html:52
+#: internal/web/templates/domains/ssl.html:309
+#: internal/web/templates/files/filemanager.html:112
+#: internal/web/templates/files/filemanager_partials.html:480
+#: internal/web/templates/files/trash.html:73
+#: internal/web/templates/files/trash_partials.html:55
+#: internal/web/templates/manager/sites.html:209
+msgid "Type"
+msgstr "Tip"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/docker/container_form.html:241
@@ -3561,7 +3580,7 @@ msgstr "Prilagođeni SSL"
 #: internal/web/templates/emails/deliverability.html:99
 #: internal/web/templates/emails/new.html:22
 #: internal/web/templates/emails/new.html:35
-#: internal/web/templates/files/backup_restore.html:761
+#: internal/web/templates/files/backup_restore.html:796
 #: internal/web/templates/files/ftp_new.html:36
 #: internal/web/templates/manager/_cms_install_shared.html:118
 #: internal/web/templates/manager/app_install.html:209
@@ -3576,25 +3595,6 @@ msgstr "Prilagođeni SSL"
 #: internal/web/templates/system/bot_control.html:37
 msgid "Domain"
 msgstr "Domen"
-
-#: internal/modules/domains/render.go:122
-#: internal/web/templates/dashboard/dashboard.html:284
-#: internal/web/templates/domains/dns.html:125
-#: internal/web/templates/domains/dns.html:144
-#: internal/web/templates/domains/dns.html:547
-#: internal/web/templates/domains/domains.html:65
-#: internal/web/templates/domains/domains.html:120
-#: internal/web/templates/domains/dynamic_dns.html:155
-#: internal/web/templates/domains/redirect.html:48
-#: internal/web/templates/domains/redirect.html:52
-#: internal/web/templates/domains/ssl.html:309
-#: internal/web/templates/files/filemanager.html:112
-#: internal/web/templates/files/filemanager_partials.html:480
-#: internal/web/templates/files/trash.html:73
-#: internal/web/templates/files/trash_partials.html:55
-#: internal/web/templates/manager/sites.html:209
-msgid "Type"
-msgstr "Tip"
 
 #: internal/modules/domains/render.go:122
 #: internal/web/templates/domains/dns.html:284
@@ -3660,6 +3660,10 @@ msgstr "Vi niste vlasnik ovog domena."
 msgid "Invalid request. Domain name and Vhost content must be provided."
 msgstr ""
 "Neispravan zahtev. Naziv domena i sadržaj Vhost-a moraju biti navedeni."
+
+#: internal/modules/dynamicdns/dynamicdns.go:63
+msgid "record"
+msgstr "zapis"
 
 #: internal/modules/dynamicdns/handlers.go:85
 msgid "Failed to create Dynamic DNS entry."
@@ -3784,22 +3788,6 @@ msgid "New mailbox size (GB) for the selected accounts:"
 msgstr "Nova veličina sandučeta (GB) za izabrane naloge:"
 
 #: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
-#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
-#: internal/modules/postgresql/bulk.go:34
-#: internal/web/templates/emails/new.html:74
-#: internal/web/templates/emails/single_account.html:185
-#: internal/web/templates/files/ftp_new.html:71
-#: internal/web/templates/files/ftp_password.html:44
-#: internal/web/templates/files/ftp_password.html:55
-#: internal/web/templates/mysql/password.html:43
-#: internal/web/templates/mysql/root_password.html:54
-#: internal/web/templates/mysql/root_password.html:77
-#: internal/web/templates/user/account.html:118
-#: internal/web/templates/user/reset_password/set_new_password.html:19
-msgid "New password"
-msgstr "Nova lozinka"
-
-#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
 #: internal/modules/mongodb/bulk.go:34 internal/modules/mongodb/render.go:202
 #: internal/modules/mysql/bulk.go:52 internal/modules/mysql/render.go:220
 #: internal/modules/postgresql/bulk.go:34
@@ -3819,6 +3807,22 @@ msgstr "Nova lozinka"
 #: internal/web/templates/user/reset_password/set_new_password.html:63
 msgid "Change password"
 msgstr "Promeni lozinku"
+
+#: internal/modules/emails/bulk.go:27 internal/modules/ftp/ftp.go:540
+#: internal/modules/mongodb/bulk.go:34 internal/modules/mysql/bulk.go:52
+#: internal/modules/postgresql/bulk.go:34
+#: internal/web/templates/emails/new.html:74
+#: internal/web/templates/emails/single_account.html:185
+#: internal/web/templates/files/ftp_new.html:71
+#: internal/web/templates/files/ftp_password.html:44
+#: internal/web/templates/files/ftp_password.html:55
+#: internal/web/templates/mysql/password.html:43
+#: internal/web/templates/mysql/root_password.html:54
+#: internal/web/templates/mysql/root_password.html:77
+#: internal/web/templates/user/account.html:118
+#: internal/web/templates/user/reset_password/set_new_password.html:19
+msgid "New password"
+msgstr "Nova lozinka"
 
 #: internal/modules/emails/bulk.go:27
 msgid "Set this password for the selected accounts:"
@@ -3987,10 +3991,6 @@ msgstr ""
 #: internal/modules/errorlogs/collect.go:103
 msgid "HTTP 5xx responses"
 msgstr "HTTP 5xx odgovori"
-
-#: internal/modules/errorlogs/sites.go:28
-msgid "NodeJS"
-msgstr "NodeJS"
 
 #: internal/modules/filemanager/api_transfer.go:188
 #: internal/modules/filemanager/archive.go:90
@@ -4485,6 +4485,10 @@ msgstr "%(repo)s (%(branch)s na %(commit)s) je postavljen u %(dir)s."
 msgid "Deploy actions ran in %(container)s."
 msgstr "Akcije postavljanja su pokrenute u %(container)s."
 
+#: internal/modules/git/handlers.go:360
+msgid "settings"
+msgstr "podešavanja"
+
 #: internal/modules/git/handlers.go:362
 msgid "Could not save settings for %(repo)s: %(error)s"
 msgstr "Nije moguće sačuvati podešavanja za %(repo)s: %(error)s"
@@ -4740,10 +4744,6 @@ msgstr "Ukloni izabrane korisnike sa:"
 #: internal/modules/postgresql/bulk.go:37
 msgid "Permanently delete the selected users? This cannot be undone."
 msgstr "Trajno obrisati izabrane korisnike? Ovo se ne može poništiti."
-
-#: internal/modules/mongodb/create.go:51
-msgid "Password must be at least 8 characters long"
-msgstr "Lozinka mora imati najmanje 8 karaktera"
 
 #: internal/modules/mongodb/databases.go:52
 #: internal/modules/mongodb/users.go:37
@@ -5071,12 +5071,9 @@ msgstr ""
 "Baza podataka i korisnik su kreirani, ali dodela uloge nije uspela: "
 "%(error)s"
 
-#: internal/modules/mysql/api.go:190
-msgid ""
-"Database name is too long. MySQL identifiers are limited to 64 characters."
-msgstr ""
-"Naziv baze podataka je predugačak. MySQL identifikatori su ograničeni na 64 "
-"karaktera."
+#: internal/modules/moodle/clone.go:179
+msgid "https://"
+msgstr "https://"
 
 #: internal/modules/mysql/assign.go:56 internal/modules/mysql/wizard.go:67
 msgid "At least one privilege must be selected."
@@ -5210,6 +5207,17 @@ msgstr ""
 msgid ""
 "%(mysql_version)s container is not running. Please wait for initialization."
 msgstr "%(mysql_version)s kontejner nije pokrenut. Sačekajte inicijalizaciju."
+
+#: internal/modules/mysql/create.go:32
+msgid ""
+"Database name is too long. MySQL identifiers are limited to 64 characters."
+msgstr ""
+"Naziv baze podataka je predugačak. MySQL identifikatori su ograničeni na 64 "
+"karaktera."
+
+#: internal/modules/mysql/create.go:55
+msgid "Password must be at least 8 characters long"
+msgstr "Lozinka mora imati najmanje 8 karaktera"
 
 #: internal/modules/mysql/databases.go:220 internal/modules/mysql/wizard.go:30
 msgid ""
@@ -5910,8 +5918,8 @@ msgid "Disabled"
 msgstr "Onemogućeno"
 
 #: internal/modules/services/render.go:67
-#: internal/web/templates/files/backup_restore.html:713
-#: internal/web/templates/files/backup_restore.html:763
+#: internal/web/templates/files/backup_restore.html:748
+#: internal/web/templates/files/backup_restore.html:798
 #: internal/web/templates/files/backup_wizard.html:121
 #: internal/web/templates/manager/_cms_app_shared.html:327
 #: internal/web/templates/manager/_cms_app_shared.html:473
@@ -6349,13 +6357,13 @@ msgstr "Uključiti firewall za izabrane domene?"
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable the firewall for the selected domains?"
-msgstr "Isključiti firewall za izabrane domene?"
+msgid "Disable WAF"
+msgstr "Isključi WAF"
 
 #: internal/modules/waf/register.go:63
 #: internal/web/templates/system/waf.html:49
-msgid "Disable WAF"
-msgstr "Isključi WAF"
+msgid "Disable the firewall for the selected domains?"
+msgstr "Isključiti firewall za izabrane domene?"
 
 #: internal/modules/waf/render.go:84
 #: internal/web/templates/dashboard/custom_section.html:15
@@ -6746,6 +6754,26 @@ msgstr "GrapesJS editor sajta"
 msgid "You have reached the maximum number of sites allowed."
 msgstr "Dostigli ste maksimalan broj dozvoljenih sajtova."
 
+#: internal/modules/websites/websites.go:1289
+msgid "WP_DEBUG"
+msgstr "WP_DEBUG"
+
+#: internal/modules/websites/websites.go:1289
+msgid "WP_DEBUG_LOG"
+msgstr "WP_DEBUG_LOG"
+
+#: internal/modules/websites/websites.go:1289
+msgid "WP_DEBUG_DISPLAY"
+msgstr "WP_DEBUG_DISPLAY"
+
+#: internal/modules/websites/websites.go:1289
+msgid "SCRIPT_DEBUG"
+msgstr "SCRIPT_DEBUG"
+
+#: internal/modules/websites/websites.go:1289
+msgid "SAVEQUERIES"
+msgstr "SAVEQUERIES"
+
 #: internal/modules/websites/websites.go:1360
 msgid "WordPress updated successfully"
 msgstr "WordPress je uspešno ažuriran"
@@ -6961,7 +6989,7 @@ msgstr "Nalozi"
 
 #: internal/web/sidebar.go:273
 #: internal/web/templates/dashboard/dashboard.html:121
-#: internal/web/templates/files/backup_restore.html:428
+#: internal/web/templates/files/backup_restore.html:452
 #: internal/web/templates/manager/_cms_app_shared.html:157
 #: internal/web/templates/manager/php_app.html:49
 #: internal/web/templates/manager/php_app.html:91
@@ -7117,10 +7145,10 @@ msgstr "Upozorenje"
 #: internal/web/templates/base.html:707
 #: internal/web/templates/dashboard/onboarding.html:44
 #: internal/web/templates/domains/dns.html:43
-#: internal/web/templates/files/backup_restore.html:872
-#: internal/web/templates/files/backup_restore.html:945
-#: internal/web/templates/files/backup_restore.html:993
-#: internal/web/templates/files/backup_restore.html:1024
+#: internal/web/templates/files/backup_restore.html:907
+#: internal/web/templates/files/backup_restore.html:980
+#: internal/web/templates/files/backup_restore.html:1028
+#: internal/web/templates/files/backup_restore.html:1059
 #: internal/web/templates/files/edit_file.html:138
 #: internal/web/templates/files/filemanager_partials.html:615
 #: internal/web/templates/files/filemanager_partials.html:655
@@ -7154,8 +7182,9 @@ msgstr "Zatvori"
 #: internal/web/templates/emails/alias_delete.html:25
 #: internal/web/templates/emails/delete.html:27
 #: internal/web/templates/emails/migrate.html:33
-#: internal/web/templates/files/backup_restore.html:930
-#: internal/web/templates/files/backup_restore.html:992
+#: internal/web/templates/files/backup_restore.html:667
+#: internal/web/templates/files/backup_restore.html:965
+#: internal/web/templates/files/backup_restore.html:1027
 #: internal/web/templates/files/clamav/quarantine.html:139
 #: internal/web/templates/files/filemanager_partials.html:23
 #: internal/web/templates/files/filemanager_partials.html:596
@@ -7598,14 +7627,6 @@ msgid "Name"
 msgstr "Naziv"
 
 #: internal/web/templates/cache/service.html:210
-#: internal/web/templates/partials/_service_js.html:24
-#: internal/web/templates/system/services.html:216
-#: internal/web/templates/user/history_usage.html:44
-#: internal/web/templates/user/history_usage.html:111
-msgid "Memory %"
-msgstr "Memorija %"
-
-#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/docker/containers.html:67
 #: internal/web/templates/docker/containers.html:86
 #: internal/web/templates/docker/containers.html:360
@@ -7625,6 +7646,14 @@ msgid "Memory usage"
 msgstr "Potrošnja memorije"
 
 #: internal/web/templates/cache/service.html:210
+#: internal/web/templates/docker/containers.html:70
+#: internal/web/templates/docker/containers.html:89
+#: internal/web/templates/partials/_service_js.html:26
+#: internal/web/templates/system/services.html:216
+msgid "Block I/O"
+msgstr "Blok I/O"
+
+#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/mongodb/processlist.html:31
 #: internal/web/templates/mysql/processlist.html:31
 #: internal/web/templates/system/services.html:216
@@ -7632,18 +7661,18 @@ msgid "ID"
 msgstr "ID"
 
 #: internal/web/templates/cache/service.html:210
+#: internal/web/templates/partials/_service_js.html:24
+#: internal/web/templates/system/services.html:216
+#: internal/web/templates/user/history_usage.html:44
+#: internal/web/templates/user/history_usage.html:111
+msgid "Memory %"
+msgstr "Memorija %"
+
+#: internal/web/templates/cache/service.html:210
 #: internal/web/templates/partials/_service_js.html:25
 #: internal/web/templates/system/services.html:216
 msgid "Network I/O"
 msgstr "Mrežni I/O"
-
-#: internal/web/templates/cache/service.html:210
-#: internal/web/templates/docker/containers.html:70
-#: internal/web/templates/docker/containers.html:89
-#: internal/web/templates/partials/_service_js.html:26
-#: internal/web/templates/system/services.html:216
-msgid "Block I/O"
-msgstr "Blok I/O"
 
 #: internal/web/templates/cache/service.html:246
 #: internal/web/templates/system/services.html:262
@@ -7680,7 +7709,7 @@ msgid "Click to refresh"
 msgstr "Kliknite za osvežavanje"
 
 #: internal/web/templates/cache/service.html:303
-#: internal/web/templates/files/backup_restore.html:891
+#: internal/web/templates/files/backup_restore.html:926
 #: internal/web/templates/manager/php_app.html:233
 #: internal/web/templates/manager/wp/single.html:1547
 #: internal/web/templates/manager/wp/single.html:1588
@@ -7799,14 +7828,14 @@ msgid "You have used all %(n)s domains on your plan."
 msgstr "Iskoristili ste svih %(n)s domena iz paketa."
 
 #: internal/web/templates/dashboard/dashboard.html:154
-msgid "You have used all %(n)s websites on your plan."
-msgstr "Iskoristili ste svih %(n)s sajtova iz paketa."
-
-#: internal/web/templates/dashboard/dashboard.html:154
 #: internal/web/templates/dashboard/dashboard.html:263
 #: internal/web/templates/manager/sites.html:708
 msgid "New website"
 msgstr "Novi sajt"
+
+#: internal/web/templates/dashboard/dashboard.html:154
+msgid "You have used all %(n)s websites on your plan."
+msgstr "Iskoristili ste svih %(n)s sajtova iz paketa."
 
 #: internal/web/templates/dashboard/dashboard.html:162
 msgid "Plan usage"
@@ -7884,6 +7913,7 @@ msgstr "Radi na"
 #: internal/web/templates/domains/logs.html:66
 #: internal/web/templates/domains/redirect.html:162
 #: internal/web/templates/domains/ssl.html:310
+#: internal/web/templates/files/backup_restore.html:650
 #: internal/web/templates/files/backup_wizard.html:124
 #: internal/web/templates/files/clamav/quarantine.html:71
 #: internal/web/templates/files/disk_usage.html:72
@@ -7964,7 +7994,7 @@ msgid "Open site"
 msgstr "Otvori sajt"
 
 #: internal/web/templates/dashboard/dashboard.html:249
-#: internal/web/templates/files/backup_restore.html:781
+#: internal/web/templates/files/backup_restore.html:816
 msgid "DNS zone"
 msgstr "DNS zona"
 
@@ -8115,10 +8145,6 @@ msgid "Copied to clipboard"
 msgstr "Kopirano u privremenu memoriju"
 
 #: internal/web/templates/dashboard/information.html:29
-msgid "General information"
-msgstr "Opšte informacije"
-
-#: internal/web/templates/dashboard/information.html:29
 #: internal/web/templates/domains/logs.html:132
 #: internal/web/templates/files/filemanager_partials.html:328
 #: internal/web/templates/files/filemanager_partials.html:329
@@ -8127,6 +8153,10 @@ msgstr "Opšte informacije"
 #: internal/web/templates/system/error_logs.html:71
 msgid "View"
 msgstr "Prikaži"
+
+#: internal/web/templates/dashboard/information.html:29
+msgid "General information"
+msgstr "Opšte informacije"
 
 #: internal/web/templates/dashboard/information.html:30
 msgid "Your account, plan and the addresses you need to connect."
@@ -8312,19 +8342,19 @@ msgstr "Šta treba sačuvati"
 
 #: internal/web/templates/dashboard/onboarding.html:203
 #: internal/web/templates/files/backup_restore.html:6
-#: internal/web/templates/files/backup_restore.html:436
-#: internal/web/templates/files/backup_restore.html:541
-#: internal/web/templates/files/backup_restore.html:962
+#: internal/web/templates/files/backup_restore.html:460
+#: internal/web/templates/files/backup_restore.html:566
+#: internal/web/templates/files/backup_restore.html:997
 #: internal/web/templates/files/backup_settings.html:73
 msgid "Everything"
 msgstr "Sve"
 
 #: internal/web/templates/dashboard/onboarding.html:204
 #: internal/web/templates/files/backup_restore.html:8
-#: internal/web/templates/files/backup_restore.html:445
-#: internal/web/templates/files/backup_restore.html:549
-#: internal/web/templates/files/backup_restore.html:733
-#: internal/web/templates/files/backup_restore.html:963
+#: internal/web/templates/files/backup_restore.html:469
+#: internal/web/templates/files/backup_restore.html:574
+#: internal/web/templates/files/backup_restore.html:768
+#: internal/web/templates/files/backup_restore.html:998
 #: internal/web/templates/files/backup_settings.html:74
 msgid "Website files"
 msgstr "Fajlovi sajta"
@@ -8831,7 +8861,7 @@ msgstr "Sačuvaj izmene"
 #: internal/web/templates/emails/aliases.html:21
 #: internal/web/templates/emails/aliases.html:22
 #: internal/web/templates/emails/deliverability.html:16
-#: internal/web/templates/files/backup_restore.html:699
+#: internal/web/templates/files/backup_restore.html:734
 #: internal/web/templates/files/clamav/quarantine.html:30
 #: internal/web/templates/files/clamav/quarantine.html:31
 #: internal/web/templates/files/filemanager.html:154
@@ -8916,7 +8946,7 @@ msgid "Checking your database for possible optimizations..."
 msgstr "Proveravamo moguće optimizacije vaše baze podataka..."
 
 #: internal/web/templates/db/new.html:33 internal/web/templates/db/new.html:36
-#: internal/web/templates/files/backup_restore.html:759
+#: internal/web/templates/files/backup_restore.html:794
 #: internal/web/templates/manager/_cms_app_shared.html:759
 #: internal/web/templates/manager/_cms_app_shared.html:904
 #: internal/web/templates/manager/_cms_install_shared.html:332
@@ -9247,16 +9277,16 @@ msgstr ""
 "pokreće novi."
 
 #: internal/web/templates/docker/change_mysql.html:21
-#: internal/web/templates/partials/_db_tuning.html:31
-msgid "Databases:"
-msgstr "Baze podataka:"
-
-#: internal/web/templates/docker/change_mysql.html:21
 msgid ""
 "To switch the database server, first remove all databases from your account."
 msgstr ""
 "Da biste promenili server baze podataka, prvo uklonite sve baze sa svog "
 "naloga."
+
+#: internal/web/templates/docker/change_mysql.html:21
+#: internal/web/templates/partials/_db_tuning.html:31
+msgid "Databases:"
+msgstr "Baze podataka:"
 
 #: internal/web/templates/docker/change_mysql.html:21
 msgid "Go to databases"
@@ -9288,15 +9318,15 @@ msgstr ""
 "pokreće novi."
 
 #: internal/web/templates/docker/change_webserver.html:21
+msgid "To switch the webserver, first remove all domains from your account."
+msgstr ""
+"Da biste promenili web server, prvo uklonite sve domene sa svog naloga."
+
+#: internal/web/templates/docker/change_webserver.html:21
 #: internal/web/templates/partials/_db_tuning.html:34
 #: internal/web/templates/php/wizard.html:15
 msgid "Domains:"
 msgstr "Domeni:"
-
-#: internal/web/templates/docker/change_webserver.html:21
-msgid "To switch the webserver, first remove all domains from your account."
-msgstr ""
-"Da biste promenili web server, prvo uklonite sve domene sa svog naloga."
 
 #: internal/web/templates/docker/change_webserver.html:21
 msgid "Go to domains"
@@ -9866,16 +9896,16 @@ msgstr ""
 "kontejnera."
 
 #: internal/web/templates/docker/terminal.html:25
+msgid "Inactivity timeout:"
+msgstr "Vreme neaktivnosti pre isteka:"
+
+#: internal/web/templates/docker/terminal.html:25
 #: internal/web/templates/mongodb/databases.html:162
 #: internal/web/templates/mysql/databases.html:485
 #: internal/web/templates/mysql/users.html:144
 #: internal/web/templates/psql/databases.html:223
 msgid "seconds"
 msgstr "sekundi"
-
-#: internal/web/templates/docker/terminal.html:25
-msgid "Inactivity timeout:"
-msgstr "Vreme neaktivnosti pre isteka:"
 
 #: internal/web/templates/docker/terminal.html:30
 msgid "Container:"
@@ -10780,7 +10810,7 @@ msgstr "Novi token za"
 #: internal/web/templates/domains/dynamic_dns.html:203
 #: internal/web/templates/domains/logs.html:95
 #: internal/web/templates/domains/ssl.html:344
-#: internal/web/templates/files/backup_restore.html:574
+#: internal/web/templates/files/backup_restore.html:599
 #: internal/web/templates/php/wizard.html:248
 msgid "domains"
 msgstr "domeni"
@@ -12894,7 +12924,7 @@ msgid "The email account on this server that receives the messages."
 msgstr "Email nalog na ovom serveru koji prima poruke."
 
 #: internal/web/templates/emails/migrate.html:123
-#: internal/web/templates/files/backup_restore.html:760
+#: internal/web/templates/files/backup_restore.html:795
 msgid "Email account"
 msgstr "Email nalog"
 
@@ -12967,8 +12997,8 @@ msgid "Completed"
 msgstr "Završena"
 
 #: internal/web/templates/emails/migrate.html:213
-#: internal/web/templates/files/backup_restore.html:525
-#: internal/web/templates/files/backup_restore.html:672
+#: internal/web/templates/files/backup_restore.html:549
+#: internal/web/templates/files/backup_restore.html:706
 #: internal/web/templates/files/clamav/quarantine.html:190
 #: internal/web/templates/files/clamav/scan_logs.html:69
 #: internal/web/templates/files/imunifyav.html:117
@@ -12979,6 +13009,8 @@ msgid "Failed"
 msgstr "Nije uspelo"
 
 #: internal/web/templates/emails/migrate.html:214
+#: internal/web/templates/files/backup_restore.html:550
+#: internal/web/templates/files/backup_restore.html:707
 msgid "Cancelled"
 msgstr "Otkazana"
 
@@ -13307,169 +13339,185 @@ msgid "Files only (no databases)"
 msgstr "Samo fajlovi (bez baza podataka)"
 
 #: internal/web/templates/files/backup_restore.html:14
-#: internal/web/templates/files/backup_restore.html:969
+#: internal/web/templates/files/backup_restore.html:1004
 msgid "Selected files"
 msgstr "Izabrani fajlovi"
 
 #: internal/web/templates/files/backup_restore.html:15
-#: internal/web/templates/files/backup_restore.html:970
+#: internal/web/templates/files/backup_restore.html:1005
 msgid "Selected mailboxes"
 msgstr "Izabrana poštanska sanduče"
 
 #: internal/web/templates/files/backup_restore.html:16
-#: internal/web/templates/files/backup_restore.html:971
+#: internal/web/templates/files/backup_restore.html:1006
 msgid "Selected domains"
 msgstr "Izabrani domeni"
 
 #: internal/web/templates/files/backup_restore.html:17
-#: internal/web/templates/files/backup_restore.html:972
+#: internal/web/templates/files/backup_restore.html:1007
 msgid "Selected DNS zones"
 msgstr "Izabrane DNS zone"
 
-#: internal/web/templates/files/backup_restore.html:372
+#: internal/web/templates/files/backup_restore.html:394
 msgid "Added to the queue."
 msgstr "Dodato u red."
 
-#: internal/web/templates/files/backup_restore.html:382
+#: internal/web/templates/files/backup_restore.html:395
+msgid "Remove this restore from the queue?"
+msgstr "Ukloniti ovaj restore iz reda?"
+
+#: internal/web/templates/files/backup_restore.html:396
+msgid ""
+"Stop this restore? Whatever was restored so far stays, and a database that "
+"was being restored will be left incomplete."
+msgstr ""
+"Zaustaviti ovaj restore? Ono što je do sada vraćeno ostaje, a baza koja se "
+"vraćala ostaće nepotpuna."
+
+#: internal/web/templates/files/backup_restore.html:406
 msgid "Restore & download"
 msgstr "Vraćanje i preuzimanje"
 
-#: internal/web/templates/files/backup_restore.html:386
+#: internal/web/templates/files/backup_restore.html:410
 msgid "Indexing..."
 msgstr "Indeksiranje..."
 
-#: internal/web/templates/files/backup_restore.html:390
+#: internal/web/templates/files/backup_restore.html:414
 msgid "Restore or download backups from destination."
 msgstr "Vratite ili preuzmite rezervne kopije sa destinacije."
 
-#: internal/web/templates/files/backup_restore.html:403
+#: internal/web/templates/files/backup_restore.html:427
 msgid "Reindex destination"
 msgstr "Ponovo indeksiraj odredište"
 
-#: internal/web/templates/files/backup_restore.html:421
+#: internal/web/templates/files/backup_restore.html:445
 msgid "Backup types"
 msgstr "Vrste bekapa"
 
-#: internal/web/templates/files/backup_restore.html:490
-#: internal/web/templates/files/backup_restore.html:594
-#: internal/web/templates/files/backup_restore.html:613
+#: internal/web/templates/files/backup_restore.html:514
+#: internal/web/templates/files/backup_restore.html:619
+#: internal/web/templates/files/backup_restore.html:638
 msgid "Queue"
 msgstr "Red"
 
-#: internal/web/templates/files/backup_restore.html:511
+#: internal/web/templates/files/backup_restore.html:535
 msgid "Total Backups"
 msgstr "Ukupno bekapa"
 
-#: internal/web/templates/files/backup_restore.html:515
+#: internal/web/templates/files/backup_restore.html:539
 msgid "Latest Backup"
 msgstr "Najnoviji bekap"
 
-#: internal/web/templates/files/backup_restore.html:519
+#: internal/web/templates/files/backup_restore.html:543
 msgid "Total Size"
 msgstr "Ukupna veličina"
 
-#: internal/web/templates/files/backup_restore.html:523
+#: internal/web/templates/files/backup_restore.html:547
 msgid "Last Restore"
 msgstr "Poslednje vraćanje"
 
-#: internal/web/templates/files/backup_restore.html:524
-#: internal/web/templates/files/backup_restore.html:671
+#: internal/web/templates/files/backup_restore.html:548
+#: internal/web/templates/files/backup_restore.html:705
 #: internal/web/templates/manager/wp/install.html:372
 msgid "Done"
 msgstr "Završeno"
 
-#: internal/web/templates/files/backup_restore.html:528
-#: internal/web/templates/files/backup_restore.html:595
+#: internal/web/templates/files/backup_restore.html:553
+#: internal/web/templates/files/backup_restore.html:620
 msgid "in queue"
 msgstr "u redu"
 
-#: internal/web/templates/files/backup_restore.html:534
+#: internal/web/templates/files/backup_restore.html:559
 msgid "What do you want to restore?"
 msgstr "Šta želite da vratite?"
 
-#: internal/web/templates/files/backup_restore.html:535
+#: internal/web/templates/files/backup_restore.html:560
 msgid "Pick a type to see its backups."
 msgstr "Izaberite vrstu da vidite njene bekape."
 
-#: internal/web/templates/files/backup_restore.html:542
-#: internal/web/templates/files/backup_restore.html:550
-#: internal/web/templates/files/backup_restore.html:582
+#: internal/web/templates/files/backup_restore.html:567
+#: internal/web/templates/files/backup_restore.html:575
+#: internal/web/templates/files/backup_restore.html:607
 #: internal/web/templates/manager/wp/single.html:1854
 #: internal/web/templates/partials/site_manager_shared.html:1163
 msgid "backups"
 msgstr "bekapa"
 
-#: internal/web/templates/files/backup_restore.html:558
+#: internal/web/templates/files/backup_restore.html:583
 #: internal/web/templates/mysql/databases.html:9
 #: internal/web/templates/system/summary.html:221
 msgid "databases"
 msgstr "baza podataka"
 
-#: internal/web/templates/files/backup_restore.html:566
+#: internal/web/templates/files/backup_restore.html:591
 msgid "email accounts"
 msgstr "imejl naloga"
 
-#: internal/web/templates/files/backup_restore.html:587
+#: internal/web/templates/files/backup_restore.html:612
 msgid "Restore activity"
 msgstr "Aktivnost vraćanja"
 
-#: internal/web/templates/files/backup_restore.html:588
+#: internal/web/templates/files/backup_restore.html:613
 msgid "Restores run one at a time, the rest wait in the queue."
 msgstr "Vraćanja se izvršavaju jedno po jedno, ostala čekaju u redu."
 
-#: internal/web/templates/files/backup_restore.html:603
+#: internal/web/templates/files/backup_restore.html:628
 msgid "restores"
 msgstr "vraćanja"
 
-#: internal/web/templates/files/backup_restore.html:616
+#: internal/web/templates/files/backup_restore.html:641
 msgid "Restores run one at a time, the rest wait here."
 msgstr "Vraćanja se izvršavaju jedno po jedno, ostala čekaju ovde."
 
-#: internal/web/templates/files/backup_restore.html:621
-#: internal/web/templates/files/backup_restore.html:656
+#: internal/web/templates/files/backup_restore.html:646
+#: internal/web/templates/files/backup_restore.html:690
 msgid "What"
 msgstr "Šta"
 
-#: internal/web/templates/files/backup_restore.html:622
-#: internal/web/templates/files/backup_restore.html:657
+#: internal/web/templates/files/backup_restore.html:647
+#: internal/web/templates/files/backup_restore.html:691
 msgid "From backup"
 msgstr "Iz bekapa"
 
-#: internal/web/templates/files/backup_restore.html:623
+#: internal/web/templates/files/backup_restore.html:648
 #: internal/web/templates/user/passkeys.html:37
 msgid "Added"
 msgstr "Dodato"
 
-#: internal/web/templates/files/backup_restore.html:634
-#: internal/web/templates/files/backup_restore.html:999
+#: internal/web/templates/files/backup_restore.html:660
+#: internal/web/templates/files/backup_restore.html:1034
 msgid "Restoring..."
 msgstr "Vraćanje u toku..."
 
-#: internal/web/templates/files/backup_restore.html:635
+#: internal/web/templates/files/backup_restore.html:661
 msgid "Waiting"
 msgstr "Čeka"
 
-#: internal/web/templates/files/backup_restore.html:640
+#: internal/web/templates/files/backup_restore.html:668
+msgid "Stopping..."
+msgstr "Zaustavljanje..."
+
+#: internal/web/templates/files/backup_restore.html:674
 msgid "Nothing is being restored right now."
 msgstr "Trenutno se ništa ne vraća."
 
-#: internal/web/templates/files/backup_restore.html:651
+#: internal/web/templates/files/backup_restore.html:685
 msgid "Your latest restores, newest first."
 msgstr "Vaša poslednja vraćanja, najnovija prva."
 
-#: internal/web/templates/files/backup_restore.html:658
+#: internal/web/templates/files/backup_restore.html:692
 msgid "Restored"
 msgstr "Vraćeno"
 
-#: internal/web/templates/files/backup_restore.html:659
+#: internal/web/templates/files/backup_restore.html:693
 msgid "Took"
 msgstr "Trajanje"
 
-#: internal/web/templates/files/backup_restore.html:678
+#: internal/web/templates/files/backup_restore.html:713
 msgid "No restores yet."
 msgstr "Još nema vraćanja."
 
-#: internal/web/templates/files/backup_restore.html:688
+#: internal/web/templates/files/backup_restore.html:723
 msgid ""
 "Select a backup to restore everything in it: files, databases, emails, "
 "domains with their DNS zones and cron jobs."
@@ -13477,7 +13525,7 @@ msgstr ""
 "Izaberite bekap da vratite sve iz njega: fajlove, baze podataka, imejlove, "
 "domene sa njihovim DNS zonama i cron zadatke."
 
-#: internal/web/templates/files/backup_restore.html:689
+#: internal/web/templates/files/backup_restore.html:724
 msgid ""
 "Select a backup to restore all its website files, or pick single files and "
 "folders with Choose files."
@@ -13485,7 +13533,7 @@ msgstr ""
 "Izaberite bekap da vratite sve fajlove sajta, ili izaberite pojedinačne "
 "fajlove i foldere preko Izaberi fajlove."
 
-#: internal/web/templates/files/backup_restore.html:690
+#: internal/web/templates/files/backup_restore.html:725
 msgid ""
 "Select one or more databases. The newest backup is used unless you choose "
 "another one."
@@ -13493,7 +13541,7 @@ msgstr ""
 "Izaberite jednu ili više baza podataka. Koristi se najnoviji bekap osim ako "
 "ne izaberete drugi."
 
-#: internal/web/templates/files/backup_restore.html:691
+#: internal/web/templates/files/backup_restore.html:726
 msgid ""
 "Select one or more email accounts. The newest backup is used unless you "
 "choose another one."
@@ -13501,7 +13549,7 @@ msgstr ""
 "Izaberite jedan ili više imejl naloga. Koristi se najnoviji bekap osim ako "
 "ne izaberete drugi."
 
-#: internal/web/templates/files/backup_restore.html:692
+#: internal/web/templates/files/backup_restore.html:727
 msgid ""
 "Select one or more domains to restore their configuration, PHP version and "
 "DNS zone. Domains you deleted are added back to your account first, "
@@ -13511,16 +13559,16 @@ msgstr ""
 "verziju i DNS zonu. Domeni koje ste obrisali se prvo ponovo dodaju na vaš "
 "nalog, suspendovani domeni ne mogu da se vrate."
 
-#: internal/web/templates/files/backup_restore.html:693
+#: internal/web/templates/files/backup_restore.html:728
 msgid "Select a backup to restore only the cron jobs from it."
 msgstr "Izaberite bekap da vratite samo cron zadatke iz njega."
 
-#: internal/web/templates/files/backup_restore.html:714
+#: internal/web/templates/files/backup_restore.html:749
 #: internal/web/templates/manager/wp/single.html:1823
 msgid "Contents"
 msgstr "Sadržaj"
 
-#: internal/web/templates/files/backup_restore.html:728
+#: internal/web/templates/files/backup_restore.html:763
 #: internal/web/templates/files/backups.html:241
 #: internal/web/templates/manager/_cms_install_shared.html:84
 #: internal/web/templates/manager/_cms_install_shared.html:110
@@ -13531,11 +13579,11 @@ msgstr "Sadržaj"
 msgid "Latest"
 msgstr "Najnovija"
 
-#: internal/web/templates/files/backup_restore.html:744
+#: internal/web/templates/files/backup_restore.html:779
 msgid "No backups found."
 msgstr "Nije pronađen nijedan bekap."
 
-#: internal/web/templates/files/backup_restore.html:756
+#: internal/web/templates/files/backup_restore.html:791
 #: internal/web/templates/files/filemanager_partials.html:323
 #: internal/web/templates/files/filemanager_partials.html:324
 #: internal/web/templates/files/filemanager_partials.html:396
@@ -13551,36 +13599,36 @@ msgstr "Nije pronađen nijedan bekap."
 msgid "Select all"
 msgstr "Izaberi sve"
 
-#: internal/web/templates/files/backup_restore.html:779
+#: internal/web/templates/files/backup_restore.html:814
 msgid "VirtualHost"
 msgstr "VirtualHost"
 
-#: internal/web/templates/files/backup_restore.html:782
+#: internal/web/templates/files/backup_restore.html:817
 msgid "Unsuspend the domain to restore its VirtualHost."
 msgstr "Ukinite suspenziju domena da biste vratili njegov VirtualHost."
 
-#: internal/web/templates/files/backup_restore.html:783
+#: internal/web/templates/files/backup_restore.html:818
 msgid "Will be added"
 msgstr "Biće dodat"
 
-#: internal/web/templates/files/backup_restore.html:784
+#: internal/web/templates/files/backup_restore.html:819
 msgid "Restore the domain first"
 msgstr "Prvo vratite domen"
 
-#: internal/web/templates/files/backup_restore.html:789
+#: internal/web/templates/files/backup_restore.html:824
 msgid "backups found"
 msgstr "pronađenih bekapa"
 
-#: internal/web/templates/files/backup_restore.html:801
+#: internal/web/templates/files/backup_restore.html:836
 #: internal/web/templates/system/error_logs.html:211
 msgid "messages"
 msgstr "poruka"
 
-#: internal/web/templates/files/backup_restore.html:807
+#: internal/web/templates/files/backup_restore.html:842
 msgid "No databases found in the backups."
 msgstr "U bekapima nije pronađena nijedna baza podataka."
 
-#: internal/web/templates/files/backup_restore.html:808
+#: internal/web/templates/files/backup_restore.html:843
 msgid ""
 "Nothing found in the backups. Backups made before this version don't list "
 "emails and domains, restore those from the Everything tab."
@@ -13588,8 +13636,8 @@ msgstr ""
 "U bekapima nije ništa pronađeno. Bekapi napravljeni pre ove verzije ne "
 "sadrže spisak imejlova i domena, vratite ih sa kartice Sve."
 
-#: internal/web/templates/files/backup_restore.html:821
-#: internal/web/templates/files/backup_restore.html:927
+#: internal/web/templates/files/backup_restore.html:856
+#: internal/web/templates/files/backup_restore.html:962
 #: internal/web/templates/files/filemanager_partials.html:592
 #: internal/web/templates/manager/sites.html:476
 #: internal/web/templates/manager/wp/single.html:1139
@@ -13599,7 +13647,7 @@ msgstr ""
 msgid "selected"
 msgstr "izabrano"
 
-#: internal/web/templates/files/backup_restore.html:823
+#: internal/web/templates/files/backup_restore.html:858
 #: internal/web/templates/manager/sites.html:477
 #: internal/web/templates/manager/wp/single.html:1141
 #: internal/web/templates/partials/_bulk.html:58
@@ -13607,22 +13655,22 @@ msgstr "izabrano"
 msgid "Clear"
 msgstr "Obriši"
 
-#: internal/web/templates/files/backup_restore.html:827
+#: internal/web/templates/files/backup_restore.html:862
 msgid "This backup was made before single items could be restored."
 msgstr ""
 "Ovaj bekap je napravljen pre nego što je bilo moguće vraćati pojedinačne "
 "stavke."
 
-#: internal/web/templates/files/backup_restore.html:827
-#: internal/web/templates/files/backup_restore.html:828
-#: internal/web/templates/files/backup_restore.html:868
+#: internal/web/templates/files/backup_restore.html:862
+#: internal/web/templates/files/backup_restore.html:863
+#: internal/web/templates/files/backup_restore.html:903
 msgid "Choose files"
 msgstr "Izaberi fajlove"
 
-#: internal/web/templates/files/backup_restore.html:829
-#: internal/web/templates/files/backup_restore.html:830
-#: internal/web/templates/files/backup_restore.html:916
-#: internal/web/templates/files/backup_restore.html:1028
+#: internal/web/templates/files/backup_restore.html:864
+#: internal/web/templates/files/backup_restore.html:865
+#: internal/web/templates/files/backup_restore.html:951
+#: internal/web/templates/files/backup_restore.html:1063
 #: internal/web/templates/files/backup_wizard.html:156
 #: internal/web/templates/files/filemanager_partials.html:338
 #: internal/web/templates/files/filemanager_partials.html:339
@@ -13633,15 +13681,15 @@ msgstr "Izaberi fajlove"
 msgid "Download"
 msgstr "Preuzmi"
 
-#: internal/web/templates/files/backup_restore.html:841
+#: internal/web/templates/files/backup_restore.html:876
 msgid "Indexing destination, please wait..."
 msgstr "Indeksiranje destinacije, sačekajte..."
 
-#: internal/web/templates/files/backup_restore.html:847
+#: internal/web/templates/files/backup_restore.html:882
 msgid "No backup destination set up"
 msgstr "Nije podešeno odredište za rezervne kopije"
 
-#: internal/web/templates/files/backup_restore.html:848
+#: internal/web/templates/files/backup_restore.html:883
 msgid ""
 "Your hosting provider hasn't set up a backup destination for this account "
 "yet."
@@ -13649,62 +13697,62 @@ msgstr ""
 "Vaš hosting provajder još nije podesio odredište za rezervne kopije za ovaj "
 "nalog."
 
-#: internal/web/templates/files/backup_restore.html:849
+#: internal/web/templates/files/backup_restore.html:884
 msgid ""
 "Add a destination in backup settings, then reindex it to load its backups."
 msgstr ""
 "Dodajte odredište u podešavanjima rezervnih kopija, pa ga ponovo "
 "indeksirajte da biste učitali njegove kopije."
 
-#: internal/web/templates/files/backup_restore.html:849
+#: internal/web/templates/files/backup_restore.html:884
 msgid "Set up a destination"
 msgstr "Podesi odredište"
 
-#: internal/web/templates/files/backup_restore.html:851
+#: internal/web/templates/files/backup_restore.html:886
 msgid "No backups indexed yet"
 msgstr "Još nema indeksiranih rezervnih kopija"
 
-#: internal/web/templates/files/backup_restore.html:852
+#: internal/web/templates/files/backup_restore.html:887
 msgid "Reindex the destination to load the backups stored there."
 msgstr ""
 "Ponovo indeksirajte odredište da biste učitali rezervne kopije sačuvane "
 "tamo."
 
-#: internal/web/templates/files/backup_restore.html:919
+#: internal/web/templates/files/backup_restore.html:954
 #: internal/web/templates/manager/python_node_apps.html:352
 msgid "This folder is empty."
 msgstr "Ovaj folder je prazan."
 
-#: internal/web/templates/files/backup_restore.html:932
+#: internal/web/templates/files/backup_restore.html:967
 msgid "Restore selected"
 msgstr "Vrati izabrano"
 
-#: internal/web/templates/files/backup_restore.html:944
+#: internal/web/templates/files/backup_restore.html:979
 msgid "Restore summary"
 msgstr "Pregled vraćanja"
 
-#: internal/web/templates/files/backup_restore.html:952
+#: internal/web/templates/files/backup_restore.html:987
 msgid "Restoring will overwrite existing data. This action cannot be undone."
 msgstr ""
 "Vraćanje će prepisati postojeće podatke. Ova radnja se ne može opozvati."
 
-#: internal/web/templates/files/backup_restore.html:952
+#: internal/web/templates/files/backup_restore.html:987
 msgid "The items are added to the queue and restored one at a time."
 msgstr "Stavke se dodaju u red i vraćaju jedna po jedna."
 
-#: internal/web/templates/files/backup_restore.html:956
+#: internal/web/templates/files/backup_restore.html:991
 msgid "Items to restore"
 msgstr "Stavke za vraćanje"
 
-#: internal/web/templates/files/backup_restore.html:998
+#: internal/web/templates/files/backup_restore.html:1033
 msgid "Restore selected items"
 msgstr "Vrati izabrane stavke"
 
-#: internal/web/templates/files/backup_restore.html:1011
+#: internal/web/templates/files/backup_restore.html:1046
 msgid "Download backup"
 msgstr "Preuzmi rezervnu kopiju"
 
-#: internal/web/templates/files/backup_restore.html:1015
+#: internal/web/templates/files/backup_restore.html:1050
 msgid ""
 "The backup archive will be fetched from the destination and downloaded to "
 "your browser."
@@ -13712,20 +13760,20 @@ msgstr ""
 "Arhiva rezervne kopije će biti preuzeta sa odredišta i sačuvana na vaš "
 "pregledač."
 
-#: internal/web/templates/files/backup_restore.html:1015
+#: internal/web/templates/files/backup_restore.html:1050
 msgid "Large files may take a moment to transfer."
 msgstr "Velikim fajlovima može biti potrebno malo vremena za prenos."
 
-#: internal/web/templates/files/backup_restore.html:1016
+#: internal/web/templates/files/backup_restore.html:1051
 msgid "Download started."
 msgstr "Preuzimanje je započeto."
 
-#: internal/web/templates/files/backup_restore.html:1018
+#: internal/web/templates/files/backup_restore.html:1053
 #: internal/web/templates/files/upload_file.html:288
 msgid "Download failed."
 msgstr "Preuzimanje nije uspelo."
 
-#: internal/web/templates/files/backup_restore.html:1029
+#: internal/web/templates/files/backup_restore.html:1064
 msgid "Downloading..."
 msgstr "Preuzimanje u toku..."
 
@@ -17996,10 +18044,6 @@ msgstr ""
 "Komande (pokreću se posle svakog postavljanja, iz direktorijuma "
 "postavljanja)"
 
-#: internal/web/templates/manager/git.html:346
-msgid "settings"
-msgstr "podešavanja"
-
 #: internal/web/templates/manager/git.html:419
 #: internal/web/templates/partials/site_manager_shared.html:1038
 msgid "Commit log"
@@ -18488,17 +18532,17 @@ msgid "What composer.json asks for and what composer.lock installed."
 msgstr "Šta composer.json traži i šta je composer.lock instalirao."
 
 #: internal/web/templates/manager/php_app.html:194
+#: internal/web/templates/manager/php_app.html:221
+#: internal/web/templates/manager/python_node_apps.html:767
+msgid "Package"
+msgstr "Paket"
+
+#: internal/web/templates/manager/php_app.html:194
 #: internal/web/templates/manager/python_node_apps.html:769
 #: internal/web/templates/manager/wp/single.html:1149
 #: internal/web/templates/php/wizard.html:249
 msgid "Installed"
 msgstr "Instalirano"
-
-#: internal/web/templates/manager/php_app.html:194
-#: internal/web/templates/manager/php_app.html:221
-#: internal/web/templates/manager/python_node_apps.html:767
-msgid "Package"
-msgstr "Paket"
 
 #: internal/web/templates/manager/php_app.html:194
 msgid "Constraint"
@@ -18942,10 +18986,6 @@ msgstr ""
 "vraća na poslednji komit pri svakom restartu, pre pokretanja "
 "instalacije/starta - sve lokalne izmene fajlova u docroot-u se prepisuju. "
 "Obrišite polje i sačuvajte da biste isključili repozitorijum."
-
-#: internal/web/templates/manager/python_node_apps.html:526
-msgid "https://"
-msgstr "https://"
 
 #: internal/web/templates/manager/python_node_apps.html:536
 msgid ""
@@ -21625,33 +21665,17 @@ msgstr ""
 msgid "Debugging in WordPress"
 msgstr "Debagovanje u WordPress-u"
 
-#: internal/web/templates/manager/wp/single.html:1490
-msgid "WP_DEBUG"
-msgstr "WP_DEBUG"
-
 #: internal/web/templates/manager/wp/single.html:1493
 msgid "WordPress debug mode."
 msgstr "Režim debagovanja WordPress-a."
-
-#: internal/web/templates/manager/wp/single.html:1497
-msgid "WP_DEBUG_LOG"
-msgstr "WP_DEBUG_LOG"
 
 #: internal/web/templates/manager/wp/single.html:1500
 msgid "Save all errors to the debug.log file inside the wp-content directory."
 msgstr "Sačuvaj sve greške u debug.log fajl unutar wp-content direktorijuma."
 
-#: internal/web/templates/manager/wp/single.html:1504
-msgid "WP_DEBUG_DISPLAY"
-msgstr "WP_DEBUG_DISPLAY"
-
 #: internal/web/templates/manager/wp/single.html:1507
 msgid "Show debug messages inside the HTML pages"
 msgstr "Prikaži poruke za debagovanje unutar HTML stranica"
-
-#: internal/web/templates/manager/wp/single.html:1511
-msgid "SCRIPT_DEBUG"
-msgstr "SCRIPT_DEBUG"
 
 #: internal/web/templates/manager/wp/single.html:1514
 msgid ""
@@ -21662,10 +21686,6 @@ msgstr ""
 "Prinudi WordPress da koristi nesažete (non-minified) verzije osnovnih CSS i "
 "JavaScript fajlova. Ovo je korisno kada testirate izmene napravljene u .js i"
 " .css fajlovima."
-
-#: internal/web/templates/manager/wp/single.html:1518
-msgid "SAVEQUERIES"
-msgstr "SAVEQUERIES"
 
 #: internal/web/templates/manager/wp/single.html:1521
 msgid ""
@@ -21948,13 +21968,13 @@ msgstr "Radi kao"
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a user to continue."
-msgstr "Izaberite korisnika da biste nastavili."
+msgid "Pick a database to continue."
+msgstr "Izaberite bazu podataka da biste nastavili."
 
 #: internal/web/templates/mongodb/assign.html:53
 #: internal/web/templates/psql/assign.html:47
-msgid "Pick a database to continue."
-msgstr "Izaberite bazu podataka da biste nastavili."
+msgid "Pick a user to continue."
+msgstr "Izaberite korisnika da biste nastavili."
 
 #: internal/web/templates/mongodb/assign.html:53
 msgid "Pick a role to continue."
@@ -22422,6 +22442,15 @@ msgid "Total users:"
 msgstr "Ukupno korisnika:"
 
 #: internal/web/templates/mongodb/users.html:15
+#: internal/web/templates/mongodb/users.html:19
+#: internal/web/templates/mysql/users.html:15
+#: internal/web/templates/mysql/users.html:19
+#: internal/web/templates/psql/users.html:15
+#: internal/web/templates/psql/users.html:19
+msgid "from"
+msgstr "iz"
+
+#: internal/web/templates/mongodb/users.html:15
 #: internal/web/templates/mongodb/users.html:16
 #: internal/web/templates/mongodb/users.html:19
 #: internal/web/templates/mongodb/users.html:20
@@ -22437,15 +22466,6 @@ msgstr "Ukupno korisnika:"
 #: internal/web/templates/psql/wizard.html:154
 msgid "database"
 msgstr "baza podataka"
-
-#: internal/web/templates/mongodb/users.html:15
-#: internal/web/templates/mongodb/users.html:19
-#: internal/web/templates/mysql/users.html:15
-#: internal/web/templates/mysql/users.html:19
-#: internal/web/templates/psql/users.html:15
-#: internal/web/templates/psql/users.html:19
-msgid "from"
-msgstr "iz"
 
 #: internal/web/templates/mongodb/users.html:40
 msgid "Roles"
@@ -22466,17 +22486,17 @@ msgstr ""
 "dodelite mu ulogu na bazi."
 
 #: internal/web/templates/mongodb/wizard.html:16
-#: internal/web/templates/psql/wizard.html:16
-msgid "Successfully created database"
-msgstr "Baza podataka je uspešno kreirana"
-
-#: internal/web/templates/mongodb/wizard.html:16
 #: internal/web/templates/mysql/mysql_user.html:25
 #: internal/web/templates/mysql/wizard.html:40
 #: internal/web/templates/psql/wizard.html:16
 msgid "Save these credentials, the password cannot be retrieved later."
 msgstr ""
 "Sačuvajte ove podatke za prijavu, lozinka se kasnije ne može povratiti."
+
+#: internal/web/templates/mongodb/wizard.html:16
+#: internal/web/templates/psql/wizard.html:16
+msgid "Successfully created database"
+msgstr "Baza podataka je uspešno kreirana"
 
 #: internal/web/templates/mongodb/wizard.html:21
 #: internal/web/templates/mysql/wizard.html:47
@@ -24582,14 +24602,14 @@ msgid "Webserver configuration editor"
 msgstr "Uređivač konfiguracije veb servera"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:74
-#: internal/web/templates/system/cronjobs.html:430
-msgid "Run again"
-msgstr "Pokreni ponovo"
-
-#: internal/web/templates/system/apache_nginx_conf_editor.html:74
 #: internal/web/templates/system/apache_nginx_conf_editor.html:107
 msgid "Test config"
 msgstr "Testiraj konfiguraciju"
+
+#: internal/web/templates/system/apache_nginx_conf_editor.html:74
+#: internal/web/templates/system/cronjobs.html:430
+msgid "Run again"
+msgstr "Pokreni ponovo"
 
 #: internal/web/templates/system/apache_nginx_conf_editor.html:98
 msgid "Config file:"
