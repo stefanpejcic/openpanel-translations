@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-11-16 12:10+0200\n"
+"POT-Creation-Date: 2026-11-16 12:44+0200\n"
 "PO-Revision-Date: 2026-03-17 19:53+0200\n"
 "Last-Translator: Cuța Mihail-Sebastian <contact.mhi.yt@gmail.com>\n"
 "Language-Team: ro-ro\n"
@@ -1219,7 +1219,7 @@ msgstr "Containere și imagini"
 msgid "Invalid bot policy."
 msgstr "Politică de boți invalidă."
 
-#: internal/modules/botcontrol/render.go:39
+#: internal/modules/botcontrol/render.go:41
 #: internal/modules/dashboard/sections.go:198
 #: internal/modules/dashboard/sections.go:323
 msgid "AI & Bot Control"
@@ -24846,19 +24846,19 @@ msgstr ""
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:26
 #: internal/web/templates/system/bot_control_domain.html:41
-msgid "Rate-limit (10/min)"
-msgstr "Limitare (10/min)"
+msgid "Rate-limit (%(limit)s/min)"
+msgstr "Limitare (%(limit)s/min)"
 
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:41
 msgid ""
-"Caps known AI crawlers at 10 requests/minute per crawler per site (HTTP "
-"429); normal visitors and search engines (Googlebot, Bingbot) are "
+"Caps known AI crawlers at %(limit)s requests/minute per crawler per site "
+"(HTTP 429); normal visitors and search engines (Googlebot, Bingbot) are "
 "unaffected."
 msgstr ""
-"Limitează crawlerele AI cunoscute la 10 cereri pe minut per crawler per site"
-" (HTTP 429); vizitatorii obișnuiți și motoarele de căutare (Googlebot, "
-"Bingbot) nu sunt afectați."
+"Limitează crawlerele AI cunoscute la %(limit)s cereri pe minut per crawler "
+"per site (HTTP 429); vizitatorii obișnuiți și motoarele de căutare "
+"(Googlebot, Bingbot) nu sunt afectați."
 
 #: internal/web/templates/system/bot_control.html:24
 #: internal/web/templates/system/bot_control_domain.html:29
@@ -24888,8 +24888,8 @@ msgid "Blocked (403)"
 msgstr "Blocat (403)"
 
 #: internal/web/templates/system/bot_control.html:52
-msgid "Rate-limited (10/min)"
-msgstr "Limitat (10/min)"
+msgid "Rate-limited (%(limit)s/min)"
+msgstr "Limitat (%(limit)s/min)"
 
 #: internal/web/templates/system/bot_control.html:54
 msgid "Allowed"
