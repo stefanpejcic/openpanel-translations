@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-16 12:10+0200\n"
+"POT-Creation-Date: 2026-11-16 12:44+0200\n"
 "PO-Revision-Date: 2026-01-15 00:00+0500\n"
 "Last-Translator: Hasnain ALi <me@hasnainali9.com>\n"
 "Language-Team: Chinese  <LL@li.org>\n"
@@ -1127,7 +1127,7 @@ msgstr "容器和镜像"
 msgid "Invalid bot policy."
 msgstr "无效的机器人策略。"
 
-#: internal/modules/botcontrol/render.go:39
+#: internal/modules/botcontrol/render.go:41
 #: internal/modules/dashboard/sections.go:198
 #: internal/modules/dashboard/sections.go:323
 msgid "AI & Bot Control"
@@ -23514,17 +23514,18 @@ msgstr "允许已知的 AI 爬虫和搜索引擎正常访问站点。"
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:26
 #: internal/web/templates/system/bot_control_domain.html:41
-msgid "Rate-limit (10/min)"
-msgstr "限速（10/分钟）"
+msgid "Rate-limit (%(limit)s/min)"
+msgstr "限速（%(limit)s/分钟）"
 
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:41
 msgid ""
-"Caps known AI crawlers at 10 requests/minute per crawler per site (HTTP "
-"429); normal visitors and search engines (Googlebot, Bingbot) are "
+"Caps known AI crawlers at %(limit)s requests/minute per crawler per site "
+"(HTTP 429); normal visitors and search engines (Googlebot, Bingbot) are "
 "unaffected."
 msgstr ""
-"将已知 AI 爬虫限制为每个站点每个爬虫每分钟 10 个请求（HTTP 429）；普通访客和搜索引擎（Googlebot、Bingbot）不受影响。"
+"将已知 AI 爬虫限制为每个站点每个爬虫每分钟 %(limit)s 个请求（HTTP "
+"429）；普通访客和搜索引擎（Googlebot、Bingbot）不受影响。"
 
 #: internal/web/templates/system/bot_control.html:24
 #: internal/web/templates/system/bot_control_domain.html:29
@@ -23552,8 +23553,8 @@ msgid "Blocked (403)"
 msgstr "已阻止（403）"
 
 #: internal/web/templates/system/bot_control.html:52
-msgid "Rate-limited (10/min)"
-msgstr "已限速（10/分钟）"
+msgid "Rate-limited (%(limit)s/min)"
+msgstr "已限速（%(limit)s/分钟）"
 
 #: internal/web/templates/system/bot_control.html:54
 msgid "Allowed"
