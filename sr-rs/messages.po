@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPanel 2.0.12\n"
 "Report-Msgid-Bugs-To: stefan@pejcic.rs\n"
-"POT-Creation-Date: 2026-11-16 12:10+0200\n"
+"POT-Creation-Date: 2026-11-16 12:44+0200\n"
 "PO-Revision-Date: 2026-06-24 19:00+0200\n"
 "Last-Translator: Stefan Pejčić <stefan@pejcic.rs>\n"
 "Language-Team: Serbian (Latin) <LL@li.org>\n"
@@ -1201,7 +1201,7 @@ msgstr "Kontejneri i slike"
 msgid "Invalid bot policy."
 msgstr "Nevažeća politika za botove."
 
-#: internal/modules/botcontrol/render.go:39
+#: internal/modules/botcontrol/render.go:41
 #: internal/modules/dashboard/sections.go:198
 #: internal/modules/dashboard/sections.go:323
 msgid "AI & Bot Control"
@@ -24652,19 +24652,19 @@ msgstr "Poznati AI crawler-i i pretraživači normalno pristupaju sajtu."
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:26
 #: internal/web/templates/system/bot_control_domain.html:41
-msgid "Rate-limit (10/min)"
-msgstr "Ograniči (10/min)"
+msgid "Rate-limit (%(limit)s/min)"
+msgstr "Ograniči (%(limit)s/min)"
 
 #: internal/web/templates/system/bot_control.html:23
 #: internal/web/templates/system/bot_control_domain.html:41
 msgid ""
-"Caps known AI crawlers at 10 requests/minute per crawler per site (HTTP "
-"429); normal visitors and search engines (Googlebot, Bingbot) are "
+"Caps known AI crawlers at %(limit)s requests/minute per crawler per site "
+"(HTTP 429); normal visitors and search engines (Googlebot, Bingbot) are "
 "unaffected."
 msgstr ""
-"Ograničava poznate AI crawler-e na 10 zahteva u minutu po crawler-u po sajtu"
-" (HTTP 429); obični posetioci i pretraživači (Googlebot, Bingbot) nisu "
-"pogođeni."
+"Ograničava poznate AI crawler-e na %(limit)s zahteva u minutu po crawler-u "
+"po sajtu (HTTP 429); obični posetioci i pretraživači (Googlebot, Bingbot) "
+"nisu pogođeni."
 
 #: internal/web/templates/system/bot_control.html:24
 #: internal/web/templates/system/bot_control_domain.html:29
@@ -24694,8 +24694,8 @@ msgid "Blocked (403)"
 msgstr "Blokirano (403)"
 
 #: internal/web/templates/system/bot_control.html:52
-msgid "Rate-limited (10/min)"
-msgstr "Ograničeno (10/min)"
+msgid "Rate-limited (%(limit)s/min)"
+msgstr "Ograničeno (%(limit)s/min)"
 
 #: internal/web/templates/system/bot_control.html:54
 msgid "Allowed"
